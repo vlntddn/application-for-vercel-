@@ -72,6 +72,10 @@ const server = http.createServer(async (req, res) => {
   try {
     if (pathname.startsWith('/api/')) {
       await handleApi(req, res, pathname);
+    } else if ((req.method === 'GET' || req.method === 'HEAD') && pathname.startsWith('/images/')) {
+      await serveFile(res, path.join(config.dataDir, 'images'), pathname.slice('/images'.length), {
+        cache: 'max-age=86400',
+      });
     } else if (req.method === 'GET' || req.method === 'HEAD') {
       await serveFile(res, config.publicDir, pathname === '/' ? '/index.html' : pathname);
     } else {

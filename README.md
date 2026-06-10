@@ -96,5 +96,7 @@ return `400`/`413`.
 - **Path-traversal protection** on file serving; binds to `127.0.0.1` by
   default so nothing is exposed to the network.
 - **No secrets in the frontend** — and none anywhere: the app needs no keys.
-  Question images load from the public QuizPatenteB GitHub repository.
+- **Fully self-contained** — all 413 sign images are stored locally in
+  `data/images/` (refresh with `npm run fetch-images`); the app works with
+  no internet connection at all.
 - **Graceful shutdown** — `SIGINT`/`SIGTERM` flush pending writes before exit.
