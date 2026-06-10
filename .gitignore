@@ -1,0 +1,14 @@
+# Secrets / local config — never commit
+.env
+.env.local
+
+# Local user data
+storage/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# OS / editor noise
+.DS_Store
+*.swp

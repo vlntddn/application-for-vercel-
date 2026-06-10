@@ -1,0 +1,16 @@
+{
+  "name": "patente-pro",
+  "version": "2.0.0",
+  "description": "Patente Pro — Italian driving theory trainer. Local-first, zero-dependency Node.js backend, Minimal Brutalism UI.",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}
