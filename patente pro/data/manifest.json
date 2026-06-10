@@ -1,0 +1,130 @@
+{
+  "totalQuestions": 7139,
+  "categories": [
+    {
+      "slug": "definizioni-generali-doveri-strada",
+      "name": "definizioni generali doveri strada",
+      "count": 531
+    },
+    {
+      "slug": "segnali-pericolo",
+      "name": "segnali pericolo",
+      "count": 662
+    },
+    {
+      "slug": "segnali-divieto",
+      "name": "segnali divieto",
+      "count": 521
+    },
+    {
+      "slug": "segnali-obbligo",
+      "name": "segnali obbligo",
+      "count": 433
+    },
+    {
+      "slug": "segnali-precedenza",
+      "name": "segnali precedenza",
+      "count": 243
+    },
+    {
+      "slug": "segnaletica-orizzontale-ostacoli",
+      "name": "segnaletica orizzontale ostacoli",
+      "count": 260
+    },
+    {
+      "slug": "semafori-vigili",
+      "name": "semafori vigili",
+      "count": 253
+    },
+    {
+      "slug": "segnali-indicazione",
+      "name": "segnali indicazione",
+      "count": 603
+    },
+    {
+      "slug": "segnali-complementari-cantiere",
+      "name": "segnali complementari cantiere",
+      "count": 181
+    },
+    {
+      "slug": "pannelli-integrativi",
+      "name": "pannelli integrativi",
+      "count": 263
+    },
+    {
+      "slug": "limiti-di-velocita",
+      "name": "limiti di velocita",
+      "count": 256
+    },
+    {
+      "slug": "distanza-di-sicurezza",
+      "name": "distanza di sicurezza",
+      "count": 135
+    },
+    {
+      "slug": "norme-di-circolazione",
+      "name": "norme di circolazione",
+      "count": 379
+    },
+    {
+      "slug": "precedenza-incroci",
+      "name": "precedenza incroci",
+      "count": 415
+    },
+    {
+      "slug": "sorpasso",
+      "name": "sorpasso",
+      "count": 156
+    },
+    {
+      "slug": "fermata-sosta-arresto",
+      "name": "fermata sosta arresto",
+      "count": 191
+    },
+    {
+      "slug": "norme-varie-autostrade-pannelli",
+      "name": "norme varie autostrade pannelli",
+      "count": 332
+    },
+    {
+      "slug": "luci-dispositivi-acustici",
+      "name": "luci dispositivi acustici",
+      "count": 176
+    },
+    {
+      "slug": "cinture-casco-sicurezza",
+      "name": "cinture casco sicurezza",
+      "count": 135
+    },
+    {
+      "slug": "patente-punti-documenti",
+      "name": "patente punti documenti",
+      "count": 234
+    },
+    {
+      "slug": "incidenti-stradali-comportamenti",
+      "name": "incidenti stradali comportamenti",
+      "count": 102
+    },
+    {
+      "slug": "alcool-droga-primo-soccorso",
+      "name": "alcool droga primo soccorso",
+      "count": 141
+    },
+    {
+      "slug": "responsabilita-civile-penale-e-assicurazione",
+      "name": "responsabilita civile penale e assicurazione",
+      "count": 149
+    },
+    {
+      "slug": "consumi-ambiente-inquinamento",
+      "name": "consumi ambiente inquinamento",
+      "count": 103
+    },
+    {
+      "slug": "elementi-veicolo-manutenzione-comportamenti",
+      "name": "elementi veicolo manutenzione comportamenti",
+      "count": 285
+    }
+  ]
+}

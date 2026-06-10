@@ -1,0 +1,277 @@
+[
+  {
+    "id": "ch1",
+    "chapter": 1,
+    "title_it": "Definizioni generali e doveri nell'uso della strada",
+    "content_it": "La strada è l'area aperta al pubblico transito e destinata alla circolazione dei pedoni, degli animali e dei veicoli. Può essere a senso unico o a doppio senso di circolazione.",
+    "translations": {
+      "en": { "title": "General definitions and duties", "content": "The road is the area open to public transit and intended for the circulation of pedestrians, animals and vehicles.", "simple_it": "The road is where everyone passes: people, cars and animals." },
+      "ru": { "title": "Общие определения и обязанности", "content": "Дорога - это территория, открытая для общественного транзита и предназначенная для движения пешеходов, животных и транспортных средств.", "simple_it": "Дорога - это место, где ездят машины и ходят люди." },
+      "zh": { "title": "一般定义和职责", "content": "道路是向公众开放的区域，旨在供行人、动物和车辆流通。", "simple_it": "道路是每个人、汽车和动物经过的地方。" }
+    }
+  },
+  {
+    "id": "ch2",
+    "chapter": 2,
+    "title_it": "Segnali di pericolo",
+    "content_it": "I segnali di pericolo hanno forma di triangolo con il vertice verso l'alto. Preavvertono l'esistenza di pericoli e impongono un comportamento prudente.",
+    "translations": {
+      "en": { "title": "Danger signs", "content": "Danger signs are triangular in shape with the apex pointing upwards. They warn of dangers and require prudent behavior.", "simple_it": "Triangle signs say there is a danger ahead." },
+      "ru": { "title": "Предупреждающие знаки", "content": "Знаки опасности имеют форму треугольника вершиной вверх. Они предупреждают о наличии опасностей и требуют осторожного поведения.", "simple_it": "Треугольные знаки говорят, что впереди опасность." },
+      "zh": { "title": "危险标志", "content": "危险标志呈三角形，顶点向上。它们预警危险的存在并要求采取谨慎行为。", "simple_it": "三角形标志表示有危险。" }
+    }
+  },
+  {
+    "id": "ch3",
+    "chapter": 3,
+    "title_it": "Segnali di divieto",
+    "content_it": "I segnali di divieto vietano il transito o determinate manovre a tutti i veicoli o a particolari categorie di essi.",
+    "translations": {
+      "en": { "title": "Prohibition signs", "content": "Prohibition signs prohibit transit or certain maneuvers to all vehicles or specific categories of them.", "simple_it": "Round red signs mean you cannot do something." },
+      "ru": { "title": "Запрещающие знаки", "content": "Запрещающие знаки запрещают транзит или определенные маневры всем транспортным средствам или их отдельным категориям.", "simple_it": "Круглые красные знаки означают, что что-то делать нельзя." },
+      "zh": { "title": "禁止标志", "content": "禁止标志禁止所有车辆或特定类别的车辆通行或进行某些操作。", "simple_it": "红色圆形标志表示你不能做某事。" }
+    }
+  },
+  {
+    "id": "ch4",
+    "chapter": 4,
+    "title_it": "Segnali di obbligo",
+    "content_it": "I segnali di obbligo impongono un determinato comportamento o una direzione da seguire.",
+    "translations": {
+      "en": { "title": "Mandatory signs", "content": "Mandatory signs impose a certain behavior or a direction to follow.", "simple_it": "Blue round signs tell you what you MUST do." },
+      "ru": { "title": "Предписывающие знаки", "content": "Предписывающие знаки предписывают определенное поведение или направление движения.", "simple_it": "Синие круглые знаки говорят, что вы ОБЯЗАНЫ делать." },
+      "zh": { "title": "强制性标志", "content": "强制性标志规定了某种行为或要遵循的方向。", "simple_it": "蓝色圆形标志告诉你必须做什么。" }
+    }
+  },
+  {
+    "id": "ch5",
+    "chapter": 5,
+    "title_it": "Segnali di precedenza",
+    "content_it": "I segnali di precedenza prescrivono l'obbligo di dare o il diritto di avere la precedenza agli incroci.",
+    "translations": {
+      "en": { "title": "Priority signs", "content": "Priority signs prescribe the obligation to give or the right to have priority at intersections.", "simple_it": "These signs tell you who goes first at an intersection." },
+      "ru": { "title": "Знаки приоритета", "content": "Знаки приоритета устанавливают обязанность уступить дорогу или право преимущественного проезда на перекрестках.", "simple_it": "Эти знаки говорят, кто проезжает первым на перекрестке." },
+      "zh": { "title": "优先标志", "content": "优先标志规定了在路口让行或拥有优先权的义务。", "simple_it": "这些标志告诉你谁在路口先走。" }
+    }
+  },
+  {
+    "id": "ch6",
+    "chapter": 6,
+    "title_it": "Segnaletica orizzontale e segni sugli ostacoli",
+    "content_it": "La segnaletica orizzontale è costituita dalle strisce e dai segni tracciati sulla pavimentazione stradale.",
+    "translations": {
+      "en": { "title": "Horizontal markings", "content": "Horizontal markings consist of stripes and signs drawn on the road surface.", "simple_it": "Lines on the road help you stay in your lane." },
+      "ru": { "title": "Горизонтальная разметка", "content": "Горизонтальная разметка состоит из полос и знаков, нанесенных на дорожное покрытие.", "simple_it": "Линии на дороге помогают вам оставаться в своей полосе." },
+      "zh": { "title": "水平标记", "content": "水平标记由路面上绘制的线条和符号组成。", "simple_it": "道路上的线条帮助你保持在车道内。" }
+    }
+  },
+  {
+    "id": "ch7",
+    "chapter": 7,
+    "title_it": "Segnalazioni semaforiche e degli agenti del traffico",
+    "content_it": "Le segnalazioni semaforiche regolano il passaggio dei veicoli e dei pedoni agli incroci.",
+    "translations": {
+      "en": { "title": "Traffic lights and police signals", "content": "Traffic light signals regulate the passage of vehicles and pedestrians at intersections.", "simple_it": "Red means stop, green means go, and follow the police." },
+      "ru": { "title": "Светофоры и сигналы регулировщика", "content": "Светофорные сигналы регулируют проезд транспортных средств и переход пешеходов на перекрестках.", "simple_it": "Красный - стой, зеленый - иди, слушайся полицию." },
+      "zh": { "title": "交通信号灯和警察信号", "content": "交通信号灯调节车辆和行人在路口的通行。", "simple_it": "红灯停，绿灯行，听从警察指挥。" }
+    }
+  },
+  {
+    "id": "ch8",
+    "chapter": 8,
+    "title_it": "Limiti di velocità, pericolo e intralcio alla circolazione",
+    "content_it": "Il conducente deve regolare la velocità del veicolo in modo da evitare ogni pericolo per la sicurezza.",
+    "translations": {
+      "en": { "title": "Speed limits and danger", "content": "The driver must adjust the vehicle speed to avoid any danger to safety.", "simple_it": "Don't drive too fast and be careful." },
+      "ru": { "title": "Ограничения скорости и опасность", "content": "Водитель должен регулировать скорость транспортного средства так, чтобы избежать любой опасности для безопасности.", "simple_it": "Не ездите слишком быстро и будьте осторожны." },
+      "zh": { "title": "速度限制和危险", "content": "驾驶员必须调整车速以避免任何安全危险。", "simple_it": "不要开得太快，要小心。" }
+    }
+  },
+  {
+    "id": "ch9",
+    "chapter": 9,
+    "title_it": "Distanza di sicurezza",
+    "content_it": "La distanza di sicurezza deve essere sempre mantenuta rispetto al veicolo che precede.",
+    "translations": {
+      "en": { "title": "Safety distance", "content": "Safety distance must always be maintained relative to the vehicle in front.", "simple_it": "Keep enough space from the car in front of you." },
+      "ru": { "title": "Дистанция безопасности", "content": "Дистанция безопасности должна всегда соблюдаться по отношению к впереди идущему транспортному средству.", "simple_it": "Держите достаточную дистанцию до машины впереди." },
+      "zh": { "title": "安全距离", "content": "必须始终与前车保持安全距离。", "simple_it": "与前车保持足够的距离。" }
+    }
+  },
+  {
+    "id": "ch10",
+    "chapter": 10,
+    "title_it": "Norme sulla circolazione dei veicoli",
+    "content_it": "I veicoli devono circolare sulla parte destra della carreggiata e in prossimità del margine destro.",
+    "translations": {
+      "en": { "title": "Vehicle circulation rules", "content": "Vehicles must circulate on the right side of the road and near the right edge.", "simple_it": "Drive on the right side of the road." },
+      "ru": { "title": "Правила движения транспортных средств", "content": "Транспортные средства должны двигаться по правой стороне проезжей части и ближе к правому краю.", "simple_it": "Ездите по правой стороне дороги." },
+      "zh": { "title": "车辆通行规则", "content": "车辆必须在道路右侧并靠近右边缘行驶。", "simple_it": "在道路右侧行驶。" }
+    }
+  },
+  {
+    "id": "ch11",
+    "chapter": 11,
+    "title_it": "Ordine di precedenza agli incroci",
+    "content_it": "Agli incroci i conducenti hanno l'obbligo di dare la precedenza ai veicoli che provengono da destra.",
+    "translations": {
+      "en": { "title": "Priority at intersections", "content": "At intersections, drivers are obliged to give priority to vehicles coming from the right.", "simple_it": "Usually, give way to cars coming from your right." },
+      "ru": { "title": "Очередность проезда перекрестков", "content": "На перекрестках водители обязаны уступать дорогу транспортным средствам, приближающимся справа.", "simple_it": "Обычно уступайте дорогу машинам справа." },
+      "zh": { "title": "路口优先权", "content": "在路口，驾驶员有义务让行从右侧驶来的车辆。", "simple_it": "通常，给从你右边来的车让路。" }
+    }
+  },
+  {
+    "id": "ch12",
+    "chapter": 12,
+    "title_it": "Norme sul sorpasso",
+    "content_it": "Il sorpasso è la manovra mediante la quale un veicolo supera un altro veicolo.",
+    "translations": {
+      "en": { "title": "Overtaking rules", "content": "Overtaking is the maneuver by which a vehicle passes another vehicle.", "simple_it": "Be very careful when you pass another car." },
+      "ru": { "title": "Правила обгона", "content": "Обгон - это маневр, при котором одно транспортное средство опережает другое.", "simple_it": "Будьте очень осторожны при обгоне." },
+      "zh": { "title": "超车规则", "content": "超车是一辆车超过另一辆车的操作。", "simple_it": "超车时要非常小心。" }
+    }
+  },
+  {
+    "id": "ch13",
+    "chapter": 13,
+    "title_it": "Fermata, sosta, partenza e ingombro della carreggiata",
+    "content_it": "La sosta è l'interruzione della marcia del veicolo protratta nel tempo.",
+    "translations": {
+      "en": { "title": "Stopping and parking", "content": "Parking is the interruption of the vehicle's movement extended over time.", "simple_it": "Know where you can and cannot park your car." },
+      "ru": { "title": "Остановка и стоянка", "content": "Стоянка - это прерывание движения транспортного средства, затянувшееся во времени.", "simple_it": "Знайте, где можно и где нельзя парковать машину." },
+      "zh": { "title": "停止和停车", "content": "停车是车辆运动的长时间中断。", "simple_it": "知道哪里可以停车，哪里不可以。" }
+    }
+  },
+  {
+    "id": "ch14",
+    "chapter": 14,
+    "title_it": "Ingombro della carreggiata e segnalazione di veicolo fermo",
+    "content_it": "In caso di ingombro della carreggiata per avaria del veicolo, il conducente deve segnalare il pericolo.",
+    "translations": {
+      "en": { "title": "Road obstruction", "content": "In case of road obstruction due to vehicle breakdown, the driver must signal the danger.", "simple_it": "If your car breaks down, use the triangle to warn others." },
+      "ru": { "title": "Препятствие на дороге", "content": "В случае загромождения проезжей части из-за поломки автомобиля водитель должен сигнализировать об опасности.", "simple_it": "Если машина сломалась, поставьте треугольник." },
+      "zh": { "title": "道路阻塞", "content": "如果因车辆故障导致道路阻塞，驾驶员必须发出危险信号。", "simple_it": "如果你的车坏了，用三角形标志警告他人。" }
+    }
+  },
+  {
+    "id": "ch15",
+    "chapter": 15,
+    "title_it": "Uso delle luci e dei dispositivi acustici, spie e simboli",
+    "content_it": "I dispositivi di segnalazione visiva e di illuminazione devono essere utilizzati da mezz'ora dopo il tramonto.",
+    "translations": {
+      "en": { "title": "Lights and signals", "content": "Visual signaling and lighting devices must be used from half an hour after sunset.", "simple_it": "Turn on your lights when it gets dark." },
+      "ru": { "title": "Использование фар и сигналов", "content": "Устройства визуальной сигнализации и освещения должны использоваться через полчаса после захода солнца.", "simple_it": "Включайте фары, когда темнеет." },
+      "zh": { "title": "灯光和信号", "content": "必须在日落半小时后使用视觉信号和照明设备。", "simple_it": "天黑时打开车灯。" }
+    }
+  },
+  {
+    "id": "ch16",
+    "chapter": 16,
+    "title_it": "Patenti di guida, documenti di circolazione e assicurazione",
+    "content_it": "Per guidare veicoli a motore è necessario aver conseguito la patente di guida.",
+    "translations": {
+      "en": { "title": "Driver's license and documents", "content": "To drive motor vehicles it is necessary to have obtained a driver's license.", "simple_it": "You must have your license and insurance with you." },
+      "ru": { "title": "Водительские права и документы", "content": "Для управления механическими транспортными средствами необходимо получить водительское удостоверение.", "simple_it": "У вас должны быть права и страховка с собой." },
+      "zh": { "title": "驾照和文件", "content": "驾驶机动车辆必须取得驾照。", "simple_it": "你必须随身携带驾照和保险。" }
+    }
+  },
+  {
+    "id": "ch17",
+    "chapter": 17,
+    "title_it": "Comportamenti per prevenire incidenti",
+    "content_it": "Il conducente deve sempre mantenere il controllo del proprio veicolo.",
+    "translations": {
+      "en": { "title": "Accident prevention", "content": "The driver must always maintain control of their vehicle.", "simple_it": "Always pay attention to avoid accidents." },
+      "ru": { "title": "Предотвращение несчастных случаев", "content": "Водитель должен всегда сохранять контроль над своим транспортным средством.", "simple_it": "Всегда будьте внимательны, чтобы избежать аварий." },
+      "zh": { "title": "事故预防", "content": "驾驶员必须始终保持对车辆的控制。", "simple_it": "始终注意避免事故。" }
+    }
+  },
+  {
+    "id": "ch18",
+    "chapter": 18,
+    "title_it": "Guida in relazione alle qualità e condizioni fisiche",
+    "content_it": "Non si deve guidare in stato di ebbrezza alcolica o sotto l'effetto di sostanze stupefacenti.",
+    "translations": {
+      "en": { "title": "Physical conditions for driving", "content": "One must not drive while intoxicated by alcohol or under the influence of drugs.", "simple_it": "Never drink and drive." },
+      "ru": { "title": "Вождение и физическое состояние", "content": "Нельзя управлять автомобилем в состоянии алкогольного опьянения или под воздействием наркотических веществ.", "simple_it": "Никогда не пейте за рулем." },
+      "zh": { "title": "驾驶的身体条件", "content": "严禁酒后驾驶或在药物影响下驾驶。", "simple_it": "严禁酒后驾车。" }
+    }
+  },
+  {
+    "id": "ch19",
+    "chapter": 19,
+    "title_it": "Responsabilità civile, penale, amministrativa",
+    "content_it": "La responsabilità civile connessa all'incidente stradale consiste nell'obbligo di risarcire i danni.",
+    "translations": {
+      "en": { "title": "Legal responsibility", "content": "Civil liability connected to a road accident consists of the obligation to compensate for damages.", "simple_it": "You are responsible for any damage you cause." },
+      "ru": { "title": "Юридическая ответственность", "content": "Гражданская ответственность, связанная с дорожно-транспортным происшествием, заключается в обязанности возместить ущерб.", "simple_it": "Вы несете ответственность за любой причиненный вами ущерб." },
+      "zh": { "title": "法律责任", "content": "与道路事故相关的民事责任包括赔偿损失的义务。", "simple_it": "你对造成的任何损害负责。" }
+    }
+  },
+  {
+    "id": "ch20",
+    "chapter": 20,
+    "title_it": "Limitazione dei consumi e rispetto dell'ambiente",
+    "content_it": "Il conducente deve adottare uno stile di guida che limiti i consumi di carburante.",
+    "translations": {
+      "en": { "title": "Environment and consumption", "content": "The driver must adopt a driving style that limits fuel consumption.", "simple_it": "Drive in a way that protects the environment." },
+      "ru": { "title": "Экология и расход топлива", "content": "Водитель должен придерживаться стиля вождения, ограничивающего расход топлива.", "simple_it": "Водите так, чтобы беречь экологию." },
+      "zh": { "title": "环境和消耗", "content": "驾驶员必须采取限制燃料消耗的驾驶风格。", "simple_it": "以保护环境的方式驾驶。" }
+    }
+  },
+  {
+    "id": "ch21",
+    "chapter": 21,
+    "title_it": "Elementi costitutivi del veicolo e manutenzione",
+    "content_it": "Il conducente deve verificare periodicamente l'efficienza dei freni e degli pneumatici.",
+    "translations": {
+      "en": { "title": "Vehicle maintenance", "content": "The driver must periodically check the efficiency of the brakes and tires.", "simple_it": "Keep your car in good condition." },
+      "ru": { "title": "Устройство и обслуживание автомобиля", "content": "Водитель должен периодически проверять эффективность тормозов и шин.", "simple_it": "Держите машину в хорошем состоянии." },
+      "zh": { "title": "车辆保养", "content": "驾驶员必须定期检查制动器和轮胎的效率。", "simple_it": "保持车辆良好状态。" }
+    }
+  },
+  {
+    "id": "ch22",
+    "chapter": 22,
+    "title_it": "Uso dei dispositivi di equipaggiamento",
+    "content_it": "Le cinture di sicurezza devono essere utilizzate dai conducenti e dai passeggeri.",
+    "translations": {
+      "en": { "title": "Safety equipment", "content": "Seat belts must be used by drivers and passengers.", "simple_it": "Always wear your seatbelt." },
+      "ru": { "title": "Использование оборудования безопасности", "content": "Ремни безопасности должны использоваться водителями и пассажирами.", "simple_it": "Всегда пристегивайтесь." },
+      "zh": { "title": "安全设备", "content": "驾驶员和乘客必须使用安全带。", "simple_it": "始终系好安全带。" }
+    }
+  },
+  {
+    "id": "ch23",
+    "chapter": 23,
+    "title_it": "Traino di rimorchi e trasporto carichi",
+    "content_it": "Il carico deve essere sistemato in modo da non cadere или диспердерси.",
+    "translations": {
+      "en": { "title": "Towing and loads", "content": "The load must be arranged so as not to fall or be scattered.", "simple_it": "Make sure your cargo is secure." },
+      "ru": { "title": "Буксировка и перевозка грузов", "content": "Груз должен быть размещен так, чтобы он не упал и не рассыпался.", "simple_it": "Убедитесь, что ваш груз закреплен." },
+      "zh": { "title": "牵引和载荷", "content": "载荷的布置必须确保不会掉落或散落。", "simple_it": "确保你的货物安全。" }
+    }
+  },
+  {
+    "id": "ch24",
+    "chapter": 24,
+    "title_it": "Segnali di indicazione",
+    "content_it": "I segnali di indicazione forniscono informazioni necessarie per la guida e per l'individuazione di itinerari.",
+    "translations": {
+      "en": { "title": "Indication signs", "content": "Indication signs provide information necessary for driving and for identifying routes.", "simple_it": "Square signs give you useful information." },
+      "ru": { "title": "Информационные знаки", "content": "Информационные знаки предоставляют информацию, необходимую для вождения и определения маршрутов.", "simple_it": "Квадратные знаки дают полезную информацию." },
+      "zh": { "title": "指示标志", "content": "指示标志提供驾驶和识别路线所需的信息。", "simple_it": "方形标志为你提供有用信息。" }
+    }
+  },
+  {
+    "id": "ch25",
+    "chapter": 25,
+    "title_it": "Segnali complementari e temporanei",
+    "content_it": "I segnali temporanei sono utilizzati in presenza di cantieri stradali.",
+    "translations": {
+      "en": { "title": "Temporary signs", "content": "Temporary signs are used in the presence of road construction sites.", "simple_it": "Yellow signs mean there is road work." },
+      "ru": { "title": "Дополнительные и временные знаки", "content": "Временные знаки используются при наличии дорожных работ.", "simple_it": "Желтые знаки означают дорожные работы." },
+      "zh": { "title": "临时标志", "content": "临时标志用于道路施工现场。", "simple_it": "黄色标志表示有道路施工。" }
+    }
+  }
+]
