@@ -463,3 +463,28 @@ kbd {
 
   .stat-value { font-size: 2rem; }
 }
+
+/* ---------- Theory: signs gallery & chapter nav ---------- */
+
+.signs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 10px;
+}
+
+.signs-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border: 2px solid var(--ink);
+  background: #fff;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+}

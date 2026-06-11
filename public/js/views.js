@@ -9,6 +9,7 @@ import {
   shuffle,
 } from './state.js';
 import { el, clear, fmtTime, fmtDate, titleCase } from './ui.js';
+import { CHAPTER_CATEGORY } from './theory-map.js';
 
 const EXAM_QUESTIONS = 30;
 const EXAM_SECONDS = 20 * 60;
@@ -25,6 +26,21 @@ function lang() {
 
 function translationOf(question) {
   return question.translations?.[lang()]?.text || '';
+}
+
+/** Session queue: unseen questions first, then current mistakes, then the rest. */
+function pickQueue(questions, count) {
+  const answers = state.progress.answers;
+  const unseen = questions.filter((q) => !answers[q.id]);
+  const wrong = questions.filter((q) => answers[q.id] && !answers[q.id].lastCorrect);
+  const rest = questions.filter((q) => answers[q.id]?.lastCorrect);
+  return [...shuffle(unseen), ...shuffle(wrong), ...shuffle(rest)].slice(0, count);
+}
+
+function masteryOf(slug, count) {
+  const mastered = Object.entries(state.progress.answers)
+    .filter(([id, a]) => a.lastCorrect && id.startsWith(`${slug}-`)).length;
+  return { mastered, pct: Math.round((mastered / count) * 100) };
 }
 
 /* ============================== ONBOARDING ============================== */
@@ -175,25 +191,52 @@ export async function renderTheoryList(root) {
     return clear(root, errorBanner(err));
   }
   const read = new Set(state.progress.theoryRead);
+  const readPct = Math.round((read.size / chapters.length) * 100);
+  const firstUnread = chapters.find((c) => !read.has(c.id));
+  const catBySlug = new Map(state.manifest.categories.map((c) => [c.slug, c]));
+
   clear(root,
     el('h1', {}, 'THEORY MANUAL'),
-    el('p.lede', {}, `${read.size}/${chapters.length} CHAPTERS READ`),
+    el('p.lede', {}, 'READ THE ITALIAN FIRST — TRANSLATE ONLY WHEN STUCK.'),
+    el('div.panel', {},
+      el('div.quiz-head', {},
+        el('h2', { style: 'margin:0' }, 'READING PROGRESS'),
+        el('span.tag', { className: `tag ${read.size === chapters.length ? 'ok' : ''}` },
+          `${read.size}/${chapters.length} CHAPTERS`),
+      ),
+      el('div.bar', {}, el('div', { style: `width:${readPct}%` })),
+      firstUnread
+        ? el('div.actions', {},
+            el('a.btn.btn-primary', { href: `#/theory/${firstUnread.id}` },
+              `CONTINUE — CHAPTER ${firstUnread.chapter}`),
+          )
+        : null,
+    ),
     el('div.grid.grid-2', {},
-      ...chapters.map((ch) =>
-        el('a.card', { href: `#/theory/${ch.id}` },
+      ...chapters.map((ch) => {
+        const slug = CHAPTER_CATEGORY[ch.id];
+        const cat = catBySlug.get(slug);
+        const m = cat ? masteryOf(slug, cat.count) : null;
+        return el('a.card', { href: `#/theory/${ch.id}` },
           el('div.quiz-head', {},
             el('span.tag', {}, `CHAPTER ${ch.chapter}`),
-            read.has(ch.id) ? el('span.tag.ok', {}, 'READ') : el('span.tag', {}, 'NEW'),
+            read.has(ch.id) ? el('span.tag.ok', {}, 'READ') : el('span.tag.warn', {}, 'NEW'),
           ),
-          el('h2', {}, ch.translations?.[lang()]?.title || ch.title_it),
-          el('p.stat-sub', {}, ch.title_it),
-        ),
-      ),
+          el('h2', {}, ch.title_it),
+          el('p.stat-sub', {}, ch.translations?.[lang()]?.title || ''),
+          m
+            ? el('div', {},
+                el('p.stat-sub', {}, `${cat.count} QUESTIONS · MASTERED ${m.pct}%`),
+                el('div.bar', {}, el('div', { style: `width:${m.pct}%` })),
+              )
+            : null,
+        );
+      }),
     ),
   );
 }
 
-export async function renderTheoryChapter(root, id) {
+export async function renderTheoryChapter(root, id, opts = {}) {
   let chapters;
   try {
     chapters = await loadTheory();
@@ -203,6 +246,24 @@ export async function renderTheoryChapter(root, id) {
   const ch = chapters.find((c) => c.id === id);
   if (!ch) return clear(root, el('p.empty-note', {}, 'CHAPTER NOT FOUND'));
   const tr = ch.translations?.[lang()];
+
+  // Linked question-bank topic: powers the signs gallery and self-check.
+  const slug = CHAPTER_CATEGORY[ch.id];
+  const cat = state.manifest.categories.find((c) => c.slug === slug);
+  let catQuestions = [];
+  if (cat) {
+    try {
+      catQuestions = await loadQuestions(slug);
+    } catch {
+      /* chapter still readable without the question bank */
+    }
+  }
+  const signs = [...new Set(catQuestions.map((q) => q.image_url).filter(Boolean))].slice(0, 18);
+  const sorted = [...chapters].sort((a, b) => a.chapter - b.chapter);
+  const pos = sorted.indexOf(ch);
+  const prev = sorted[pos - 1];
+  const next = sorted[pos + 1];
+
   // Translation stays hidden until asked for: read the Italian first.
   let revealed = false;
 
@@ -215,42 +276,97 @@ export async function renderTheoryChapter(root, id) {
   document.addEventListener('keydown', keyHandler);
   window.addEventListener('hashchange', () => document.removeEventListener('keydown', keyHandler), { once: true });
 
+  function startCheck() {
+    document.removeEventListener('keydown', keyHandler);
+    renderQuizSession(root, pickQueue(catQuestions, 5), {
+      title: `CHECK — CAP. ${ch.chapter}`,
+      backHash: `#/theory/${id}`,
+      onQuit: () => renderTheoryChapter(root, id),
+      onFinish: (correct, total) => renderTheoryChapter(root, id, { quizResult: { correct, total } }),
+    });
+  }
+
+  async function markRead(e) {
+    try {
+      const { theoryRead } = await api.markTheoryRead(ch.id);
+      state.progress.theoryRead = theoryRead;
+      draw();
+    } catch (err) {
+      e.target.replaceWith(errorBanner(err));
+    }
+  }
+
   function draw() {
-  clear(root,
-    el('a.btn', { href: '#/theory' }, '← ALL CHAPTERS'),
-    el('h1', { style: 'margin-top:20px' }, `${ch.chapter}. ${ch.title_it}`),
-    tr?.title && revealed ? el('p.lede', {}, tr.title.toUpperCase()) : null,
-    el('div.panel.chapter-body', {},
-      el('h2', {}, 'ORIGINAL TEXT (ITALIAN)'),
-      el('p', {}, ch.content_it),
-      revealed && tr?.content
-        ? el('div.translation-block', {}, el('strong', {}, 'TRANSLATION — '), tr.content)
+    const isRead = state.progress.theoryRead.includes(ch.id);
+    const m = cat ? masteryOf(slug, cat.count) : null;
+    clear(root,
+      el('div.quiz-head', {},
+        el('a.btn', { href: '#/theory' }, '← ALL CHAPTERS'),
+        el('span.tag', {}, `CHAPTER ${ch.chapter}/${sorted.length}`),
+        isRead ? el('span.tag.ok', {}, 'READ') : el('span.tag.warn', {}, 'NEW'),
+      ),
+      el('h1', { style: 'margin-top:20px' }, ch.title_it),
+      revealed && tr?.title ? el('p.lede', {}, tr.title.toUpperCase()) : null,
+
+      opts.quizResult
+        ? el('div.feedback', {
+            className: `feedback ${opts.quizResult.correct === opts.quizResult.total ? 'ok' : 'bad'}`,
+            style: 'margin:0 0 20px',
+          }, `SELF-CHECK: ${opts.quizResult.correct}/${opts.quizResult.total} CORRECT`)
         : null,
-      revealed && tr?.simple_it
-        ? el('div.simple-block', {}, el('strong', {}, 'IN SIMPLE WORDS — '), tr.simple_it)
+
+      el('div.panel.chapter-body', {},
+        el('h2', {}, 'ORIGINAL TEXT (ITALIAN)'),
+        el('p', {}, ch.content_it),
+        revealed && tr?.content
+          ? el('div.translation-block', {}, el('strong', {}, 'TRANSLATION — '), tr.content)
+          : null,
+        revealed && tr?.simple_it
+          ? el('div.simple-block', {}, el('strong', {}, 'IN SIMPLE WORDS — '), tr.simple_it)
+          : null,
+        !revealed && (tr?.content || tr?.simple_it)
+          ? el('button.btn.btn-small.btn-translate', {
+              onclick: () => { revealed = true; draw(); },
+            }, `TRANSLATE (${lang().toUpperCase()})`)
+          : null,
+      ),
+
+      signs.length
+        ? el('div.panel', {},
+            el('h2', {}, `SIGNS IN THIS CHAPTER — ${signs.length}`),
+            el('div.signs-grid', {},
+              ...signs.map((src) =>
+                el('img', { src, alt: 'Road sign', loading: 'lazy', onerror: (e) => e.target.remove() })),
+            ),
+          )
         : null,
-      !revealed && (tr?.content || tr?.simple_it)
-        ? el('button.btn.btn-small.btn-translate', {
-            onclick: () => { revealed = true; draw(); },
-          }, `TRANSLATE (${lang().toUpperCase()})`)
+
+      cat
+        ? el('div.panel', {},
+            el('h2', {}, 'CHECK YOURSELF'),
+            el('p.stat-sub', {}, `${cat.count} QUESTIONS IN THIS TOPIC · MASTERED ${m.mastered} (${m.pct}%)`),
+            el('div.bar', {}, el('div', { style: `width:${m.pct}%` })),
+            el('div.actions', {},
+              el('button.btn.btn-primary', { onclick: startCheck }, 'QUICK CHECK — 5 QUESTIONS'),
+              el('a.btn', { href: `#/practice/${slug}` }, 'FULL PRACTICE'),
+            ),
+          )
         : null,
-    ),
-    el('div.actions', {},
-      state.progress.theoryRead.includes(ch.id)
-        ? el('span.tag.ok', {}, 'MARKED AS READ')
-        : el('button.btn.btn-primary', {
-            onclick: async (e) => {
-              try {
-                const { theoryRead } = await api.markTheoryRead(ch.id);
-                state.progress.theoryRead = theoryRead;
-                draw();
-              } catch (err) {
-                e.target.replaceWith(errorBanner(err));
-              }
-            },
-          }, 'MARK AS READ'),
-    ),
-  );
+
+      el('div.actions', {},
+        isRead
+          ? el('span.tag.ok', {}, 'MARKED AS READ')
+          : el('button.btn.btn-primary', { onclick: markRead }, 'MARK AS READ'),
+      ),
+      el('div.chapter-nav', {},
+        prev
+          ? el('a.btn', { href: `#/theory/${prev.id}` }, `← CAP. ${prev.chapter}`)
+          : el('span', {}),
+        next
+          ? el('a.btn', { href: `#/theory/${next.id}` }, `CAP. ${next.chapter} →`)
+          : el('span', {}),
+      ),
+    );
   }
 
   draw();
@@ -290,7 +406,7 @@ function translationArea(translation, revealed, onReveal) {
 }
 
 /** Practice session over a queue of questions with instant feedback. */
-export function renderQuizSession(root, questions, { title, backHash, onFinish }) {
+export function renderQuizSession(root, questions, { title, backHash, onFinish, onQuit }) {
   const queue = questions;
   let index = 0;
   let correctCount = 0;
@@ -349,7 +465,16 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish }
     const q = queue[index];
     clear(root,
       el('div.quiz-head', {},
-        el('a.btn', { href: backHash, onclick: () => document.removeEventListener('keydown', keyHandler) }, '← QUIT'),
+        el('a.btn', {
+          href: backHash,
+          onclick: (e) => {
+            document.removeEventListener('keydown', keyHandler);
+            if (onQuit) {
+              e.preventDefault();
+              onQuit();
+            }
+          },
+        }, '← QUIT'),
         el('span.quiz-progress', {}, `${title} — ${index + 1}/${queue.length}`),
         el('span.tag.ok', {}, `${correctCount} CORRECT`),
       ),
@@ -394,13 +519,7 @@ export async function renderPracticeSession(root, slug) {
     return clear(root, errorBanner(err));
   }
 
-  const answers = state.progress.answers;
-  const unseen = questions.filter((q) => !answers[q.id]);
-  const wrong = questions.filter((q) => answers[q.id] && !answers[q.id].lastCorrect);
-  const rest = questions.filter((q) => answers[q.id]?.lastCorrect);
-  const queue = [...shuffle(unseen), ...shuffle(wrong), ...shuffle(rest)].slice(0, PRACTICE_BATCH);
-
-  renderQuizSession(root, queue, {
+  renderQuizSession(root, pickQueue(questions, PRACTICE_BATCH), {
     title: titleCase(cat.name).toUpperCase(),
     backHash: '#/practice',
     onFinish: (correct, total) => {
