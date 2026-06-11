@@ -203,31 +203,47 @@ export async function renderTheoryChapter(root, id) {
   const ch = chapters.find((c) => c.id === id);
   if (!ch) return clear(root, el('p.empty-note', {}, 'CHAPTER NOT FOUND'));
   const tr = ch.translations?.[lang()];
-  const isRead = state.progress.theoryRead.includes(ch.id);
+  // Translation stays hidden until asked for: read the Italian first.
+  let revealed = false;
 
+  function keyHandler(e) {
+    if (e.key.toLowerCase() === 't' && !revealed) {
+      revealed = true;
+      draw();
+    }
+  }
+  document.addEventListener('keydown', keyHandler);
+  window.addEventListener('hashchange', () => document.removeEventListener('keydown', keyHandler), { once: true });
+
+  function draw() {
   clear(root,
     el('a.btn', { href: '#/theory' }, '← ALL CHAPTERS'),
     el('h1', { style: 'margin-top:20px' }, `${ch.chapter}. ${ch.title_it}`),
-    tr?.title ? el('p.lede', {}, tr.title.toUpperCase()) : null,
+    tr?.title && revealed ? el('p.lede', {}, tr.title.toUpperCase()) : null,
     el('div.panel.chapter-body', {},
       el('h2', {}, 'ORIGINAL TEXT (ITALIAN)'),
       el('p', {}, ch.content_it),
-      tr?.content
+      revealed && tr?.content
         ? el('div.translation-block', {}, el('strong', {}, 'TRANSLATION — '), tr.content)
         : null,
-      tr?.simple_it
+      revealed && tr?.simple_it
         ? el('div.simple-block', {}, el('strong', {}, 'IN SIMPLE WORDS — '), tr.simple_it)
+        : null,
+      !revealed && (tr?.content || tr?.simple_it)
+        ? el('button.btn.btn-small.btn-translate', {
+            onclick: () => { revealed = true; draw(); },
+          }, `TRANSLATE (${lang().toUpperCase()})`)
         : null,
     ),
     el('div.actions', {},
-      isRead
+      state.progress.theoryRead.includes(ch.id)
         ? el('span.tag.ok', {}, 'MARKED AS READ')
         : el('button.btn.btn-primary', {
             onclick: async (e) => {
               try {
                 const { theoryRead } = await api.markTheoryRead(ch.id);
                 state.progress.theoryRead = theoryRead;
-                renderTheoryChapter(root, id);
+                draw();
               } catch (err) {
                 e.target.replaceWith(errorBanner(err));
               }
@@ -235,6 +251,9 @@ export async function renderTheoryChapter(root, id) {
           }, 'MARK AS READ'),
     ),
   );
+  }
+
+  draw();
 }
 
 /* ============================== PRACTICE ============================== */
@@ -259,15 +278,34 @@ export function renderPracticeList(root) {
   );
 }
 
+/**
+ * Renders the translation area: hidden behind a button by default so the
+ * user engages with the Italian original first (the exam has no translations).
+ */
+function translationArea(translation, revealed, onReveal) {
+  if (!translation) return null;
+  if (revealed) return el('div.question-translation', {}, translation);
+  return el('button.btn.btn-small.btn-translate', { onclick: onReveal },
+    `TRANSLATE (${lang().toUpperCase()})`);
+}
+
 /** Practice session over a queue of questions with instant feedback. */
 export function renderQuizSession(root, questions, { title, backHash, onFinish }) {
   const queue = questions;
   let index = 0;
   let correctCount = 0;
   let answered = false;
+  let lastCorrect = null;
+  let revealed = false; // translation visibility, reset per question
+
+  function reveal() {
+    revealed = true;
+    draw();
+  }
 
   function keyHandler(e) {
     const key = e.key.toLowerCase();
+    if (key === 't') return reveal();
     if (!answered) {
       if (key === 'v' || key === 'arrowleft') answer(true);
       if (key === 'f' || key === 'arrowright') answer(false);
@@ -284,30 +322,31 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish }
     if (answered) return;
     answered = true;
     const q = queue[index];
-    const correct = value === q.is_true;
-    if (correct) correctCount++;
+    lastCorrect = value === q.is_true;
+    if (lastCorrect) correctCount++;
+    draw();
     try {
-      state.progress = await api.recordAnswers([{ id: q.id, correct }]);
+      state.progress = await api.recordAnswers([{ id: q.id, correct: lastCorrect }]);
     } catch (err) {
       root.prepend(errorBanner(err));
     }
-    draw(correct);
   }
 
   function next() {
     answered = false;
+    lastCorrect = null;
+    revealed = false;
     index++;
     if (index >= queue.length) {
       document.removeEventListener('keydown', keyHandler);
       onFinish(correctCount, queue.length);
     } else {
-      draw(null);
+      draw();
     }
   }
 
-  function draw(lastCorrect) {
+  function draw() {
     const q = queue[index];
-    const translation = translationOf(q);
     clear(root,
       el('div.quiz-head', {},
         el('a.btn', { href: backHash, onclick: () => document.removeEventListener('keydown', keyHandler) }, '← QUIT'),
@@ -317,7 +356,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish }
       el('div.panel.question-card', {},
         q.image_url ? el('img.question-img', { src: q.image_url, alt: 'Road sign / situation', onerror: (e) => e.target.remove() }) : null,
         el('p.question-text', {}, q.text_it),
-        translation ? el('div.question-translation', {}, translation) : null,
+        translationArea(translationOf(q), revealed, reveal),
         answered
           ? el('div', {},
               el('div.feedback', { className: `feedback ${lastCorrect ? 'ok' : 'bad'}` },
@@ -326,7 +365,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish }
                 el('button.btn.btn-primary.btn-big', { onclick: next },
                   index + 1 >= queue.length ? 'FINISH' : 'NEXT →'),
               ),
-              el('p.kbd-hint', {}, el('kbd', {}, 'ENTER'), ' NEXT'),
+              el('p.kbd-hint', {}, el('kbd', {}, 'ENTER'), ' NEXT · ', el('kbd', {}, 'T'), ' TRANSLATE'),
             )
           : el('div', {},
               el('div.answers', {},
@@ -334,13 +373,13 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish }
                 el('button.btn.btn-false', { onclick: () => answer(false) }, 'FALSO'),
               ),
               el('p.kbd-hint', {},
-                el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO'),
+                el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ', el('kbd', {}, 'T'), ' TRANSLATE'),
             ),
       ),
     );
   }
 
-  draw(null);
+  draw();
 }
 
 export async function renderPracticeSession(root, slug) {
@@ -469,13 +508,15 @@ function runExam(root, questions) {
   let index = 0;
   let secondsLeft = EXAM_SECONDS;
   let finished = false;
+  let revealed = false; // translation visibility, reset per question
 
   const timerEl = el('span.timer', {}, fmtTime(secondsLeft));
-  // Navigating away abandons the exam: stop the timer so it cannot
-  // submit over a different screen.
+  // Navigating away abandons the exam: stop the timer and keys so they
+  // cannot fire over a different screen.
   window.addEventListener('hashchange', () => {
     finished = true;
     clearInterval(interval);
+    document.removeEventListener('keydown', keyHandler);
   }, { once: true });
   const interval = setInterval(() => {
     if (finished) return clearInterval(interval);
@@ -485,9 +526,27 @@ function runExam(root, questions) {
     if (secondsLeft <= 0) submit();
   }, 1000);
 
+  function keyHandler(e) {
+    if (finished) return;
+    const key = e.key.toLowerCase();
+    if (key === 'v') choose(true);
+    if (key === 'f') choose(false);
+    if (key === 't') { revealed = true; draw(); }
+    if (key === 'arrowleft' && index > 0) { index--; revealed = false; draw(); }
+    if (key === 'arrowright' && index < questions.length - 1) { index++; revealed = false; draw(); }
+  }
+  document.addEventListener('keydown', keyHandler);
+
+  function goTo(i) {
+    index = i;
+    revealed = false;
+    draw();
+  }
+
   function choose(value) {
     chosen[index] = value;
     if (index < questions.length - 1) index++;
+    revealed = false;
     draw();
   }
 
@@ -495,6 +554,7 @@ function runExam(root, questions) {
     if (finished) return;
     finished = true;
     clearInterval(interval);
+    document.removeEventListener('keydown', keyHandler);
     const errors = questions.reduce(
       (n, q, i) => n + (chosen[i] === q.is_true ? 0 : 1), 0);
     const passed = errors <= EXAM_MAX_ERRORS;
@@ -548,6 +608,7 @@ function runExam(root, questions) {
       el('div.panel.question-card', {},
         q.image_url ? el('img.question-img', { src: q.image_url, alt: 'Road sign / situation', onerror: (e) => e.target.remove() }) : null,
         el('p.question-text', {}, q.text_it),
+        translationArea(translationOf(q), revealed, () => { revealed = true; draw(); }),
         el('div.answers', {},
           el('button.btn.btn-true', {
             style: chosen[index] === true ? 'outline:4px solid var(--ink)' : '',
@@ -558,12 +619,15 @@ function runExam(root, questions) {
             onclick: () => choose(false),
           }, 'FALSO'),
         ),
+        el('p.kbd-hint', {},
+          el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ',
+          el('kbd', {}, '←'), el('kbd', {}, '→'), ' NAVIGATE · ', el('kbd', {}, 'T'), ' TRANSLATE'),
         el('div.exam-nav', {},
           ...questions.map((_, i) =>
             el('button', {
               textContent: String(i + 1),
               className: `${chosen[i] !== null ? 'answered' : ''} ${i === index ? 'current' : ''}`,
-              onclick: () => { index = i; draw(); },
+              onclick: () => goTo(i),
             }),
           ),
         ),

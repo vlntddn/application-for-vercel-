@@ -80,12 +80,18 @@ body {
 .nav a {
   color: var(--ink);
   text-decoration: none;
-  font-size: 0.72rem;
+  font-size: 0.6rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
-  padding: 10px 14px;
+  letter-spacing: 0.1em;
+  padding: 8px 14px;
   border-right: var(--border-thin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
+
+.nav svg { width: 22px; height: 22px; display: block; }
 
 .nav a:last-child { border-right: none; }
 .nav a:hover { background: var(--warn); color: #000; }
@@ -274,6 +280,12 @@ input:focus-visible, select:focus-visible, .btn:focus-visible, .nav a:focus-visi
   font-weight: 600;
 }
 
+.btn-translate {
+  margin-top: 14px;
+  background: var(--paper);
+  border-style: dashed;
+}
+
 .answers { display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap; }
 .answers .btn { flex: 1; min-width: 140px; font-size: 1.1rem; padding: 18px; text-align: center; }
 
@@ -399,3 +411,55 @@ kbd {
 .footer code { background: var(--accent); color: #fff; padding: 1px 6px; }
 
 .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 760px) {
+  main { padding: 20px 14px 90px; }
+
+  .masthead { justify-content: center; padding: 12px 16px; }
+
+  /* Navigation becomes a fixed, thumb-reachable bottom bar */
+  .nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    border: none;
+    border-top: var(--border);
+    background: var(--surface);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .nav a {
+    padding: 8px 2px 10px;
+    font-size: 0.5rem;
+    letter-spacing: 0.06em;
+  }
+
+  .footer { margin-bottom: 64px; text-align: center; }
+
+  .panel { padding: 16px; }
+  .card { padding: 16px; }
+
+  h1 { font-size: 1.6rem; }
+
+  /* Big thumb targets for answering */
+  .answers { gap: 10px; }
+  .answers .btn { min-width: 120px; padding: 20px 10px; font-size: 1.15rem; }
+
+  .quiz-head { gap: 8px; }
+  .quiz-head .btn { padding: 8px 12px; }
+
+  .exam-nav button { width: 34px; height: 34px; }
+
+  .actions .btn { flex: 1; text-align: center; }
+
+  .kbd-hint { display: none; } /* no keyboard on phones */
+
+  .onboard { margin: 8px auto; }
+
+  .stat-value { font-size: 2rem; }
+}
