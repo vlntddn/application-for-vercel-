@@ -32,6 +32,9 @@ Tests (built-in `node:test` runner): `npm test`.
   question navigator, countdown, full error report.
 - **Mistakes** — every question you last answered wrong; answer it correctly
   to clear it.
+- **Dictionary** — exam vocabulary in 9 thematic sections (107 terms,
+  EN/RU/ZH) with a self-test mode; sign descriptions on tap, built from
+  true statements in the question bank.
 - **Settings** — name, translation language (EN/RU/ZH), light/dark theme,
   full progress reset.
 
@@ -74,6 +77,7 @@ legacy/             Previous compiled build (kept for reference — no source ex
 | `GET`    | `/api/health`            | Liveness check                         |
 | `GET`    | `/api/manifest`          | Topic list + question counts           |
 | `GET`    | `/api/theory`            | Theory manual                          |
+| `GET`    | `/api/dictionary`        | Exam vocabulary by topic               |
 | `GET`    | `/api/questions/:slug`   | Questions for a topic (whitelisted)    |
 | `GET`    | `/api/progress`          | Full progress snapshot + derived stats |
 | `PUT`    | `/api/progress/profile`  | Update name / language / theme         |

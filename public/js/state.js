@@ -5,6 +5,7 @@ export const state = {
   progress: null, // snapshot from /api/progress (includes stats)
   manifest: null,
   theory: null,
+  dictionary: null,
   questionsBySlug: new Map(),
 };
 
@@ -22,6 +23,11 @@ export function applyTheme() {
 export async function loadTheory() {
   if (!state.theory) state.theory = await api.theory();
   return state.theory;
+}
+
+export async function loadDictionary() {
+  if (!state.dictionary) state.dictionary = await api.dictionary();
+  return state.dictionary;
 }
 
 export async function loadQuestions(slug) {

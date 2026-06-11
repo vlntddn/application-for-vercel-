@@ -3,6 +3,7 @@ import {
   state,
   applyTheme,
   loadTheory,
+  loadDictionary,
   loadQuestions,
   loadAllQuestions,
   slugForQuestionId,
@@ -41,6 +42,70 @@ function masteryOf(slug, count) {
   const mastered = Object.entries(state.progress.answers)
     .filter(([id, a]) => a.lastCorrect && id.startsWith(`${slug}-`)).length;
   return { mastered, pct: Math.round((mastered / count) * 100) };
+}
+
+/**
+ * Modal describing one road sign. The description is built from the
+ * question bank itself: TRUE statements about this sign are factual
+ * "what it means" sentences. onPractice starts a session with all of
+ * the sign's questions.
+ */
+function showSignModal(imageUrl, signQuestions, onPractice) {
+  const facts = signQuestions.filter((q) => q.is_true).slice(0, 4);
+  let revealed = false;
+
+  const overlay = el('div.modal-overlay', {
+    onclick: (e) => { if (e.target === overlay) close(); },
+  });
+
+  function close() {
+    document.removeEventListener('keydown', escHandler);
+    overlay.remove();
+  }
+
+  function escHandler(e) {
+    if (e.key === 'Escape') close();
+    if (e.key.toLowerCase() === 't' && !revealed) { revealed = true; draw(); }
+  }
+  document.addEventListener('keydown', escHandler);
+
+  function draw() {
+    overlay.replaceChildren(
+      el('div.modal', { role: 'dialog', 'aria-modal': 'true' },
+        el('div.quiz-head', {},
+          el('h2', { style: 'margin:0' }, 'WHAT THIS SIGN MEANS'),
+          el('button.btn.btn-icon', { onclick: close, 'aria-label': 'Close' }, '✕'),
+        ),
+        el('img.modal-sign', { src: imageUrl, alt: 'Road sign' }),
+        facts.length
+          ? el('div', {},
+              ...facts.map((q) =>
+                el('div.fact', {},
+                  el('p', {}, q.text_it),
+                  revealed && translationOf(q)
+                    ? el('p.fact-translation', {}, translationOf(q))
+                    : null,
+                ),
+              ),
+              !revealed
+                ? el('button.btn.btn-small.btn-translate', {
+                    onclick: () => { revealed = true; draw(); },
+                  }, `TRANSLATE (${lang().toUpperCase()})`)
+                : null,
+            )
+          : el('p.empty-note', {}, 'NO DESCRIPTION IN THE QUESTION BANK'),
+        el('div.actions', {},
+          el('button.btn.btn-primary', {
+            onclick: () => { close(); onPractice(); },
+          }, `PRACTICE THIS SIGN — ${signQuestions.length} QUESTIONS`),
+          el('button.btn', { onclick: close }, 'CLOSE'),
+        ),
+      ),
+    );
+  }
+
+  draw();
+  document.body.append(overlay);
 }
 
 /* ============================== ONBOARDING ============================== */
@@ -205,12 +270,13 @@ export async function renderTheoryList(root) {
           `${read.size}/${chapters.length} CHAPTERS`),
       ),
       el('div.bar', {}, el('div', { style: `width:${readPct}%` })),
-      firstUnread
-        ? el('div.actions', {},
-            el('a.btn.btn-primary', { href: `#/theory/${firstUnread.id}` },
-              `CONTINUE — CHAPTER ${firstUnread.chapter}`),
-          )
-        : null,
+      el('div.actions', {},
+        firstUnread
+          ? el('a.btn.btn-primary', { href: `#/theory/${firstUnread.id}` },
+              `CONTINUE — CHAPTER ${firstUnread.chapter}`)
+          : null,
+        el('a.btn', { href: '#/dictionary' }, 'DIZIONARIO — EXAM VOCABULARY'),
+      ),
     ),
     el('div.grid.grid-2', {},
       ...chapters.map((ch) => {
@@ -259,6 +325,13 @@ export async function renderTheoryChapter(root, id, opts = {}) {
     }
   }
   const signs = [...new Set(catQuestions.map((q) => q.image_url).filter(Boolean))].slice(0, 18);
+  let dictionary = { sections: [] };
+  try {
+    dictionary = await loadDictionary();
+  } catch {
+    /* chapter still readable without the dictionary */
+  }
+  const vocabSections = dictionary.sections.filter((s) => s.chapters.includes(ch.id));
   const sorted = [...chapters].sort((a, b) => a.chapter - b.chapter);
   const pos = sorted.indexOf(ch);
   const prev = sorted[pos - 1];
@@ -334,9 +407,41 @@ export async function renderTheoryChapter(root, id, opts = {}) {
       signs.length
         ? el('div.panel', {},
             el('h2', {}, `SIGNS IN THIS CHAPTER — ${signs.length}`),
+            el('p.stat-sub', { style: 'margin-bottom:12px' }, 'TAP A SIGN TO SEE WHAT IT MEANS'),
             el('div.signs-grid', {},
               ...signs.map((src) =>
-                el('img', { src, alt: 'Road sign', loading: 'lazy', onerror: (e) => e.target.remove() })),
+                el('button.sign-tile', {
+                  'aria-label': 'Show sign description',
+                  onclick: () => {
+                    const signQuestions = catQuestions.filter((q) => q.image_url === src);
+                    showSignModal(src, signQuestions, () => {
+                      document.removeEventListener('keydown', keyHandler);
+                      renderQuizSession(root, pickQueue(signQuestions, signQuestions.length), {
+                        title: 'SIGN PRACTICE',
+                        backHash: `#/theory/${id}`,
+                        onQuit: () => renderTheoryChapter(root, id),
+                        onFinish: (correct, total) =>
+                          renderTheoryChapter(root, id, { quizResult: { correct, total } }),
+                      });
+                    });
+                  },
+                }, el('img', { src, alt: 'Road sign', loading: 'lazy', onerror: (e) => e.target.closest('button').remove() })),
+              ),
+            ),
+          )
+        : null,
+
+      vocabSections.length
+        ? el('div.panel', {},
+            el('h2', {}, 'VOCABULARY OF THIS CHAPTER'),
+            ...vocabSections.map((s) =>
+              el('div.row', {},
+                el('div', {},
+                  el('strong', {}, s.title_it),
+                  el('p.stat-sub', {}, `${s.terms.length} TERMS · ${s.titles?.[lang()] || ''}`),
+                ),
+                el('a.btn.btn-small', { href: `#/dictionary/${s.id}` }, 'OPEN'),
+              ),
             ),
           )
         : null,
@@ -367,6 +472,66 @@ export async function renderTheoryChapter(root, id, opts = {}) {
           : el('span', {}),
       ),
     );
+  }
+
+  draw();
+}
+
+/* ============================== DICTIONARY ============================== */
+
+export async function renderDictionary(root, sectionId) {
+  clear(root, el('h1', {}, 'DIZIONARIO'), el('p.lede', {}, 'LOADING...'));
+  let dictionary;
+  try {
+    dictionary = await loadDictionary();
+  } catch (err) {
+    return clear(root, errorBanner(err));
+  }
+
+  // Self-test mode hides every translation; tap a row to reveal just it.
+  let selfTest = false;
+  const revealedTerms = new Set();
+
+  function termRow(sec, idx, term) {
+    const key = `${sec.id}:${idx}`;
+    const hidden = selfTest && !revealedTerms.has(key);
+    return el('div.row.term-row', {
+      className: `row term-row ${hidden ? 'is-hidden' : ''}`,
+      onclick: hidden ? () => { revealedTerms.add(key); draw(); } : undefined,
+    },
+      el('strong.term-it', {}, term.it),
+      hidden
+        ? el('span.term-veil', {}, 'TAP TO REVEAL')
+        : el('span.term-tr', {}, term[lang()] || term.en),
+    );
+  }
+
+  function draw() {
+    clear(root,
+      el('h1', {}, 'DIZIONARIO'),
+      el('p.lede', {}, 'THE EXAM VOCABULARY, BY TOPIC. LEARN THE ITALIAN TERM — THE EXAM HAS NO TRANSLATIONS.'),
+      el('div.actions', { style: 'margin:0 0 24px' },
+        el('a.btn', { href: '#/theory' }, '← THEORY'),
+        el('button.btn', {
+          className: `btn ${selfTest ? 'btn-primary' : ''}`,
+          onclick: () => { selfTest = !selfTest; revealedTerms.clear(); draw(); },
+        }, selfTest ? 'SELF-TEST: ON' : 'SELF-TEST: OFF'),
+      ),
+      ...dictionary.sections.map((sec) =>
+        el('div.panel', { id: `dict-${sec.id}` },
+          el('div.quiz-head', {},
+            el('h2', { style: 'margin:0' }, sec.title_it),
+            el('span.tag', {}, `${sec.terms.length} TERMS`),
+          ),
+          el('p.stat-sub', { style: 'margin-bottom:10px' }, (sec.titles?.[lang()] || '').toUpperCase()),
+          ...sec.terms.map((t, i) => termRow(sec, i, t)),
+        ),
+      ),
+    );
+    if (sectionId) {
+      document.getElementById(`dict-${sectionId}`)?.scrollIntoView({ block: 'start' });
+      sectionId = null; // only on first draw
+    }
   }
 
   draw();

@@ -28,6 +28,9 @@ async function handleApi(req, res, pathname) {
     if (pathname === '/api/theory') {
       return serveFile(res, config.dataDir, '/theory.json', { cache: 'max-age=3600' });
     }
+    if (pathname === '/api/dictionary') {
+      return serveFile(res, config.dataDir, '/dictionary.json', { cache: 'max-age=3600' });
+    }
     const qMatch = pathname.match(QUESTIONS_RE);
     if (qMatch) {
       if (!validSlugs.has(qMatch[1])) return sendError(res, 404, 'Unknown category');

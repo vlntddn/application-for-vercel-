@@ -13,6 +13,7 @@ async function request(path, options = {}) {
 export const api = {
   manifest: () => request('/api/manifest'),
   theory: () => request('/api/theory'),
+  dictionary: () => request('/api/dictionary'),
   questions: (slug) => request(`/api/questions/${slug}`),
   progress: () => request('/api/progress'),
   updateProfile: (profile) =>
