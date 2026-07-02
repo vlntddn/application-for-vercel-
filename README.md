@@ -35,6 +35,8 @@ Tests (built-in `node:test` runner): `npm test`.
 - **Dictionary** — exam vocabulary in 9 thematic sections (107 terms,
   EN/RU/ZH) with a self-test mode; sign descriptions on tap, built from
   true statements in the question bank.
+- **Progress & stats** — per-topic accuracy and mastery, weak-spot ranking
+  with one-tap practice, and a mock-exam trend chart.
 - **Settings** — name, translation language (EN/RU/ZH), light/dark theme,
   full progress reset.
 

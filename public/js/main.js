@@ -5,6 +5,7 @@ import {
   renderDashboard,
   renderTheoryList,
   renderTheoryChapter,
+  renderStats,
   renderDictionary,
   renderPracticeList,
   renderPracticeSession,
@@ -18,6 +19,7 @@ const nav = document.getElementById('nav');
 
 const routes = [
   { pattern: /^#?\/?$/, name: 'dashboard', render: () => renderDashboard(view) },
+  { pattern: /^#\/stats$/, name: 'dashboard', render: () => renderStats(view) },
   { pattern: /^#\/theory$/, name: 'theory', render: () => renderTheoryList(view) },
   { pattern: /^#\/theory\/([\w-]+)$/, name: 'theory', render: (m) => renderTheoryChapter(view, m[1]) },
   { pattern: /^#\/dictionary$/, name: 'theory', render: () => renderDictionary(view) },

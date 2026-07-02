@@ -45,6 +45,39 @@ function masteryOf(slug, count) {
 }
 
 /**
+ * Per-topic breakdown derived from the answer log (pure read, no
+ * mutation). `attempted` = distinct questions tried; `accuracy` counts
+ * every attempt (a question answered wrong then right is 50%), so it
+ * measures reliability while `masteredPct` measures coverage.
+ */
+function categoryStats() {
+  const answers = Object.entries(state.progress.answers);
+  return state.manifest.categories.map((cat) => {
+    let correct = 0;
+    let wrong = 0;
+    let attempted = 0;
+    let mastered = 0;
+    for (const [id, a] of answers) {
+      if (!id.startsWith(`${cat.slug}-`)) continue;
+      attempted += 1;
+      correct += a.correct;
+      wrong += a.wrong;
+      if (a.lastCorrect) mastered += 1;
+    }
+    const total = correct + wrong;
+    return {
+      slug: cat.slug,
+      name: cat.name,
+      count: cat.count,
+      attempted,
+      mastered,
+      masteredPct: Math.round((mastered / cat.count) * 100),
+      accuracy: total ? Math.round((correct / total) * 100) : null,
+    };
+  });
+}
+
+/**
  * Modal describing one road sign. The description is built from the
  * question bank itself: TRUE statements about this sign are factual
  * "what it means" sentences. onPractice starts a session with all of
@@ -225,6 +258,7 @@ export function renderDashboard(root) {
         el('a.btn.btn-primary.btn-big', { href: '#/exam' }, 'START MOCK EXAM'),
         el('a.btn', { href: '#/practice' }, 'PRACTICE BY TOPIC'),
         el('a.btn', { href: '#/theory' }, 'READ THEORY'),
+        el('a.btn', { href: '#/stats' }, 'PROGRESS & STATS'),
         stats.mistakes > 0
           ? el('a.btn', { href: '#/mistakes' }, `REVIEW ${stats.mistakes} MISTAKES`)
           : null,
@@ -242,6 +276,124 @@ export function renderDashboard(root) {
           ),
         )
       : null,
+  );
+}
+
+/* ============================== STATISTICS ============================== */
+
+export function renderStats(root) {
+  const { stats, exams, answers } = state.progress;
+  const total = state.manifest.totalQuestions;
+  const cats = categoryStats();
+
+  // Overall accuracy across every attempt ever made.
+  let allCorrect = 0;
+  let allTotal = 0;
+  for (const a of Object.values(answers)) {
+    allCorrect += a.correct;
+    allTotal += a.correct + a.wrong;
+  }
+  const overallAccuracy = allTotal ? Math.round((allCorrect / allTotal) * 100) : null;
+  const attempted = Object.keys(answers).length;
+  const coveragePct = Math.round((attempted / total) * 100);
+
+  // Weak spots: attempted topics with the lowest accuracy first.
+  const weak = cats
+    .filter((c) => c.attempted > 0 && c.accuracy !== null)
+    .sort((a, b) => a.accuracy - b.accuracy)
+    .slice(0, 5);
+
+  // All topics ranked by how much is left to master.
+  const ranked = [...cats].sort((a, b) => a.masteredPct - b.masteredPct);
+
+  const recentExams = [...exams].slice(-12);
+  const maxErrors = Math.max(EXAM_MAX_ERRORS + 1, ...recentExams.map((e) => e.errors), 1);
+
+  function accTag(acc) {
+    if (acc === null) return el('span.tag', {}, 'NOT TRIED');
+    const cls = acc >= 90 ? 'ok' : acc >= 70 ? 'warn' : 'bad';
+    return el('span.tag', { className: `tag ${cls}` }, `${acc}%`);
+  }
+
+  clear(root,
+    el('div.quiz-head', {},
+      el('h1', { style: 'margin:0' }, 'PROGRESS & STATS'),
+      el('a.btn', { href: '#/' }, '← DASHBOARD'),
+    ),
+    el('p.lede', {}, 'WHERE YOU STAND AND WHAT TO STUDY NEXT.'),
+
+    el('div.grid.grid-3', {},
+      el('div.card', {},
+        el('h2', {}, 'MASTERED'),
+        el('p.stat-value.ok', {}, `${Math.round((stats.mastered / total) * 100)}%`),
+        el('p.stat-sub', {}, `${stats.mastered} OF ${total} QUESTIONS`),
+        el('div.bar', {}, el('div', { style: `width:${Math.round((stats.mastered / total) * 100)}%` })),
+      ),
+      el('div.card', {},
+        el('h2', {}, 'OVERALL ACCURACY'),
+        el('p.stat-value', {}, overallAccuracy === null ? '—' : `${overallAccuracy}%`),
+        el('p.stat-sub', {}, `${attempted} QUESTIONS TRIED (${coveragePct}% COVERAGE)`),
+      ),
+      el('div.card', {},
+        el('h2', {}, 'EXAM SUCCESS'),
+        el('p.stat-value.accent', {}, `${stats.examSuccess}%`),
+        el('p.stat-sub', {}, `${stats.examsPassed}/${stats.examsTaken} PASSED · STREAK ${stats.streak}`),
+      ),
+    ),
+
+    weak.length
+      ? el('div.panel', {},
+          el('h2', {}, 'WEAK SPOTS — STUDY THESE FIRST'),
+          ...weak.map((c) =>
+            el('div.row', {},
+              el('div', { style: 'flex:1' },
+                el('strong', {}, titleCase(c.name)),
+                el('p.stat-sub', {}, `MASTERED ${c.masteredPct}% · ${c.attempted}/${c.count} TRIED`),
+              ),
+              accTag(c.accuracy),
+              el('a.btn.btn-small', { href: `#/practice/${c.slug}` }, 'PRACTICE'),
+            ),
+          ),
+        )
+      : el('div.panel', {},
+          el('h2', {}, 'WEAK SPOTS'),
+          el('p.empty-note', {}, 'ANSWER SOME QUESTIONS AND YOUR WEAK TOPICS WILL SHOW UP HERE.'),
+          el('div.actions', {}, el('a.btn.btn-primary', { href: '#/practice' }, 'START PRACTICE')),
+        ),
+
+    recentExams.length
+      ? el('div.panel', {},
+          el('h2', {}, 'MOCK-EXAM TREND'),
+          el('p.stat-sub', { style: 'margin-bottom:12px' },
+            `ERRORS PER EXAM · PASS LINE AT ${EXAM_MAX_ERRORS} (LATEST ${recentExams.length})`),
+          el('div.exam-trend', {},
+            ...recentExams.map((e) =>
+              el('div.trend-col', { title: `${e.errors} errors` },
+                el('div.trend-bar', {
+                  className: `trend-bar ${e.passed ? 'ok' : 'bad'}`,
+                  style: `height:${Math.max(6, Math.round((e.errors / maxErrors) * 100))}%`,
+                }),
+                el('span.trend-label', {}, String(e.errors)),
+              ),
+            ),
+          ),
+        )
+      : null,
+
+    el('div.panel', {},
+      el('h2', {}, 'ALL TOPICS'),
+      ...ranked.map((c) =>
+        el('div.row', {},
+          el('div', { style: 'flex:1' },
+            el('strong', {}, titleCase(c.name)),
+            el('div.bar', {}, el('div', { style: `width:${c.masteredPct}%` })),
+          ),
+          el('span.stat-sub', { style: 'min-width:110px;text-align:right' },
+            `${c.masteredPct}% · ${c.attempted}/${c.count}`),
+          accTag(c.accuracy),
+        ),
+      ),
+    ),
   );
 }
 
