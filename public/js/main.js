@@ -59,6 +59,13 @@ function route() {
 
 window.addEventListener('hashchange', route);
 
+// Offline support: the service worker caches the shell and study data.
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(() => {
+    /* app works fine without it */
+  });
+}
+
 boot()
   .then(route)
   .catch((err) => {

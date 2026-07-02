@@ -1084,6 +1084,54 @@ function runExam(root, questions) {
 
 /* ============================== SETTINGS ============================== */
 
+/**
+ * Warms the service-worker cache with every study asset: topic lists,
+ * theory, dictionary, all question files and every sign image. Fetches
+ * go through the SW's stale-while-revalidate handler, which stores them.
+ */
+async function downloadForOffline(button) {
+  const box = button.parentElement;
+  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
+    box.replaceChildren(el('p.error-banner', { role: 'alert' },
+      'OFFLINE CACHE NOT READY — RELOAD THE PAGE ONCE AND TRY AGAIN.'));
+    return;
+  }
+  const label = el('span.tag', {}, 'PREPARING...');
+  box.replaceChildren(label);
+  try {
+    const dataUrls = [
+      '/api/manifest', '/api/theory', '/api/dictionary',
+      ...state.manifest.categories.map((c) => `/api/questions/${c.slug}`),
+    ];
+    const images = new Set();
+    let done = 0;
+    for (const url of dataUrls) {
+      const res = await fetch(url);
+      if (url.startsWith('/api/questions/')) {
+        for (const q of await res.json()) if (q.image_url) images.add(q.image_url);
+      }
+      label.textContent = `DATA ${++done}/${dataUrls.length}`;
+    }
+    const imageList = [...images];
+    done = 0;
+    // modest concurrency so the UI stays readable and the server happy
+    const workers = Array.from({ length: 8 }, async () => {
+      while (imageList.length) {
+        const url = imageList.pop();
+        await fetch(url).catch(() => {});
+        done += 1;
+        if (done % 20 === 0 || done === images.size) {
+          label.textContent = `IMAGES ${done}/${images.size}`;
+        }
+      }
+    });
+    await Promise.all(workers);
+    box.replaceChildren(el('span.tag.ok', {}, 'READY FOR OFFLINE USE'));
+  } catch (err) {
+    box.replaceChildren(errorBanner(err));
+  }
+}
+
 export function renderSettings(root) {
   const { profile } = state.progress;
   const nameInput = el('input', { id: 's-name', type: 'text', maxLength: 40, value: profile.name });
@@ -1123,6 +1171,13 @@ export function renderSettings(root) {
             }
           },
         }, 'SAVE'),
+      ),
+    ),
+    el('div.panel', {},
+      el('h2', {}, 'OFFLINE MODE'),
+      el('p.lede', {}, 'DOWNLOAD THE WHOLE QUESTION BANK, THEORY AND SIGN IMAGES (~8 MB) TO STUDY WITHOUT INTERNET.'),
+      el('div.actions', { id: 'offline-actions' },
+        el('button.btn.btn-primary', { onclick: (e) => downloadForOffline(e.target) }, 'DOWNLOAD FOR OFFLINE'),
       ),
     ),
     el('div.panel', {},

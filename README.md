@@ -37,6 +37,8 @@ Tests (built-in `node:test` runner): `npm test`.
   true statements in the question bank.
 - **Progress & stats** — per-topic accuracy and mastery, weak-spot ranking
   with one-tap practice, and a mock-exam trend chart.
+- **Installable PWA** — add to home screen; "download for offline" in
+  Settings caches the full question bank, theory and images (~8 MB).
 - **Settings** — name, translation language (EN/RU/ZH), light/dark theme,
   full progress reset.
 
