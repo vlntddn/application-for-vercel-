@@ -606,3 +606,108 @@ kbd {
 @media (max-width: 760px) {
   .row { flex-wrap: wrap; row-gap: 6px; }
 }
+
+/* ---------- Theory lessons ---------- */
+
+.lesson-objective {
+  border-left: 10px solid var(--accent);
+}
+
+.key-idea {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: var(--border-thin);
+}
+
+.key-idea:last-child { border-bottom: none; padding-bottom: 0; }
+
+.key-idea-num {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-thin);
+  background: var(--warn);
+  color: #000;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.key-idea-title {
+  display: block;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+.key-idea-text { line-height: 1.55; font-weight: 500; }
+
+.must-value {
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.traps-panel { border-left: 10px solid var(--bad); }
+
+.trap {
+  padding: 14px 0;
+  border-bottom: var(--border-thin);
+}
+
+.trap:last-of-type { border-bottom: none; }
+
+.trap-img {
+  display: block;
+  max-height: 90px;
+  border: var(--border-thin);
+  background: #fff;
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+.trap-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.trap-answer { display: flex; gap: 12px; align-items: flex-start; }
+.trap-why { flex: 1; line-height: 1.5; font-weight: 500; }
+
+.exam-italian-banner {
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+  border-left: 10px solid var(--warn);
+}
+
+.exam-italian-banner:hover { background: var(--warn); color: #000; }
+
+.section-explain { line-height: 1.55; font-weight: 500; margin-bottom: 16px; }
+
+.word-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.word-card {
+  border: var(--border-thin);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--paper);
+}
+
+.word-it { font-size: 1rem; }
+.word-gloss { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
+
+.tag.accent-tag { background: var(--accent); color: #fff; }

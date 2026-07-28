@@ -1,0 +1,664 @@
+{
+  "examItalian": {
+    "title_it": "L'italiano dell'esame",
+    "intro": {
+      "en": "Most foreigners fail the quiz not because they don't know the rules, but because of HOW the questions are worded. This page teaches you to read exam Italian: a small set of words decides whether a statement is VERO or FALSO.",
+      "ru": "Иностранцы чаще всего проваливают квиз не из-за правил, а из-за ФОРМУЛИРОВОК. Эта страница учит читать экзаменационный итальянский: небольшой набор слов решает, VERO утверждение или FALSO.",
+      "zh": "外国人考试失败大多不是因为不懂规则，而是因为题目的措辞。这一页教你读懂考试意大利语：一小组关键词决定答案是对还是错。"
+    },
+    "sections": [
+      {
+        "title_it": "Le parole assolute — SEMPRE, MAI, SOLO",
+        "explain": {
+          "en": "Absolute words make a claim total: 'always', 'never', 'only'. Traffic rules almost always have exceptions, so an absolute claim is OFTEN false — but not automatically! Read the whole sentence: 'the STOP sign always requires stopping' is TRUE. Treat these words as an alarm bell: stop and look for a real exception.",
+          "ru": "Абсолютные слова делают утверждение тотальным: «всегда», «никогда», «только». У правил почти всегда есть исключения, поэтому абсолютное утверждение ЧАСТО ложно — но не автоматически! Читайте всё предложение: «знак STOP всегда обязывает остановиться» — ПРАВДА. Эти слова — звонок: остановись и поищи реальное исключение.",
+          "zh": "绝对词让句子变成全称判断：总是、从不、只有。交通规则几乎都有例外，所以绝对句常常是错的——但不是自动错！要读完整句：\"STOP标志总是要求停车\"是对的。把这些词当作警铃：停下来找真正的例外。"
+        },
+        "entries": [
+          { "it": "sempre", "gloss": { "en": "always", "ru": "всегда", "zh": "总是" } },
+          { "it": "mai", "gloss": { "en": "never", "ru": "никогда", "zh": "从不" } },
+          { "it": "solo / soltanto", "gloss": { "en": "only", "ru": "только", "zh": "只有" } },
+          { "it": "esclusivamente", "gloss": { "en": "exclusively", "ru": "исключительно", "zh": "仅仅" } },
+          { "it": "in ogni caso", "gloss": { "en": "in every case", "ru": "в любом случае", "zh": "在任何情况下" } },
+          { "it": "anche", "gloss": { "en": "also / even", "ru": "также / даже", "zh": "也 / 甚至" } }
+        ]
+      },
+      {
+        "title_it": "DEVE o PUÒ — obbligo o possibilità",
+        "explain": {
+          "en": "The exam loves swapping obligation and permission. DEVE = must (obligation). PUÒ = may (permission). A statement is false if it turns a permission into an obligation or vice versa: 'the driver MAY slow down near a school' is false — he MUST. Learn the whole family below.",
+          "ru": "Экзамен обожает подменять обязанность разрешением. DEVE = должен (обязанность). PUÒ = может (разрешение). Утверждение ложно, если оно превращает разрешение в обязанность или наоборот: «водитель МОЖЕТ снизить скорость у школы» — ложь, он ДОЛЖЕН. Выучите всё семейство ниже.",
+          "zh": "考试最爱把义务和许可互换。DEVE=必须（义务）。PUÒ=可以（许可）。把许可说成义务或相反，句子就是错的：\"驾驶员在学校附近可以减速\"是错的——是必须。请记住下面整组词。"
+        },
+        "entries": [
+          { "it": "deve / è obbligatorio", "gloss": { "en": "must / is compulsory", "ru": "должен / обязательно", "zh": "必须" } },
+          { "it": "può / è consentito", "gloss": { "en": "may / is allowed", "ru": "может / разрешено", "zh": "可以 / 允许" } },
+          { "it": "è vietato", "gloss": { "en": "is forbidden", "ru": "запрещено", "zh": "禁止" } },
+          { "it": "non è tenuto a", "gloss": { "en": "is not required to", "ru": "не обязан", "zh": "无须" } },
+          { "it": "occorre / bisogna", "gloss": { "en": "it is necessary", "ru": "необходимо", "zh": "需要" } }
+        ]
+      },
+      {
+        "title_it": "I verbi dei segnali",
+        "explain": {
+          "en": "Every sign family has its own verbs, and using the wrong verb makes a statement false. Danger signs PREAVVISANO (warn in advance) — they never OBBLIGANO a specific manoeuvre. Prohibition signs VIETANO. Obligation signs OBBLIGANO. Indication signs INDICANO. If a quiz says a triangle 'requires you to stop', the verb itself is the lie.",
+          "ru": "У каждого семейства знаков свои глаголы, и неверный глагол делает утверждение ложным. Знаки опасности PREAVVISANO (предупреждают заранее) — они не ОБЯЗЫВАЮТ к конкретному манёвру. Запрещающие VIETANO. Предписывающие OBBLIGANO. Указательные INDICANO. Если в вопросе треугольник «обязывает остановиться» — ложь уже в глаголе.",
+          "zh": "每类标志都有自己的动词，用错动词句子就是错的。危险标志是\"预先警告\"（preavvisano），不会\"强制\"某个动作。禁令标志=禁止（vietano）。指示标志=强制（obbligano）。如果题目说三角形标志\"要求停车\"，动词本身就是错误。"
+        },
+        "entries": [
+          { "it": "preavvisa / preannuncia", "gloss": { "en": "warns in advance (danger signs)", "ru": "предупреждает заранее (знаки опасности)", "zh": "预先警告（危险标志）" } },
+          { "it": "vieta / non consente", "gloss": { "en": "forbids (prohibition signs)", "ru": "запрещает (запрещающие знаки)", "zh": "禁止（禁令标志）" } },
+          { "it": "obbliga / prescrive", "gloss": { "en": "obliges (obligation signs)", "ru": "обязывает (предписывающие знаки)", "zh": "强制（指示标志）" } },
+          { "it": "indica / segnala", "gloss": { "en": "indicates (information signs)", "ru": "указывает (указательные знаки)", "zh": "指示（信息标志）" } },
+          { "it": "consente", "gloss": { "en": "allows", "ru": "разрешает", "zh": "允许" } }
+        ]
+      },
+      {
+        "title_it": "Le trappole di struttura",
+        "explain": {
+          "en": "Watch three sentence patterns. 1) TWO-PART statements ('the sign forbids X and allows Y'): if HALF is wrong, the whole statement is FALSO. 2) Negations ('non è vietato' = it is allowed). 3) Right rule, wrong sign: the sentence describes a real rule but attaches it to the wrong signal. Always check BOTH what is said and about WHAT.",
+          "ru": "Следите за тремя конструкциями. 1) ДВОЙНЫЕ утверждения («знак запрещает X и разрешает Y»): если ложна ПОЛОВИНА — всё утверждение FALSO. 2) Отрицания («non è vietato» = разрешено). 3) Верное правило про чужой знак: правило настоящее, но привязано не к тому знаку. Всегда проверяйте И что сказано, И про ЧТО.",
+          "zh": "注意三种句式。1）两段式句子（\"该标志禁止X并允许Y\"）：只要一半错，整句就是错。2）否定句（non è vietato=允许）。3）规则对、标志错：规则本身正确，却安在别的标志上。既要核对说了什么，也要核对说的是哪个标志。"
+        },
+        "entries": [
+          { "it": "non è vietato", "gloss": { "en": "it is NOT forbidden = allowed", "ru": "НЕ запрещено = разрешено", "zh": "不禁止＝允许" } },
+          { "it": "..., ma ...", "gloss": { "en": "two claims — check both halves", "ru": "два утверждения — проверьте обе части", "zh": "两个论断——两半都要核对" } },
+          { "it": "il segnale raffigurato", "gloss": { "en": "the sign SHOWN — match rule to THIS sign", "ru": "изображённый знак — правило именно про НЕГО?", "zh": "图中标志——规则说的是它吗？" } },
+          { "it": "di norma", "gloss": { "en": "as a rule (exceptions exist — softens the claim)", "ru": "как правило (есть исключения — смягчает)", "zh": "通常（存在例外，语气缓和）" } }
+        ]
+      }
+    ],
+    "tips": [
+      {
+        "en": "Read the question twice before answering. The first read gives you the topic, the second one the trap.",
+        "ru": "Читайте вопрос дважды. Первое чтение даёт тему, второе — ловушку.",
+        "zh": "每题读两遍：第一遍看主题，第二遍找陷阱。"
+      },
+      {
+        "en": "If you don't know a word, don't guess the whole sentence — the unknown word is often the trap itself. Add it to your dictionary.",
+        "ru": "Не знаете слово — не угадывайте всё предложение: незнакомое слово часто и есть ловушка. Добавьте его в словарь.",
+        "zh": "不认识的词不要蒙整句——生词往往就是陷阱。把它记进词汇表。"
+      },
+      {
+        "en": "Statements copied word-for-word from the highway code are usually TRUE. The false ones are made by twisting exactly one element: verb, sign, number or an absolute word.",
+        "ru": "Утверждения, дословно взятые из ПДД, обычно ПРАВДИВЫ. Ложные делают, искажая ровно один элемент: глагол, знак, число или абсолютное слово.",
+        "zh": "逐字照抄法规的句子通常是对的。错误选项往往只改动一个元素：动词、标志、数字或绝对词。"
+      }
+    ]
+  },
+  "chapters": {
+    "ch1": {
+      "objective": {
+        "en": "Tell apart the parts of the road (strada, carreggiata, corsia, banchina) and know who may be where.",
+        "ru": "Различать части дороги (strada, carreggiata, corsia, banchina) и знать, кому где можно находиться.",
+        "zh": "分清道路的组成部分，并知道谁可以在哪里通行。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Strada → carreggiata → corsia",
+          "text": {
+            "en": "Think of nesting boxes: the STRADA is everything; the CARREGGIATA is the paved part where vehicles drive; each carreggiata is divided into CORSIE (lanes), and one corsia is wide enough for one file of vehicles. Most definition questions just test whether you keep these three levels apart.",
+            "ru": "Представьте матрёшку: STRADA — это всё; CARREGGIATA — проезжая часть, где едут машины; она делится на CORSIE (полосы), одна corsia вмещает один ряд машин. Большинство вопросов-определений проверяют лишь то, не путаете ли вы эти три уровня.",
+            "zh": "像套盒一样记：STRADA是整条道路；CARREGGIATA是车辆行驶的车行道；车行道再分成CORSIE（车道），一条车道容纳一列车。大多数定义题只考你是否分清这三层。"
+          }
+        },
+        {
+          "title_it": "Banchina e marciapiede",
+          "text": {
+            "en": "The BANCHINA is the strip between the carriageway edge and the ditch/guardrail — it is for pedestrians in emergencies, NOT for driving or overtaking. The MARCIAPIEDE (pavement) belongs to pedestrians; vehicles may cross it only to enter a driveway (passo carrabile).",
+            "ru": "BANCHINA — полоса между краем проезжей части и кюветом/отбойником: для пешеходов в крайних случаях, НЕ для езды и обгона. MARCIAPIEDE (тротуар) принадлежит пешеходам; машины пересекают его только для въезда во двор (passo carrabile).",
+            "zh": "BANCHINA是车行道边缘与沟渠/护栏之间的路肩——紧急时供行人使用，不能行车或超车。MARCIAPIEDE（人行道）属于行人；车辆只有进出院门时才能横穿。"
+          }
+        },
+        {
+          "title_it": "ZTL e isola di traffico",
+          "text": {
+            "en": "A ZTL (zona a traffico limitato) admits ONLY authorised vehicles — here 'solo' is true! An ISOLA DI TRAFFICO (painted island with stripes) may NEVER be crossed or used for parking by anyone — not even taxis or buses. These two definitions are favourite trap material.",
+            "ru": "В ZTL (зону ограниченного движения) въезжают ТОЛЬКО авторизованные машины — здесь «solo» правда! ISOLA DI TRAFFICO (островок с разметкой-штриховкой) НИКОМУ нельзя пересекать и использовать для стоянки — даже такси и автобусам. Эти два определения — любимый материал ловушек.",
+            "zh": "ZTL（限行区）只允许获得许可的车辆进入——这里的\"只有\"是真的！ISOLA DI TRAFFICO（画线的导流岛）任何人都不得驶入或停车——出租车和公交也不行。这两个定义是出陷阱题的最爱。"
+          }
+        }
+      ],
+      "mustKnow": [
+        { "fact_it": "Corsia", "value": "1 fila di veicoli", "note": { "en": "wide enough for one file of vehicles", "ru": "вмещает один ряд машин", "zh": "容纳一列车辆" } },
+        { "fact_it": "Banchina", "value": "no veicoli", "note": { "en": "not part of the carriageway", "ru": "не часть проезжей части", "zh": "不属于车行道" } },
+        { "fact_it": "ZTL", "value": "solo autorizzati", "note": { "en": "limited hours are set by the local authority", "ru": "часы действия задаёт коммуна", "zh": "限行时间由市政规定" } },
+        { "fact_it": "Isola di traffico", "value": "transito vietato", "note": { "en": "crossing and stopping always forbidden", "ru": "пересекать и стоять всегда запрещено", "zh": "禁止驶入和停车" } }
+      ],
+      "traps": [
+        {
+          "id": "definizioni-generali-doveri-strada-isola-traffico-11",
+          "why": {
+            "en": "FALSO. Nobody may drive on a traffic island — the 'only taxis and buses' exception is invented. The exam often grants a fake privilege to taxis/buses; almost no rule works that way.",
+            "ru": "FALSO. По островку не ездит никто — «исключение для такси и автобусов» выдумано. Экзамен часто дарит такси/автобусам фальшивые привилегии; так почти никакие правила не работают.",
+            "zh": "错。导流岛谁都不能驶入——\"只有出租车和公交可以\"是编造的。考试常给出租车/公交发明特权，几乎没有这样的规则。"
+          }
+        },
+        {
+          "id": "definizioni-generali-doveri-strada-zona-traffico-limitato-2",
+          "why": {
+            "en": "VERO — and here is the lesson: 'solo' does not automatically mean false. A ZTL really is reserved for authorised vehicles only. Judge the claim, not the keyword.",
+            "ru": "VERO — и в этом урок: «solo» не означает автоматически ложь. ZTL действительно только для авторизованных машин. Оценивайте утверждение, а не ключевое слово.",
+            "zh": "对——这就是教训：\"只有\"不等于自动错。限行区确实只对获许可车辆开放。要判断内容，不要只看关键词。"
+          }
+        }
+      ]
+    },
+    "ch2": {
+      "objective": {
+        "en": "Recognise the danger-sign family (triangles), know where they stand and what they demand from you.",
+        "ru": "Узнавать семейство знаков опасности (треугольники), знать, где они стоят и чего требуют от вас.",
+        "zh": "认识危险标志家族（三角形），知道它们立在哪里、要求你做什么。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Triangolo = pericolo, 150 metri prima",
+          "text": {
+            "en": "A red triangle with the point UP warns of danger ahead. Outside towns it stands, as a rule, 150 m before the danger — that number appears in dozens of questions. In town the distance can be shorter, and a panel can state a different one.",
+            "ru": "Красный треугольник вершиной ВВЕРХ предупреждает об опасности впереди. Вне населённых пунктов он стоит, как правило, за 150 м до опасности — это число встречается в десятках вопросов. В городе расстояние может быть меньше, а табличка может задать другое.",
+            "zh": "顶点朝上的红色三角形警告前方有危险。在城外通常立于危险前150米——这个数字出现在几十道题里。市区内距离可以更短，附加牌可标注其他距离。"
+          }
+        },
+        {
+          "title_it": "Preavvisa, non obbliga una manovra precisa",
+          "text": {
+            "en": "A danger sign demands one thing: adjust your behaviour — slow down, be ready to stop. It does NOT impose a specific manoeuvre (turn, stop, sound the horn) and it does NOT only apply in some conditions. 'Rallentare solo se...' is practically always false.",
+            "ru": "Знак опасности требует одного: скорректировать поведение — снизить скорость, быть готовым остановиться. Он НЕ предписывает конкретный манёвр (повернуть, остановиться, сигналить) и НЕ действует «только при каких-то условиях». «Rallentare solo se...» — почти всегда ложь.",
+            "zh": "危险标志只要求一件事：调整驾驶行为——减速、随时准备停车。它不强制某个具体动作，也不是\"只在某条件下\"才有效。\"只有当……才减速\"几乎总是错的。"
+          }
+        },
+        {
+          "title_it": "La croce di Sant'Andrea",
+          "text": {
+            "en": "The St Andrew's cross marks a level crossing WITHOUT barriers: a single cross = one track, a double cross = two or more tracks. It stands near the rails, after the triangle warning signs and the distance panels (3-2-1 stripes).",
+            "ru": "Андреевский крест обозначает переезд БЕЗ шлагбаума: одинарный крест = один путь, двойной = два и более. Он стоит у самих рельсов, после треугольных знаков и табличек отсчёта (3-2-1 полосы).",
+            "zh": "圣安德烈十字表示无栏木的铁路道口：单十字＝单轨，双十字＝两条以上轨道。它立在铁轨旁，位于三角警告标志和倒计时牌（3-2-1条纹）之后。"
+          }
+        }
+      ],
+      "mustKnow": [
+        { "fact_it": "Distanza dal pericolo (extraurbane)", "value": "150 m", "note": { "en": "'di norma' — panels can change it", "ru": "«как правило» — табличка может изменить", "zh": "通常值，附加牌可更改" } },
+        { "fact_it": "Croce di Sant'Andrea singola", "value": "1 binario", "note": { "en": "double cross = 2+ tracks", "ru": "двойной крест = 2+ пути", "zh": "双十字＝两条以上轨道" } },
+        { "fact_it": "Forma", "value": "triangolo, vertice in alto", "note": { "en": "point DOWN = give way (ch. 5)", "ru": "вершиной ВНИЗ = уступи дорогу (гл. 5)", "zh": "顶点朝下＝让行（第5章）" } }
+      ],
+      "traps": [
+        {
+          "id": "segnali-pericolo-strada-dissestata-28",
+          "why": {
+            "en": "FALSO. The 'solo se' construction limits a duty that is unconditional: near a danger you slow down regardless of oncoming traffic. Any 'only if X' attached to a danger sign should make you suspicious.",
+            "ru": "FALSO. Конструкция «solo se» ограничивает безусловную обязанность: у опасности снижают скорость независимо от встречных. Любое «только если X» рядом со знаком опасности должно настораживать.",
+            "zh": "错。\"只有当\"给无条件义务加了限制：遇到危险标志无论有无对向车都要减速。危险标志配上\"只有当X\"都要警惕。"
+          }
+        },
+        {
+          "id": "segnali-pericolo-croce-sant-andrea-0",
+          "why": {
+            "en": "VERO. Pure fact knowledge: single cross — single track. The exam checks whether you memorised the single/double distinction; no trick here, just a fact you either know or not.",
+            "ru": "VERO. Чистое знание факта: одинарный крест — один путь. Экзамен проверяет, выучили ли вы различие одинарный/двойной; здесь нет трюка — только факт.",
+            "zh": "对。纯事实题：单十字＝单轨。考的就是你是否记住单/双十字的区别，没有陷阱。"
+          }
+        },
+        {
+          "id": "segnali-pericolo-semaforo-verticale-7",
+          "why": {
+            "en": "VERO. A rare true 'sempre': outside built-up areas the 'traffic lights ahead' sign IS always compulsory before a signal-controlled junction. Proof that absolute words must be checked, not auto-answered FALSO.",
+            "ru": "VERO. Редкое правдивое «sempre»: вне населённых пунктов знак «светофор» действительно всегда обязателен перед регулируемым перекрёстком. Доказательство, что абсолютные слова надо проверять, а не отвечать FALSO на автомате.",
+            "zh": "对。少见的真\"总是\"：城外的\"信号灯\"标志在红绿灯路口前确实总是必须设置。这证明绝对词要核实，不能条件反射答错。"
+          }
+        }
+      ]
+    },
+    "ch3": {
+      "objective": {
+        "en": "Read prohibition signs: what exactly is forbidden, for whom, and where the prohibition starts and ends.",
+        "ru": "Читать запрещающие знаки: что именно запрещено, кому, и где запрет начинается и заканчивается.",
+        "zh": "读懂禁令标志：禁止什么、对谁禁止、禁令从哪开始到哪结束。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Cerchio rosso = divieto",
+          "text": {
+            "en": "A white circle with a red border FORBIDS something, starting AT the sign and ending at the first intersection (or at an explicit 'end' sign — the grey one with a black diagonal band). It never 'warns' and never 'obliges a direction' — those are other families.",
+            "ru": "Белый круг с красной каймой ЗАПРЕЩАЕТ что-то — от самого знака до первого перекрёстка (или до знака «конец запрета» — серого с чёрной диагональю). Он не «предупреждает» и не «предписывает направление» — это другие семейства.",
+            "zh": "白底红圈表示禁止，从标志处开始，到第一个路口结束（或到\"解除禁令\"标志——灰底黑斜线）。它不\"警告\"也不\"指定方向\"——那是别的家族。"
+          }
+        },
+        {
+          "title_it": "Divieto di transito ≠ senso vietato",
+          "text": {
+            "en": "The empty red-bordered circle (divieto di transito) closes the road in BOTH directions. The red disc with a white bar (senso vietato) forbids entry from YOUR side only — traffic may legally come towards you. Mixing these two is the classic chapter-3 mistake.",
+            "ru": "Пустой круг с красной каймой (divieto di transito) закрывает дорогу в ОБЕ стороны. Красный диск с белой полосой (senso vietato) запрещает въезд только с ВАШЕЙ стороны — навстречу машины могут ехать законно. Путать эти два — классическая ошибка главы 3.",
+            "zh": "空心红圈（禁止通行）双向封路。红底白横杠（禁止驶入）只禁止从你这一侧进入——对向来车是合法的。混淆这两个是本章经典错误。"
+          }
+        },
+        {
+          "title_it": "Divieto di sosta: 8–20, salvo pannello",
+          "text": {
+            "en": "In built-up areas the 'no parking' sign works from 8:00 to 20:00 unless a panel says otherwise; outside town it works 24 h. 'No stopping' (divieto di fermata) is stricter: you may not even pause. Panels (giorni, orari) modify the sign — always read them.",
+            "ru": "В населённых пунктах «стоянка запрещена» действует с 8:00 до 20:00, если табличка не говорит иного; вне города — круглосуточно. «Остановка запрещена» (divieto di fermata) строже: нельзя даже приостановиться. Таблички (дни, часы) меняют знак — всегда читайте их.",
+            "zh": "市区内\"禁止停放\"默认8:00–20:00有效，除非附加牌另有说明；城外全天有效。\"禁止停车\"更严：连短暂停靠都不行。附加牌（日期、时段）会修改标志——一定要读。"
+          }
+        }
+      ],
+      "mustKnow": [
+        { "fact_it": "Divieto di sosta (centro abitato)", "value": "8:00–20:00", "note": { "en": "24 h outside built-up areas", "ru": "вне города — круглосуточно", "zh": "城外全天" } },
+        { "fact_it": "Fine del divieto", "value": "primo incrocio", "note": { "en": "or explicit end-of-prohibition sign", "ru": "или знак «конец запрета»", "zh": "或\"解除禁令\"标志" } },
+        { "fact_it": "Senso vietato", "value": "vieta l'ingresso", "note": { "en": "one direction only", "ru": "только с одной стороны", "zh": "仅一个方向" } }
+      ],
+      "traps": [
+        {
+          "id": "segnali-divieto-divieto-transito-12",
+          "why": {
+            "en": "FALSO. Divieto di transito closes the road in both directions — there is no 'exit only' reading. The trap invents a half-permission; prohibition signs don't grant anything.",
+            "ru": "FALSO. Divieto di transito закрывает дорогу в обе стороны — никакого «только выезд» не существует. Ловушка выдумывает полу-разрешение; запрещающие знаки ничего не разрешают.",
+            "zh": "错。禁止通行是双向封路——不存在\"只许驶出\"。陷阱编造了半个许可；禁令标志不授予任何权利。"
+          }
+        },
+        {
+          "id": "segnali-divieto-divieto-clacson-2",
+          "why": {
+            "en": "VERO. Inside the 'no horn' zone one exception survives: immediate danger. This is the correct kind of 'solo' — it states the real exception written in the code.",
+            "ru": "VERO. В зоне «звуковой сигнал запрещён» остаётся одно исключение: непосредственная опасность. Это правильное «solo» — оно называет реальное исключение из ПДД.",
+            "zh": "对。禁止鸣笛区内保留一个例外：紧急危险。这是正确的\"只有\"——它说的是法规里真实的例外。"
+          }
+        }
+      ]
+    },
+    "ch4": {
+      "objective": {
+        "en": "Read blue obligation signs, especially the arrow signs: what is compulsory vs what is merely allowed.",
+        "ru": "Читать синие предписывающие знаки, особенно стрелки: что обязательно, а что лишь разрешено.",
+        "zh": "读懂蓝色指示标志，特别是箭头：什么是必须、什么只是允许。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Cerchio blu = obbligo",
+          "text": {
+            "en": "A blue circle COMMANDS: go this way, this category must use this path, chains required. Compare: blue circle = you MUST; red-bordered circle = you MUST NOT; blue rectangle = information. Shape+colour first, picture second.",
+            "ru": "Синий круг ПРИКАЗЫВАЕТ: ехать туда, этой категории — по этой дорожке, цепи обязательны. Сравните: синий круг = ОБЯЗАН; круг с красной каймой = НЕЛЬЗЯ; синий прямоугольник = информация. Сначала форма и цвет, потом картинка.",
+            "zh": "蓝色圆形是命令：必须往这走、该类交通必须走这条道、必须挂防滑链。对比：蓝圆＝必须；红圈＝禁止；蓝色长方形＝信息。先看形状颜色，再看图案。"
+          }
+        },
+        {
+          "title_it": "Frecce: obbligo di direzioni CONSENTITE",
+          "text": {
+            "en": "An arrow sign lists ALL directions you may take — and only those. Two arrows (straight+right) mean: you may go straight OR right, and nothing else. So 'consente SOLO di proseguire diritto' is false for that sign, while 'può svoltare SOLTANTO a destra' is true for the single right arrow. Count the arrows!",
+            "ru": "Знак со стрелками перечисляет ВСЕ разрешённые направления — и только их. Две стрелки (прямо+направо) значат: можно прямо ИЛИ направо, и больше ничего. Поэтому «consente SOLO diritto» для него ложь, а «può svoltare SOLTANTO a destra» для одиночной правой стрелки — правда. Считайте стрелки!",
+            "zh": "箭头标志列出所有允许的方向——仅此而已。两个箭头（直行+右转）意味着：可直行或右转，别的不行。所以对它说\"只能直行\"是错的；而对单个右箭头说\"只能右转\"是对的。数箭头！"
+          }
+        },
+        {
+          "title_it": "Rotatoria e passaggio obbligatorio",
+          "text": {
+            "en": "Three bent arrows in a circle = compulsory roundabout direction (counter-clockwise in Italy... shown clockwise on the sign as you circulate right). A blue disc with an arrow pointing down-left/right = pass on that side of an obstacle. These two are pure recognition questions — learn the pictures.",
+            "ru": "Три изогнутые стрелки по кругу = обязательное круговое движение. Синий диск со стрелкой вниз-влево/вправо = объезжай препятствие с этой стороны. Эти два — вопросы на чистое узнавание, выучите картинки.",
+            "zh": "三个弯曲箭头成圈＝必须按环岛方向行驶。蓝底斜向下箭头＝从该侧绕过障碍物。这两个是纯识别题——记住图案。"
+          }
+        }
+      ],
+      "mustKnow": [
+        { "fact_it": "Cerchio blu", "value": "obbligo", "note": { "en": "vs red border = prohibition", "ru": "красная кайма = запрет", "zh": "红圈＝禁止" } },
+        { "fact_it": "Frecce multiple", "value": "tutte consentite", "note": { "en": "any listed direction is allowed", "ru": "любое из указанных направлений разрешено", "zh": "所列方向均可" } },
+        { "fact_it": "Fine dell'obbligo", "value": "dopo l'intersezione", "note": { "en": "direction obligations apply at the junction", "ru": "предписание направления действует на перекрёстке", "zh": "方向指令适用于该路口" } }
+      ],
+      "traps": [
+        {
+          "id": "segnali-obbligo-dritto-destra-11",
+          "why": {
+            "en": "FALSO. The sign shows TWO arrows (straight and right): both directions are allowed. 'Solo diritto' erases one of them. With arrow signs, count arrows before you answer any 'solo'.",
+            "ru": "FALSO. На знаке ДВЕ стрелки (прямо и направо): разрешены оба направления. «Solo diritto» стирает одно из них. Со стрелками — сначала посчитайте стрелки, потом отвечайте на «solo».",
+            "zh": "错。标志上有两个箭头（直行和右转）：两个方向都允许。\"只能直行\"抹掉了一个。遇到箭头标志，先数箭头再回答\"只能\"。"
+          }
+        },
+        {
+          "id": "segnali-obbligo-direzione-sinistra-8",
+          "why": {
+            "en": "VERO. One arrow — one permitted direction, so here 'soltanto' is literally correct. Same word, opposite verdicts, depending on the number of arrows: that is the whole game of chapter 4.",
+            "ru": "VERO. Одна стрелка — одно разрешённое направление, здесь «soltanto» буквально верно. Одно и то же слово — противоположные вердикты в зависимости от числа стрелок: в этом вся игра главы 4.",
+            "zh": "对。一个箭头＝一个允许方向，这里\"只能\"字面正确。同一个词，箭头数量不同答案相反：这就是第四章的全部玩法。"
+          }
+        }
+      ]
+    },
+    "ch5": {
+      "objective": {
+        "en": "Master the precedence signs: STOP, give way, priority road — who stops, who passes, where each sign stands.",
+        "ru": "Освоить знаки приоритета: STOP, уступи дорогу, главная дорога — кто стоит, кто едет, где какой знак стоит.",
+        "zh": "掌握优先权标志：STOP、让行、优先道路——谁停谁走，各标志立在哪里。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "STOP: arrestarsi SEMPRE",
+          "text": {
+            "en": "The octagon means: come to a COMPLETE stop at the stop line and give way — even at 4 a.m. with nobody around, even if you can see perfectly. This is the rare rule with no exception, so 'sempre' with STOP is true and 'solo se ci sono veicoli' is false.",
+            "ru": "Восьмиугольник означает: ПОЛНОСТЬЮ остановиться у стоп-линии и уступить — даже в 4 утра без единой машины, даже при идеальной видимости. Это редкое правило без исключений: «sempre» со STOP — правда, «solo se ci sono veicoli» — ложь.",
+            "zh": "八角形的意思是：在停止线前完全停车并让行——即使凌晨四点没有车，即使视线极好。这是罕见的无例外规则：STOP配\"总是\"为真，配\"只有当有车时\"为假。"
+          }
+        },
+        {
+          "title_it": "Triangolo rovesciato: dare precedenza",
+          "text": {
+            "en": "The point-DOWN triangle (the only one in the system!) means give way without necessarily stopping: slow down, yield, proceed if clear. Its advance-warning version carries a distance panel. Point-up = danger, point-down = yield: the orientation IS the meaning.",
+            "ru": "Треугольник вершиной ВНИЗ (единственный в системе!) — уступи дорогу, не обязательно останавливаясь: замедлись, пропусти, проезжай, если свободно. Его «предварительная» версия идёт с табличкой расстояния. Вершина вверх = опасность, вниз = уступи: ориентация И ЕСТЬ смысл.",
+            "zh": "顶点朝下的三角形（全系统唯一！）＝让行，不必完全停车：减速、让行、路空则走。它的预告版带距离牌。顶点朝上＝危险，朝下＝让行：方向就是含义。"
+          }
+        },
+        {
+          "title_it": "Diritto di precedenza",
+          "text": {
+            "en": "The yellow-white diamond marks a PRIORITY ROAD: crossing traffic must yield to you until the crossed-out diamond ends it. The signs work in pairs (start/end) and stand on extraurban roads at every junction. Don't confuse having priority with being safe — you must still watch.",
+            "ru": "Жёлто-белый ромб — ГЛАВНАЯ ДОРОГА: пересекающие обязаны уступать вам, пока перечёркнутый ромб не завершит её. Знаки работают парой (начало/конец). Приоритет не равен безопасности — смотреть всё равно обязательно.",
+            "zh": "黄白菱形＝优先道路：横向车流必须让你，直到画斜线的菱形结束它。标志成对出现（开始/结束）。有优先权不等于安全——仍须观察。"
+          }
+        }
+      ],
+      "mustKnow": [
+        { "fact_it": "STOP", "value": "arresto + precedenza", "note": { "en": "always a full stop at the line", "ru": "всегда полная остановка у линии", "zh": "必须在线前完全停车" } },
+        { "fact_it": "Dare precedenza", "value": "triangolo rovesciato", "note": { "en": "the only point-down triangle", "ru": "единственный треугольник вершиной вниз", "zh": "唯一顶点朝下的三角形" } },
+        { "fact_it": "Preavviso di STOP", "value": "con pannello distanza", "note": { "en": "warns the octagon is coming", "ru": "предупреждает о приближении STOP", "zh": "预告前方有STOP" } },
+        { "fact_it": "Dove si trovano", "value": "urbane ed extraurbane", "note": { "en": "'only urban/only extraurban' claims are false", "ru": "«только в городе/только вне» — ложь", "zh": "\"仅市区/仅城外\"都是错的" } }
+      ],
+      "traps": [
+        {
+          "id": "segnali-precedenza-segnale-stop-11",
+          "why": {
+            "en": "FALSO. STOP obliges you to stop ALWAYS, not only when you see other vehicles. The trap converts an unconditional duty into a conditional one — the single most common falsification pattern in this chapter.",
+            "ru": "FALSO. STOP обязывает останавливаться ВСЕГДА, а не только при виде других машин. Ловушка превращает безусловную обязанность в условную — самый частый приём фальсификации в этой главе.",
+            "zh": "错。STOP要求任何时候都停车，不是只在看到其他车辆时。陷阱把无条件义务改成有条件——本章最常见的造假手法。"
+          }
+        },
+        {
+          "id": "segnali-precedenza-dare-precedenza-18",
+          "why": {
+            "en": "FALSO. Precedence signs stand wherever roads cross — urban and extraurban alike. Any 'si trova solo su strade urbane/extraurbane' about them is false; the code doesn't restrict them to one environment.",
+            "ru": "FALSO. Знаки приоритета стоят везде, где пересекаются дороги — и в городе, и вне. Любое «si trova solo su strade urbane/extraurbane» про них ложно; ПДД не ограничивает их одной средой.",
+            "zh": "错。优先权标志设在任何交叉路口——市区和城外都有。凡是\"只设在市区/城外道路\"的说法都是错的。"
+          }
+        }
+      ]
+    },
+    "ch8": {
+      "objective": {
+        "en": "Know the four speed-limit numbers cold, the rain rules, and the principle that limits are ceilings, not targets.",
+        "ru": "Назубок знать четыре цифры лимитов, правила для дождя и принцип: лимит — потолок, а не цель.",
+        "zh": "熟记四个限速数字、雨天规则，并理解限速是上限而不是目标。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "50 / 90 / 110 / 130",
+          "text": {
+            "en": "Four numbers open most questions: 50 km/h in town, 90 on secondary extraurban roads, 110 on main extraurban roads (strade extraurbane principali), 130 on motorways. Rain or snow cuts the top two: 110 on motorways, 90 on main extraurban roads.",
+            "ru": "Четыре числа открывают большинство вопросов: 50 км/ч в городе, 90 на обычных загородных, 110 на главных загородных (extraurbane principali), 130 на автомагистралях. Дождь или снег срезают верхние два: 110 на автомагистрали, 90 на главных загородных.",
+            "zh": "四个数字：市区50，普通城外道路90，主要城外道路110，高速130。雨雪时上面两个下调：高速110，主要城外道路90。"
+          }
+        },
+        {
+          "title_it": "Il limite è un tetto, non un obiettivo",
+          "text": {
+            "en": "The code's core rule: adapt speed to conditions — visibility, traffic, road surface, vehicle load, your own state. Driving AT the limit can still be an offence if conditions demand less. That's why 'tenere conto ESCLUSIVAMENTE dei limiti' is always false.",
+            "ru": "Ядро ПДД: скорость подстраивается под условия — видимость, трафик, покрытие, загрузку, ваше состояние. Ехать НА лимите может быть нарушением, если условия требуют меньшего. Поэтому «tenere conto ESCLUSIVAMENTE dei limiti» — всегда ложь.",
+            "zh": "法规核心：车速要适应条件——能见度、车流、路面、载重、自身状态。条件不允许时，即使开在限速值也算违法。所以\"只考虑限速值\"永远是错的。"
+          }
+        },
+        {
+          "title_it": "Neopatentati: 100 e 90",
+          "text": {
+            "en": "For the first THREE years after getting licence B: max 100 km/h on motorways and 90 on main extraurban roads. The exam checks both the numbers and the duration — 'one year' or '110 for novices' are planted errors.",
+            "ru": "Первые ТРИ года после получения категории B: максимум 100 км/ч на автомагистрали и 90 на главных загородных. Экзамен проверяет и цифры, и срок — «один год» или «110 для новичков» — подложенные ошибки.",
+            "zh": "拿到B照后前三年：高速最高100，主要城外道路90。考试既考数字也考年限——\"一年\"或\"新手110\"都是埋好的错误。"
+          }
+        }
+      ],
+      "mustKnow": [
+        { "fact_it": "Centro abitato", "value": "50 km/h", "note": { "en": "70 possible on marked urban roads", "ru": "на отдельных дорогах с знаком — до 70", "zh": "有标志的市区道路可到70" } },
+        { "fact_it": "Extraurbane secondarie", "value": "90 km/h", "note": null },
+        { "fact_it": "Extraurbane principali", "value": "110 km/h", "note": { "en": "rain: 90", "ru": "дождь: 90", "zh": "雨天90" } },
+        { "fact_it": "Autostrade", "value": "130 km/h", "note": { "en": "rain: 110", "ru": "дождь: 110", "zh": "雨天110" } },
+        { "fact_it": "Neopatentati (3 anni)", "value": "100 / 90", "note": { "en": "motorway / main extraurban", "ru": "автомагистраль / главные загородные", "zh": "高速/主要城外道路" } }
+      ],
+      "traps": [
+        {
+          "id": "limiti-di-velocita-regolazione-conducente-velocita-12",
+          "why": {
+            "en": "FALSO. 'Esclusivamente' kills it: speed must match conditions, not just posted limits. Whenever a statement says the driver considers ONLY one factor, it contradicts the adapt-to-conditions principle.",
+            "ru": "FALSO. «Esclusivamente» всё портит: скорость должна соответствовать условиям, а не только знакам. Если утверждение говорит, что водитель учитывает ТОЛЬКО один фактор, оно противоречит принципу адаптации.",
+            "zh": "错。\"仅仅\"毁掉了句子：车速要适应条件，不只是限速牌。凡是说驾驶员只考虑单一因素的句子，都违背适应条件原则。"
+          }
+        },
+        {
+          "id": "limiti-di-velocita-obbligo-regolazione-0",
+          "why": {
+            "en": "VERO. 'The driver must ALWAYS keep control of the vehicle' — a true 'sempre', copied straight from the code. Fundamental duties (control, ability to stop safely) hold in every situation.",
+            "ru": "VERO. «Водитель должен ВСЕГДА сохранять контроль над машиной» — правдивое «sempre», дословно из ПДД. Фундаментальные обязанности (контроль, способность безопасно остановиться) действуют всегда.",
+            "zh": "对。\"驾驶员必须始终控制车辆\"——真\"总是\"，直接抄自法规。基本义务（控制车辆、能安全停车）任何情况下都成立。"
+          }
+        }
+      ]
+    },
+    "ch9": {
+      "objective": {
+        "en": "Understand what safety distance depends on, and why no fixed number of metres is ever the right answer.",
+        "ru": "Понять, от чего зависит безопасная дистанция и почему фиксированное число метров — никогда не правильный ответ.",
+        "zh": "理解安全车距取决于什么，以及为什么固定米数永远不是正确答案。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Da cosa dipende la distanza",
+          "text": {
+            "en": "Safety distance depends on: your speed, your reflexes (prontezza dei riflessi), the road surface and slope, weather and visibility, vehicle condition (tyres, brakes) and its load. Questions list factors one at a time — each real factor is VERO, each invented one ('the colour of the car ahead') is FALSO.",
+            "ru": "Дистанция зависит от: скорости, ваших рефлексов (prontezza dei riflessi), покрытия и уклона, погоды и видимости, состояния машины (шины, тормоза) и загрузки. Вопросы перечисляют факторы по одному — каждый реальный это VERO, каждый выдуманный («цвет машины впереди») это FALSO.",
+            "zh": "安全距离取决于：车速、反应能力、路面与坡度、天气与能见度、车况（轮胎、刹车）与载重。题目会逐一列举因素——真实因素为对，编造的（如\"前车颜色\"）为错。"
+          }
+        },
+        {
+          "title_it": "Spazio di reazione + spazio di frenatura",
+          "text": {
+            "en": "Total stopping distance = reaction distance (the ~1 second before you touch the brake: at 90 km/h that's already 25 m) + braking distance, which grows with the SQUARE of speed: double speed, four times the braking distance. This is why small speed increases matter so much.",
+            "ru": "Полный остановочный путь = путь за время реакции (~1 секунда до нажатия тормоза: на 90 км/ч это уже 25 м) + тормозной путь, растущий КВАДРАТИЧНО от скорости: вдвое быстрее — вчетверо длиннее торможение. Поэтому небольшое превышение так дорого стоит.",
+            "zh": "总停车距离＝反应距离（踩刹车前约1秒：90公里/小时已是25米）＋制动距离，后者随速度平方增长：速度翻倍，制动距离翻四倍。这就是小幅超速代价大的原因。"
+          }
+        },
+        {
+          "title_it": "Nessun numero fisso",
+          "text": {
+            "en": "The code gives NO universal metre value for safety distance (special cases aside, e.g. column driving rules for snow-chain sections). Any statement fixing it — '70 metres on extraurban roads', 'equal to the braking distance' — is false. It must simply allow you to stop in time.",
+            "ru": "ПДД НЕ задаёт универсального метража дистанции (кроме особых случаев). Любое утверждение с фиксацией — «70 метров на загородных», «равна тормозному пути» — ложно. Дистанция просто должна позволить вовремя остановиться.",
+            "zh": "法规没有给出通用的安全距离米数（特殊情形除外）。任何固定说法——\"城外道路70米\"、\"等于制动距离\"——都是错的。距离只须保证能及时停车。"
+          }
+        }
+      ],
+      "mustKnow": [
+        { "fact_it": "Spazio di reazione (1 sec)", "value": "≈ v/10 × 3 m", "note": { "en": "90 km/h → ~25 m before braking starts", "ru": "90 км/ч → ~25 м до начала торможения", "zh": "90公里/小时→刹车前约25米" } },
+        { "fact_it": "Spazio di frenatura", "value": "∝ v²", "note": { "en": "double speed = ×4 braking distance", "ru": "скорость ×2 = тормозной путь ×4", "zh": "速度×2＝制动距离×4" } },
+        { "fact_it": "Valore fisso in metri", "value": "non esiste", "note": { "en": "claims of a fixed value are false", "ru": "утверждения о фиксированном значении ложны", "zh": "固定值的说法都是错的" } }
+      ],
+      "traps": [
+        {
+          "id": "distanza-di-sicurezza-metri-distanza-sicurezza-4",
+          "why": {
+            "en": "FALSO. 'Always equal to the braking distance' fixes what must stay flexible — and ignores reaction distance entirely. Formal-sounding equalities ('pari a', 'uguale a') about safety distance are false.",
+            "ru": "FALSO. «Всегда равна тормозному пути» фиксирует то, что должно быть гибким, и полностью игнорирует путь реакции. Формальные равенства («pari a», «uguale a») про дистанцию — ложь.",
+            "zh": "错。\"总是等于制动距离\"把灵活的东西固定死了，还完全忽略反应距离。关于安全距离的等式说法都是错的。"
+          }
+        },
+        {
+          "id": "distanza-di-sicurezza-metri-distanza-sicurezza-0",
+          "why": {
+            "en": "VERO. You keep safety distance ALWAYS — including in the moments before starting an overtake. A true 'sempre' again: the duty itself is unconditional even though the metres vary.",
+            "ru": "VERO. Дистанцию держат ВСЕГДА — в том числе перед началом обгона. Снова правдивое «sempre»: сама обязанность безусловна, хотя метры меняются.",
+            "zh": "对。安全距离任何时候都要保持——包括开始超车前。又一个真\"总是\"：义务本身无条件，只是米数会变。"
+          }
+        }
+      ]
+    },
+    "ch11": {
+      "objective": {
+        "en": "Solve crossing diagrams: the right-hand rule, tram priority, and the order in which vehicles clear the junction.",
+        "ru": "Решать схемы перекрёстков: правило правой руки, приоритет трамвая и порядок, в котором машины освобождают перекрёсток.",
+        "zh": "解决路口图题：右侧优先规则、有轨电车优先，以及车辆通过路口的顺序。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "La regola della destra",
+          "text": {
+            "en": "At an unmarked crossing, give way to whoever comes from your RIGHT. To solve a diagram: find the vehicle with nobody on its right — it goes first; remove it mentally and repeat. Write the order down before looking at the answers.",
+            "ru": "На нерегулируемом перекрёстке без знаков уступают тому, кто СПРАВА. Решение схемы: найдите машину, у которой справа никого — она едет первой; мысленно уберите её и повторите. Выпишите порядок до чтения ответов.",
+            "zh": "无标志路口让右侧来车。解图方法：找到右侧没车的那辆——它先走；把它从图里去掉，重复此步骤。看选项前先自己写出顺序。"
+          }
+        },
+        {
+          "title_it": "Tram e svolta a sinistra",
+          "text": {
+            "en": "Rail vehicles (tram) have priority over ordinary vehicles at equal-rank crossings — regardless of which side they come from. And when YOU turn left, you must let oncoming traffic pass first and not cut the corner. Most 'passa per primo/secondo/ultimo' chains hinge on these two rules.",
+            "ru": "Рельсовый транспорт (трамвай) имеет приоритет над обычными машинами на равнозначных перекрёстках — с какой бы стороны он ни шёл. А поворачивая налево, вы пропускаете встречных и не срезаете угол. Большинство цепочек «passa per primo/secondo/ultimo» держатся на этих двух правилах.",
+            "zh": "轨道车辆（电车）在同级路口优先于普通车辆——无论从哪边来。你左转时必须先让对向直行车，且不得抢内弯。大多数\"第几个通过\"的题都靠这两条规则。"
+          }
+        },
+        {
+          "title_it": "Disimpegnare l'incrocio",
+          "text": {
+            "en": "Never enter a junction you cannot clear: even with green or priority, if traffic beyond is blocked, you wait outside. Vehicles pass one at a time in the computed order — two vehicles 'crossing together' with conflicting paths is a standard false statement.",
+            "ru": "Не въезжайте на перекрёсток, который не сможете освободить: даже на зелёный или с приоритетом, если за ним затор — ждите снаружи. Машины проходят по одной в вычисленном порядке — «проезжают одновременно» при пересекающихся траекториях — стандартная ложь.",
+            "zh": "无法驶离就不要进入路口：即使绿灯或有优先权，前方堵塞时也要在外等候。车辆按算出的顺序逐一通过——轨迹冲突却\"同时通过\"是标准错误句。"
+          }
+        }
+      ],
+      "mustKnow": [
+        { "fact_it": "Regola base", "value": "destra ha precedenza", "note": { "en": "at unmarked equal crossings", "ru": "на равнозначных перекрёстках", "zh": "同级无标志路口" } },
+        { "fact_it": "Tram", "value": "precedenza sui veicoli", "note": { "en": "even coming from the left", "ru": "даже подходя слева", "zh": "即使从左边来" } },
+        { "fact_it": "Svolta a sinistra", "value": "cedere agli opposti", "note": { "en": "oncoming straight/right traffic first", "ru": "встречные прямо/направо — первыми", "zh": "先让对向直行/右转" } }
+      ],
+      "traps": [
+        {
+          "id": "precedenza-incroci-figura-642-5",
+          "why": {
+            "en": "FALSO. Two vehicles whose paths conflict never cross 'together': the tram goes first (rail priority), M waits. When a diagram question says 'insieme', check whether the trajectories actually intersect — if they do, it's false.",
+            "ru": "FALSO. Две машины с пересекающимися траекториями не проезжают «вместе»: трамвай первый (приоритет рельсов), M ждёт. Если в вопросе по схеме есть «insieme», проверьте пересечение траекторий — пересекаются, значит ложь.",
+            "zh": "错。轨迹冲突的两辆车不会\"同时\"通过：电车先行（轨道优先），M等待。图题出现\"一起通过\"时先看轨迹是否相交——相交即错。"
+          }
+        },
+        {
+          "id": "precedenza-incroci-figura-642-6",
+          "why": {
+            "en": "FALSO. 'Having the right free' means nobody approaches from your right. Turning left, vehicle A still faces its right-side arrival — read the picture, not just the sentence. Diagram traps rely on you skipping the figure.",
+            "ru": "FALSO. «Правая свободна» значит, что справа никто не подходит. Поворачивая налево, A всё ещё имеет помеху справа — читайте схему, а не только текст. Ловушки схем рассчитаны на то, что вы не посмотрите на рисунок.",
+            "zh": "错。\"右侧无车\"意味着右边没有来车。左转的A车右侧其实有车——要读图，不能只读句子。图题陷阱就赌你不看图。"
+          }
+        }
+      ]
+    },
+    "ch12": {
+      "objective": {
+        "en": "Know when overtaking is allowed, the left/right rules, and the fixed list of places where it is forbidden.",
+        "ru": "Знать, когда обгон разрешён, правила «слева/справа» и фиксированный список мест, где он запрещён.",
+        "zh": "知道何时允许超车、左右超车规则，以及禁止超车地点的固定清单。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Si sorpassa a sinistra… di norma",
+          "text": {
+            "en": "Overtaking happens on the LEFT — as a rule. The big exception: if the vehicle ahead signals a LEFT turn and there is room, you pass it on the RIGHT. So 'è sempre vietato sorpassare a destra' is false, and so is 'si può sempre'. 'Di norma a sinistra' is the true wording.",
+            "ru": "Обгон — СЛЕВА... как правило. Главное исключение: если впереди идущий сигналит поворот НАЛЕВО и есть место, его объезжают СПРАВА. Поэтому «è sempre vietato sorpassare a destra» — ложь, как и «si può sempre». Правдивая формула — «di norma a sinistra».",
+            "zh": "超车靠左——通常如此。重要例外：前车打左转灯且有空间时，从右侧超越。所以\"永远禁止右侧超车\"是错的，\"总是可以\"也错。正确说法是\"通常靠左\"。"
+          }
+        },
+        {
+          "title_it": "Le quattro fasi del sorpasso",
+          "text": {
+            "en": "1) Check: mirrors, blind spot, nobody overtaking YOU, enough visible free road. 2) Signal left and move out. 3) Pass with adequate lateral distance — extra care with two-wheelers. 4) Return right WITHOUT cutting in, signalling. Skipping any phase is what false statements describe.",
+            "ru": "1) Проверка: зеркала, слепая зона, никто не обгоняет ВАС, достаточно видимой свободной дороги. 2) Левый поворотник, выход. 3) Проход с боковым интервалом — особая осторожность с двухколёсными. 4) Возврат направо БЕЗ подрезания, с поворотником. Ложные утверждения описывают пропуск одной из фаз.",
+            "zh": "1）检查：后视镜、盲区、没人正在超你、可见路段足够。2）打左灯驶出。3）保持横向距离超越——对两轮车格外小心。4）打灯平稳返回，不得别车。错误句描述的就是漏掉某一步。"
+          }
+        },
+        {
+          "title_it": "Dove è vietato: la lista fissa",
+          "text": {
+            "en": "Forbidden: on curves and crests of two-way single-carriageway roads, near and on pedestrian crossings, at junctions without priority (in general), at level crossings without barriers, when visibility is insufficient, and overtaking a vehicle that is itself overtaking. Learn this list as a block — questions quote items from it verbatim.",
+            "ru": "Запрещено: в поворотах и на подъёмах-«горбах» двусторонних дорог с одной проезжей частью, у пешеходных переходов и на них, на перекрёстках (по общему правилу — без приоритета), на переездах без шлагбаума, при недостаточной видимости и обгон обгоняющего. Учите список блоком — вопросы цитируют его дословно.",
+            "zh": "禁止超车：双向单幅路的弯道和坡顶、人行横道附近及其上、（一般情况下）无优先权的路口、无栏木道口、能见度不足时，以及超越正在超车的车。整块背下来——考题会逐字引用。"
+          }
+        }
+      ],
+      "mustKnow": [
+        { "fact_it": "Sorpasso a destra", "value": "se chi precede svolta a sinistra", "note": { "en": "the classic legal exception", "ru": "классическое законное исключение", "zh": "经典合法例外" } },
+        { "fact_it": "Curve e dossi (1 carreggiata, 2 sensi)", "value": "vietato", "note": { "en": "allowed on dual carriageways", "ru": "на дорогах с разделёнными проезжими частями можно", "zh": "分幅道路可以" } },
+        { "fact_it": "Veicoli a due ruote", "value": "cautela extra", "note": { "en": "'always allowed to pass them' is false", "ru": "«всегда можно обгонять» — ложь", "zh": "\"总是可以超\"是错的" } }
+      ],
+      "traps": [
+        {
+          "id": "sorpasso-tram-sorpassi-7",
+          "why": {
+            "en": "FALSO. Right-side overtaking is not ALWAYS forbidden — the left-turning-vehicle exception exists. 'Sempre vietato' erases a real exception, the mirror image of 'sempre consentito' erasing a real prohibition.",
+            "ru": "FALSO. Обгон справа не ВСЕГДА запрещён — есть исключение с поворачивающим налево. «Sempre vietato» стирает реальное исключение — зеркальный близнец «sempre consentito», стирающего реальный запрет.",
+            "zh": "错。右侧超车不是永远禁止——存在前车左转的例外。\"永远禁止\"抹掉了真实例外，正如\"总是允许\"抹掉真实禁令。"
+          }
+        },
+        {
+          "id": "sorpasso-spazio-necessario-sorpasso-38",
+          "why": {
+            "en": "FALSO. No manoeuvre is 'sempre consentito' — overtaking a two-wheeler still requires visibility, space and a permitted location. Extra irony: two-wheelers demand MORE caution, not a free pass.",
+            "ru": "FALSO. Никакой манёвр не «sempre consentito» — обгон двухколёсного всё равно требует видимости, места и разрешённого участка. Ирония: двухколёсные требуют БОЛЬШЕ осторожности, а не индульгенции.",
+            "zh": "错。没有哪个动作是\"总是允许\"的——超两轮车同样需要视线、空间和允许路段。讽刺的是：两轮车需要更加小心，而不是随便超。"
+          }
+        }
+      ]
+    },
+    "ch13": {
+      "objective": {
+        "en": "Distinguish fermata / sosta / arresto precisely — the exam tests these three definitions relentlessly.",
+        "ru": "Точно различать fermata / sosta / arresto — экзамен гоняет по этим трём определениям безжалостно.",
+        "zh": "精确区分fermata/sosta/arresto——考试反复考这三个定义。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Fermata, sosta, arresto: tre parole, tre mondi",
+          "text": {
+            "en": "FERMATA: brief voluntary stop to let passengers in/out or load — the driver stays present and ready to move. SOSTA: prolonged parking — the driver may walk away. ARRESTO: interruption forced by traffic (queue, red light) — not your choice at all. Every question in this chapter starts by testing which word applies.",
+            "ru": "FERMATA: короткая добровольная остановка — посадка/высадка, погрузка; водитель на месте и готов уехать. SOSTA: длительная стоянка — водитель может уйти. ARRESTO: вынужденная остановка из-за трафика (затор, красный) — вообще не ваш выбор. Каждый вопрос главы начинается с проверки, какое слово подходит.",
+            "zh": "FERMATA：短暂主动停车（上下客、装卸），司机在场随时能走。SOSTA：长时间停放，司机可以离开。ARRESTO：因交通被迫停止（堵车、红灯），完全非自愿。本章每道题都先考你用哪个词。"
+          }
+        },
+        {
+          "title_it": "Durante la fermata: presente e pronto",
+          "text": {
+            "en": "The two duties of fermata: the driver must be PRESENT and must not obstruct traffic. That is why 'during fermata the driver must always be ready to resume' is true, while 'fermata is always allowed to ask directions' is false — it is allowed only where it doesn't obstruct.",
+            "ru": "Две обязанности fermata: водитель ПРИСУТСТВУЕТ и не мешает движению. Поэтому «во время fermata водитель всегда готов продолжить движение» — правда, а «fermata всегда разрешена, чтобы спросить дорогу» — ложь: она разрешена только там, где не мешает.",
+            "zh": "Fermata的两项义务：司机必须在场，且不得妨碍交通。所以\"停靠时司机必须随时准备继续行驶\"为真，而\"为问路总是可以停靠\"为假——只有不妨碍交通处才可以。"
+          }
+        },
+        {
+          "title_it": "Dove la sosta è sempre vietata",
+          "text": {
+            "en": "Learn the hard list: on pedestrian crossings, on or near level crossings, on curves and crests, less than 5 m from junction corners, on pavements (unless marked), in front of driveways (passi carrabili), at bus stops, in tunnels. Time of day changes nothing here — 'vietata solo di giorno/di notte' is a fabrication.",
+            "ru": "Выучите жёсткий список: на пешеходных переходах, на переездах и рядом, в поворотах и на «горбах», ближе 5 м от угла перекрёстка, на тротуарах (без разметки), перед выездами (passi carrabili), на автобусных остановках, в тоннелях. Время суток ничего не меняет — «vietata solo di giorno/di notte» — фабрикация.",
+            "zh": "背下硬清单：人行横道上、道口及附近、弯道和坡顶、距路口转角5米内、人行道上（无标线时）、私家出入口前、公交站、隧道内。时间不改变任何规定——\"只在白天/夜间禁止\"是编造。"
+          }
+        }
+      ],
+      "mustKnow": [
+        { "fact_it": "Fermata", "value": "breve, conducente presente", "note": { "en": "ready to move on", "ru": "готов уехать", "zh": "随时能走" } },
+        { "fact_it": "Sosta", "value": "prolungata, può allontanarsi", "note": { "en": "the parked state", "ru": "состояние «припаркован»", "zh": "停放状态" } },
+        { "fact_it": "Arresto", "value": "per esigenze di circolazione", "note": { "en": "queue, red light — involuntary", "ru": "затор, светофор — вынужденно", "zh": "堵车、红灯——被迫" } },
+        { "fact_it": "Distanza dall'incrocio (sosta)", "value": "≥ 5 m", "note": { "en": "from the corner of the junction", "ru": "от угла перекрёстка", "zh": "距路口转角" } }
+      ],
+      "traps": [
+        {
+          "id": "fermata-sosta-arresto-divieto-sosta-fermata-9",
+          "why": {
+            "en": "FALSO. Where fermata is forbidden, it is forbidden around the clock — 'in ogni caso nelle ore notturne' invents a time dimension the rule doesn't have. Time-of-day qualifiers on stopping bans are almost always planted.",
+            "ru": "FALSO. Где fermata запрещена — она запрещена круглосуточно; «in ogni caso nelle ore notturne» выдумывает временное измерение, которого в правиле нет. Оговорки о времени суток в запретах остановки почти всегда подложны.",
+            "zh": "错。禁止停靠的地方是全天禁止——\"夜间无论如何\"给规则加了不存在的时间维度。停车禁令里的时段限定几乎都是陷阱。"
+          }
+        },
+        {
+          "id": "fermata-sosta-arresto-durante-fermata-3",
+          "why": {
+            "en": "VERO. Presence and readiness are the very definition of fermata — a true 'sempre' because it restates the definition itself. Definition-restating statements are the most reliable VERO answers in the whole exam.",
+            "ru": "VERO. Присутствие и готовность — само определение fermata; правдивое «sempre», потому что оно пересказывает определение. Утверждения-пересказы определений — самые надёжные VERO на всём экзамене.",
+            "zh": "对。在场并随时能走正是fermata的定义——因复述定义而成立的真\"总是\"。复述定义的句子是全考试中最可靠的\"对\"。"
+          }
+        }
+      ]
+    }
+  }
+}

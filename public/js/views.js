@@ -4,6 +4,7 @@ import {
   applyTheme,
   loadTheory,
   loadDictionary,
+  loadLessons,
   loadQuestions,
   loadAllQuestions,
   slugForQuestionId,
@@ -27,6 +28,11 @@ function lang() {
 
 function translationOf(question) {
   return question.translations?.[lang()]?.text || '';
+}
+
+/** Picks the user's language from a {en,ru,zh} object, falling back to EN. */
+function loc(obj) {
+  return obj?.[lang()] || obj?.en || '';
 }
 
 /** Session queue: unseen questions first, then current mistakes, then the rest. */
@@ -411,6 +417,12 @@ export async function renderTheoryList(root) {
   const readPct = Math.round((read.size / chapters.length) * 100);
   const firstUnread = chapters.find((c) => !read.has(c.id));
   const catBySlug = new Map(state.manifest.categories.map((c) => [c.slug, c]));
+  let lessonChapters = new Set();
+  try {
+    lessonChapters = new Set(Object.keys((await loadLessons()).chapters || {}));
+  } catch {
+    /* list still renders without the lesson layer */
+  }
 
   clear(root,
     el('h1', {}, 'THEORY MANUAL'),
@@ -430,6 +442,16 @@ export async function renderTheoryList(root) {
         el('a.btn', { href: '#/dictionary' }, 'DIZIONARIO — EXAM VOCABULARY'),
       ),
     ),
+    el('a.panel.exam-italian-banner', { href: '#/exam-italian' },
+      el('div.quiz-head', { style: 'margin:0' },
+        el('div', {},
+          el('h2', { style: 'margin-bottom:4px' }, "L'ITALIANO DELL'ESAME"),
+          el('p.stat-sub', {},
+            'SEMPRE · MAI · SOLO · DEVE · PUÒ — THE WORDS THAT DECIDE VERO OR FALSO. START HERE.'),
+        ),
+        el('span.tag.warn', {}, 'GUIDE'),
+      ),
+    ),
     el('div.grid.grid-2', {},
       ...chapters.map((ch) => {
         const slug = CHAPTER_CATEGORY[ch.id];
@@ -438,7 +460,10 @@ export async function renderTheoryList(root) {
         return el('a.card', { href: `#/theory/${ch.id}` },
           el('div.quiz-head', {},
             el('span.tag', {}, `CHAPTER ${ch.chapter}`),
-            read.has(ch.id) ? el('span.tag.ok', {}, 'READ') : el('span.tag.warn', {}, 'NEW'),
+            el('span', { style: 'display:flex;gap:6px' },
+              lessonChapters.has(ch.id) ? el('span.tag.accent-tag', {}, 'LESSON') : null,
+              read.has(ch.id) ? el('span.tag.ok', {}, 'READ') : el('span.tag.warn', {}, 'NEW'),
+            ),
           ),
           el('h2', {}, ch.title_it),
           el('p.stat-sub', {}, ch.translations?.[lang()]?.title || ''),
@@ -477,6 +502,18 @@ export async function renderTheoryChapter(root, id, opts = {}) {
     }
   }
   const signs = [...new Set(catQuestions.map((q) => q.image_url).filter(Boolean))].slice(0, 18);
+  let lesson = null;
+  try {
+    lesson = (await loadLessons()).chapters?.[ch.id] || null;
+  } catch {
+    /* chapter still readable without the lesson layer */
+  }
+  // Traps quote real bank questions; resolve them so text/image/answer
+  // can never drift from the data. Unresolvable ids are dropped.
+  const traps = (lesson?.traps || [])
+    .map((t) => ({ ...t, q: catQuestions.find((q) => q.id === t.id) }))
+    .filter((t) => t.q);
+  const trapRevealed = new Set();
   let dictionary = { sections: [] };
   try {
     dictionary = await loadDictionary();
@@ -540,6 +577,28 @@ export async function renderTheoryChapter(root, id, opts = {}) {
           }, `SELF-CHECK: ${opts.quizResult.correct}/${opts.quizResult.total} CORRECT`)
         : null,
 
+      lesson
+        ? el('div.panel.lesson-objective', {},
+            el('h2', {}, 'IN THIS LESSON'),
+            el('p.lede', { style: 'margin:0' }, loc(lesson.objective).toUpperCase()),
+          )
+        : null,
+
+      lesson?.keyIdeas?.length
+        ? el('div.panel', {},
+            el('h2', {}, 'KEY IDEAS'),
+            ...lesson.keyIdeas.map((idea, i) =>
+              el('div.key-idea', {},
+                el('div.key-idea-num', {}, String(i + 1)),
+                el('div', {},
+                  el('strong.key-idea-title', {}, idea.title_it),
+                  el('p.key-idea-text', {}, loc(idea.text)),
+                ),
+              ),
+            ),
+          )
+        : null,
+
       el('div.panel.chapter-body', {},
         el('h2', {}, 'ORIGINAL TEXT (ITALIAN)'),
         el('p', {}, ch.content_it),
@@ -555,6 +614,49 @@ export async function renderTheoryChapter(root, id, opts = {}) {
             }, `TRANSLATE (${lang().toUpperCase()})`)
           : null,
       ),
+
+      lesson?.mustKnow?.length
+        ? el('div.panel', {},
+            el('h2', {}, 'MUST KNOW — NUMBERS & FACTS'),
+            ...lesson.mustKnow.map((f) =>
+              el('div.row', {},
+                el('div', { style: 'flex:1' },
+                  el('strong', {}, f.fact_it),
+                  f.note ? el('p.stat-sub', {}, loc(f.note)) : null,
+                ),
+                el('span.tag.must-value', {}, f.value.toUpperCase()),
+              ),
+            ),
+          )
+        : null,
+
+      traps.length
+        ? el('div.panel.traps-panel', {},
+            el('h2', {}, 'HOW THE EXAM TRICKS YOU HERE'),
+            el('p.stat-sub', { style: 'margin-bottom:14px' },
+              'REAL EXAM QUESTIONS. DECIDE VERO OR FALSO, THEN REVEAL THE TRAP.'),
+            ...traps.map((t, i) =>
+              el('div.trap', {},
+                t.q.image_url
+                  ? el('img.trap-img', { src: t.q.image_url, alt: 'Road sign', loading: 'lazy' })
+                  : null,
+                el('p.trap-text', {}, `«${t.q.text_it}»`),
+                trapRevealed.has(i)
+                  ? el('div.trap-answer', {},
+                      el('span.tag', { className: `tag ${t.q.is_true ? 'ok' : 'bad'}` },
+                        t.q.is_true ? 'VERO' : 'FALSO'),
+                      el('p.trap-why', {}, loc(t.why)),
+                    )
+                  : el('button.btn.btn-small', {
+                      onclick: () => { trapRevealed.add(i); draw(); },
+                    }, 'REVEAL THE TRAP'),
+              ),
+            ),
+            el('div.actions', {},
+              el('a.btn.btn-small', { href: '#/exam-italian' }, 'FULL GUIDE: THE ITALIAN OF THE EXAM →'),
+            ),
+          )
+        : null,
 
       signs.length
         ? el('div.panel', {},
@@ -627,6 +729,60 @@ export async function renderTheoryChapter(root, id, opts = {}) {
   }
 
   draw();
+}
+
+/* ========================== EXAM ITALIAN GUIDE ========================== */
+
+/**
+ * A language survival guide for the quiz: the small set of Italian words
+ * and sentence patterns that decide VERO/FALSO. This is the single most
+ * valuable page for non-Italian speakers.
+ */
+export async function renderExamItalian(root) {
+  clear(root, el('h1', {}, "L'ITALIANO DELL'ESAME"), el('p.lede', {}, 'LOADING...'));
+  let guide;
+  try {
+    guide = (await loadLessons()).examItalian;
+  } catch (err) {
+    return clear(root, errorBanner(err));
+  }
+
+  clear(root,
+    el('div.quiz-head', {},
+      el('h1', { style: 'margin:0' }, "L'ITALIANO DELL'ESAME"),
+      el('a.btn', { href: '#/theory' }, '← THEORY'),
+    ),
+    el('p.lede', {}, 'THE WORDS THAT DECIDE VERO OR FALSO.'),
+    el('div.panel.lesson-objective', {},
+      el('p', { style: 'margin:0;font-weight:600' }, loc(guide.intro)),
+    ),
+    ...guide.sections.map((s) =>
+      el('div.panel', {},
+        el('h2', {}, s.title_it.toUpperCase()),
+        el('p.section-explain', {}, loc(s.explain)),
+        el('div.word-grid', {},
+          ...s.entries.map((w) =>
+            el('div.word-card', {},
+              el('strong.word-it', {}, w.it),
+              el('span.word-gloss', {}, loc(w.gloss)),
+            ),
+          ),
+        ),
+      ),
+    ),
+    el('div.panel.traps-panel', {},
+      el('h2', {}, "INSTRUCTOR'S RULES OF THUMB"),
+      ...guide.tips.map((t, i) =>
+        el('div.key-idea', {},
+          el('div.key-idea-num', {}, String(i + 1)),
+          el('p.key-idea-text', { style: 'margin:0' }, loc(t)),
+        ),
+      ),
+    ),
+    el('div.actions', {},
+      el('a.btn.btn-primary', { href: '#/practice' }, 'APPLY IT — PRACTICE NOW'),
+    ),
+  );
 }
 
 /* ============================== DICTIONARY ============================== */
@@ -1100,7 +1256,7 @@ async function downloadForOffline(button) {
   box.replaceChildren(label);
   try {
     const dataUrls = [
-      '/api/manifest', '/api/theory', '/api/dictionary',
+      '/api/manifest', '/api/theory', '/api/dictionary', '/api/lessons',
       ...state.manifest.categories.map((c) => `/api/questions/${c.slug}`),
     ];
     const images = new Set();

@@ -6,6 +6,7 @@ export const state = {
   manifest: null,
   theory: null,
   dictionary: null,
+  lessons: null,
   questionsBySlug: new Map(),
 };
 
@@ -28,6 +29,11 @@ export async function loadTheory() {
 export async function loadDictionary() {
   if (!state.dictionary) state.dictionary = await api.dictionary();
   return state.dictionary;
+}
+
+export async function loadLessons() {
+  if (!state.lessons) state.lessons = await api.lessons();
+  return state.lessons;
 }
 
 export async function loadQuestions(slug) {

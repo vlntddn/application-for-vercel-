@@ -12,7 +12,7 @@
  *   answers are not queued (v1) — the UI shows an error banner.
  */
 
-const VERSION = 'v1';
+const VERSION = 'v2';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -50,6 +50,7 @@ function isStaticData(url) {
     url.pathname === '/api/manifest' ||
     url.pathname === '/api/theory' ||
     url.pathname === '/api/dictionary' ||
+    url.pathname === '/api/lessons' ||
     url.pathname.startsWith('/api/questions/')
   );
 }

@@ -25,6 +25,10 @@ Tests (built-in `node:test` runner): `npm test`.
 
 - **Dashboard** — login streak, questions mastered, mock-exam success rate.
 - **Theory** — 25 chapters; original Italian, translation, and a simplified version.
+- **Lessons for foreigners** — instructor-designed layer on core chapters:
+  key ideas in your language, must-know facts, and real trap questions
+  dissected; plus "L'italiano dell'esame" — a guide to the wording
+  (sempre/mai/solo, deve vs può) that decides VERO or FALSO.
 - **Practice** — per-topic sessions of 20 questions; unseen and previously
   wrong questions are served first; instant feedback; keyboard controls
   (`V` = vero, `F` = falso, `Enter` = next).
