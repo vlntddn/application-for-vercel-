@@ -15,12 +15,54 @@
           "zh": "绝对词让句子变成全称判断：总是、从不、只有。交通规则几乎都有例外，所以绝对句常常是错的——但不是自动错！要读完整句：\"STOP标志总是要求停车\"是对的。把这些词当作警铃：停下来找真正的例外。"
         },
         "entries": [
-          { "it": "sempre", "gloss": { "en": "always", "ru": "всегда", "zh": "总是" } },
-          { "it": "mai", "gloss": { "en": "never", "ru": "никогда", "zh": "从不" } },
-          { "it": "solo / soltanto", "gloss": { "en": "only", "ru": "только", "zh": "只有" } },
-          { "it": "esclusivamente", "gloss": { "en": "exclusively", "ru": "исключительно", "zh": "仅仅" } },
-          { "it": "in ogni caso", "gloss": { "en": "in every case", "ru": "в любом случае", "zh": "在任何情况下" } },
-          { "it": "anche", "gloss": { "en": "also / even", "ru": "также / даже", "zh": "也 / 甚至" } }
+          {
+            "it": "sempre",
+            "gloss": {
+              "en": "always",
+              "ru": "всегда",
+              "zh": "总是"
+            }
+          },
+          {
+            "it": "mai",
+            "gloss": {
+              "en": "never",
+              "ru": "никогда",
+              "zh": "从不"
+            }
+          },
+          {
+            "it": "solo / soltanto",
+            "gloss": {
+              "en": "only",
+              "ru": "только",
+              "zh": "只有"
+            }
+          },
+          {
+            "it": "esclusivamente",
+            "gloss": {
+              "en": "exclusively",
+              "ru": "исключительно",
+              "zh": "仅仅"
+            }
+          },
+          {
+            "it": "in ogni caso",
+            "gloss": {
+              "en": "in every case",
+              "ru": "в любом случае",
+              "zh": "在任何情况下"
+            }
+          },
+          {
+            "it": "anche",
+            "gloss": {
+              "en": "also / even",
+              "ru": "также / даже",
+              "zh": "也 / 甚至"
+            }
+          }
         ]
       },
       {
@@ -31,11 +73,46 @@
           "zh": "考试最爱把义务和许可互换。DEVE=必须（义务）。PUÒ=可以（许可）。把许可说成义务或相反，句子就是错的：\"驾驶员在学校附近可以减速\"是错的——是必须。请记住下面整组词。"
         },
         "entries": [
-          { "it": "deve / è obbligatorio", "gloss": { "en": "must / is compulsory", "ru": "должен / обязательно", "zh": "必须" } },
-          { "it": "può / è consentito", "gloss": { "en": "may / is allowed", "ru": "может / разрешено", "zh": "可以 / 允许" } },
-          { "it": "è vietato", "gloss": { "en": "is forbidden", "ru": "запрещено", "zh": "禁止" } },
-          { "it": "non è tenuto a", "gloss": { "en": "is not required to", "ru": "не обязан", "zh": "无须" } },
-          { "it": "occorre / bisogna", "gloss": { "en": "it is necessary", "ru": "необходимо", "zh": "需要" } }
+          {
+            "it": "deve / è obbligatorio",
+            "gloss": {
+              "en": "must / is compulsory",
+              "ru": "должен / обязательно",
+              "zh": "必须"
+            }
+          },
+          {
+            "it": "può / è consentito",
+            "gloss": {
+              "en": "may / is allowed",
+              "ru": "может / разрешено",
+              "zh": "可以 / 允许"
+            }
+          },
+          {
+            "it": "è vietato",
+            "gloss": {
+              "en": "is forbidden",
+              "ru": "запрещено",
+              "zh": "禁止"
+            }
+          },
+          {
+            "it": "non è tenuto a",
+            "gloss": {
+              "en": "is not required to",
+              "ru": "не обязан",
+              "zh": "无须"
+            }
+          },
+          {
+            "it": "occorre / bisogna",
+            "gloss": {
+              "en": "it is necessary",
+              "ru": "необходимо",
+              "zh": "需要"
+            }
+          }
         ]
       },
       {
@@ -46,11 +123,46 @@
           "zh": "每类标志都有自己的动词，用错动词句子就是错的。危险标志是\"预先警告\"（preavvisano），不会\"强制\"某个动作。禁令标志=禁止（vietano）。指示标志=强制（obbligano）。如果题目说三角形标志\"要求停车\"，动词本身就是错误。"
         },
         "entries": [
-          { "it": "preavvisa / preannuncia", "gloss": { "en": "warns in advance (danger signs)", "ru": "предупреждает заранее (знаки опасности)", "zh": "预先警告（危险标志）" } },
-          { "it": "vieta / non consente", "gloss": { "en": "forbids (prohibition signs)", "ru": "запрещает (запрещающие знаки)", "zh": "禁止（禁令标志）" } },
-          { "it": "obbliga / prescrive", "gloss": { "en": "obliges (obligation signs)", "ru": "обязывает (предписывающие знаки)", "zh": "强制（指示标志）" } },
-          { "it": "indica / segnala", "gloss": { "en": "indicates (information signs)", "ru": "указывает (указательные знаки)", "zh": "指示（信息标志）" } },
-          { "it": "consente", "gloss": { "en": "allows", "ru": "разрешает", "zh": "允许" } }
+          {
+            "it": "preavvisa / preannuncia",
+            "gloss": {
+              "en": "warns in advance (danger signs)",
+              "ru": "предупреждает заранее (знаки опасности)",
+              "zh": "预先警告（危险标志）"
+            }
+          },
+          {
+            "it": "vieta / non consente",
+            "gloss": {
+              "en": "forbids (prohibition signs)",
+              "ru": "запрещает (запрещающие знаки)",
+              "zh": "禁止（禁令标志）"
+            }
+          },
+          {
+            "it": "obbliga / prescrive",
+            "gloss": {
+              "en": "obliges (obligation signs)",
+              "ru": "обязывает (предписывающие знаки)",
+              "zh": "强制（指示标志）"
+            }
+          },
+          {
+            "it": "indica / segnala",
+            "gloss": {
+              "en": "indicates (information signs)",
+              "ru": "указывает (указательные знаки)",
+              "zh": "指示（信息标志）"
+            }
+          },
+          {
+            "it": "consente",
+            "gloss": {
+              "en": "allows",
+              "ru": "разрешает",
+              "zh": "允许"
+            }
+          }
         ]
       },
       {
@@ -61,10 +173,38 @@
           "zh": "注意三种句式。1）两段式句子（\"该标志禁止X并允许Y\"）：只要一半错，整句就是错。2）否定句（non è vietato=允许）。3）规则对、标志错：规则本身正确，却安在别的标志上。既要核对说了什么，也要核对说的是哪个标志。"
         },
         "entries": [
-          { "it": "non è vietato", "gloss": { "en": "it is NOT forbidden = allowed", "ru": "НЕ запрещено = разрешено", "zh": "不禁止＝允许" } },
-          { "it": "..., ma ...", "gloss": { "en": "two claims — check both halves", "ru": "два утверждения — проверьте обе части", "zh": "两个论断——两半都要核对" } },
-          { "it": "il segnale raffigurato", "gloss": { "en": "the sign SHOWN — match rule to THIS sign", "ru": "изображённый знак — правило именно про НЕГО?", "zh": "图中标志——规则说的是它吗？" } },
-          { "it": "di norma", "gloss": { "en": "as a rule (exceptions exist — softens the claim)", "ru": "как правило (есть исключения — смягчает)", "zh": "通常（存在例外，语气缓和）" } }
+          {
+            "it": "non è vietato",
+            "gloss": {
+              "en": "it is NOT forbidden = allowed",
+              "ru": "НЕ запрещено = разрешено",
+              "zh": "不禁止＝允许"
+            }
+          },
+          {
+            "it": "..., ma ...",
+            "gloss": {
+              "en": "two claims — check both halves",
+              "ru": "два утверждения — проверьте обе части",
+              "zh": "两个论断——两半都要核对"
+            }
+          },
+          {
+            "it": "il segnale raffigurato",
+            "gloss": {
+              "en": "the sign SHOWN — match rule to THIS sign",
+              "ru": "изображённый знак — правило именно про НЕГО?",
+              "zh": "图中标志——规则说的是它吗？"
+            }
+          },
+          {
+            "it": "di norma",
+            "gloss": {
+              "en": "as a rule (exceptions exist — softens the claim)",
+              "ru": "как правило (есть исключения — смягчает)",
+              "zh": "通常（存在例外，语气缓和）"
+            }
+          }
         ]
       }
     ],
@@ -120,10 +260,42 @@
         }
       ],
       "mustKnow": [
-        { "fact_it": "Corsia", "value": "1 fila di veicoli", "note": { "en": "wide enough for one file of vehicles", "ru": "вмещает один ряд машин", "zh": "容纳一列车辆" } },
-        { "fact_it": "Banchina", "value": "no veicoli", "note": { "en": "not part of the carriageway", "ru": "не часть проезжей части", "zh": "不属于车行道" } },
-        { "fact_it": "ZTL", "value": "solo autorizzati", "note": { "en": "limited hours are set by the local authority", "ru": "часы действия задаёт коммуна", "zh": "限行时间由市政规定" } },
-        { "fact_it": "Isola di traffico", "value": "transito vietato", "note": { "en": "crossing and stopping always forbidden", "ru": "пересекать и стоять всегда запрещено", "zh": "禁止驶入和停车" } }
+        {
+          "fact_it": "Corsia",
+          "value": "1 fila di veicoli",
+          "note": {
+            "en": "wide enough for one file of vehicles",
+            "ru": "вмещает один ряд машин",
+            "zh": "容纳一列车辆"
+          }
+        },
+        {
+          "fact_it": "Banchina",
+          "value": "no veicoli",
+          "note": {
+            "en": "not part of the carriageway",
+            "ru": "не часть проезжей части",
+            "zh": "不属于车行道"
+          }
+        },
+        {
+          "fact_it": "ZTL",
+          "value": "solo autorizzati",
+          "note": {
+            "en": "limited hours are set by the local authority",
+            "ru": "часы действия задаёт коммуна",
+            "zh": "限行时间由市政规定"
+          }
+        },
+        {
+          "fact_it": "Isola di traffico",
+          "value": "transito vietato",
+          "note": {
+            "en": "crossing and stopping always forbidden",
+            "ru": "пересекать и стоять всегда запрещено",
+            "zh": "禁止驶入和停车"
+          }
+        }
       ],
       "traps": [
         {
@@ -177,9 +349,33 @@
         }
       ],
       "mustKnow": [
-        { "fact_it": "Distanza dal pericolo (extraurbane)", "value": "150 m", "note": { "en": "'di norma' — panels can change it", "ru": "«как правило» — табличка может изменить", "zh": "通常值，附加牌可更改" } },
-        { "fact_it": "Croce di Sant'Andrea singola", "value": "1 binario", "note": { "en": "double cross = 2+ tracks", "ru": "двойной крест = 2+ пути", "zh": "双十字＝两条以上轨道" } },
-        { "fact_it": "Forma", "value": "triangolo, vertice in alto", "note": { "en": "point DOWN = give way (ch. 5)", "ru": "вершиной ВНИЗ = уступи дорогу (гл. 5)", "zh": "顶点朝下＝让行（第5章）" } }
+        {
+          "fact_it": "Distanza dal pericolo (extraurbane)",
+          "value": "150 m",
+          "note": {
+            "en": "'di norma' — panels can change it",
+            "ru": "«как правило» — табличка может изменить",
+            "zh": "通常值，附加牌可更改"
+          }
+        },
+        {
+          "fact_it": "Croce di Sant'Andrea singola",
+          "value": "1 binario",
+          "note": {
+            "en": "double cross = 2+ tracks",
+            "ru": "двойной крест = 2+ пути",
+            "zh": "双十字＝两条以上轨道"
+          }
+        },
+        {
+          "fact_it": "Forma",
+          "value": "triangolo, vertice in alto",
+          "note": {
+            "en": "point DOWN = give way (ch. 5)",
+            "ru": "вершиной ВНИЗ = уступи дорогу (гл. 5)",
+            "zh": "顶点朝下＝让行（第5章）"
+          }
+        }
       ],
       "traps": [
         {
@@ -241,9 +437,33 @@
         }
       ],
       "mustKnow": [
-        { "fact_it": "Divieto di sosta (centro abitato)", "value": "8:00–20:00", "note": { "en": "24 h outside built-up areas", "ru": "вне города — круглосуточно", "zh": "城外全天" } },
-        { "fact_it": "Fine del divieto", "value": "primo incrocio", "note": { "en": "or explicit end-of-prohibition sign", "ru": "или знак «конец запрета»", "zh": "或\"解除禁令\"标志" } },
-        { "fact_it": "Senso vietato", "value": "vieta l'ingresso", "note": { "en": "one direction only", "ru": "только с одной стороны", "zh": "仅一个方向" } }
+        {
+          "fact_it": "Divieto di sosta (centro abitato)",
+          "value": "8:00–20:00",
+          "note": {
+            "en": "24 h outside built-up areas",
+            "ru": "вне города — круглосуточно",
+            "zh": "城外全天"
+          }
+        },
+        {
+          "fact_it": "Fine del divieto",
+          "value": "primo incrocio",
+          "note": {
+            "en": "or explicit end-of-prohibition sign",
+            "ru": "или знак «конец запрета»",
+            "zh": "或\"解除禁令\"标志"
+          }
+        },
+        {
+          "fact_it": "Senso vietato",
+          "value": "vieta l'ingresso",
+          "note": {
+            "en": "one direction only",
+            "ru": "только с одной стороны",
+            "zh": "仅一个方向"
+          }
+        }
       ],
       "traps": [
         {
@@ -297,9 +517,33 @@
         }
       ],
       "mustKnow": [
-        { "fact_it": "Cerchio blu", "value": "obbligo", "note": { "en": "vs red border = prohibition", "ru": "красная кайма = запрет", "zh": "红圈＝禁止" } },
-        { "fact_it": "Frecce multiple", "value": "tutte consentite", "note": { "en": "any listed direction is allowed", "ru": "любое из указанных направлений разрешено", "zh": "所列方向均可" } },
-        { "fact_it": "Fine dell'obbligo", "value": "dopo l'intersezione", "note": { "en": "direction obligations apply at the junction", "ru": "предписание направления действует на перекрёстке", "zh": "方向指令适用于该路口" } }
+        {
+          "fact_it": "Cerchio blu",
+          "value": "obbligo",
+          "note": {
+            "en": "vs red border = prohibition",
+            "ru": "красная кайма = запрет",
+            "zh": "红圈＝禁止"
+          }
+        },
+        {
+          "fact_it": "Frecce multiple",
+          "value": "tutte consentite",
+          "note": {
+            "en": "any listed direction is allowed",
+            "ru": "любое из указанных направлений разрешено",
+            "zh": "所列方向均可"
+          }
+        },
+        {
+          "fact_it": "Fine dell'obbligo",
+          "value": "dopo l'intersezione",
+          "note": {
+            "en": "direction obligations apply at the junction",
+            "ru": "предписание направления действует на перекрёстке",
+            "zh": "方向指令适用于该路口"
+          }
+        }
       ],
       "traps": [
         {
@@ -353,10 +597,42 @@
         }
       ],
       "mustKnow": [
-        { "fact_it": "STOP", "value": "arresto + precedenza", "note": { "en": "always a full stop at the line", "ru": "всегда полная остановка у линии", "zh": "必须在线前完全停车" } },
-        { "fact_it": "Dare precedenza", "value": "triangolo rovesciato", "note": { "en": "the only point-down triangle", "ru": "единственный треугольник вершиной вниз", "zh": "唯一顶点朝下的三角形" } },
-        { "fact_it": "Preavviso di STOP", "value": "con pannello distanza", "note": { "en": "warns the octagon is coming", "ru": "предупреждает о приближении STOP", "zh": "预告前方有STOP" } },
-        { "fact_it": "Dove si trovano", "value": "urbane ed extraurbane", "note": { "en": "'only urban/only extraurban' claims are false", "ru": "«только в городе/только вне» — ложь", "zh": "\"仅市区/仅城外\"都是错的" } }
+        {
+          "fact_it": "STOP",
+          "value": "arresto + precedenza",
+          "note": {
+            "en": "always a full stop at the line",
+            "ru": "всегда полная остановка у линии",
+            "zh": "必须在线前完全停车"
+          }
+        },
+        {
+          "fact_it": "Dare precedenza",
+          "value": "triangolo rovesciato",
+          "note": {
+            "en": "the only point-down triangle",
+            "ru": "единственный треугольник вершиной вниз",
+            "zh": "唯一顶点朝下的三角形"
+          }
+        },
+        {
+          "fact_it": "Preavviso di STOP",
+          "value": "con pannello distanza",
+          "note": {
+            "en": "warns the octagon is coming",
+            "ru": "предупреждает о приближении STOP",
+            "zh": "预告前方有STOP"
+          }
+        },
+        {
+          "fact_it": "Dove si trovano",
+          "value": "urbane ed extraurbane",
+          "note": {
+            "en": "'only urban/only extraurban' claims are false",
+            "ru": "«только в городе/только вне» — ложь",
+            "zh": "\"仅市区/仅城外\"都是错的"
+          }
+        }
       ],
       "traps": [
         {
@@ -410,11 +686,47 @@
         }
       ],
       "mustKnow": [
-        { "fact_it": "Centro abitato", "value": "50 km/h", "note": { "en": "70 possible on marked urban roads", "ru": "на отдельных дорогах с знаком — до 70", "zh": "有标志的市区道路可到70" } },
-        { "fact_it": "Extraurbane secondarie", "value": "90 km/h", "note": null },
-        { "fact_it": "Extraurbane principali", "value": "110 km/h", "note": { "en": "rain: 90", "ru": "дождь: 90", "zh": "雨天90" } },
-        { "fact_it": "Autostrade", "value": "130 km/h", "note": { "en": "rain: 110", "ru": "дождь: 110", "zh": "雨天110" } },
-        { "fact_it": "Neopatentati (3 anni)", "value": "100 / 90", "note": { "en": "motorway / main extraurban", "ru": "автомагистраль / главные загородные", "zh": "高速/主要城外道路" } }
+        {
+          "fact_it": "Centro abitato",
+          "value": "50 km/h",
+          "note": {
+            "en": "70 possible on marked urban roads",
+            "ru": "на отдельных дорогах с знаком — до 70",
+            "zh": "有标志的市区道路可到70"
+          }
+        },
+        {
+          "fact_it": "Extraurbane secondarie",
+          "value": "90 km/h",
+          "note": null
+        },
+        {
+          "fact_it": "Extraurbane principali",
+          "value": "110 km/h",
+          "note": {
+            "en": "rain: 90",
+            "ru": "дождь: 90",
+            "zh": "雨天90"
+          }
+        },
+        {
+          "fact_it": "Autostrade",
+          "value": "130 km/h",
+          "note": {
+            "en": "rain: 110",
+            "ru": "дождь: 110",
+            "zh": "雨天110"
+          }
+        },
+        {
+          "fact_it": "Neopatentati (3 anni)",
+          "value": "100 / 90",
+          "note": {
+            "en": "motorway / main extraurban",
+            "ru": "автомагистраль / главные загородные",
+            "zh": "高速/主要城外道路"
+          }
+        }
       ],
       "traps": [
         {
@@ -468,9 +780,33 @@
         }
       ],
       "mustKnow": [
-        { "fact_it": "Spazio di reazione (1 sec)", "value": "≈ v/10 × 3 m", "note": { "en": "90 km/h → ~25 m before braking starts", "ru": "90 км/ч → ~25 м до начала торможения", "zh": "90公里/小时→刹车前约25米" } },
-        { "fact_it": "Spazio di frenatura", "value": "∝ v²", "note": { "en": "double speed = ×4 braking distance", "ru": "скорость ×2 = тормозной путь ×4", "zh": "速度×2＝制动距离×4" } },
-        { "fact_it": "Valore fisso in metri", "value": "non esiste", "note": { "en": "claims of a fixed value are false", "ru": "утверждения о фиксированном значении ложны", "zh": "固定值的说法都是错的" } }
+        {
+          "fact_it": "Spazio di reazione (1 sec)",
+          "value": "≈ v/10 × 3 m",
+          "note": {
+            "en": "90 km/h → ~25 m before braking starts",
+            "ru": "90 км/ч → ~25 м до начала торможения",
+            "zh": "90公里/小时→刹车前约25米"
+          }
+        },
+        {
+          "fact_it": "Spazio di frenatura",
+          "value": "∝ v²",
+          "note": {
+            "en": "double speed = ×4 braking distance",
+            "ru": "скорость ×2 = тормозной путь ×4",
+            "zh": "速度×2＝制动距离×4"
+          }
+        },
+        {
+          "fact_it": "Valore fisso in metri",
+          "value": "non esiste",
+          "note": {
+            "en": "claims of a fixed value are false",
+            "ru": "утверждения о фиксированном значении ложны",
+            "zh": "固定值的说法都是错的"
+          }
+        }
       ],
       "traps": [
         {
@@ -524,9 +860,33 @@
         }
       ],
       "mustKnow": [
-        { "fact_it": "Regola base", "value": "destra ha precedenza", "note": { "en": "at unmarked equal crossings", "ru": "на равнозначных перекрёстках", "zh": "同级无标志路口" } },
-        { "fact_it": "Tram", "value": "precedenza sui veicoli", "note": { "en": "even coming from the left", "ru": "даже подходя слева", "zh": "即使从左边来" } },
-        { "fact_it": "Svolta a sinistra", "value": "cedere agli opposti", "note": { "en": "oncoming straight/right traffic first", "ru": "встречные прямо/направо — первыми", "zh": "先让对向直行/右转" } }
+        {
+          "fact_it": "Regola base",
+          "value": "destra ha precedenza",
+          "note": {
+            "en": "at unmarked equal crossings",
+            "ru": "на равнозначных перекрёстках",
+            "zh": "同级无标志路口"
+          }
+        },
+        {
+          "fact_it": "Tram",
+          "value": "precedenza sui veicoli",
+          "note": {
+            "en": "even coming from the left",
+            "ru": "даже подходя слева",
+            "zh": "即使从左边来"
+          }
+        },
+        {
+          "fact_it": "Svolta a sinistra",
+          "value": "cedere agli opposti",
+          "note": {
+            "en": "oncoming straight/right traffic first",
+            "ru": "встречные прямо/направо — первыми",
+            "zh": "先让对向直行/右转"
+          }
+        }
       ],
       "traps": [
         {
@@ -580,9 +940,33 @@
         }
       ],
       "mustKnow": [
-        { "fact_it": "Sorpasso a destra", "value": "se chi precede svolta a sinistra", "note": { "en": "the classic legal exception", "ru": "классическое законное исключение", "zh": "经典合法例外" } },
-        { "fact_it": "Curve e dossi (1 carreggiata, 2 sensi)", "value": "vietato", "note": { "en": "allowed on dual carriageways", "ru": "на дорогах с разделёнными проезжими частями можно", "zh": "分幅道路可以" } },
-        { "fact_it": "Veicoli a due ruote", "value": "cautela extra", "note": { "en": "'always allowed to pass them' is false", "ru": "«всегда можно обгонять» — ложь", "zh": "\"总是可以超\"是错的" } }
+        {
+          "fact_it": "Sorpasso a destra",
+          "value": "se chi precede svolta a sinistra",
+          "note": {
+            "en": "the classic legal exception",
+            "ru": "классическое законное исключение",
+            "zh": "经典合法例外"
+          }
+        },
+        {
+          "fact_it": "Curve e dossi (1 carreggiata, 2 sensi)",
+          "value": "vietato",
+          "note": {
+            "en": "allowed on dual carriageways",
+            "ru": "на дорогах с разделёнными проезжими частями можно",
+            "zh": "分幅道路可以"
+          }
+        },
+        {
+          "fact_it": "Veicoli a due ruote",
+          "value": "cautela extra",
+          "note": {
+            "en": "'always allowed to pass them' is false",
+            "ru": "«всегда можно обгонять» — ложь",
+            "zh": "\"总是可以超\"是错的"
+          }
+        }
       ],
       "traps": [
         {
@@ -636,10 +1020,42 @@
         }
       ],
       "mustKnow": [
-        { "fact_it": "Fermata", "value": "breve, conducente presente", "note": { "en": "ready to move on", "ru": "готов уехать", "zh": "随时能走" } },
-        { "fact_it": "Sosta", "value": "prolungata, può allontanarsi", "note": { "en": "the parked state", "ru": "состояние «припаркован»", "zh": "停放状态" } },
-        { "fact_it": "Arresto", "value": "per esigenze di circolazione", "note": { "en": "queue, red light — involuntary", "ru": "затор, светофор — вынужденно", "zh": "堵车、红灯——被迫" } },
-        { "fact_it": "Distanza dall'incrocio (sosta)", "value": "≥ 5 m", "note": { "en": "from the corner of the junction", "ru": "от угла перекрёстка", "zh": "距路口转角" } }
+        {
+          "fact_it": "Fermata",
+          "value": "breve, conducente presente",
+          "note": {
+            "en": "ready to move on",
+            "ru": "готов уехать",
+            "zh": "随时能走"
+          }
+        },
+        {
+          "fact_it": "Sosta",
+          "value": "prolungata, può allontanarsi",
+          "note": {
+            "en": "the parked state",
+            "ru": "состояние «припаркован»",
+            "zh": "停放状态"
+          }
+        },
+        {
+          "fact_it": "Arresto",
+          "value": "per esigenze di circolazione",
+          "note": {
+            "en": "queue, red light — involuntary",
+            "ru": "затор, светофор — вынужденно",
+            "zh": "堵车、红灯——被迫"
+          }
+        },
+        {
+          "fact_it": "Distanza dall'incrocio (sosta)",
+          "value": "≥ 5 m",
+          "note": {
+            "en": "from the corner of the junction",
+            "ru": "от угла перекрёстка",
+            "zh": "距路口转角"
+          }
+        }
       ],
       "traps": [
         {
@@ -656,6 +1072,1271 @@
             "en": "VERO. Presence and readiness are the very definition of fermata — a true 'sempre' because it restates the definition itself. Definition-restating statements are the most reliable VERO answers in the whole exam.",
             "ru": "VERO. Присутствие и готовность — само определение fermata; правдивое «sempre», потому что оно пересказывает определение. Утверждения-пересказы определений — самые надёжные VERO на всём экзамене.",
             "zh": "对。在场并随时能走正是fermata的定义——因复述定义而成立的真\"总是\"。复述定义的句子是全考试中最可靠的\"对\"。"
+          }
+        }
+      ]
+    },
+    "ch6": {
+      "objective": {
+        "en": "Read the road surface itself: line types, colours and arrows that command without a single signpost.",
+        "ru": "Читать саму дорогу: типы линий, цвета и стрелки, которые командуют без единого знака на столбе.",
+        "zh": "读懂路面本身：线型、颜色和箭头无须立牌即可指挥交通。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Continua non si supera, discontinua sì",
+          "text": {
+            "en": "The whole chapter hangs on one distinction: a CONTINUOUS white line may not be crossed or straddled; a BROKEN line may be crossed (to overtake, to change lane) when it is safe. Double lines: obey the one on YOUR side.",
+            "ru": "Вся глава держится на одном различии: СПЛОШНУЮ белую линию нельзя пересекать и ехать по ней; ПРЕРЫВИСТУЮ можно пересекать (обгон, смена полосы), когда это безопасно. Двойная линия: подчиняйтесь той, что с ВАШЕЙ стороны.",
+            "zh": "全章围绕一个区别：白色实线不得跨越或骑压；虚线在安全时可以跨越（超车、变道）。双线时服从你这一侧的线。"
+          }
+        },
+        {
+          "title_it": "Il giallo è speciale",
+          "text": {
+            "en": "Yellow markings mean reserved or special: bus stops (zig-zag = no parking, fermata allowed only for boarding), reserved lanes, taxi ranks. Yellow-and-black on kerbs = no stopping. If a marking is yellow, ask WHO it is reserved for.",
+            "ru": "Жёлтая разметка = зарезервировано или особый режим: автобусные остановки (зигзаг = стоянка запрещена), выделенные полосы, стоянки такси. Жёлто-чёрный бордюр = остановка запрещена. Видите жёлтое — спросите, ДЛЯ КОГО это.",
+            "zh": "黄色标线＝专用或特殊：公交站（锯齿线＝禁止停放）、专用道、出租车位。黄黑路缘＝禁止停车。见到黄色就问：这是留给谁的？"
+          }
+        },
+        {
+          "title_it": "Frecce in corsia = destino della corsia",
+          "text": {
+            "en": "Arrows painted in a lane bind you once you are in it: a straight-only arrow means that lane crosses the junction straight — exactly like a blue obligation sign. Choose your lane early; the arrows are read BEFORE the stop line.",
+            "ru": "Стрелки на полосе связывают вас, как только вы на ней: стрелка «прямо» значит, что эта полоса проходит перекрёсток прямо — ровно как синий предписывающий знак. Выбирайте полосу заранее: стрелки читают ДО стоп-линии.",
+            "zh": "车道内的箭头对已在该车道的你有约束力：直行箭头意味着该车道直行通过路口——效力等同蓝色指示标志。提前选道：箭头要在停止线之前读。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Striscia continua",
+          "value": "non superare",
+          "note": {
+            "en": "no crossing, no straddling",
+            "ru": "не пересекать, не ехать по ней",
+            "zh": "不得跨越或骑压"
+          }
+        },
+        {
+          "fact_it": "Striscia discontinua",
+          "value": "si può superare",
+          "note": {
+            "en": "when safe",
+            "ru": "когда безопасно",
+            "zh": "安全时"
+          }
+        },
+        {
+          "fact_it": "Zig-zag giallo (bus)",
+          "value": "sosta vietata",
+          "note": {
+            "en": "fermata only to board/alight the bus",
+            "ru": "fermata — только для посадки в автобус",
+            "zh": "仅公交上下客可停靠"
+          }
+        },
+        {
+          "fact_it": "Frecce in corsia",
+          "value": "vincolanti",
+          "note": {
+            "en": "like an obligation sign",
+            "ru": "как предписывающий знак",
+            "zh": "等同指示标志"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "segnaletica-orizzontale-ostacoli-striscia-discontinua-14",
+          "why": {
+            "en": "FALSO. Broken lines exist on every kind of road — two-way included. 'Si trova solo su...' about a universal marking is the same trap as with signs: the code doesn’t confine basic markings to one road type.",
+            "ru": "FALSO. Прерывистая линия есть на дорогах любого типа — включая двусторонние. «Si trova solo su...» про универсальную разметку — та же ловушка, что со знаками: базовая разметка не привязана к одному типу дорог.",
+            "zh": "错。虚线存在于各种道路上——包括双向道。“只出现在某种路上”对基础标线来说和标志题一样是陷阱。"
+          }
+        },
+        {
+          "id": "segnaletica-orizzontale-ostacoli-corsie-arresto-2",
+          "why": {
+            "en": "VERO. The middle lane carries a straight-only arrow, so it allows ONLY going straight — a 'solo' that is literally painted on the asphalt. Count the arrows in the figure exactly as you counted them on blue signs.",
+            "ru": "VERO. На средней полосе — стрелка «только прямо», значит она разрешает ТОЛЬКО прямо: «solo», буквально нарисованное на асфальте. Считайте стрелки на схеме так же, как считали их на синих знаках.",
+            "zh": "对。中间车道画着直行箭头，所以只允许直行——这个“只能”就画在沥青上。像数蓝色标志的箭头一样数图中的箭头。"
+          }
+        }
+      ]
+    },
+    "ch7": {
+      "objective": {
+        "en": "Answer every traffic-light question with three rules: what green really allows, what fixed yellow demands, who outranks the light.",
+        "ru": "Отвечать на все вопросы о светофорах тремя правилами: что реально разрешает зелёный, чего требует жёлтый, кто главнее светофора.",
+        "zh": "用三条规则答对所有信号灯题：绿灯真正允许什么、黄灯要求什么、谁比信号灯更大。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Verde: via libera CONDIZIONATA",
+          "text": {
+            "en": "Green lets you enter the junction — it does not sweep it clean for you. Turning, you must still yield to pedestrians on the crossing and to oncoming traffic when turning left. Every false green statement grants you some absolute right green never gives.",
+            "ru": "Зелёный разрешает въехать на перекрёсток — но не расчищает его для вас. Поворачивая, вы всё равно пропускаете пешеходов на переходе и встречных при левом повороте. Все ложные утверждения о зелёном дарят вам абсолютное право, которого он не даёт.",
+            "zh": "绿灯允许你进入路口——但不会替你清场。转弯时仍须让斑马线上的行人，左转让对向直行。关于绿灯的错误句都在送你绿灯从不给的绝对权利。"
+          }
+        },
+        {
+          "title_it": "Giallo fisso: fermarsi, SE si può",
+          "text": {
+            "en": "Fixed yellow means STOP before the line — unless you are already inside the junction or cannot stop safely; then you clear it quickly. So both extremes are false: 'may always continue' and 'must always stop'. Yellow is the exam’s favourite semaforo question.",
+            "ru": "Жёлтый немигающий значит ОСТАНОВИСЬ у линии — если только вы уже не на перекрёстке или не можете безопасно остановиться: тогда быстро освободите его. Поэтому ложны обе крайности: «всегда можно проехать» и «всегда обязан встать». Жёлтый — любимый светофорный вопрос экзамена.",
+            "zh": "固定黄灯＝在线前停车——除非你已进入路口或无法安全停车，那就尽快通过。所以两个极端都错：“总能通过”和“必须总是停”。黄灯是考试最爱的信号灯题。"
+          }
+        },
+        {
+          "title_it": "Gerarchia: agente > semaforo > segnali",
+          "text": {
+            "en": "When a traffic officer signals, their gestures beat the light AND the signs. A flashing yellow light means: proceed with caution obeying the ordinary rules (it does not mean stop). Special lights (lane lights, bicycle signals) bind exactly the users they depict.",
+            "ru": "Когда регулировщик подаёт сигналы, его жесты главнее светофора И знаков. Мигающий жёлтый значит: ехать осторожно по обычным правилам (это не «стоп»). Специальные секции (полосные, велосипедные) обязывают ровно тех, кто на них изображён.",
+            "zh": "交警指挥时，手势高于信号灯和标志。黄闪＝按普通规则谨慎通行（不是停车）。专用灯（车道灯、自行车灯）只约束其针对的交通参与者。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Giallo fisso",
+          "value": "arrestarsi se possibile",
+          "note": {
+            "en": "clear the junction if already inside",
+            "ru": "если уже внутри — освободить",
+            "zh": "已进入则尽快通过"
+          }
+        },
+        {
+          "fact_it": "Giallo lampeggiante",
+          "value": "prudenza, regole comuni",
+          "note": {
+            "en": "not a stop order",
+            "ru": "это не «стоп»",
+            "zh": "不是停车令"
+          }
+        },
+        {
+          "fact_it": "Agente del traffico",
+          "value": "prevale su tutto",
+          "note": {
+            "en": "gestures beat lights and signs",
+            "ru": "жесты главнее светофора и знаков",
+            "zh": "手势高于灯和标志"
+          }
+        },
+        {
+          "fact_it": "Verde + svolta",
+          "value": "cedere a pedoni e opposti",
+          "note": {
+            "en": "green is not absolute priority",
+            "ru": "зелёный — не абсолютный приоритет",
+            "zh": "绿灯非绝对优先"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "semafori-vigili-semaforo-giallo-5",
+          "why": {
+            "en": "FALSO. 'In ogni caso' turns a conditional permission into a blank cheque. Yellow lets you continue ONLY if you cannot stop safely or are already inside — the exact opposite of 'in every case'.",
+            "ru": "FALSO. «In ogni caso» превращает условное разрешение в карт-бланш. Жёлтый позволяет продолжить ТОЛЬКО если нельзя безопасно остановиться или вы уже внутри — противоположность «в любом случае».",
+            "zh": "错。“无论如何”把有条件的许可变成空白支票。黄灯只有在无法安全停车或已进入路口时才允许通过——与“任何情况”正相反。"
+          }
+        },
+        {
+          "id": "semafori-vigili-semafori-corsia-10",
+          "why": {
+            "en": "VERO. Ordinary vehicle lights bind bicycles too — cyclists are drivers of vehicles. The exam probes whether you think two-wheelers live outside the rules; they don’t.",
+            "ru": "VERO. Обычные транспортные секции обязывают и велосипеды — велосипедист управляет транспортным средством. Экзамен проверяет, не думаете ли вы, что двухколёсные живут вне правил; это не так.",
+            "zh": "对。普通车辆信号灯对自行车同样有效——骑车人也是车辆驾驶人。考试就想看你是否以为两轮车不受规则约束。"
+          }
+        }
+      ]
+    },
+    "ch10": {
+      "objective": {
+        "en": "Apply the everyday driving rules: keep right, use lights correctly by day, secure what you carry.",
+        "ru": "Применять повседневные правила движения: держаться правее, правильно включать свет днём, закреплять груз.",
+        "zh": "掌握日常行车规则：靠右行驶、白天正确用灯、固定好载物。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Tenere la destra, non il centro",
+          "text": {
+            "en": "The default position is as close as practicable to the RIGHT edge — not the centre of the road, not the centre of your half. You move left only to overtake, to turn left or to avoid obstacles, and you come back. 'Guidare al centro' in any wording is false.",
+            "ru": "Позиция по умолчанию — как можно правее, насколько это разумно: не центр дороги и не центр своей половины. Влево смещаются только для обгона, левого поворота или объезда — и возвращаются. «Guidare al centro» в любой формулировке — ложь.",
+            "zh": "默认位置是尽量靠右——不是路中央，也不是本方向的中央。只有超车、左转或避障才向左，然后回来。任何形式的“在中间行驶”都是错的。"
+          }
+        },
+        {
+          "title_it": "Anabbaglianti di giorno: fuori città",
+          "text": {
+            "en": "Outside built-up areas, dipped headlights (or DRLs) are compulsory even in daylight. Inside towns by day they are not required — and full beams in town are forbidden. Day/night and in/out of town: the four combinations answer a whole family of questions.",
+            "ru": "Вне населённых пунктов ближний свет (или ДХО) обязателен даже днём. В городе днём он не требуется, а дальний в городе запрещён. День/ночь × в городе/за городом — четыре комбинации закрывают целое семейство вопросов.",
+            "zh": "城外白天也必须开近光灯（或日行灯）。市区白天不强制，市区远光灯则禁止。白天/夜间×市区/城外，四种组合覆盖一整族题目。"
+          }
+        },
+        {
+          "title_it": "Il carico: fissato, sempre",
+          "text": {
+            "en": "Anything you carry must be secured so it cannot fall, drag, slide or impair visibility — a shopping bag on a motorcycle included. There is no 'short trip' or 'slow speed' exemption. Loose-load questions are free points once you know the rule is absolute.",
+            "ru": "Всё, что вы везёте, должно быть закреплено так, чтобы не упасть, не волочиться, не съехать и не мешать обзору — включая пакет с продуктами на мотоцикле. Исключений «недалеко» или «медленно» нет. Вопросы про груз — бесплатные баллы, если помнить: правило абсолютно.",
+            "zh": "所载任何物品都必须固定好，不得掉落、拖地、滑动或遮挡视线——摩托车上的购物袋也一样。没有“路近”“车慢”的豁免。记住这条绝对规则，载物题就是送分题。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Posizione di marcia",
+          "value": "vicino al margine destro",
+          "note": {
+            "en": "'al centro' is always false",
+            "ru": "«по центру» — всегда ложь",
+            "zh": "“居中”永远是错的"
+          }
+        },
+        {
+          "fact_it": "Anabbaglianti di giorno",
+          "value": "obbligatori fuori città",
+          "note": {
+            "en": "not required inside built-up areas",
+            "ru": "в городе днём не обязательны",
+            "zh": "市区白天不强制"
+          }
+        },
+        {
+          "fact_it": "Sosta su extraurbane principali",
+          "value": "solo aree apposite",
+          "note": {
+            "en": "never on the carriageway",
+            "ru": "никогда на проезжей части",
+            "zh": "不得停在车行道上"
+          }
+        },
+        {
+          "fact_it": "Incrocio intasato",
+          "value": "non impegnarlo",
+          "note": {
+            "en": "enter only if you can clear it",
+            "ru": "въезжать, только если сможете освободить",
+            "zh": "能驶离才可进入"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "norme-di-circolazione-guida-veicolo-5",
+          "why": {
+            "en": "FALSO. 'Sempre al centro' contradicts the keep-right principle head-on. The sentence sounds cautious ('without crossing the lane line') — decoration to make a wrong core sound reasonable. Judge the core, ignore the trimmings.",
+            "ru": "FALSO. «Sempre al centro» лоб в лоб противоречит принципу «держись правее». Фраза звучит осторожно («не пересекая линию полосы») — это украшение, чтобы ложное ядро казалось разумным. Судите ядро, игнорируйте гарнир.",
+            "zh": "错。“始终居中”正面违反靠右原则。句子听着很稳妥（“不压线”）——那是给错误核心穿的外衣。判断核心，忽略修饰。"
+          }
+        },
+        {
+          "id": "norme-di-circolazione-vicinanza-incrocio-4",
+          "why": {
+            "en": "VERO. A true 'solo': you may enter the junction only when you can also leave it. This is the anti-gridlock rule — blocking the box is an offence even with green in your favour.",
+            "ru": "VERO. Правдивое «solo»: въезжать на перекрёсток можно, только если сможете его покинуть. Это правило против заторов — закупорить перекрёсток нарушение даже на зелёный.",
+            "zh": "对。真“只有”：只有能驶离才可进入路口。这是防堵死规则——即使绿灯，堵在路口中央也是违法。"
+          }
+        }
+      ]
+    },
+    "ch14": {
+      "objective": {
+        "en": "Know exactly what to do when a vehicle stops on the road: triangle, high-vis vest, and when each is compulsory.",
+        "ru": "Точно знать, что делать при остановке машины на дороге: треугольник, светоотражающий жилет и когда каждый обязателен.",
+        "zh": "清楚车辆在路上抛锚时该做什么：三角牌、反光背心，以及各自何时强制。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Il triangolo: dove e quando",
+          "text": {
+            "en": "The mobile danger triangle is placed on the occupied lane at least 50 m behind the vehicle (visible from 100 m). It is compulsory outside built-up areas when the vehicle cannot be promptly removed — at night, in poor visibility, or beyond a bend that hides it. Not a night-only device.",
+            "ru": "Переносной треугольник ставится на занятой полосе минимум за 50 м до машины (виден со 100 м). Обязателен вне населённых пунктов, когда машину нельзя быстро убрать — ночью, при плохой видимости, за закрытым поворотом. Это не «только ночной» прибор.",
+            "zh": "移动三角牌放在被占车道上，距车至少50米（100米外可见）。城外无法及时移车时必须放置——夜间、能见度差或弯道遮挡时。不是只在夜里用的东西。"
+          }
+        },
+        {
+          "title_it": "Giubbotto: quando scendi sulla carreggiata",
+          "text": {
+            "en": "The reflective vest (or braces) is worn whenever you leave the vehicle on the carriageway or emergency lane outside built-up areas at night or in poor visibility. Approved colours include yellow AND orange — any homologated high-vis colour. It signals your presence; it does not protect from impact.",
+            "ru": "Светоотражающий жилет (или лямки) надевают, выходя из машины на проезжую часть или обочину-аварийку вне города ночью или при плохой видимости. Допустимые цвета — и жёлтый, И оранжевый: любой омологированный сигнальный. Жилет обозначает вас, а не защищает от удара.",
+            "zh": "在城外夜间或能见度差时，下车到车行道或应急车道就要穿反光背心（或背带）。认证颜色包括黄色和橙色。它的作用是让人看见你，不是抗撞击。"
+          }
+        },
+        {
+          "title_it": "Prima persona, poi lamiera",
+          "text": {
+            "en": "Order of operations: hazard lights on → vest on before stepping out → passengers behind the guardrail → triangle out → then deal with the car. Questions that reverse this order (fix the wheel first, vest only for punctures) are false.",
+            "ru": "Порядок действий: аварийка → жилет до выхода → пассажиры за отбойник → треугольник → и только потом машина. Вопросы, переворачивающие порядок (сначала колесо, жилет «только при проколе»), ложны.",
+            "zh": "操作顺序：双闪→下车前穿背心→乘客到护栏外→放三角牌→最后才处理车。颠倒顺序的说法（先换胎、背心只为爆胎）都是错的。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Triangolo: distanza",
+          "value": "≥ 50 m",
+          "note": {
+            "en": "visible from at least 100 m",
+            "ru": "виден минимум со 100 м",
+            "zh": "至少100米外可见"
+          }
+        },
+        {
+          "fact_it": "Triangolo: posizione",
+          "value": "corsia occupata",
+          "note": {
+            "en": "on the lane taken by vehicle/load",
+            "ru": "на полосе, занятой машиной/грузом",
+            "zh": "放在被占的车道上"
+          }
+        },
+        {
+          "fact_it": "Giubbotto: colori",
+          "value": "giallo o arancione",
+          "note": {
+            "en": "any approved high-vis colour",
+            "ru": "любой омологированный сигнальный цвет",
+            "zh": "任何认证高可视颜色"
+          }
+        },
+        {
+          "fact_it": "Quando: giubbotto",
+          "value": "fuori città, notte/scarsa visibilità",
+          "note": {
+            "en": "whenever you step onto the carriageway",
+            "ru": "когда выходите на проезжую часть",
+            "zh": "下车到车行道时"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "norme-varie-autostrade-pannelli-giubbotto-retroriflettente-1",
+          "why": {
+            "en": "FALSO. 'Solo di colore giallo' invents a colour monopoly — orange (and other approved high-vis colours) is equally legal. When a question narrows a rule to one arbitrary option, check whether the code really names just one.",
+            "ru": "FALSO. «Solo di colore giallo» выдумывает цветовую монополию — оранжевый (и другие омологированные цвета) так же законен. Если вопрос сужает правило до одной произвольной опции, проверьте, правда ли в ПДД названа лишь она.",
+            "zh": "错。“只能是黄色”编造了颜色垄断——橙色等认证颜色同样合法。题目把规则收窄到单一选项时，想想法规是否真的只写了一个。"
+          }
+        },
+        {
+          "id": "norme-varie-autostrade-pannelli-posizione-triangolo-0",
+          "why": {
+            "en": "VERO. The triangle goes on the lane actually blocked — its whole purpose is to warn traffic in that lane. A definition-restating VERO: the statement just says what the device is for.",
+            "ru": "VERO. Треугольник ставят на реально занятую полосу — его смысл предупредить едущих именно по ней. VERO-пересказ определения: утверждение просто объясняет, зачем прибор нужен.",
+            "zh": "对。三角牌放在实际被堵的车道上——它就是要警告该车道的来车。复述定义型的“对”。"
+          }
+        }
+      ]
+    },
+    "ch15": {
+      "objective": {
+        "en": "Choose the right light for every situation — and know the two devices with absolute rules: tunnels and the horn.",
+        "ru": "Выбирать правильный свет для каждой ситуации — и знать два устройства с абсолютными правилами: тоннели и клаксон.",
+        "zh": "为每种情况选对灯光——并记住两条绝对规则：隧道和喇叭。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "La scala delle luci",
+          "text": {
+            "en": "Position lights mark you; dipped beams (anabbaglianti) light the road without blinding; full beams (abbaglianti) are for unlit roads outside town ONLY, and you dip them for oncoming traffic and when following someone. Position lights alone are never enough while driving at night.",
+            "ru": "Габариты вас обозначают; ближний (anabbaglianti) освещает дорогу, не слепя; дальний (abbaglianti) — только вне города на неосвещённых дорогах, и его выключают при встречных и позади идущего. Одних габаритов в движении ночью никогда не достаточно.",
+            "zh": "示宽灯标记你的存在；近光灯照路不晃眼；远光灯只能在城外无照明道路用，会车和跟车时必须切近光。夜间行驶只开示宽灯永远不够。"
+          }
+        },
+        {
+          "title_it": "Galleria: anabbaglianti SEMPRE",
+          "text": {
+            "en": "In a tunnel dipped beams are compulsory always — day, night, lit or unlit tunnel. Any qualifier ('only if poorly lit', 'only at night') is a planted falsehood. This is one of the few genuinely absolute rules; the exam tests it precisely because of that.",
+            "ru": "В тоннеле ближний свет обязателен всегда — днём, ночью, в освещённом и неосвещённом. Любая оговорка («только если плохо освещён», «только ночью») — подложная ложь. Это одно из немногих по-настоящему абсолютных правил; экзамен проверяет его именно поэтому.",
+            "zh": "隧道内近光灯永远强制——白天、夜间、有无照明都一样。任何限定（“只有照明差时”“只在夜间”）都是植入的错误。这是少数真正绝对的规则，考试正因此爱考。"
+          }
+        },
+        {
+          "title_it": "Clacson: in città quasi mai",
+          "text": {
+            "en": "Inside built-up areas the horn is allowed only in cases of actual and immediate danger. Outside town you may use it to warn before overtaking where visibility is limited. Long blasts, greeting friends, hurrying the queue — all violations.",
+            "ru": "В населённых пунктах клаксон разрешён только при реальной непосредственной опасности. Вне города им можно предупредить об обгоне при ограниченной видимости. Длинные гудки, приветствия, подгонять очередь — всё нарушения.",
+            "zh": "市区内只有真实紧迫危险才能按喇叭。城外可在视线受限的超车前示意。长按、打招呼、催队都是违法。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Galleria",
+          "value": "anabbaglianti sempre",
+          "note": {
+            "en": "day and night, lit or not",
+            "ru": "днём и ночью, освещён или нет",
+            "zh": "昼夜、有无照明均适用"
+          }
+        },
+        {
+          "fact_it": "Abbaglianti in città",
+          "value": "vietati",
+          "note": {
+            "en": "brief flashes to warn are allowed",
+            "ru": "короткие мигания-предупреждения можно",
+            "zh": "可短暂闪灯示意"
+          }
+        },
+        {
+          "fact_it": "Luce targa",
+          "value": "con le altre luci",
+          "note": {
+            "en": "lights up whenever position lights are on, not 'only at night'",
+            "ru": "горит вместе с габаритами, не «только ночью»",
+            "zh": "与示宽灯同亮，非“只在夜间”"
+          }
+        },
+        {
+          "fact_it": "Clacson in città",
+          "value": "solo pericolo immediato",
+          "note": {
+            "en": "the one legal use",
+            "ru": "единственное законное применение",
+            "zh": "唯一合法用途"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "luci-dispositivi-acustici-obbligo-anabbaglianti-2",
+          "why": {
+            "en": "FALSO. The tunnel rule has no lighting condition — 'solo se scarsamente illuminate' fabricates one. Compare with the true twin below: same rule, no qualifier.",
+            "ru": "FALSO. У правила о тоннеле нет условия об освещённости — «solo se scarsamente illuminate» его выдумывает. Сравните с правдивым близнецом ниже: то же правило, без оговорки.",
+            "zh": "错。隧道规则没有照明条件——“只有照明差时”是编出来的。对比下面的真句：同一规则，没有限定。"
+          }
+        },
+        {
+          "id": "luci-dispositivi-acustici-obbligo-anabbaglianti-0",
+          "why": {
+            "en": "VERO. 'Anche di giorno' — even by day. This true statement and the false one above differ by a single clause. Reading them side by side is the best vaccination against qualifier traps.",
+            "ru": "VERO. «Anche di giorno» — даже днём. Это правдивое утверждение и ложное выше различаются одной-единственной оговоркой. Прочесть их рядом — лучшая прививка от ловушек-условий.",
+            "zh": "对。“白天也要”。这句真话和上面的假话只差一个从句。并排读它们是对限定词陷阱的最好疫苗。"
+          }
+        }
+      ]
+    },
+    "ch16": {
+      "objective": {
+        "en": "Keep licence categories, ages and the points system straight — the chapter is pure memorisation, so memorise the right table.",
+        "ru": "Разложить по полочкам категории прав, возрасты и систему баллов — глава на чистое запоминание, так запомните правильную таблицу.",
+        "zh": "理清驾照类别、年龄和记分制——本章纯靠记忆，就记对这张表。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "La scala delle patenti: AM 14, A1 16, A2 18, B 18",
+          "text": {
+            "en": "Four ages anchor the chapter: AM (mopeds) at 14, A1 (125cc) at 16, A2 and B at 18. Higher A-categories include the lower ones (A1 also covers AM). But there are NO forced prerequisites: you may take A2 or B directly, without ever holding A1.",
+            "ru": "Четыре возраста держат главу: AM (мопеды) с 14, A1 (125cc) с 16, A2 и B с 18. Старшие A-категории включают младшие (A1 покрывает и AM). Но принудительных «ступеней» НЕТ: A2 или B можно получить сразу, никогда не имея A1.",
+            "zh": "四个年龄支撑全章：AM（轻便摩托）14岁，A1（125cc）16岁，A2和B18岁。高级A类包含低级（A1也涵盖AM）。但没有强制台阶：可以直接考A2或B，无须先有A1。"
+          }
+        },
+        {
+          "title_it": "Punti: parti da 20, arrivi fino a 30",
+          "text": {
+            "en": "You start with 20 points; violations subtract, two clean years add 2, up to a ceiling of 30. Lose them all and you retake the exams. Novice drivers (first 3 years) lose DOUBLE points per violation — the exam loves pairing this with the neopatentati speed limits.",
+            "ru": "Стартуете с 20 баллов; нарушения вычитают, два «чистых» года добавляют 2, потолок 30. Потеряли все — пересдача экзаменов. Новички (первые 3 года) теряют ВДВОЕ больше баллов за нарушение — экзамен любит связывать это с лимитами скорости для neopatentati.",
+            "zh": "起步20分；违章扣分，连续两年无违章加2分，上限30分。扣完须重考。新手（前3年）每次违章双倍扣分——考试爱把这个和新手限速放在一起考。"
+          }
+        },
+        {
+          "title_it": "A bordo: patente, libretto, assicurazione",
+          "text": {
+            "en": "Three documents travel with the car: driving licence, registration certificate (carta di circolazione), insurance certificate. Plates must be legible at all times. Questions inventing extra “only originals”/“only photocopies” conditions or optional documents are false.",
+            "ru": "Три документа едут с машиной: права, свидетельство о регистрации (carta di circolazione), страховой сертификат. Номерные знаки всегда должны быть читаемыми. Вопросы, выдумывающие условия «только оригиналы»/«только копии» или необязательность документов, ложны.",
+            "zh": "随车三件文档：驾照、行驶证、保险凭证。车牌任何时候都要清晰可读。编造“只认原件/复印件”或“可不带”的题都是错的。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Età minime",
+          "value": "AM 14 · A1 16 · B 18",
+          "note": null
+        },
+        {
+          "fact_it": "Punti iniziali",
+          "value": "20 (max 30)",
+          "note": {
+            "en": "+2 per two clean years",
+            "ru": "+2 за каждые два года без нарушений",
+            "zh": "每两年无违章+2"
+          }
+        },
+        {
+          "fact_it": "Neopatentati",
+          "value": "punti doppi tolti",
+          "note": {
+            "en": "first 3 years",
+            "ru": "первые 3 года",
+            "zh": "前三年"
+          }
+        },
+        {
+          "fact_it": "A1",
+          "value": "abilita anche AM",
+          "note": {
+            "en": "higher includes lower",
+            "ru": "старшая включает младшую",
+            "zh": "高类含低类"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "patente-punti-documenti-Patente-categoria-a2-10",
+          "why": {
+            "en": "FALSO. There is no A1-before-A2 staircase — 18-year-olds may take A2 directly. The exam builds fake prerequisites because real licensing systems elsewhere have them; answer from the Italian table, not from your home country’s.",
+            "ru": "FALSO. Лестницы «сначала A1, потом A2» не существует — в 18 лет A2 сдают напрямую. Экзамен строит фальшивые предпосылки, потому что в других странах они есть; отвечайте по итальянской таблице, а не по правилам родной страны.",
+            "zh": "错。不存在“先A1后A2”的台阶——18岁可直接考A2。考试造假前提是因为别国真有这种制度；请按意大利的表作答，别按母国的。"
+          }
+        },
+        {
+          "id": "patente-punti-documenti-targhe-veicoli-1",
+          "why": {
+            "en": "VERO. Plates must always be legible — a true absolute, because identification is the plate’s whole function. Dirty, covered or unreadable plates are an offence regardless of intent.",
+            "ru": "VERO. Номера должны быть всегда читаемы — правдивый абсолют, ведь идентификация и есть функция номера. Грязный, закрытый, нечитаемый номер — нарушение независимо от умысла.",
+            "zh": "对。车牌必须始终清晰——真绝对句，因为识别正是车牌的功能。脏污、遮挡、不可读都算违法，无论是否故意。"
+          }
+        }
+      ]
+    },
+    "ch17": {
+      "objective": {
+        "en": "Know your duties after an accident and the prevention habits the exam rewards: sequence matters more than heroics.",
+        "ru": "Знать обязанности после ДТП и привычки предотвращения, которые ценит экзамен: последовательность важнее героизма.",
+        "zh": "掌握事故后的义务和考试看重的预防习惯：顺序比逞英雄更重要。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Dopo l’incidente: fermarsi è obbligo",
+          "text": {
+            "en": "Anyone involved MUST stop — driving on is the crime of fuga. Then: secure the scene (hazards, triangle, vest), assist the injured, call 112/118, exchange details. If there are only material damages, move the vehicles off the carriageway as soon as possible.",
+            "ru": "Каждый участник ОБЯЗАН остановиться — уехать значит совершить «fuga» (оставление места ДТП). Дальше: обезопасить место (аварийка, треугольник, жилет), помочь раненым, позвонить 112/118, обменяться данными. Если только материальный ущерб — как можно быстрее убрать машины с проезжей части.",
+            "zh": "所有当事人必须停车——驶离即构成逃逸罪。然后：保护现场（双闪、三角牌、背心）、救助伤者、拨打112/118、交换信息。若只有财产损失，应尽快把车移出车行道。"
+          }
+        },
+        {
+          "title_it": "Il triangolo dopo l’incidente",
+          "text": {
+            "en": "The obligation to signal a stopped vehicle with the triangle applies outside built-up areas where the obstacle cannot be seen in time — by day AND by night. Inside town it is generally not required. Beware of statements flipping these two environments.",
+            "ru": "Обязанность обозначить стоящую машину треугольником действует вне населённых пунктов, где препятствие не видно заранее — и днём, И ночью. В городе он в общем случае не требуется. Осторожно с утверждениями, меняющими эти среды местами.",
+            "zh": "在城外、障碍无法及时被看见处，必须用三角牌示警——白天夜间都一样。市区一般不要求。当心把这两种环境对调的句子。"
+          }
+        },
+        {
+          "title_it": "Prevenire: spazio, non riflessi",
+          "text": {
+            "en": "The exam’s model of prevention is boring and correct: keep distance, adapt speed, look far ahead, expect others’ mistakes. Statements crediting quick reflexes, horn use or flashing lights as accident-prevention tools are distractors — space and speed are the real answers.",
+            "ru": "Модель предотвращения на экзамене скучна и верна: держи дистанцию, адаптируй скорость, смотри далеко вперёд, жди чужих ошибок. Утверждения, где аварии предотвращают быстрые рефлексы, клаксон или мигание фарами, — отвлекающие: настоящие ответы — пространство и скорость.",
+            "zh": "考试的预防模型无聊但正确：保持车距、调整车速、看远处、预判他人失误。把快反应、按喇叭、闪灯当预防手段的句子都是干扰项——真正答案是距离和速度。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Fermarsi dopo incidente",
+          "value": "obbligo assoluto",
+          "note": {
+            "en": "leaving = criminal offence",
+            "ru": "уехать = уголовное деяние",
+            "zh": "逃逸＝刑事犯罪"
+          }
+        },
+        {
+          "fact_it": "Solo danni materiali",
+          "value": "liberare la carreggiata",
+          "note": {
+            "en": "move vehicles as soon as possible",
+            "ru": "убрать машины как можно быстрее",
+            "zh": "尽快移车"
+          }
+        },
+        {
+          "fact_it": "Triangolo",
+          "value": "giorno e notte",
+          "note": {
+            "en": "outside town when not visible in time",
+            "ru": "вне города, где машину не видно заранее",
+            "zh": "城外视线不及处"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-6",
+          "why": {
+            "en": "FALSO. 'Solo di notte' shrinks a day-and-night duty. The triangle warns where the wreck cannot be seen in time — daylight does not repeal that need (think of a bend or a crest at noon).",
+            "ru": "FALSO. «Solo di notte» ужимает круглосуточную обязанность. Треугольник предупреждает там, где машину не видно заранее — дневной свет эту необходимость не отменяет (поворот или горб в полдень).",
+            "zh": "错。“只在夜间”缩小了昼夜义务。三角牌用于来车无法及时看见处——白天也一样需要（想想正午的弯道或坡顶）。"
+          }
+        },
+        {
+          "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-8",
+          "why": {
+            "en": "FALSO. Inside built-up areas the triangle is generally NOT required — low speeds and visibility make it unnecessary. The trap extends an extraurban duty into town; always ask WHERE a rule lives.",
+            "ru": "FALSO. В населённых пунктах треугольник в общем случае НЕ требуется — скорости и обзор другие. Ловушка распространяет загородную обязанность на город; всегда спрашивайте, ГДЕ живёт правило.",
+            "zh": "错。市区一般不要求放三角牌——车速低、视线好。陷阱把城外义务扩展到市区；永远要问规则适用于哪里。"
+          }
+        }
+      ]
+    },
+    "ch18": {
+      "objective": {
+        "en": "Answer alcohol and first-aid questions with two anchors: 0.5 g/l (zero for novices) and help is a legal duty.",
+        "ru": "Отвечать на вопросы об алкоголе и первой помощи с двумя якорями: 0,5 г/л (ноль для новичков) и помощь — обязанность по закону.",
+        "zh": "用两个锚点答酒驾和急救题：0.5克/升（新手为零），以及救助是法定义务。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Limiti: 0,5 — e 0 per i neopatentati",
+          "text": {
+            "en": "The general blood-alcohol limit is 0.5 g/l. It is ZERO for drivers under 21, novices in their first 3 years, and professional drivers. Penalties escalate in bands (0.5–0.8, 0.8–1.5, over 1.5). No trick removes alcohol faster: coffee, cold showers and fresh air change nothing — only time does.",
+            "ru": "Общий лимит алкоголя в крови — 0,5 г/л. НОЛЬ — для водителей до 21 года, новичков первые 3 года и профессионалов. Наказания растут ступенями (0,5–0,8, 0,8–1,5, свыше 1,5). Ничто не выводит алкоголь быстрее: кофе, холодный душ и свежий воздух не меняют ничего — только время.",
+            "zh": "一般血液酒精限值0.5克/升。21岁以下、拿照前3年的新手和职业司机为零。处罚分档递增。没有加速解酒的办法：咖啡、冷水澡、新鲜空气都没用——只有时间。"
+          }
+        },
+        {
+          "title_it": "Soccorrere è legge, non cortesia",
+          "text": {
+            "en": "Assisting the injured is a LEGAL obligation for anyone involved or passing by — omissione di soccorso is a crime. It does not depend on how serious the crash looks, on your medical skills, or on whether someone else already stopped. Call 112/118, don’t move the injured unless in danger.",
+            "ru": "Помощь пострадавшим — ЮРИДИЧЕСКАЯ обязанность любого участника и проезжающего: omissione di soccorso — преступление. Она не зависит от тяжести аварии на вид, ваших медицинских навыков и того, остановился ли кто-то ещё. Звоните 112/118, не перемещайте раненого без прямой опасности.",
+            "zh": "救助伤者是所有当事人和路过者的法定义务——见死不救是犯罪。义务不取决于事故看起来严不严重、你懂不懂医、有没有别人已停车。拨打112/118，无危险不要移动伤员。"
+          }
+        },
+        {
+          "title_it": "Primo soccorso: cosa NON fare",
+          "text": {
+            "en": "The exam tests restraint: do not give drinks to the injured, do not remove a motorcyclist’s helmet unless they aren’t breathing, do not move casualties with suspected spinal injuries, keep them warm. Most first-aid answers are about NOT doing the instinctive thing.",
+            "ru": "Экзамен проверяет сдержанность: не поить пострадавшего, не снимать шлем с мотоциклиста (если дышит), не перемещать при подозрении на травму позвоночника, укрыть от холода. Большинство ответов о первой помощи — про то, чтобы НЕ делать инстинктивного.",
+            "zh": "考试考的是克制：不给伤者喝水，摩托车手呼吸正常就别摘头盔，疑似脊柱伤不移动，注意保暖。急救题多半考“不做”本能反应。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Tasso alcolemico",
+          "value": "0,5 g/l",
+          "note": {
+            "en": "general limit",
+            "ru": "общий лимит",
+            "zh": "一般限值"
+          }
+        },
+        {
+          "fact_it": "Neopatentati / under 21 / professionali",
+          "value": "0 g/l",
+          "note": null
+        },
+        {
+          "fact_it": "Omissione di soccorso",
+          "value": "reato",
+          "note": {
+            "en": "a crime, not a moral option",
+            "ru": "преступление, а не вопрос морали",
+            "zh": "是犯罪，不是道德选项"
+          }
+        },
+        {
+          "fact_it": "Caffè, doccia, aria",
+          "value": "non riducono il tasso",
+          "note": {
+            "en": "only time eliminates alcohol",
+            "ru": "алкоголь выводит только время",
+            "zh": "只有时间能解酒"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "alcool-droga-primo-soccorso-soccorso-ferito-3",
+          "why": {
+            "en": "FALSO. Help is an obligation IMPOSED BY LAW — the statement demotes it to a moral duty. Whenever the exam softens a legal duty into 'good manners', it is false.",
+            "ru": "FALSO. Помощь — обязанность, УСТАНОВЛЕННАЯ ЗАКОНОМ; утверждение понижает её до морального долга. Когда экзамен смягчает юридическую обязанность до «хорошего тона», это ложь.",
+            "zh": "错。救助是法律强加的义务——句子把它降级为道德义务。凡是把法定义务软化成“美德”的说法都是错的。"
+          }
+        },
+        {
+          "id": "alcool-droga-primo-soccorso-soccorso-ferito-4",
+          "why": {
+            "en": "FALSO. The duty does not depend on your assessment of severity — you are not qualified to triage from the driver’s seat. 'Solo se grave' inserts a judgment call the law never delegates to you.",
+            "ru": "FALSO. Обязанность не зависит от вашей оценки тяжести — вы не можете сортировать пострадавших из-за руля. «Solo se grave» вставляет решение, которое закон вам не делегирует.",
+            "zh": "错。义务不取决于你对严重程度的判断——你没有资格坐在驾驶座上分诊。“只有严重时”塞进了法律从未交给你的裁量权。"
+          }
+        }
+      ]
+    },
+    "ch19": {
+      "objective": {
+        "en": "Separate the three responsibilities — civil, criminal, administrative — and know exactly what compulsory insurance covers.",
+        "ru": "Разделять три ответственности — гражданскую, уголовную, административную — и точно знать, что покрывает обязательная страховка.",
+        "zh": "区分民事、刑事、行政三种责任，并清楚强制保险赔什么。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Tre responsabilità, tre domande",
+          "text": {
+            "en": "CIVILE: who pays for the damage (insurable). PENALE: personal, for crimes like injury or manslaughter — never insurable, never transferable. AMMINISTRATIVA: fines and points. One crash can trigger all three at once; statements making them mutually exclusive are false.",
+            "ru": "CIVILE: кто платит за ущерб (страхуется). PENALE: личная, за преступления вроде увечья или непредумышленного убийства — не страхуется и не передаётся. AMMINISTRATIVA: штрафы и баллы. Одно ДТП может включить все три сразу; утверждения об их взаимоисключении ложны.",
+            "zh": "民事：谁赔损失（可保险）。刑事：个人承担，如致伤致死罪——不可保险不可转移。行政：罚款和扣分。一起事故可同时触发三种；说三者互斥的句子是错的。"
+          }
+        },
+        {
+          "title_it": "RCA: copre i danni AI TERZI",
+          "text": {
+            "en": "Compulsory insurance (RCA) pays for damage the vehicle causes to THIRD parties — including your own passengers. It does not pay the at-fault driver for their own injuries or their own car. 'Covers only taxis', 'covers the driver at fault' — both directions of narrowing/widening are false.",
+            "ru": "Обязательная страховка (RCA) оплачивает ущерб, причинённый машиной ТРЕТЬИМ лицам — включая ваших пассажиров. Она не платит виновному водителю за его травмы и его машину. «Покрывает только такси», «покрывает виновного» — ложь в обе стороны, сужения и расширения.",
+            "zh": "强制险（RCA）赔车辆给第三方造成的损失——包括你的乘客。不赔有责司机自己的伤和车。“只保出租车”“保有责司机”——收窄和扩大两个方向都是错的。"
+          }
+        },
+        {
+          "title_it": "Documenti e conseguenze",
+          "text": {
+            "en": "The insurance certificate must be on board; driving uninsured means a heavy fine and vehicle seizure (sequestro). Criminal responsibility follows convictions, not automatically every crash — preventive arrest is NOT a standard consequence of causing an accident.",
+            "ru": "Страховой сертификат должен быть в машине; езда без страховки — крупный штраф и арест машины (sequestro). Уголовная ответственность наступает по приговору, а не автоматически при каждом ДТП — превентивный арест НЕ стандартное последствие аварии.",
+            "zh": "保险凭证须随车携带；无保险上路会被重罚并扣车。刑责需经判决，不是每起事故自动产生——预防性逮捕不是肇事的标准后果。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Responsabilità penale",
+          "value": "personale, non assicurabile",
+          "note": null
+        },
+        {
+          "fact_it": "RCA copre",
+          "value": "danni a terzi",
+          "note": {
+            "en": "incl. your passengers; not the at-fault driver",
+            "ru": "вкл. ваших пассажиров; не виновного водителя",
+            "zh": "含你的乘客；不含有责司机"
+          }
+        },
+        {
+          "fact_it": "Certificato assicurazione",
+          "value": "sempre a bordo",
+          "note": null
+        },
+        {
+          "fact_it": "Senza assicurazione",
+          "value": "sanzione + sequestro",
+          "note": {
+            "en": "fine plus vehicle seizure",
+            "ru": "штраф плюс арест машины",
+            "zh": "罚款并扣车"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "responsabilita-civile-penale-e-assicurazione-responsabile-sinistro-stradale-6",
+          "why": {
+            "en": "FALSO. 'Sempre soggetto all’arresto preventivo' invents an automatic draconian consequence. Real liability is graduated — the exam plants exaggerated punishments to test whether you know the system is proportional.",
+            "ru": "FALSO. «Sempre soggetto all’arresto preventivo» выдумывает автоматическое драконовское последствие. Реальная ответственность ступенчата — экзамен подкладывает преувеличенные кары, проверяя, знаете ли вы, что система пропорциональна.",
+            "zh": "错。“总是预防性逮捕”编造了自动的严酷后果。实际责任是分级的——考试放大惩罚，考你是否知道制度讲比例。"
+          }
+        },
+        {
+          "id": "responsabilita-civile-penale-e-assicurazione-imprese-assicuratrici-2",
+          "why": {
+            "en": "VERO. The insurance certificate stays on board — a true absolute about documents, like legible plates. Document-carrying duties are unconditional; that regularity makes them reliable VERO answers.",
+            "ru": "VERO. Страховой сертификат — всегда в машине: правдивый абсолют о документах, как читаемые номера. Обязанности возить документы безусловны; эта регулярность делает их надёжными VERO.",
+            "zh": "对。保险凭证必须随车——关于文件的真绝对句，和车牌清晰一样。携带文件义务无条件，因此是可靠的“对”。"
+          }
+        }
+      ]
+    },
+    "ch20": {
+      "objective": {
+        "en": "Drive cheap and clean: the habits that cut fuel, noise and emissions — and the false economies the exam plants.",
+        "ru": "Ездить экономно и чисто: привычки, снижающие расход, шум и выбросы, — и ложная экономия, которую подкладывает экзамен.",
+        "zh": "省油又环保地开车：降低油耗、噪音和排放的习惯——以及考试埋下的伪节能。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Marcia alta, regime basso",
+          "text": {
+            "en": "Fuel and pollution drop when you drive smoothly in the HIGHEST suitable gear at LOW revs, anticipate so you brake less, and shut the engine in long stops. Low gears scream the engine and burn more — “always drive in low gears to pollute less” is exactly backwards.",
+            "ru": "Расход и выбросы падают, когда едешь плавно на ВЫСШЕЙ подходящей передаче с НИЗКИМИ оборотами, предвидишь и меньше тормозишь, глушишь мотор в долгих остановках. Низкие передачи крутят мотор и жгут больше — «всегда ездить на низких передачах, чтобы меньше загрязнять» — ровно наоборот.",
+            "zh": "平顺驾驶、用尽量高的挡位低转速、提前预判少刹车、长时间停车熄火，油耗和污染就会下降。低挡高转更费油——“常用低挡更环保”恰好说反了。"
+          }
+        },
+        {
+          "title_it": "Il rumore non è solo il motore",
+          "text": {
+            "en": "Vehicle noise comes from the engine AND tyres, exhaust, horn, badly secured loads, worn silencers. That is why “noise is caused only by the engine” fails, and why maintenance (silencer, tyres) is a noise measure, not just a mechanical one.",
+            "ru": "Шум машины — это мотор И шины, выхлоп, клаксон, плохо закреплённый груз, изношенный глушитель. Поэтому «шум только от мотора» проваливается, а обслуживание (глушитель, шины) — мера против шума, не только механика.",
+            "zh": "车辆噪音来自发动机及轮胎、排气、喇叭、松动的载物、坏掉的消音器。所以“噪音只来自发动机”不成立；保养（消音器、轮胎）也是降噪手段。"
+          }
+        },
+        {
+          "title_it": "Manutenzione = ambiente",
+          "text": {
+            "en": "A well-tuned engine, clean air filter and correct tyre pressure cut consumption and emissions; a worn catalytic converter or dirty injectors raise them. Roof racks and open windows at speed add drag. Environment questions are really maintenance questions in disguise.",
+            "ru": "Отрегулированный мотор, чистый воздушный фильтр и правильное давление в шинах снижают расход и выбросы; убитый катализатор и грязные форсунки — повышают. Багажник на крыше и открытые окна на скорости добавляют сопротивление. Вопросы об экологии — переодетые вопросы об обслуживании.",
+            "zh": "发动机调校好、空滤干净、胎压正确能降油耗和排放；催化器老化、喷油嘴脏则相反。车顶架和高速开窗增加风阻。环保题其实是伪装的保养题。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Stile di guida",
+          "value": "fluido, marce alte",
+          "note": {
+            "en": "low revs, anticipate, engine off in long stops",
+            "ru": "низкие обороты, предвидение, глушить на долгих стоянках",
+            "zh": "低转速、预判、久停熄火"
+          }
+        },
+        {
+          "fact_it": "Pressione pneumatici",
+          "value": "da controllare",
+          "note": {
+            "en": "low pressure = more fuel + wear",
+            "ru": "низкое давление = расход + износ",
+            "zh": "胎压低＝费油又磨胎"
+          }
+        },
+        {
+          "fact_it": "Fonti di rumore",
+          "value": "motore, pneumatici, scarico",
+          "note": {
+            "en": "never 'only the engine'",
+            "ru": "никогда не «только мотор»",
+            "zh": "绝非“只有发动机”"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "consumi-ambiente-inquinamento-rumore-veicoli-motore-2",
+          "why": {
+            "en": "FALSO. 'Solo dal motore' — a one-cause claim about a multi-cause phenomenon. Multi-cause topics (noise, consumption, accidents) are trap farms: any 'only X causes it' is nearly always false.",
+            "ru": "FALSO. «Solo dal motore» — моно-причинное утверждение о многопричинном явлении. Многопричинные темы (шум, расход, аварии) — фермы ловушек: любое «причина только X» почти всегда ложь.",
+            "zh": "错。“只来自发动机”——对多因现象的单因断言。多因话题（噪音、油耗、事故）是陷阱农场：“只有X导致”几乎总是错的。"
+          }
+        },
+        {
+          "id": "consumi-ambiente-inquinamento-accorgimenti-ridurre-inquinamento-6",
+          "why": {
+            "en": "FALSO. Low gears mean high revs mean MORE fuel and MORE emissions. The trap sounds virtuous ('to pollute less') while prescribing the opposite of eco-driving. Check the physics, not the good intentions.",
+            "ru": "FALSO. Низкие передачи — высокие обороты — БОЛЬШЕ топлива и выбросов. Ловушка звучит добродетельно («чтобы меньше загрязнять»), предписывая противоположность эко-вождению. Проверяйте физику, а не благие намерения.",
+            "zh": "错。低挡＝高转速＝更多油耗和排放。陷阱听着很环保，开的却是反环保药方。要核对物理，不要被善意打动。"
+          }
+        }
+      ]
+    },
+    "ch21": {
+      "objective": {
+        "en": "Connect the machine to the road: tyres, ABS and grip — what each part does and the numbers attached to it.",
+        "ru": "Связать машину с дорогой: шины, ABS и сцепление — что делает каждый узел и какие цифры к нему привязаны.",
+        "zh": "把机器和道路连起来：轮胎、ABS和附着力——每个部件的作用及相关数字。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Pneumatici: 1,6 mm e oltre",
+          "text": {
+            "en": "Car tyre tread must be at least 1.6 mm deep. Pressure is checked cold; too low causes overheating, higher consumption and worse handling. Studded tyres go on ALL wheels (not one axle); snow chains go on the DRIVE wheels. Worn or uneven tyres change braking and grip — they are a safety part, not a consumable detail.",
+            "ru": "Протектор легковой шины — минимум 1,6 мм. Давление проверяют на холодных шинах; низкое ведёт к перегреву, расходу и худшей управляемости. Шипованные ставят на ВСЕ колёса (не на одну ось); цепи — на ВЕДУЩИЕ. Изношенные и неравномерные шины меняют торможение и сцепление — это узел безопасности, а не расходник.",
+            "zh": "轿车胎纹至少1.6毫米。冷胎测压；胎压低导致过热、费油、操控差。钉胎要装全部四轮（不是一根轴）；防滑链装驱动轮。磨损轮胎改变制动和附着——它是安全件。"
+          }
+        },
+        {
+          "title_it": "ABS: ruote che non si bloccano",
+          "text": {
+            "en": "ABS prevents wheel lock under hard braking, so the car stays STEERABLE — you can brake fully and still turn round the obstacle. It works with worn tyres too and it does not necessarily shorten stopping distance; its gift is control, not magic brakes.",
+            "ru": "ABS не даёт колёсам заблокироваться при резком торможении, поэтому машина остаётся УПРАВЛЯЕМОЙ — можно тормозить в пол и объезжать препятствие. Она работает и с изношенными шинами и не обязательно сокращает тормозной путь; её дар — контроль, а не волшебные тормоза.",
+            "zh": "ABS防止急刹时车轮抱死，使车辆保持可转向——全力刹车同时还能绕开障碍。轮胎磨损时也工作，且不一定缩短刹车距离；它给的是控制，不是魔法刹车。"
+          }
+        },
+        {
+          "title_it": "Aderenza bassa = velocità bassa, ovunque",
+          "text": {
+            "en": "On wet, icy or gravelly surfaces grip falls, so you slow down EVERYWHERE — on straights too, because braking and evading also need grip. “Reduce speed only in bends” is the classic narrowing trap of this chapter.",
+            "ru": "На мокром, льду и гравии сцепление падает — скорость снижают ВЕЗДЕ, и на прямых тоже: торможение и объезд тоже требуют сцепления. «Снижать скорость только в поворотах» — классическая сужающая ловушка главы.",
+            "zh": "湿滑、结冰、碎石路面附着力下降，所以处处都要减速——直路也一样，因为刹车和避让同样吃附着力。“只在弯道减速”是本章经典收窄陷阱。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Battistrada (autovetture)",
+          "value": "≥ 1,6 mm",
+          "note": null
+        },
+        {
+          "fact_it": "ABS",
+          "value": "niente bloccaggio, sterzabile",
+          "note": {
+            "en": "works with worn tyres too",
+            "ru": "работает и с изношенными шинами",
+            "zh": "胎磨损也工作"
+          }
+        },
+        {
+          "fact_it": "Catene da neve",
+          "value": "ruote motrici",
+          "note": {
+            "en": "studded tyres: all four wheels",
+            "ru": "шипованные — на все колёса",
+            "zh": "钉胎须四轮"
+          }
+        },
+        {
+          "fact_it": "Pressione",
+          "value": "a freddo",
+          "note": {
+            "en": "low pressure overheats the tyre",
+            "ru": "низкое давление перегревает шину",
+            "zh": "低压致过热"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "elementi-veicolo-manutenzione-comportamenti-coefficiente-aderenza-4",
+          "why": {
+            "en": "FALSO. Low grip endangers braking and any manoeuvre, not just cornering — 'solo in curva' clips a general duty down to one scenario. Spot the pattern: general rule, artificially local application.",
+            "ru": "FALSO. Низкое сцепление опасно при торможении и любом манёвре, не только в повороте — «solo in curva» обрезает общую обязанность до одного сценария. Узнавайте шаблон: общее правило, искусственно локальное применение.",
+            "zh": "错。附着力低危及刹车和一切操作，不只是过弯——“只在弯道”把普遍义务剪成单一场景。认清套路：普遍规则被人为局部化。"
+          }
+        },
+        {
+          "id": "elementi-veicolo-manutenzione-comportamenti-funzioni-1",
+          "why": {
+            "en": "VERO. Steering through an emergency stop is precisely what ABS is FOR — a true 'anche' that restates the device’s purpose. Purpose-restating claims about safety systems are dependable VERO answers.",
+            "ru": "VERO. Рулить во время экстренного торможения — именно то, ДЛЯ чего нужна ABS: правдивое «anche», пересказывающее назначение системы. Утверждения-пересказы назначения систем безопасности — надёжные VERO.",
+            "zh": "对。紧急制动中还能转向正是ABS的用途——复述装置目的的真“也”。复述安全系统用途的句子是可靠的“对”。"
+          }
+        }
+      ]
+    },
+    "ch22": {
+      "objective": {
+        "en": "Belts, helmets and child seats: rules with almost no exceptions — learn the few real ones and reject the invented ones.",
+        "ru": "Ремни, шлемы и детские кресла: правила почти без исключений — выучите немногие настоящие и отвергайте выдуманные.",
+        "zh": "安全带、头盔和儿童座椅：几乎没有例外的规则——记住少数真例外，拒绝编造的。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Cinture: tutti, sempre, anche dietro",
+          "text": {
+            "en": "Seat belts are compulsory for driver AND all passengers, front and rear, in town and out, at any speed. Airbags COMPLEMENT belts, never replace them. Speed thresholds, short-trip exemptions, “rear seats optional” — all invented.",
+            "ru": "Ремни обязательны для водителя И всех пассажиров, спереди и сзади, в городе и вне, на любой скорости. Подушки ДОПОЛНЯЮТ ремни и никогда их не заменяют. Пороги скорости, исключения «недалеко ехать», «сзади необязательно» — всё выдумки.",
+            "zh": "安全带对司机和所有乘客、前排后排、市区城外、任何速度都强制。气囊是安全带的补充，绝不能替代。速度门槛、短途豁免、“后排随意”都是编造。"
+          }
+        },
+        {
+          "title_it": "Casco: chiunque, a qualunque età",
+          "text": {
+            "en": "Helmets (homologated) are compulsory for riders AND passengers of mopeds and motorcycles, minors and adults alike. Riding helmetless means fines and vehicle detention. Age carve-outs (“only minors”) are the chapter’s favourite lie.",
+            "ru": "Шлем (омологированный) обязателен для водителя И пассажира мопедов и мотоциклов, несовершеннолетних и взрослых одинаково. Езда без шлема — штраф и задержание транспорта. Возрастные вырезки («только несовершеннолетним») — любимая ложь главы.",
+            "zh": "认证头盔对轻便摩托和摩托的骑手及乘客都强制，未成年人成年人一样。不戴罚款并扣车。年龄豁免（“只有未成年人”）是本章最爱的谎言。"
+          }
+        },
+        {
+          "title_it": "Bambini: sistemi omologati sotto 1,50 m",
+          "text": {
+            "en": "Children under 1.50 m travel in approved (omologato) child restraints suited to their weight — homemade or “expert-approved” contraptions do not exist in law. Rear-facing seats on the front seat require the airbag OFF. The keyword to scan for is omologato.",
+            "ru": "Дети ниже 1,50 м ездят в омологированных удерживающих системах по весу — самодельных или «одобренных экспертом» конструкций в законе не существует. Кресло против хода спереди — только с ОТКЛЮЧЁННОЙ подушкой. Ключевое слово для сканирования — omologato.",
+            "zh": "身高不足1.50米的儿童须使用与体重匹配的认证约束系统——法律里不存在自制或“专家认可”的装置。前排反向座椅必须关闭气囊。扫描关键词：omologato（认证）。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Cinture",
+          "value": "tutti i posti, sempre",
+          "note": {
+            "en": "any speed, town included",
+            "ru": "любая скорость, город включительно",
+            "zh": "任何速度，含市区"
+          }
+        },
+        {
+          "fact_it": "Casco",
+          "value": "conducente e passeggero",
+          "note": {
+            "en": "any age",
+            "ru": "любой возраст",
+            "zh": "任何年龄"
+          }
+        },
+        {
+          "fact_it": "Bambini < 1,50 m",
+          "value": "sistema omologato",
+          "note": {
+            "en": "by weight class",
+            "ru": "по весовой группе",
+            "zh": "按体重分组"
+          }
+        },
+        {
+          "fact_it": "Seggiolino contromarcia davanti",
+          "value": "airbag OFF",
+          "note": null
+        }
+      ],
+      "traps": [
+        {
+          "id": "cinture-casco-sicurezza-cintura-sicurezza-3",
+          "why": {
+            "en": "FALSO. There is no speed threshold — belts work (and are required) from 0 km/h. Most belt injuries happen at city speeds; the law knows it, the trap hopes you don’t.",
+            "ru": "FALSO. Порога скорости нет — ремни работают (и обязательны) с 0 км/ч. Большинство травм «без ремня» случается на городских скоростях; закон это знает, ловушка надеется, что вы — нет.",
+            "zh": "错。不存在速度门槛——安全带从0公里/小时就有效（且强制）。多数不系带伤害发生在市区速度；法律知道，陷阱赌你不知道。"
+          }
+        },
+        {
+          "id": "cinture-casco-sicurezza-casco-obbligatorio-3",
+          "why": {
+            "en": "VERO. 'Anche se maggiorenne' — the helmet duty ignores age entirely. A true 'anche' that widens the rule to exactly its legal size, unlike the false carve-outs that shrink it.",
+            "ru": "VERO. «Anche se maggiorenne» — шлемная обязанность полностью игнорирует возраст. Правдивое «anche», расширяющее правило ровно до его законного размера, в отличие от ложных вырезок, которые его ужимают.",
+            "zh": "对。“即使成年”——头盔义务完全不看年龄。这个真“也”把规则扩到它法定的大小，而假豁免则把它缩小。"
+          }
+        }
+      ]
+    },
+    "ch23": {
+      "objective": {
+        "en": "Carry and tow legally: how far a load may stick out, which panel marks it, and what a car may pull.",
+        "ru": "Возить и буксировать законно: насколько груз может выступать, какая табличка его обозначает и что машина может тянуть.",
+        "zh": "合法载物与拖挂：载物可伸出多远、用什么标牌标示、汽车能拖什么。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Sporgenza: solo dietro, max 3/10",
+          "text": {
+            "en": "A load may overhang only at the REAR, up to 3/10 of the vehicle’s length, and never sideways beyond the limits. Any rear overhang — even a small one — must carry the red-and-white striped reflective panel. Forward overhang and dragging on the ground are flatly forbidden.",
+            "ru": "Груз может выступать только СЗАДИ, максимум на 3/10 длины машины, и никогда вбок за габариты. Любой задний выступ — даже маленький — обозначается красно-белой полосатой светоотражающей табличкой. Выступ вперёд и волочение по земле запрещены безоговорочно.",
+            "zh": "载物只能向后伸出，最多为车长的3/10，侧向不得超限。任何后伸——哪怕很小——都必须挂红白条纹反光标牌。向前伸出和拖地绝对禁止。"
+          }
+        },
+        {
+          "title_it": "Il pannello a strisce",
+          "text": {
+            "en": "The overhang panel is retro-reflective, red/white diagonally striped, fixed at the END of the load. One panel minimum; the rule applies day and night. “Only at night”, “only over one metre” — the exam manufactures thresholds where the law has none.",
+            "ru": "Табличка выступа — светоотражающая, в красно-белую диагональную полоску, крепится на КОНЦЕ груза. Минимум одна; правило действует днём и ночью. «Только ночью», «только больше метра» — экзамен фабрикует пороги там, где их в законе нет.",
+            "zh": "突出物标牌为红白斜纹反光牌，固定在载物末端。至少一块；昼夜适用。“只在夜间”“只超过一米才要”——考试在法律没有门槛的地方制造门槛。"
+          }
+        },
+        {
+          "title_it": "Traino: rimorchi sì, motocicli mai",
+          "text": {
+            "en": "A car may tow ONE trailer within the weights on its registration. Motorcycles may NEVER be towed (by anything) and may not tow trailers that impair balance. A broken-down car is towed with rigid or flexible link, hazard lights on, following the special rules — not casually by anyone.",
+            "ru": "Машина может тянуть ОДИН прицеп в пределах масс из свидетельства. Мотоциклы буксировать НЕЛЬЗЯ никогда (ничем). Сломанную машину буксируют жёсткой или гибкой сцепкой с аварийкой по специальным правилам — не «как получится».",
+            "zh": "汽车只能拖一个在行驶证载明重量内的挂车。摩托车永远不得被拖（无论用什么拖）。故障车须按专门规则用硬连接或软连接拖带并开双闪——不能随便拖。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Sporgenza posteriore",
+          "value": "max 3/10 lunghezza",
+          "note": null
+        },
+        {
+          "fact_it": "Pannello sporgenza",
+          "value": "sempre, anche di poco",
+          "note": {
+            "en": "red/white stripes, retro-reflective",
+            "ru": "красно-белые полосы, светоотражающий",
+            "zh": "红白条纹反光"
+          }
+        },
+        {
+          "fact_it": "Sporgenza anteriore",
+          "value": "vietata",
+          "note": null
+        },
+        {
+          "fact_it": "Traino di motocicli",
+          "value": "vietato",
+          "note": {
+            "en": "motorcycles are never towed",
+            "ru": "мотоциклы не буксируют никогда",
+            "zh": "摩托车不得被拖"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "norme-varie-autostrade-pannelli-sporgenza-longitudinale-1",
+          "why": {
+            "en": "VERO. 'In ogni caso... anche se di poco' — the panel duty has NO minimum threshold, so this sweeping wording is accurate. When the law itself is absolute, absolute wording is the truth, not the trap.",
+            "ru": "VERO. «In ogni caso... anche se di poco» — у обязанности вешать табличку НЕТ минимального порога, поэтому размашистая формулировка точна. Когда сам закон абсолютен, абсолютная формулировка — правда, а не ловушка.",
+            "zh": "对。“无论如何……哪怕很少”——挂牌义务没有最低门槛，所以这种全称措辞是准确的。法律本身绝对时，绝对措辞就是真相而非陷阱。"
+          }
+        },
+        {
+          "id": "norme-varie-autostrade-pannelli-trasporto-traino-motocicli-5",
+          "why": {
+            "en": "FALSO. Motorcycles may not be towed AT ALL — 'ma solo da autovetture' dresses a total ban as a partial permission. Half-permissions grafted onto absolute bans are among the sneakiest falsehoods in the bank.",
+            "ru": "FALSO. Мотоциклы нельзя буксировать ВООБЩЕ — «ma solo da autovetture» наряжает полный запрет в частичное разрешение. Полу-разрешения, привитые к абсолютным запретам, — из самых коварных ловушек банка.",
+            "zh": "错。摩托车根本不得被拖——“但只能由轿车拖”把全面禁令打扮成部分许可。往绝对禁令上嫁接半许可是题库里最阴的假话。"
+          }
+        }
+      ]
+    },
+    "ch24": {
+      "objective": {
+        "en": "Decode indication signs by their background colour and know what they inform about — and what they do NOT permit.",
+        "ru": "Расшифровывать указательные знаки по цвету фона и знать, о чём они информируют — и чего НЕ разрешают.",
+        "zh": "按底色解读指路标志，知道它们告知什么——以及不允许什么。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Il colore dice la strada",
+          "text": {
+            "en": "Backgrounds are a code: GREEN = motorway, BLUE = out-of-town roads, WHITE = within town, BROWN = tourist/cultural, YELLOW = temporary (works). Read the colour before the text: half the questions just check whether green really means autostrada.",
+            "ru": "Фон — это код: ЗЕЛЁНЫЙ = автомагистраль, СИНИЙ = загородные дороги, БЕЛЫЙ = в городе, КОРИЧНЕВЫЙ = туристическое, ЖЁЛТЫЙ = временное (работы). Читайте цвет раньше текста: половина вопросов просто проверяет, что зелёный значит autostrada.",
+            "zh": "底色是密码：绿色＝高速公路，蓝色＝城外道路，白色＝市区，棕色＝旅游文化，黄色＝临时（施工）。先读颜色再读文字：一半题目就考绿色是否等于高速。"
+          }
+        },
+        {
+          "title_it": "Indicano, non ordinano (quasi sempre)",
+          "text": {
+            "en": "Indication signs INFORM: services, directions, place names, facilities. A phone symbol says a phone exists — it does not regulate how you phone; a hospital sign asks for quiet driving but doesn’t create parking rights. When a question turns information into permission or duty, it lies.",
+            "ru": "Указательные знаки ИНФОРМИРУЮТ: сервисы, направления, названия, объекты. Символ телефона говорит, что телефон есть — он не регулирует, как звонить; знак больницы просит ехать тихо, но не создаёт прав на парковку. Когда вопрос превращает информацию в разрешение или обязанность — он лжёт.",
+            "zh": "指路标志提供信息：服务、方向、地名、设施。电话符号只说明有电话——不规定怎么打；医院标志要求安静驾驶但不产生停车权。题目把信息变成许可或义务时，就是在撒谎。"
+          }
+        },
+        {
+          "title_it": "Le eccezioni che regolano",
+          "text": {
+            "en": "A few indication signs DO regulate: senso unico (one-way), inizio/fine centro abitato (switches all urban limits on/off), transitabilità (chains or winter tyres REQUIRED), ZTL start. Learn this short list — everything else on white/blue panels is pure information.",
+            "ru": "Несколько указательных знаков ДЕЙСТВИТЕЛЬНО регулируют: senso unico (одностороннее), inizio/fine centro abitato (включает/выключает все городские лимиты), transitabilità (цепи или зимняя резина ОБЯЗАТЕЛЬНЫ), начало ZTL. Выучите этот короткий список — всё остальное на белых/синих щитах чистая информация.",
+            "zh": "少数指路标志确实有规制力：单行道、市区起止（开关所有市区限制）、通行条件（必须挂链或冬胎）、限行区起点。记住这个短清单——其余白/蓝牌都是纯信息。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Verde",
+          "value": "autostrada",
+          "note": null
+        },
+        {
+          "fact_it": "Blu",
+          "value": "extraurbane",
+          "note": null
+        },
+        {
+          "fact_it": "Bianco",
+          "value": "centro abitato",
+          "note": {
+            "en": "brown = tourist sites",
+            "ru": "коричневый = туристические объекты",
+            "zh": "棕色＝旅游景点"
+          }
+        },
+        {
+          "fact_it": "Inizio centro abitato",
+          "value": "attiva i limiti urbani",
+          "note": {
+            "en": "50 km/h etc. start at the sign",
+            "ru": "50 км/ч и пр. начинаются от знака",
+            "zh": "50限速等自标志处生效"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "segnali-indicazione-telefono-pubblico-9",
+          "why": {
+            "en": "FALSO. The sign announces a public telephone; it does not legislate hands-free calling. Classic category error: an information sign recast as a rule. Ask first: does this sign INFORM or COMMAND?",
+            "ru": "FALSO. Знак сообщает о таксофоне; он не регулирует громкую связь. Классическая ошибка категории: информационный знак выдан за правило. Сначала спросите: этот знак ИНФОРМИРУЕТ или ПРИКАЗЫВАЕТ?",
+            "zh": "错。标志告知有公用电话，不立法规定免提通话。经典类别错误：把信息标志说成规则。先问：这标志是告知还是命令？"
+          }
+        },
+        {
+          "id": "segnali-indicazione-transitabilita-1",
+          "why": {
+            "en": "VERO. Transitabilità belongs to the short regulating list: beyond it you NEED chains or winter tyres. A true 'solo' — the sign really does restrict transit to equipped vehicles.",
+            "ru": "VERO. Transitabilità входит в короткий регулирующий список: дальше НУЖНЫ цепи или зимняя резина. Правдивое «solo» — знак действительно ограничивает проезд оснащёнными машинами.",
+            "zh": "对。通行条件标志属于那份规制短清单：过了它就必须有链条或冬胎。真“只有”——标志确实把通行限于有装备的车。"
+          }
+        }
+      ]
+    },
+    "ch25": {
+      "objective": {
+        "en": "Handle work zones: yellow means temporary, temporary beats permanent, and delineators work day and night.",
+        "ru": "Работать с зонами дорожных работ: жёлтый значит временный, временное главнее постоянного, делинеаторы работают днём и ночью.",
+        "zh": "应对施工区：黄色＝临时，临时优先于永久，导向标昼夜有效。"
+      },
+      "keyIdeas": [
+        {
+          "title_it": "Fondo giallo = cantiere",
+          "text": {
+            "en": "Yellow-background signs mark road works and temporary situations. In a conflict, TEMPORARY signage prevails over the permanent one it covers — the yellow detour arrow beats the old white one. If two signs disagree, the newer, yellower one is telling the truth.",
+            "ru": "Знаки на жёлтом фоне обозначают дорожные работы и временные ситуации. При противоречии ВРЕМЕННАЯ сигнализация главнее постоянной, которую она перекрывает: жёлтая стрелка объезда бьёт старую белую. Если два знака спорят — правду говорит более новый и жёлтый.",
+            "zh": "黄底标志表示道路施工和临时情况。冲突时临时标志优先于被其覆盖的永久标志——黄色绕行箭头压过旧白箭头。两个标志打架时，更新更黄的那个说了算。"
+          }
+        },
+        {
+          "title_it": "Delineatori: guida per gli occhi",
+          "text": {
+            "en": "Delineators (striped panels, cones, curve markers, tunnel edge markers) shape the path through or around the obstacle. They are retro-reflective — designed for day AND night. They can mark detours, narrowings and tunnel walls; “visible only at night” or “decorative” claims are false.",
+            "ru": "Делинеаторы (полосатые панели, конусы, маркеры поворота, тоннельные) прочерчивают траекторию сквозь препятствие или вокруг него. Они светоотражающие — рассчитаны на день И ночь. Обозначают объезды, сужения, стены тоннелей; «видны только ночью» или «декоративные» — ложь.",
+            "zh": "导向设施（条纹板、锥桶、弯道标、隧道轮廓标）勾画通过或绕过障碍的路径。它们是反光的——昼夜适用。可标示绕行、变窄、隧道壁；“只在夜间可见”或“装饰用”都是错的。"
+          }
+        },
+        {
+          "title_it": "In cantiere: la regola di prudenza",
+          "text": {
+            "en": "Work zones compress lanes, hide workers and change surfaces. The demanded behaviour is always the same trio: slow down, keep bigger margins, obey the temporary layout even where the permanent markings still show. Signs about workers (uomini al lavoro) warn — they do not forbid transit.",
+            "ru": "Зона работ сжимает полосы, прячет рабочих, меняет покрытие. Требуемое поведение — всегда одна тройка: снизить скорость, увеличить запасы, подчиняться временной схеме, даже если старая разметка ещё видна. Знак «uomini al lavoro» предупреждает — он не запрещает проезд.",
+            "zh": "施工区压缩车道、遮挡工人、改变路面。要求的行为永远是三件套：减速、加大余量、服从临时布局（即使旧标线还在）。“施工”标志是警告——不禁止通行。"
+          }
+        }
+      ],
+      "mustKnow": [
+        {
+          "fact_it": "Fondo giallo",
+          "value": "segnaletica temporanea",
+          "note": null
+        },
+        {
+          "fact_it": "Contrasto temporaneo/permanente",
+          "value": "prevale il temporaneo",
+          "note": null
+        },
+        {
+          "fact_it": "Delineatori",
+          "value": "retroriflettenti, giorno e notte",
+          "note": null
+        },
+        {
+          "fact_it": "Uomini al lavoro",
+          "value": "preavvisa, non vieta",
+          "note": {
+            "en": "a danger sign, not a prohibition",
+            "ru": "знак опасности, не запрет",
+            "zh": "是危险警告不是禁令"
+          }
+        }
+      ],
+      "traps": [
+        {
+          "id": "segnali-complementari-cantiere-delineatori-senso-unico-9",
+          "why": {
+            "en": "FALSO. Delineators are retro-reflective precisely so they work in headlights at night AND remain visible by day. 'Solo di notte' halves the device’s job — equipment questions rarely tolerate a time restriction.",
+            "ru": "FALSO. Делинеаторы светоотражающие именно затем, чтобы работать в свете фар ночью И оставаться видимыми днём. «Solo di notte» урезает работу устройства вдвое — вопросы об оборудовании редко терпят временные ограничения.",
+            "zh": "错。导向标做成反光正是为了夜间在车灯下工作且白天照样可见。“只在夜间”把设备的功能砍了一半——设备题很少容得下时间限制。"
+          }
+        },
+        {
+          "id": "segnali-complementari-cantiere-delineatori-gallerie-2",
+          "why": {
+            "en": "VERO. 'Anche per evidenziare deviazioni o strettoie' — a true widening: the device genuinely serves several purposes. True 'anche' statements extend a tool to its full real range; false ones invent uses it never had.",
+            "ru": "VERO. «Anche per evidenziare deviazioni o strettoie» — правдивое расширение: устройство действительно многоцелевое. Правдивые «anche» растягивают инструмент до его реального диапазона; ложные выдумывают применения, которых не было.",
+            "zh": "对。“也用于标示绕行或变窄”——真扩展：该设施确实多用途。真“也”把工具伸到其真实范围；假“也”则发明它没有的用途。"
           }
         }
       ]
