@@ -93,6 +93,7 @@ function categoryStats() {
 function showSignModal(imageUrl, signQuestions, onPractice) {
   const facts = signQuestions.filter((q) => q.is_true).slice(0, 4);
   let revealed = false;
+  const opener = document.activeElement; // restore focus here on close
 
   const overlay = el('div.modal-overlay', {
     onclick: (e) => { if (e.target === overlay) close(); },
@@ -101,6 +102,7 @@ function showSignModal(imageUrl, signQuestions, onPractice) {
   function close() {
     document.removeEventListener('keydown', escHandler);
     overlay.remove();
+    if (opener instanceof HTMLElement) opener.focus();
   }
 
   function escHandler(e) {
@@ -146,6 +148,7 @@ function showSignModal(imageUrl, signQuestions, onPractice) {
 
   draw();
   document.body.append(overlay);
+  overlay.querySelector('button[aria-label="Close"]')?.focus();
 }
 
 /* ============================== ONBOARDING ============================== */
@@ -250,7 +253,7 @@ export function renderDashboard(root) {
         el('h2', {}, 'QUESTIONS MASTERED'),
         el('p.stat-value.ok', {}, String(stats.mastered)),
         el('p.stat-sub', {}, `OF ${total} (${masteredPct}%)`),
-        el('div.bar', {}, el('div', { style: `width:${masteredPct}%` })),
+        el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${masteredPct}%` })),
       ),
       el('div.card', {},
         el('h2', {}, 'EXAM SUCCESS'),
@@ -335,7 +338,7 @@ export function renderStats(root) {
         el('h2', {}, 'MASTERED'),
         el('p.stat-value.ok', {}, `${Math.round((stats.mastered / total) * 100)}%`),
         el('p.stat-sub', {}, `${stats.mastered} OF ${total} QUESTIONS`),
-        el('div.bar', {}, el('div', { style: `width:${Math.round((stats.mastered / total) * 100)}%` })),
+        el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${Math.round((stats.mastered / total) * 100)}%` })),
       ),
       el('div.card', {},
         el('h2', {}, 'OVERALL ACCURACY'),
@@ -394,7 +397,7 @@ export function renderStats(root) {
         el('div.row', {},
           el('div', { style: 'flex:1' },
             el('strong', {}, titleCase(c.name)),
-            el('div.bar', {}, el('div', { style: `width:${c.masteredPct}%` })),
+            el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${c.masteredPct}%` })),
           ),
           el('span.stat-sub', { style: 'min-width:110px;text-align:right' },
             `${c.masteredPct}% · ${c.attempted}/${c.count}`),
@@ -435,7 +438,7 @@ export async function renderTheoryList(root) {
         el('span.tag', { className: `tag ${read.size === chapters.length ? 'ok' : ''}` },
           `${read.size}/${chapters.length} CHAPTERS`),
       ),
-      el('div.bar', {}, el('div', { style: `width:${readPct}%` })),
+      el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${readPct}%` })),
       el('div.actions', {},
         firstUnread
           ? el('a.btn.btn-primary', { href: `#/theory/${firstUnread.id}` },
@@ -472,7 +475,7 @@ export async function renderTheoryList(root) {
           m
             ? el('div', {},
                 el('p.stat-sub', {}, `${cat.count} QUESTIONS · MASTERED ${m.pct}%`),
-                el('div.bar', {}, el('div', { style: `width:${m.pct}%` })),
+                el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${m.pct}%` })),
               )
             : null,
         );
@@ -706,7 +709,7 @@ export async function renderTheoryChapter(root, id, opts = {}) {
         ? el('div.panel', {},
             el('h2', {}, 'CHECK YOURSELF'),
             el('p.stat-sub', {}, `${cat.count} QUESTIONS IN THIS TOPIC · MASTERED ${m.mastered} (${m.pct}%)`),
-            el('div.bar', {}, el('div', { style: `width:${m.pct}%` })),
+            el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${m.pct}%` })),
             el('div.actions', {},
               el('button.btn.btn-primary', { onclick: startCheck }, 'QUICK CHECK — 5 QUESTIONS'),
               el('a.btn', { href: `#/practice/${slug}` }, 'FULL PRACTICE'),
@@ -805,9 +808,16 @@ export async function renderDictionary(root, sectionId) {
   function termRow(sec, idx, term) {
     const key = `${sec.id}:${idx}`;
     const hidden = selfTest && !revealedTerms.has(key);
+    const revealTerm = () => { revealedTerms.add(key); draw(); };
     return el('div.row.term-row', {
       className: `row term-row ${hidden ? 'is-hidden' : ''}`,
-      onclick: hidden ? () => { revealedTerms.add(key); draw(); } : undefined,
+      onclick: hidden ? revealTerm : undefined,
+      role: hidden ? 'button' : undefined,
+      tabIndex: hidden ? 0 : undefined,
+      'aria-label': hidden ? `Reveal translation of ${term.it}` : undefined,
+      onkeydown: hidden ? (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); revealTerm(); }
+      } : undefined,
     },
       el('strong.term-it', {}, term.it),
       hidden
@@ -865,7 +875,7 @@ export function renderPracticeList(root) {
         return el('a.card', { href: `#/practice/${cat.slug}` },
           el('h2', {}, titleCase(cat.name)),
           el('p.stat-sub', {}, `${mastered}/${cat.count} MASTERED (${pct}%)`),
-          el('div.bar', {}, el('div', { style: `width:${pct}%` })),
+          el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${pct}%` })),
         );
       }),
     ),
@@ -964,7 +974,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
         translationArea(translationOf(q), revealed, reveal),
         answered
           ? el('div', {},
-              el('div.feedback', { className: `feedback ${lastCorrect ? 'ok' : 'bad'}` },
+              el('div.feedback', { className: `feedback ${lastCorrect ? 'ok' : 'bad'}`, role: 'status' },
                 lastCorrect ? 'CORRECT' : `WRONG — THE ANSWER IS ${q.is_true ? 'VERO' : 'FALSO'}`),
               el('div.actions', {},
                 el('button.btn.btn-primary.btn-big', { onclick: next },
@@ -1314,7 +1324,7 @@ function runExam(root, questions) {
   let finished = false;
   let revealed = false; // translation visibility, reset per question
 
-  const timerEl = el('span.timer', {}, fmtTime(secondsLeft));
+  const timerEl = el('span.timer', { role: 'timer', 'aria-label': 'Time left' }, fmtTime(secondsLeft));
   // Navigating away abandons the exam: stop the timer and keys so they
   // cannot fire over a different screen.
   window.addEventListener('hashchange', () => {

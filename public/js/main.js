@@ -57,7 +57,10 @@ function route() {
     return;
   }
   for (const a of nav.querySelectorAll('a')) {
-    a.classList.toggle('active', a.dataset.route === match.r.name);
+    const active = a.dataset.route === match.r.name;
+    a.classList.toggle('active', active);
+    if (active) a.setAttribute('aria-current', 'page');
+    else a.removeAttribute('aria-current');
   }
   window.scrollTo(0, 0);
   match.r.render(match.m);
