@@ -723,3 +723,26 @@ kbd {
   padding: 2px;
   flex: none;
 }
+
+/* ---------- Answer feedback animation ---------- */
+
+@keyframes card-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+}
+
+.question-card.shake { animation: card-shake 260ms ease-in-out; }
+
+.feedback { animation: feedback-pop 140ms ease-out; }
+
+@keyframes feedback-pop {
+  from { transform: scale(0.96); opacity: 0.4; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .question-card.shake, .feedback { animation: none; }
+}

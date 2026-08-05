@@ -5,7 +5,7 @@ const NAME_MAX = 40;
 const ID_MAX = 120;
 
 export const EMPTY_PROGRESS = {
-  profile: { name: '', language: 'en', theme: 'light', onboarded: false },
+  profile: { name: '', language: 'en', theme: 'light', sound: true, onboarded: false },
   answers: {}, // questionId -> { correct, wrong, lastCorrect, last }
   mistakes: [], // questionIds currently answered wrong
   exams: [], // { date, total, errors, passed }
@@ -95,6 +95,12 @@ export class ProgressService {
         throw new ValidationError(`"theme" must be one of: ${THEMES.join(', ')}`);
       }
       profile.theme = body.theme;
+    }
+    if (body.sound !== undefined) {
+      if (typeof body.sound !== 'boolean') {
+        throw new ValidationError('"sound" must be a boolean');
+      }
+      profile.sound = body.sound;
     }
     if (body.onboarded !== undefined) {
       if (typeof body.onboarded !== 'boolean') {

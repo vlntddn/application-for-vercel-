@@ -12,6 +12,7 @@ import {
 } from './state.js';
 import { el, clear, fmtTime, fmtDate, titleCase } from './ui.js';
 import { CHAPTER_CATEGORY } from './theory-map.js';
+import { playCorrect, playWrong } from './sound.js';
 
 const EXAM_QUESTIONS = 30;
 const EXAM_SECONDS = 20 * 60;
@@ -917,7 +918,9 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     const q = queue[index];
     lastCorrect = value === q.is_true;
     if (lastCorrect) correctCount++;
+    if (lastCorrect) playCorrect(); else playWrong();
     draw();
+    if (!lastCorrect) root.querySelector('.question-card')?.classList.add('shake');
     try {
       state.progress = await api.recordAnswers([{ id: q.id, correct: lastCorrect }]);
     } catch (err) {
@@ -1511,6 +1514,11 @@ export function renderSettings(root) {
     el('option', { value: 'dark', textContent: 'DARK' }),
   );
   themeSelect.value = profile.theme;
+  const soundSelect = el('select', { id: 's-sound' },
+    el('option', { value: 'on', textContent: 'ON' }),
+    el('option', { value: 'off', textContent: 'OFF' }),
+  );
+  soundSelect.value = profile.sound === false ? 'off' : 'on';
 
   clear(root,
     el('h1', {}, 'SETTINGS'),
@@ -1519,6 +1527,7 @@ export function renderSettings(root) {
       el('div.field', {}, el('label', { htmlFor: 's-name' }, 'YOUR NAME'), nameInput),
       el('div.field', {}, el('label', { htmlFor: 's-lang' }, 'TRANSLATION LANGUAGE'), langSelect),
       el('div.field', {}, el('label', { htmlFor: 's-theme' }, 'THEME'), themeSelect),
+      el('div.field', {}, el('label', { htmlFor: 's-sound' }, 'ANSWER SOUNDS'), soundSelect),
       el('div.actions', {},
         el('button.btn.btn-primary', {
           onclick: async (e) => {
@@ -1527,6 +1536,7 @@ export function renderSettings(root) {
                 name: nameInput.value,
                 language: langSelect.value,
                 theme: themeSelect.value,
+                sound: soundSelect.value === 'on',
               });
               state.progress.profile = updated;
               applyTheme();

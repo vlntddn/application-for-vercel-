@@ -12,7 +12,7 @@
  *   answers are not queued (v1) — the UI shows an error banner.
  */
 
-const VERSION = 'v4';
+const VERSION = 'v5';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -24,6 +24,7 @@ const SHELL = [
   '/js/state.js',
   '/js/api.js',
   '/js/ui.js',
+  '/js/sound.js',
   '/js/theory-map.js',
   '/manifest.webmanifest',
   '/icons/icon-192.png',

@@ -24,6 +24,14 @@ test('profile updates validate name, language and theme', async () => {
   await assert.rejects(() => service.updateProfile({ name: 'x'.repeat(41) }), ValidationError);
 });
 
+test('profile sound flag defaults on and validates as boolean', async () => {
+  const { service, store } = makeService();
+  assert.equal(store.data.profile.sound, true);
+  const profile = await service.updateProfile({ sound: false });
+  assert.equal(profile.sound, false);
+  await assert.rejects(() => service.updateProfile({ sound: 'loud' }), ValidationError);
+});
+
 test('answers update counters, mistakes and stats', async () => {
   const { service } = makeService();
   let snap = await service.recordAnswers({ answers: [{ id: 'sorpasso-q-1', correct: false }] });
