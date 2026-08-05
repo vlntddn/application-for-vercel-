@@ -38,6 +38,8 @@ Tests (built-in `node:test` runner): `npm test`.
   to clear it.
 - **Quick review** — a smart 10-question daily session: mistakes first,
   then your weakest topics, then long-unseen questions for retention.
+- **Search** — full-text across all 7139 questions in Italian and your
+  language, accent-insensitive; practice the results as a session.
 - **Dictionary** — exam vocabulary in 9 thematic sections (107 terms,
   EN/RU/ZH) with a self-test mode; sign descriptions on tap, built from
   true statements in the question bank.
