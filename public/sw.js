@@ -12,7 +12,7 @@
  *   answers are not queued (v1) — the UI shows an error banner.
  */
 
-const VERSION = 'v2';
+const VERSION = 'v3';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 

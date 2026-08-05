@@ -36,6 +36,8 @@ Tests (built-in `node:test` runner): `npm test`.
   question navigator, countdown, full error report.
 - **Mistakes** — every question you last answered wrong; answer it correctly
   to clear it.
+- **Quick review** — a smart 10-question daily session: mistakes first,
+  then your weakest topics, then long-unseen questions for retention.
 - **Dictionary** — exam vocabulary in 9 thematic sections (107 terms,
   EN/RU/ZH) with a self-test mode; sign descriptions on tap, built from
   true statements in the question bank.

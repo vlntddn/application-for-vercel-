@@ -262,6 +262,7 @@ export function renderDashboard(root) {
       el('p.lede', {}, `${EXAM_QUESTIONS} random questions · ${EXAM_SECONDS / 60} minutes · max ${EXAM_MAX_ERRORS} errors.`),
       el('div.actions', {},
         el('a.btn.btn-primary.btn-big', { href: '#/exam' }, 'START MOCK EXAM'),
+        el('a.btn', { href: '#/review' }, `QUICK REVIEW — ${REVIEW_SIZE} QUESTIONS`),
         el('a.btn', { href: '#/practice' }, 'PRACTICE BY TOPIC'),
         el('a.btn', { href: '#/theory' }, 'READ THEORY'),
         el('a.btn', { href: '#/stats' }, 'PROGRESS & STATS'),
@@ -1062,6 +1063,102 @@ export async function renderMistakes(root) {
       questions.length > 50 ? el('p.empty-note', {}, `+ ${questions.length - 50} MORE`) : null,
     ),
   );
+}
+
+/* ============================ QUICK REVIEW ============================ */
+
+const REVIEW_SIZE = 10;
+
+/**
+ * Daily smart session: current mistakes first, then questions from the
+ * weakest topics, then "retention" — questions answered correctly the
+ * longest time ago. New users just get a starter mix.
+ */
+export async function renderQuickReview(root) {
+  clear(root, el('h1', {}, 'QUICK REVIEW'), el('p.lede', {}, 'BUILDING YOUR SESSION...'));
+  const picked = new Map(); // id -> question
+
+  async function resolveIds(ids) {
+    const bySlug = new Map();
+    for (const id of ids) {
+      const slug = slugForQuestionId(id);
+      if (slug) (bySlug.get(slug) ?? bySlug.set(slug, []).get(slug)).push(id);
+    }
+    const out = [];
+    for (const [slug, list] of bySlug) {
+      try {
+        const qs = await loadQuestions(slug);
+        const byId = new Map(qs.map((q) => [q.id, q]));
+        for (const id of list) if (byId.has(id)) out.push(byId.get(id));
+      } catch {
+        /* skip unavailable topics */
+      }
+    }
+    return out;
+  }
+
+  try {
+    // 1. Mistakes — the highest-value repetitions (up to 4).
+    for (const q of await resolveIds(shuffle(state.progress.mistakes).slice(0, 4))) {
+      picked.set(q.id, q);
+    }
+
+    // 2. Weakest attempted topics — unseen/wrong questions first (up to 4).
+    const weak = categoryStats()
+      .filter((c) => c.attempted > 0 && c.accuracy !== null && c.accuracy < 100)
+      .sort((a, b) => a.accuracy - b.accuracy)
+      .slice(0, 2);
+    for (const c of weak) {
+      const qs = await loadQuestions(c.slug);
+      for (const q of pickQueue(qs.filter((q) => !picked.has(q.id)), 2)) picked.set(q.id, q);
+    }
+
+    // 3. Retention — correct answers not seen for the longest time.
+    if (picked.size < REVIEW_SIZE) {
+      const stale = Object.entries(state.progress.answers)
+        .filter(([id, a]) => a.lastCorrect && !picked.has(id))
+        .sort((a, b) => (a[1].last || '').localeCompare(b[1].last || ''))
+        .slice(0, REVIEW_SIZE - picked.size)
+        .map(([id]) => id);
+      for (const q of await resolveIds(stale)) picked.set(q.id, q);
+    }
+
+    // 4. Starter fill for new users: unseen questions from random topics.
+    if (picked.size < REVIEW_SIZE) {
+      for (const c of shuffle(state.manifest.categories).slice(0, 3)) {
+        if (picked.size >= REVIEW_SIZE) break;
+        const qs = await loadQuestions(c.slug);
+        for (const q of pickQueue(qs.filter((q) => !picked.has(q.id)), REVIEW_SIZE - picked.size)) {
+          picked.set(q.id, q);
+        }
+      }
+    }
+  } catch (err) {
+    return clear(root, errorBanner(err));
+  }
+
+  const queue = shuffle([...picked.values()]).slice(0, REVIEW_SIZE);
+  renderQuizSession(root, queue, {
+    title: 'QUICK REVIEW',
+    backHash: '#/',
+    onQuit: () => { location.hash = '#/'; },
+    onFinish: (correct, total) => {
+      clear(root,
+        el('h1', {}, 'QUICK REVIEW DONE'),
+        el('div.panel', {},
+          el('p.stat-value', { className: `stat-value ${correct === total ? 'ok' : ''}` },
+            `${correct}/${total}`),
+          el('p.stat-sub', {}, correct === total
+            ? 'PERFECT. SAME TIME TOMORROW.'
+            : 'MISSES WENT TO YOUR MISTAKES LIST — THEY WILL COME BACK.'),
+          el('div.actions', { style: 'margin-top:16px' },
+            el('a.btn.btn-primary', { href: '#/' }, 'DASHBOARD'),
+            el('button.btn', { onclick: () => renderQuickReview(root) }, 'ONE MORE ROUND'),
+          ),
+        ),
+      );
+    },
+  });
 }
 
 /* ============================== EXAM ============================== */

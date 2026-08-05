@@ -6,6 +6,7 @@ import {
   renderTheoryList,
   renderTheoryChapter,
   renderStats,
+  renderQuickReview,
   renderExamItalian,
   renderDictionary,
   renderPracticeList,
@@ -29,6 +30,7 @@ const routes = [
   { pattern: /^#\/practice$/, name: 'practice', render: () => renderPracticeList(view) },
   { pattern: /^#\/practice\/([\w-]+)$/, name: 'practice', render: (m) => renderPracticeSession(view, m[1]) },
   { pattern: /^#\/exam$/, name: 'exam', render: () => renderExam(view) },
+  { pattern: /^#\/review$/, name: 'practice', render: () => renderQuickReview(view) },
   { pattern: /^#\/mistakes$/, name: 'mistakes', render: () => renderMistakes(view) },
   { pattern: /^#\/settings$/, name: 'settings', render: () => renderSettings(view) },
 ];
