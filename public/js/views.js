@@ -9,6 +9,7 @@ import {
   loadAllQuestions,
   slugForQuestionId,
   shuffle,
+  recordAnswersResilient,
 } from './state.js';
 import { el, clear, fmtTime, fmtDate, titleCase } from './ui.js';
 import { CHAPTER_CATEGORY } from './theory-map.js';
@@ -901,6 +902,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
   let answered = false;
   let lastCorrect = null;
   let revealed = false; // translation visibility, reset per question
+  let offline = false; // answers are queuing locally
 
   function reveal() {
     revealed = true;
@@ -932,7 +934,8 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     draw();
     if (!lastCorrect) root.querySelector('.question-card')?.classList.add('shake');
     try {
-      state.progress = await api.recordAnswers([{ id: q.id, correct: lastCorrect }]);
+      const { synced } = await recordAnswersResilient([{ id: q.id, correct: lastCorrect }]);
+      if (offline !== !synced) { offline = !synced; draw(); }
     } catch (err) {
       root.prepend(errorBanner(err));
     }
@@ -954,6 +957,10 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
   function draw() {
     const q = queue[index];
     clear(root,
+      offline
+        ? el('p.offline-note', { role: 'status' },
+            'OFFLINE — ANSWERS SAVED ON THIS DEVICE, WILL SYNC WHEN THE SERVER IS BACK')
+        : null,
       el('div.quiz-head', {},
         el('a.btn', {
           href: backHash,

@@ -765,3 +765,14 @@ kbd {
 .skip-link:focus { left: 8px; top: 8px; }
 
 main:focus { outline: none; }
+
+.offline-note {
+  border: var(--border-thin);
+  border-left: 10px solid var(--warn);
+  background: var(--surface);
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}

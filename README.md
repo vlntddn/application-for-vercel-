@@ -47,6 +47,7 @@ Tests (built-in `node:test` runner): `npm test`.
   with one-tap practice, and a mock-exam trend chart.
 - **Installable PWA** — add to home screen; "download for offline" in
   Settings caches the full question bank, theory and images (~8 MB).
+  Answers given offline queue locally and sync when the server returns.
 - **Settings** — name, translation language (EN/RU/ZH), light/dark theme,
   full progress reset.
 

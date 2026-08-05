@@ -1,8 +1,14 @@
 async function request(path, options = {}) {
-  const res = await fetch(path, {
-    headers: options.body ? { 'Content-Type': 'application/json' } : {},
-    ...options,
-  });
+  let res;
+  try {
+    res = await fetch(path, {
+      headers: options.body ? { 'Content-Type': 'application/json' } : {},
+      ...options,
+    });
+  } catch (err) {
+    err.network = true; // fetch itself failed: offline or server down
+    throw err;
+  }
   const payload = await res.json().catch(() => ({}));
   if (!res.ok) {
     throw new Error(payload.error || `Request failed (${res.status})`);

@@ -1,4 +1,5 @@
-import { boot, state } from './state.js';
+import { boot, state, flushAnswerQueue } from './state.js';
+import { api } from './api.js';
 import { el, clear } from './ui.js';
 import {
   renderOnboarding,
@@ -75,7 +76,19 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// Answers queued while offline are replayed when connectivity returns.
+window.addEventListener('online', () => flushAnswerQueue());
+
 boot()
+  .then(async () => {
+    // Drain answers queued in a previous offline session, then render
+    // with the server's authoritative snapshot. Never blocks startup.
+    try {
+      if (await flushAnswerQueue()) state.progress = await api.progress();
+    } catch {
+      /* keep the boot snapshot */
+    }
+  })
   .then(route)
   .catch((err) => {
     clear(view,

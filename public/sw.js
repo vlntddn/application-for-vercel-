@@ -9,10 +9,11 @@
  * - GET /api/progress: network-first with cache fallback so the dashboard
  *   renders offline with the last known state.
  * - Mutations (POST/PUT/DELETE): network only, never cached. Offline
- *   answers are not queued (v1) — the UI shows an error banner.
+ *   ANSWERS are queued by the app (state.js localStorage queue) and
+ *   replayed when the server responds again; other mutations error.
  */
 
-const VERSION = 'v6';
+const VERSION = 'v7';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
