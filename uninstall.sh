@@ -27,5 +27,5 @@ if [ -n "$PURGE" ]; then
   echo "Study progress deleted ($DATA_DIR)."
 else
   echo "Study progress kept at: $DATA_DIR"
-  echo "Delete it with: $0 --purge"
+  echo "Delete it with: rm -rf \"$DATA_DIR\""
 fi

@@ -82,7 +82,12 @@ elif command -v curl >/dev/null 2>&1 && command -v tar >/dev/null 2>&1; then
 else
   die "Need either git, or curl and tar, to download the app."
 fi
-[ -f "$SRC/server/index.js" ] || die "Download looks incomplete (server/index.js missing)."
+if [ ! -f "$SRC/server/index.js" ] || [ ! -f "$SRC/bin/patente-pro.js" ]; then
+  warn "Ref '$REF' does not contain the current application."
+  say  "  Pick a ref that does, for example:"
+  say  "    --ref claude/vibrant-gates-b12x31"
+  exit 1
+fi
 
 # -------------------------------------------------------------------- Install
 step "Installing to $APP_HOME"

@@ -67,6 +67,11 @@ try {
   if (-not (Test-Path (Join-Path $src 'server\index.js'))) {
     Die 'Download looks incomplete (server\index.js missing).'
   }
+  if (-not (Test-Path (Join-Path $src 'bin\patente-pro.js'))) {
+    Warn "Ref '$Ref' has no bin\patente-pro.js - it predates the desktop launcher."
+    Write-Host '  Install a ref that contains it, e.g. -Ref claude/vibrant-gates-b12x31'
+    exit 1
+  }
 
   # -------------------------------------------------------------------- Install
   Step "Installing to $Dir"

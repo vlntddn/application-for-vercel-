@@ -9,17 +9,83 @@ Local-first: a **zero-dependency Node.js backend** persists your progress on
 your machine. The UI is vanilla JS styled in **Minimal Brutalism** — hard
 borders, hard shadows, high contrast, sans-serif type.
 
-## Quick start
+## Install as an app
 
-Requires Node.js ≥ 18. No `npm install` needed — there are no runtime dependencies.
+Works on **macOS, Windows and Linux**. The only prerequisite is
+[Node.js](https://nodejs.org) 18 or newer — there is nothing to compile and no
+npm packages to download.
+
+### Run it right away (one command, any OS)
 
 ```bash
-npm start
-# → PATENTE PRO running at http://127.0.0.1:3000
+npx github:vlntddn/application-for-vercel-#claude/vibrant-gates-b12x31
 ```
 
-Development mode (auto-restart on changes): `npm run dev`.
-Tests (built-in `node:test` runner): `npm test`.
+Starts the server and opens the app in its own window. Nothing is installed
+permanently; run it again whenever you want.
+
+### Install with a desktop icon
+
+This adds a `patente-pro` command plus a launcher in your applications menu
+(a real `.app` bundle on macOS, a `.desktop` entry on Linux, Start Menu and
+desktop shortcuts on Windows).
+
+**macOS / Linux**
+
+```bash
+git clone -b claude/vibrant-gates-b12x31 https://github.com/vlntddn/application-for-vercel-.git
+cd application-for-vercel- && ./install.sh --ref claude/vibrant-gates-b12x31
+```
+
+**Windows** (PowerShell)
+
+```powershell
+git clone -b claude/vibrant-gates-b12x31 https://github.com/vlntddn/application-for-vercel-.git
+cd application-for-vercel-; .\install.ps1 -Ref claude/vibrant-gates-b12x31
+```
+
+> **While the repository is private** the installer has to be cloned first, as
+> above, because `curl` cannot read a private raw URL. Once the repository is
+> public (or this branch is merged into `main`), the installers can bootstrap
+> themselves in a single command:
+>
+> ```bash
+> curl -fsSL https://raw.githubusercontent.com/vlntddn/application-for-vercel-/main/install.sh | bash
+> ```
+> ```powershell
+> irm https://raw.githubusercontent.com/vlntddn/application-for-vercel-/main/install.ps1 | iex
+> ```
+
+Then launch it from your applications menu, or:
+
+```bash
+patente-pro              # opens a window
+patente-pro --port 8080  # a specific port (a free one is picked if taken)
+patente-pro --no-open    # server only, no window
+patente-pro --help
+```
+
+**Where things go**
+
+| | Application | Your progress |
+|---|---|---|
+| macOS | `~/.patente-pro` + `~/Applications/Patente Pro.app` | `~/Library/Application Support/PatentePro` |
+| Linux | `~/.patente-pro` | `~/.local/share/patente-pro` |
+| Windows | `%LOCALAPPDATA%\PatentePro` | `%APPDATA%\PatentePro` |
+
+Progress lives **outside** the application folder, so reinstalling or updating
+never touches it. To update, re-run the installer. To remove the app:
+`~/.patente-pro/uninstall.sh` (macOS/Linux) or `uninstall.ps1` (Windows) —
+progress is kept unless you pass `--purge` / `-Purge`.
+
+## Run from source
+
+```bash
+npm start        # → http://127.0.0.1:3000, progress in ./storage
+npm run app      # the desktop launcher (window + per-user progress)
+npm run dev      # auto-restart on changes
+npm test         # built-in node:test runner
+```
 
 ## Features
 
@@ -72,14 +138,19 @@ server/             Zero-dependency backend (node:http)
   progress.js       All progress logic & validation (answers, exams, streak)
   http-helpers.js   JSON responses, body parsing with size limit
   static.js         Static/data file serving with path-traversal protection
+bin/                Desktop launcher (window, port pick, per-user data dir)
+  patente-pro.js    CLI entry point (npm bin, used by all installers)
+  launcher-lib.js   Pure helpers — unit tested
 public/             Frontend — no frameworks, no build step
   js/api.js         API client
   js/state.js       App state + data caches
   js/ui.js          DOM helpers
   js/views.js       All screens
   js/main.js        Hash router + boot
-data/               Question bank (26 topics), theory manual, manifest
-tests/              node:test suite for the progress domain
+data/               Question bank (26 topics), theory manual, lessons
+tests/              node:test suite (progress domain, content, launcher)
+install.sh          macOS/Linux installer + .app bundle / .desktop entry
+install.ps1         Windows installer + Start Menu shortcuts
 legacy/             Previous compiled build (kept for reference — no source existed)
 ```
 
