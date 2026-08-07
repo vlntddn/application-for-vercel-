@@ -4,11 +4,31 @@
   "description": "Patente Pro — Italian driving theory trainer. Local-first, zero-dependency Node.js backend, Minimal Brutalism UI.",
   "type": "module",
   "main": "server/index.js",
+  "bin": {
+    "patente-pro": "bin/patente-pro.js"
+  },
   "scripts": {
     "start": "node server/index.js",
+    "app": "node bin/patente-pro.js",
     "dev": "node --watch server/index.js",
     "fetch-images": "node scripts/fetch-images.mjs",
     "test": "node --test"
+  },
+  "files": [
+    "bin",
+    "server",
+    "public",
+    "data",
+    "scripts",
+    "docs",
+    "install.sh",
+    "install.ps1",
+    "uninstall.sh",
+    "uninstall.ps1"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlntddn/application-for-vercel-.git"
   },
   "engines": {
     "node": ">=18.0.0"
