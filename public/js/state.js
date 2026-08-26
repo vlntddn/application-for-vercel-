@@ -1,4 +1,4 @@
-import { api } from './api.js';
+import { api, detectMode } from './api.js';
 
 /** Shared app state: progress snapshot plus cached static data. */
 export const state = {
@@ -11,6 +11,7 @@ export const state = {
 };
 
 export async function boot() {
+  await detectMode(); // decides whether progress lives on a server or here
   const [progress, manifest] = await Promise.all([api.progress(), api.manifest()]);
   state.progress = progress;
   state.manifest = manifest;

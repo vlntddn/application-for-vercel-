@@ -13,7 +13,7 @@
  *   replayed when the server responds again; other mutations error.
  */
 
-const VERSION = 'v10';
+const VERSION = 'v11';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -26,6 +26,8 @@ const SHELL = [
   '/js/api.js',
   '/js/ui.js',
   '/js/sound.js',
+  '/js/local-progress.js',
+  '/js/domain/progress.js',
   '/js/theory-map.js',
   '/manifest.webmanifest',
   '/icons/icon-192.png',
@@ -49,11 +51,7 @@ self.addEventListener('activate', (event) => {
 function isStaticData(url) {
   return (
     url.pathname.startsWith('/images/') ||
-    url.pathname === '/api/manifest' ||
-    url.pathname === '/api/theory' ||
-    url.pathname === '/api/dictionary' ||
-    url.pathname === '/api/lessons' ||
-    url.pathname.startsWith('/api/questions/')
+    url.pathname.startsWith('/data/')
   );
 }
 

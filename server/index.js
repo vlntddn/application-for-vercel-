@@ -84,6 +84,12 @@ const server = http.createServer(async (req, res) => {
   try {
     if (pathname.startsWith('/api/')) {
       await handleApi(req, res, pathname);
+    } else if ((req.method === 'GET' || req.method === 'HEAD') && pathname.startsWith('/data/')) {
+      // The frontend reads the question bank from /data/* so that the very
+      // same URLs work when the app is hosted as static files.
+      await serveFile(res, config.dataDir, pathname.slice('/data'.length), {
+        cache: 'max-age=3600',
+      });
     } else if ((req.method === 'GET' || req.method === 'HEAD') && pathname.startsWith('/images/')) {
       await serveFile(res, path.join(config.dataDir, 'images'), pathname.slice('/images'.length), {
         cache: 'max-age=86400',

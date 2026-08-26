@@ -1588,14 +1588,14 @@ async function downloadForOffline(button) {
   box.replaceChildren(label);
   try {
     const dataUrls = [
-      '/api/manifest', '/api/theory', '/api/dictionary', '/api/lessons',
-      ...state.manifest.categories.map((c) => `/api/questions/${c.slug}`),
+      '/data/manifest.json', '/data/theory.json', '/data/dictionary.json', '/data/lessons.json',
+      ...state.manifest.categories.map((c) => `/data/questions/${c.slug}.json`),
     ];
     const images = new Set();
     let done = 0;
     for (const url of dataUrls) {
       const res = await fetch(url);
-      if (url.startsWith('/api/questions/')) {
+      if (url.startsWith('/data/questions/')) {
         for (const q of await res.json()) if (q.image_url) images.add(q.image_url);
       }
       label.textContent = `DATA ${++done}/${dataUrls.length}`;

@@ -12,7 +12,8 @@
     "app": "node bin/patente-pro.js",
     "dev": "node --watch server/index.js",
     "fetch-images": "node scripts/fetch-images.mjs",
-    "test": "node --test"
+    "test": "node --test",
+    "build": "node scripts/build-static.js"
   },
   "files": [
     "bin",
