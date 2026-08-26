@@ -129,6 +129,14 @@ npm test         # built-in node:test runner
 - **Settings** — name, translation language (EN/RU/ZH), light/dark theme,
   answer sounds, full progress reset.
 
+## Credits
+
+The 7139 questions and 413 sign images come from
+[QuizPatenteB](https://github.com/Ed0ardo/QuizPatenteB) by Edoardo, used under the
+MIT Licence — see [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md), which also ships
+inside the app at `/credits.html`. Patente Pro is an independent study aid and is not
+affiliated with any government body.
+
 ## Configuration
 
 Via environment variables or an optional `.env` file (see `.env.example`).

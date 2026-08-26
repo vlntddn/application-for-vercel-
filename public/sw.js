@@ -13,7 +13,7 @@
  *   replayed when the server responds again; other mutations error.
  */
 
-const VERSION = 'v12';
+const VERSION = 'v13';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -30,6 +30,8 @@ const SHELL = [
   '/js/domain/progress.js',
   '/js/theory-map.js',
   '/manifest.webmanifest',
+  '/credits.html',
+  '/privacy.html',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
   '/icons/icon-maskable-512.png',
