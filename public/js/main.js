@@ -1,4 +1,4 @@
-import { boot, state, flushAnswerQueue } from './state.js';
+import { boot, state, flushQueue, scheduleQueueRetry } from './state.js';
 import { api } from './api.js';
 import { el, clear } from './ui.js';
 import {
@@ -76,15 +76,22 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// Answers queued while offline are replayed when connectivity returns.
-window.addEventListener('online', () => flushAnswerQueue());
+// Queued work is replayed when connectivity returns, when the user comes
+// back to the tab, and on a timer while anything is still pending.
+window.addEventListener('online', () => flushQueue());
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') flushQueue().then((done) => {
+    if (!done) scheduleQueueRetry();
+  });
+});
 
 boot()
   .then(async () => {
     // Drain answers queued in a previous offline session, then render
     // with the server's authoritative snapshot. Never blocks startup.
     try {
-      if (await flushAnswerQueue()) state.progress = await api.progress();
+      if (await flushQueue()) state.progress = await api.progress();
+      else scheduleQueueRetry();
     } catch {
       /* keep the boot snapshot */
     }

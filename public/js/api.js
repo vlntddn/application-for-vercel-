@@ -31,5 +31,7 @@ export const api = {
     request('/api/progress/exams', { method: 'POST', body: JSON.stringify(exam) }),
   markTheoryRead: (chapterId) =>
     request('/api/progress/theory', { method: 'POST', body: JSON.stringify({ chapterId }) }),
+  importProgress: (data) =>
+    request('/api/progress/import', { method: 'POST', body: JSON.stringify(data) }),
   resetProgress: () => request('/api/progress', { method: 'DELETE' }),
 };

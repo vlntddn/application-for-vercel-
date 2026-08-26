@@ -34,3 +34,13 @@ export const CHAPTER_CATEGORY = {
   ch24: 'segnali-indicazione',
   ch25: 'segnali-complementari-cantiere',
 };
+
+/**
+ * Reverse lookup: question topic → the chapter that teaches it. Chapters
+ * 14 and 23 share a category; the first one listed wins, which is the
+ * chapter whose lesson actually covers that material.
+ */
+export const CATEGORY_CHAPTER = Object.entries(CHAPTER_CATEGORY).reduce((map, [chapter, slug]) => {
+  if (!(slug in map)) map[slug] = chapter;
+  return map;
+}, {});

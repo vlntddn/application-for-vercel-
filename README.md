@@ -101,7 +101,8 @@ npm test         # built-in node:test runner
 - **Mock exam** — official format: 30 questions, 20 minutes, max 3 errors;
   question navigator, countdown, full error report.
 - **Mistakes** — every question you last answered wrong; answer it correctly
-  to clear it.
+  to clear it. A missed question offers "why?" — the key facts from the
+  lesson that covers it.
 - **Quick review** — a smart 10-question daily session: mistakes first,
   then your weakest topics, then long-unseen questions for retention.
 - **Search** — full-text across all 7139 questions in Italian and your
@@ -114,8 +115,10 @@ npm test         # built-in node:test runner
 - **Installable PWA** — add to home screen; "download for offline" in
   Settings caches the full question bank, theory and images (~8 MB).
   Answers given offline queue locally and sync when the server returns.
+- **Backup** — export all progress to a JSON file and restore it on any
+  machine; every field is validated server-side on import.
 - **Settings** — name, translation language (EN/RU/ZH), light/dark theme,
-  full progress reset.
+  answer sounds, full progress reset.
 
 ## Configuration
 
@@ -168,6 +171,7 @@ legacy/             Previous compiled build (kept for reference — no source ex
 | `POST`   | `/api/progress/answers`  | Record a batch of answers (≤100)       |
 | `POST`   | `/api/progress/exams`    | Record a mock-exam result              |
 | `POST`   | `/api/progress/theory`   | Mark a chapter as read                 |
+| `POST`   | `/api/progress/import`   | Restore a backup (validated, replaces) |
 | `DELETE` | `/api/progress`          | Reset all progress                     |
 
 Invalid input returns `422` with a JSON error; malformed/oversized bodies

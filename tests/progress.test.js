@@ -107,3 +107,80 @@ test('a corrupt progress file is quarantined instead of crashing', async () => {
   const backups = fs.readdirSync(path.dirname(store.file)).filter((f) => f.includes('.corrupt.'));
   assert.equal(backups.length, 1);
 });
+
+test('import replaces progress and validates every field', async () => {
+  const { service } = makeService();
+  await service.recordAnswers({ answers: [{ id: 'old-question-1', correct: true }] });
+
+  const snap = await service.importProgress({
+    profile: { name: '  Marco  ', language: 'zh', theme: 'dark', sound: false, onboarded: true },
+    answers: {
+      'sorpasso-a-1': { correct: 2, wrong: 1, lastCorrect: true, last: '2026-01-01T00:00:00.000Z' },
+      'sorpasso-a-2': { correct: 0, wrong: 3, lastCorrect: false, last: '2026-01-02T00:00:00.000Z' },
+    },
+    mistakes: ['sorpasso-a-2'],
+    exams: [{ date: '2026-01-03T00:00:00.000Z', total: 30, errors: 1, passed: true }],
+    theoryRead: ['ch1', 'ch2'],
+    streak: { current: 5, lastDay: '2026-01-03' },
+    somethingUnknown: 'dropped',
+  });
+
+  assert.equal(snap.profile.name, 'Marco');
+  assert.equal(snap.profile.language, 'zh');
+  assert.equal(snap.profile.sound, false);
+  // The pre-import answer is gone: import replaces, never merges.
+  assert.deepEqual(Object.keys(snap.answers).sort(), ['sorpasso-a-1', 'sorpasso-a-2']);
+  assert.deepEqual(snap.mistakes, ['sorpasso-a-2']);
+  assert.equal(snap.exams.length, 1);
+  assert.deepEqual(snap.theoryRead, ['ch1', 'ch2']);
+  assert.equal(snap.streak.current, 5);
+  assert.equal(snap.stats.mastered, 1);
+  assert.equal(snap.stats.answered, 2);
+  assert.equal(snap.somethingUnknown, undefined);
+});
+
+test('import rejects malformed backups', async () => {
+  const { service } = makeService();
+  const bad = [
+    { profile: { language: 'it' } },
+    { profile: { sound: 'yes' } },
+    { answers: { 'q-1': { correct: -1, wrong: 0, lastCorrect: true } } },
+    { answers: { 'q-1': { correct: 1, wrong: 0, lastCorrect: 'maybe' } } },
+    { exams: [{ total: 30, errors: 40 }] },
+    { exams: 'nope' },
+    { mistakes: [42] },
+    { streak: { current: -2 } },
+    [],
+  ];
+  for (const payload of bad) {
+    await assert.rejects(() => service.importProgress(payload), ValidationError,
+      `should reject ${JSON.stringify(payload)}`);
+  }
+});
+
+test('import keeps mistakes consistent with answers', async () => {
+  const { service } = makeService();
+  const snap = await service.importProgress({
+    answers: { 'q-right': { correct: 1, wrong: 0, lastCorrect: true } },
+    // one refers to a mastered question, one to a question that is absent
+    mistakes: ['q-right', 'q-missing'],
+  });
+  assert.deepEqual(snap.mistakes, []);
+  assert.equal(snap.stats.mistakes, 0);
+});
+
+test('an exported snapshot can be imported back unchanged', async () => {
+  const { service } = makeService();
+  await service.updateProfile({ name: 'Anna', language: 'ru', onboarded: true });
+  await service.recordAnswers({ answers: [{ id: 'sorpasso-x-1', correct: false }] });
+  await service.recordExam({ total: 30, errors: 2 });
+
+  const exported = JSON.parse(JSON.stringify(service.snapshot()));
+  delete exported.stats;
+  const reimported = await service.importProgress(exported);
+
+  assert.equal(reimported.profile.name, 'Anna');
+  assert.deepEqual(reimported.mistakes, ['sorpasso-x-1']);
+  assert.equal(reimported.exams.length, 1);
+  assert.equal(reimported.stats.mistakes, 1);
+});

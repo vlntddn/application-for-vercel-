@@ -10,9 +10,10 @@ import {
   slugForQuestionId,
   shuffle,
   recordAnswersResilient,
+  recordExamResilient,
 } from './state.js';
 import { el, clear, fmtTime, fmtDate, titleCase } from './ui.js';
-import { CHAPTER_CATEGORY } from './theory-map.js';
+import { CHAPTER_CATEGORY, CATEGORY_CHAPTER } from './theory-map.js';
 import { playCorrect, playWrong } from './sound.js';
 
 const EXAM_QUESTIONS = 30;
@@ -895,6 +896,53 @@ function translationArea(translation, revealed, onReveal) {
 }
 
 /** Practice session over a queue of questions with instant feedback. */
+/**
+ * Explains a missed question using the lesson we authored for its
+ * chapter. The bank's own `explanation` field is empty for almost every
+ * question, so instead of inventing text we surface the chapter's
+ * must-know facts — short, factual and exactly what the miss was about.
+ */
+function whyBlock(question, onNavigate) {
+  const slug = slugForQuestionId(question.id);
+  const chapterId = slug ? CATEGORY_CHAPTER[slug] : null;
+  if (!chapterId) return null;
+
+  const box = el('div.why-box', {});
+  const button = el('button.btn.btn-small.btn-why', { onclick: open }, 'WHY? — KEY FACTS');
+  box.append(button);
+
+  async function open() {
+    button.disabled = true;
+    let lesson;
+    try {
+      lesson = (await loadLessons()).chapters?.[chapterId];
+    } catch {
+      lesson = null;
+    }
+    if (!lesson) {
+      // No lesson for this chapter yet: send the reader to the theory.
+      box.replaceChildren(el('a.btn.btn-small', {
+        href: `#/theory/${chapterId}`, onclick: () => onNavigate?.(),
+      }, 'READ THE CHAPTER →'));
+      return;
+    }
+    box.replaceChildren(
+      el('p.why-objective', {}, loc(lesson.objective)),
+      ...(lesson.mustKnow || []).slice(0, 4).map((fact) =>
+        el('div.why-fact', {},
+          el('strong', {}, fact.fact_it),
+          el('span.tag.must-value', {}, fact.value.toUpperCase()),
+        ),
+      ),
+      el('a.btn.btn-small', {
+        href: `#/theory/${chapterId}`, onclick: () => onNavigate?.(),
+      }, 'FULL LESSON →'),
+    );
+  }
+
+  return box;
+}
+
 export function renderQuizSession(root, questions, { title, backHash, onFinish, onQuit }) {
   const queue = questions;
   let index = 0;
@@ -983,6 +1031,9 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
           ? el('div', {},
               el('div.feedback', { className: `feedback ${lastCorrect ? 'ok' : 'bad'}`, role: 'status' },
                 lastCorrect ? 'CORRECT' : `WRONG — THE ANSWER IS ${q.is_true ? 'VERO' : 'FALSO'}`),
+              lastCorrect
+                ? null
+                : whyBlock(q, () => document.removeEventListener('keydown', keyHandler)),
               el('div.actions', {},
                 el('button.btn.btn-primary.btn-big', { onclick: next },
                   index + 1 >= queue.length ? 'FINISH' : 'NEXT →'),
@@ -1381,17 +1432,25 @@ function runExam(root, questions) {
     const passed = errors <= EXAM_MAX_ERRORS;
 
     clear(root, el('h1', {}, 'MOCK EXAM'), el('p.lede', {}, 'SAVING RESULT...'));
+    // A finished exam must survive a network blip: both the result and
+    // the answers go through the offline-capable queue.
+    let synced = true;
     try {
-      await api.recordExam({ total: questions.length, errors, passed });
-      state.progress = await api.recordAnswers(
+      ({ synced } = await recordExamResilient({ total: questions.length, errors, passed }));
+      const answerSync = await recordAnswersResilient(
         questions.map((q, i) => ({ id: q.id, correct: chosen[i] === q.is_true })),
       );
+      synced = synced && answerSync.synced;
     } catch (err) {
       root.prepend(errorBanner(err));
     }
 
     const wrongOnes = questions.filter((q, i) => chosen[i] !== q.is_true);
     clear(root,
+      synced
+        ? null
+        : el('p.offline-note', { role: 'status' },
+            'OFFLINE — THIS RESULT IS SAVED ON THIS DEVICE AND WILL SYNC LATER'),
       el('div.panel', { style: 'text-align:center' },
         el('h1', {}, passed ? 'PROMOSSO!' : 'BOCCIATO'),
         el('p.stat-value', { className: `stat-value ${passed ? 'ok' : 'accent'}` },
@@ -1468,6 +1527,50 @@ function runExam(root, questions) {
 }
 
 /* ============================== SETTINGS ============================== */
+
+/** Downloads the whole progress snapshot as a dated JSON backup. */
+function exportProgress(button) {
+  const backup = {
+    app: 'patente-pro',
+    exportedAt: new Date().toISOString(),
+    ...state.progress,
+  };
+  delete backup.stats; // derived on the server, not part of the data
+  const url = URL.createObjectURL(
+    new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }),
+  );
+  const link = el('a', {
+    href: url,
+    download: `patente-pro-backup-${new Date().toISOString().slice(0, 10)}.json`,
+  });
+  link.click();
+  URL.revokeObjectURL(url);
+  const done = el('span.tag.ok', {}, 'BACKUP SAVED');
+  button.replaceWith(done);
+  setTimeout(() => done.replaceWith(button), 2500);
+}
+
+/** Replaces all progress with a backup file, after confirmation. */
+async function importProgressFile(picker, root) {
+  const file = picker.files?.[0];
+  if (!file) return;
+  const box = document.getElementById('backup-actions');
+  try {
+    const parsed = JSON.parse(await file.text());
+    const answers = Object.keys(parsed.answers || {}).length;
+    if (!confirm(`Replace ALL current progress with this backup (${answers} answered questions)? This cannot be undone.`)) {
+      return;
+    }
+    state.progress = await api.importProgress(parsed);
+    applyTheme();
+    box?.replaceChildren(el('span.tag.ok', {}, `IMPORTED — ${answers} ANSWERS RESTORED`));
+    setTimeout(() => renderSettings(root), 1500);
+  } catch (err) {
+    box?.replaceChildren(errorBanner(
+      err instanceof SyntaxError ? new Error('That file is not a valid backup') : err,
+    ));
+  }
+}
 
 /**
  * Warms the service-worker cache with every study asset: topic lists,
@@ -1563,6 +1666,22 @@ export function renderSettings(root) {
             }
           },
         }, 'SAVE'),
+      ),
+    ),
+    el('div.panel', {},
+      el('h2', {}, 'BACKUP'),
+      el('p.lede', {}, 'YOUR PROGRESS LIVES ON THIS MACHINE ONLY. KEEP A COPY, OR MOVE IT TO ANOTHER COMPUTER.'),
+      el('div.actions', { id: 'backup-actions' },
+        el('button.btn', { onclick: (e) => exportProgress(e.target) }, 'EXPORT TO FILE'),
+        el('button.btn', {
+          onclick: (e) => {
+            const picker = el('input', {
+              type: 'file', accept: 'application/json,.json',
+              onchange: () => importProgressFile(picker, root),
+            });
+            picker.click();
+          },
+        }, 'IMPORT FROM FILE'),
       ),
     ),
     el('div.panel', {},

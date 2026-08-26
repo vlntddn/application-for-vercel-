@@ -776,3 +776,29 @@ main:focus { outline: none; }
   padding: 10px 14px;
   margin-bottom: 16px;
 }
+
+/* ---------- "Why was I wrong" block ---------- */
+
+.why-box { margin-top: 14px; }
+
+.btn-why { border-style: dashed; }
+
+.why-objective {
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 10px 12px;
+  border-left: 6px solid var(--warn);
+  background: var(--paper);
+  margin-bottom: 10px;
+}
+
+.why-fact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 0;
+  border-bottom: var(--border-thin);
+}
+
+.why-fact:last-of-type { border-bottom: none; margin-bottom: 10px; }

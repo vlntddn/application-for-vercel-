@@ -3,6 +3,9 @@ export const THEMES = ['light', 'dark'];
 
 const NAME_MAX = 40;
 const ID_MAX = 120;
+// Import caps: generous enough for a full bank, small enough to bound work.
+const MAX_IMPORT_ANSWERS = 20000;
+const MAX_IMPORT_EXAMS = 2000;
 
 export const EMPTY_PROGRESS = {
   profile: { name: '', language: 'en', theme: 'light', sound: true, onboarded: false },
@@ -178,6 +181,126 @@ export class ProgressService {
 
   async reset() {
     await this.store.reset();
+    return this.snapshot();
+  }
+
+  /**
+   * Replaces all progress with a previously exported backup. The payload
+   * comes from a file the user picked, so every field is validated and
+   * anything unknown is dropped rather than trusted.
+   */
+  async importProgress(body) {
+    assertObject(body);
+    const clean = structuredClone(EMPTY_PROGRESS);
+
+    const profile = body.profile;
+    if (profile !== undefined) {
+      assertObject(profile);
+      if (profile.name !== undefined) {
+        if (typeof profile.name !== 'string' || profile.name.length > NAME_MAX) {
+          throw new ValidationError(`"profile.name" must be a string of at most ${NAME_MAX} characters`);
+        }
+        clean.profile.name = profile.name.trim();
+      }
+      if (profile.language !== undefined) {
+        if (!LANGUAGES.includes(profile.language)) {
+          throw new ValidationError(`"profile.language" must be one of: ${LANGUAGES.join(', ')}`);
+        }
+        clean.profile.language = profile.language;
+      }
+      if (profile.theme !== undefined) {
+        if (!THEMES.includes(profile.theme)) {
+          throw new ValidationError(`"profile.theme" must be one of: ${THEMES.join(', ')}`);
+        }
+        clean.profile.theme = profile.theme;
+      }
+      if (profile.sound !== undefined) {
+        if (typeof profile.sound !== 'boolean') {
+          throw new ValidationError('"profile.sound" must be a boolean');
+        }
+        clean.profile.sound = profile.sound;
+      }
+      if (profile.onboarded !== undefined) {
+        if (typeof profile.onboarded !== 'boolean') {
+          throw new ValidationError('"profile.onboarded" must be a boolean');
+        }
+        clean.profile.onboarded = profile.onboarded;
+      }
+    }
+
+    if (body.answers !== undefined) {
+      assertObject(body.answers);
+      const entries = Object.entries(body.answers);
+      if (entries.length > MAX_IMPORT_ANSWERS) {
+        throw new ValidationError(`"answers" holds more than ${MAX_IMPORT_ANSWERS} entries`);
+      }
+      for (const [id, rec] of entries) {
+        assertId(id, 'answers key');
+        assertObject(rec);
+        const correct = Number(rec.correct);
+        const wrong = Number(rec.wrong);
+        if (!Number.isInteger(correct) || correct < 0 || !Number.isInteger(wrong) || wrong < 0) {
+          throw new ValidationError(`"answers.${id}" counters must be non-negative integers`);
+        }
+        if (typeof rec.lastCorrect !== 'boolean') {
+          throw new ValidationError(`"answers.${id}.lastCorrect" must be a boolean`);
+        }
+        clean.answers[id] = {
+          correct,
+          wrong,
+          lastCorrect: rec.lastCorrect,
+          last: typeof rec.last === 'string' ? rec.last.slice(0, 40) : '',
+        };
+      }
+    }
+
+    if (body.exams !== undefined) {
+      if (!Array.isArray(body.exams)) throw new ValidationError('"exams" must be an array');
+      if (body.exams.length > MAX_IMPORT_EXAMS) {
+        throw new ValidationError(`"exams" holds more than ${MAX_IMPORT_EXAMS} entries`);
+      }
+      for (const exam of body.exams) {
+        assertObject(exam);
+        const total = Number(exam.total);
+        const errors = Number(exam.errors);
+        if (!Number.isInteger(total) || total <= 0 || !Number.isInteger(errors) || errors < 0 || errors > total) {
+          throw new ValidationError('"exams[]" needs a valid total and errors count');
+        }
+        clean.exams.push({
+          date: typeof exam.date === 'string' ? exam.date.slice(0, 40) : new Date().toISOString(),
+          total,
+          errors,
+          passed: Boolean(exam.passed),
+        });
+      }
+    }
+
+    for (const field of ['mistakes', 'theoryRead']) {
+      if (body[field] === undefined) continue;
+      if (!Array.isArray(body[field])) throw new ValidationError(`"${field}" must be an array`);
+      if (body[field].length > MAX_IMPORT_ANSWERS) {
+        throw new ValidationError(`"${field}" is too long`);
+      }
+      clean[field] = body[field].map((id) => assertId(id, `${field}[]`));
+    }
+
+    if (body.streak !== undefined) {
+      assertObject(body.streak);
+      const current = Number(body.streak.current);
+      if (!Number.isInteger(current) || current < 0) {
+        throw new ValidationError('"streak.current" must be a non-negative integer');
+      }
+      clean.streak = {
+        current,
+        lastDay: typeof body.streak.lastDay === 'string' ? body.streak.lastDay.slice(0, 10) : '',
+      };
+    }
+
+    // Mistakes must stay consistent with the answers they refer to.
+    clean.mistakes = clean.mistakes.filter((id) => clean.answers[id] && !clean.answers[id].lastCorrect);
+
+    Object.assign(this.store.data, clean);
+    await this.store.persist();
     return this.snapshot();
   }
 }

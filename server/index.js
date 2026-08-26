@@ -45,6 +45,12 @@ async function handleApi(req, res, pathname) {
     return sendError(res, 404, 'Not found');
   }
 
+  if (req.method === 'POST' && pathname === '/api/progress/import') {
+    // Backups are far bigger than ordinary mutations: own body ceiling.
+    const body = await readJsonBody(req, config.maxImportBytes);
+    return sendJson(res, 200, await progress.importProgress(body));
+  }
+
   if (req.method === 'PUT' && pathname === '/api/progress/profile') {
     const body = await readJsonBody(req, config.maxBodyBytes);
     return sendJson(res, 200, { profile: await progress.updateProfile(body) });

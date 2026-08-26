@@ -44,6 +44,9 @@ export const config = {
   storageDir: path.resolve(ROOT, process.env.STORAGE_DIR || 'storage'),
   publicDir: path.join(ROOT, 'public'),
   maxBodyBytes: 256 * 1024,
+  // A full progress backup is ~1 MB at 7139 answers, so the import route
+  // gets its own, larger ceiling.
+  maxImportBytes: 8 * 1024 * 1024,
 };
 
 if (!Number.isInteger(config.port) || config.port < 0 || config.port > 65535) {

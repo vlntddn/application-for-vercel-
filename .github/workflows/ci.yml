@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # The lowest version we claim to support, plus current LTS.
+        node: ['18', '22']
+    name: tests (node ${{ matrix.node }})
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      # No install step on purpose: the app has zero runtime dependencies,
+      # so a green run here also proves that claim still holds.
+      - name: Fail if a dependency sneaked in
+        run: |
+          node -e "
+            const pkg = require('./package.json');
+            const deps = { ...pkg.dependencies, ...pkg.devDependencies };
+            if (Object.keys(deps).length) {
+              console.error('Dependencies found:', Object.keys(deps).join(', '));
+              process.exit(1);
+            }
+            console.log('Zero dependencies — ok');
+          "
+      - run: npm test
+
+  smoke:
+    runs-on: ubuntu-latest
+    name: server smoke test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Boot the server and check the key endpoints
+        run: |
+          node server/index.js &
+          for i in $(seq 1 30); do
+            curl -sf http://127.0.0.1:3000/api/health >/dev/null && break
+            sleep 1
+          done
+          set -e
+          for path in / /api/health /api/manifest /api/theory /api/lessons \
+                      /api/dictionary /api/progress /manifest.webmanifest; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "http://127.0.0.1:3000$path")
+            echo "$path -> $code"
+            [ "$code" = "200" ] || exit 1
+          done
