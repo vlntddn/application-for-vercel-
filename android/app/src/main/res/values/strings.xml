@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  NOTE: Gradle's manifestPlaceholders only reach AndroidManifest.xml, never
+  resources, so these values are literal. If the domain changes, update it
+  BOTH here and in app/build.gradle (twaHost).
+-->
+<resources>
+    <string name="app_name">Patente Pro</string>
+    <string name="default_url">https://application-for-vercel.vercel.app/</string>
+
+    <!-- Tells Chrome which website this app is allowed to render without a
+         URL bar. The site must serve the matching /.well-known/assetlinks.json. -->
+    <string name="asset_statements">
+        [{ \"relation\": [\"delegate_permission/common.handle_all_urls\"],
+           \"target\": {\"namespace\": \"web\", \"site\": \"https://application-for-vercel.vercel.app\"}}]
+    </string>
+</resources>

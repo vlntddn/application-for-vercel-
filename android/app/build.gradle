@@ -1,0 +1,58 @@
+plugins {
+    id 'com.android.application'
+}
+
+// The app is a Trusted Web Activity: it opens the hosted PWA full screen,
+// with no browser chrome, once Digital Asset Links verify the domain.
+// Everything the user sees comes from the site — see docs/PLAY-STORE.md.
+def twaHost = "application-for-vercel.vercel.app"
+
+android {
+    namespace 'app.patentepro.twa'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "app.patentepro.twa"
+        minSdk 21
+        targetSdk 35
+        versionCode 1
+        versionName "2.0.0"
+
+        // Placeholders reach AndroidManifest.xml only — the matching
+        // strings live in res/values/strings.xml and must be kept in sync.
+        manifestPlaceholders = [hostName: twaHost]
+    }
+
+    signingConfigs {
+        release {
+            // Filled from android/keystore.properties, which is git-ignored.
+            // See docs/PLAY-STORE.md for creating the keystore.
+            def props = new Properties()
+            def file = rootProject.file("keystore.properties")
+            if (file.exists()) {
+                props.load(new FileInputStream(file))
+                storeFile = rootProject.file(props['storeFile'])
+                storePassword = props['storePassword']
+                keyAlias = props['keyAlias']
+                keyPassword = props['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // Google's official TWA support library.
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0'
+}
