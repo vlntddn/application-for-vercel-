@@ -9,6 +9,16 @@ Local-first: a **zero-dependency Node.js backend** persists your progress on
 your machine. The UI is vanilla JS styled in **Minimal Brutalism** — hard
 borders, hard shadows, high contrast, sans-serif type.
 
+## Use it on your phone
+
+The app is also published as a static site, which a phone can install from the
+browser (**Share → Add to Home Screen**). There it keeps your progress in the
+phone itself — the same validated rules, no account, nothing sent anywhere.
+Move progress between devices with **Settings → Backup**.
+
+Hosting it yourself takes one import: point Vercel (or any static host) at this
+repository. `vercel.json` runs `node scripts/build-static.js` and serves `dist/`.
+
 ## Install as an app
 
 Works on **macOS, Windows and Linux**. The only prerequisite is
@@ -18,7 +28,7 @@ npm packages to download.
 ### Run it right away (one command, any OS)
 
 ```bash
-npx github:vlntddn/application-for-vercel-#claude/vibrant-gates-b12x31
+npx github:vlntddn/application-for-vercel-
 ```
 
 Starts the server and opens the app in its own window. Nothing is installed
@@ -33,21 +43,20 @@ desktop shortcuts on Windows).
 **macOS / Linux**
 
 ```bash
-git clone -b claude/vibrant-gates-b12x31 https://github.com/vlntddn/application-for-vercel-.git
-cd application-for-vercel- && ./install.sh --ref claude/vibrant-gates-b12x31
+git clone https://github.com/vlntddn/application-for-vercel-.git
+cd application-for-vercel- && ./install.sh
 ```
 
 **Windows** (PowerShell)
 
 ```powershell
-git clone -b claude/vibrant-gates-b12x31 https://github.com/vlntddn/application-for-vercel-.git
-cd application-for-vercel-; .\install.ps1 -Ref claude/vibrant-gates-b12x31
+git clone https://github.com/vlntddn/application-for-vercel-.git
+cd application-for-vercel-; .\install.ps1
 ```
 
 > **While the repository is private** the installer has to be cloned first, as
-> above, because `curl` cannot read a private raw URL. Once the repository is
-> public (or this branch is merged into `main`), the installers can bootstrap
-> themselves in a single command:
+> above, because `curl` cannot read a private raw URL. Make the repository
+> public and the installers bootstrap themselves in a single command:
 >
 > ```bash
 > curl -fsSL https://raw.githubusercontent.com/vlntddn/application-for-vercel-/main/install.sh | bash
