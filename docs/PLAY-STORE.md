@@ -4,9 +4,16 @@
 механизм Google для установки PWA из стора. Это не «обёртка-вебвью»: TWA
 запускает наш сайт в Chrome без адресной строки, с нашей иконкой и splash-экраном.
 
-⚠️ **Перед публикацией нужно решить вопрос лицензии банка вопросов**
-(источник QuizPatenteB). Для личного пользования это не проблема, но публикация
-7139 чужих вопросов в сторе — это распространение, и права на него нужны.
+**Лицензия банка вопросов проверена:** источник Ed0ardo/QuizPatenteB —
+**MIT, © 2023 Edoardo**. Коммерческое использование и распространение
+разрешены при условии, что копия лицензии идёт с приложением: это сделано
+(`THIRD-PARTY-NOTICES.md` и `/credits.html`, ссылка из Settings → ABOUT).
+
+Остаётся отдельный вопрос: MIT покрывает работу Edoardo, а сами тексты
+вопросов — министерские. Обычное основание для их воспроизведения —
+Legge 633/1941 art. 5 (тексты официальных актов государства вне авторского
+права), но это не юридическая консультация. Перед коммерческим релизом
+стоит подтвердить у юриста.
 
 ---
 
@@ -22,7 +29,8 @@
 | Политика приватности по URL | ✅ `public/privacy.html` → `https://<домен>/privacy.html` |
 | Манифест с `id`, `orientation`, `screenshots` | ✅ `public/manifest.webmanifest` |
 | Digital Asset Links | ⏳ нужен отпечаток ключа — см. шаг 3 |
-| Android-проект (.aab) | ⏳ следующий шаг |
+| Android-проект TWA | ✅ `android/` — собрать `./gradlew bundleRelease` |
+| Лицензия банка вопросов | ✅ MIT, атрибуция добавлена (см. ниже) |
 
 ---
 
@@ -44,34 +52,62 @@ TWA привязывается к домену. Сейчас это `application
 он не зависит от хостинга и выглядит солиднее в листинге.
 Домен подключается в Vercel → Settings → Domains.
 
-## Шаг 3. Digital Asset Links (иначе будет видна адресная строка)
+## Шаг 3. Сборка .aab (Android SDK у вас уже есть)
 
-1. При первой сборке Play создаст ключ подписи (**Play App Signing**).
-2. В Play Console: *Release → Setup → App signing* — скопировать
-   **SHA-256 certificate fingerprint**.
-3. Создать файл `public/.well-known/assetlinks.json` по шаблону
-   `docs/store/assetlinks.template.json`, подставив отпечаток и package name.
-4. Задеплоить. Проверить: `https://<домен>/.well-known/assetlinks.json`
-   должен отдаваться как JSON.
-
-Если отпечаток не совпадёт — приложение откроется с адресной строкой Chrome
-сверху. Это самый частый косяк при первом релизе TWA.
-
-## Шаг 4. Сборка .aab
-
-Android-проект генерируется из манифеста PWA. Нужны JDK 17 и Android SDK.
+Проект TWA лежит в репозитории: **`android/`**. Он написан вручную и
+закоммичен — версии зафиксированы, ничего не генерируется на лету.
 
 ```bash
-# самый простой путь — Bubblewrap от Google
-npx @bubblewrap/cli init --manifest https://<домен>/manifest.webmanifest
-npx @bubblewrap/cli build
-# → app-release-bundle.aab, его и загружают в Play Console
+cd android
+
+# 1. Ключ подписи (один раз; храните его — потерять нельзя)
+keytool -genkey -v -keystore patente-pro-release.jks \
+        -keyalg RSA -keysize 2048 -validity 10000 -alias patente-pro
+
+# 2. Прописать пароли
+cp keystore.properties.example keystore.properties   # и заполнить
+
+# 3. Указать, где Android SDK
+echo "sdk.dir=/путь/к/Android/Sdk" > local.properties
+
+# 4. Собрать
+gradle wrapper           # если нет ./gradlew
+./gradlew bundleRelease
+# → app/build/outputs/bundle/release/app-release.aab
 ```
 
-Bubblewrap — инструмент сборки, а не зависимость приложения: в `package.json`
-он не добавляется, правило «ноль зависимостей» не нарушается.
+Что уже настроено: package `app.patentepro.twa`, versionCode 1,
+compileSdk/targetSdk 35, minSdk 21, портретная ориентация, иконки во всех
+плотностях + adaptive-иконка, splash в цветах приложения, никаких
+разрешений (приложение ничего не запрашивает).
 
-Package name предлагается: `app.patentepro.twa` (менять после публикации нельзя).
+`keystore.properties`, `*.jks` и `local.properties` — в `.gitignore`,
+в репозиторий не попадут.
+
+⚠️ Если SDK не содержит platform 35 — Gradle скажет об этом прямо;
+доустановите через SDK Manager или понизьте `compileSdk`/`targetSdk`
+(но Play требует свежий targetSdk для новых приложений).
+
+**Альтернатива:** `npx @bubblewrap/cli init --manifest https://<домен>/manifest.webmanifest`
+сгенерирует свой проект. Наш уже готов, так что это только запасной путь.
+
+## Шаг 4. Digital Asset Links (иначе будет видна адресная строка)
+
+1. Загрузите первый `.aab` в Play Console — Google создаст ключ подписи
+   (**Play App Signing**).
+2. *Release → Setup → App signing* → скопировать **SHA-256 certificate
+   fingerprint** (именно ключа Google, а не upload-ключа).
+3. Сгенерировать файл и задеплоить:
+
+```bash
+node scripts/make-assetlinks.js "AB:CD:...:12"
+git add public/.well-known/assetlinks.json && git commit -m "Add asset links" && git push
+```
+
+4. Проверить: `curl https://<домен>/.well-known/assetlinks.json` отдаёт JSON.
+
+Если отпечаток не совпадёт — приложение откроется с адресной строкой Chrome
+сверху. Это самый частый косяк первого релиза TWA.
 
 ## Шаг 5. Листинг в сторе
 

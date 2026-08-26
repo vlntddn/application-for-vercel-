@@ -47,8 +47,10 @@
 - [x] Материалы листинга: feature graphic 1024×500, 4 скриншота 1080×1920,
       тексты названия/краткого/полного описания (docs/PLAY-STORE.md)
 - [x] Политика приватности по URL (/privacy.html) — обязательна для Play
-- [ ] Android-проект TWA (.aab через Bubblewrap), package app.patentepro.twa
+- [x] Android-проект TWA в `android/` (package app.patentepro.twa, targetSdk 35,
+      иконки всех плотностей + adaptive, splash, ноль разрешений)
 - [ ] assetlinks.json с реальным SHA-256 после Play App Signing
+      (генератор готов: `node scripts/make-assetlinks.js <отпечаток>`)
 - [x] Лицензия банка вопросов проверена: MIT (Ed0ardo/QuizPatenteB, © 2023 Edoardo).
       Коммерческое использование разрешено ПРИ УСЛОВИИ включения копии лицензии —
       добавлены THIRD-PARTY-NOTICES.md и /credits.html (ссылка из настроек)

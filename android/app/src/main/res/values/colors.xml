@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Matches the web app's own tokens: black chrome, paper background. -->
+    <color name="colorPrimary">#000000</color>
+    <color name="backgroundColor">#F4F1EA</color>
+    <color name="ic_launcher_background">#F4F1EA</color>
+</resources>
