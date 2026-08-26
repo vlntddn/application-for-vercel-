@@ -1,215 +1,568 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PATENTE PRO — АРХИТЕКТУРА</title>
+<title>How Patente Pro Works — Architecture</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800;900&family=IBM+Plex+Mono:wght@400;600&display=swap">
+
 <style>
   :root {
-    --ink:#000; --paper:#f4f1ea; --surface:#fff; --accent:#ff4d00;
-    --ok:#00a651; --warn:#ffd000;
+    --ink: #0a0a0a;
+    --paper: #f4f1ea;
+    --surface: #ffffff;
+    --accent: #ff4d00;
+    --ok: #00a651;
+    --bad: #e4002b;
+    --warn: #ffd000;
+    --muted: rgba(10, 10, 10, 0.58);
+    --hair: rgba(10, 10, 10, 0.14);
+    --border: 3px solid var(--ink);
+    --border-thin: 2px solid var(--ink);
+    --shadow: 6px 6px 0 var(--ink);
+    --shadow-sm: 3px 3px 0 var(--ink);
+    --sans: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
   }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; background:var(--paper); color:var(--ink); padding:32px; max-width:1000px; margin:0 auto; line-height:1.6; }
-  h1 { font-size:2.4rem; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; border-bottom:4px solid var(--ink); padding-bottom:12px; margin-bottom:8px; }
-  h1 span { color:var(--accent); }
-  h2 { font-size:1rem; font-weight:900; letter-spacing:0.15em; text-transform:uppercase; margin:40px 0 16px; background:var(--ink); color:var(--paper); display:inline-block; padding:6px 14px; }
-  h3 { font-size:0.85rem; font-weight:900; letter-spacing:0.1em; text-transform:uppercase; margin:24px 0 8px; }
-  p { margin-bottom:12px; }
-  .lede { color:rgba(0,0,0,0.5); font-weight:600; margin-bottom:24px; }
-  .panel { background:var(--surface); border:3px solid var(--ink); box-shadow:6px 6px 0 var(--ink); padding:20px; margin-bottom:24px; }
-  pre { background:var(--ink); color:var(--paper); padding:16px; overflow-x:auto; font-size:0.85rem; line-height:1.5; border:3px solid var(--ink); margin-bottom:16px; }
-  code { font-family:ui-monospace,Menlo,Consolas,monospace; }
-  p code, li code, td code { background:var(--warn); padding:1px 6px; font-size:0.85em; font-weight:700; }
-  table { width:100%; border-collapse:collapse; margin-bottom:16px; background:var(--surface); }
-  th, td { border:2px solid var(--ink); padding:8px 12px; text-align:left; font-size:0.9rem; vertical-align:top; }
-  th { background:var(--ink); color:var(--paper); font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; }
-  ul, ol { margin:0 0 16px 24px; }
-  li { margin-bottom:6px; }
-  .flow { display:flex; flex-direction:column; gap:0; margin-bottom:16px; }
-  .flow-step { border:3px solid var(--ink); background:var(--surface); padding:10px 16px; font-weight:700; font-size:0.9rem; }
-  .flow-arrow { text-align:center; font-size:1.3rem; font-weight:900; padding:2px 0; }
-  .tag { display:inline-block; font-size:0.65rem; font-weight:900; letter-spacing:0.1em; border:2px solid var(--ink); padding:2px 8px; background:var(--warn); }
-  .tag.green { background:var(--ok); color:#fff; }
-  .tag.orange { background:var(--accent); color:#fff; }
-  .cols { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-  @media (max-width:760px){ .cols { grid-template-columns:1fr; } }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #f4f1ea;
+      --paper: #0c0c0c;
+      --surface: #191919;
+      --muted: rgba(244, 241, 234, 0.62);
+      --hair: rgba(244, 241, 234, 0.18);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ink: #f4f1ea;
+    --paper: #0c0c0c;
+    --surface: #191919;
+    --muted: rgba(244, 241, 234, 0.62);
+    --hair: rgba(244, 241, 234, 0.18);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    width: min(1080px, 100%);
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    border: var(--border);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+    text-wrap: balance;
+  }
+
+  h1 .dot { color: var(--accent); }
+
+  .lede {
+    margin: 0;
+    max-width: 64ch;
+    font-size: 1.06rem;
+    font-weight: 500;
+  }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .fact {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    border: var(--border-thin);
+    padding: 5px 10px;
+    white-space: nowrap;
+  }
+
+  .fact.hot { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  /* ---------- sections ---------- */
+
+  section { display: flex; flex-direction: column; gap: 18px; }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(1.25rem, 3vw, 1.7rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  .section-head { display: flex; flex-direction: column; gap: 6px; }
+
+  p { margin: 0; max-width: 68ch; }
+
+  .note { color: var(--muted); font-size: 0.95rem; }
+
+  /* ---------- figures ---------- */
+
+  figure {
+    margin: 0;
+    border: var(--border);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-x: auto;
+  }
+
+  figure svg {
+    display: block;
+    width: 100%;
+    min-width: 640px;
+    max-width: 100%;
+    height: auto;
+    color: var(--ink);
+  }
+
+  figcaption {
+    font-size: 0.9rem;
+    color: var(--muted);
+    max-width: 70ch;
+    border-top: 1px solid var(--hair);
+    padding-top: 12px;
+  }
+
+  .svg-box { fill: var(--surface); stroke: currentColor; stroke-width: 2.5; }
+  .svg-box-alt { fill: none; stroke: currentColor; stroke-width: 2.5; stroke-dasharray: 7 5; }
+  .svg-hot { stroke: var(--accent); }
+  .svg-fill-hot { fill: var(--accent); }
+  .svg-t { fill: currentColor; font-family: var(--sans); font-size: 13px; font-weight: 700; }
+  .svg-t-sm { fill: currentColor; font-family: var(--mono); font-size: 11px; font-weight: 400; opacity: 0.72; }
+  .svg-t-lab { fill: currentColor; font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; }
+  .svg-t-hot { fill: var(--accent); font-family: var(--mono); font-size: 11px; font-weight: 600; }
+  .svg-line { stroke: currentColor; stroke-width: 2.5; fill: none; }
+  .svg-line-hot { stroke: var(--accent); stroke-width: 2.5; fill: none; }
+  .svg-hair { stroke: currentColor; stroke-width: 1.5; stroke-dasharray: 5 5; opacity: 0.35; }
+
+  /* ---------- tables ---------- */
+
+  .table-wrap { overflow-x: auto; border: var(--border); box-shadow: var(--shadow); background: var(--surface); }
+
+  table { border-collapse: collapse; width: 100%; min-width: 560px; }
+
+  th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--hair); vertical-align: top; }
+
+  thead th {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    border-bottom: var(--border-thin);
+    white-space: nowrap;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  td code, .path {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  td:first-child { white-space: nowrap; }
+
+  /* ---------- rules list ---------- */
+
+  .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+
+  .rule {
+    border: var(--border-thin);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .rule h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+
+  .rule p { font-size: 0.9rem; color: var(--muted); }
+
+  .rule.accent { border-left: 8px solid var(--accent); }
+
+  /* ---------- callout ---------- */
+
+  .callout {
+    border: var(--border);
+    border-left: 12px solid var(--accent);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .callout h2 { font-size: 1.15rem; }
+
+  ol.steps { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+  ol.steps li { max-width: 66ch; }
+
+  footer {
+    border-top: var(--border);
+    padding-top: 18px;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .wrap { padding: 24px 14px 60px; gap: 34px; }
+    .masthead { padding: 20px; }
+    figure { padding: 14px; }
+  }
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<h1>PATENTE<span>PRO</span> — АРХИТЕКТУРА</h1>
-<p class="lede">КАК УСТРОЕНО ПРИЛОЖЕНИЕ, В КАКОЙ ЛОГИКЕ ДЕЛАТЬ ДОРАБОТКИ</p>
+  <header class="masthead">
+    <span class="eyebrow">Patente Pro · Architecture</span>
+    <h1>How Patente&nbsp;Pro works<span class="dot">.</span></h1>
+    <p class="lede">
+      A trainer for the Italian driving-licence theory exam. It runs two ways from one
+      codebase: as a desktop app with a local server that owns a progress file, and as a
+      hosted web app that a phone installs and keeps its progress inside. The rules that
+      guard every write are the same module in both.
+    </p>
+    <div class="facts">
+      <span class="fact hot">0 npm dependencies</span>
+      <span class="fact">7139 questions</span>
+      <span class="fact">25 theory lessons</span>
+      <span class="fact">413 sign images, local</span>
+      <span class="fact">36 tests</span>
+      <span class="fact">works offline</span>
+    </div>
+  </header>
 
-<h2>1. Общая картина</h2>
-<div class="panel">
-<p>Приложение — классический <strong>клиент-сервер</strong>, максимально упрощённый для надёжной локальной работы:</p>
-<div class="flow">
-  <div class="flow-step">БРАУЗЕР — фронтенд: vanilla JS, без фреймворков и без сборки. Отрисовывает экраны, ходит в API через <code>fetch</code></div>
-  <div class="flow-arrow">⇅ HTTP (JSON)</div>
-  <div class="flow-step">NODE.JS СЕРВЕР — ноль npm-зависимостей, только встроенный <code>node:http</code>. Раздаёт статику, отдаёт банк вопросов, валидирует и сохраняет прогресс</div>
-  <div class="flow-arrow">⇅ файловая система</div>
-  <div class="flow-step">ДИСК — <code>data/</code> (вопросы и теория, только чтение) + <code>storage/progress.json</code> (прогресс пользователя, чтение/запись)</div>
+  <section>
+    <div class="section-head">
+      <span class="eyebrow">The core idea</span>
+      <h2>Two hosts, one set of rules</h2>
+    </div>
+    <p>
+      The difference between the two modes is only <em>where the write lands</em>. On a computer
+      it lands in a file that the Node server owns; on a phone it lands in that phone's own
+      storage. Everything that decides whether a write is <em>allowed</em> — validation, counters,
+      mistakes, streak — is one module loaded by both.
+    </p>
+
+    <figure>
+      <svg viewBox="0 0 900 405" role="img" aria-label="Two deployment modes side by side. Local app: browser UI sends an answer over HTTP to the Node server, which writes progress.json to disk. Hosted PWA: a CDN delivers the app and question bank to the phone, and answers are written to localStorage on the phone without a network call. Both the Node server and the phone load the same domain module that validates every write.">
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+          </marker>
+          <marker id="ah-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff4d00"></path>
+          </marker>
+        </defs>
+
+        <line class="svg-hair" x1="450" y1="14" x2="450" y2="290"></line>
+
+        <text class="svg-t-lab" x="230" y="26" text-anchor="middle">LOCAL APP — YOUR COMPUTER</text>
+        <text class="svg-t-lab" x="670" y="26" text-anchor="middle">HOSTED — YOUR PHONE</text>
+
+        <rect class="svg-box" x="90" y="44" width="280" height="52" rx="0"></rect>
+        <text class="svg-t" x="230" y="68" text-anchor="middle">Browser UI</text>
+        <text class="svg-t-sm" x="230" y="85" text-anchor="middle">localhost:3000</text>
+
+        <rect class="svg-box" x="530" y="44" width="280" height="52"></rect>
+        <text class="svg-t" x="670" y="68" text-anchor="middle">Static files on a CDN</text>
+        <text class="svg-t-sm" x="670" y="85" text-anchor="middle">HTTPS · dist/</text>
+
+        <line class="svg-line" x1="230" y1="96" x2="230" y2="132" marker-end="url(#ah)"></line>
+        <text class="svg-t-sm" x="240" y="118">answer, over HTTP</text>
+
+        <line class="svg-line" x1="670" y1="96" x2="670" y2="132" marker-end="url(#ah)"></line>
+        <text class="svg-t-sm" x="680" y="118">app + questions, cached</text>
+
+        <rect class="svg-box" x="90" y="132" width="280" height="52"></rect>
+        <text class="svg-t" x="230" y="156" text-anchor="middle">Node server</text>
+        <text class="svg-t-sm" x="230" y="173" text-anchor="middle">node:http · no dependencies</text>
+
+        <rect class="svg-box" x="530" y="132" width="280" height="52"></rect>
+        <text class="svg-t" x="670" y="156" text-anchor="middle">Phone UI — installed PWA</text>
+        <text class="svg-t-sm" x="670" y="173" text-anchor="middle">same frontend files</text>
+
+        <line class="svg-line" x1="230" y1="184" x2="230" y2="220" marker-end="url(#ah)"></line>
+        <text class="svg-t-sm" x="240" y="206">atomic write</text>
+
+        <line class="svg-line-hot" x1="670" y1="184" x2="670" y2="220" marker-end="url(#ah-hot)"></line>
+        <text class="svg-t-hot" x="680" y="206">never leaves the phone</text>
+
+        <rect class="svg-box" x="90" y="220" width="280" height="52"></rect>
+        <text class="svg-t" x="230" y="244" text-anchor="middle">progress.json</text>
+        <text class="svg-t-sm" x="230" y="261" text-anchor="middle">a file you can copy or back up</text>
+
+        <rect class="svg-box svg-hot" x="530" y="220" width="280" height="52"></rect>
+        <text class="svg-t" x="670" y="244" text-anchor="middle">localStorage</text>
+        <text class="svg-t-sm" x="670" y="261" text-anchor="middle">this phone only</text>
+
+        <rect class="svg-box-alt" x="230" y="330" width="440" height="56"></rect>
+        <text class="svg-t" x="450" y="354" text-anchor="middle">One domain module — the rules</text>
+        <text class="svg-t-sm" x="450" y="371" text-anchor="middle">public/js/domain/progress.js · zero imports, runs anywhere</text>
+
+        <path class="svg-line" stroke-dasharray="6 5" d="M 230 358 L 52 358 L 52 158 L 86 158" marker-end="url(#ah)"></path>
+        <path class="svg-line" stroke-dasharray="6 5" d="M 670 358 L 848 358 L 848 158 L 814 158" marker-end="url(#ah)"></path>
+        <text class="svg-t-sm" x="450" y="320" text-anchor="middle">loaded by both — validates every write</text>
+      </svg>
+      <figcaption>
+        The two modes differ by one hop and one destination. Because the domain module has no
+        imports and touches no Node APIs, the phone enforces the same limits the server does —
+        a bad language code or an impossible exam score is rejected in both places by the same lines.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="eyebrow">The interesting mechanism</span>
+      <h2>What happens when you answer a question</h2>
+    </div>
+    <p>
+      In hosted mode the answer is written in the page and there is nothing to fail. In local
+      mode it crosses a network, so the app assumes that hop can break — mid-session, mid-exam —
+      and never loses the answer when it does.
+    </p>
+
+    <figure>
+      <svg viewBox="0 0 900 300" role="img" aria-label="Flow of one answer in local mode. From the tapped answer the app checks whether the server responded. If yes, the server validates and writes it and the UI updates. If no, the answer is queued in localStorage and mirrored optimistically in the interface, then retried after twenty seconds, when the network returns, when the tab becomes visible, or at next start, draining into the server in order.">
+        <defs>
+          <marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"></path>
+          </marker>
+          <marker id="ah2-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#ff4d00"></path>
+          </marker>
+        </defs>
+
+        <rect class="svg-box" x="24" y="118" width="150" height="58"></rect>
+        <text class="svg-t" x="99" y="143" text-anchor="middle">Answer tapped</text>
+        <text class="svg-t-sm" x="99" y="160" text-anchor="middle">VERO / FALSO</text>
+
+        <line class="svg-line" x1="174" y1="147" x2="214" y2="147" marker-end="url(#ah2)"></line>
+
+        <rect class="svg-box" x="214" y="118" width="170" height="58"></rect>
+        <text class="svg-t" x="299" y="143" text-anchor="middle">Server reachable?</text>
+        <text class="svg-t-sm" x="299" y="160" text-anchor="middle">transport error only</text>
+
+        <path class="svg-line" d="M 384 138 L 424 138 L 424 74 L 456 74" marker-end="url(#ah2)"></path>
+        <text class="svg-t-sm" x="392" y="100">yes</text>
+
+        <rect class="svg-box" x="456" y="46" width="200" height="58"></rect>
+        <text class="svg-t" x="556" y="71" text-anchor="middle">Validated &amp; written</text>
+        <text class="svg-t-sm" x="556" y="88" text-anchor="middle">temp file, then rename</text>
+
+        <line class="svg-line" x1="656" y1="75" x2="700" y2="75" marker-end="url(#ah2)"></line>
+
+        <rect class="svg-box" x="700" y="46" width="176" height="58"></rect>
+        <text class="svg-t" x="788" y="71" text-anchor="middle">UI updated</text>
+        <text class="svg-t-sm" x="788" y="88" text-anchor="middle">from the server snapshot</text>
+
+        <path class="svg-line-hot" d="M 384 156 L 424 156 L 424 226 L 456 226" marker-end="url(#ah2-hot)"></path>
+        <text class="svg-t-hot" x="392" y="200">no</text>
+
+        <rect class="svg-box svg-hot" x="456" y="196" width="200" height="62"></rect>
+        <text class="svg-t" x="556" y="220" text-anchor="middle">Queued on device</text>
+        <text class="svg-t-sm" x="556" y="237" text-anchor="middle">+ shown as if it saved</text>
+
+        <line class="svg-line-hot" x1="656" y1="227" x2="700" y2="227" marker-end="url(#ah2-hot)"></line>
+
+        <rect class="svg-box svg-hot" x="700" y="196" width="176" height="62"></rect>
+        <text class="svg-t" x="788" y="220" text-anchor="middle">Retried</text>
+        <text class="svg-t-sm" x="788" y="237" text-anchor="middle">20s · online · focus</text>
+
+        <path class="svg-line-hot" stroke-dasharray="6 5" d="M 788 196 L 788 160 L 556 160 L 556 106" marker-end="url(#ah2-hot)"></path>
+        <text class="svg-t-hot" x="672" y="152" text-anchor="middle">drains in order</text>
+      </svg>
+      <figcaption>
+        Retries also run when the app starts. Only a transport failure takes the orange path — a rejected value is a bug in the request,
+        not something to retry, so it is never queued. A finished mock exam travels this path too:
+        the result and its thirty answers queue together and replay in order.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="eyebrow">The map</span>
+      <h2>What each part is responsible for</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Part</th><th>Responsibility</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="path">public/js/domain/</span></td>
+            <td>The rules: validation, answer counters, mistakes, streak, import. Pure JavaScript, no imports — which is why it runs on the server and in the phone alike.</td>
+          </tr>
+          <tr>
+            <td><span class="path">server/</span></td>
+            <td>An HTTP server on <span class="path">node:http</span>: routing, the progress file (written to a temp file then renamed, so a crash cannot corrupt it), a corrupt file quarantined rather than wiped, path-traversal protection, and a bind to 127.0.0.1.</td>
+          </tr>
+          <tr>
+            <td><span class="path">public/js/</span></td>
+            <td>The whole interface: a hash router, screens, the offline queue, sounds. No framework and no build step — the files the browser loads are the files in the repository.</td>
+          </tr>
+          <tr>
+            <td><span class="path">public/sw.js</span></td>
+            <td>The service worker. Code is network-first so updates land immediately; study content is served from cache and refreshed behind you, which is what makes the app work with no connection.</td>
+          </tr>
+          <tr>
+            <td><span class="path">data/</span></td>
+            <td>Read-only content: 7139 questions in 26 topics, the theory manual, the lessons, the dictionary, and all 413 sign images — nothing is fetched from anyone else at runtime.</td>
+          </tr>
+          <tr>
+            <td><span class="path">bin/</span></td>
+            <td>The desktop launcher: picks a free port, starts the server, waits for it to answer, then opens a chromeless window so it behaves like an installed application.</td>
+          </tr>
+          <tr>
+            <td><span class="path">scripts/build-static.js</span></td>
+            <td>Assembles <span class="path">dist/</span> for hosting and stamps the marker that puts the frontend into phone mode. Used only when deploying; local development stays build-free.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="eyebrow">Where your progress lives</span>
+      <h2>One file, or one phone</h2>
+    </div>
+    <p>
+      Progress is never mixed between machines and never sent anywhere. Moving it is deliberate:
+      export a backup file, import it on the other device — the same validated path an app update uses.
+    </p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Where you run it</th><th>Progress lives in</th><th>Survives</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>macOS app</td><td><span class="path">~/Library/Application Support/PatentePro</span></td><td>reinstalls and updates</td></tr>
+          <tr><td>Windows app</td><td><span class="path">%APPDATA%\PatentePro</span></td><td>reinstalls and updates</td></tr>
+          <tr><td>Linux app</td><td><span class="path">~/.local/share/patente-pro</span></td><td>reinstalls and updates</td></tr>
+          <tr><td>From source</td><td><span class="path">./storage/progress.json</span></td><td>restarts</td></tr>
+          <tr><td>Phone (hosted)</td><td>browser storage on that phone</td><td>closing the app; not clearing site data</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <span class="eyebrow">Constraints held on purpose</span>
+      <h2>The rules that keep it simple</h2>
+    </div>
+    <div class="rules">
+      <div class="rule accent">
+        <h3>No dependencies</h3>
+        <p>Nothing to install, nothing to audit, nothing that breaks in two years. CI fails the build if a dependency ever appears.</p>
+      </div>
+      <div class="rule">
+        <h3>One place mutates data</h3>
+        <p>Every change goes through the domain module. A screen can only report what happened; it cannot invent state.</p>
+      </div>
+      <div class="rule">
+        <h3>Writes are atomic</h3>
+        <p>Progress is written to a temp file and renamed. A crash mid-write leaves the previous file intact, never half of one.</p>
+      </div>
+      <div class="rule">
+        <h3>Text is text</h3>
+        <p>Question text reaches the page as text nodes, never as HTML, so content can never become markup.</p>
+      </div>
+      <div class="rule">
+        <h3>The exam is the exam</h3>
+        <p>30 questions, 20 minutes, 3 errors — the official format, with the translation hidden until you ask for it.</p>
+      </div>
+      <div class="rule">
+        <h3>Offline is normal</h3>
+        <p>Images and questions are local, the shell is cached, and answers given with no connection queue and sync later.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="callout">
+    <span class="eyebrow">Publishing it</span>
+    <h2>What turns this into a phone app</h2>
+    <ol class="steps">
+      <li>A host runs <span class="path">node scripts/build-static.js</span> and serves <span class="path">dist/</span> — 458 files, 8.1&nbsp;MB, no server process.</li>
+      <li>The build stamps the standalone marker, so the frontend keeps progress in the phone instead of calling an API that isn't there.</li>
+      <li>HTTPS makes the service worker legal, so the phone offers <em>Add to Home Screen</em> and the app opens without browser chrome.</li>
+      <li>After the first load the question bank is cached: the app keeps working on the metro with no signal.</li>
+    </ol>
+  </div>
+
+  <footer>
+    Patente Pro · local-first · zero dependencies · <span class="path">docs/ARCHITECTURE.html</span>
+  </footer>
+
 </div>
-<p>Ключевой принцип: <strong>вся логика изменения данных живёт на сервере</strong> (<code>server/progress.js</code>). Фронтенд никогда не решает сам, что записать — он только <em>сообщает события</em> («ответил на вопрос X неправильно», «сдал экзамен с 2 ошибками»), а сервер валидирует и обновляет состояние. Поэтому клиент можно менять как угодно — данные не сломаются.</p>
-</div>
-
-<h2>2. Структура каталогов</h2>
-<pre>
-server/                  ← БЭКЕНД
-  index.js               маршрутизация HTTP, обработка ошибок, запуск/остановка
-  config.js              чтение .env → объект config (порт, хост, пути)
-  progress.js            ★ ВСЯ доменная логика: ответы, экзамены, стрик, валидация
-  store.js               атомарная запись JSON на диск (универсальный класс)
-  http-helpers.js        отправка JSON-ответов, чтение тела запроса с лимитом
-  static.js              раздача файлов с защитой от path traversal
-
-public/                  ← ФРОНТЕНД (раздаётся сервером как есть)
-  index.html             единственная страница: шапка, навигация, пустой &lt;main&gt;
-  styles.css             вся дизайн-система Minimal Brutalism (CSS-переменные)
-  js/main.js             ★ роутер: hash в адресе → какая view рисуется
-  js/views.js            ★ все экраны (каждый — функция renderXxx(root))
-  js/state.js            общее состояние + кеш вопросов + загрузчики
-  js/api.js              все вызовы к серверу в одном месте
-  js/ui.js               хелпер el() для создания DOM + мелкие утилиты
-
-data/                    ← ДАННЫЕ (только чтение, в git)
-  manifest.json          список 26 тем + количество вопросов
-  questions/*.json       банк 7139 вопросов по темам
-  theory.json            25 глав теории с переводами en/ru/zh
-
-storage/                 ← ДАННЫЕ ПОЛЬЗОВАТЕЛЯ (создаётся на лету, НЕ в git)
-  progress.json          весь прогресс: профиль, ответы, ошибки, экзамены
-
-tests/progress.test.js   тесты доменной логики (node --test)
-legacy/                  старая скомпилированная версия (референс)
-</pre>
-
-<h2>3. Как живёт фронтенд</h2>
-<div class="panel">
-<h3>Роутинг — адресная строка решает всё</h3>
-<p>Навигация работает через <code>#hash</code>: <code>#/practice</code>, <code>#/theory/ch3</code>, <code>#/exam</code>… В <code>main.js</code> лежит таблица «регулярка → функция отрисовки». Браузерное событие <code>hashchange</code> вызывает <code>route()</code>, тот находит совпадение и вызывает нужную <code>renderXxx(view)</code>.</p>
-<div class="flow">
-  <div class="flow-step">Пользователь кликает ссылку <code>&lt;a href="#/practice"&gt;</code></div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-step">Браузер меняет hash → событие <code>hashchange</code></div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-step"><code>route()</code> в main.js находит маршрут в таблице</div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-step"><code>renderPracticeList(view)</code> из views.js перерисовывает &lt;main&gt;</div>
-</div>
-<h3>Отрисовка — функции вместо фреймворка</h3>
-<p>Каждый экран — функция, которая собирает DOM хелпером <code>el()</code> и вставляет в <code>&lt;main&gt;</code> через <code>clear()</code>. Никакого virtual DOM: при изменении данных функция просто вызывается заново. Текст вставляется как <em>текстовые узлы</em> (не innerHTML) — XSS невозможен.</p>
-<pre>el('div.card', {},                       // тег.класс.класс
-  el('h2', {}, 'QUESTIONS MASTERED'),    // дети — узлы или строки
-  el('p.stat-value.ok', {}, '124'),
-)</pre>
-<h3>Состояние — один объект + кеши</h3>
-<p>В <code>state.js</code> живёт объект <code>state</code>: снимок прогресса с сервера (<code>state.progress</code>), манифест тем и кеш загруженных вопросов (<code>Map</code> по теме — каждая тема скачивается один раз). После каждой мутации сервер возвращает свежий снимок, и фронт просто заменяет <code>state.progress</code> целиком — никакой ручной синхронизации.</p>
-</div>
-
-<h2>4. Как живёт бэкенд</h2>
-<div class="panel">
-<p>Один HTTP-сервер с двумя «крыльями»: всё, что начинается с <code>/api/</code> — обрабатывает <code>handleApi()</code>, остальное — раздача файлов из <code>public/</code>.</p>
-<h3>API</h3>
-<table>
-<tr><th>Метод</th><th>Путь</th><th>Что делает</th></tr>
-<tr><td>GET</td><td><code>/api/manifest</code></td><td>Список тем (+ это whitelist допустимых slug)</td></tr>
-<tr><td>GET</td><td><code>/api/questions/:slug</code></td><td>Вопросы темы (slug проверяется по манифесту)</td></tr>
-<tr><td>GET</td><td><code>/api/theory</code></td><td>Учебник теории</td></tr>
-<tr><td>GET</td><td><code>/api/progress</code></td><td>Снимок прогресса + посчитанная статистика</td></tr>
-<tr><td>PUT</td><td><code>/api/progress/profile</code></td><td>Имя / язык / тема / онбординг</td></tr>
-<tr><td>POST</td><td><code>/api/progress/answers</code></td><td>Пакет ответов (≤100): счётчики, ошибки, стрик</td></tr>
-<tr><td>POST</td><td><code>/api/progress/exams</code></td><td>Результат экзамена</td></tr>
-<tr><td>POST</td><td><code>/api/progress/theory</code></td><td>Глава прочитана</td></tr>
-<tr><td>DELETE</td><td><code>/api/progress</code></td><td>Полный сброс</td></tr>
-</table>
-<h3>Путь одной записи (ответ на вопрос)</h3>
-<div class="flow">
-  <div class="flow-step">Фронт: <code>api.recordAnswers([{id, correct:false}])</code> → POST /api/progress/answers</div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-step">index.js: <code>readJsonBody()</code> — лимит 256 КБ, парс JSON</div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-step">progress.js: валидация (id — строка, correct — boolean, ≤100 шт.) — иначе 422</div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-step">progress.js: обновить счётчики, список ошибок, стрик дня</div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-step">store.js: записать ВО ВРЕМЕННЫЙ файл → атомарно переименовать в progress.json</div>
-  <div class="flow-arrow">↓</div>
-  <div class="flow-step">Ответ: свежий снимок прогресса → фронт кладёт его в state.progress</div>
-</div>
-<h3>Почему данные не теряются</h3>
-<ul>
-  <li><strong>Атомарная запись:</strong> temp-файл + rename — при падении в середине записи старый файл остаётся целым.</li>
-  <li><strong>Очередь записи:</strong> записи сериализованы — два одновременных запроса не перемешаются.</li>
-  <li><strong>Карантин:</strong> если progress.json повреждён (рукой, диском) — он откладывается в <code>progress.json.corrupt.&lt;время&gt;</code>, сервер стартует с чистого, ничего не перезаписывая.</li>
-  <li><strong>Graceful shutdown:</strong> Ctrl+C ждёт, пока очередь записи дойдёт до диска.</li>
-</ul>
-</div>
-
-<h2>5. Модель данных (storage/progress.json)</h2>
-<pre>{
-  "profile":   { "name": "Valentin", "language": "ru",
-                 "theme": "dark", "onboarded": true },
-  "answers":   { "sorpasso-...-0": { "correct": 3, "wrong": 1,
-                 "lastCorrect": true, "last": "2026-06-10T…" } },
-  "mistakes":  ["segnali-divieto-...-4"],   ← последний ответ был неверным
-  "exams":     [{ "date": "…", "total": 30, "errors": 2, "passed": true }],
-  "theoryRead":["ch1", "ch2"],
-  "streak":    { "current": 5, "lastDay": "2026-06-10" }
-}</pre>
-<p>Производная статистика (<code>mastered</code>, <code>examSuccess</code>…) <strong>не хранится</strong> — она каждый раз считается в <code>snapshot()</code>. Это исключает рассинхронизацию.</p>
-
-<h2>6. Рецепты доработок</h2>
-<div class="cols">
-<div class="panel">
-<h3><span class="tag">РЕЦЕПТ</span> Новый экран</h3>
-<ol>
-  <li>В <code>views.js</code> написать <code>export function renderStats(root) {…}</code> — собрать DOM через <code>el()</code>, вставить <code>clear(root, …)</code>.</li>
-  <li>В <code>main.js</code> добавить строку в таблицу <code>routes</code>: <code>{ pattern: /^#\/stats$/, name:'stats', render: () =&gt; renderStats(view) }</code>.</li>
-  <li>Добавить ссылку <code>&lt;a href="#/stats"&gt;</code> в навигацию <code>index.html</code>.</li>
-</ol>
-</div>
-<div class="panel">
-<h3><span class="tag">РЕЦЕПТ</span> Новый эндпоинт API</h3>
-<ol>
-  <li>Логика + валидация — метод в <code>server/progress.js</code> (бросать <code>ValidationError</code> на плохой ввод).</li>
-  <li>Маршрут — ветка в <code>handleApi()</code> в <code>server/index.js</code>.</li>
-  <li>Клиент — одна строка в <code>public/js/api.js</code>.</li>
-  <li>Тест — кейс в <code>tests/progress.test.js</code>, прогнать <code>npm test</code>.</li>
-</ol>
-</div>
-<div class="panel">
-<h3><span class="tag">РЕЦЕПТ</span> Изменить дизайн</h3>
-<p>Все цвета, рамки и тени — CSS-переменные в начале <code>styles.css</code> (<code>--ink</code>, <code>--paper</code>, <code>--accent</code>, <code>--shadow</code>…). Тёмная тема — это просто переопределение переменных в блоке <code>[data-theme="dark"]</code>. Меняете переменную — меняется всё приложение.</p>
-</div>
-<div class="panel">
-<h3><span class="tag">РЕЦЕПТ</span> Поменять правила экзамена</h3>
-<p>Константы в начале <code>views.js</code>: <code>EXAM_QUESTIONS</code>, <code>EXAM_SECONDS</code>, <code>EXAM_MAX_ERRORS</code>, <code>PRACTICE_BATCH</code>. Серверная проверка экзамена ограничена только здравым смыслом (total 1–100), так что менять можно свободно.</p>
-</div>
-</div>
-
-<h2>7. Куда встроятся аккаунты (ваш следующий шаг)</h2>
-<div class="panel">
-<p>Архитектура к этому готова — точки расширения уже изолированы:</p>
-<ol>
-  <li><strong>Хранилище:</strong> сейчас один <code>JsonStore</code> на единственного пользователя. Для аккаунтов — заменить на SQLite (таблицы <code>users</code>, <code>answers</code>, <code>exams</code>) — меняется только <code>store.js</code> + конструктор <code>ProgressService</code>; вся доменная логика в <code>progress.js</code> остаётся.</li>
-  <li><strong>Аутентификация:</strong> middleware-функция перед <code>handleApi()</code> в <code>index.js</code>: проверка сессионной cookie → <code>userId</code> → <code>ProgressService</code> этого пользователя. Пароли — только хешем (argon2/bcrypt), сессии — httpOnly + Secure cookie.</li>
-  <li><strong>Регистрация по почте:</strong> новые эндпоинты <code>/api/auth/*</code>; для писем понадобится первый внешний сервис (SMTP-провайдер) — его ключи строго в <code>.env</code>, как уже заведено.</li>
-  <li><strong>GDPR (Италия = ЕС + Garante Privacy):</strong> double opt-in подтверждение почты; privacy policy на итальянском до сбора данных; явное согласие (не предотмеченная галочка); минимизация данных (почта + хеш пароля, больше ничего); экспорт своих данных (ст. 15) и удаление аккаунта (ст. 17) — кнопками в Settings; хостинг данных в ЕС; реестр обработки. Фронтенд уже не хранит ничего чувствительного — это правильная база.</li>
-</ol>
-</div>
-
-<h2>8. Инварианты — что нельзя ломать</h2>
-<div class="panel">
-<ul>
-  <li><span class="tag orange">ПРАВИЛО</span> Секреты и конфигурация — только в <code>.env</code>. Никогда в коде, никогда в <code>public/</code>.</li>
-  <li><span class="tag orange">ПРАВИЛО</span> Фронтенд не решает, что записать — только сервер валидирует и мутирует данные.</li>
-  <li><span class="tag orange">ПРАВИЛО</span> Пользовательский текст в DOM — только текстовыми узлами (через <code>el()</code>), не innerHTML.</li>
-  <li><span class="tag orange">ПРАВИЛО</span> Любая запись на диск — через <code>JsonStore</code> (атомарность), не <code>fs.writeFile</code> напрямую.</li>
-  <li><span class="tag orange">ПРАВИЛО</span> Новая логика прогресса — с тестом в <code>tests/</code>; <code>npm test</code> должен быть зелёным.</li>
-</ul>
-</div>
-
 </body>
 </html>
