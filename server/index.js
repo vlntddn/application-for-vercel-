@@ -74,7 +74,42 @@ async function handleApi(req, res, pathname) {
   return sendError(res, 405, 'Method not allowed');
 }
 
+/**
+ * Sent on every response, mirroring the headers the hosted build serves
+ * (see vercel.json). The Content-Security-Policy is the important one:
+ * connect-src 'self' means that even a hypothetical injection could not
+ * send anything off the machine.
+ */
+const SECURITY_HEADERS = {
+  'Content-Security-Policy': [
+    "default-src 'self'",
+    "script-src 'self'",
+    // el() sets style attributes; scripts stay locked down regardless.
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data:",
+    "font-src 'self'",
+    "connect-src 'self'",
+    "media-src 'self'",
+    "object-src 'none'",
+    "base-uri 'none'",
+    "form-action 'none'",
+    "frame-ancestors 'none'",
+    "manifest-src 'self'",
+    "worker-src 'self'",
+  ].join('; '),
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'no-referrer',
+  'X-Frame-Options': 'DENY',
+  'Permissions-Policy':
+    'geolocation=(), camera=(), microphone=(), payment=(), usb=(), ' +
+    'magnetometer=(), gyroscope=(), accelerometer=(), midi=(), ' +
+    'browsing-topics=(), interest-cohort=()',
+};
+
 const server = http.createServer(async (req, res) => {
+  for (const [name, value] of Object.entries(SECURITY_HEADERS)) {
+    res.setHeader(name, value);
+  }
   let pathname;
   try {
     pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
