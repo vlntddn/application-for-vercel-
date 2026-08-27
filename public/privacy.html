@@ -68,6 +68,16 @@
       not add analytics to those requests and we do not build profiles from them.
     </p>
 
+    <h2>How this is enforced, not just promised</h2>
+    <p>
+      The app ships a Content-Security-Policy that permits network connections only
+      to its own address. Even if someone found a way to inject code into the page,
+      that code could not send anything anywhere. The app also declares that it will
+      never use geolocation, the camera, the microphone or payment APIs, and the
+      Android version requests no permissions at all and opts out of Android's cloud
+      backup, so your data is never copied off the device in the background.
+    </p>
+
     <h2>Children</h2>
     <p>
       The app is a study aid for a driving-licence exam and is not directed at children. It

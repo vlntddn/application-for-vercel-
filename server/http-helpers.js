@@ -21,8 +21,14 @@ export function readJsonBody(req, maxBytes) {
     req.on('data', (chunk) => {
       size += chunk.length;
       if (size > maxBytes) {
+        // Stop buffering, but drain the rest instead of destroying the
+        // socket: destroying it here would kill the connection before the
+        // 413 could be written, leaving the client with a bare reset.
+        chunks.length = 0;
+        req.removeAllListeners('data');
+        req.removeAllListeners('end');
+        req.resume();
         reject(Object.assign(new Error('Request body too large'), { status: 413 }));
-        req.destroy();
         return;
       }
       chunks.push(chunk);

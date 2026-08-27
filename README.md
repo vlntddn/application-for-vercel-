@@ -194,6 +194,34 @@ legacy/             Previous compiled build (kept for reference — no source ex
 Invalid input returns `422` with a JSON error; malformed/oversized bodies
 return `400`/`413`.
 
+## Security & privacy
+
+Audited end to end, not just claimed:
+
+- **Nothing leaves the device.** A full session (onboarding, practice, a
+  complete mock exam, search, stats, backup) makes 73 requests, every one to the
+  app's own origin. No analytics, no beacons, no third-party scripts, fonts or
+  images — the only external URL in the app is a credit link the user may click.
+- **A Content-Security-Policy makes that structural**, not a promise:
+  `connect-src 'self'` means even an injected script could not send anything
+  out, `script-src 'self'` forbids inline and remote code, and `object-src`,
+  `base-uri` and `frame-ancestors` are `'none'`. Sent by both the hosted build
+  (`vercel.json`) and the local server.
+- **Permissions-Policy denies** geolocation, camera, microphone, payment, USB,
+  sensors and browsing-topics — the app cannot even ask.
+- **No cookies, no IndexedDB, no sessionStorage.** One `localStorage` key holds
+  your progress (~5 KB) on the phone; the desktop app uses a file you own.
+- **Injection is structurally impossible**: question text and your name reach
+  the page as text nodes. There is no `innerHTML`, `eval` or `new Function`
+  anywhere, verified by a test. A backup file full of `<script>` payloads
+  imports and displays as literal text.
+- **Hostile backups are refused**: every field validated, prototype pollution
+  blocked, entry counts capped, oversized bodies answered with `413`.
+- **The Android app declares zero permissions** and disables cloud backup and
+  device transfer, so Android never copies app data to Google.
+
+`npm test` includes 10 tests that lock these properties in place.
+
 ## Reliability & security notes
 
 - **Atomic persistence** — progress writes go to a temp file then `rename`;
