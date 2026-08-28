@@ -1,0 +1,8 @@
+# Signing material and local SDK paths never go in git.
+keystore.properties
+*.jks
+*.keystore
+local.properties
+.gradle/
+build/
+app/build/

@@ -1,0 +1,183 @@
+{
+  "sections": [
+    {
+      "id": "strada",
+      "title_it": "La strada e le sue parti",
+      "titles": { "en": "The road and its parts", "ru": "Дорога и её части", "zh": "道路及其组成部分" },
+      "chapters": ["ch1", "ch6"],
+      "terms": [
+        { "it": "la carreggiata", "en": "carriageway, roadway", "ru": "проезжая часть", "zh": "车行道" },
+        { "it": "la corsia", "en": "lane", "ru": "полоса движения", "zh": "车道" },
+        { "it": "la banchina", "en": "verge, shoulder", "ru": "обочина", "zh": "路肩" },
+        { "it": "il marciapiede", "en": "pavement, sidewalk", "ru": "тротуар", "zh": "人行道" },
+        { "it": "l'attraversamento pedonale", "en": "pedestrian crossing", "ru": "пешеходный переход", "zh": "人行横道" },
+        { "it": "il salvagente", "en": "traffic island", "ru": "островок безопасности", "zh": "安全岛" },
+        { "it": "lo spartitraffico", "en": "median strip, divider", "ru": "разделительная полоса", "zh": "分隔带" },
+        { "it": "l'incrocio", "en": "intersection, crossroads", "ru": "перекрёсток", "zh": "交叉路口" },
+        { "it": "il senso unico", "en": "one-way traffic", "ru": "одностороннее движение", "zh": "单行道" },
+        { "it": "il doppio senso", "en": "two-way traffic", "ru": "двустороннее движение", "zh": "双向通行" },
+        { "it": "il centro abitato", "en": "built-up area", "ru": "населённый пункт", "zh": "居民区" },
+        { "it": "la curva", "en": "bend, curve", "ru": "поворот (дороги), кривая", "zh": "弯道" },
+        { "it": "il dosso", "en": "hump, crest", "ru": "пригорок, неровность (горб)", "zh": "路脊, 凸起" },
+        { "it": "la cunetta", "en": "dip, gutter", "ru": "впадина, кювет", "zh": "凹陷, 排水沟" }
+      ]
+    },
+    {
+      "id": "segnaletica",
+      "title_it": "La segnaletica",
+      "titles": { "en": "Signs and markings", "ru": "Знаки и разметка", "zh": "标志与标线" },
+      "chapters": ["ch2", "ch3", "ch4", "ch5", "ch7", "ch24", "ch25"],
+      "terms": [
+        { "it": "il segnale di pericolo", "en": "warning sign", "ru": "предупреждающий знак", "zh": "警告标志" },
+        { "it": "il segnale di divieto", "en": "prohibition sign", "ru": "запрещающий знак", "zh": "禁令标志" },
+        { "it": "il segnale di obbligo", "en": "mandatory sign", "ru": "предписывающий знак", "zh": "指令标志" },
+        { "it": "il segnale di indicazione", "en": "information sign", "ru": "указательный знак", "zh": "指路标志" },
+        { "it": "la precedenza", "en": "right of way, priority", "ru": "преимущество (приоритет)", "zh": "优先权" },
+        { "it": "dare la precedenza", "en": "to give way, to yield", "ru": "уступить дорогу", "zh": "让行" },
+        { "it": "la segnaletica orizzontale", "en": "road markings", "ru": "горизонтальная разметка", "zh": "道路标线" },
+        { "it": "la striscia continua", "en": "solid line", "ru": "сплошная линия", "zh": "实线" },
+        { "it": "la striscia discontinua", "en": "broken line", "ru": "прерывистая линия", "zh": "虚线" },
+        { "it": "il pannello integrativo", "en": "supplementary panel", "ru": "дополнительная табличка", "zh": "辅助标志" },
+        { "it": "il semaforo", "en": "traffic light", "ru": "светофор", "zh": "红绿灯" },
+        { "it": "l'agente del traffico (il vigile)", "en": "traffic officer", "ru": "регулировщик", "zh": "交通警察" },
+        { "it": "il cantiere", "en": "roadworks site", "ru": "дорожные работы", "zh": "施工区" },
+        { "it": "raffigurato", "en": "depicted, shown", "ru": "изображённый", "zh": "图示的" }
+      ]
+    },
+    {
+      "id": "manovre",
+      "title_it": "Le manovre",
+      "titles": { "en": "Manoeuvres", "ru": "Манёвры", "zh": "驾驶操作" },
+      "chapters": ["ch10", "ch11", "ch12"],
+      "terms": [
+        { "it": "il sorpasso", "en": "overtaking", "ru": "обгон", "zh": "超车" },
+        { "it": "sorpassare", "en": "to overtake", "ru": "обгонять", "zh": "超车" },
+        { "it": "la svolta a destra / a sinistra", "en": "right / left turn", "ru": "поворот направо / налево", "zh": "右转 / 左转" },
+        { "it": "l'inversione di marcia", "en": "U-turn", "ru": "разворот", "zh": "掉头" },
+        { "it": "la retromarcia", "en": "reversing", "ru": "задний ход", "zh": "倒车" },
+        { "it": "il cambio di corsia", "en": "lane change", "ru": "перестроение", "zh": "变道" },
+        { "it": "immettersi", "en": "to merge, to enter the flow", "ru": "вливаться в поток, въезжать", "zh": "汇入车流" },
+        { "it": "impegnare l'incrocio", "en": "to enter the intersection", "ru": "занять перекрёсток", "zh": "进入路口" },
+        { "it": "la circolazione", "en": "traffic, circulation", "ru": "дорожное движение", "zh": "通行, 交通" },
+        { "it": "la marcia", "en": "driving, travel; gear", "ru": "движение, ход; передача", "zh": "行驶; 挡位" },
+        { "it": "proseguire", "en": "to continue, to go on", "ru": "продолжать движение", "zh": "继续行驶" },
+        { "it": "attraversare", "en": "to cross", "ru": "пересекать", "zh": "穿越" }
+      ]
+    },
+    {
+      "id": "sosta",
+      "title_it": "Fermata, sosta e arresto",
+      "titles": { "en": "Stopping and parking", "ru": "Остановка и стоянка", "zh": "停车与停放" },
+      "chapters": ["ch13", "ch14"],
+      "terms": [
+        { "it": "la fermata", "en": "brief stop", "ru": "остановка (кратковременная)", "zh": "短暂停车" },
+        { "it": "la sosta", "en": "parking", "ru": "стоянка", "zh": "停放" },
+        { "it": "l'arresto", "en": "halt (e.g. at lights)", "ru": "полная остановка (напр., на светофоре)", "zh": "停止" },
+        { "it": "la sosta vietata", "en": "no parking", "ru": "стоянка запрещена", "zh": "禁止停放" },
+        { "it": "l'ingombro", "en": "obstruction, encumbrance", "ru": "занятие проезжей части, помеха", "zh": "占用" },
+        { "it": "l'intralcio", "en": "hindrance to traffic", "ru": "помеха движению", "zh": "妨碍交通" },
+        { "it": "la rimozione (forzata)", "en": "(forced) removal, towing", "ru": "эвакуация (принудительная)", "zh": "强制拖移" },
+        { "it": "il veicolo fermo", "en": "stationary vehicle", "ru": "неподвижное транспортное средство", "zh": "停驶车辆" },
+        { "it": "il triangolo", "en": "warning triangle", "ru": "знак аварийной остановки", "zh": "三角警示牌" }
+      ]
+    },
+    {
+      "id": "velocita",
+      "title_it": "Velocità e distanze",
+      "titles": { "en": "Speed and distances", "ru": "Скорость и дистанции", "zh": "速度与距离" },
+      "chapters": ["ch8", "ch9"],
+      "terms": [
+        { "it": "il limite di velocità", "en": "speed limit", "ru": "ограничение скорости", "zh": "限速" },
+        { "it": "la distanza di sicurezza", "en": "safe following distance", "ru": "безопасная дистанция", "zh": "安全距离" },
+        { "it": "la frenata", "en": "braking", "ru": "торможение", "zh": "制动" },
+        { "it": "lo spazio di frenata", "en": "braking distance", "ru": "тормозной путь", "zh": "制动距离" },
+        { "it": "rallentare", "en": "to slow down", "ru": "снижать скорость", "zh": "减速" },
+        { "it": "moderare la velocità", "en": "to moderate one's speed", "ru": "умерить скорость", "zh": "控制车速" },
+        { "it": "la visibilità", "en": "visibility", "ru": "видимость", "zh": "能见度" },
+        { "it": "l'aderenza", "en": "grip, traction", "ru": "сцепление с дорогой", "zh": "附着力" },
+        { "it": "lo slittamento", "en": "skidding", "ru": "занос, скольжение", "zh": "打滑" },
+        { "it": "il tamponamento", "en": "rear-end collision", "ru": "наезд сзади", "zh": "追尾" }
+      ]
+    },
+    {
+      "id": "veicoli",
+      "title_it": "I veicoli e la meccanica",
+      "titles": { "en": "Vehicles and mechanics", "ru": "Транспортные средства и механика", "zh": "车辆与机械" },
+      "chapters": ["ch21", "ch23"],
+      "terms": [
+        { "it": "il veicolo", "en": "vehicle", "ru": "транспортное средство", "zh": "车辆" },
+        { "it": "l'autovettura", "en": "car", "ru": "легковой автомобиль", "zh": "小汽车" },
+        { "it": "il ciclomotore", "en": "moped", "ru": "мопед", "zh": "轻便摩托车" },
+        { "it": "il motociclo", "en": "motorcycle", "ru": "мотоцикл", "zh": "摩托车" },
+        { "it": "l'autocarro", "en": "lorry, truck", "ru": "грузовой автомобиль", "zh": "卡车" },
+        { "it": "il rimorchio", "en": "trailer", "ru": "прицеп", "zh": "挂车" },
+        { "it": "la massa", "en": "mass, weight", "ru": "масса", "zh": "质量" },
+        { "it": "il carico", "en": "load", "ru": "груз", "zh": "载荷" },
+        { "it": "gli pneumatici", "en": "tyres", "ru": "шины", "zh": "轮胎" },
+        { "it": "i freni", "en": "brakes", "ru": "тормоза", "zh": "刹车" },
+        { "it": "la manutenzione", "en": "maintenance", "ru": "техническое обслуживание", "zh": "保养" },
+        { "it": "il traino", "en": "towing", "ru": "буксировка", "zh": "牵引" }
+      ]
+    },
+    {
+      "id": "documenti",
+      "title_it": "Conducente, documenti e responsabilità",
+      "titles": { "en": "Driver, documents and liability", "ru": "Водитель, документы и ответственность", "zh": "驾驶员、证件与责任" },
+      "chapters": ["ch16", "ch19"],
+      "terms": [
+        { "it": "il conducente", "en": "driver", "ru": "водитель", "zh": "驾驶员" },
+        { "it": "la patente di guida", "en": "driving licence", "ru": "водительское удостоверение", "zh": "驾驶证" },
+        { "it": "la carta di circolazione", "en": "registration certificate", "ru": "свидетельство о регистрации ТС", "zh": "行驶证" },
+        { "it": "l'assicurazione", "en": "insurance", "ru": "страховка", "zh": "保险" },
+        { "it": "la revisione", "en": "periodic inspection (MOT)", "ru": "техосмотр", "zh": "年检" },
+        { "it": "i punti (della patente)", "en": "licence points", "ru": "баллы (водительского удостоверения)", "zh": "驾照记分" },
+        { "it": "la sanzione", "en": "penalty, sanction", "ru": "санкция, взыскание", "zh": "处罚" },
+        { "it": "la multa", "en": "fine", "ru": "штраф", "zh": "罚款" },
+        { "it": "la sospensione", "en": "suspension (of licence)", "ru": "приостановление действия (прав)", "zh": "暂扣(驾照)" },
+        { "it": "la revoca", "en": "revocation (of licence)", "ru": "аннулирование (прав)", "zh": "吊销(驾照)" },
+        { "it": "la responsabilità civile", "en": "civil liability", "ru": "гражданская ответственность", "zh": "民事责任" },
+        { "it": "il risarcimento", "en": "compensation", "ru": "возмещение ущерба", "zh": "赔偿" }
+      ]
+    },
+    {
+      "id": "sicurezza",
+      "title_it": "Sicurezza e soccorso",
+      "titles": { "en": "Safety and first aid", "ru": "Безопасность и помощь", "zh": "安全与急救" },
+      "chapters": ["ch15", "ch17", "ch18", "ch20", "ch22"],
+      "terms": [
+        { "it": "la cintura di sicurezza", "en": "seat belt", "ru": "ремень безопасности", "zh": "安全带" },
+        { "it": "il casco", "en": "helmet", "ru": "шлем", "zh": "头盔" },
+        { "it": "le luci anabbaglianti", "en": "dipped headlights", "ru": "ближний свет", "zh": "近光灯" },
+        { "it": "le luci abbaglianti", "en": "full-beam headlights", "ru": "дальний свет", "zh": "远光灯" },
+        { "it": "gli indicatori di direzione", "en": "direction indicators", "ru": "указатели поворота", "zh": "转向灯" },
+        { "it": "l'incidente (stradale)", "en": "(road) accident", "ru": "ДТП", "zh": "交通事故" },
+        { "it": "il soccorso", "en": "rescue, assistance", "ru": "помощь, спасение", "zh": "救援" },
+        { "it": "il pronto soccorso", "en": "first aid", "ru": "первая помощь", "zh": "急救" },
+        { "it": "lo stato di ebbrezza", "en": "state of intoxication", "ru": "состояние опьянения", "zh": "醉酒状态" },
+        { "it": "le sostanze stupefacenti", "en": "narcotic substances, drugs", "ru": "наркотические вещества", "zh": "毒品" },
+        { "it": "l'inquinamento", "en": "pollution", "ru": "загрязнение окружающей среды", "zh": "污染" },
+        { "it": "i consumi", "en": "fuel consumption", "ru": "расход топлива", "zh": "油耗" }
+      ]
+    },
+    {
+      "id": "verbi",
+      "title_it": "I verbi dell'esame",
+      "titles": { "en": "Exam verbs", "ru": "Глаголы из экзаменационных формулировок", "zh": "考试常用动词" },
+      "chapters": [],
+      "terms": [
+        { "it": "accertarsi", "en": "to make sure", "ru": "убедиться", "zh": "确认" },
+        { "it": "consentire", "en": "to allow, to permit", "ru": "разрешать, позволять", "zh": "允许" },
+        { "it": "vietare", "en": "to forbid", "ru": "запрещать", "zh": "禁止" },
+        { "it": "obbligare", "en": "to oblige, to require", "ru": "обязывать", "zh": "强制要求" },
+        { "it": "preavvisare / preannunciare", "en": "to warn in advance", "ru": "заранее предупреждать", "zh": "预先警示" },
+        { "it": "indicare", "en": "to indicate, to show", "ru": "указывать", "zh": "指示" },
+        { "it": "percorrere", "en": "to travel along", "ru": "проезжать по, следовать по", "zh": "沿…行驶" },
+        { "it": "transitare", "en": "to pass through", "ru": "проезжать, следовать", "zh": "通行" },
+        { "it": "effettuare", "en": "to carry out, to perform", "ru": "выполнять, совершать", "zh": "进行, 实施" },
+        { "it": "comportare", "en": "to entail, to involve", "ru": "влечь за собой", "zh": "导致, 涉及" },
+        { "it": "occorre / bisogna", "en": "it is necessary", "ru": "необходимо, нужно", "zh": "必须, 需要" },
+        { "it": "è opportuno", "en": "it is advisable", "ru": "целесообразно, следует", "zh": "宜, 应当" }
+      ]
+    }
+  ]
+}

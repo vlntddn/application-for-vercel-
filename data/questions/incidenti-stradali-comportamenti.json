@@ -1,0 +1,2450 @@
+[
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-0",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere ristrettezza della strada",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Narrowness of the road may be a probable cause of accidents due to the structure of the road",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Узкость дороги может быть вероятной причиной аварий из-за структуры дороги.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "由于道路的结构，道路狭窄可能是发生事故的一个可能原因",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-1",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere mancata segnalazione degli incroci",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "A probable cause of accidents due to the structure of the road may be failure to signal intersections",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вероятной причиной аварий из-за особенностей конструкции дороги может быть отсутствие сигнала на перекрестках.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "由于道路结构而导致事故的一个可能原因可能是交叉口没有发出信号",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-2",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere mancanza di segnaletica orizzontale",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "A probable cause of accidents due to the structure of the road may be the lack of road markings",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вероятной причиной аварий из-за особенностей строения дороги может быть отсутствие дорожной разметки.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "道路结构造成事故的一个可能原因是缺乏道路标记",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-3",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere fondo stradale deformato",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "A probable cause of accidents due to the structure of the road can be deformed road surface",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вероятной причиной аварий из-за конструкции дороги может быть деформированное дорожное покрытие.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "道路结构造成事故的一个可能原因是路面变形",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-4",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere fondo stradale scivoloso",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "A probable cause of accidents due to the structure of the road can be slippery road surface",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вероятной причиной аварий из-за особенностей конструкции дороги может быть скользкое дорожное покрытие.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "由于道路结构而导致事故的一个可能原因是路面湿滑",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-5",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere presenza di strettoie non segnalate",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "A probable cause of accidents due to the structure of the road may be the presence of unmarked bottlenecks",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вероятной причиной аварий из-за особенностей строения дороги может быть наличие немаркированных узких мест.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "道路结构导致事故的一个可能原因可能是存在未标记的瓶颈",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-6",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere strada suddivisa in carreggiate",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Probable cause of accidents due to the structure of the road can be road divided into carriageways",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вероятная причина дорожно-транспортных происшествий из-за структуры дороги может быть разделена на проезжие части.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "由于道路结构而导致事故的可能原因可以是道路分为车道",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-7",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere strada suddivisa in corsie",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Probable cause of accidents due to the structure of the road can be road divided into lanes",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вероятная причина дорожно-транспортных происшествий из-за структуры дороги может быть разделена на полосы движения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "由于道路结构而导致事故的可能原因可能是道路被划分为车道",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-8",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere carreggiata a senso unico di circolazione",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "A probable cause of accidents due to the structure of the road can be one-way traffic",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вероятной причиной аварий из-за особенностей конструкции дороги может быть одностороннее движение.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "道路结构引起事故的一个可能原因是单向交通",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-9",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere strada a percorso pianeggiante",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "A probable cause of accidents due to the structure of the road can be a flat road",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вероятной причиной аварий из-за строения дороги может стать ровная дорога.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "道路结构造成事故的一个可能原因是平坦的道路",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-10",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere presenza di barriere laterali ad assorbimento d'urto (guardrails)",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "A probable cause of accidents due to the structure of the road may be the presence of impact-absorbing lateral barriers (guardrails)",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вероятной причиной аварий из-за конструкции дороги может быть наличие ударопоглощающих боковых ограждений (ограждений).",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "道路结构导致事故的一个可能原因可能是存在吸收冲击的侧向障碍物（护栏）",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-11",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere regolamentazione semaforica",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Traffic light regulation may be a probable cause of accidents due to the structure of the road",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Регулирование светофора может быть вероятной причиной аварий из-за структуры дороги",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "由于道路结构，交通灯管制可能是引发事故的一个可能原因",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-causa-probabile-incidenti-12",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Causa probabile di incidenti dovuti alla struttura della strada può essere mancanza di curve pericolose",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "A probable cause of accidents due to the structure of the road can be the lack of dangerous curves",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вероятной причиной аварий из-за строения дороги может быть отсутствие опасных поворотов.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "道路结构导致事故的一个可能原因是缺乏危险的弯道",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-caso-pioggia-0",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di pioggia occorre ridurre la velocità",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of rain you need to reduce your speed",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае дождя необходимо снизить скорость.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "下雨时需要降低车速",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-caso-pioggia-1",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di pioggia occorre tenere in funzione i tergicristalli",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of rain, the windshield wipers must be kept running",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае дождя дворники должны работать постоянно.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "下雨天，挡风玻璃雨刷器必须保持运转",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-caso-pioggia-2",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di pioggia occorre aumentare la distanza di sicurezza",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of rain, the safety distance must be increased",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае дождя необходимо увеличить безопасное расстояние.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "下雨天必须增加安全距离",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-caso-pioggia-3",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di pioggia occorre evitare l'appannamento dei vetri",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of rain, avoid fogging the windows",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае дождя избегайте запотевания окон.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "下雨时避免窗户起雾",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-caso-pioggia-4",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di pioggia occorre manovrare con prudenza lo sterzo",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of rain, you must maneuver the steering carefully",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае дождя необходимо осторожно маневрировать рулевым управлением.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "下雨天一定要小心操纵方向盘",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-caso-pioggia-5",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di pioggia occorre passare velocemente sulle pozzanghere per evitare di rimanere impantanati",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of rain you need to move quickly over puddles to avoid getting stuck",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае дождя нужно быстро передвигаться по лужам, чтобы не застрять.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果下雨，您需要在水坑上快速移动以避免被困",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-caso-pioggia-6",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di pioggia occorre coprire il radiatore con l'apposita mascherina",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of rain it is necessary to cover the radiator with the appropriate mask",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае дождя необходимо накрыть радиатор соответствующей маской.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果下雨，必须用适当的面罩遮盖散热器",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-caso-pioggia-7",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di pioggia occorre frenare energicamente",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of rain you need to brake vigorously",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае дождя нужно резко тормозить",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "下雨天需要大力刹车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-caso-pioggia-8",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di pioggia occorre utilizzare, durante la marcia, la segnalazione luminosa di pericolo (quattro frecce lampeggianti simultaneamente)",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of rain, it is necessary to use the danger warning light while driving (four arrows flashing simultaneously)",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае дождя необходимо во время движения использовать световую сигнализацию опасности (одновременно мигают четыре стрелки)",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "下雨天行车需使用危险警示灯（四个箭头同时闪烁）",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-caso-pioggia-9",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di pioggia occorre procedere, di norma, con il pedale della frizione abbassato",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of rain it is generally necessary to proceed with the clutch pedal depressed",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае дождя, как правило, необходимо продолжать движение с нажатой педалью сцепления.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "下雨时通常需要踩下离合器踏板继续行驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-aquaplanning-0",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il fenomeno dell'aquaplaning fa scivolare le ruote sullo strato di acqua",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The phenomenon of aquaplaning causes the wheels to slide on the layer of water",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Явление аквапланирования приводит к скольжению колес по слою воды.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "滑水现象导致车轮在水层上滑动",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-aquaplanning-1",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il fenomeno dell'aquaplaning inizia a velocità più bassa se il pneumatico è molto consumato",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The phenomenon of aquaplaning begins at lower speed if the tire is very worn",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Явление аквапланирования начинается на меньшей скорости, если шина сильно изношена.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果轮胎磨损严重，低速时就会出现滑水现象",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-aquaplanning-2",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il fenomeno dell'aquaplaning si verifica più facilmente nei veicoli più leggeri",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Hydroplaning occurs more easily in lighter vehicles",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Аквапланирование происходит легче на легких автомобилях.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "轻型车辆更容易发生滑水",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-aquaplanning-3",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il fenomeno dell'aquaplaning si verifica più facilmente a bassa velocità",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The phenomenon of aquaplaning occurs more easily at low speed",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Явление аквапланирования легче возникает на низкой скорости.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "低速时更容易出现滑水现象",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-aquaplanning-4",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il fenomeno dell'aquaplaning riduce lo sbandamento del veicolo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The phenomenon of aquaplaning reduces the skidding of the vehicle",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Явление аквапланирования уменьшает занос автомобиля.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "滑水现象减少了车辆的打滑",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-aquaplanning-5",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il fenomeno dell'aquaplaning aumenta nelle carreggiate a forte pendenza laterale",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The phenomenon of aquaplaning increases on roadways with a strong lateral slope",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Явление аквапланирования усиливается на дорогах с сильным боковым уклоном.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "侧坡较大的道路上滑水现象增多",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-aquaplanning-6",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il fenomeno dell'aquaplaning aumenta l'aderenza sul fondo stradale",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The phenomenon of aquaplaning increases grip on the road surface",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Явление аквапланирования увеличивает сцепление с дорожным покрытием.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "滑水现象增加了路面的抓地力",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-aquaplanning-7",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il fenomeno dell'aquaplaning rafforza il contatto fra pneumatici e asfalto",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The phenomenon of aquaplaning strengthens the contact between tires and asphalt",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Явление аквапланирования усиливает контакт шин с асфальтом.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "滑水现象加强了轮胎与沥青之间的接触",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-aquaplanning-8",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il fenomeno dell'aquaplaning non dipende dallo spessore e dal disegno del battistrada",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The phenomenon of aquaplaning does not depend on the thickness and design of the tread",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Явление аквапланирования не зависит от толщины и дизайна протектора.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "滑水现象并不取决于胎面的厚度和设计",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-strade-coperte-neve-0",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Su strade coperte di neve occorre montare pneumatici invernali su tutte le ruote oppure catene sulle ruote motrici",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On snow-covered roads it is necessary to fit winter tires on all wheels or chains on the drive wheels",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На заснеженных дорогах необходимо устанавливать зимние шины на все колеса или цепи на ведущие колеса.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在冰雪覆盖的道路上，必须在所有车轮上安装冬季轮胎或在驱动轮上安装链条",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-strade-coperte-neve-1",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Su strade coperte di neve occorre moderare la velocità",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On snow-covered roads, speed should be moderated",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На заснеженных дорогах скорость следует снижать.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "积雪路面应减速",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-strade-coperte-neve-2",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Su strade coperte di neve occorre aumentare la distanza di sicurezza",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On snow-covered roads, the safety distance must be increased",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На заснеженных дорогах необходимо увеличить безопасное расстояние.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "冰雪路面必须拉大安全距离",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-strade-coperte-neve-3",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Su strade coperte di neve occorre evitare brusche manovre",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On snow-covered roads, sudden maneuvers should be avoided",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На заснеженных дорогах следует избегать резких маневров.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在积雪路面上应避免突然操纵",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-strade-coperte-neve-4",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Su strade coperte di neve occorre evitare brusche accelerazioni",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On snow-covered roads, sudden acceleration should be avoided",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На заснеженных дорогах следует избегать резких ускорений.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "积雪路面应避免突然加速",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-strade-coperte-neve-5",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Su strade coperte di neve occorre frenare con maggiore energia",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On snow-covered roads you need to brake harder",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На заснеженных дорогах нужно тормозить сильнее",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在积雪的道路上，需要加大制动力度",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-strade-coperte-neve-6",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Su strade coperte di neve occorre alla partenza, accelerare al massimo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On snow-covered roads, you need to accelerate as much as possible when setting off",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На заснеженных дорогах при трогании с места необходимо максимально ускориться.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "积雪路面，出发时需要尽可能加速",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-strade-coperte-neve-7",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Su strade coperte di neve occorre sterzare bruscamente per evitare di urtare veicoli fermi",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On snow-covered roads, you need to steer sharply to avoid hitting stationary vehicles",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На заснеженных дорогах необходимо резко рулить, чтобы не задеть неподвижные транспортные средства.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在积雪的道路上，需要急转向以避免撞到静止的车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-strade-coperte-neve-8",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Su strade coperte di neve occorre frenare a fondo in caso di sbandamento del veicolo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On snow-covered roads, you must brake hard if the vehicle skids",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На заснеженных дорогах необходимо резко тормозить, если автомобиль заносит.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "积雪路面，车辆打滑必须猛刹车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tratti-strada-ghiacciati-0",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In presenza di tratti di strada ghiacciati è opportuno procedere a velocità moderata",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the presence of icy stretches of road it is advisable to proceed at a moderate speed",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При наличии обледенелых участков дороги рекомендуется двигаться с умеренной скоростью.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "当道路结冰时，建议以中等速度行驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tratti-strada-ghiacciati-1",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In presenza di tratti di strada ghiacciati è opportuno aumentare la distanza di sicurezza",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the presence of icy stretches of road it is advisable to increase the safety distance",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При наличии обледенелых участков дороги целесообразно увеличить безопасное расстояние.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果道路结冰，建议增加安全距离",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tratti-strada-ghiacciati-2",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In presenza di tratti di strada ghiacciati è opportuno distanziarsi dalla traiettoria dei veicoli che si incrociano",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the presence of icy stretches of road it is advisable to distance yourself from the path of passing vehicles",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При наличии обледенелых участков дороги желательно дистанцироваться от пути проезжающих транспортных средств.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在道路结冰的情况下，建议与过往车辆保持距离",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tratti-strada-ghiacciati-3",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In presenza di tratti di strada ghiacciati è opportuno, in discesa, procedere con marce basse",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the presence of icy stretches of road, it is advisable to proceed in low gears when going downhill",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При наличии обледенелых участков дороги при движении под гору рекомендуется двигаться на пониженных передачах.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果路面结冰，下坡时建议低速行驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tratti-strada-ghiacciati-4",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In presenza di tratti di strada ghiacciati è opportuno evitare brusche accelerazioni",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the presence of icy stretches of road it is advisable to avoid sudden acceleration",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При наличии обледенелых участков дороги желательно избегать резких ускорений.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在路面结冰的情况下，建议避免突然加速",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tratti-strada-ghiacciati-5",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In presenza di tratti di strada ghiacciati è opportuno usare maggiore attenzione nel transito su zone in ombra",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the presence of icy stretches of road, it is advisable to use greater caution when traveling through shaded areas",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При наличии обледенелых участков дороги желательно проявлять повышенную осторожность при проезде затененных участков.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在道路结冰的情况下，建议在穿过阴影区域时更加小心",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tratti-strada-ghiacciati-6",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In presenza di tratti di strada ghiacciati è opportuno innestare la doppia trazione, se il veicolo ne è provvisto",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the presence of icy stretches of road it is advisable to engage four-wheel drive, if the vehicle is equipped with it",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При наличии обледенелых участков дороги целесообразно включать полный привод, если автомобиль им оснащен.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在路面结冰的情况下，如果车辆配备四轮驱动，建议采用四轮驱动",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tratti-strada-ghiacciati-7",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In presenza di tratti di strada ghiacciati è opportuno marciare molto vicino alla barriera laterale",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the presence of icy stretches of road it is advisable to drive very close to the side barrier",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При наличии обледенелых участков дороги желательно подъезжать максимально близко к боковому ограждению.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在道路结冰的情况下，建议非常靠近侧护栏行驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tratti-strada-ghiacciati-8",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In presenza di tratti di strada ghiacciati è opportuno non usare le catene, ma gomme chiodate sulle ruote anteriori",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the presence of icy stretches of road it is advisable not to use chains, but studded tires on the front wheels",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При наличии обледенелых участков дороги желательно использовать не цепи, а шипованные шины на передних колесах.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在结冰的道路上，建议不要使用链条，而应在前轮上使用镶钉轮胎",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tratti-strada-ghiacciati-9",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In presenza di tratti di strada ghiacciati è opportuno frenare energicamente ogni volta che si incrocia un altro veicolo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the presence of icy stretches of road, it is advisable to brake forcefully every time you pass another vehicle",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На обледенелых участках дороги рекомендуется резко тормозить каждый раз, когда вы обгоняете другое транспортное средство.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在路面结冰的情况下，建议每次超车时用力制动",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tratti-strada-ghiacciati-10",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In presenza di tratti di strada ghiacciati è opportuno procedere con il cambio in folle",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the presence of icy stretches of road it is advisable to proceed with the gearbox in neutral",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При наличии обледенелых участков дороги рекомендуется продолжать движение с коробкой передач в нейтральном положении.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果路面结冰，建议将变速箱置于空档",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-0",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno lasciarsi guidare dalla segnaletica orizzontale",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to be guided by the road markings",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана желательно ориентироваться по дорожной разметке.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如遇大雾，建议遵循道路标记引导",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-1",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno procedere ad una velocità adeguata alla visibilità",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to proceed at a speed suitable for visibility",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана рекомендуется двигаться со скоростью, подходящей для видимости.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果有大雾，建议以适合能见度的速度行驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-2",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno fermarsi, se necessario, fuori dalla carreggiata",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to stop, if necessary, off the road",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана рекомендуется при необходимости остановиться вне дороги.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果遇到大雾，建议在必要时离开道路停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-3",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno se costretti a fermarsi sulla carreggiata, usare la segnalazione luminosa di pericolo (quattro frecce lampeggianti simultaneamente)",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog, if forced to stop on the road, it is advisable to use the danger warning light (four arrows flashing simultaneously)",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана, при вынужденной остановке на дороге желательно воспользоваться световой сигнализацией опасности (четыре стрелки мигают одновременно).",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "遇大雾，若被迫在路上停车，建议使用危险警示灯（四个箭头同时闪烁）",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-4",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno evitare di fermarsi sulla carreggiata, se non per cause di forza maggiore",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to avoid stopping on the road, unless due to force majeure",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана желательно не останавливаться на дороге, за исключением форс-мажорных обстоятельств.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如遇大雾，建议避免在路上停车，除非因不可抗力",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-5",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno accendere i proiettori fendinebbia o, in mancanza, quelli anabbaglianti",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to turn on the fog lights or, failing that, the dipped beams.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана желательно включить противотуманные фары или, если это не так, ближний свет.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果有浓雾，建议打开雾灯，如果没有的话，则打开近光灯。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-6",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno accendere la luce posteriore per nebbia",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to turn on the rear fog light",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана желательно включить задний противотуманный фонарь.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果遇到大雾，建议打开后雾灯",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-7",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno guidare con la massima prudenza e concentrazione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to drive with the utmost caution and concentration",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана желательно водить машину с максимальной осторожностью и концентрацией.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在大雾的情况下，建议驾驶时格外小心并集中注意力",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-8",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno circolare con le sole luci di posizioni accese",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to drive with only the side lights on",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана рекомендуется двигаться только с включенными габаритными огнями.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果遇到大雾，建议只打开侧灯行驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-9",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno mantenere in funzione l'indicatore di direzione sinistro",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to keep the left direction indicator operating",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана желательно оставить включенным указатель левого поворота.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在大雾的情况下，建议保持左侧方向灯工作",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-10",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno procedere a zig zag per far meglio notare la propria presenza",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to proceed in a zigzag to make your presence better noticed",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана рекомендуется двигаться зигзагом, чтобы ваше присутствие было лучше заметно.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果遇到浓雾，建议以之字形行驶，以便更好地注意到您的存在",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-11",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno accodarsi al veicolo che precede quanto più vicino possibile",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to follow the vehicle in front as close as possible",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана рекомендуется следовать за автомобилем впереди как можно ближе.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果遇到大雾，建议尽可能靠近前方车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-12",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno suonare continuativamente il clacson",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to continuously sound the horn",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана желательно непрерывно подавать звуковой сигнал.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如遇大雾，建议连续鸣喇叭",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-nebbia-fitta-13",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di nebbia fitta è opportuno tenere la cintura di sicurezza sganciata per essere più pronti ad abbandonare il veicolo in caso di incidente",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of thick fog it is advisable to keep the seat belt unfastened to be more ready to abandon the vehicle in the event of an accident",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае густого тумана рекомендуется не пристегивать ремень безопасности, чтобы быть более готовым покинуть автомобиль в случае аварии.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果遇到大雾，建议解开安全带，以便在发生事故时更好地准备弃车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-0",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il conducente coinvolto in un incidente stradale ha l'obbligo di fermarsi e di prestare assistenza agli eventuali feriti",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The driver involved in a road accident has the obligation to stop and provide assistance to any injured people",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Водитель, попавший в дорожно-транспортное происшествие, обязан остановиться и оказать помощь пострадавшим.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "发生交通事故的驾驶员有义务停车并为受伤人员提供帮助",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-1",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il conducente coinvolto in un incidente stradale deve fornire le proprie generalità e gli estremi della patente, della targa e dell'assicurazione del veicolo alle persone danneggiate",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The driver involved in a road accident must provide his/her personal details and details of the license, license plate and vehicle insurance to the injured persons",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Водитель, попавший в дорожно-транспортное происшествие, должен предоставить пострадавшим свои личные данные, а также данные о водительском удостоверении, номерном знаке и страховке транспортного средства.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "发生交通事故的驾驶员必须向受伤人员提供其个人详细信息以及驾照、车牌和车辆保险的详细信息",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-2",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il conducente coinvolto in un incidente stradale deve evitare che vengano modificate le tracce, se occorre ricostruire la dinamica dell'incidente",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The driver involved in a road accident must prevent the tracks from being modified if it is necessary to reconstruct the dynamics of the accident",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Водитель, попавший в дорожно-транспортное происшествие, должен предотвратить изменение путей, если необходимо восстановить динамику ДТП.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果需要重建事故动态，发生道路事故的驾驶员必须阻止轨道被修改",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-3",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il conducente coinvolto in un incidente stradale per la denunzia all'assicurazione può avvalersi degli appositi moduli prestampati forniti dalla propria assicurazione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The driver involved in a road accident can use the specific pre-printed forms provided by his insurance company to report to the insurance company.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Водитель, попавший в дорожно-транспортное происшествие, может использовать специальные предварительно распечатанные формы, предоставленные его страховой компанией, для сообщения в страховую компанию.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "发生交通事故的驾驶员可以使用保险公司提供的特定预印表格向保险公司报告。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-4",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Dopo un incidente stradale è obbligatorio apporre il segnale mobile di pericolo sul lunotto posteriore del veicolo, prima di andar via",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "After a road accident it is mandatory to place the mobile danger sign on the rear window of the vehicle before leaving",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "После дорожно-транспортного происшествия перед выездом из автомобиля обязательно необходимо разместить передвижной знак опасности на заднем стекле транспортного средства.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "发生交通事故后，必须在离开前将移动危险标志放置在车辆后窗上",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-5",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Dopo un incidente stradale è obbligatorio coprire il veicolo con un telo di plastica",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "After a road accident it is mandatory to cover the vehicle with a plastic sheet",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "После ДТП обязательно накрыть транспортное средство полиэтиленовой пленкой.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "发生交通事故后，必须用塑料布覆盖车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-6",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Dopo un incidente stradale è obbligatorio, solo di notte, apporre il segnale mobile di pericolo in prossimità del veicolo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "After a road accident it is mandatory, only at night, to place the mobile danger sign near the vehicle",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "После дорожно-транспортного происшествия обязательно, только в ночное время, устанавливать рядом с транспортным средством передвижной знак опасности.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "发生交通事故后，仅在夜间才必须将移动危险标志放置在车辆附近",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-7",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Dopo un incidente stradale è obbligatorio collocare subito il veicolo sul marciapiede",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "After a road accident it is mandatory to immediately place the vehicle on the pavement",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "После дорожно-транспортного происшествия необходимо немедленно поставить транспортное средство на тротуар.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "发生道路事故后，必须立即将车辆停放在人行道上",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-8",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Dopo un incidente stradale, è obbligatorio segnalare il veicolo fermo con il segnale mobile di pericolo anche nei centri abitati",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "After a road accident, it is mandatory to report the stopped vehicle with the mobile danger signal even in residential areas",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "После ДТП обязательно сообщить об остановившемся транспортном средстве мобильной сигнализацией опасности даже в жилых районах.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "发生道路事故后，即使在住宅区，也必须报告带有移动危险信号的停止车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-9",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "È opportuno che il conducente esegua personalmente la manutenzione della pompa di iniezione del proprio veicolo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "It is advisable for the driver to personally carry out maintenance on the injection pump of his vehicle",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Водителю желательно лично проводить техническое обслуживание ТНВД своего автомобиля.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "建议驾驶员亲自对车辆喷油泵进行维护",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-10",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "La distanza percorsa durante il tempo di reazione non varia con la velocità",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The distance traveled during the reaction time does not vary with speed",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Расстояние, пройденное за время реакции, не зависит от скорости.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "反应时间内行驶的距离不随速度变化",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-11",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il corretto funzionamento del motore è garantito dal fatto che la spia rossa dell’olio di lubrificazione rimane costantemente accesa",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The correct functioning of the engine is guaranteed by the fact that the red lubrication oil light remains constantly lit",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Правильная работа двигателя гарантируется тем, что красная лампочка смазочного масла горит постоянно.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "红色润滑油灯持续亮起可保证发动机正常运行",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-12",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "È consentito migliorare le prestazioni del proprio veicolo aumentando la cilindrata del motore",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "It is possible to improve the performance of your vehicle by increasing the engine displacement",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Улучшить характеристики вашего автомобиля можно за счет увеличения объема двигателя.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "通过增加发动机排量可以提高车辆的性能",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-13",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Non è necessario mettere a punto i freni squilibrati, se il conducente è in grado di correggere l’anomalo comportamento del veicolo agendo sullo sterzo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "It is not necessary to tune unbalanced brakes if the driver is able to correct the anomalous behavior of the vehicle by acting on the steering",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Нет необходимости настраивать несбалансированные тормоза, если водитель способен исправить аномальное поведение автомобиля, воздействуя на рулевое управление.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果驾驶员能够通过作用于转向装置来纠正车辆的异常行为，则无需调整不平衡制动器",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-14",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Su strada sdrucciolevole, per garantire le migliori condizioni di aderenza in frenata, è opportuno premere a fondo il pedale del freno",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On slippery roads, to ensure the best grip conditions when braking, it is advisable to fully press the brake pedal",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На скользкой дороге для обеспечения наилучших условий сцепления при торможении рекомендуется полностью выжимать педаль тормоза.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在湿滑路面上，为确保制动时获得最佳抓地力，建议完全踩下制动踏板",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-15",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "È consentito aumentare le prestazioni del proprio veicolo modificandone le impostazioni elettroniche della centralina che controlla l’iniezione di carburante",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "It is possible to increase the performance of your vehicle by modifying the electronic settings of the control unit that controls the fuel injection",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Повысить производительность вашего автомобиля можно путем изменения электронных настроек блока управления, контролирующего впрыск топлива.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "通过修改控制燃油喷射的控制单元的电子设置，可以提高车辆的性能",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-salita-discesa-passeggero-0",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Quando bisogna far salire o scendere un passeggero, è opportuno che ciò avvenga dal lato del marciapiede o, in mancanza, dal lato opposto al traffico",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When you need to pick up or drop off a passenger, it is best to do so from the side of the pavement or, failing that, from the side opposite traffic.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Когда вам нужно подобрать или высадить пассажира, лучше всего это сделать со стороны тротуара или, если это невозможно, со стороны противоположного движения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "当您需要接送乘客时，最好从人行道一侧进行，如果做不到这一点，则从交通对面的一侧进行。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-salita-discesa-passeggero-1",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Quando si deve far salire o scendere un passeggero dal veicolo, bisogna aprire la portiera solamente quando non si causa pericolo agli altri utenti della strada",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When you have to get a passenger on or off the vehicle, you must open the door only when you do not cause danger to other road users",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Когда вам необходимо посадить пассажира в автомобиль или высадить его из автомобиля, открывать дверь следует только в том случае, если вы не представляете опасности для других участников дорожного движения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "当您必须让乘客上下车时，只有在不会对其他道路使用者造成危险的情况下才可以打开车门",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-salita-discesa-passeggero-2",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Quando si deve far salire o scendere un passeggero dal veicolo, bisogna farlo attendere fino a che il veicolo sia completamente fermo",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When you have to get a passenger on or off the vehicle, you must make them wait until the vehicle is completely stopped",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Если вам нужно посадить пассажира в автомобиль или высадить его из автомобиля, вы должны заставить его дождаться полной остановки автомобиля.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "当您必须让乘客上下车时，必须让他们等到车辆完全停止",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-salita-discesa-passeggero-3",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Quando si deve far salire o scendere un bambino dal veicolo, è opportuno che vi sia il controllo di un adulto",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When you have to get a child on or off the vehicle, it is advisable to have the supervision of an adult",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Когда вам нужно посадить ребенка в автомобиль или выйти из него, желательно, чтобы его сопровождал взрослый.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "当您必须让儿童上下车时，建议在成人的监督下",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-salita-discesa-passeggero-4",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Quando si deve far scendere un passeggero, bisogna tenere presente che l'apertura della portiera di destra è priva di qualsiasi rischio e pericolo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When you have to let a passenger off, you must keep in mind that opening the right door is free of any risk or danger",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Когда вам нужно выпустить пассажира, вы должны помнить, что открытие правой двери не сопряжено с каким-либо риском или опасностью.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "当您必须让乘客下车时，您必须记住，打开右侧的门不会有任何风险或危险",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-infossamento-0",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di infossamento su neve o sabbia, non riuscendo a spostare il veicolo, è consigliabile inserire sotto la ruota che slitta qualcosa che faccia attrito (pezzi di legno, tappeti del veicolo, ecc.)",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of sinking in snow or sand and not being able to move the vehicle, it is advisable to insert something that causes friction under the slipping wheel (pieces of wood, vehicle carpets, etc.)",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае утопления в снегу или песке и невозможности сдвинуть автомобиль с места желательно подложить под буксующее колесо что-либо, вызывающее трение (деревяшки, автомобильные ковры и т.п.).",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果陷入雪或沙中而无法移动车辆，建议在打滑的车轮下方插入一些会产生摩擦的东西（木片、车辆地毯等）。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-infossamento-1",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "In caso di infossamento su neve o sabbia, non riuscendo a partire con la prima marcia è opportuno innestare una marcia superiore",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "If you get stuck in snow or sand and are unable to start in first gear, it is advisable to engage a higher gear.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Если вы застряли в снегу или песке и не можете завестись на первой передаче, рекомендуется включить более высокую передачу.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果您陷入雪地或沙地并且无法以一档起步，建议挂入更高的档位。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-infossamento-2",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Su una strada innevata l'aderenza del veicolo è minore che su una strada ghiacciata",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On a snowy road the vehicle's grip is less than on an icy road",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На заснеженной дороге сцепление автомобиля с дорогой меньше, чем на обледенелой дороге.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在雪路上，车辆的抓地力小于在冰路上的抓地力",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tamponamenti-stradali-0",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "I tamponamenti stradali avvengono principalmente per la forte velocità",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Road collisions occur mainly due to high speed",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Дорожно-транспортные происшествия происходят в основном из-за высокой скорости",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "道路碰撞事故的发生主要是由于车速过快",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tamponamenti-stradali-1",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "I tamponamenti stradali avvengono maggiormente se non si rispetta la distanza di sicurezza",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Road collisions occur more often if the safety distance is not respected",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Дорожно-транспортные происшествия происходят чаще, если не соблюдается безопасная дистанция.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果不遵守安全距离，道路碰撞事故会更频繁地发生",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tamponamenti-stradali-2",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "I tamponamenti stradali avvengono principalmente per la disattenzione dei conducenti",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Road collisions occur mainly due to the inattention of drivers",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Дорожно-транспортные происшествия происходят в основном из-за невнимательности водителей.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "道路碰撞事故的发生主要是由于驾驶员注意力不集中",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tamponamenti-stradali-3",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "I tamponamenti stradali avvengono principalmente per l'improvviso guasto del freno di stazionamento",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Road collisions mainly occur due to the sudden failure of the parking brake",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Дорожные столкновения в основном происходят из-за внезапного отказа стояночного тормоза.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "道路碰撞事故主要是由于驻车制动器突然失灵而发生的",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-tamponamenti-stradali-4",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "I tamponamenti stradali avvengono principalmente tra autoveicoli dotati di servosterzo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Rear-end collisions mainly occur between vehicles equipped with power steering",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Столкновения сзади в основном происходят между транспортными средствами, оборудованными гидроусилителем рулевого управления.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "追尾事故主要发生在配备动力转向系统的车辆之间",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-pannelli-galleria-0",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Percorrendo un lungo tunnel o traforo, in caso di formazione di lunghe file di veicoli, è opportuno aumentare la distanza di sicurezza, per scongiurare, in caso d'incendio, il rapido propagarsi delle fiamme",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When traveling through a long tunnel or tunnel, in the event of long lines of vehicles forming, it is advisable to increase the safety distance, to avoid the rapid spread of the flames in the event of a fire.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При движении по длинному тоннелю или туннелю в случае образования длинных очередей транспортных средств желательно увеличить безопасное расстояние, чтобы избежать быстрого распространения пламени в случае пожара.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在穿越长隧道或隧道时，如遇车辆排长队，应适当拉大安全距离，避免发生火灾时火焰迅速蔓延。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-pannelli-galleria-1",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Percorrendo un lungo tunnel o traforo, in caso d'incendio, bisogna abbandonare velocemente il veicolo, seguendo la segnaletica che porta alle vie di fuga o ai luoghi sicuri protetti da porte tagliafuoco",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When traveling through a long tunnel or tunnel, in the event of a fire, you must quickly abandon the vehicle, following the signs that lead to escape routes or safe places protected by fire doors.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При движении по длинному тоннелю или тоннелю в случае пожара необходимо быстро покинуть транспортное средство, следуя указателям, ведущим к путям эвакуации или безопасным местам, защищенным противопожарными дверями.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在穿越长隧道或坑道时，一旦发生火灾，必须迅速弃车，按照指示逃生路线或有防火门保护的安全场所的标志行驶。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-pannelli-galleria-2",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Percorrendo un lungo tunnel o traforo, in caso d'incendio, bisogna attenersi alle istruzioni vocali del personale di servizio o dei vigili del fuoco, per evitare di incamminarsi nella direzione sbagliata",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When traveling through a long tunnel or tunnel, in the event of a fire, you must follow the vocal instructions of the service staff or firefighters, to avoid heading in the wrong direction",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При движении по длинному тоннелю или тоннелю в случае пожара необходимо следовать голосовым инструкциям обслуживающего персонала или пожарных, чтобы не двигаться в неправильном направлении.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在穿越长隧道或隧道时，一旦发生火灾，必须听从服务人员或消防员的声音指示，避免走错方向",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-pannelli-galleria-3",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il pannello in figura, posto all'interno di una galleria, indica la presenza di una via di fuga",
+    "is_true": true,
+    "image_url": "/images/334.png",
+    "translations": {
+      "en": {
+        "text": "The panel in the figure, placed inside a tunnel, indicates the presence of an escape route",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Панель на рисунке, расположенная внутри туннеля, указывает на наличие пути эвакуации.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "图中的面板放置在隧道内，表明存在逃生路线",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-pannelli-galleria-4",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il pannello in figura, posto all'interno di una galleria, indica la presenza di un estintore",
+    "is_true": true,
+    "image_url": "/images/335.png",
+    "translations": {
+      "en": {
+        "text": "The panel in the figure, located inside a tunnel, indicates the presence of a fire extinguisher",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Панель на рисунке, расположенная внутри тоннеля, указывает на наличие огнетушителя.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "图中的面板位于隧道内，表明存在灭火器",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-pannelli-galleria-5",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Il pannello in figura obbliga a tornare indietro all'imbocco della galleria",
+    "is_true": false,
+    "image_url": "/images/334.png",
+    "translations": {
+      "en": {
+        "text": "The panel in the figure forces you to go back to the entrance of the tunnel",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Панель на рисунке заставляет вас вернуться ко входу в туннель.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "图中的面板强制你回到隧道入口",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "incidenti-stradali-comportamenti-pannelli-galleria-6",
+    "category": "incidenti stradali comportamenti",
+    "text_it": "Percorrendo un lungo tunnel o traforo, in caso d'incendio, bisogna seguire la segnaletica di emergenza, anche se in netto contrasto con gli ordini vocali impartiti dai vigili del fuoco",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When traveling through a long tunnel or tunnel, in the event of a fire, you must follow the emergency signs, even if they are in stark contrast to the vocal orders given by the firefighters.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Путешествуя по длинному тоннелю или тоннелю, в случае пожара необходимо следовать аварийным знакам, даже если они резко контрастируют с голосовыми приказами, отдаваемыми пожарными.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在穿越长隧道或隧道时，一旦发生火灾，您必须遵循紧急标志，即使它们与消防员发出的声音命令形成鲜明对比。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  }
+]

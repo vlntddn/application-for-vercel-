@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Required by the TWA helper for share/download handling. -->
+    <files-path name="twa" path="twa/" />
+</paths>

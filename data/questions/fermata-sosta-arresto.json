@@ -1,0 +1,4586 @@
+[
+  {
+    "id": "fermata-sosta-arresto-disco-orario-parchimetro-0",
+    "category": "fermata sosta arresto",
+    "text_it": "Se si parcheggia in una zona regolamentata con parchimetro, occorre esporre l'apposito tagliando, in modo che sia ben visibile",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "If you park in a regulated area with a parking meter, you must display the appropriate coupon so that it is clearly visible.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Если вы паркуетесь в регулируемой зоне, где есть паркомат, вы должны предъявить соответствующий купон так, чтобы он был хорошо виден.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果您将车停在设有停车计时器的管制区域，则必须出示相应的优惠券，使其清晰可见。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-disco-orario-parchimetro-1",
+    "category": "fermata sosta arresto",
+    "text_it": "Per parcheggiare in una zona regolamentata mediante disco orario, bisogna esporre in modo ben visibile l'orario di arrivo",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "To park in an area regulated by a parking disc, you must clearly display the arrival time",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Чтобы припарковаться в зоне, регулируемой парковочным диском, необходимо четко указать время прибытия.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在有停车牌规定的区域停车时，必须清楚地显示到达时间",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-disco-orario-parchimetro-2",
+    "category": "fermata sosta arresto",
+    "text_it": "In una zona in cui la sosta è regolamentata con parchimetro, non occorre utilizzarlo se ci si ferma soltanto per far salire o scendere un passeggero",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In an area where parking is regulated by a parking meter, it is not necessary to use it if you only stop to pick up or drop off a passenger",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В зоне, где парковка регулируется паркоматом, нет необходимости использовать его, если вы останавливаетесь только для того, чтобы забрать или высадить пассажира.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在设有停车计时器的区域，如果您只是停车接送乘客，则无需使用停车计时器",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-disco-orario-parchimetro-3",
+    "category": "fermata sosta arresto",
+    "text_it": "Nelle aree di parcheggio a tempo limitato, i veicoli al servizio di persone diversamente abili non sono obbligati a rispettare il limite di tempo stabilito per la sosta.",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In limited-time parking areas, vehicles serving disabled people are not obliged to respect the time limit established for parking.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На ограниченных по времени стоянках транспортные средства, обслуживающие инвалидов, не обязаны соблюдать установленный лимит времени для стоянки.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在限时停车区内，为残疾人服务的车辆没有义务遵守规定的停车时限。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-disco-orario-parchimetro-4",
+    "category": "fermata sosta arresto",
+    "text_it": "Per parcheggiare in una zona regolamentata mediante disco orario, bisogna indicare sul disco l'orario di fine della sosta, oppure trascriverlo su un foglio di carta",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "To park in an area regulated by a parking disc, you must indicate the parking end time on the disc, or write it down on a sheet of paper.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Чтобы припарковаться на территории, регулируемой парковочным диском, необходимо указать время окончания парковки на диске или записать его на листе бумаги.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "要在停车盘规定的区域停车，必须在停车盘上注明停车结束时间，或将其写在纸上。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-disco-orario-parchimetro-5",
+    "category": "fermata sosta arresto",
+    "text_it": "In una zona in cui la sosta è regolamentata mediante disco orario, prima che scada il tempo di validità della sosta è consentito aggiornare l'orario, senza che il veicolo venga spostato",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In an area where parking is regulated by means of a parking disc, it is possible to update the time before the parking validity period expires, without the vehicle being moved",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В зоне, где парковка регулируется с помощью парковочного диска, можно обновить время до истечения срока действия парковки без перемещения автомобиля.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在通过停车盘管理停车的区域，可以在停车有效期到期之前更新时间，而无需移动车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-disco-orario-parchimetro-6",
+    "category": "fermata sosta arresto",
+    "text_it": "In una zona in cui la sosta è regolamentata con parchimetro, non occorre utilizzare il parchimetro se si effettua una breve sosta",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In an area where parking is regulated by a parking meter, you do not need to use the parking meter if you make a short stop",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В зоне, где парковка регулируется паркоматом, вам не нужно использовать паркомат, если вы делаете короткую остановку.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在设有停车计时器的区域，如果您短暂停车，则无需使用停车计时器",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-disco-orario-parchimetro-7",
+    "category": "fermata sosta arresto",
+    "text_it": "Se si parcheggia in una zona regolamentata mediante disco orario, bisogna trascrivere su un foglio di carta l'ora di arrivo, senza indicare i minuti",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "If you park in an area regulated by a parking disc, you must write down the time of arrival on a sheet of paper, without indicating the minutes",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Если вы паркуетесь в зоне, регулируемой парковочным диском, время прибытия необходимо записать на листе бумаги, без указания минут.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果您将车停在停车牌规定的区域，则必须在纸上写下到达时间，而不注明分钟数",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-conducente-autoveicolo-sosta-0",
+    "category": "fermata sosta arresto",
+    "text_it": "Il conducente di un autoveicolo in sosta sul lato destro di una strada urbana, prima di aprire la portiera, deve fare particolare attenzione ai veicoli che sopraggiungono",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The driver of a vehicle parked on the right side of an urban road, before opening the door, must pay particular attention to oncoming vehicles",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Водитель автомобиля, припаркованного с правой стороны городской дороги, прежде чем открыть дверь, должен обратить особое внимание на встречные транспортные средства.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停放在城市道路右侧的车辆驾驶员在开门前必须特别注意迎面驶来的车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-conducente-autoveicolo-sosta-1",
+    "category": "fermata sosta arresto",
+    "text_it": "Il conducente di un autoveicolo in sosta su una strada stretta, prima di scendere deve controllare che non sopraggiungano veicoli",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The driver of a vehicle parked on a narrow road must check that there are no oncoming vehicles before getting out",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Водитель автомобиля, припаркованного на узкой дороге, перед выходом должен убедиться в отсутствии встречных транспортных средств.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停在狭窄道路上的车辆驾驶员在下车前必须检查是否有迎面驶来的车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-conducente-autoveicolo-sosta-2",
+    "category": "fermata sosta arresto",
+    "text_it": "E' opportuno che il conducente di un autoveicolo in sosta sul lato sinistro in una strada urbana a senso unico, ricordi al passeggero di prestare particolare attenzione ai veicoli che sopraggiungono, prima di aprire la portiera",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The driver of a vehicle parked on the left side of a one-way urban street should remind the passenger to pay particular attention to oncoming vehicles before opening the door.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Водитель автомобиля, припаркованного с левой стороны городской улицы с односторонним движением, должен напомнить пассажиру, что ему следует обратить особое внимание на встречные транспортные средства, прежде чем открывать дверь.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停放在单向城市街道左侧的车辆驾驶员在开门前应提醒乘客特别注意迎面驶来的车辆。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-conducente-autoveicolo-sosta-3",
+    "category": "fermata sosta arresto",
+    "text_it": "E' opportuno che il conducente di un autoveicolo, in sosta sul lato destro di una strada urbana, ricordi al passeggero che apre la portiera di destra di fare attenzione ai pedoni in transito",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "It is advisable for the driver of a motor vehicle, parked on the right side of an urban road, to remind the passenger who opens the right door to pay attention to pedestrians in transit",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Водителю автомобиля, припаркованного с правой стороны городской дороги, целесообразно напоминать пассажиру, открывающему правую дверь, о необходимости обратить внимание на проходящих пешеходов.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "机动车驾驶人在城市道路右侧停放时，宜提醒右开门乘客注意过境行人",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-conducente-autoveicolo-sosta-4",
+    "category": "fermata sosta arresto",
+    "text_it": "Il conducente di un autoveicolo può lasciare il motore acceso se sosta per poco tempo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The driver of a motor vehicle can leave the engine running if it stops for a short time",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Водитель автомобиля может оставить двигатель работающим, если он ненадолго остановится.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果机动车辆短时间停止，驾驶员可以让发动机继续运转",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-conducente-autoveicolo-sosta-5",
+    "category": "fermata sosta arresto",
+    "text_it": "Il conducente di un autoveicolo in sosta su una strada stretta, prima di scendere deve preoccuparsi dei veicoli che sopraggiungono da dietro, ma non di quelli di fronte",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The driver of a car parked on a narrow road must worry about vehicles coming from behind, but not those in front, before getting out.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем выйти из машины, водитель автомобиля, припаркованного на узкой дороге, должен беспокоиться о транспортных средствах, приближающихся сзади, а не о тех, кто идет впереди.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停在狭窄道路上的汽车司机在下车前必须担心后面的车辆，而不是前面的车辆。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-0",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un autoveicolo è opportuno regolare il sedile e il poggiatesta, secondo la propria statura",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to drive a motor vehicle, it is advisable to adjust the seat and headrest according to your height",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем начать управлять автомобилем, желательно отрегулировать сиденье и подголовник в соответствии с вашим ростом.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在开始驾驶机动车辆之前，建议根据您的身高调整座椅和头枕",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-1",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un autoveicolo è opportuno regolare gli specchi retrovisori interni ed esterni",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to drive a motor vehicle it is advisable to adjust the internal and external rear-view mirrors",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Перед началом управления автомобилем желательно отрегулировать внутренние и наружные зеркала заднего вида.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在开始驾驶机动车辆之前，建议调整内部和外部后视镜",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-2",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un motociclo è opportuno regolare gli specchi secondo la propria statura",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to ride a motorcycle it is advisable to adjust the mirrors according to your height",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Перед началом езды на мотоцикле желательно отрегулировать зеркала по росту.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在开始骑摩托车之前，建议根据您的身高调整后视镜",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-3",
+    "category": "fermata sosta arresto",
+    "text_it": "Quando si guida un veicolo a motore, bisogna avere con sé tutti i documenti necessari per la guida (carta di circolazione, certificato di assicurazione, patente ecc.), e in corso di validità",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When driving a motor vehicle, you must have with you all the documents necessary for driving (registration certificate, insurance certificate, driving license, etc.), and which are valid.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При управлении автотранспортным средством необходимо иметь при себе все документы, необходимые для управления транспортным средством (паспортное свидетельство, страховое свидетельство, водительское удостоверение и т.п.), и имеющие действующую силу.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "驾驶机动车时，您必须携带驾驶所需的所有有效文件（登记证书、保险证书、驾驶执照等）。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-4",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un veicolo a motore bisogna essere certi che la categoria di patente posseduta ne consenta la guida",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to drive a motor vehicle, you must be sure that the category of license you hold allows you to drive",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем начать управлять транспортным средством, вы должны быть уверены, что категория прав, которые вы имеете, позволяет вам управлять транспортным средством.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在开始驾驶机动车辆之前，您必须确保您持有的驾照类别允许您驾驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-5",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un veicolo, bisogna essere certi del perfetto stato di efficienza del mezzo",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to drive a vehicle, you must be sure of the perfect state of efficiency of the vehicle",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем приступить к управлению транспортным средством, необходимо быть уверенным в идеальном работоспособном состоянии транспортного средства.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在开始驾驶车辆之前，您必须确定车辆的完美效率状态",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-6",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un veicolo bisogna accertarsi che gli oggetti trasportati siano sistemati in modo da evitarne la caduta o dispersione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to drive a vehicle, you must make sure that the objects transported are arranged in such a way as to prevent them from falling or dispersing",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем приступить к управлению транспортным средством, необходимо убедиться, что перевозимые предметы расположены таким образом, чтобы исключить их падение или разброс.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在开始驾驶车辆之前，必须确保所运输的物体已放置好，以防止它们掉落或散落",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-7",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un veicolo, bisogna controllare che non sia compromessa la visibilità posteriore e laterale, per la presenza di passeggeri o per il carico mal posizionato",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to drive a vehicle, you must check that rear and lateral visibility is not compromised due to the presence of passengers or poorly positioned cargo.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем приступить к управлению транспортным средством, необходимо убедиться, что задняя и боковая видимость не ухудшена из-за присутствия пассажиров или неудачно расположенного груза.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在开始驾驶车辆之前，您必须检查后方和侧面的能见度是否不会因乘客或位置不当的货物而受到影响。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-8",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un autoveicolo, bisogna individuare i comandi (leve e pulsanti) necessari per la guida e comprenderne bene il funzionamento",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to drive a motor vehicle, you must identify the controls (levers and buttons) necessary for driving and understand their operation well.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем начать управлять автомобилем, необходимо определить необходимые для управления автомобилем органы управления (рычаги и кнопки) и хорошо понимать их работу.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在开始驾驶机动车辆之前，您必须识别驾驶所需的控制装置（控制杆和按钮）并充分了解其操作。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-9",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un’autovettura, bisogna controllare che i passeggeri abbiano regolarmente allacciato le cinture di sicurezza",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to drive a car, you must check that passengers have properly fastened their seat belts",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем начать управлять автомобилем, необходимо убедиться, что пассажиры правильно пристегнули ремни безопасности.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "开始驾驶汽车之前，必须检查乘客是否正确系好安全带",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-10",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un veicolo a motore bisogna regolare il contachilometri parziale",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to drive a motor vehicle, the trip odometer must be adjusted",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем приступить к управлению автотранспортным средством, необходимо отрегулировать счетчик пробега.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "开始驾驶机动车辆之前，必须调整行程里程表",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-11",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un veicolo a motore bisogna disinserire l'airbag del lato conducente",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to drive a motor vehicle, the driver's side airbag must be deactivated",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Перед началом управления автомобилем необходимо отключить боковую подушку безопасности водителя.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在开始驾驶机动车辆之前，必须停用驾驶员侧安全气囊",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-12",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un autoveicolo, bisogna verificare che le cinture di sicurezza siano dotate di pretensionatore",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to drive a motor vehicle, you must check that the seat belts are equipped with a pretensioner",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем приступить к управлению автотранспортным средством, необходимо проверить наличие преднатяжителей ремней безопасности.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "开始驾驶机动车辆前，必须检查安全带是否配备预紧器",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-prima-iniziare-guidare-13",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di iniziare a guidare un veicolo, bisogna verificarne lo stato di efficienza solo se si deve intraprendere un lungo viaggio",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before starting to drive a vehicle, you should check its efficiency only if you have to undertake a long journey",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем приступить к управлению транспортным средством, следует проверить его работоспособность только в том случае, если вам предстоит совершить длительную поездку.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在开始驾驶车辆之前，仅当您必须进行长途旅行时才应检查其效率",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-veicolo-0",
+    "category": "fermata sosta arresto",
+    "text_it": "L'arresto è l'interruzione della marcia del veicolo dovuta ad esigenze della circolazione, come ad esempio ad un semaforo rosso",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is the interruption of the vehicle's movement due to traffic requirements, such as a red traffic light",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка – это прекращение движения транспортного средства из-за требований дорожного движения, например, красного сигнала светофора.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车是指由于交通要求（例如红灯）而中断车辆的运动",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-veicolo-1",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata di un veicolo è la temporanea sospensione della marcia per consentire la salita o la discesa delle persone",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping a vehicle is the temporary suspension of travel to allow people to get on or off",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка транспортного средства – это временная приостановка движения, позволяющая людям сесть или выйти.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车是指暂时停止行驶，以便人们上下车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-veicolo-2",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata di un veicolo è la temporanea sospensione della marcia per esigenze di brevissima durata, come ad esempio per chiedere informazioni agli agenti del traffico",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping a vehicle is the temporary suspension of travel for very short-term needs, such as to ask traffic officers for information",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка транспортного средства — это временная приостановка движения для очень краткосрочных нужд, например, для запроса информации у сотрудников дорожного движения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车是指出于非常短期的需要而暂时停止出行，例如向交通官员询问信息",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-veicolo-3",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata di un veicolo è la temporanea sospensione della marcia per esigenze di brevissima durata.",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping a vehicle is the temporary suspension of travel for very short-term needs.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка транспортного средства – это временная приостановка движения для очень краткосрочных нужд.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车是为了满足非常短期的需要而暂时停止旅行。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-veicolo-4",
+    "category": "fermata sosta arresto",
+    "text_it": "L'arresto è la temporanea sospensione della marcia per esigenze del conducente o dei passeggeri di un veicolo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is the temporary suspension of travel due to the needs of the driver or passengers of a vehicle",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка – временное приостановление движения по необходимости водителя или пассажиров транспортного средства.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车是指由于车辆驾驶员或乘客的需要而暂时停止行驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-veicolo-5",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è l'interruzione della marcia del veicolo dovuta ad esigenze della circolazione",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The stop is the interruption of the vehicle's movement due to traffic needs",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка – это прекращение движения транспортного средства в связи с необходимостью дорожного движения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车是指由于交通需要而中断车辆的行驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-veicolo-6",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata per esigenze del conducente può avere la durata massima di dieci minuti",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The stop for the driver's needs can last a maximum of ten minutes",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка для нужд водителя может длиться максимум десять минут.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "满足驾驶员需求的停车时间最长可达十分钟",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-veicolo-7",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata di un veicolo è vietata se i passeggeri che scendono sono più di uno",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping a vehicle is prohibited if there are more than one passengers alighting",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка транспортного средства запрещена, если из него вышло более одного пассажира.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果有超过一名乘客下车，禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-durante-fermata-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata non deve arrecare intralcio alla circolazione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The stop must not obstruct traffic",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка не должна препятствовать движению транспорта.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "车站不得妨碍交通",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-durante-fermata-1",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la fermata il conducente non deve impedire con il proprio autoveicolo il normale flusso del traffico",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop the driver must not impede the normal flow of traffic with his vehicle",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель не должен препятствовать нормальному движению своего транспортного средства.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车期间，驾驶员不得用车辆妨碍正常交通",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-durante-fermata-2",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la fermata il conducente deve comportarsi in modo da non costituire pericolo agli altri utenti della strada",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop the driver must behave in such a way as not to constitute a danger to other road users",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель должен вести себя так, чтобы не представлять опасности для других участников дорожного движения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车期间，驾驶员的行为方式不得对其他道路使用者构成危险",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-durante-fermata-3",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la fermata il conducente deve essere sempre presente e pronto a riprendere la marcia",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop the driver must always be present and ready to continue driving",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель должен всегда присутствовать и быть готовым продолжить движение.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车期间，驾驶员必须始终在场并做好继续驾驶的准备",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-durante-fermata-4",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la fermata il conducente deve sempre adottare le opportune cautele atte ad evitare incidenti",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop the driver must always take appropriate precautions to avoid accidents",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель всегда должен принимать соответствующие меры предосторожности во избежание несчастных случаев.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车期间，驾驶员必须始终采取适当的预防措施，以避免发生事故",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-durante-fermata-5",
+    "category": "fermata sosta arresto",
+    "text_it": "Non è consentito fermarsi per chiedere informazioni agli agenti del traffico, quando ciò possa causare intralcio o rallentamento alla circolazione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "It is not permitted to stop to ask traffic officers for information when this could cause obstruction or slowdown of traffic",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Не разрешается останавливаться для получения информации у сотрудников ГИБДД, если это может привести к затруднению или замедлению движения транспорта.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "当可能导致交通阻塞或减慢时，不允许停车向交通官员询问信息",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-durante-fermata-6",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la fermata il conducente può allontanarsi per brevissimo tempo prima di riprendere la marcia",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop the driver can move away for a very short time before continuing to travel",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель может отойти на очень короткое время, прежде чем продолжить движение.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在停车期间，驾驶员可以在继续行驶之前离开很短的时间",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-durante-fermata-7",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata di un veicolo è sempre consentita per chiedere informazioni agli agenti del traffico",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping a vehicle is always permitted to ask traffic officers for information",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановить транспортное средство всегда разрешается, запросив информацию у сотрудников ГИБДД.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车时始终可以向交通官员询问信息",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-durante-fermata-8",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la fermata il conducente, se si allontana, deve lasciare il veicolo con il motore acceso",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop, the driver, if he leaves, must leave the vehicle with the engine running",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель, если он выезжает, должен покинуть транспортное средство с работающим двигателем.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车期间，驾驶员如果离开，必须在发动机运转的情况下离开车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-fuori-centri-abitati-0",
+    "category": "fermata sosta arresto",
+    "text_it": "In caso di fermata, ove non esista marciapiede rialzato, il conducente deve lasciare uno spazio non inferiore ad un metro per il transito dei pedoni",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the event of a stop, where there is no raised pavement, the driver must leave a space of no less than one meter for the transit of pedestrians",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае остановки без приподнятого тротуара водитель обязан оставить пространство не менее одного метра для прохода пешеходов.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车时，在没有高架路面的情况下，驾驶员必须留出不少于一米的空间供行人通行",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-fuori-centri-abitati-1",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati, il conducente, in caso di fermata, deve collocare, se possibile, il veicolo fuori della carreggiata",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas, in the event of a stop, the driver must place the vehicle off the roadway if possible.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых районов в случае остановки водитель обязан по возможности убрать транспортное средство с проезжей части.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在住宅区外，如果停车，驾驶员必须尽可能将车辆驶离道路。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-fuori-centri-abitati-2",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati, il conducente, in caso di fermata, deve collocare il veicolo fuori della carreggiata, ma non sulle piste ciclabili",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas, in the event of a stop, the driver must place the vehicle off the road, but not on cycle paths.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых районов в случае остановки водитель обязан убрать транспортное средство с дороги, но не на велосипедные дорожки.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在住宅区外，如果停车，驾驶员必须将车辆停在道路之外，但不得停在自行车道上。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-fuori-centri-abitati-3",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati, se non è possibile collocare il veicolo fuori della carreggiata, il conducente deve effettuare la fermata il più vicino possibile al margine destro della carreggiata",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside built-up areas, if it is not possible to place the vehicle off the roadway, the driver must stop as close as possible to the right edge of the roadway",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вне населенных пунктов, если нет возможности вывести транспортное средство за пределы проезжей части, водитель должен остановиться как можно ближе к правому краю проезжей части.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在建筑区之外，如果无法将车辆停在道路外，驾驶员必须尽可能靠近道路右边缘停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-fuori-centri-abitati-4",
+    "category": "fermata sosta arresto",
+    "text_it": "In caso di fermata su strada urbana in cui non esiste il marciapiede rialzato, il conducente deve collocare il veicolo il più vicino possibile al margine destro della carreggiata",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the event of a stop on an urban road where there is no raised pavement, the driver must place the vehicle as close as possible to the right edge of the roadway",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае остановки на городской дороге, где отсутствует приподнятое покрытие, водитель обязан разместить транспортное средство как можно ближе к правому краю проезжей части.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果在没有高架路面的城市道路上停车，驾驶员必须将车辆尽可能靠近道路的右边缘",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-fuori-centri-abitati-5",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati, il conducente, in caso di fermata ha l'obbligo di collocare il veicolo fuori della carreggiata, eventualmente su una pista ciclabile",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas, the driver, in the event of a stop, has the obligation to place the vehicle off the road, possibly on a cycle path",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых территорий водитель в случае остановки обязан убрать транспортное средство с дороги, возможно, на велосипедную дорожку.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在住宅区外，驾驶员有义务在停车时将车辆驶离道路，可能停在自行车道上",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-vietata-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata in corrispondenza o in prossimità dei passaggi a livello",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited at or near level crossings",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещена на железнодорожных переездах или вблизи них.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在平交路口或其附近停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-vietata-1",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata sui binari di linee ferroviarie o tranviarie o così vicino ad essi da intralciare la marcia dei veicoli su rotaia",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited on the tracks of railway or tram lines or so close to them as to hinder the movement of rail vehicles",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещается на путях железных дорог или трамвайных путей или настолько близко к ним, что это препятствует движению рельсовых транспортных средств.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在铁路或有轨电车线路的轨道上或靠近轨道停车以妨碍轨道车辆的行驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-vietata-2",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata nelle gallerie, salvo diversa segnalazione.",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited in tunnels, unless otherwise indicated.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка в туннелях запрещена, если не указано иное.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "除非另有说明，禁止在隧道内停车。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-vietata-3",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata nei sottovia, sotto i sovrapassaggi, sotto i fornici e i portici, salvo diversa segnalazione.",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited in underpasses, under overpasses, under arches and porticoes, unless otherwise indicated.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещена в подземных переходах, под эстакадами, под арками и портиками, если не указано иное.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "除非另有说明，禁止在地下通道、立交桥下、拱门和门廊下停车。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-vietata-4",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata sui dossi.",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited on speed bumps.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещена на «лежачих полицейских».",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在减速带上停车。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-vietata-5",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dai centri abitati e sulle strade urbane di scorrimento la fermata è vietata in prossimità dei dossi.",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas and on urban roads, stopping near speed bumps is prohibited.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых кварталов и на городских дорогах остановка возле «лежачих полицейских» запрещена.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在居民区外和城市道路上，禁止在减速带附近停车。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-vietata-6",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata nelle curve e, fuori dei centri abitati e sulle strade urbane di scorrimento, anche in loro prossimità",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited on curves and, outside of built-up areas and on urban roads, even in their vicinity",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещена на поворотах, а также за пределами населенных пунктов и на городских дорогах, даже вблизи них.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在弯道、建筑区外和城市道路上停车，甚至在其附近",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-vietata-7",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata sul margine destro della carreggiata",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited on the right edge of the road",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещена на правом краю дороги.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在道路右侧边缘停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-vietata-8",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata lungo il margine sinistro di una carreggiata a senso unico di circolazione",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited along the left edge of a one-way traffic lane",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещена вдоль левого края полосы одностороннего движения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止沿单向车道左边缘停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-vietata-9",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata di breve durata è consentita anche in curva.",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Short stops are also permitted when cornering.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Короткие остановки также разрешены при прохождении поворотов.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "转弯时也允许短暂停留。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-vietata-10",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata allo sbocco dei passi carrabili",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited at the exit of driveways",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещена при выезде с проезда",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在车道出口处停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermata-vietata-11",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata sulle aree destinate al mercato o al carico e allo scarico delle merci",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited in areas intended for the market or for the loading and unloading of goods",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещена в местах, предназначенных для рынка или для погрузки и разгрузки товаров.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在市场或装卸货物的区域停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermate-cartelli-intersezione-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata in prossimità e in corrispondenza di segnali stradali verticali in modo da occultarne la vista",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited near and in correspondence with vertical road signs so as to hide them from view",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещается останавливаться вблизи и в соответствии с вертикальными дорожными знаками, чтобы скрыть их из поля зрения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在垂直路标附近或与其对应的地方停车，以将其隐藏起来",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermate-cartelli-intersezione-1",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata in prossimità e in corrispondenza di segnali semaforici in modo da occultarne la vista",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited near and in correspondence with traffic lights in order to hide them from view",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещается останавливаться вблизи и в соответствии со светофорами с целью скрыть их из поля зрения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在交通信号灯附近或对应位置停车，以隐藏交通信号灯",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermate-cartelli-intersezione-2",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata in corrispondenza dei segnali orizzontali di preselezione e lungo le corsie di canalizzazione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited in correspondence with the horizontal pre-selection signs and along the canalization lanes",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещена в соответствии с горизонтальными знаками предварительного выбора и вдоль полос канализации.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在水平预选标志处和运河车道沿线停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermate-cartelli-intersezione-3",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati, la fermata è vietata in corrispondenza e in prossimità delle aree di intersezione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas, stopping is prohibited at and near intersection areas",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых кварталов остановка запрещена на перекрестках и вблизи них.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在住宅区外，禁止在交叉路口及其附近停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermate-cartelli-intersezione-4",
+    "category": "fermata sosta arresto",
+    "text_it": "Nei centri abitati, la fermata e la sosta sono vietate in corrispondenza delle aree di intersezione e in prossimità di esse a meno di 5 metri, salvo diversa segnalazione.",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In residential areas, stopping and parking are prohibited in correspondence with intersection areas and within 5 meters of them, unless otherwise indicated.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В жилых помещениях остановка и парковка запрещены в соответствии с зонами перекрестков и в пределах 5 метров от них, если не указано иное.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "居民区内，除另有说明外，与路口区域及其5米以内的区域禁止停车、停车。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermate-cartelli-intersezione-5",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata limitatamente alle ore di esercizio, in corrispondenza dei distributori di carburante",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited only during operating hours, near fuel stations",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещена только в рабочее время, возле заправочных станций.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "仅在营业时间、加油站附近禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermate-cartelli-intersezione-6",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata dopo il segnale DIVIETO DI SOSTA",
+    "is_true": false,
+    "image_url": "/images/84.png",
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited after the NO PARKING sign",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещена после знака «ПАРКОВКА ЗАПРЕЩЕНА».",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在“禁止停车”标志后停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermate-cartelli-intersezione-7",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata in prossimità dei segnali stradali, anche se il veicolo non ne occulta la vista",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited near road signs, even if the vehicle does not obscure their view",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещается останавливаться возле дорожных знаков, даже если транспортное средство не заслоняет им обзор.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "即使车辆没有遮挡视线，也禁止在路标附近停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermate-cartelli-intersezione-8",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata lungo le autostrade, anche in caso di emergenza",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited along motorways, even in the event of an emergency",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка на автомагистралях запрещена даже в случае чрезвычайной ситуации.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "即使在紧急情况下也禁止在高速公路上停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermate-cartelli-intersezione-9",
+    "category": "fermata sosta arresto",
+    "text_it": "Nei centri abitati la fermata è vietata in prossimità delle aree di intersezione, a più di 5 metri",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In residential areas, stopping is prohibited near intersection areas, more than 5 meters away",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В жилых помещениях остановка запрещена вблизи перекрестков, на расстоянии более 5 метров.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "住宅区内，路口附近5米以上禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-fermate-cartelli-intersezione-10",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è consentita sulle corsie di accelerazione, purché brevissima",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is permitted on the acceleration lanes, provided it is very short",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка разрешена на полосах ускорения при условии, что она очень короткая.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果加速车道很短，则允许停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-divieto-sosta-fermata-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta e la fermata sono sempre vietate sugli attraversamenti pedonali",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking and stopping are always prohibited on pedestrian crossings",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка и остановка на пешеходных переходах всегда запрещены.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "始终禁止在人行横道上停车和停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-divieto-sosta-fermata-1",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta e la fermata sono vietate in ogni caso sulle piste ciclabili e agli sbocchi di esse",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking and stopping are prohibited in any case on cycle paths and at their ends",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка и остановка запрещены в любом случае на велосипедных дорожках и в их концах.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "任何情况下都禁止在自行车道及其末端停车和停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-divieto-sosta-fermata-2",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta e la fermata sono vietate sui marciapiedi, salvo diversa segnalazione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking and stopping are prohibited on the sidewalks, unless otherwise indicated",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка и остановка на тротуарах запрещены, если не указано иное.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "除非另有说明，禁止在人行道上停车和停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-divieto-sosta-fermata-3",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è consentita allo sbocco dei passi carrabili",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The stop is permitted at the exit of the driveways",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка разрешена на выезде с проездов.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "允许在车道出口处停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-divieto-sosta-fermata-4",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è consentita davanti ai cassonetti dei rifiuti urbani",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is permitted in front of urban waste bins",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка разрешена перед городскими мусорными баками",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "允许在城市垃圾箱前停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-divieto-sosta-fermata-5",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è consentita sugli attraversamenti pedonali per far scendere un passeggero",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is permitted at pedestrian crossings to let a passenger off",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На пешеходных переходах разрешена остановка для высадки пассажира",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "允许在人行横道处停车让乘客下车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-divieto-sosta-fermata-6",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata per esigenze di brevissima durata è vietata sulle piste ciclabili ma non agli sbocchi di esse",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping for very short-term needs is prohibited on cycle paths but not at their ends",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка для очень краткосрочных нужд запрещена на велосипедных дорожках, но не в их концах.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在自行车道上因非常短期的需要而停车，但在其末端则不然",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-divieto-sosta-fermata-7",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata allo sbocco dei passi carrabili",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited at the exit of driveways",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка запрещена при выезде с проезда",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在车道出口处停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-divieto-sosta-fermata-8",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è sempre vietata in seconda fila",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is always prohibited in the second row",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка всегда запрещена во втором ряду.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "第二排始终禁止停​​车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-divieto-sosta-fermata-9",
+    "category": "fermata sosta arresto",
+    "text_it": "La fermata è vietata in ogni caso nelle ore notturne",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping is prohibited in any case at night",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка в ночное время запрещена в любом случае.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "夜间无论如何禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-cautele-durante-sosta-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è la sospensione della marcia del veicolo protratta nel tempo, con possibilità del conducente di allontanarsi",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is the suspension of the vehicle's movement for a prolonged period of time, with the possibility of the driver walking away",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка – это приостановка движения транспортного средства на длительный период времени с возможностью ухода водителя.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车是指车辆长时间停止行驶，并且驾驶员有可能走开",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-cautele-durante-sosta-1",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la sosta il conducente può allontanarsi dal veicolo",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop the driver can move away from the vehicle",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель может отойти от автомобиля.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车期间，驾驶员可以离开车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-cautele-durante-sosta-2",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la sosta il conducente deve adottare le opportune cautele atte ad evitare incidenti",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop, the driver must take appropriate precautions to avoid accidents",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель должен принять соответствующие меры предосторожности во избежание несчастных случаев.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车期间，驾驶员必须采取适当的预防措施，以免发生事故",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-cautele-durante-sosta-3",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la sosta il conducente deve impedire l'uso del veicolo senza il suo consenso",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop the driver must prevent the use of the vehicle without his consent",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель обязан не допускать использования транспортного средства без его согласия.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车期间，未经本人同意，驾驶员必须阻止车辆使用",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-cautele-durante-sosta-4",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la sosta è opportuno che il conducente azioni il freno di stazionamento ed inserisca il rapporto più basso del cambio di velocità",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "While parking, the driver should apply the parking brake and engage the lowest gear ratio",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При парковке водитель должен затянуть стояночный тормоз и включить наименьшее передаточное число.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车时，驾驶员应拉起停车制动器并接合最低传动比",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-cautele-durante-sosta-5",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la sosta il conducente deve adottare accorgimenti atti a garantire l'immobilità del veicolo, indipendentemente dal grado di pendenza della strada",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop, the driver must adopt measures to ensure the immobility of the vehicle, regardless of the degree of slope of the road",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель должен принять меры, обеспечивающие неподвижность транспортного средства независимо от степени уклона дороги.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车期间，无论道路坡度如何，驾驶员都必须采取措施保证车辆不动",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-cautele-durante-sosta-6",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la sosta nelle strade a forte pendenza, è opportuno che il conducente azioni il freno di stazionamento, inserisca il rapporto più basso del cambio di velocità e lasci il veicolo con le ruote sterzate verso il marciapiede",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When parking on steep roads, the driver should apply the parking brake, engage the lowest gear ratio and leave the vehicle with the wheels turned towards the pavement.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При парковке на крутых дорогах водителю следует затянуть стояночный тормоз, включить низшую передаточную передачу и оставить автомобиль с повернутыми колесами к тротуару.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在陡峭道路上停车时，驾驶员应拉起驻车制动器，接合最低传动比，并使车轮转向路面。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-cautele-durante-sosta-7",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la sosta il conducente deve lasciare il veicolo con il motore spento",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop the driver must leave the vehicle with the engine off",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель должен покинуть транспортное средство с выключенным двигателем.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车期间，驾驶员必须在发动机关闭的情况下离开车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-cautele-durante-sosta-8",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la sosta nelle ore notturne il conducente deve lasciare in ogni caso accese le luci di posizione",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During parking at night the driver must in any case leave the side lights on",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При парковке в ночное время водитель в любом случае должен оставлять включенными габаритные огни.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "夜间停车时，驾驶员无论如何都必须打开侧灯",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-cautele-durante-sosta-9",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la sosta il conducente non può allontanarsi dal veicolo per più di tre ore",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop, the driver cannot leave the vehicle for more than three hours",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель не может покидать транспортное средство более трех часов.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车期间，驾驶员离开车辆不得超过三个小时",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-cautele-durante-sosta-10",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la sosta il conducente che lascia il veicolo su strada in salita, deve avere cura di inserire la quarta marcia",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop, the driver who leaves the vehicle on an uphill road must take care to engage fourth gear",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель, покидающий автомобиль на подъеме, должен позаботиться о включении четвертой передачи.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车时，在上坡路停车的驾驶员必须注意挂四档",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-cautele-durante-sosta-11",
+    "category": "fermata sosta arresto",
+    "text_it": "Durante la sosta il conducente deve posizionare il cambio di velocità dell'autovettura in folle",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "During the stop, the driver must place the car's gearbox in neutral",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Во время остановки водитель должен перевести коробку передач автомобиля в нейтральное положение.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "停车时，驾驶员必须将汽车变速箱置于空档",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-fuori-centri-abitati-0",
+    "category": "fermata sosta arresto",
+    "text_it": "Salvo diversa segnalazione il conducente, in caso di sosta nei centri abitati, deve collocare il veicolo il più vicino possibile al margine destro della carreggiata, parallelamente ad esso e secondo il senso di marcia, purché esista il marciapiede rialzato",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Unless otherwise indicated, the driver, in case of parking in residential areas, must place the vehicle as close as possible to the right edge of the road, parallel to it and in the direction of travel, provided that there is a raised pavement",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Если не указано иное, водитель при парковке в жилых помещениях должен поставить транспортное средство как можно ближе к правому краю дороги, параллельно ей и по направлению движения, при условии наличия приподнятого тротуара.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "除非另有说明，在住宅区停车时，驾驶员必须将车辆尽可能靠近道路的右边缘，与道路平行并沿行驶方向，前提是有凸起的人行道",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-fuori-centri-abitati-1",
+    "category": "fermata sosta arresto",
+    "text_it": "In caso di sosta ove non esista marciapiede rialzato, il conducente deve lasciare uno spazio non inferiore ad un metro per il transito dei pedoni",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In case of parking where there is no raised sidewalk, the driver must leave a space of no less than one meter for pedestrians to pass.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При парковке без приподнятого тротуара водитель обязан оставить для прохода пешеходов пространство не менее одного метра.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在没有高架人行道的地方停车，驾驶员必须留出不少于一米的空间供行人通行。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-fuori-centri-abitati-2",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati, il conducente che deve sostare ha l'obbligo di collocare il veicolo, ove possibile, fuori della carreggiata",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas, the driver who must stop has the obligation to place the vehicle, where possible, off the roadway.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых зон водитель, вынужденный остановиться, обязан по возможности убрать транспортное средство с проезжей части.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在住宅区外，必须停车的驾驶员有义务尽可能将车辆停在道路之外。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-fuori-centri-abitati-3",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati, il conducente che deve sostare ha l'obbligo di collocare il veicolo fuori della carreggiata, ma non sulle piste ciclabili",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas, the driver who must stop is obliged to place the vehicle off the road, but not on cycle paths.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых районов водитель, вынужденный остановиться, обязан убрать транспортное средство с дороги, но не на велосипедные дорожки.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在住宅区外，必须停车的驾驶员有义务将车辆停在道路之外，但不得停在自行车道上。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-fuori-centri-abitati-4",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati il conducente deve collocare il veicolo in sosta fuori della carreggiata, ma non sulle banchine, salvo diversa segnalazione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas, the driver must park the vehicle outside the roadway, but not on the shoulders, unless otherwise indicated",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых зон водитель должен парковать автомобиль вне проезжей части, но не на обочине, если не указано иное.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在住宅区外，驾驶员必须将车辆停在道路外，但不得停在路肩上，除非另有说明",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-fuori-centri-abitati-5",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati, in caso di impossibilità a collocare il veicolo fuori della carreggiata, il conducente deve sostare il più vicino possibile al margine destro della carreggiata",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside built-up areas, if it is impossible to place the vehicle off the roadway, the driver must stop as close as possible to the right edge of the roadway",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Вне населенных пунктов, если невозможно вывести транспортное средство за пределы проезжей части, водитель должен остановиться как можно ближе к правому краю проезжей части.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在建筑区之外，如果无法将车辆停在道路外，驾驶员必须尽可能靠近道路右边缘停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-fuori-centri-abitati-6",
+    "category": "fermata sosta arresto",
+    "text_it": "In caso di sosta in un centro abitato, il conducente deve collocare il veicolo il più vicino possibile al margine destro della carreggiata, anche dove non esiste il marciapiede rialzato",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "If stopping in a built-up area, the driver must place the vehicle as close as possible to the right edge of the road, even where there is no raised pavement",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "При остановке в населенном пункте водитель должен поставить транспортное средство как можно ближе к правому краю дороги, даже если нет приподнятого тротуара.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果在建筑密集区停车，驾驶员必须将车辆尽可能靠近道路的右边缘，即使没有凸起的人行道",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-fuori-centri-abitati-7",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati, il conducente in caso di sosta deve collocare il veicolo fuori della carreggiata, eventualmente anche sulle piste ciclabili",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas, the driver must park the vehicle off the roadway, possibly also on cycle paths.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых районов водитель должен парковать автомобиль за пределами проезжей части, возможно, также на велосипедных дорожках.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在住宅区外，驾驶员必须将车辆停在道路外，也可能停在自行车道上。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-fuori-centri-abitati-8",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati, in caso di impossibilità di collocare il veicolo fuori della carreggiata, il conducente non deve effettuare la sosta",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas, if it is impossible to place the vehicle off the roadway, the driver must not stop",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых помещений, при невозможности вывести транспортное средство за пределы проезжей части, водитель не должен останавливаться.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在居民区外，如果无法将车辆停在道路上，驾驶员不得停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-spazi-sosta-0",
+    "category": "fermata sosta arresto",
+    "text_it": "Nelle strade urbane a senso unico di marcia, la sosta è consentita anche lungo il margine sinistro della carreggiata, purché rimanga uno spazio sufficiente al transito almeno di una fila di veicoli",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On one-way urban streets, parking is also permitted along the left edge of the road, provided there remains sufficient space for at least one row of vehicles to pass through.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На городских улицах с односторонним движением парковка разрешается также вдоль левого края дороги при условии, что остается достаточно места для проезда хотя бы одного ряда транспортных средств.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在单向城市街道上，也允许沿道路左边缘停车，前提是至少有足够的空间可供一排车辆通过。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-spazi-sosta-1",
+    "category": "fermata sosta arresto",
+    "text_it": "Nelle strade urbane a senso unico di marcia, la sosta è consentita anche lungo il margine sinistro della carreggiata, purché rimanga uno spazio non inferiore a tre metri di larghezza per il transito dei veicoli",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On one-way urban streets, parking is also permitted along the left edge of the roadway, as long as there remains a space of no less than three meters wide for the transit of vehicles.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На городских улицах с односторонним движением парковка разрешается также по левому краю проезжей части при условии, что для проезда транспортных средств остается пространство шириной не менее трех метров.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在单向城市街道上，也允许在道路左边缘停车，但须保留不少于三米宽的车辆通行空间。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-spazi-sosta-2",
+    "category": "fermata sosta arresto",
+    "text_it": "Nelle zone predisposte per la sosta, il conducente deve collocare il veicolo nel modo prescritto dalla segnaletica",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In areas designated for parking, the driver must place the vehicle in the manner prescribed by the signs",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В местах, отведенных для парковки, водитель обязан разместить транспортное средство в порядке, предусмотренном знаками.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在指定停车区域，驾驶员必须按照标志规定的方式停放车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-spazi-sosta-3",
+    "category": "fermata sosta arresto",
+    "text_it": "Nelle zone nelle quali gli spazi di sosta sono delimitati da segnaletica orizzontale, il conducente deve sempre sistemare il proprio veicolo entro uno degli appositi spazi(stalli), senza invadere quelli contigui",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In areas in which parking spaces are delimited by horizontal signs, the driver must always park his vehicle within one of the designated spaces (stalls), without invading the adjacent ones.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На территориях, на которых парковочные места разграничены горизонтальными знаками, водитель обязан всегда парковать свое транспортное средство в пределах одного из отведенных мест (стойков), не вторгаясь в соседние.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在有水平标志划定停车位的区域，驾驶员必须始终将车辆停放在指定停车位（停车位）之一内，不得侵入相邻停车位。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-spazi-sosta-4",
+    "category": "fermata sosta arresto",
+    "text_it": "Nelle strade urbane a senso unico di marcia, la sosta è sempre consentita anche lungo il margine sinistro della carreggiata",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "On one-way urban streets, parking is always permitted even along the left edge of the road",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На городских улицах с односторонним движением парковка разрешена всегда, даже по левому краю дороги.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在单向城市街道上，即使在道路左侧边缘也始终允许停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-spazi-sosta-5",
+    "category": "fermata sosta arresto",
+    "text_it": "E' vietato sostare con autoveicoli o motocicli nei centri abitati, quando non esistano le apposite strisce",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "It is forbidden to park vehicles or motorcycles in inhabited centers when the appropriate lines do not exist",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещается парковка транспортных средств и мотоциклов в населенных пунктах при отсутствии соответствующих линий.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "没有适当线路的情况下，禁止在居民区停放车辆或摩托车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-spazi-sosta-6",
+    "category": "fermata sosta arresto",
+    "text_it": "Nelle zone nelle quali gli spazi di sosta sono delimitati da segnaletica orizzontale, il conducente può sistemare il proprio veicolo anche fuori dall'apposito spazio (stallo) ad esso destinato, a condizione che la sosta sia di brevissima durata",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In areas in which parking spaces are delimited by horizontal signs, the driver can also park his vehicle outside the designated space (stall) provided that the stop is of very short duration.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На территориях, где парковочные места ограничены горизонтальными знаками, водитель может также припарковать свой автомобиль за пределами отведенного места (стойки) при условии, что остановка будет очень кратковременной.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在有水平标志划定停车位的区域，驾驶员也可以将车辆停放在指定停车位（停车位）之外，但停车时间很短。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-spazi-sosta-7",
+    "category": "fermata sosta arresto",
+    "text_it": "In una zona in cui la sosta è regolata con parchimetro, non occorre utilizzarlo se la sosta è di breve durata",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In an area where parking is regulated by a parking meter, it is not necessary to use it if the parking is short-term",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В зоне, где парковка регулируется паркоматом, пользоваться им не обязательно, если парковка краткосрочная.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在实行停车收费表管理的区域，如果是短期停车，则无需使用停车收费表",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-vietata-sosta-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata in corrispondenza o in prossimità dei passaggi a livello",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited at or near level crossings",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена на железнодорожных переездах или вблизи них.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "平交路口或其附近禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-vietata-sosta-1",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata sui binari di linee ferroviarie o tranviarie o così vicino ad essi da intralciare la marcia dei veicoli su rotaia",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited on the tracks of railway or tram lines or so close to them as to hinder the movement of rail vehicles",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещается парковка на путях железных дорог или трамвайных путей или настолько близко к ним, что это препятствует движению рельсового транспорта.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在铁路或有轨电车线路的轨道上或靠近轨道停车以妨碍轨道车辆的行驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-vietata-sosta-2",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata nelle gallerie, salvo diversa segnalazione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in the tunnels, unless otherwise indicated",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка в туннелях запрещена, если не указано иное.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "除非另有说明，隧道内禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-vietata-sosta-3",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata nei sottovia, sotto i sovrapassaggi, sotto i fornici e i portici, salvo diversa segnalazione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in underpasses, under overpasses, under arches and porticoes, unless otherwise indicated",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена в подземных переходах, под эстакадами, под арками и портиками, если не указано иное.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "除非另有说明，禁止在地下通道、立交桥下、拱门和门廊下停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-vietata-sosta-4",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata sui dossi.",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited on speed bumps.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена на лежачих полицейских.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在减速带上停车。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-vietata-sosta-5",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dai centri abitati e sulle strade urbane di scorrimento, la sosta è vietata in prossimità dei dossi",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas and on urban roads, parking is prohibited near speed bumps",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых кварталов и на городских дорогах парковка запрещена возле «лежачих полицейских».",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "住宅区外和城市道路上，减速带附近禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-vietata-sosta-6",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata in corrispondenza dei passaggi a livello ma non in loro prossimità",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited at level crossings but not near them",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена на железнодорожных переездах, но не возле них.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "平交路口禁止停车，但平交路口附近禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-vietata-sosta-7",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata sui binari delle linee ferroviarie ma non di quelle tranviarie",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited on railway tracks but not on tram lines",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена на железнодорожных путях, но не на трамвайных путях.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "铁轨上禁止停车，但电车线路上禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-vietata-sosta-8",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è consentita nelle gallerie illuminate",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is permitted in the illuminated tunnels",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка разрешена в освещенных туннелях.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "照明隧道内允许停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-vietata-sosta-9",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta, ma non la fermata, è vietata nei sottovia, sotto i sovrapassaggi, sotto i fornici e i portici",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking, but not stopping, is prohibited in underpasses, under overpasses, under arches and porticoes",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Стоянка без остановки запрещена в подземных переходах, под эстакадами, под арками и портиками.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "地下通道、立交桥下、拱门和门廊下禁止停车，但不得停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-vietata-sosta-10",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati e sulle strade urbane di scorrimento, è consentita la sosta in prossimità dei dossi.",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside inhabited centers and on urban roads, parking is permitted near speed bumps.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами населенных пунктов и на городских дорогах парковка разрешена возле «лежачих полицейских».",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在居住中心外和城市道路上，允许在减速带附近停车。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta e la fermata sono vietate nelle curve e, fuori dei centri abitati e sulle strade urbane di scorrimento, anche in loro prossimità",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking and stopping are prohibited on curves and, outside inhabited centers and on urban roads, even in their vicinity.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка и остановка запрещены на поворотах, за пределами населенных пунктов и на городских дорогах, даже вблизи них.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在弯道、居民区外和城市道路上（甚至在其附近）停车和停车。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-1",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta e la fermata sono vietate in prossimità e in corrispondenza di segnali stradali verticali in modo da occultarne la vista",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking and stopping are prohibited near and in correspondence with vertical road signs so as to hide them from view",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещаются парковка и остановка вблизи и в соответствии с вертикальными дорожными знаками, чтобы скрыть их из поля зрения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在垂直路标附近或与其相对应的地方停车和停车，以将其隐藏起来",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-2",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta e la fermata sono vietate in prossimità e in corrispondenza di segnali semaforici in modo da occultarne la vista",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking and stopping are prohibited near and in correspondence with traffic lights in order to hide them from view",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещаются стоянка и остановка вблизи светофоров и в соответствии со ними, чтобы скрыть их из поля зрения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在交通信号灯附近或对应位置停车和停车，以隐藏交通信号灯",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-3",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta e la fermata sono vietate in corrispondenza dei segnali orizzontali di preselezione e lungo le corsie di canalizzazione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking and stopping are prohibited in correspondence with the horizontal pre-selection signs and along the canalization lanes",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Стоянка и остановка запрещены в соответствии с горизонтальными знаками предварительного выбора и вдоль полос канализации.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在水平预选标志处和运河车道沿线停车和停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-4",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati, la sosta e la fermata sono vietate in corrispondenza e in prossimità delle aree di intersezione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas, parking and stopping are prohibited in and near intersection areas",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых районов парковка и остановка запрещены, в местах пересечения дорог и вблизи них.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "住宅区外、交叉路口区域及附近禁止停车、停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-5",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata allo sbocco dei passi carrabili",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited at the exit of the driveways",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена при выезде с проезда",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "车道出口处禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-6",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata nelle curve ma, fuori dei centri abitati e sulle strade di scorrimento, non è vietata in loro prossimità",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited on curves but, outside inhabited centers and on main roads, it is not prohibited near them",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена на поворотах, но за пределами населенных пунктов и на главных дорогах рядом с ними не запрещена.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在弯道上停车，但在居民区外和主要道路上，附近不禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-7",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta, ma non la fermata, è vietata in prossimità e in corrispondenza di segnali semaforici in modo da occultarne la vista",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking, but not stopping, is prohibited near and in correspondence with traffic lights in order to hide them from view.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Стоянка без остановки запрещается вблизи и в соответствии со светофорами с целью скрыть их из поля зрения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在交通信号灯附近或与其相对应的地方停车，但不得停车，以隐藏交通信号灯。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-8",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata in corrispondenza dei segnali orizzontali di preselezione ma non lungo le corsie di canalizzazione",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in correspondence with the horizontal pre-selection signs but not along the canalization lanes",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена в соответствии с горизонтальными знаками предварительного выбора, но не вдоль полос канализации.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在水平预选标志处停车，但不得沿运河车道停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-9",
+    "category": "fermata sosta arresto",
+    "text_it": "Fuori dei centri abitati, la sosta è vietata in corrispondenza delle aree di intersezione ma non in loro prossimità",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Outside residential areas, parking is prohibited in intersection areas but not in their vicinity",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "За пределами жилых кварталов парковка запрещена в зонах перекрестков, но не вблизи них.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "住宅区以外，十字路口区域禁止停车，但其附近禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-10",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta ma non la fermata è vietata sugli attraversamenti pedonali",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking but not stopping is prohibited on pedestrian crossings",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "На пешеходных переходах запрещено парковаться без остановки",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "人行横道上禁止停车但不停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-11",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata sulle piste ciclabili, ma non agli sbocchi di esse nel caso sia di breve durata",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited on cycle paths, but not at their ends if it is of short duration",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена на велосипедных дорожках, но не на их концах, если она кратковременная.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在自行车道上停车，但如果停车时间较短，则不得在自行车道末端停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-divieto-fermata-12",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è consentita sui marciapiedi, solo se di breve durata",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is permitted on the sidewalks, only if of short duration",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка разрешена на тротуарах, только на короткий срок.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "允许在人行道上停车，但仅限短时间停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-sosta-fermata-autobus-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata se si impedisce l’accesso ad altro veicolo già regolarmente in sosta",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited if access to another vehicle already regularly parked is prevented",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена, если доступ к другому транспортному средству, уже регулярно припаркованному, запрещен.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果阻止其他已定期停放的车辆进入，则禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-sosta-fermata-autobus-1",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata dovunque venga impedito lo spostamento di veicoli in sosta",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited wherever the movement of parked vehicles is prevented",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена везде, где затруднено движение припаркованных транспортных средств.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在阻碍停放车辆移动的地方禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-sosta-fermata-autobus-2",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata in seconda fila, salvo che si tratti di veicoli a due ruote",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in the second row, except for two-wheeled vehicles",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка во втором ряду запрещена, за исключением двухколесных транспортных средств.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "第二排禁止停车，两轮车除外",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-sosta-fermata-autobus-3",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata negli spazi riservati allo stazionamento e alla fermata degli autobus, dei filobus e dei veicoli circolanti su rotaia",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in the spaces reserved for the parking and stops of buses, trolleybuses and vehicles traveling on rails",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещается парковка на местах, отведенных для стоянки и остановок автобусов, троллейбусов и транспортных средств, передвигающихся по рельсам.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在公共汽车、无轨电车和轨道车辆的停车位和停靠站预留的停车位",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-sosta-fermata-autobus-4",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata a meno di 15 metri dal segnale di fermata di autobus, filobus e veicoli circolanti su rotaia, qualora gli spazi di stazionamento non siano delimitati",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited less than 15 meters from the stop sign of buses, trolleybuses and vehicles traveling on rails, if the parking spaces are not delimited",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещается парковка на расстоянии менее 15 метров от знака остановки автобусов, троллейбусов и транспортных средств, следующих по рельсам, если места стоянки не разграничены.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "公共汽车、无轨电车和有轨车辆在停车位未划定的情况下，禁止在距站牌 15 米以内的地方停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-sosta-fermata-autobus-5",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta degli autoveicoli in doppia fila è consentita per pochi minuti, azionando le luci di emergenza",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking of vehicles in double rows is permitted for a few minutes by activating the emergency lights",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка транспортных средств в два ряда разрешается на несколько минут при включении аварийного освещения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "通过启动应急灯，允许双排车辆停放几分钟",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-sosta-fermata-autobus-6",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta degli autoveicoli in doppia fila è consentita purché rimanga spazio sufficiente per la circolazione di due file di veicoli",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking of vehicles in double rows is permitted as long as there is sufficient space for the circulation of two rows of vehicles",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка транспортных средств в два ряда разрешена при условии, что имеется достаточно места для движения транспортных средств в два ряда.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "只要有足够的空间供两排车辆通行，就可以双排停放车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-zone-sosta-fermata-autobus-7",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è consentita negli spazi riservati allo stazionamento e alla fermata degli autobus, dei filobus e dei veicoli circolanti su rotaia purché sia di breve durata",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is permitted in the spaces reserved for the parking and stops of buses, trolleybuses and rail vehicles as long as it is of short duration.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка разрешается на местах, отведенных для стоянки и остановок автобусов, троллейбусов и железнодорожного транспорта, при условии непродолжительности.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "允许在公共汽车、无轨电车和轨道车辆停车位和车站预留的停车位内停车，只要停车时间较短。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-soste-veicoli-persone-invalide-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata negli spazi riservati allo stazionamento dei veicoli in servizio di piazza",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in the spaces reserved for the parking of vehicles on public transport",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещается парковка на местах, отведенных для стоянки транспортных средств на общественном транспорте.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在公共交通工具预留的停车位内停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-soste-veicoli-persone-invalide-1",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata sulle aree destinate al mercato e ai veicoli per il carico e lo scarico di cose, nelle ore stabilite",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in the areas designated for the market and for vehicles for loading and unloading goods, during the established hours",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещается парковка в местах, отведенных для рынка и транспортных средств для погрузки и разгрузки товаров, в установленные часы.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在规定时间内，禁止在市场指定区域和装卸货物的车辆停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-soste-veicoli-persone-invalide-2",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata sulle banchine, salvo diversa segnalazione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited on the platforms, unless otherwise indicated",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка на платформах запрещена, если не указано иное.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "除非另有说明，站台上禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-soste-veicoli-persone-invalide-3",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata negli spazi riservati alla fermata o alla sosta dei veicoli per persone invalide",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in spaces reserved for stopping or parking vehicles for disabled people",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещается парковка на местах, отведенных для остановки или стоянки транспортных средств инвалидов.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在为残疾人停车或停放车辆预留的空间内停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-soste-veicoli-persone-invalide-4",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata in corrispondenza degli scivoli o dei raccordi tra i marciapiedi e la carreggiata utilizzati dai veicoli per persone invalide",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited at the ramps or junctions between the pavements and the roadway used by vehicles for disabled people",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещается парковка на пандусах или на переходах между тротуарами и проезжей частью, используемой транспортными средствами для инвалидов.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在人行道和残疾人专用车行道之间的坡道或交叉口停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-soste-veicoli-persone-invalide-5",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è consentita negli spazi riservati allo stazionamento dei taxi solo se non si protrae per lungo tempo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is permitted in the spaces reserved for taxi parking only if it does not last for a long time",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка разрешена на местах, отведенных для стоянки такси, только в случае, если она не длится длительное время.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "仅当停车时间不长时才允许在出租车停车位上停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-soste-veicoli-persone-invalide-6",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è consentita sulle aree destinate ai veicoli per il carico e lo scarico di cose, nelle ore stabilite, soltanto se di breve durata",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is permitted in areas designated for vehicles for loading and unloading goods, during the established hours, only if of short duration.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка разрешена в местах, отведенных для транспортных средств для погрузки и разгрузки товаров, в установленные часы, только если она непродолжительна.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "允许在规定时间内在指定用于装卸货物的车辆的区域停车，但仅限于短时间停车。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-soste-veicoli-persone-invalide-7",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è consentita negli spazi riservati alla fermata o alla sosta dei veicoli per persone invalide purché di breve durata",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is permitted in the spaces reserved for the stopping or parking of vehicles for disabled people as long as it is of short duration",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка разрешена на местах, отведенных для остановки или стоянки транспортных средств для людей с ограниченными возможностями, при условии, что она непродолжительна.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "允许在为残疾人士停车或停放车辆预留的空间内停车，只要时间较短",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata nelle corsie o carreggiate riservate ai mezzi pubblici",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in lanes or carriageways reserved for public transport",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена на полосах движения и проезжей части, отведенных для общественного транспорта.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在公共交通专用车道或车行道上停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-1",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata nelle aree pedonali urbane",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in urban pedestrian areas",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена в городских пешеходных зонах",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "城市步行区禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-2",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata nelle zone a traffico limitato per i veicoli non autorizzati",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in restricted traffic areas for unauthorized vehicles",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещена парковка в зонах с ограниченным движением неавторизованных транспортных средств.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在交通限制区内停放未经授权的车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-3",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata negli spazi destinati a servizi di emergenza o di igiene pubblica indicati dalla apposita segnaletica",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in spaces intended for emergency or public hygiene services indicated by the appropriate signs",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена в местах, предназначенных для оказания экстренной помощи или служб общественной гигиены, обозначенных соответствующими знаками.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在有适当标志指示的紧急或公共卫生服务空间内停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-4",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata davanti ai cassonetti dei rifiuti urbani",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited in front of municipal waste bins",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена перед муниципальными мусорными баками",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "城市垃圾箱前禁止停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-5",
+    "category": "fermata sosta arresto",
+    "text_it": "Brevi soste sono consentite nelle aree pedonali urbane",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Short stops are permitted in urban pedestrian areas",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Короткие остановки разрешены в городских пешеходных зонах.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "城市步行区允许短暂停留",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-6",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta, ed anche la fermata, sono vietate negli spazi destinati a servizi di emergenza o di igiene pubblica indicati dalla apposita segnaletica",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking, and even stopping, are prohibited in spaces intended for emergency or public hygiene services indicated by the appropriate signs.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка и даже остановка запрещены в местах, предназначенных для оказания экстренной помощи или служб общественной гигиены, обозначенных соответствующими знаками.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止在有适当标志指示的用于紧急或公共卫生服务的空间内停车，甚至停车。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-7",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta così come la fermata sono vietate davanti ai cassonetti dei rifiuti urbani",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking and stopping are prohibited in front of municipal waste bins",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещена парковка и остановка перед муниципальными мусорными баками.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "城市垃圾箱前禁止停车、停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-codice-strada-distributori-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata, limitatamente alle ore di esercizio, in corrispondenza dei distributori di carburante, e in loro prossimità sino a 5 metri prima e dopo",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited, limited to the hours of operation, at the fuel stations, and in their proximity up to 5 meters before and after",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена, ограничена часами работы, на заправочных станциях и в непосредственной близости от них на расстоянии до 5 метров до и после.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "加油站及其前后 5 米范围内禁止停车，仅限营业时间",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-codice-strada-distributori-1",
+    "category": "fermata sosta arresto",
+    "text_it": "Nei centri abitati il conducente non deve lasciare in sosta un rimorchio staccato dalla motrice, salvo diversa segnalazione",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In residential areas, the driver must not leave a trailer detached from the tractor parked, unless otherwise indicated",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В жилых районах водитель не должен оставлять припаркованный прицеп отсоединенным от трактора, если не указано иное.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在住宅区，驾驶员不得将拖车与拖拉机分离停放，除非另有说明",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-codice-strada-distributori-2",
+    "category": "fermata sosta arresto",
+    "text_it": "Nel caso in cui la sosta è espressamente vietata da una norma del codice stradale, l'osservanza di tale divieto non è condizionata dalla presenza di cartelli segnaletici",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the event that parking is expressly prohibited by a rule of the highway code, compliance with this prohibition is not conditioned by the presence of warning signs.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае, если парковка прямо запрещена правилами дорожного движения, соблюдение этого запрета не обусловлено наличием предупредительных знаков.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果高速公路法规明确禁止停车，则遵守该禁令并不以警告标志的存在为条件。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-codice-strada-distributori-3",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta è vietata in corrispondenza dei distributori di carburante, sino a 5 metri prima e dopo, anche quando i distributori sono chiusi",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking is prohibited near fuel stations, up to 5 meters before and after, even when the stations are closed.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка запрещена возле заправочных станций, на расстоянии до 5 метров до и после, даже когда заправочные станции закрыты.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "即使加油站关闭，加油站附近也禁止停车，前后不得超过 5 米。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-codice-strada-distributori-4",
+    "category": "fermata sosta arresto",
+    "text_it": "Nel caso in cui la sosta è espressamente vietata da una norma del codice della strada, l'osservanza di tale divieto è comunque condizionata dalla presenza di cartelli segnaletici",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "In the event that parking is expressly prohibited by a rule of the highway code, compliance with this prohibition is in any case conditioned by the presence of warning signs.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "В случае, если парковка прямо запрещена правилами дорожного движения, соблюдение этого запрета в любом случае обусловлено наличием предупредительных знаков.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果公路法规明确禁止停车，则在任何情况下都要以警告标志的存在为条件，遵守该禁令。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-sottrazione-punti-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta negli spazi riservati allo stazionamento e alla fermata di autobus, filobus e veicoli circolanti su rotaia comporta, tra l'altro, la sottrazione di punti dalla patente.",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking in the spaces reserved for the parking and stopping of buses, trolleybuses and vehicles traveling on rails involves, among other things, the deduction of points from the driving licence.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка на местах, отведенных для стоянки и остановки автобусов, троллейбусов и транспортных средств, передвигающихся по рельсам, влечет в том числе вычет баллов из водительского удостоверения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在公共汽车、无轨电车和轨道车辆的停泊和停车预留空间停车，除其他外，还涉及从驾驶执照中扣分。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-sottrazione-punti-1",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta, a meno di 15 metri dal segnale di fermata degli autobus, qualora gli spazi di fermata non siano delimitati, comporta tra l'altro, la sottrazione di punti dalla patente",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Stopping less than 15 meters from the bus stop sign, if the stop spaces are not delimited, involves, among other things, the subtraction of points from the driving license",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Остановка менее чем в 15 метрах от знака автобусной остановки, если места остановки не разграничены, в том числе влечет за собой вычитание баллов из водительского удостоверения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果停车位未划定，在距公交车站标志 15 米以内的地方停车，将涉及从驾驶执照中扣分等",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-sottrazione-punti-2",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta negli spazi riservati alla fermata e alla sosta dei veicoli per persone invalide, comporta, tra l'altro, la sottrazione di punti dalla patente",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking in the spaces reserved for stopping and parking vehicles for disabled people involves, among other things, the subtraction of points from the driving license",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка на местах, отведенных для остановки и стоянки транспортных средств инвалидов, влечет, в том числе, списание баллов из водительского удостоверения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在为残疾人停车和停放车辆预留的空间内停车，除其他外，还涉及从驾驶执照中扣分",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-sottrazione-punti-3",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta in corrispondenza degli scivoli o dei raccordi tra i marciapiedi e la carreggiata utilizzati dai veicoli per persone invalide comporta, tra l'altro, la sottrazione di punti dalla patente",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking at the ramps or junctions between the pavements and the roadway used by vehicles for disabled people involves, among other things, the subtraction of points from the driving license",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка на пандусах или на переходах между тротуарами и проезжей частью, используемой транспортными средствами для инвалидов, влечет, в том числе, списание баллов из водительского удостоверения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在残疾人车辆使用的人行道和车行道之间的坡道或交界处停车，除其他外，会从驾驶执照中扣除分数",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-sottrazione-punti-4",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta nelle corsie o carreggiate riservate ai mezzi pubblici comporta, tra l'altro, la sottrazione di punti dalla patente",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking in lanes or carriageways reserved for public transport involves, among other things, the deduction of points from your driving license",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка на полосах или проезжей части, отведенных для общественного транспорта, влечет, среди прочего, вычет баллов из вашего водительского удостоверения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在公共交通预留的车道或车行道上停车，除其他外，会从您的驾驶执照中扣除积分",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-sottrazione-punti-5",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta negli spazi riservati allo stazionamento e alla fermata di autobus, filobus e veicoli circolanti su rotaia, è consentita se si utilizza il disco orario",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking in the spaces reserved for the parking and stopping of buses, trolleybuses and vehicles traveling on rails is permitted if the parking disc is used.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка на местах, отведенных для стоянки и остановки автобусов, троллейбусов и транспортных средств, передвигающихся по рельсам, разрешается с использованием парковочного диска.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果使用停车盘，则可以在公共汽车、无轨电车和轨道车辆停放预留空间内停车。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-sottrazione-punti-6",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta a meno di 15 metri dal segnale di fermata autobus, qualora gli spazi di stazionamento non siano delimitati, è consentita azionando la segnalazione luminosa di pericolo (quattro frecce lampeggianti simultaneamente)",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking less than 15 meters from the bus stop sign, if the parking spaces are not delimited, is permitted by activating the danger light signal (four arrows flashing simultaneously)",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка на расстоянии менее 15 метров от знака автобусной остановки, если места для парковки не разграничены, разрешается при включении аварийного светового сигнала (одновременно мигают четыре стрелки)",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "如果停车位未划定，则可在距离公交车站牌 15 米以内的地方停车，并启动危险灯信号（四个箭头同时闪烁）",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-sottrazione-punti-7",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta negli spazi riservati alla fermata e alla sosta dei veicoli per persone invalide comporta una sanzione pecuniaria, ma non la sottrazione di punti dalla patente del conducente",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking in the spaces reserved for stopping and parking vehicles for disabled people entails a financial penalty, but not the subtraction of points from the driver's license",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка на местах, отведенных для остановки и стоянки транспортных средств для инвалидов, влечет за собой финансовый штраф, но не вычет баллов из водительского удостоверения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在为残疾人停车和停放车辆预留的空间内停车会受到罚款，但不会从驾驶执照中扣分",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-sottrazione-punti-8",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta in corrispondenza degli scivoli o dei raccordi tra i marciapiedi e la carreggiata utilizzati dai veicoli per persone invalide, comporta la sospensione della patente",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking at the ramps or junctions between the pavements and the roadway used by vehicles for disabled people entails the suspension of the license",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка у пандусов или переходов между тротуарами и проезжей частью, используемой транспортными средствами для инвалидов, влечет приостановление действия лицензии.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在残疾人专用车辆使用的坡道或人行道与车行道之间的交汇处停车将导致牌照被吊销",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-sottrazione-punti-9",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta nelle corsie o carreggiate riservate ai mezzi pubblici, è consentita, nei centri abitati, dalle ore 22.00 alle ore 8.00",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Parking in the lanes or carriageways reserved for public transport is permitted in residential areas from 10.00 pm to 8.00 am",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Парковка на полосах или проезжей части, отведенных для общественного транспорта, разрешена в жилых районах с 22:00 до 8:00.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "晚上 10 点至上午 8 点，住宅区允许在公共交通预留的车道或车行道上停车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-emergenza-0",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta di emergenza è l'interruzione della marcia nel caso in cui il veicolo è inutilizzabile per avaria",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Emergency stopping is the interruption of travel in the event that the vehicle is unusable due to breakdown",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Аварийная остановка – это прекращение движения в случае, если транспортное средство становится непригодным к использованию из-за поломки.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "紧急停车是指车辆因故障无法使用而中断行驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-emergenza-1",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta di emergenza è l'interruzione della marcia nel caso in cui il veicolo deve arrestarsi per malessere fisico del conducente o di un passeggero",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Emergency stopping is the interruption of travel in the event that the vehicle must stop due to physical discomfort of the driver or a passenger",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Аварийная остановка – прерывание движения в случае, если транспортное средство вынуждено остановиться из-за физического дискомфорта водителя или пассажира.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "紧急停车是指车辆因驾驶员或乘客身体不适而必须停车时中断行驶",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-emergenza-2",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta di emergenza è l'interruzione della marcia dovuta ad esigenze della circolazione",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "An emergency stop is the interruption of travel due to traffic needs",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Аварийная остановка – это прекращение движения в связи с необходимостью дорожного движения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "紧急停车是指因交通需要而中断出行",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-emergenza-3",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta di emergenza è la temporanea sospensione della marcia per consentire la discesa di persona invalida",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The emergency stop is the temporary suspension of travel to allow a disabled person to get out",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Аварийная остановка – это временная остановка движения, позволяющая инвалиду выйти.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "紧急停止是指暂时停止旅行，以便残疾人能够下车",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-sosta-emergenza-4",
+    "category": "fermata sosta arresto",
+    "text_it": "La sosta di emergenza è la temporanea sospensione della marcia per consentire ad una persona invalida di salire sul veicolo",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Emergency stopping is the temporary suspension of travel to allow a disabled person to get into the vehicle",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Аварийная остановка – это временное прекращение движения, позволяющее инвалиду сесть в транспортное средство.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "紧急停车是指暂时停止行驶以允许残疾人进入车辆",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-discesa-veicolo-0",
+    "category": "fermata sosta arresto",
+    "text_it": "Quando si aprono le porte di un veicolo, bisogna assicurarsi che ciò non costituisca pericolo o intralcio per gli altri utenti della strada",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When opening the doors of a vehicle, you must ensure that this does not constitute a danger or obstacle to other road users.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Открывая двери транспортного средства, необходимо следить за тем, чтобы это не представляло опасности и не препятствовало другим участникам дорожного движения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "打开车门时，必须确保这不会对其他道路使用者构成危险或障碍。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-discesa-veicolo-1",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di aprire lo sportello di un veicolo dal lato rivolto verso il centro della strada bisogna assicurarsi che non sopraggiungano altri veicoli",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before opening the door of a vehicle from the side facing the center of the road, you must make sure that no other vehicles are oncoming",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем открыть дверь транспортного средства со стороны, обращенной к центру дороги, необходимо убедиться в отсутствии встречных транспортных средств.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "从面向道路中心的一侧打开车门之前，必须确保没有其他车辆迎面驶来",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-discesa-veicolo-2",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di aprire lo sportello di un veicolo dal lato rivolto verso il marciapiede bisogna assicurarsi che non sopraggiungano pedoni",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before opening the door of a vehicle from the side facing the pavement, you must make sure that no pedestrians are approaching",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем открыть дверь транспортного средства со стороны, обращенной к тротуару, необходимо убедиться, что к нему не приближаются пешеходы.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "从面向人行道的一侧打开车门之前，必须确保没有行人靠近",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-discesa-veicolo-3",
+    "category": "fermata sosta arresto",
+    "text_it": "Quando si scende da un veicolo bisogna assicurarsi che ciò non costituisca pericolo o intralcio per gli altri utenti della strada",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When you get out of a vehicle you must make sure that this does not constitute a danger or obstacle to other road users",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Выходя из транспортного средства, вы должны убедиться, что это не представляет опасности или препятствия для других участников дорожного движения.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "当您下车时，您必须确保这不会对其他道路使用者构成危险或障碍",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-discesa-veicolo-4",
+    "category": "fermata sosta arresto",
+    "text_it": "Allorché si accinge a scendere dall'autoveicolo, il conducente deve assicurarsi, anche mediante lo specchietto retrovisore, che non sopraggiungano altri veicoli",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "When preparing to get out of the vehicle, the driver must ensure, also using the rear-view mirror, that no other vehicles are approaching.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Готовясь выйти из автомобиля, водитель должен убедиться, в том числе с помощью зеркала заднего вида, в том, что к нему не приближаются другие транспортные средства.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "当准备下车时，驾驶员必须通过后视镜确保没有其他车辆靠近。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-discesa-veicolo-5",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di scendere dal veicolo in sosta, il conducente deve assicurarsi di avere spento il motore",
+    "is_true": true,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before getting out of the parked vehicle, the driver must ensure that he has turned off the engine",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем выйти из припаркованного автомобиля, водитель должен убедиться, что он заглушил двигатель.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在离开停放的车辆之前，驾驶员必须确保已关闭发动机",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-discesa-veicolo-6",
+    "category": "fermata sosta arresto",
+    "text_it": "L'apertura di uno sportello del veicolo dal lato del marciapiede comporta l'obbligo di attivare l'indicatore di direzione da quel lato",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Opening a vehicle door from the curb side entails the obligation to activate the direction indicator on that side",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Открытие двери автомобиля со стороны обочины влечет за собой необходимость включения указателя поворота на этой стороне.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "从路边打开车门需要激活该侧的方向指示器",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-discesa-veicolo-7",
+    "category": "fermata sosta arresto",
+    "text_it": "L'apertura degli sportelli del veicolo dal lato rivolto verso il centro della strada è vietato",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Opening the vehicle doors from the side facing the center of the road is prohibited",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Запрещается открывать двери транспортного средства со стороны, обращенной к центру дороги.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "禁止从面向道路中心的一侧打开车门",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-discesa-veicolo-8",
+    "category": "fermata sosta arresto",
+    "text_it": "Il conducente può lasciare il veicolo in sosta con il motore acceso per consentire il funzionamento dell'aria condizionata",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "The driver can leave the vehicle parked with the engine running to allow the air conditioning to operate",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Водитель может оставить автомобиль припаркованным с работающим двигателем, чтобы кондиционер включился.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "驾驶员可以在发动机运转的情况下将车辆停放以允许空调运行",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  },
+  {
+    "id": "fermata-sosta-arresto-discesa-veicolo-9",
+    "category": "fermata sosta arresto",
+    "text_it": "Prima di scendere dal veicolo in sosta, il conducente deve azionare il freno a mano del veicolo, su tutte le strade in discesa ma non in quelle in salita",
+    "is_true": false,
+    "image_url": null,
+    "translations": {
+      "en": {
+        "text": "Before getting out of the parked vehicle, the driver must activate the vehicle's handbrake on all downhill roads but not on uphill ones.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "ru": {
+        "text": "Прежде чем выйти из припаркованного автомобиля, водитель должен задействовать ручной тормоз автомобиля на всех дорогах под уклон, но не на подъемах.",
+        "explanation": "",
+        "simple_it": ""
+      },
+      "zh": {
+        "text": "在下坡道路上，驾驶员必须拉起车辆的手刹，然后才下车，但在上坡道路上则不能。",
+        "explanation": "",
+        "simple_it": ""
+      }
+    }
+  }
+]
