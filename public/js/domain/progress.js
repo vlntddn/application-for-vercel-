@@ -8,7 +8,15 @@ const MAX_IMPORT_ANSWERS = 20000;
 const ACTIVE_DAYS_KEPT = 90;
 const MAX_IMPORT_EXAMS = 2000;
 
+/**
+ * Bumped only when the stored shape changes in a way that needs code to
+ * translate it. migrateProgress() below is what actually does the work,
+ * so a saved snapshot keeps opening after the app is updated.
+ */
+export const SCHEMA_VERSION = 1;
+
 export const EMPTY_PROGRESS = {
+  version: SCHEMA_VERSION,
   profile: { name: '', language: 'en', theme: 'light', sound: true, onboarded: false },
   answers: {}, // questionId -> { correct, wrong, lastCorrect, last }
   mistakes: [], // questionIds currently answered wrong
@@ -57,6 +65,108 @@ function dayBefore(iso) {
   const date = new Date(y, m - 1, d);
   date.setDate(date.getDate() - 1);
   return today(date);
+}
+
+
+const isPlainObject = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
+
+/** Keeps only well-formed date strings from an array, deduped and sorted. */
+function cleanDays(value, cap) {
+  if (!Array.isArray(value)) return [];
+  const days = value.filter((d) => typeof d === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(d));
+  return [...new Set(days)].sort().slice(-cap);
+}
+
+/**
+ * Brings a stored snapshot up to the current shape.
+ *
+ * Unlike importProgress(), which rejects a bad file so the user is told,
+ * this is deliberately forgiving: it is reading data the app itself wrote,
+ * possibly by an older version, and losing a study history because one
+ * field went strange would be far worse than dropping that field. Anything
+ * unrecognised is skipped; everything valid is carried across.
+ */
+export function migrateProgress(raw) {
+  const out = structuredClone(EMPTY_PROGRESS);
+  if (!isPlainObject(raw)) return out;
+
+  const p = raw.profile;
+  if (isPlainObject(p)) {
+    if (typeof p.name === 'string') out.profile.name = p.name.slice(0, NAME_MAX);
+    if (LANGUAGES.includes(p.language)) out.profile.language = p.language;
+    if (THEMES.includes(p.theme)) out.profile.theme = p.theme;
+    if (typeof p.sound === 'boolean') out.profile.sound = p.sound;
+    if (typeof p.onboarded === 'boolean') out.profile.onboarded = p.onboarded;
+  }
+
+  if (isPlainObject(raw.answers)) {
+    for (const [id, rec] of Object.entries(raw.answers)) {
+      if (id === '__proto__' || !id || !isPlainObject(rec)) continue;
+      const correct = Math.trunc(Number(rec.correct));
+      const wrong = Math.trunc(Number(rec.wrong));
+      if (!Number.isFinite(correct) || !Number.isFinite(wrong)) continue;
+      out.answers[id] = {
+        correct: Math.max(0, correct),
+        wrong: Math.max(0, wrong),
+        lastCorrect: Boolean(rec.lastCorrect),
+        last: typeof rec.last === 'string' ? rec.last.slice(0, 40) : '',
+      };
+    }
+  }
+
+  for (const field of ['mistakes', 'theoryRead']) {
+    if (!Array.isArray(raw[field])) continue;
+    out[field] = raw[field].filter((id) => typeof id === 'string' && id && id.length <= ID_MAX);
+  }
+  // A mistake only means something if the answer behind it is still wrong.
+  out.mistakes = out.mistakes.filter((id) => out.answers[id] && !out.answers[id].lastCorrect);
+
+  if (Array.isArray(raw.exams)) {
+    for (const exam of raw.exams) {
+      if (!isPlainObject(exam)) continue;
+      const total = Math.trunc(Number(exam.total));
+      const errors = Math.trunc(Number(exam.errors));
+      if (!Number.isFinite(total) || total <= 0) continue;
+      if (!Number.isFinite(errors) || errors < 0 || errors > total) continue;
+      out.exams.push({
+        date: typeof exam.date === 'string' ? exam.date.slice(0, 40) : '',
+        total,
+        errors,
+        passed: Boolean(exam.passed),
+      });
+    }
+  }
+
+  if (isPlainObject(raw.streak)) {
+    const current = Math.trunc(Number(raw.streak.current));
+    out.streak = {
+      current: Number.isFinite(current) && current > 0 ? current : 0,
+      lastDay: typeof raw.streak.lastDay === 'string' ? raw.streak.lastDay.slice(0, 10) : '',
+    };
+  }
+
+  out.activeDays = cleanDays(raw.activeDays, ACTIVE_DAYS_KEPT);
+
+  if (isPlainObject(raw.dailyAnswers)) {
+    for (const [day, count] of Object.entries(raw.dailyAnswers)) {
+      if (day === '__proto__' || !/^\d{4}-\d{2}-\d{2}$/.test(day)) continue;
+      const n = Math.trunc(Number(count));
+      if (Number.isFinite(n) && n > 0) out.dailyAnswers[day] = n;
+    }
+  }
+
+  // Days the user studied are implied by the counters too, so a snapshot
+  // written before activeDays existed still lights up the week strip.
+  for (const day of Object.keys(out.dailyAnswers)) {
+    if (!out.activeDays.includes(day)) out.activeDays.push(day);
+  }
+  if (out.streak.lastDay && !out.activeDays.includes(out.streak.lastDay)) {
+    out.activeDays.push(out.streak.lastDay);
+  }
+  out.activeDays = cleanDays(out.activeDays, ACTIVE_DAYS_KEPT);
+
+  out.version = SCHEMA_VERSION;
+  return out;
 }
 
 /**

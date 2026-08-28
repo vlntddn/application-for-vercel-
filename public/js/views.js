@@ -14,6 +14,7 @@ import {
 } from './state.js';
 import { el, clear, fmtTime, fmtDate, titleCase } from './ui.js';
 import { CHAPTER_CATEGORY, CATEGORY_CHAPTER } from './theory-map.js';
+import { requestPersistentStorage } from './local-progress.js';
 import { playCorrect, playWrong } from './sound.js';
 
 const EXAM_QUESTIONS = 30;
@@ -1635,6 +1636,26 @@ function runExam(root, questions) {
 
 /* ============================== SETTINGS ============================== */
 
+/**
+ * Tells the user, in plain terms, whether this browser has promised to
+ * keep their progress. iOS clears storage for sites that were never added
+ * to the Home Screen after about a week of no visits, so this is worth
+ * saying out loud rather than hiding behind a green tick.
+ */
+async function showStorageStatus(root) {
+  const note = root.querySelector('#storage-note');
+  if (!note) return;
+  const { supported, persisted } = await requestPersistentStorage();
+  if (persisted) {
+    note.textContent = 'PROTECTED — THIS BROWSER WILL KEEP YOUR PROGRESS. EXPORT A BACKUP BEFORE CHANGING DEVICE.';
+  } else if (supported) {
+    note.textContent =
+      'NOT PROTECTED YET — ADD THE APP TO YOUR HOME SCREEN, OR THE BROWSER MAY CLEAR IT AFTER A WEEK UNUSED. EXPORT A BACKUP TO BE SAFE.';
+  } else {
+    note.textContent = 'PROGRESS IS SAVED IN THIS BROWSER. EXPORT A BACKUP TO KEEP A COPY.';
+  }
+}
+
 /** Downloads the whole progress snapshot as a dated JSON backup. */
 function exportProgress(button) {
   const backup = {
@@ -1778,6 +1799,12 @@ export function renderSettings(root) {
     el('div.panel', {},
       el('h2', {}, 'BACKUP'),
       el('p.lede', {}, 'YOUR PROGRESS LIVES ON THIS MACHINE ONLY. KEEP A COPY, OR MOVE IT TO ANOTHER COMPUTER.'),
+      el('div.row', {},
+        el('div', { style: 'flex:1' },
+          el('strong', {}, 'STORAGE ON THIS DEVICE'),
+          el('p.stat-sub', { id: 'storage-note' }, 'CHECKING…'),
+        ),
+      ),
       el('div.actions', { id: 'backup-actions' },
         el('button.btn', { onclick: (e) => exportProgress(e.target) }, 'EXPORT TO FILE'),
         el('button.btn', {
@@ -1830,4 +1857,6 @@ export function renderSettings(root) {
       ),
     ),
   );
+
+  showStorageStatus(root);
 }

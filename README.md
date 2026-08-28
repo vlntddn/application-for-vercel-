@@ -194,6 +194,30 @@ legacy/             Previous compiled build (kept for reference — no source ex
 Invalid input returns `422` with a JSON error; malformed/oversized bodies
 return `400`/`413`.
 
+## Progress survives updates
+
+Deploying a new version of the site never resets anyone: browser storage
+outlives a deploy, and a saved snapshot is put through a migration before it
+is used, so a file written by an older version opens with its history intact
+and fields added since simply take their defaults. The stored shape carries a
+`version`, which is what future migrations key off.
+
+Three safeguards sit behind that:
+
+- **A safety copy** is written on every successful load and before every
+  save, so an interrupted write cannot leave a user with nothing.
+- **Damaged data is quarantined, never discarded** — the unreadable value is
+  kept under `pp-progress.corrupt.<timestamp>`, the backup is restored, and
+  the main key is healed on the spot.
+- **Persistent storage is requested** so the browser does not evict the data
+  under pressure. This matters on iOS, which clears storage for sites that
+  were never added to the Home Screen after about a week unused.
+
+⚠️ **Changing the address changes the storage.** Browser storage belongs to
+one origin, so moving from `something.vercel.app` to your own domain starts
+users on an empty profile. Export a backup first (**Settings → Backup**) and
+import it on the new address.
+
 ## Security & privacy
 
 Audited end to end, not just claimed:

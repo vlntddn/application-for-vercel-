@@ -246,3 +246,89 @@ test('import validates the new activity fields', async () => {
     () => service.importProgress({ dailyAnswers: { '2026-08-20': -3 } }), ValidationError,
   );
 });
+
+test('a snapshot from an older version opens with everything intact', async () => {
+  const { migrateProgress, SCHEMA_VERSION } = await import('../public/js/domain/progress.js');
+
+  // Exactly what an earlier release wrote: no version, sound, activeDays
+  // or dailyAnswers, because those fields did not exist yet.
+  const legacy = {
+    profile: { name: 'Valentin', language: 'ru', theme: 'dark', onboarded: true },
+    answers: {
+      'sorpasso-q-1': { correct: 3, wrong: 1, lastCorrect: true, last: '2026-08-20T09:00:00.000Z' },
+      'sorpasso-q-2': { correct: 0, wrong: 2, lastCorrect: false, last: '2026-08-21T09:00:00.000Z' },
+    },
+    mistakes: ['sorpasso-q-2'],
+    exams: [{ date: '2026-08-20T10:00:00.000Z', total: 30, errors: 2, passed: true }],
+    theoryRead: ['ch1', 'ch2'],
+    streak: { current: 6, lastDay: '2026-08-27' },
+  };
+
+  const m = migrateProgress(legacy);
+  assert.equal(m.profile.name, 'Valentin');
+  assert.equal(m.profile.language, 'ru');
+  assert.equal(m.profile.sound, true, 'a field added later gets its default');
+  assert.equal(Object.keys(m.answers).length, 2);
+  assert.deepEqual(m.mistakes, ['sorpasso-q-2']);
+  assert.equal(m.exams.length, 1);
+  assert.deepEqual(m.theoryRead, ['ch1', 'ch2']);
+  assert.equal(m.streak.current, 6);
+  assert.equal(m.version, SCHEMA_VERSION);
+  // The week strip can still light up: the last active day is known.
+  assert.deepEqual(m.activeDays, ['2026-08-27']);
+});
+
+test('migration repairs damage instead of discarding a history', async () => {
+  const { migrateProgress } = await import('../public/js/domain/progress.js');
+
+  const messy = {
+    profile: { name: 'Anna', language: 'klingon', theme: 42, onboarded: true },
+    answers: {
+      good: { correct: 2, wrong: 0, lastCorrect: true },
+      broken: 'not an object',
+      negative: { correct: -5, wrong: -1, lastCorrect: true },
+      __proto__: { correct: 1, wrong: 0, lastCorrect: true, pwned: true },
+    },
+    mistakes: ['good', 12345],
+    exams: [{ total: 30, errors: 2 }, 'rubbish', { total: 0, errors: 0 }],
+    streak: { current: -4, lastDay: 'whenever' },
+    activeDays: ['2026-08-01', 'nope'],
+    dailyAnswers: { '2026-08-01': 9, bad: 3 },
+  };
+
+  const m = migrateProgress(messy);
+  assert.equal(m.profile.name, 'Anna', 'valid fields are kept');
+  assert.equal(m.profile.language, 'en', 'invalid enum falls back to the default');
+  assert.equal(m.profile.theme, 'light');
+  assert.ok(m.answers.good, 'the good answer survives the bad neighbours');
+  assert.equal(m.answers.broken, undefined);
+  assert.equal(m.answers.negative.correct, 0, 'negative counters are clamped');
+  assert.equal({}.pwned, undefined, 'no prototype pollution through a stored key');
+  assert.deepEqual(m.mistakes, [], 'a mistake whose answer is now correct is dropped');
+  assert.equal(m.exams.length, 1, 'only the well-formed exam is kept');
+  assert.equal(m.streak.current, 0);
+  assert.deepEqual(m.activeDays, ['2026-08-01']);
+  assert.deepEqual(m.dailyAnswers, { '2026-08-01': 9 });
+
+  // Nothing at all must still produce a usable, empty profile.
+  for (const junk of [null, undefined, 'string', 42, []]) {
+    assert.equal(migrateProgress(junk).profile.onboarded, false);
+  }
+});
+
+test('a progress file written by an older version still loads', async () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'patente-old-'));
+  const file = path.join(dir, 'progress.json');
+  fs.writeFileSync(file, JSON.stringify({
+    profile: { name: 'Marco', language: 'zh', onboarded: true },
+    answers: { 'q-1': { correct: 1, wrong: 0, lastCorrect: true } },
+    mistakes: [], exams: [], theoryRead: [], streak: { current: 3, lastDay: '2026-08-27' },
+  }));
+
+  const store = new JsonStore(file, EMPTY_PROGRESS).load();
+  const snap = new ProgressService(store).snapshot();
+  assert.equal(snap.profile.name, 'Marco');
+  assert.equal(snap.profile.sound, true, 'new field defaulted, not left undefined');
+  assert.equal(snap.stats.mastered, 1);
+  assert.equal(snap.streak.current, 3);
+});
