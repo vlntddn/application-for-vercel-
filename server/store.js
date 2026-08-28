@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
 
+import { migrateProgress } from '../public/js/domain/progress.js';
+
 /**
  * File-backed JSON store with atomic writes (write to temp file, then
  * rename) and serialized persistence so concurrent requests can never
@@ -22,7 +24,9 @@ export class JsonStore {
       const raw = fs.readFileSync(this.file, 'utf8');
       const parsed = JSON.parse(raw);
       if (parsed && typeof parsed === 'object') {
-        this.data = { ...structuredClone(this.initial), ...parsed };
+        // The same migration the browser uses: a file written by an older
+        // version opens with its history intact, missing fields filled in.
+        this.data = migrateProgress(parsed);
       }
     } catch (err) {
       if (err.code !== 'ENOENT') {

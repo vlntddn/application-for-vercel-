@@ -102,3 +102,44 @@ test('standalone import restores a backup exported anywhere', async () => {
   assert.equal(snap.stats.mastered, 1);
   assert.equal(snap.stats.examsPassed, 1);
 });
+
+/* ---------------- surviving an update of the site ---------------- */
+
+test('the browser copy is restored from the backup when the main one breaks', async () => {
+  const good = JSON.stringify({
+    profile: { name: 'Valentin', language: 'ru', onboarded: true },
+    answers: { 'q-1': { correct: 1, wrong: 0, lastCorrect: true } },
+  });
+  // Main copy damaged, backup intact — what a half-finished write leaves.
+  const api = await loadLocalApi({ 'pp-progress': '{ broken', 'pp-progress.backup': good });
+  const snap = await api.progress();
+  assert.equal(snap.profile.name, 'Valentin', 'recovered from the backup');
+  assert.equal(snap.stats.answered, 1);
+});
+
+test('damaged data is kept aside, never silently thrown away', async () => {
+  const store = installLocalStorage({ 'pp-progress': '{ broken' });
+  await import(`../public/js/local-progress.js?quarantine=${Math.random()}`);
+  const kept = [...store.keys()].filter((k) => k.includes('corrupt'));
+  assert.equal(kept.length, 1, 'a copy of the unreadable value must remain');
+  assert.equal(store.get(kept[0]), '{ broken');
+});
+
+test('a successful load leaves a safety copy behind', async () => {
+  const good = JSON.stringify({ profile: { name: 'Anna', onboarded: true }, answers: {} });
+  const store = installLocalStorage({ 'pp-progress': good });
+  await import(`../public/js/local-progress.js?backup=${Math.random()}`);
+  const backup = JSON.parse(store.get('pp-progress.backup'));
+  assert.equal(backup.profile.name, 'Anna', 'protected from the very first visit');
+});
+
+test('a browser that refuses to store does not break the session', async () => {
+  installLocalStorage();
+  globalThis.localStorage.setItem = () => {
+    throw new Error('QuotaExceededError');
+  };
+  const { localProgressApi } = await import(`../public/js/local-progress.js?quota=${Math.random()}`);
+  // Saving fails, but the answer still counts for this session.
+  const snap = await localProgressApi.recordAnswers([{ id: 'q-1', correct: true }]);
+  assert.equal(snap.stats.mastered, 1);
+});
