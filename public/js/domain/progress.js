@@ -5,6 +5,7 @@ const NAME_MAX = 40;
 const ID_MAX = 120;
 // Import caps: generous enough for a full bank, small enough to bound work.
 const MAX_IMPORT_ANSWERS = 20000;
+const ACTIVE_DAYS_KEPT = 90;
 const MAX_IMPORT_EXAMS = 2000;
 
 export const EMPTY_PROGRESS = {
@@ -12,6 +13,8 @@ export const EMPTY_PROGRESS = {
   answers: {}, // questionId -> { correct, wrong, lastCorrect, last }
   mistakes: [], // questionIds currently answered wrong
   exams: [], // { date, total, errors, passed }
+  activeDays: [], // YYYY-MM-DD of every day with activity (last 90)
+  dailyAnswers: {}, // YYYY-MM-DD -> answers given that day (last 90)
   theoryRead: [], // chapter ids
   streak: { current: 0, lastDay: '' },
 };
@@ -37,8 +40,23 @@ function assertId(value, field) {
   return value;
 }
 
-function today() {
-  return new Date().toISOString().slice(0, 10);
+/**
+ * The local calendar date, not the UTC one: a session at 23:30 in Rome
+ * belongs to that day, and toISOString() would file it under tomorrow.
+ */
+function today(date = new Date()) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
+/** The calendar day before an ISO date — DST-safe, unlike subtracting 24h. */
+function dayBefore(iso) {
+  const [y, m, d] = iso.split('-').map(Number);
+  const date = new Date(y, m - 1, d);
+  date.setDate(date.getDate() - 1);
+  return today(date);
 }
 
 /**
@@ -72,10 +90,33 @@ export class ProgressService {
   bumpStreak() {
     const d = this.store.data;
     const day = today();
+
+    // The day is recorded even when the streak itself does not change, so
+    // the dashboard can show which days of the week were studied.
+    if (!Array.isArray(d.activeDays)) d.activeDays = [];
+    if (!d.activeDays.includes(day)) {
+      d.activeDays.push(day);
+      if (d.activeDays.length > ACTIVE_DAYS_KEPT) {
+        d.activeDays = d.activeDays.slice(-ACTIVE_DAYS_KEPT);
+      }
+    }
+
     if (d.streak.lastDay === day) return;
-    const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
-    d.streak.current = d.streak.lastDay === yesterday ? d.streak.current + 1 : 1;
+    d.streak.current = d.streak.lastDay === dayBefore(day) ? d.streak.current + 1 : 1;
     d.streak.lastDay = day;
+  }
+
+  /** Per-day answer counts drive the dashboard's daily-goal ring. */
+  countTowardsToday(n) {
+    if (!n) return;
+    const d = this.store.data;
+    if (!d.dailyAnswers || typeof d.dailyAnswers !== 'object') d.dailyAnswers = {};
+    const day = today();
+    d.dailyAnswers[day] = (d.dailyAnswers[day] ?? 0) + n;
+    const days = Object.keys(d.dailyAnswers).sort();
+    if (days.length > ACTIVE_DAYS_KEPT) {
+      for (const old of days.slice(0, days.length - ACTIVE_DAYS_KEPT)) delete d.dailyAnswers[old];
+    }
   }
 
   async updateProfile(body) {
@@ -125,6 +166,7 @@ export class ProgressService {
       throw new ValidationError('"answers" must contain at most 100 items');
     }
     const d = this.store.data;
+    let answeredNow = 0;
     for (const entry of body.answers) {
       assertObject(entry);
       const id = assertId(entry.id, 'answers[].id');
@@ -142,7 +184,9 @@ export class ProgressService {
       rec.lastCorrect = entry.correct;
       rec.last = new Date().toISOString();
       d.answers[id] = rec;
+      answeredNow += 1;
     }
+    this.countTowardsToday(answeredNow);
     this.bumpStreak();
     await this.store.persist();
     return this.snapshot();
@@ -272,6 +316,26 @@ export class ProgressService {
           errors,
           passed: Boolean(exam.passed),
         });
+      }
+    }
+
+    if (body.activeDays !== undefined) {
+      if (!Array.isArray(body.activeDays)) {
+        throw new ValidationError('"activeDays" must be an array');
+      }
+      const days = body.activeDays.filter((day) => /^\d{4}-\d{2}-\d{2}$/.test(day));
+      clean.activeDays = [...new Set(days)].sort().slice(-ACTIVE_DAYS_KEPT);
+    }
+
+    if (body.dailyAnswers !== undefined) {
+      assertObject(body.dailyAnswers);
+      for (const [day, count] of Object.entries(body.dailyAnswers)) {
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) continue;
+        const n = Number(count);
+        if (!Number.isInteger(n) || n < 0) {
+          throw new ValidationError(`"dailyAnswers.${day}" must be a non-negative integer`);
+        }
+        clean.dailyAnswers[day] = n;
       }
     }
 

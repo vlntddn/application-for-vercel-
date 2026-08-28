@@ -184,3 +184,65 @@ test('an exported snapshot can be imported back unchanged', async () => {
   assert.equal(reimported.exams.length, 1);
   assert.equal(reimported.stats.mistakes, 1);
 });
+
+test('active days are recorded per local calendar day, capped at 90', async () => {
+  const { service, store } = makeService();
+  await service.recordAnswers({ answers: [{ id: 'q-1', correct: true }] });
+  await service.recordAnswers({ answers: [{ id: 'q-2', correct: false }] });
+
+  const now = new Date();
+  const todayLocal = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+  // One entry per day, not per answer, and the LOCAL date — a session at
+  // 23:30 in Rome must not be filed under tomorrow the way UTC would.
+  assert.deepEqual(store.data.activeDays, [todayLocal]);
+
+  store.data.activeDays = Array.from({ length: 95 }, (_, i) => `2020-01-${String((i % 28) + 1).padStart(2, '0')}`);
+  store.data.streak.lastDay = '';
+  await service.recordAnswers({ answers: [{ id: 'q-3', correct: true }] });
+  assert.ok(store.data.activeDays.length <= 90, 'active days must stay capped');
+  assert.ok(store.data.activeDays.includes(todayLocal));
+});
+
+test('the streak survives a daylight-saving change', async () => {
+  const { service, store } = makeService();
+  // Italy moves the clock on the last Sunday of October; subtracting a raw
+  // 24h across that boundary lands on the same calendar day and would break
+  // the "was I here yesterday?" comparison.
+  const now = new Date();
+  const yesterday = new Date(now);
+  yesterday.setDate(yesterday.getDate() - 1);
+  const key = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+
+  store.data.streak = { current: 4, lastDay: key(yesterday) };
+  await service.recordAnswers({ answers: [{ id: 'q-1', correct: true }] });
+  assert.equal(store.data.streak.current, 5, 'a session the next day continues the streak');
+});
+
+test('daily answer counts drive the dashboard goal and stay capped', async () => {
+  const { service, store } = makeService();
+  await service.recordAnswers({ answers: [{ id: 'a', correct: true }, { id: 'b', correct: false }] });
+  await service.recordAnswers({ answers: [{ id: 'c', correct: true }] });
+
+  const days = Object.keys(store.data.dailyAnswers);
+  assert.equal(days.length, 1);
+  assert.equal(store.data.dailyAnswers[days[0]], 3, 'every answer counts, including repeats');
+
+  for (let i = 0; i < 95; i++) store.data.dailyAnswers[`2020-02-${String((i % 28) + 1).padStart(2, '0')}-${i}`] = 1;
+  await service.recordAnswers({ answers: [{ id: 'd', correct: true }] });
+  assert.ok(Object.keys(store.data.dailyAnswers).length <= 90);
+});
+
+test('import validates the new activity fields', async () => {
+  const { service } = makeService();
+  const snap = await service.importProgress({
+    activeDays: ['2026-08-21', 'not-a-date', '2026-08-21', '2026-08-20'],
+    dailyAnswers: { '2026-08-20': 14, 'rubbish': 3 },
+  });
+  assert.deepEqual(snap.activeDays, ['2026-08-20', '2026-08-21'], 'deduped, sorted, junk dropped');
+  assert.deepEqual(snap.dailyAnswers, { '2026-08-20': 14 });
+
+  await assert.rejects(() => service.importProgress({ activeDays: 'nope' }), ValidationError);
+  await assert.rejects(
+    () => service.importProgress({ dailyAnswers: { '2026-08-20': -3 } }), ValidationError,
+  );
+});

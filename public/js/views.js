@@ -20,6 +20,7 @@ const EXAM_QUESTIONS = 30;
 const EXAM_SECONDS = 20 * 60;
 const EXAM_MAX_ERRORS = 3;
 const PRACTICE_BATCH = 20;
+const DAILY_GOAL = 20; // questions a day — what the dashboard ring fills up
 
 function errorBanner(err) {
   return el('p.error-banner', { role: 'alert' }, err.message.toUpperCase());
@@ -236,15 +237,121 @@ export function renderOnboarding(root, onDone) {
 
 /* ============================== DASHBOARD ============================== */
 
+/** Local calendar date as YYYY-MM-DD — matches how the domain stores days. */
+function dayKey(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
+/**
+ * The last seven days, oldest first, marked with whether the user studied.
+ * Week starts on Monday, as it does in Italy.
+ */
+function weekStrip(activeDays = []) {
+  const done = new Set(activeDays);
+  const initials = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+  const todayKey = dayKey(new Date());
+  const cells = [];
+  for (let back = 6; back >= 0; back--) {
+    const date = new Date();
+    date.setDate(date.getDate() - back);
+    const key = dayKey(date);
+    // getDay(): 0 = Sunday, so shift to a Monday-first index.
+    cells.push({
+      key,
+      label: initials[(date.getDay() + 6) % 7],
+      studied: done.has(key),
+      isToday: key === todayKey,
+    });
+  }
+  return cells;
+}
+
+/** A hard-edged progress ring: brutalism, so square caps and no gradient. */
+function progressRing(percent, { size = 104, stroke = 12, label = '' } = {}) {
+  const pct = Math.max(0, Math.min(100, percent));
+  const r = (size - stroke) / 2;
+  const circumference = 2 * Math.PI * r;
+  const svgNS = 'http://www.w3.org/2000/svg';
+
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('viewBox', `0 0 ${size} ${size}`);
+  svg.setAttribute('class', 'ring');
+  svg.setAttribute('role', 'img');
+  svg.setAttribute('aria-label', `${label}: ${pct}%`);
+
+  const track = document.createElementNS(svgNS, 'circle');
+  track.setAttribute('cx', size / 2);
+  track.setAttribute('cy', size / 2);
+  track.setAttribute('r', r);
+  track.setAttribute('class', 'ring-track');
+  track.setAttribute('stroke-width', stroke);
+
+  const value = document.createElementNS(svgNS, 'circle');
+  value.setAttribute('cx', size / 2);
+  value.setAttribute('cy', size / 2);
+  value.setAttribute('r', r);
+  value.setAttribute('class', 'ring-value');
+  value.setAttribute('stroke-width', stroke);
+  value.setAttribute('stroke-dasharray', `${circumference}`);
+  // A hair of the ring always shows, so 0% still reads as "a ring".
+  value.setAttribute('stroke-dashoffset', `${circumference * (1 - pct / 100)}`);
+  value.setAttribute('transform', `rotate(-90 ${size / 2} ${size / 2})`);
+
+  svg.append(track, value);
+  return svg;
+}
+
 export function renderDashboard(root) {
   const { profile, stats, exams } = state.progress;
   const total = state.manifest.totalQuestions;
   const masteredPct = Math.round((stats.mastered / total) * 100);
   const recentExams = [...exams].slice(-5).reverse();
 
+  const week = weekStrip(state.progress.activeDays);
+  const daysThisWeek = week.filter((d) => d.studied).length;
+  const answeredToday = state.progress.dailyAnswers?.[dayKey(new Date())] ?? 0;
+  const goalPct = Math.min(100, Math.round((answeredToday / DAILY_GOAL) * 100));
+
   clear(root,
     el('h1', {}, profile.name ? `CIAO, ${profile.name}` : 'CIAO'),
     el('p.lede', {}, 'READY FOR THE EXAM? KEEP THE STREAK ALIVE.'),
+
+    // The habit, at a glance: which of the last seven days you studied.
+    el('div.panel.week-panel', {},
+      el('div.quiz-head', { style: 'margin-bottom:12px' },
+        el('h2', { style: 'margin:0' }, 'THIS WEEK'),
+        el('span.tag', { className: `tag ${daysThisWeek >= 5 ? 'ok' : ''}` },
+          `${daysThisWeek}/7 DAYS`),
+      ),
+      el('div.week-row', {},
+        el('div.week', { role: 'img', 'aria-label': `Studied on ${daysThisWeek} of the last 7 days` },
+          ...week.map((day) =>
+            el('div.week-day', {
+              className: `week-day${day.studied ? ' done' : ''}${day.isToday ? ' today' : ''}`,
+            },
+              el('span.week-cell', { 'aria-hidden': 'true' }, day.studied ? '✓' : ''),
+              el('span.week-label', { 'aria-hidden': 'true' }, day.label),
+            ),
+          ),
+        ),
+        // The ring tracks today's goal, which actually moves — mastery of
+        // 7139 questions would sit near zero for weeks and read as broken.
+        el('div.today-goal', {},
+          el('div.ring-wrap', {},
+            progressRing(goalPct, { label: "Today's goal" }),
+            el('div.ring-centre', {},
+              el('span.ring-pct', {}, String(answeredToday)),
+              el('span.ring-sub', {}, `/ ${DAILY_GOAL}`),
+            ),
+          ),
+          el('span.week-label', {}, answeredToday >= DAILY_GOAL ? 'GOAL DONE' : 'TODAY'),
+        ),
+      ),
+    ),
+
     el('div.grid.grid-3', {},
       el('div.card', {},
         el('h2', {}, 'LOGIN STREAK'),

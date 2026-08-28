@@ -196,3 +196,19 @@ test('the Android app asks for no permissions and no cloud backup', () => {
   assert.match(rules, /<cloud-backup>[\s\S]*<exclude domain="root"[\s\S]*<\/cloud-backup>/);
   assert.match(rules, /<device-transfer>[\s\S]*<exclude domain="root"[\s\S]*<\/device-transfer>/);
 });
+
+/* ---------------- iOS layout safety ---------------- */
+
+test('the layout reserves the iPhone safe areas', () => {
+  const html = fs.readFileSync(path.join(ROOT, 'public', 'index.html'), 'utf8');
+  // Without viewport-fit=cover the env() insets are always zero and the
+  // fixed bottom bar leaves a strip of page showing beneath it.
+  assert.match(html, /viewport-fit=cover/);
+
+  const css = fs.readFileSync(path.join(ROOT, 'public', 'styles.css'), 'utf8');
+  const navBlock = css.slice(css.indexOf('.nav {', css.indexOf('@media (max-width: 760px)')));
+  assert.match(navBlock.slice(0, 600), /padding-bottom:\s*env\(safe-area-inset-bottom/);
+  assert.match(css, /padding-top:\s*calc\([^)]*env\(safe-area-inset-top/);
+  assert.match(css, /main\s*{\s*padding:[^}]*env\(safe-area-inset-bottom/);
+  assert.match(css, /min-height:\s*100dvh/);
+});
