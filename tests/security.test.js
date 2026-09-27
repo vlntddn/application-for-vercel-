@@ -317,3 +317,106 @@ test('settings offers an install path on phones', () => {
   // iOS has no prompt API: written instructions are the only path.
   assert.match(install, /ADD TO HOME SCREEN/);
 });
+
+/* ---------------- phase 2.2: first guaranteed success ---------------- */
+
+// views.js is a browser module; shim the bare globals it touches at import
+// time so we can unit-test the queue builder without a DOM.
+function loadViewsModule() {
+  if (!globalThis.window) {
+    globalThis.window = {
+      addEventListener() {},
+      removeEventListener() {},
+      matchMedia: () => ({ matches: false, addEventListener() {} }),
+    };
+  }
+  if (!globalThis.localStorage) {
+    globalThis.localStorage = { getItem: () => null, setItem() {}, removeItem() {} };
+  }
+  return import('../public/js/views.js');
+}
+
+function fakeQuestion(i, { image = false, len = 40 } = {}) {
+  return {
+    id: `fake-q-${i}`,
+    category: 'fake-topic',
+    text_it: 'x'.repeat(len),
+    is_true: true,
+    image_url: image ? `/images/${i}.png` : null,
+  };
+}
+
+const EASY = 5;
+const BATCH = 20;
+
+async function topicFixture({ imageCount = 0, longCount = 0, seenCount = 0 } = {}) {
+  const questions = [];
+  let n = 0;
+  const push = (o) => questions.push(fakeQuestion(n++, o));
+  for (let i = 0; i < BATCH + 5; i++) push({});                  // 25 short text-only
+  for (let i = 0; i < imageCount; i++) push({ image: true, len: 20 });
+  for (let i = 0; i < longCount; i++) push({ len: 300 });
+  const answers = {};
+  for (let i = 0; i < seenCount; i++) {
+    const q = questions.find((q) => !answers[q.id]);
+    answers[q.id] = { lastCorrect: false };
+  }
+  return { questions, answers };
+}
+
+test('introQueue opens with only the easiest questions (short, no image, unseen)', async () => {
+  const { introQueue } = await loadViewsModule();
+  const { questions, answers } = await topicFixture();
+  const queue = introQueue(questions, { answers });
+  assert.ok(queue, 'expected a queue');
+  assert.equal(queue.length, BATCH);
+  const first = queue.slice(0, EASY);
+  for (const q of first) {
+    assert.equal(q.image_url, null, 'intro must not use sign images');
+    assert.ok(q.text_it.length <= 120, 'intro must be short Italian');
+    assert.equal(answers[q.id], undefined, 'intro must skip already-answered');
+  }
+  const ids = new Set(queue.map((q) => q.id));
+  assert.equal(ids.size, BATCH, 'no duplicates in the queue');
+});
+
+test('introQueue pads the remainder with the rest of the topic, not other topics', async () => {
+  const { introQueue } = await loadViewsModule();
+  const { questions, answers } = await topicFixture();
+  const queue = introQueue(questions, { answers });
+  const ids = new Set(queue.map((q) => q.id));
+  for (const q of questions) {
+    if (ids.has(q.id)) assert.equal(q.category, 'fake-topic');
+  }
+  // 20 of 25 questions served; every id belongs to the same topic.
+  assert.ok([...ids].every((id) => questions.some((q) => q.id === id)));
+});
+
+test('introQueue falls back to null when the topic is too image-heavy', async () => {
+  const { introQueue } = await loadViewsModule();
+  // A sign topic: 5 short text-only questions out of 25 — below the threshold.
+  const questions = [];
+  let n = 0;
+  const push = (o) => questions.push(fakeQuestion(n++, o));
+  for (let i = 0; i < 20; i++) push({ image: true, len: 10 });
+  for (let i = 0; i < 4; i++) push({});
+  assert.equal(introQueue(questions, { answers: {} }), null);
+});
+
+test('introQueue still serves a full batch when few easy questions remain', async () => {
+  const { introQueue } = await loadViewsModule();
+  // 6 easy + 30 hard: the intro block is exactly 5 questions, the rest of
+  // the batch comes from the same topic in the regular order.
+  const questions = [];
+  let n = 0;
+  const push = (o) => questions.push(fakeQuestion(n++, o));
+  for (let i = 0; i < 6; i++) push({});
+  for (let i = 0; i < 30; i++) push({ image: true, len: 10 });
+  const queue = introQueue(questions, { answers: {} });
+  assert.equal(queue.length, BATCH);
+  for (const q of queue.slice(0, EASY)) assert.equal(q.image_url, null);
+  const ids = new Set(queue.map((q) => q.id));
+  assert.equal(ids.size, BATCH, 'no duplicates');
+  assert.ok(queue.every((q) => q.category === 'fake-topic'), 'whole batch from the same topic');
+});
+

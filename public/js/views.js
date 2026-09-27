@@ -23,6 +23,11 @@ const EXAM_QUESTIONS = 30;
 const EXAM_SECONDS = 20 * 60;
 const EXAM_MAX_ERRORS = 3;
 const PRACTICE_BATCH = 20;
+// First-session on-ramp (Phase 2.2): a newcomer's first practice run opens
+// with the topic's easiest questions — short text, no sign image — so the
+// VERO/FALSO mechanic is felt before the hard wording starts.
+const INTRO_QUESTIONS = 5;
+const INTRO_TEXT_LEN = 120;
 // Presets offered in Settings; the stored value itself lives in the profile
 // and is validated by the shared domain module.
 const DAILY_GOAL_CHOICES = [5, 10, 15, 20, 25, 30, 40, 50, 75, 100];
@@ -50,13 +55,40 @@ function loc(obj) {
   return obj?.[lang()] || obj?.en || '';
 }
 
-/** Session queue: unseen questions first, then current mistakes, then the rest. */
-function pickQueue(questions, count) {
-  const answers = state.progress.answers;
+/** Session queue order: unseen first, then current mistakes, then the rest. */
+function queueOrder(questions, answers, count) {
   const unseen = questions.filter((q) => !answers[q.id]);
   const wrong = questions.filter((q) => answers[q.id] && !answers[q.id].lastCorrect);
   const rest = questions.filter((q) => answers[q.id]?.lastCorrect);
   return [...shuffle(unseen), ...shuffle(wrong), ...shuffle(rest)].slice(0, count);
+}
+
+/** Session queue: unseen questions first, then current mistakes, then the rest. */
+function pickQueue(questions, count) {
+  return queueOrder(questions, state.progress.answers, count);
+}
+
+/**
+ * First-session queue (Phase 2.2 "guaranteed first success").
+ * A brand-new user opens on the topic's easiest questions — short Italian
+ * (≤ INTRO_TEXT_LEN chars), no sign image, unseen — so the VERO/FALSO
+ * mechanic is felt before the hard wording starts. Returns null when the
+ * topic holds fewer than `count` such questions (image-heavy sign topics):
+ * the caller then falls back to the regular queue and never pads with easy
+ * questions stolen from other topics.
+ *
+ * Takes the topic's full question list (not a pre-sliced batch) and returns
+ * the whole practice queue: the intro block first, then the rest of the
+ * batch in the regular unseen→wrong→kept order.
+ */
+export function introQueue(questions, { answers = {}, batch = PRACTICE_BATCH, count = INTRO_QUESTIONS, textLen = INTRO_TEXT_LEN } = {}) {
+  const easy = shuffle(questions.filter(
+    (q) => !q.image_url && (q.text_it || '').length <= textLen && !answers[q.id],
+  ));
+  if (easy.length < count) return null;
+  const intro = easy.slice(0, count);
+  const introIds = new Set(intro.map((q) => q.id));
+  return [...intro, ...queueOrder(questions.filter((q) => !introIds.has(q.id)), answers, batch - count)];
 }
 
 function masteryOf(slug, count) {
@@ -1263,8 +1295,7 @@ function whyBlock(question, onNavigate) {
   return box;
 }
 
-export function renderQuizSession(root, questions, { title, backHash, onFinish, onQuit }) {
-  const queue = questions;
+export function renderQuizSession(root, questions, { title, backHash, onFinish, onQuit, easyStart }) {
   let index = 0;
   let correctCount = 0;
   let answered = false;
@@ -1295,7 +1326,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
   async function answer(value) {
     if (answered) return;
     answered = true;
-    const q = queue[index];
+    const q = questions[index];
     lastCorrect = value === q.is_true;
     if (lastCorrect) correctCount++;
     if (lastCorrect) playCorrect(); else playWrong();
@@ -1314,16 +1345,16 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     lastCorrect = null;
     revealed = false;
     index++;
-    if (index >= queue.length) {
+    if (index >= questions.length) {
       document.removeEventListener('keydown', keyHandler);
-      onFinish(correctCount, queue.length);
+      onFinish(correctCount, questions.length);
     } else {
       draw();
     }
   }
 
   function draw() {
-    const q = queue[index];
+    const q = questions[index];
     clear(root,
       offline
         ? el('p.offline-note', { role: 'status' },
@@ -1340,8 +1371,9 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
             }
           },
         }, '← QUIT'),
-        el('span.quiz-progress', {}, `${title} — ${index + 1}/${queue.length}`),
+        el('span.quiz-progress', {}, `${title} — ${index + 1}/${questions.length}`),
         el('span.tag.ok', {}, `${correctCount} CORRECT`),
+        easyStart ? el('span.tag', {}, 'EASY START') : null,
       ),
       el('div.panel.question-card', {},
         q.image_url ? el('img.question-img', { src: q.image_url, alt: 'Road sign / situation', onerror: (e) => e.target.remove() }) : null,
@@ -1356,7 +1388,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
                 : whyBlock(q, () => document.removeEventListener('keydown', keyHandler)),
               el('div.actions', {},
                 el('button.btn.btn-primary.btn-big', { onclick: next },
-                  index + 1 >= queue.length ? 'FINISH' : 'NEXT →'),
+                  index + 1 >= questions.length ? 'FINISH' : 'NEXT →'),
               ),
               el('p.kbd-hint', {}, el('kbd', {}, 'ENTER'), ' NEXT · ', el('kbd', {}, 'T'), ' TRANSLATE'),
             )
@@ -1387,9 +1419,16 @@ export async function renderPracticeSession(root, slug) {
     return clear(root, errorBanner(err));
   }
 
-  renderQuizSession(root, pickQueue(questions, PRACTICE_BATCH), {
+  // Phase 2.2: a never-started profile opens on the topic's easiest
+  // questions; image-heavy topics fall back to the regular queue.
+  const beginner = Object.keys(state.progress.answers).length === 0;
+  const intro = beginner ? introQueue(questions, { answers: state.progress.answers }) : null;
+  const queue = intro ?? pickQueue(questions, PRACTICE_BATCH);
+
+  renderQuizSession(root, queue, {
     title: titleCase(cat.name).toUpperCase(),
     backHash: '#/practice',
+    easyStart: intro !== null,
     onFinish: (correct, total) => {
       clear(root,
         el('div.panel', { style: 'text-align:center' },
