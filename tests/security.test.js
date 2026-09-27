@@ -241,6 +241,47 @@ test('the service worker shell covers every frontend script', () => {
   }
 });
 
+test('onboarding explains the exam, the learning loop and local storage', () => {
+  // Phase 2.2: a first-time user must be told — in order — what the exam is,
+  // how they will study here, and that nothing leaves the device.
+  const views = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views.js'), 'utf8');
+  const onboard = views.slice(views.indexOf('ONBOARDING'));
+  assert.match(onboard, /30 questions, 20 minutes, at most 3 errors/,
+    'slide 1 must state the exam format in plain words');
+  assert.match(onboard, /VERO or FALSO/, 'slide 2 must name the core action');
+  assert.match(onboard, /theory/i, 'slide 2 must point at the theory chapters');
+  assert.match(onboard, /this device only/i, 'slide 3 must say progress stays on-device');
+  assert.match(onboard, /backup/i, 'slide 3 must mention the export-file escape hatch');
+  // A newcomer must be able to bail out and choose the translation language
+  // right in the tour — not be told "look in Settings".
+  assert.match(onboard, /SKIP/, 'onboarding must offer a skip path');
+  assert.match(onboard, /ob-lang/, 'language selector must live inside the tour');
+  // Progress dots: one per slide, three slides.
+  assert.match(onboard, /ONBOARDING_STEPS = 3/);
+  // Slides 2–3: at most 2 lines of text + 1 button (Phase 2.2 subtask) —
+  // a single lede, one primary forward button, no back button.
+  const slide2 = onboard.slice(onboard.indexOf('step === 1'), onboard.indexOf('} else {'));
+  const slide3 = onboard.slice(onboard.indexOf('} else {'));
+  assert.ok(!slide2.includes('← BACK'), 'slide 2: one forward button only, no back');
+  assert.ok(!slide2.includes('stat-sub'), 'slide 2: one lede line, no second paragraph');
+  assert.ok(!slide3.includes('← BACK'), 'slide 3: one forward button only, no back');
+});
+
+test('the dashboard shows the next step, not raw zeros', () => {
+  // Phase 2.2: a newcomer with no answers must see "what to do next" with
+  // a link to practice, and a user with 1+ mock exam gets the
+  // "until the exam" panel (weak topics / mistakes) instead of raw stats.
+  const views = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views.js'), 'utf8');
+  assert.match(views, /dashboard-next-steps/);
+  assert.match(views, /dashboard-exam-readiness/);
+  const dashboard = views.slice(views.indexOf('export function renderDashboard'));
+  // The panels are actually wired into the dashboard render.
+  assert.match(dashboard, /stats\.answered === 0\s*\?\s*nextStepsPanel\(\)/,
+    'no answers -> next-step panel with the practice link');
+  assert.match(dashboard, /exams\.length > 0\s*\?\s*weakSpotsPanel\(\)/,
+    'at least one exam -> "until the exam" panel');
+});
+
 test('settings offers an install path on phones', () => {
   const views = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views.js'), 'utf8');
   assert.match(views, /renderInstallPanel/);

@@ -167,79 +167,100 @@ function showSignModal(imageUrl, signQuestions, onPractice) {
 
 /* ============================== ONBOARDING ============================== */
 
+/**
+ * First-run tour: three slides, one idea each (exam format → learning loop →
+ * where data lives). Name and language are collected here, not in Settings,
+ * so a newcomer is never dropped into a wall of statistics.
+ */
+const ONBOARDING_STEPS = 3;
+
 export function renderOnboarding(root, onDone) {
   let step = 0;
-  let name = state.progress.profile.name;
-  let language = state.progress.profile.language;
+  let name = (state.progress.profile.name || '').trim();
+  const langSelect = el('select', { id: 'ob-lang' },
+    el('option', { value: 'en', textContent: 'ENGLISH' }),
+    el('option', { value: 'ru', textContent: 'РУССКИЙ' }),
+    el('option', { value: 'zh', textContent: '中文' }),
+  );
+  langSelect.value = state.progress.profile.language;
+
+  async function save() {
+    try {
+      await api.updateProfile({
+        name,
+        language: langSelect.value,
+        onboarded: true,
+      });
+      state.progress.profile = {
+        ...state.progress.profile,
+        name,
+        language: langSelect.value,
+        onboarded: true,
+      };
+      onDone();
+    } catch (err) {
+      root.prepend(errorBanner(err));
+    }
+  }
 
   function draw() {
-    const steps = el('div.steps', {},
-      el('span', { className: step >= 0 ? 'done' : '' }),
-      el('span', { className: step >= 1 ? 'done' : '' }),
+    const dots = el('div.steps', { 'aria-hidden': 'true' },
+      ...Array.from({ length: ONBOARDING_STEPS }, (_, i) =>
+        el('span', { className: i <= step ? 'done' : '' })),
     );
 
+    let content;
     if (step === 0) {
       const nameInput = el('input', {
         id: 'ob-name', type: 'text', maxLength: 40, value: name,
-        placeholder: 'Enter your name',
+        placeholder: 'Your name (optional)',
       });
-      const langSelect = el('select', { id: 'ob-lang' },
-        el('option', { value: 'en', textContent: 'ENGLISH' }),
-        el('option', { value: 'ru', textContent: 'РУССКИЙ' }),
-        el('option', { value: 'zh', textContent: '中文' }),
-      );
-      langSelect.value = language;
-      clear(root, el('div.onboard', {},
-        el('div.panel', {},
-          steps,
-          el('h1', {}, 'Welcome!'),
-          el('p.lede', {}, "Let's set up your study experience."),
-          el('div.field', {}, el('label', { htmlFor: 'ob-name' }, 'YOUR NAME'), nameInput),
-          el('div.field', {}, el('label', { htmlFor: 'ob-lang' }, 'TRANSLATION LANGUAGE'), langSelect),
-          el('div.actions', {},
-            el('button.btn.btn-primary.btn-big', {
-              onclick: () => {
-                name = nameInput.value.trim();
-                language = langSelect.value;
-                step = 1;
-                draw();
-              },
-            }, 'CONTINUE →'),
-          ),
+      content = [
+        el('h1', {}, 'Welcome!'),
+        el('p.lede', {}, 'The patente B exam: 30 questions, 20 minutes, at most 3 errors.'),
+        el('p.stat-sub', {}, 'This app prepares you for it — on this device, offline, for free.'),
+        el('div.field', {}, el('label', { htmlFor: 'ob-name' }, 'YOUR NAME'), nameInput),
+        el('div.actions', {},
+          el('button.btn', {
+            onclick: () => { name = nameInput.value.trim(); save(); },
+          }, 'SKIP THIS TOUR'),
+          el('button.btn.btn-primary.btn-big', {
+            onclick: () => {
+              name = nameInput.value.trim();
+              step = 1;
+              draw();
+            },
+          }, 'CONTINUE →'),
         ),
-      ));
-      nameInput.focus();
+      ];
+    } else if (step === 1) {
+      content = [
+        el('h1', {}, 'How you will study'),
+        el('p.lede', {}, 'Pick a topic and answer VERO or FALSO — read the theory when unsure, then take a mock exam.'),
+        el('div.actions', {},
+          el('button.btn.btn-primary.btn-big', {
+            onclick: () => { step = 2; draw(); },
+          }, 'CONTINUE →'),
+        ),
+      ];
     } else {
-      clear(root, el('div.onboard', {},
-        el('div.panel', {},
-          steps,
-          el('h1', {}, 'Before you start'),
-          el('p.lede', {}, 'A few things to know about how this app works.'),
-          el('div.row', {}, el('div', {},
-            el('strong', {}, 'QUESTIONS IN ITALIAN'), el('p.stat-sub', {},
-              'The real exam is in Italian. Translations are a study aid — learn the original wording.'))),
-          el('div.row', {}, el('div', {},
-            el('strong', {}, 'PROGRESS SAVED LOCALLY'), el('p.stat-sub', {},
-              'Everything is stored on this machine by the local server. No accounts, no cloud.'))),
-          el('div.row', {}, el('div', {},
-            el('strong', {}, 'EXAM RULES'), el('p.stat-sub', {},
-              `${EXAM_QUESTIONS} questions, ${EXAM_SECONDS / 60} minutes, maximum ${EXAM_MAX_ERRORS} errors to pass.`))),
-          el('div.actions', {},
-            el('button.btn', { onclick: () => { step = 0; draw(); } }, '← BACK'),
-            el('button.btn.btn-primary.btn-big', {
-              onclick: async () => {
-                try {
-                  await api.updateProfile({ name, language, onboarded: true });
-                  state.progress.profile = { ...state.progress.profile, name, language, onboarded: true };
-                  onDone();
-                } catch (err) {
-                  root.prepend(errorBanner(err));
-                }
-              },
-            }, 'START LEARNING →'),
-          ),
+      content = [
+        el('h1', {}, 'Your progress never leaves here'),
+        el('p.lede', {}, 'Saved on this device only. In Settings you can export a backup file.'),
+        el('div.field', {},
+          el('label', { htmlFor: 'ob-lang' }, 'TRANSLATION LANGUAGE'),
+          langSelect,
         ),
-      ));
+        el('div.actions', {},
+          el('button.btn.btn-primary.btn-big', { onclick: () => save() }, 'START LEARNING →'),
+        ),
+      ];
+    }
+
+    clear(root, el('div.onboard', {}, el('div.panel', {}, dots, ...content)));
+
+    if (step === 0) {
+      root.querySelector('#ob-name')?.focus();
     }
   }
 
@@ -429,6 +450,62 @@ function progressRing(percent, { size = 104, stroke = 12, label = '' } = {}) {
   return svg;
 }
 
+/**
+ * Dashboard next-step for a newcomer: no raw numbers — one action.
+ * Shown until the first answer is recorded.
+ */
+function nextStepsPanel() {
+  return el('div.panel', { id: 'dashboard-next-steps', style: 'margin-top:24px' },
+    el('h2', {}, 'NEXT STEP'),
+    el('p.lede', {},
+      `You have not answered a question yet. Start with practice: ${PRACTICE_BATCH} questions on a topic you pick — about 5 minutes.`),
+    el('div.actions', {},
+      el('a.btn.btn-primary.btn-big', { href: '#/practice' }, 'PICK A TOPIC AND START PRACTICE'),
+      el('a.btn', { href: '#/theory' }, 'PREFER READING FIRST — OPEN THE THEORY'),
+    ),
+  );
+}
+
+/**
+ * "Until the exam" panel: what to fix next, computed from real data —
+ * the weakest attempted topics (accuracy < 70%) and pending mistakes.
+ * Shown once at least one mock exam exists.
+ */
+function weakSpotsPanel() {
+  const { exams } = state.progress;
+  const last = exams[exams.length - 1];
+  const weak = categoryStats()
+    .filter((c) => c.attempted && c.accuracy < 70)
+    .sort((a, b) => a.accuracy - b.accuracy)
+    .slice(0, 3);
+  return el('div.panel', { id: 'dashboard-exam-readiness', style: 'margin-top:24px' },
+    el('div.quiz-head', { style: 'margin-bottom:12px' },
+      el('h2', { style: 'margin:0' }, 'UNTIL THE EXAM'),
+      el('span.tag', { className: `tag ${last.passed ? 'ok' : 'bad'}` },
+        `LAST: ${last.errors} ERRORS — ${last.passed ? 'PASSED' : 'FAILED'}`),
+    ),
+    weak.length
+      ? el('div', {},
+          ...weak.map((c) =>
+            el('div.row', {},
+              el('span', {}, titleCase(c.name)),
+              el('span.tag', { className: 'tag bad' }, `${c.accuracy}%`),
+            ),
+          ),
+        )
+      : el('p.empty-note', {}, 'NO WEAK TOPIC UNDER 70% — KEEP THE STREAK ALIVE'),
+    el('div.actions', {},
+      weak.length
+        ? el('a.btn.btn-primary', { href: `#/practice/${weak[0].slug}` },
+            `STRENGTHEN ${titleCase(weak[0].name).toUpperCase()}`)
+        : el('a.btn.btn-primary', { href: '#/exam' }, 'ANOTHER MOCK EXAM'),
+      state.progress.stats.mistakes > 0
+        ? el('a.btn', { href: '#/mistakes' }, `REVIEW ${state.progress.stats.mistakes} MISTAKES`)
+        : null,
+    ),
+  );
+}
+
 export function renderDashboard(root) {
   const { profile, stats, exams } = state.progress;
   const total = state.manifest.totalQuestions;
@@ -496,6 +573,14 @@ export function renderDashboard(root) {
         el('p.stat-sub', {}, `${stats.examsPassed}/${stats.examsTaken} MOCK EXAMS PASSED`),
       ),
     ),
+    // A newcomer gets the next action instead of raw zeros (Phase 2.2);
+    // a user who took an exam gets "what to fix until the exam".
+    stats.answered === 0
+      ? nextStepsPanel()
+      : null,
+    exams.length > 0
+      ? weakSpotsPanel()
+      : null,
     el('div.panel', { style: 'margin-top:24px' },
       el('h2', {}, "PRONTO PER L'ESAME?"),
       el('p.lede', {}, `${EXAM_QUESTIONS} random questions · ${EXAM_SECONDS / 60} minutes · max ${EXAM_MAX_ERRORS} errors.`),

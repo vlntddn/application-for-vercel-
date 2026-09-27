@@ -87,8 +87,12 @@ test('streak increments once per day', async () => {
   await service.recordAnswers({ answers: [{ id: 'a-2', correct: true }] });
   assert.equal(store.data.streak.current, 1);
 
-  // Simulate that the last activity was yesterday.
-  store.data.streak.lastDay = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  // Simulate that the last activity was yesterday. The domain files days
+  // under the local calendar date (not UTC), so "yesterday" must be local too.
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
+  store.data.streak.lastDay =
+    `${yesterday.getFullYear()}-${String(yesterday.getMonth() + 1).padStart(2, '0')}-${String(yesterday.getDate()).padStart(2, '0')}`;
   await service.recordAnswers({ answers: [{ id: 'a-3', correct: true }] });
   assert.equal(store.data.streak.current, 2);
 
