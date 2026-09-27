@@ -1,5 +1,5 @@
 import { boot, state, flushQueue, scheduleQueueRetry } from './state.js';
-import { api } from './api.js';
+import { api, currentMode, MODE } from './api.js';
 import { el, clear } from './ui.js';
 import {
   renderOnboarding,
@@ -87,6 +87,12 @@ document.addEventListener('visibilitychange', () => {
 
 boot()
   .then(async () => {
+    // The footer text in index.html describes the local server; the hosted
+    // (standalone) build keeps progress in the browser instead.
+    if (currentMode() === MODE.standalone) {
+      const note = document.getElementById('privacy-note');
+      if (note) note.textContent = 'YOUR PROGRESS LIVES ONLY IN THIS BROWSER — NOTHING LEAVES YOUR DEVICE';
+    }
     // Drain answers queued in a previous offline session, then render
     // with the server's authoritative snapshot. Never blocks startup.
     try {

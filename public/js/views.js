@@ -15,13 +15,23 @@ import {
 import { el, clear, fmtTime, fmtDate, titleCase } from './ui.js';
 import { CHAPTER_CATEGORY, CATEGORY_CHAPTER } from './theory-map.js';
 import { requestPersistentStorage } from './local-progress.js';
+import { renderInstallPanel } from './install.js';
 import { playCorrect, playWrong } from './sound.js';
+import { DAILY_GOAL_DEFAULT } from './domain/progress.js';
 
 const EXAM_QUESTIONS = 30;
 const EXAM_SECONDS = 20 * 60;
 const EXAM_MAX_ERRORS = 3;
 const PRACTICE_BATCH = 20;
-const DAILY_GOAL = 20; // questions a day — what the dashboard ring fills up
+// Presets offered in Settings; the stored value itself lives in the profile
+// and is validated by the shared domain module.
+const DAILY_GOAL_CHOICES = [5, 10, 15, 20, 25, 30, 40, 50, 75, 100];
+
+/** The user's goal from the profile, with the default as a safety net. */
+function dailyGoal() {
+  const goal = state.progress.profile?.dailyGoal;
+  return Number.isInteger(goal) ? goal : DAILY_GOAL_DEFAULT;
+}
 
 function errorBanner(err) {
   return el('p.error-banner', { role: 'alert' }, err.message.toUpperCase());
@@ -270,6 +280,120 @@ function weekStrip(activeDays = []) {
   return cells;
 }
 
+/** The activity heatmap: answers per day over the last 90 days, weeks as columns. */
+const HEAT_DAYS = 90; // must match the domain's ACTIVE_DAYS_KEPT cap
+// Answer counts that reach each step: 1–19, 20–39, 40–79, 80+.
+const HEAT_BANDS = [19, 39, 79];
+const HEAT_MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+
+function heatLevel(count) {
+  if (!count) return 0;
+  if (count <= HEAT_BANDS[0]) return 1;
+  if (count <= HEAT_BANDS[1]) return 2;
+  if (count <= HEAT_BANDS[2]) return 3;
+  return 4;
+}
+
+function activityHeatmap() {
+  const counts = state.progress.dailyAnswers ?? {};
+  const now = new Date();
+  const start = new Date();
+  start.setDate(start.getDate() - (HEAT_DAYS - 1));
+  const startKey = dayKey(start);
+
+  const inWindow = (key) => key >= startKey;
+  let total = 0;
+  let active = 0;
+  let best = null;
+  for (const [key, n] of Object.entries(counts)) {
+    if (!inWindow(key) || !Number.isInteger(n)) continue;
+    total += n;
+    if (n > 0) active += 1;
+    if (!best || n > best.count) best = { key, count: n };
+  }
+
+  if (!active) {
+    return el('div.panel', {},
+      el('h2', {}, 'ACTIVITY — LAST 90 DAYS'),
+      el('p.empty-note', {}, 'ANSWER SOME QUESTIONS AND YOUR DAILY ACTIVITY WILL SHOW UP HERE.'),
+    );
+  }
+
+  // Columns start on Monday (as in Italy), first one on or before the window.
+  const firstMonday = new Date(start);
+  firstMonday.setDate(firstMonday.getDate() - (firstMonday.getDay() + 6) % 7);
+  const columns = [];
+  const week = new Date(firstMonday);
+  while (week <= now) {
+    const cells = [];
+    for (let dow = 0; dow < 7; dow++) {
+      const date = new Date(week);
+      date.setDate(week.getDate() + dow);
+      if (date > now) { cells.push(null); continue; }
+      const key = dayKey(date);
+      if (!inWindow(key)) { cells.push(null); continue; }
+      const count = counts[key] ?? 0;
+      cells.push({ key, count, level: heatLevel(count) });
+    }
+    columns.push({ week: new Date(week), cells });
+    week.setDate(week.getDate() + 7);
+  }
+
+  // A month label where the visible month changes. Labels are wider than one
+  // column, so a label that would sit within two columns of the next one is
+  // dropped (the later label wins: it has room to the right).
+  const wanted = [];
+  let lastMonth = -1;
+  columns.forEach((col, i) => {
+    const idx = col.cells.findIndex((c) => c !== null);
+    if (idx < 0) return;
+    const d = new Date(col.week);
+    d.setDate(d.getDate() + idx);
+    if (d.getMonth() === lastMonth) return;
+    wanted.push({ i, label: HEAT_MONTHS[d.getMonth()] });
+    lastMonth = d.getMonth();
+  });
+  const labels = new Array(columns.length).fill('');
+  for (let j = wanted.length - 1; j >= 0; j--) {
+    const nextKept = labels.findIndex((l, k) => k > wanted[j].i && l !== '');
+    if (nextKept === -1 || nextKept - wanted[j].i >= 2) labels[wanted[j].i] = wanted[j].label;
+  }
+  columns.forEach((col, i) => (col.label = labels[i]));
+
+  const grid = el('div.heat-grid', {
+    role: 'img',
+    'aria-label': `Daily activity over the last ${HEAT_DAYS} days: ${active} active days, ${total} questions answered, best day ${best.count} on ${best.key}`,
+  },
+    ...columns.map((col) =>
+      el('div.heat-col', {},
+        ...col.cells.map((cell) =>
+          cell === null
+            ? el('div.heat-cell', { className: 'heat-cell empty' })
+            : el('div.heat-cell', {
+                className: `heat-cell l${cell.level}`,
+                title: cell.count ? `${cell.count} QUESTIONS · ${cell.key}` : `NONE · ${cell.key}`,
+              }),
+        ),
+      ),
+    ),
+  );
+
+  return el('div.panel', {},
+    el('h2', {}, 'ACTIVITY — LAST 90 DAYS'),
+    el('p.stat-sub', { style: 'margin-bottom:12px' },
+      `${active} ACTIVE DAYS · ${total} QUESTIONS ANSWERED · BEST DAY ${best.count} (${best.key})`),
+    el('div.heat-months', { 'aria-hidden': 'true' },
+      ...columns.map((col) => el('span.heat-month', {}, col.label)),
+    ),
+    grid,
+    el('div.heat-legend', { 'aria-hidden': 'true' },
+      'LESS',
+      ...[0, 1, 2, 3, 4].map((l) => el('div.heat-cell', { className: `heat-cell l${l}` })),
+      'MORE',
+    ),
+  );
+}
+
 /** A hard-edged progress ring: brutalism, so square caps and no gradient. */
 function progressRing(percent, { size = 104, stroke = 12, label = '' } = {}) {
   const pct = Math.max(0, Math.min(100, percent));
@@ -314,7 +438,8 @@ export function renderDashboard(root) {
   const week = weekStrip(state.progress.activeDays);
   const daysThisWeek = week.filter((d) => d.studied).length;
   const answeredToday = state.progress.dailyAnswers?.[dayKey(new Date())] ?? 0;
-  const goalPct = Math.min(100, Math.round((answeredToday / DAILY_GOAL) * 100));
+  const goal = dailyGoal();
+  const goalPct = Math.min(100, Math.round((answeredToday / goal) * 100));
 
   clear(root,
     el('h1', {}, profile.name ? `CIAO, ${profile.name}` : 'CIAO'),
@@ -345,10 +470,10 @@ export function renderDashboard(root) {
             progressRing(goalPct, { label: "Today's goal" }),
             el('div.ring-centre', {},
               el('span.ring-pct', {}, String(answeredToday)),
-              el('span.ring-sub', {}, `/ ${DAILY_GOAL}`),
+              el('span.ring-sub', {}, `/ ${goal}`),
             ),
           ),
-          el('span.week-label', {}, answeredToday >= DAILY_GOAL ? 'GOAL DONE' : 'TODAY'),
+          el('span.week-label', {}, answeredToday >= goal ? 'GOAL DONE' : 'TODAY'),
         ),
       ),
     ),
@@ -461,6 +586,8 @@ export function renderStats(root) {
         el('p.stat-sub', {}, `${stats.examsPassed}/${stats.examsTaken} PASSED · STREAK ${stats.streak}`),
       ),
     ),
+
+    activityHeatmap(),
 
     weak.length
       ? el('div.panel', {},
@@ -1767,6 +1894,15 @@ export function renderSettings(root) {
     el('option', { value: 'off', textContent: 'OFF' }),
   );
   soundSelect.value = profile.sound === false ? 'off' : 'on';
+  const storedGoal = Number.isInteger(profile.dailyGoal) ? profile.dailyGoal : DAILY_GOAL_DEFAULT;
+  // A value outside the presets (set on an older build) still shows up.
+  const goalOptions = DAILY_GOAL_CHOICES.includes(storedGoal)
+    ? DAILY_GOAL_CHOICES
+    : [...DAILY_GOAL_CHOICES, storedGoal].sort((a, b) => a - b);
+  const goalSelect = el('select', { id: 's-goal' },
+    ...goalOptions.map((n) => el('option', { value: String(n), textContent: `${n} QUESTIONS` })),
+  );
+  goalSelect.value = String(storedGoal);
 
   clear(root,
     el('h1', {}, 'SETTINGS'),
@@ -1776,6 +1912,7 @@ export function renderSettings(root) {
       el('div.field', {}, el('label', { htmlFor: 's-lang' }, 'TRANSLATION LANGUAGE'), langSelect),
       el('div.field', {}, el('label', { htmlFor: 's-theme' }, 'THEME'), themeSelect),
       el('div.field', {}, el('label', { htmlFor: 's-sound' }, 'ANSWER SOUNDS'), soundSelect),
+      el('div.field', {}, el('label', { htmlFor: 's-goal' }, 'DAILY GOAL'), goalSelect),
       el('div.actions', {},
         el('button.btn.btn-primary', {
           onclick: async (e) => {
@@ -1785,6 +1922,7 @@ export function renderSettings(root) {
                 language: langSelect.value,
                 theme: themeSelect.value,
                 sound: soundSelect.value === 'on',
+                dailyGoal: Number(goalSelect.value),
               });
               state.progress.profile = updated;
               applyTheme();
@@ -1818,6 +1956,7 @@ export function renderSettings(root) {
         }, 'IMPORT FROM FILE'),
       ),
     ),
+    el('div.panel', { id: 'install-panel' }),
     el('div.panel', {},
       el('h2', {}, 'OFFLINE MODE'),
       el('p.lede', {}, 'DOWNLOAD THE WHOLE QUESTION BANK, THEORY AND SIGN IMAGES (~8 MB) TO STUDY WITHOUT INTERNET.'),
@@ -1858,5 +1997,6 @@ export function renderSettings(root) {
     ),
   );
 
+  renderInstallPanel(root.querySelector('#install-panel'));
   showStorageStatus(root);
 }

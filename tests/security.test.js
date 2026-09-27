@@ -212,3 +212,41 @@ test('the layout reserves the iPhone safe areas', () => {
   assert.match(css, /main\s*{\s*padding:[^}]*env\(safe-area-inset-bottom/);
   assert.match(css, /min-height:\s*100dvh/);
 });
+
+/* ---------------- install-as-app readiness ---------------- */
+
+test('iOS home-screen install markers are present', () => {
+  const html = fs.readFileSync(path.join(ROOT, 'public', 'index.html'), 'utf8');
+  // Without these Safari shows a gray placeholder icon and keeps the
+  // browser chrome when the user taps "Add to Home Screen".
+  assert.match(html, /<meta name="apple-mobile-web-app-capable" content="yes">/);
+  assert.match(html, /<meta name="mobile-web-app-capable" content="yes">/);
+  assert.match(html, /<meta name="apple-mobile-web-app-title" content="Patente Pro">/);
+  assert.match(html, /<link rel="apple-touch-icon"/);
+});
+
+test('the service worker shell covers every frontend script', () => {
+  // A new public/js module that is not in the SHELL list fails offline:
+  // the first cold start on a phone without network would crash boot.
+  const sw = fs.readFileSync(path.join(ROOT, 'public', 'sw.js'), 'utf8');
+  const shell = sw.slice(sw.indexOf('const SHELL'), sw.indexOf('];', sw.indexOf('const SHELL')));
+  const publicJs = fs
+    .readdirSync(path.join(ROOT, 'public', 'js'), { recursive: true })
+    .filter((name) => String(name).endsWith('.js'));
+  for (const name of publicJs) {
+    assert.ok(
+      shell.includes(`'/js/${name}'`),
+      `public/js/${name} is missing from the service worker SHELL list`,
+    );
+  }
+});
+
+test('settings offers an install path on phones', () => {
+  const views = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views.js'), 'utf8');
+  assert.match(views, /renderInstallPanel/);
+  const install = fs.readFileSync(path.join(ROOT, 'public', 'js', 'install.js'), 'utf8');
+  // The real install mechanism on Android is beforeinstallprompt.
+  assert.match(install, /beforeinstallprompt/);
+  // iOS has no prompt API: written instructions are the only path.
+  assert.match(install, /ADD TO HOME SCREEN/);
+});

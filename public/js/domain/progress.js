@@ -1,6 +1,12 @@
 export const LANGUAGES = ['en', 'ru', 'zh'];
 export const THEMES = ['light', 'dark'];
 
+// The daily-goal ring on the dashboard: how many questions a day the user
+// aims for. A constant per user is stored in the profile, not in code.
+export const DAILY_GOAL_MIN = 5;
+export const DAILY_GOAL_MAX = 200;
+export const DAILY_GOAL_DEFAULT = 20;
+
 const NAME_MAX = 40;
 const ID_MAX = 120;
 // Import caps: generous enough for a full bank, small enough to bound work.
@@ -17,7 +23,7 @@ export const SCHEMA_VERSION = 1;
 
 export const EMPTY_PROGRESS = {
   version: SCHEMA_VERSION,
-  profile: { name: '', language: 'en', theme: 'light', sound: true, onboarded: false },
+  profile: { name: '', language: 'en', theme: 'light', sound: true, dailyGoal: DAILY_GOAL_DEFAULT, onboarded: false },
   answers: {}, // questionId -> { correct, wrong, lastCorrect, last }
   mistakes: [], // questionIds currently answered wrong
   exams: [], // { date, total, errors, passed }
@@ -44,6 +50,13 @@ function assertObject(body) {
 function assertId(value, field) {
   if (typeof value !== 'string' || !value || value.length > ID_MAX) {
     throw new ValidationError(`"${field}" must be a non-empty string`);
+  }
+  return value;
+}
+
+function assertDailyGoal(value, field = 'dailyGoal') {
+  if (!Number.isInteger(value) || value < DAILY_GOAL_MIN || value > DAILY_GOAL_MAX) {
+    throw new ValidationError(`"${field}" must be an integer between ${DAILY_GOAL_MIN} and ${DAILY_GOAL_MAX}`);
   }
   return value;
 }
@@ -96,6 +109,12 @@ export function migrateProgress(raw) {
     if (LANGUAGES.includes(p.language)) out.profile.language = p.language;
     if (THEMES.includes(p.theme)) out.profile.theme = p.theme;
     if (typeof p.sound === 'boolean') out.profile.sound = p.sound;
+    // A snapshot written before the goal was configurable simply gets the
+    // default; a broken value is dropped rather than trusted.
+    const goal = Math.trunc(Number(p.dailyGoal));
+    if (Number.isFinite(goal) && goal >= DAILY_GOAL_MIN && goal <= DAILY_GOAL_MAX) {
+      out.profile.dailyGoal = goal;
+    }
     if (typeof p.onboarded === 'boolean') out.profile.onboarded = p.onboarded;
   }
 
@@ -256,6 +275,9 @@ export class ProgressService {
       }
       profile.sound = body.sound;
     }
+    if (body.dailyGoal !== undefined) {
+      profile.dailyGoal = assertDailyGoal(body.dailyGoal);
+    }
     if (body.onboarded !== undefined) {
       if (typeof body.onboarded !== 'boolean') {
         throw new ValidationError('"onboarded" must be a boolean');
@@ -373,6 +395,9 @@ export class ProgressService {
           throw new ValidationError('"profile.sound" must be a boolean');
         }
         clean.profile.sound = profile.sound;
+      }
+      if (profile.dailyGoal !== undefined) {
+        clean.profile.dailyGoal = assertDailyGoal(profile.dailyGoal, 'profile.dailyGoal');
       }
       if (profile.onboarded !== undefined) {
         if (typeof profile.onboarded !== 'boolean') {

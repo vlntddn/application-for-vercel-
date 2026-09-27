@@ -32,6 +32,18 @@ test('profile sound flag defaults on and validates as boolean', async () => {
   await assert.rejects(() => service.updateProfile({ sound: 'loud' }), ValidationError);
 });
 
+test('daily goal defaults to 20 and only accepts an integer in range', async () => {
+  const { service, store } = makeService();
+  assert.equal(store.data.profile.dailyGoal, 20);
+  const profile = await service.updateProfile({ dailyGoal: 50 });
+  assert.equal(profile.dailyGoal, 50);
+  for (const bad of [4, 201, '50', 20.5, 0, null, true, {}]) {
+    await assert.rejects(() => service.updateProfile({ dailyGoal: bad }), ValidationError);
+  }
+  assert.equal((await service.updateProfile({ dailyGoal: 5 })).dailyGoal, 5, 'the lower bound is allowed');
+  assert.equal((await service.updateProfile({ dailyGoal: 200 })).dailyGoal, 200, 'the upper bound is allowed');
+});
+
 test('answers update counters, mistakes and stats', async () => {
   const { service } = makeService();
   let snap = await service.recordAnswers({ answers: [{ id: 'sorpasso-q-1', correct: false }] });
@@ -268,6 +280,7 @@ test('a snapshot from an older version opens with everything intact', async () =
   assert.equal(m.profile.name, 'Valentin');
   assert.equal(m.profile.language, 'ru');
   assert.equal(m.profile.sound, true, 'a field added later gets its default');
+  assert.equal(m.profile.dailyGoal, 20, 'the goal field added later gets its default');
   assert.equal(Object.keys(m.answers).length, 2);
   assert.deepEqual(m.mistakes, ['sorpasso-q-2']);
   assert.equal(m.exams.length, 1);
@@ -314,6 +327,20 @@ test('migration repairs damage instead of discarding a history', async () => {
   for (const junk of [null, undefined, 'string', 42, []]) {
     assert.equal(migrateProgress(junk).profile.onboarded, false);
   }
+});
+
+test('daily goal migrates leniently and imports strictly', async () => {
+  const { migrateProgress } = await import('../public/js/domain/progress.js');
+  assert.equal(migrateProgress({ profile: {} }).profile.dailyGoal, 20, 'missing field gets the default');
+  assert.equal(migrateProgress({ profile: { dailyGoal: 30 } }).profile.dailyGoal, 30, 'a saved goal is kept');
+  assert.equal(migrateProgress({ profile: { dailyGoal: '30' } }).profile.dailyGoal, 30, 'a string number is repaired');
+  assert.equal(migrateProgress({ profile: { dailyGoal: 999 } }).profile.dailyGoal, 20, 'out of range falls back');
+
+  const { service } = makeService();
+  const snap = await service.importProgress({ profile: { dailyGoal: 35 } });
+  assert.equal(snap.profile.dailyGoal, 35, 'a backup goal is accepted when valid');
+  await assert.rejects(() => service.importProgress({ profile: { dailyGoal: 0 } }), ValidationError);
+  await assert.rejects(() => service.importProgress({ profile: { dailyGoal: 'a lot' } }), ValidationError);
 });
 
 test('a progress file written by an older version still loads', async () => {

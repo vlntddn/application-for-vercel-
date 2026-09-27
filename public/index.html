@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#000000">
+  <!-- iOS "Add to Home Screen": without these the icon gets a gray
+       placeholder and the page opens in Safari chrome, not as an app. -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Patente Pro">
   <title>PATENTE PRO</title>
   <link rel="stylesheet" href="/styles.css">
   <link rel="manifest" href="/manifest.webmanifest">
@@ -48,7 +54,7 @@
   <main id="view" tabindex="-1"></main>
 
   <footer class="footer">
-    <p>YOUR PROGRESS STAYS ON YOUR MACHINE — <code>storage/progress.json</code></p>
+    <p id="privacy-note">YOUR PROGRESS STAYS ON YOUR MACHINE — <code>storage/progress.json</code></p>
   </footer>
 
   <script type="module" src="/js/main.js"></script>

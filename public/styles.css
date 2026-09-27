@@ -17,6 +17,12 @@
   --shadow: 6px 6px 0 var(--ink);
   --shadow-small: 3px 3px 0 var(--ink);
   --font: "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif;
+  /* activity heat map, low to high */
+  --heat-0: #eceae3;
+  --heat-1: #ffd9c2;
+  --heat-2: #ffb380;
+  --heat-3: #ff8138;
+  --heat-4: #ff4d00;
 }
 
 [data-theme="dark"] {
@@ -24,6 +30,11 @@
   --paper: #0c0c0c;
   --surface: #1a1a1a;
   --muted: rgba(244, 241, 234, 0.62);
+  --heat-0: #262626;
+  --heat-1: #5c2c14;
+  --heat-2: #93431c;
+  --heat-3: #c25a20;
+  --heat-4: #ff4d00;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -872,6 +883,38 @@ main:focus { outline: none; }
 
 .week-day.today .week-label { color: var(--accent); }
 
+/* Activity heat map: last 90 days, weeks as columns (Monday-first, as in
+   Italy). The grid itself is decorative — the numbers live in the text
+   line above and in the aria-label, the title attributes serve hover. */
+.heat-months { display: flex; gap: 3px; margin-bottom: 4px; }
+.heat-month {
+  width: 12px;
+  overflow: visible;
+  white-space: nowrap;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.heat-grid { display: flex; gap: 3px; }
+.heat-col { display: flex; flex-direction: column; gap: 3px; }
+.heat-cell { width: 12px; height: 12px; background: var(--heat-0); }
+.heat-cell.l1 { background: var(--heat-1); }
+.heat-cell.l2 { background: var(--heat-2); }
+.heat-cell.l3 { background: var(--heat-3); }
+.heat-cell.l4 { background: var(--heat-4); }
+.heat-cell.empty { visibility: hidden; }
+.heat-legend {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 10px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
 .ring-card { display: flex; flex-direction: column; align-items: flex-start; }
 
 .ring-wrap {
@@ -912,6 +955,11 @@ main:focus { outline: none; }
 @media (max-width: 760px) {
   .week-cell { max-height: 44px; font-size: 1rem; }
   .ring-wrap, .ring { width: 92px; height: 92px; }
+}
+
+/* On a phone the 13 heat columns must fit: slightly smaller cells. */
+@media (max-width: 420px) {
+  .heat-month, .heat-cell { width: 10px; height: 10px; }
 }
 
 /* Week strip and the daily-goal ring sit side by side. */
