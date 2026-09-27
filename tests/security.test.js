@@ -267,6 +267,32 @@ test('onboarding explains the exam, the learning loop and local storage', () => 
   assert.ok(!slide3.includes('← BACK'), 'slide 3: one forward button only, no back');
 });
 
+test('the exam pre-start screen explains the format and that it is practice', () => {
+  // Phase 2.2: before the timer starts, a newcomer must be told how the real
+  // exam works AND be told, honestly, that this is a training run — not the
+  // official exam. The content lives in renderExam's first draw (before the
+  // BEGIN EXAM handler runs).
+  const views = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views.js'), 'utf8');
+  // renderExamItalian comes first in the file — match the exact signature.
+  const exam = views.slice(views.indexOf('export async function renderExam('));
+  const prestart = exam.slice(0, exam.indexOf('async function start'));
+  // Honest framing up front — this is the single most important sentence.
+  assert.match(prestart, /THIS IS PRACTICE, NOT THE OFFICIAL EXAM/i,
+    'pre-start screen must say this is a training run, not the official exam');
+  // The real exam's shape, in plain words, before the clock starts.
+  assert.match(prestart, /30 RANDOM QUESTIONS/i,
+    'must state the 30-question count');
+  assert.match(prestart, /20 MINUTES/i,
+    'must state the 20-minute limit');
+  assert.match(prestart, /AT MOST 3 ERRORS/i,
+    'must state the 3-error pass line');
+  // Navigation and translation are the two mechanics a newcomer would miss.
+  assert.match(prestart, /MOVE BACK AND FORTH BETWEEN QUESTIONS/i,
+    'must say you can move between questions');
+  assert.match(prestart, /TRANSLATE/i,
+    'must say the T / translate action reveals the user language');
+});
+
 test('the dashboard shows the next step, not raw zeros', () => {
   // Phase 2.2: a newcomer with no answers must see "what to do next" with
   // a link to practice, and a user with 1+ mock exam gets the
