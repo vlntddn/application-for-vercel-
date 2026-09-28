@@ -683,7 +683,7 @@ export function renderStats(root) {
       el('h1', { style: 'margin:0' }, 'PROGRESS & STATS'),
       el('a.btn', { href: '#/' }, '← DASHBOARD'),
     ),
-    el('p.lede', {}, 'WHERE YOU STAND AND WHAT TO STUDY NEXT.'),
+    el('p.lede', {}, 'FIND YOUR WEAKEST TOPIC AND PRACTICE IT UNTIL THE TAG READS GREEN.'),
 
     el('div.grid.grid-3', {},
       el('div.card', {},
