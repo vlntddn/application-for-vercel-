@@ -14,6 +14,9 @@ npm-зависимостями** + vanilla-JS фронтенд **без сбор
   `node --test --test-name-pattern="..."`
 - `npm run build` — статическая сборка `dist/` для Vercel (нужна только для
   хостинга, для локальной разработки — нет)
+- `scripts/verify.sh` — единый гейт перед коммитом (тесты, ноль зависимостей,
+  защищённые пути, bump `sw.js`, сохранность overlay, smoke на :3917).
+  Автономные агенты работают по `docs/OPENHANDS-ROADMAP.md`
 - `npm run fetch-images` — докачать картинки знаков (идемпотентно, нужен интернет)
 - Smoke-тест перед пушем (как в CI): `node server/index.js &`, затем `curl -sf
   http://127.0.0.1:3000/api/health` и `/`, `/api/manifest`, `/api/theory`,

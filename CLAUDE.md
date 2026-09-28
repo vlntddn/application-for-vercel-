@@ -11,6 +11,7 @@ Node.js-бэкенд **без npm-зависимостей** + vanilla-JS фро
 - `npm run dev` — с авторестартом
 - `npm test` — тесты домена (node --test, должны быть зелёными перед пушем)
 - `npm run fetch-images` — докачать картинки знаков (идемпотентный)
+- `scripts/verify.sh` — гейт перед коммитом; роадмап агентов — docs/OPENHANDS-ROADMAP.md
 
 ## Где что лежит
 - Полная архитектура с диаграммами: **docs/ARCHITECTURE.html**
