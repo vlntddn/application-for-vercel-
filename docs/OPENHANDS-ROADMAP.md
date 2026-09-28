@@ -159,7 +159,7 @@ public/js/views/settings.js   ← renderSettings
       *Проверка:* `node -e "import('./public/js/views.js')"` не падает на
       синтаксисе (ошибка про `document`/`window` — ок); verify OK.
 - [ ] **S1.3 – S1.10 Один экран за задачу**, в порядке от простого к сложному:
-      S1.3 settings [x] 2026-09-28 · S1.4 search [x] 2026-09-28 · S1.5 dictionary · S1.6 stats ·
+      S1.3 settings [x] 2026-09-28 · S1.4 search [x] 2026-09-28 · S1.5 dictionary [x] 2026-09-28 · S1.6 stats ·
       S1.7 onboarding · S1.8 dashboard · S1.9 theory · S1.10 exam.
       Для каждого: перенести функцию(и) и её **приватные** хелперы в
       `views/<экран>.js`; в `views.js` заменить на

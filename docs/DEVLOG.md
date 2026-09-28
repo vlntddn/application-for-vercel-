@@ -2,6 +2,30 @@
 
 Хронология ключевых решений. Новые записи — сверху.
 
+## 2026-09-28 — S1.5: экран Словарь вынесен в views/dictionary.js
+
+Что сделано: из `public/js/views.js` (1700 → 1636 строк) в новый
+`public/js/views/dictionary.js` (71 строка) дословно перенесён блок
+1067–1132: `renderDictionary` (приватные хелперы `termRow` и `draw`
+замыкаются на неё, внешние не нужны). Импорт в новый файл:
+`loadDictionary` из `state.js`, `el`/`clear` из `ui.js`,
+`errorBanner`/`lang` из `views/common.js`. В `views.js` —
+`export { renderDictionary } from './views/dictionary.js';`, `main.js`
+не тронут. `sw.js`: `SHELL` + `/js/views/dictionary.js`, VERSION v31 → v32.
+
+Почему: Спринт 1 — разбить views.js на модули экранов, цель ≤ 500 строк
+на файл. Dictionary — следующий по списку (S1.5): одна функция, без
+приватных констант.
+
+Как проверено: diff перенесённого блока против `git show HEAD:` — пуст
+(дословный перенос); `node --check` на `views.js`, `views/dictionary.js`,
+`sw.js` — без ошибок; `import('./public/js/views.js')` падает только на
+`window` (браузерный глобал, как и на HEAD — ожидаемо);
+`scripts/verify.sh` — VERIFY OK (84 теста, 8 endpoints). `node
+qa-new-user.mjs` не выполнен: сценарий хардкодит :3000 (порт сервера
+владельца), протокол запрещает сервер для ручной проверки на портах,
+кроме :3917 — фолбэк-проверка через verify/npm test.
+
 ## 2026-09-28 — S1.4: экран Search вынесен в views/search.js
 
 Что сделано: из `public/js/views.js` (1807 → 1700 строк) в новый
