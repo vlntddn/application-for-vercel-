@@ -2,6 +2,36 @@
 
 Хронология ключевых решений. Новые записи — сверху.
 
+## 2026-09-28 — S1.6: экран Статистика вынесен в views/stats.js
+
+Что сделано: из `public/js/views.js` (1636 → 1375 строк) в новый
+`public/js/views/stats.js` (277 строк) дословно перенесены два блока:
+1) `dayKey`, `weekStrip`, `HEAT_DAYS`/`HEAT_BANDS`/`HEAT_MONTHS`,
+`heatLevel`, `activityHeatmap` (использовались dashboard и stats);
+2) `renderStats` (секция STATISTICS). В `views.js` —
+`import { dayKey, weekStrip } from './views/stats.js'` и реэкспорт
+`export { renderStats } from './views/stats.js';`, `main.js` не тронут.
+В `stats.js` добавлены только то, чего в блоках не было: `export`
+у `dayKey`/`weekStrip`, импорты (`state`, `el`/`clear`/`titleCase`
+из `ui.js`, `categoryStats` из `views/common.js`) и локальная
+константа `EXAM_MAX_ERRORS = 3` (значением и определением
+идентична той, что осталась в `views.js` и нужна там же).
+`sw.js`: `SHELL` + `/js/views/stats.js`, VERSION v32 → v33.
+
+Почему: Спринт 1 — разбить views.js на модули экранов, цель ≤ 500 строк
+на файл. Stats — следующий по списку (S1.6); heatmap-хелперы ушли
+вместе, потому что `renderDashboard` закрывается на них и у stats.js
+не должно быть обратной зависимости на views.js.
+
+Как проверено: все строки `stats.js` (кроме импортов/`export`/константы)
+присутствуют дословно в `git show HEAD:public/js/views.js`;
+`node --check` на `views.js`, `views/stats.js`, `sw.js` — без ошибок;
+`import('./public/js/views.js')` падает только на `window` (как и на
+HEAD — ожидаемо); `scripts/verify.sh` → VERIFY OK (84 теста, 8
+endpoints 200 на :3917). `node qa-new-user.mjs` не выполнен: сценарий
+хардкодит :3000 (порт сервера владельца), протокол запрещает —
+фолбэк-проверка через `npm test` (84 pass).
+
 ## 2026-09-28 — S1.5: экран Словарь вынесен в views/dictionary.js
 
 Что сделано: из `public/js/views.js` (1700 → 1636 строк) в новый
