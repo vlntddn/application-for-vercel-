@@ -4,6 +4,9 @@ import { state, shuffle } from '../state.js';
 import { el } from '../ui.js';
 import { DAILY_GOAL_DEFAULT } from '../domain/progress.js';
 
+/** Size of one practice batch (dashboard hint, practice queue, search practice). */
+export const PRACTICE_BATCH = 20;
+
 /** The user's goal from the profile, with the default as a safety net. */
 export function dailyGoal() {
   const goal = state.progress.profile?.dailyGoal;
