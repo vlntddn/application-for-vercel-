@@ -16,6 +16,21 @@ function makeService() {
   return { store, service: new ProgressService(store) };
 }
 
+// Views may live in views.js alone or be split into views/*.js modules.
+// Concatenate everything so source-text tests work in both cases.
+function readViewsSource() {
+  const parts = [
+    fs.readFileSync(path.join(ROOT, 'public', 'js', 'views.js'), 'utf8'),
+  ];
+  const dir = path.join(ROOT, 'public', 'js', 'views');
+  if (fs.existsSync(dir)) {
+    for (const name of fs.readdirSync(dir).sort()) {
+      if (name.endsWith('.js')) parts.push(fs.readFileSync(path.join(dir, name), 'utf8'));
+    }
+  }
+  return parts.join('\n');
+}
+
 /* ---------------- no data can leave the device ---------------- */
 
 test('the frontend never references an external origin', () => {
@@ -244,7 +259,7 @@ test('the service worker shell covers every frontend script', () => {
 test('onboarding explains the exam, the learning loop and local storage', () => {
   // Phase 2.2: a first-time user must be told — in order — what the exam is,
   // how they will study here, and that nothing leaves the device.
-  const views = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views.js'), 'utf8');
+  const views = readViewsSource();
   const onboard = views.slice(views.indexOf('ONBOARDING'));
   assert.match(onboard, /30 questions, 20 minutes, at most 3 errors/,
     'slide 1 must state the exam format in plain words');
@@ -272,7 +287,7 @@ test('the exam pre-start screen explains the format and that it is practice', ()
   // exam works AND be told, honestly, that this is a training run — not the
   // official exam. The content lives in renderExam's first draw (before the
   // BEGIN EXAM handler runs).
-  const views = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views.js'), 'utf8');
+  const views = readViewsSource();
   // renderExamItalian comes first in the file — match the exact signature.
   const exam = views.slice(views.indexOf('export async function renderExam('));
   const prestart = exam.slice(0, exam.indexOf('async function start'));
@@ -297,7 +312,7 @@ test('the dashboard shows the next step, not raw zeros', () => {
   // Phase 2.2: a newcomer with no answers must see "what to do next" with
   // a link to practice, and a user with 1+ mock exam gets the
   // "until the exam" panel (weak topics / mistakes) instead of raw stats.
-  const views = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views.js'), 'utf8');
+  const views = readViewsSource();
   assert.match(views, /dashboard-next-steps/);
   assert.match(views, /dashboard-exam-readiness/);
   const dashboard = views.slice(views.indexOf('export function renderDashboard'));
@@ -309,7 +324,7 @@ test('the dashboard shows the next step, not raw zeros', () => {
 });
 
 test('settings offers an install path on phones', () => {
-  const views = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views.js'), 'utf8');
+  const views = readViewsSource();
   assert.match(views, /renderInstallPanel/);
   const install = fs.readFileSync(path.join(ROOT, 'public', 'js', 'install.js'), 'utf8');
   // The real install mechanism on Android is beforeinstallprompt.
