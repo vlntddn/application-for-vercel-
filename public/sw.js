@@ -13,7 +13,7 @@
  *   replayed when the server responds again; other mutations error.
  */
 
-const VERSION = 'v23';
+const VERSION = 'v24';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -29,6 +29,7 @@ const SHELL = [
   '/js/local-progress.js',
   '/js/install.js',
   '/js/domain/progress.js',
+  '/js/domain/translations.js',
   '/js/theory-map.js',
   '/manifest.webmanifest',
   '/credits.html',

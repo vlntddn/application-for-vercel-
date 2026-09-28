@@ -1,4 +1,5 @@
 import { api, detectMode } from './api.js';
+import { loadOverlays } from './domain/translations.js';
 
 /** Shared app state: progress snapshot plus cached static data. */
 export const state = {
@@ -39,7 +40,12 @@ export async function loadLessons() {
 
 export async function loadQuestions(slug) {
   if (!state.questionsBySlug.has(slug)) {
-    state.questionsBySlug.set(slug, await api.questions(slug));
+    // Phase 2.1: bank questions get the per-category translation overlay
+    // (data/translations/<slug>.json) merged on top; missing overlay → bank.
+    state.questionsBySlug.set(
+      slug,
+      await loadOverlays(slug, await api.questions(slug), (url) => fetch(url, { mode: 'same-origin' })),
+    );
   }
   return state.questionsBySlug.get(slug);
 }
