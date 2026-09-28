@@ -2,6 +2,29 @@
 
 Хронология ключевых решений. Новые записи — сверху.
 
+## 2026-09-28 — S1.4: экран Search вынесен в views/search.js
+
+Что сделано: из `public/js/views.js` (1807 → 1700 строк) в новый
+`public/js/views/search.js` (114 строк) дословно перенесён блок
+1507–1613: `renderSearch` + приватный хелпер `fold`. В `views.js` —
+`export { renderSearch } from './views/search.js';`, `main.js` не тронут.
+Константа `PRACTICE_BATCH` (используется `views.js` и `search.js`)
+перенесена в `views/common.js` с `export`; оба файла импортируют её
+оттуда — `search.js` не зависит от `views.js` через неё.
+`sw.js`: `SHELL` + `/js/views/search.js`, `VERSION` v30 → v31.
+
+Почему: Спринт 1 — разбить views.js на модули экранов, цель ≤ 500 строк
+на файл. Search — следующий по списку простой экран (один приватный
+хелпер).
+
+Как проверено: diff перенесённого блока против `git show HEAD:` — пуст
+(дословный перенос); `node --check` на `views.js`, `views/search.js`,
+`views/common.js`, `sw.js` — без ошибок; verify OK (84 теста, 8
+endpoints). `node qa-new-user.mjs` не выполнен: сценарий требует
+сервер на :3000 (сервер владельца), трогать запрещено — по
+разрешению задачи выполнена фолбэк-проверка `node --test` →
+84 pass / 0 fail.
+
 ## 2026-09-28 — S1.3: экран Настройки вынесен в views/settings.js
 
 Что сделано: из `public/js/views.js` (2049 → 1810 строк) в новый
