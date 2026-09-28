@@ -152,7 +152,7 @@ public/js/views/settings.js   ← renderSettings
       который склеивает `views.js` + все `public/js/views/*.js` (если папка есть),
       и заменить им 4 чтения. Код приложения не трогать.
       *Проверка:* `node --test tests/security.test.js` — зелёный; verify OK.
-- [ ] **S1.2 Вынести `common.js`.** Найти функции/константы в `views.js`, которые
+- [x] **S1.2 Вынести `common.js`.** Найти функции/константы в `views.js`, которые
       не экспортируются, но используются ≥2 экранами. Перенести их в
       `views/common.js` с `export`, в `views.js` — `import { ... } from './views/common.js'`.
       Добавить `'/js/views/common.js'` в `SHELL` в `sw.js`, поднять `VERSION`.

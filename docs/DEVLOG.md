@@ -2,6 +2,26 @@
 
 Хронология ключевых решений. Новые записи — сверху.
 
+## 2026-09-28 — S1.2: общие хелперы вынесены в views/common.js
+
+Что сделано: из `public/js/views.js` (2133 → 2049 строк) в новый
+`public/js/views/common.js` перенесены неэкспортируемые функции,
+используемые ≥2 экранами: `dailyGoal`, `errorBanner`, `lang`,
+`translationOf`, `loc`, `queueOrder`, `pickQueue`, `masteryOf`,
+`categoryStats`, `translationArea` — все с `export`. В `views.js` —
+`import { ... } from './views/common.js'`. `sw.js`: `'/js/views/common.js'`
+добавлен в SHELL, VERSION v28 → v29. Перенос чистый: тела функций
+скопированы дословно, поведение не менялось.
+
+Почему: Спринт 1, шаг 2 — подготовка к разбиению views.js на модули
+экранов: общий код должен жить в одном месте, чтобы экраны импортировали
+его одинаково.
+
+Как проверено: `import('./public/js/views/common.js')` — 10 экспортов;
+`import('./public/js/views.js')` падает только на `window` (как и на HEAD —
+браузерный глобал, ожидаемо); `npm test` 84/84; `scripts/verify.sh` —
+VERIFY OK (zero deps, protected paths, sw bump, overlay, smoke 8/8).
+
 ## 2026-09-28 — S1.1: security-тесты не зависят от одного файла
 
 Что сделано: в `tests/security.test.js` добавлен хелпер `readViewsSource()` —
