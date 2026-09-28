@@ -1,5 +1,44 @@
 # Журнал разработки
 
+## 2026-09-28 — S1.9: экран Theory вынесен в views/theory.js
+
+Что сделано: из `public/js/views.js` (1081 → 635 строк) в новый
+`public/js/views/theory.js` (449 строк) дословно перенесены
+`renderTheoryList`, `renderTheoryChapter`, `renderExamItalian` и
+внутренний `showSignModal` (модалка карточки знака) вместе с их
+приватными хелперами (`close`, `draw`, `escHandler`, `keyHandler`,
+`markRead`, `startCheck`). В новый файл добавлены только импорты:
+`api` (api.js), `state`/загрузчики (state.js), `el`/`clear` (ui.js),
+`CHAPTER_CATEGORY` (theory-map.js), `translationOf`/`lang`/`loc`/
+`pickQueue`/`masteryOf`/`errorBanner` (views/common.js), и
+`renderQuizSession` — обратно из `views.js`. В `views.js` — реэкспорт
+`export { renderTheoryList, renderTheoryChapter, renderExamItalian }
+from './views/theory.js';` на строке 61 (место секции THEORY,
+`showSignModal` не реэкспортируется — используется только внутри
+theory.js). `main.js` не тронут — роуты импортируют из views.js,
+цепочка main.js → views.js → views/theory.js работает. Константы
+`EXAM_*` в блок theory не входят, дублировать не пришлось. `sw.js`:
+`SHELL` + `/js/views/theory.js`, VERSION v35 → v36.
+
+Почему: Спринт 1 — разбить views.js на модули экранов, цель ≤ 500 строк
+на файл. Theory — следующий по списку (S1.9).
+
+Как проверено: сравнение тел всех 4 перенесённых функций против
+`git show HEAD:public/js/views.js` — идентичны побайтово
+(дословный перенос); цикл модулей views.js ↔ views/theory.js
+проверен ESM-скриптом: импорт theory.js не падает (нет TDZ —
+`renderQuizSession` в views.js это hoisted function declaration,
+тот же паттерн, что в существующем цикле views.js ↔ views/search.js),
+функции живые и едины по ссылке через реэкспорт;
+`node --check` на `views.js`, `views/theory.js`, `sw.js` — без
+ошибок; `scripts/verify.sh` → VERIFY OK (84 теста, 8 endpoints 200
+на :3917, check «public/ changed and sw.js VERSION bumped» — PASS).
+`node qa-new-user.mjs` не выполнен: сценарий хардкодит :3000 (порт
+сервера владельца), протокол запрещает — фолбэк-проверка через
+`npm test` (84 pass).
+
+---
+
 Хронология ключевых решений. Новые записи — сверху.
 
 ## 2026-09-28 — S1.8: экран Dashboard вынесен в views/dashboard.js

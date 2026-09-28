@@ -160,7 +160,7 @@ public/js/views/settings.js   ← renderSettings
       синтаксисе (ошибка про `document`/`window` — ок); verify OK.
 - [ ] **S1.3 – S1.10 Один экран за задачу**, в порядке от простого к сложному:
       S1.3 settings [x] 2026-09-28 · S1.4 search [x] 2026-09-28 · S1.5 dictionary [x] 2026-09-28 · S1.6 stats [x] 2026-09-28 ·
-      S1.7 onboarding [x] 2026-09-28 · S1.8 dashboard [x] 2026-09-28 · S1.9 theory · S1.10 exam.
+      S1.7 onboarding [x] 2026-09-28 · S1.8 dashboard [x] 2026-09-28 · S1.9 theory [x] 2026-09-28 · S1.10 exam.
       Для каждого: перенести функцию(и) и её **приватные** хелперы в
       `views/<экран>.js`; в `views.js` заменить на
       `export { renderX } from './views/<экран>.js';`; добавить файл в `SHELL`;
