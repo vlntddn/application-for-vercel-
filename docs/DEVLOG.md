@@ -2,6 +2,55 @@
 
 Хронология ключевых решений. Новые записи — сверху.
 
+## 2026-09-28 — S1.7: экран Onboarding вынесен в views/onboarding.js
+
+Что сделано: из `public/js/views.js` (1375 → 1276 строк) в новый
+`public/js/views/onboarding.js` (104 строки) дословно перенесён блок
+121–221: константа `ONBOARDING_STEPS` и `renderOnboarding` (3 слайда
+первого запуска: экзамен → методика → приватность, сбор имени и языка).
+Приватных хелперов у экрана нет — только замыкания внутри `draw()`.
+В `views.js` — реэкспорт `export { renderOnboarding } from
+'./views/onboarding.js';`, `main.js` не тронут. В новый файл добавлены
+только импорты: `api` (api.js), `state` (state.js), `el`/`clear`
+(ui.js), `errorBanner` (views/common.js). `sw.js`: `SHELL` +
+`/js/views/onboarding.js`, VERSION v33 → v34.
+
+Почему: Спринт 1 — разбить views.js на модули экранов, цель ≤ 500 строк
+на файл. Onboarding — следующий по списку (S1.7), простой автономный
+экран без зависимости от quiz-машины.
+
+Как проверено: diff перенесённого блока против `git show HEAD:` — пуст
+(дословный перенос); `node --check` на `views.js`, `onboarding.js`,
+`sw.js` — без ошибок; `import('./public/js/views.js')` падает только на
+`window` (как и на HEAD — ожидаемо); `scripts/verify.sh` → VERIFY OK
+(84 теста, 8 endpoints 200 на :3917). `node qa-new-user.mjs` не
+выполнен: сценарий хардкодит :3000 (порт сервера владельца), протокол
+запрещает — фолбэк-проверка через `npm test` (84 pass).
+## 2026-09-28 — S1.7: экран Onboarding вынесен в views/onboarding.js
+
+Что сделано: из `public/js/views.js` (1375 → 1276 строк) в новый
+`public/js/views/onboarding.js` (104 строки) дословно перенесён блок
+121–221: константа `ONBOARDING_STEPS` и `renderOnboarding` (3 слайда
+первого запуска: экзамен → методика → приватность, сбор имени и языка).
+Приватных хелперов у экрана нет — только замыкания внутри `draw()`.
+В `views.js` — реэкспорт `export { renderOnboarding } from
+'./views/onboarding.js';`, `main.js` не тронут. В новый файл добавлены
+только импорты: `api` (api.js), `state` (state.js), `el`/`clear`
+(ui.js), `errorBanner` (views/common.js). `sw.js`: `SHELL` +
+`/js/views/onboarding.js`, VERSION v33 → v34.
+
+Почему: Спринт 1 — разбить views.js на модули экранов, цель ≤ 500 строк
+на файл. Onboarding — следующий по списку (S1.7), простой автономный
+экран без зависимости от quiz-машины.
+
+Как проверено: diff перенесённого блока против `git show HEAD:` — пуст
+(дословный перенос); `node --check` на `views.js`, `onboarding.js`,
+`sw.js` — без ошибок; `import('./public/js/views.js')` падает только на
+`window` (как и на HEAD — ожидаемо); `scripts/verify.sh` → VERIFY OK
+(84 теста, 8 endpoints 200 на :3917). `node qa-new-user.mjs` не
+выполнен: сценарий хардкодит :3000 (порт сервера владельца), протокол
+запрещает — фолбэк-проверка через `npm test` (84 pass).
+
 ## 2026-09-28 — S1.6: экран Статистика вынесен в views/stats.js
 
 Что сделано: из `public/js/views.js` (1636 → 1375 строк) в новый
