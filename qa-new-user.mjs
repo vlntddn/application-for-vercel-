@@ -48,6 +48,7 @@ fs.mkdirSync(SHOTS, { recursive: true });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const log = (s) => console.log(`[qa] ${s}`);
 
+const jsErrors = []; // Runtime.exceptionThrown за весь прогон
 let passes = 0;
 let failures = 0;
 function check(cond, name) {
@@ -113,6 +114,9 @@ async function connectTab() {
       const { resolve, reject } = pending.get(m.id);
       pending.delete(m.id);
       m.error ? reject(new Error(`CDP: ${m.error.message}`)) : resolve(m.result);
+    } else if (m.method === 'Runtime.exceptionThrown') {
+      const d = m.params.exceptionDetails;
+      jsErrors.push(d.exception?.description?.split('\n')[0] || d.text);
     }
   };
   await send('Page.enable');
@@ -248,6 +252,21 @@ async function main() {
   const s = summarize(after);
   log(`профиль после: ${JSON.stringify(s)}`);
   check(after.profile && after.profile.name === 'QA' && after.profile.onboarded === true, 'persist: имя и onboarded сохранились');
+
+  /* ---- 7. Каждый экран открывается без JS-ошибок ----
+   * Ловит потерянные при рефакторинге импорты/константы (S1.3 потерял
+   * DAILY_GOAL_CHOICES — Settings не открывался, а тесты молчали). */
+  const ROUTES = ['#/', '#/theory', '#/practice', '#/exam', '#/mistakes', '#/review',
+    '#/search', '#/dictionary', '#/stats', '#/settings', '#/exam-italian'];
+  for (const r of ROUTES) {
+    const before = jsErrors.length;
+    await evaluate(`location.hash = ${JSON.stringify(r)}`);
+    await sleep(900);
+    const len = await evaluate(`(document.getElementById('view')?.innerText || '').trim().length`);
+    const errs = jsErrors.slice(before);
+    check(errs.length === 0 && len > 40, `экран ${r} открывается без JS-ошибок${errs.length ? ': ' + errs.join('; ') : ''}`);
+  }
+  check(jsErrors.length === 0, `за весь прогон ни одной JS-ошибки${jsErrors.length ? ': ' + jsErrors.join('; ') : ''}`);
   const answerCount = Object.keys(after.answers || {}).length;
   check(answerCount >= 5, `persist: ответы сохранены (${answerCount})`);
   check((after.theoryRead || []).includes('ch1'), 'persist: ч1 помечена прочитанной');

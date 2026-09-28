@@ -7,6 +7,9 @@ import { renderInstallPanel } from '../install.js';
 import { DAILY_GOAL_DEFAULT } from '../domain/progress.js';
 import { errorBanner } from './common.js';
 
+// Options of the daily-goal selector (lost in the S1.3 move — restored).
+const DAILY_GOAL_CHOICES = [5, 10, 15, 20, 25, 30, 40, 50, 75, 100];
+
 /* ============================== SETTINGS ============================== */
 
 /**
