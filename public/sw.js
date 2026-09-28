@@ -13,7 +13,7 @@
  *   replayed when the server responds again; other mutations error.
  */
 
-const VERSION = 'v35';
+const VERSION = 'v36';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -29,6 +29,7 @@ const SHELL = [
   '/js/views/stats.js',
   '/js/views/onboarding.js',
   '/js/views/dashboard.js',
+  '/js/views/theory.js',
   '/js/state.js',
   '/js/api.js',
   '/js/ui.js',
