@@ -2,6 +2,27 @@
 
 Хронология ключевых решений. Новые записи — сверху.
 
+## 2026-09-28 — S1.3: экран Настройки вынесен в views/settings.js
+
+Что сделано: из `public/js/views.js` (2049 → 1810 строк) в новый
+`public/js/views/settings.js` (248 строк) дословно перенесён блок
+1811–2049: `renderSettings` + приватные хелперы `showStorageStatus`,
+`exportProgress`, `importProgressFile`, `downloadForOffline` и
+`DAILY_GOAL_CHOICES`. В `views.js` — `export { renderSettings } from
+'./views/settings.js';`, `main.js` не тронут. Из `views.js` удалены
+теперь лишние импорты (`requestPersistentStorage`, `renderInstallPanel`,
+`DAILY_GOAL_DEFAULT`) и константа `DAILY_GOAL_CHOICES`. `sw.js`:
+`SHELL` + `/js/views/settings.js`, `VERSION` v29 → v30.
+
+Почему: Спринт 1 — разбить views.js на модули экранов, цель ≤ 500 строк
+на файл. Настройки — самый простой экран (нет привязки к quiz-машинам).
+
+Как проверено: diff перенесённого блока против `git show HEAD:` — пуст
+(перенос дословный); `npm test` 84/84; QA-сценарий нового пользователя
+прогнан headless Chrome на :3917 с временным STORAGE_DIR — 25/25 PASS
+(скриншоты в /tmp); `scripts/verify.sh` — VERIFY OK (6/6 гейтов).
+Временный сервер остановлен, порт 3917 свободен.
+
 ## 2026-09-28 — S1.2: общие хелперы вынесены в views/common.js
 
 Что сделано: из `public/js/views.js` (2133 → 2049 строк) в новый
