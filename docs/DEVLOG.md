@@ -1,6 +1,10 @@
 # Журнал разработки
 
 Хронология ключевых решений. Новые записи — сверху.
+## 2026-09-28 — RU вычитка: distanza-di-sicurezza (50/135 вопросов)
+- этот запуск: +20 вопросов, 20 правок
+- термины по словарю: distanza di sicurezza=безопасная дистанция, spazio di frenatura=тормозной путь, aderenza=сцепление с дорогой, pneumatici=шины, limite di velocità=ограничение скорости, corsia=полоса движения; убраны кальки (commisurata=определять с учётом, è una distanza fissa=величина непостоянная)
+
 ## 2026-09-28 — RU вычитка: distanza-di-sicurezza (30/135 вопросов)
 - этот запуск: +20 вопросов, 20 правок
 - термины по словарю: distanza di sicurezza=безопасная дистанция, veicolo=транспортное средство, carreggiata=проезжая часть, pneumatici=шины, freno/t=тормоза, carico=груз; убраны кальки (commisurare=подбирать, sgombraneve=снегоуборочная машина, spanditrice di sale=машина для распыления соли)
