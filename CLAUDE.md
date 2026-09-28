@@ -21,7 +21,10 @@ Node.js-бэкенд **без npm-зависимостей** + vanilla-JS фро
   место мутаций); работает и на сервере, и в браузере. `server/progress.js` — реэкспорт
 - Два режима: с локальным сервером (progress.json) и standalone на хостинге
   (localStorage в браузере); режим задаёт метка pp-mode в index.html
-- `public/js/views.js` — все экраны; `public/js/main.js` — hash-роутер
+- `public/js/views.js` — фасад: только реэкспорт экранов из `public/js/views/`
+  (common, onboarding, dashboard, stats, theory, dictionary, practice, search,
+  exam, settings, review); `public/js/main.js` — hash-роутер (импорты из
+  `views.js` не менять)
 - `public/styles.css` — дизайн-токены в CSS-переменных (`--ink`, `--accent`…)
 - `data/` — банк вопросов (read-only); `storage/` — прогресс пользователя (не в git)
 - `bin/` — десктопный лончер; `install.sh` / `install.ps1` — установщики

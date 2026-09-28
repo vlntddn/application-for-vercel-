@@ -26,6 +26,20 @@ CI (`.github/workflows/ci.yml`): тесты на **Node 18 и 22** + прове�
 зависимостей» + smoke-тест сервера. Не используйте API, недоступные в Node 18,
 и не добавляйте зависимости — CI упадёт.
 
+## Где что лежит
+
+- `public/js/main.js` — hash-роутер; `public/js/views.js` — фасад: только
+  реэкспорт экранов из `public/js/views/` (по файлу на экран: common, onboarding,
+  dashboard, stats, theory, dictionary, practice, search, exam, settings, review).
+  Импортите экраны из `views.js`, новый экран — свой файл в `views/` + реэкспорт.
+- `public/js/domain/progress.js` — доменная логика и валидация (и браузер, и сервер).
+- `public/js/ui.js` — хелпер `el()`; `public/js/state.js` — состояние/загрузка данных;
+  `public/js/api.js` — режимы работы (сервер/standalone).
+- `docs/ARCHITECTURE.html` — полная архитектура; `docs/TODO.md` — роадмап;
+  `docs/DEVLOG.md` — журнал; `docs/OPENHANDS-ROADMAP.md` — протокол автономных агентов.
+- `data/` — read-only контент; `storage/` — прогресс (не в git); `legacy/` — не трогать.
+- `bin/` — десктопный лончер; `install.sh` / `install.ps1` — установщики.
+
 ## Жёсткие ограничения (их проверяет CI или тесты)
 
 - **Ноль npm-зависимостей до Фазы 3.** Первая допустимая — драйвер SQLite

@@ -178,10 +178,11 @@ public/js/views/settings.js   ← renderSettings
       Перенести в `views/review.js` тем же способом (реэкспорт из `views.js`,
       файл в `SHELL`, `VERSION` +1). [x] 2026-09-28. *Проверка:* `views.js` ≤ 40 строк;
       verify OK (теперь включает qa-new-user автоматически).
-- [ ] **S1.12 Итог.** `wc -l public/js/views.js public/js/views/*.js` →
+- [x] **S1.12 Итог.** `wc -l public/js/views.js public/js/views/*.js` →
       ни один файл > 500 строк. Обновить разделы «Где что лежит» в `CLAUDE.md`
       и `AGENTS.md` (одинаково в обоих), и `docs/ARCHITECTURE.html` (только
-      список файлов фронтенда).
+      список файлов фронтенда). [x] 2026-09-28 — max файл 449 строк (theory.js);
+      секции обновлены, ARCHITECTURE.html без пофайловых списков — нечего менять.
 
 **Критерий спринта:** 84+ тестов зелёные, QA-сценарий 25/25, `views.js` ≤ 40 строк.
 
