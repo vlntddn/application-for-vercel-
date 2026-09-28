@@ -84,5 +84,19 @@ else
   fail "smoke:$SMOKE_BAD (server log: /tmp/pp-verify-server.log)"
 fi
 
+# 7. UI changed → end-to-end new-user scenario in headless Chrome (own server on :3919).
+CHROME_BIN="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+if echo "$CHANGED" | grep -qE '^public/'; then
+  if [ -x "$CHROME_BIN" ]; then
+    if node qa-new-user.mjs >/tmp/pp-verify-qa.log 2>&1; then
+      pass "qa-new-user: $(grep -o '[0-9]* PASS, [0-9]* FAIL' /tmp/pp-verify-qa.log)"
+    else
+      fail "qa-new-user — see /tmp/pp-verify-qa.log:"; grep -E 'FAIL|ОШИБКА' /tmp/pp-verify-qa.log | head -10
+    fi
+  else
+    echo "SKIP  qa-new-user (Chrome not found)"
+  fi
+fi
+
 echo "----"
 if [ "$FAILS" -eq 0 ]; then echo "VERIFY OK"; exit 0; else echo "VERIFY FAILED ($FAILS)"; exit 1; fi

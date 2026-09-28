@@ -62,7 +62,9 @@
              Одна задача = один запуск. Задачи со значком 🔒 не брать.
 3. ПЛАН      записать в начало ответа: файлы, шаги (≤5), команда проверки.
 4. ШАГ       сделать один шаг → сразу проверить (команда из задачи).
-5. ГЕЙТ      scripts/verify.sh  → должно быть "VERIFY OK".
+5. ГЕЙТ      scripts/verify.sh  → должно быть "VERIFY OK". При правке public/ он сам
+             прогоняет qa-new-user.mjs (~1 мин). Сценарий поднимает СВОЙ сервер
+             на :3919 — никогда не запускай его с QA_URL на :3000.
 6. КОММИТ    git add <конкретные файлы>; git commit -m "<тип>: <что> (S<N>.<M>)"
 7. ДОКИ      отметить [x] задачу здесь + запись в docs/DEVLOG.md (сверху, по-русски)
              → verify → отдельный коммит "docs: ... (S<N>.<M>)".
@@ -158,7 +160,7 @@ public/js/views/settings.js   ← renderSettings
       Добавить `'/js/views/common.js'` в `SHELL` в `sw.js`, поднять `VERSION`.
       *Проверка:* `node -e "import('./public/js/views.js')"` не падает на
       синтаксисе (ошибка про `document`/`window` — ок); verify OK.
-- [ ] **S1.3 – S1.10 Один экран за задачу**, в порядке от простого к сложному:
+- [x] **S1.3 – S1.10 Один экран за задачу**, в порядке от простого к сложному:
       S1.3 settings [x] 2026-09-28 · S1.4 search [x] 2026-09-28 · S1.5 dictionary [x] 2026-09-28 · S1.6 stats [x] 2026-09-28 ·
       S1.7 onboarding [x] 2026-09-28 · S1.8 dashboard [x] 2026-09-28 · S1.9 theory [x] 2026-09-28 · S1.10 exam [x] 2026-09-28.
       S1.11 practice [x] 2026-09-28 (вынесен целиком в `views/practice.js`, без разбиения).
@@ -166,12 +168,16 @@ public/js/views/settings.js   ← renderSettings
       `views/<экран>.js`; в `views.js` заменить на
       `export { renderX } from './views/<экран>.js';`; добавить файл в `SHELL`;
       `VERSION` +1.
-      *Проверка:* verify OK **и** `node qa-new-user.mjs` → 25 PASS
-      (нужен Chrome; если его нет в песочнице — записать это в DEVLOG,
-      а проверку выполнить через `node --test`).
+      *Проверка:* verify OK (при правке `public/` verify сам гоняет
+      `qa-new-user.mjs` на своём сервере :3919 — 25 PASS обязательны).
 - [x] **S1.11 practice** (самый большой, ~550 строк) — разрешено разбить на
       S1.11a `introQueue` + `renderQuizSession`, S1.11b остальное. [x] 2026-09-28 —
       вынесен целиком в `views/practice.js`, разбиение не понадобилось.
+- [ ] **S1.11c Ошибки и быстрое повторение.** Пропущено в исходном плане:
+      `renderMistakes` и `renderQuickReview` всё ещё в `views.js` (187 строк).
+      Перенести в `views/review.js` тем же способом (реэкспорт из `views.js`,
+      файл в `SHELL`, `VERSION` +1). *Проверка:* `views.js` ≤ 40 строк;
+      verify OK (теперь включает qa-new-user автоматически).
 - [ ] **S1.12 Итог.** `wc -l public/js/views.js public/js/views/*.js` →
       ни один файл > 500 строк. Обновить разделы «Где что лежит» в `CLAUDE.md`
       и `AGENTS.md` (одинаково в обоих), и `docs/ARCHITECTURE.html` (только

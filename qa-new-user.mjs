@@ -11,7 +11,11 @@
  * а в конце — что ничего не потеряно. Вывод — PASS/FAIL по пунктам и
  * итоговый счёт; код выхода 1 при любом FAIL.
  *
- * Запуск: node qa-new-user.mjs   (сервер должен быть на :3000)
+ * Запуск: node qa-new-user.mjs
+ *   По умолчанию поднимает СВОЙ сервер на :3919 со временным STORAGE_DIR —
+ *   чужой прогресс (сервер владельца на :3000) не трогается.
+ *   QA_URL=http://127.0.0.1:3000 node qa-new-user.mjs — прогон по уже
+ *   запущенному серверу (ВНИМАНИЕ: сбросит его прогресс через DELETE).
  */
 import { spawn } from 'node:child_process';
 import fs from 'node:fs';
@@ -19,9 +23,25 @@ import os from 'node:os';
 import path from 'node:path';
 
 const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
-const APP = 'http://127.0.0.1:3000';
 const DEV = 'http://127.0.0.1:9333';
 const TEMP = fs.mkdtempSync(path.join(os.tmpdir(), 'pp-qa-'));
+const QA_PORT = process.env.QA_PORT || '3919';
+const APP = process.env.QA_URL || `http://127.0.0.1:${QA_PORT}`;
+// Свой сервер со своим хранилищем, если не задан QA_URL.
+let ownServer = null;
+if (!process.env.QA_URL) {
+  const storage = path.join(TEMP, 'storage');
+  fs.mkdirSync(storage, { recursive: true });
+  ownServer = spawn(process.execPath, ['server/index.js'], {
+    cwd: path.dirname(new URL(import.meta.url).pathname),
+    env: { ...process.env, PORT: QA_PORT, STORAGE_DIR: storage },
+    stdio: 'ignore',
+  });
+  for (let i = 0; i < 50; i++) {
+    try { if ((await fetch(`${APP}/api/health`)).ok) break; } catch { /* ещё не поднялся */ }
+    await new Promise((r) => setTimeout(r, 200));
+  }
+}
 const SHOTS = path.join(TEMP, 'shots');
 fs.mkdirSync(SHOTS, { recursive: true });
 
@@ -284,6 +304,7 @@ try {
 } finally {
   try { ws && ws.close(); } catch { /* ignore */ }
   try { chrome.kill('SIGKILL'); } catch { /* ignore */ }
+  try { ownServer && ownServer.kill('SIGTERM'); } catch { /* ignore */ }
   await sleep(400);
   try { fs.rmSync(TEMP, { recursive: true, force: true }); } catch { /* ignore */ }
   console.log(`[qa] chrome остановлен, ${TEMP} убран`);
