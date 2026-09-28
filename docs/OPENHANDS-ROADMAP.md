@@ -173,10 +173,10 @@ public/js/views/settings.js   ← renderSettings
 - [x] **S1.11 practice** (самый большой, ~550 строк) — разрешено разбить на
       S1.11a `introQueue` + `renderQuizSession`, S1.11b остальное. [x] 2026-09-28 —
       вынесен целиком в `views/practice.js`, разбиение не понадобилось.
-- [ ] **S1.11c Ошибки и быстрое повторение.** Пропущено в исходном плане:
+- [x] **S1.11c Ошибки и быстрое повторение.** Пропущено в исходном плане:
       `renderMistakes` и `renderQuickReview` всё ещё в `views.js` (187 строк).
       Перенести в `views/review.js` тем же способом (реэкспорт из `views.js`,
-      файл в `SHELL`, `VERSION` +1). *Проверка:* `views.js` ≤ 40 строк;
+      файл в `SHELL`, `VERSION` +1). [x] 2026-09-28. *Проверка:* `views.js` ≤ 40 строк;
       verify OK (теперь включает qa-new-user автоматически).
 - [ ] **S1.12 Итог.** `wc -l public/js/views.js public/js/views/*.js` →
       ни один файл > 500 строк. Обновить разделы «Где что лежит» в `CLAUDE.md`

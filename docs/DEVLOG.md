@@ -1,5 +1,34 @@
 # Журнал разработки
 
+## 2026-09-28 — S1.11c: mistakes и quick-review вынесены в views/review.js
+
+Что сделано: из `public/js/views.js` (187 → 32 строки) в новый
+`public/js/views/review.js` (155 строк) дословно перенесены
+`renderMistakes`, `renderQuickReview` и константа `REVIEW_SIZE`.
+В `views.js` — реэкспорт
+`export { renderMistakes, renderQuickReview } from './views/review.js';`.
+Импорты нового файла: `state`, `loadQuestions`, `slugForQuestionId`,
+`shuffle` (state.js), `el`, `clear` (ui.js), `errorBanner`, `pickQueue`,
+`categoryStats` (views/common.js), `renderQuizSession`
+(views/practice.js — уже экспортируется, циклов нет: practice.js review.js
+не импортирует). `main.js` не тронут: роуты `#/mistakes` и `#/review`
+импортируют из views.js. Из фасада очищены все импорты, которые остались
+без использования (`state`/`loadQuestions`/`slugForQuestionId`/`shuffle`
+из state.js, `el`/`clear` из ui.js, `errorBanner`/`pickQueue`/`categoryStats`
+из common.js) — `views.js` теперь чистый фасад из 9 реэкспортных секций.
+`sw.js`: `SHELL` + `/js/views/review.js`, VERSION v38 → v39.
+
+Почему: Спринт 1 — довести фасад до целевого размера ≤ 40 строк
+(задача S1.11c, пропущенный хвост S1.11).
+
+Как проверено: `node --check` по `views.js`, `review.js`, `sw.js`,
+`main.js` — ок. `import('./public/js/views.js')` — падает только на
+`window is not defined` (ожидание для браузерного модуля в Node).
+`scripts/verify.sh` → VERIFY OK: zero-deps, protected paths, sw.js bump,
+overlay, npm test 84, smoke 8/8, qa-new-user 25 PASS / 0 FAIL
+(скрипт сам поднял сервер на :3919, прогресс владельца не задет;
+после прогона порт :3917 свободен).
+
 ## 2026-09-28 — S1.11: экран Practice вынесен в views/practice.js
 
 Что сделано: из `public/js/views.js` (440 → 187 строк) в новый
