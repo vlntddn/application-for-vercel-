@@ -86,8 +86,10 @@
 Фронтенд (state.js при загрузке questions) налагает overlay поверх банка.
 Новые языки (it/eu/es/fr/de/ar) — в тот же overlay + селектор языка в Settings.
 
-- [ ] Скелет: overlay-механика (state.js) + тесты: overlay не ломает
+- [x] Скелет: overlay-механика (state.js) + тесты: overlay не ломает
       вопросы без перевода, не меняет id/is_true, приоритет overlay > банк
+      — сделано 2026-09-28 (public/js/domain/translations.js + loadQuestions в
+      state.js; 8 новых тестов в tests/translations.test.js; VERSION v24)
 - [ ] Аудит: скрипт проверки согласованности en/ru/zh (каждый вопрос имеет
       перевод во ВСЕХ активных языках, длина 20–400 символов, не дубль
       итальянского оригинала) — в npm test, база для критериев ниже
