@@ -19,6 +19,8 @@ import { renderInstallPanel } from './install.js';
 import { playCorrect, playWrong } from './sound.js';
 import { DAILY_GOAL_DEFAULT } from './domain/progress.js';
 
+import { dailyGoal, errorBanner, lang, translationOf, loc, queueOrder, pickQueue, masteryOf, categoryStats, translationArea } from './views/common.js';
+
 const EXAM_QUESTIONS = 30;
 const EXAM_SECONDS = 20 * 60;
 const EXAM_MAX_ERRORS = 3;
@@ -31,42 +33,6 @@ const INTRO_TEXT_LEN = 120;
 // Presets offered in Settings; the stored value itself lives in the profile
 // and is validated by the shared domain module.
 const DAILY_GOAL_CHOICES = [5, 10, 15, 20, 25, 30, 40, 50, 75, 100];
-
-/** The user's goal from the profile, with the default as a safety net. */
-function dailyGoal() {
-  const goal = state.progress.profile?.dailyGoal;
-  return Number.isInteger(goal) ? goal : DAILY_GOAL_DEFAULT;
-}
-
-function errorBanner(err) {
-  return el('p.error-banner', { role: 'alert' }, err.message.toUpperCase());
-}
-
-function lang() {
-  return state.progress.profile.language || 'en';
-}
-
-function translationOf(question) {
-  return question.translations?.[lang()]?.text || '';
-}
-
-/** Picks the user's language from a {en,ru,zh} object, falling back to EN. */
-function loc(obj) {
-  return obj?.[lang()] || obj?.en || '';
-}
-
-/** Session queue order: unseen first, then current mistakes, then the rest. */
-function queueOrder(questions, answers, count) {
-  const unseen = questions.filter((q) => !answers[q.id]);
-  const wrong = questions.filter((q) => answers[q.id] && !answers[q.id].lastCorrect);
-  const rest = questions.filter((q) => answers[q.id]?.lastCorrect);
-  return [...shuffle(unseen), ...shuffle(wrong), ...shuffle(rest)].slice(0, count);
-}
-
-/** Session queue: unseen questions first, then current mistakes, then the rest. */
-function pickQueue(questions, count) {
-  return queueOrder(questions, state.progress.answers, count);
-}
 
 /**
  * First-session queue (Phase 2.2 "guaranteed first success").
@@ -89,45 +55,6 @@ export function introQueue(questions, { answers = {}, batch = PRACTICE_BATCH, co
   const intro = easy.slice(0, count);
   const introIds = new Set(intro.map((q) => q.id));
   return [...intro, ...queueOrder(questions.filter((q) => !introIds.has(q.id)), answers, batch - count)];
-}
-
-function masteryOf(slug, count) {
-  const mastered = Object.entries(state.progress.answers)
-    .filter(([id, a]) => a.lastCorrect && id.startsWith(`${slug}-`)).length;
-  return { mastered, pct: Math.round((mastered / count) * 100) };
-}
-
-/**
- * Per-topic breakdown derived from the answer log (pure read, no
- * mutation). `attempted` = distinct questions tried; `accuracy` counts
- * every attempt (a question answered wrong then right is 50%), so it
- * measures reliability while `masteredPct` measures coverage.
- */
-function categoryStats() {
-  const answers = Object.entries(state.progress.answers);
-  return state.manifest.categories.map((cat) => {
-    let correct = 0;
-    let wrong = 0;
-    let attempted = 0;
-    let mastered = 0;
-    for (const [id, a] of answers) {
-      if (!id.startsWith(`${cat.slug}-`)) continue;
-      attempted += 1;
-      correct += a.correct;
-      wrong += a.wrong;
-      if (a.lastCorrect) mastered += 1;
-    }
-    const total = correct + wrong;
-    return {
-      slug: cat.slug,
-      name: cat.name,
-      count: cat.count,
-      attempted,
-      mastered,
-      masteredPct: Math.round((mastered / cat.count) * 100),
-      accuracy: total ? Math.round((correct / total) * 100) : null,
-    };
-  });
 }
 
 /**
@@ -1234,17 +1161,6 @@ export function renderPracticeList(root) {
       }),
     ),
   );
-}
-
-/**
- * Renders the translation area: hidden behind a button by default so the
- * user engages with the Italian original first (the exam has no translations).
- */
-function translationArea(translation, revealed, onReveal) {
-  if (!translation) return null;
-  if (revealed) return el('div.question-translation', {}, translation);
-  return el('button.btn.btn-small.btn-translate', { onclick: onReveal },
-    `TRANSLATE (${lang().toUpperCase()})`);
 }
 
 /** Practice session over a queue of questions with instant feedback. */
