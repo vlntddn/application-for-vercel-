@@ -1,0 +1,55 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Passo</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--paper); color:var(--ink); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; width:960px; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .acc { fill:var(--accent); }
+  .ink { fill:var(--ink); }
+  .warn { fill:var(--warn); }
+  .ok { fill:var(--ok); }
+  .bar { fill:var(--ink); }
+  .shadow { fill:var(--ink); }
+  .words { position:absolute; left:var(--space-6); right:var(--space-6); bottom:var(--space-6); max-width:440px; }
+  .name { margin:0; font-size:112px; line-height:.9; font-weight:900; letter-spacing:-.03em; color:var(--ink); }
+  .tag { margin:var(--space-2) 0 0 4px; font-size:14px; line-height:20px; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      accent 192×224 (the brand slab, largest) · ink 160×176 bled off the top · warn 160×80 (the signal yellow) · ok 48×48 once, sitting on the warn block (it only ever means "correct") — about 60% of the 480×288 art box
+  arrangement one tall accent slab with satellites: an ink block hung from the top edge, a warn block under it, a strip of bars bled off the right edge; accent, warn and ok bottoms share y=256, space-4 gutters between slab, blocks and bars
+  pattern     stripes, from "loud, bold, poster type → stripes at a spacing pitch": a zebra crossing, the one shape only a road has; seven ink bars, space-4 tall at a space-8 pitch, cut off by the right edge; accent and warn each throw a shadow-md (6px) hard offset
+  scales      sides in space-4 multiples; gutters space-4; bar height space-4, pitch space-8; corners radius-none (square); shadow offset = shadow-md
+-->
+<rect class="shadow" x="22" y="38" width="192" height="224"/>
+<rect class="acc" x="16" y="32" width="192" height="224"/>
+<rect class="ink" x="224" y="-16" width="160" height="176"/>
+<rect class="shadow" x="230" y="182" width="160" height="80"/>
+<rect class="warn" x="224" y="176" width="160" height="80"/>
+<rect class="ok" x="336" y="208" width="48" height="48"/>
+<rect class="bar" x="400" y="32" width="96" height="16"/>
+<rect class="bar" x="400" y="64" width="96" height="16"/>
+<rect class="bar" x="400" y="96" width="96" height="16"/>
+<rect class="bar" x="400" y="128" width="96" height="16"/>
+<rect class="bar" x="400" y="160" width="96" height="16"/>
+<rect class="bar" x="400" y="192" width="96" height="16"/>
+<rect class="bar" x="400" y="224" width="96" height="16"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">Passo</h1>
+<p class="tag">Driving theory, cleared.</p>
+</div>
+</div>
+</body>
+</html>

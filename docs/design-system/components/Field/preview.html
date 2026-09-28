@@ -1,0 +1,16 @@
+<!-- @dsCard group="Forms" height=640 subtitle="Input, error, select, segmented control, switch" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Field — preview</title><style>body.ds{padding:24px;}</style></head>
+<body class="ds">
+<div style="display:grid;gap:24px;max-width:460px">
+ <div class="ds-field"><label class="ds-field__label" for="n">Your name</label><input class="ds-input" id="n" value="Valentin"><span class="ds-field__hint">Shown on the home screen.</span></div>
+ <div class="ds-field ds-field--error"><label class="ds-field__label" for="g">Daily goal</label><input class="ds-input" id="g" value="0" inputmode="numeric" aria-invalid="true"><span class="ds-field__error"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg> Pick a goal between 5 and 100 questions.</span></div>
+ <div class="ds-field"><label class="ds-field__label" for="l">Translate into</label><select class="ds-select" id="l"><option>English</option><option>Русский</option><option>Українська</option><option>العربية</option></select></div>
+ <div class="ds-field"><span class="ds-field__label" id="th">Theme</span><div class="ds-seg" role="radiogroup" aria-labelledby="th"><button class="ds-seg__opt" role="radio" aria-checked="false">Light</button><button class="ds-seg__opt" role="radio" aria-checked="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6"/></svg> Dark</button><button class="ds-seg__opt" role="radio" aria-checked="false">Auto</button></div></div>
+ <button class="ds-switch" role="switch" aria-checked="true"><span class="ds-switch__track"><span class="ds-switch__knob"></span></span>Daily reminder: on</button>
+ <button class="ds-btn ds-btn--danger">Reset all progress</button>
+</div>
+
+</body>
+</html>

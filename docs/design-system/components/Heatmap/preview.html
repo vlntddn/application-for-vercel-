@@ -1,0 +1,14 @@
+<!-- @dsCard group="Progress" height=260 subtitle="90-day activity, five levels" -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Heatmap — preview</title><style>body.ds{padding:24px;}</style></head>
+<body class="ds">
+<div style="display:grid;gap:14px;max-width:420px"><div class="label">Activity, last 13 weeks</div><div class="ds-heat" id="heat" role="img" aria-label="Activity heat map"></div><div class="ds-heat__legend"><span>Fewer</span><i style="background:var(--heat-0);outline:1px solid var(--line-soft);outline-offset:-1px"></i><i style="background:var(--heat-1)"></i><i style="background:var(--heat-2)"></i><i style="background:var(--heat-3)"></i><i style="background:var(--heat-4)"></i><span>Goal met</span></div><div class="body-sm muted" id="active"></div></div>
+<script>
+var g=document.getElementById('heat'),seed=7,n=0,html='';
+function r(){seed=(seed*9301+49297)%233280;return seed/233280}
+for(var i=0;i<91;i++){var v=r();var l=i>78?(i%3==0?0:Math.floor(r()*5)):(v<.32?0:v<.55?1:v<.75?2:v<.9?3:4);if(l>0)n++;html+='<i class="ds-heat__c" data-l="'+l+'" title="'+['No questions','1-5 questions','6-10 questions','11-19 questions','Goal met'][l]+'"></i>';}
+g.innerHTML=html;document.getElementById('active').textContent=n+' active days in the last 13 weeks';
+</script>
+</body>
+</html>
