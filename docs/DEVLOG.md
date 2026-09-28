@@ -2,6 +2,40 @@
 
 Хронология ключевых решений. Новые записи — сверху.
 
+## 2026-09-28 — S1.8: экран Dashboard вынесен в views/dashboard.js
+
+Что сделано: из `public/js/views.js` (1276 → 1081 строк) в новый
+`public/js/views/dashboard.js` (207 строк) дословно перенесён блок
+125–321: `progressRing` (SVG-кольцо дневной цели), `nextStepsPanel`
+(подсказка новичку до первого ответа), `weakSpotsPanel` (слабые темы
+после экзамена) и `renderDashboard`. Приватные хелперы экрана —
+`progressRing`, `nextStepsPanel`, `weakSpotsPanel` — ушли вместе с ним
+и стали `export`. Константы `EXAM_QUESTIONS`/`EXAM_SECONDS`/`EXAM_MAX_ERRORS`
+остались в `views.js` (их используют ещё `renderExam`); в `dashboard.js`
+добавлены копии теми же значениями + `REVIEW_SIZE = 10` (в `views.js` она
+была объявлена на строке 982, ниже dashboard, — «поднимать» её вверх
+в views.js было нельзя, чтобы перенос оставался дословным).
+В `views.js` — реэкспорт `export { renderDashboard } from
+'./views/dashboard.js';`, удалён импорт `dayKey`/`weekStrip` (использовались
+только dashboard); `main.js` не тронут. В новый файл добавлены только
+импорты: `state` (state.js), `el`/`clear`/`fmtDate`/`titleCase` (ui.js),
+`dailyGoal`/`categoryStats`/`PRACTICE_BATCH` (views/common.js),
+`dayKey`/`weekStrip` (views/stats.js). `sw.js`: `SHELL` +
+`/js/views/dashboard.js`, VERSION v34 → v35.
+
+Почему: Спринт 1 — разбить views.js на модули экранов, цель ≤ 500 строк
+на файл. Dashboard — следующий по списку (S1.8).
+
+Как проверено: diff перенесённого блока против `git show HEAD:` —
+только добавленные `export`-ключевые слова и локальные константы
+(дословный перенос); `node --check` на `views.js`, `dashboard.js`,
+`sw.js` — без ошибок; `import('./public/js/views.js')` падает только
+на `window` (как и на HEAD — ожидаемо вне браузера);
+`scripts/verify.sh` → VERIFY OK (84 теста, 8 endpoints 200 на :3917).
+`node qa-new-user.mjs` не выполнен: сценарий хардкодит :3000 (порт
+сервера владельца), протокол запрещает — фолбэк-проверка через
+`npm test` (84 pass).
+
 ## 2026-09-28 — S1.7: экран Onboarding вынесен в views/onboarding.js
 
 Что сделано: из `public/js/views.js` (1375 → 1276 строк) в новый
