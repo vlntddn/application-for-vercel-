@@ -44,22 +44,6 @@ const PORT = process.env.UX_PORT || '3921'; // 3917 — verify.sh, 3919 — qa-n
 const APP = `http://127.0.0.1:${PORT}`;
 const VIEWPORTS = [{ w: 375, h: 812 }, { w: 1280, h: 800 }];
 
-// Порт должен быть свободен ДО запуска нашего сервера, иначе скрипт
-// будет мерить чужой сервер.
-{
-  const net = await import('node:net');
-  const portTaken = await new Promise((res) => {
-    const s = net.createServer();
-    s.once('error', () => res(true));
-    s.once('listening', () => s.close(() => res(false)));
-    s.listen(Number(PORT), '127.0.0.1');
-  });
-  if (portTaken) {
-    console.error(`[ux] ОШИБКА: порт ${PORT} уже занят другим процессом. Освободите его (или UX_PORT=...) и перезапустите.`);
-    process.exit(1);
-  }
-}
-
 const storage = path.join(TEMP, 'storage');
 fs.mkdirSync(storage, { recursive: true });
 // Проверка занятости ДО запуска своего сервера: иначе увидим свой же bind.
@@ -123,11 +107,6 @@ async function connectTab(url) {
       const { resolve, reject } = pending.get(m.id);
       pending.delete(m.id);
       m.error ? reject(new Error(`CDP: ${m.error.message}`)) : resolve(m.result);
-    }
-    // диагностика: ловим ошибки JS в консоли страницы
-    if (m.method === 'Runtime.exceptionThrown') {
-      const d = m.params.exceptionDetails;
-      console.log(`[ux] JS-ОШИБКА: ${d.exception?.description || d.text}`);
     }
   };
   await send('Page.enable');
@@ -391,8 +370,7 @@ async function completeOnboarding() {
   await settled(`!!document.getElementById('ob-name') || (document.getElementById('view')?.innerHTML||'').length > 0`);
   await settled(`!!document.getElementById('ob-name')`);
   if (!(await evaluate(`!!document.getElementById('ob-name')`))) {
-    const dump = await evaluate(`JSON.stringify({hash:location.hash, title:document.title, readyState:document.readyState, len:(document.getElementById('view')?.innerHTML||'').length, text:(document.getElementById('view')?.innerText||'').slice(0,120), hasMainFn:typeof window.appReady, bodyHtmlLen:(document.body?document.body.innerHTML.length:-1)})`).catch(e=> 'eval err '+e);
-    throw new Error('онбординг не отрисовался (ob-name отсутствует). ДИАГ: ' + dump);
+    throw new Error('онбординг не отрисовался на свежем профиле (ob-name отсутствует)');
   }
   await evaluate(`(() => { const i = document.getElementById('ob-name'); i.value='QA'; i.dispatchEvent(new Event('input',{bubbles:true})); return true; })()`);
   const click = (label) => evaluate(`(() => { const b = Array.from(document.querySelectorAll('#view button, #view a')).find((x) => (x.innerText || '').includes(${JSON.stringify(label)})); b && b.click(); return true; })()`);
