@@ -1,0 +1,176 @@
+{
+  "category": "consumi-ambiente-inquinamento",
+  "translations": {
+    "consumi-ambiente-inquinamento-consumi-carburante-5": {
+      "ru": {
+        "text": "Чтобы расходовать меньше топлива, лучше, насколько это возможно, выбирать ровные и гладкие дороги."
+      },
+      "zh": {
+        "text": "为了减少燃油消耗，最好尽可能选择平坦、顺畅的道路"
+      }
+    },
+    "consumi-ambiente-inquinamento-consumi-carburante-10": {
+      "ru": {
+        "text": "Гибридные автомобили (с двумя двигателями, бензиновым и электрическим) загрязняют окружающую среду сильнее, так как приводятся в движение двумя двигателями."
+      }
+    },
+    "consumi-ambiente-inquinamento-rumori-fastidiosi-0": {
+      "ru": {
+        "text": "Чтобы избежать раздражающих шумов во время движения, необходимо проверить исправность устройства глушителя."
+      }
+    },
+    "consumi-ambiente-inquinamento-rumori-fastidiosi-1": {
+      "en": {
+        "text": "Noise pollution increases if acoustic signaling devices (horns, air horns) are used excessively"
+      },
+      "ru": {
+        "text": "Шумовое загрязнение увеличивается при чрезмерном использовании акустических сигнальных устройств (сигналов, рожков)."
+      },
+      "zh": {
+        "text": "如果过度使用声音信号装置（喇叭、气喇叭），噪音污染会增加"
+      }
+    },
+    "consumi-ambiente-inquinamento-diminuire-rumore-0": {
+      "ru": {
+        "text": "Для снижения шума, издаваемого автомобилями, устройство глушителя должно быть в исправном состоянии и соответствовать одобренному типу."
+      }
+    },
+    "consumi-ambiente-inquinamento-diminuire-rumore-1": {
+      "ru": {
+        "text": "Для снижения шума необходимо заменить повреждённый глушитель на одобренный для данного типа транспортного средства."
+      }
+    },
+    "consumi-ambiente-inquinamento-rumore-veicoli-motore-0": {
+      "ru": {
+        "text": "Шум, производимый автомобилями, увеличивается по мере износа глушителя."
+      }
+    },
+    "consumi-ambiente-inquinamento-diminuire-rumore-4": {
+      "en": {
+        "text": "Checking brakes that make noise can increase safety and also reduce the vehicle's noise level"
+      },
+      "ru": {
+        "text": "Проверка тормозов, издающих шум, не только повышает безопасность, но и снижает уровень шума автомобиля."
+      },
+      "zh": {
+        "text": "检查产生噪音的制动器，除了提高安全性外，还可降低车辆噪音"
+      }
+    },
+    "consumi-ambiente-inquinamento-diminuire-rumore-6": {
+      "ru": {
+        "text": "Для снижения шума, издаваемого автомобилями, целесообразно просверлить отверстия в глушителе."
+      }
+    },
+    "consumi-ambiente-inquinamento-inquinamento-aria-0": {
+      "zh": {
+        "text": "为了减少车辆造成的污染，起步时不应突然加速"
+      }
+    },
+    "consumi-ambiente-inquinamento-inquinamento-aria-2": {
+      "en": {
+        "text": "To reduce air pollution caused by vehicles with internal combustion engines, the catalytic converter must be replaced when it is degraded or worn out"
+      },
+      "ru": {
+        "text": "Чтобы снизить загрязнение воздуха автомобилями с двигателями внутреннего сгорания, каталитический нейтрализатор необходимо заменять, когда он деградирует или выработал свой ресурс."
+      }
+    },
+    "consumi-ambiente-inquinamento-inquinamento-aria-7": {
+      "en": {
+        "text": "In vehicles equipped with a catalytic converter, air pollution is lower right after the engine is started, when the temperature is still low"
+      },
+      "ru": {
+        "text": "В автомобилях, оснащённых каталитическим нейтрализатором, загрязнение воздуха меньше сразу после запуска двигателя, когда температура ещё низкая."
+      },
+      "zh": {
+        "text": "在配备催化转化器的车辆中，发动机刚启动、温度仍较低时空气污染较少"
+      }
+    },
+    "consumi-ambiente-inquinamento-inquinamento-atmosferico-6": {
+      "zh": {
+        "text": "符合“欧0”排放标准的车辆，空气污染为零"
+      }
+    },
+    "consumi-ambiente-inquinamento-iniettori-fumi-scarico-1": {
+      "ru": {
+        "text": "Повышенное выделение дыма из выхлопной системы является признаком повышенного загрязнения, вызванного двигателем."
+      }
+    },
+    "consumi-ambiente-inquinamento-accorgimenti-ridurre-inquinamento-2": {
+      "en": {
+        "text": "Air pollution produced by motor vehicles can decrease if the engine is switched off during a prolonged stop"
+      }
+    },
+    "consumi-ambiente-inquinamento-accorgimenti-ridurre-inquinamento-4": {
+      "zh": {
+        "text": "驾驶排放过多污染废气的车辆可能会导致行政罚款，并会被收回行驶证"
+      }
+    },
+    "consumi-ambiente-inquinamento-sostituzione-filtri-1": {
+      "ru": {
+        "text": "Чтобы уменьшить загрязнение воздуха автомобилями с дизельными двигателями, необходимо периодически проверять топливную систему (топливный насос и форсунки)."
+      }
+    },
+    "consumi-ambiente-inquinamento-scarico-smaltimento-0": {
+      "ru": {
+        "text": "Запрещается сливать незамерзающую жидкость из контура охлаждения автомобиля в канализацию, так как она может не быть биоразлагаемой."
+      }
+    },
+    "consumi-ambiente-inquinamento-scarico-smaltimento-2": {
+      "en": {
+        "text": "If you purchase a car battery, you can hand in the spent (used) one to the retailer, who will take it back at no extra cost"
+      },
+      "ru": {
+        "text": "Если вы приобретаете автомобильный аккумулятор, вы можете без дополнительных затрат сдать продавцу изработанный (использованный) аккумулятор — он его заберёт."
+      }
+    },
+    "consumi-ambiente-inquinamento-scarico-smaltimento-3": {
+      "en": {
+        "text": "The owner of a vehicle who intends to demolish or scrap it must hand it in to a collection centre for safe disposal (authorised car dismantler)"
+      },
+      "ru": {
+        "text": "Владелец транспортного средства, который намеревается демонтировать его или сдать на металлолом, должен доставить его в уполномоченный пункт приёма (авторазборку) для безопасной утилизации."
+      },
+      "zh": {
+        "text": "为了安全处理，想要拆解或报废车辆的车主必须将其送到回收中心（授权汽车拆解厂）"
+      }
+    },
+    "consumi-ambiente-inquinamento-scarico-smaltimento-6": {
+      "en": {
+        "text": "Abandoning dangerous or toxic waste on the ground (oils, liquids, repair or replacement residues) carries no penalty"
+      },
+      "ru": {
+        "text": "Сброс опасных или токсичных отходов на землю (масла, жидкости, остатки ремонта или замены) не влечёт за собой взыскания."
+      },
+      "zh": {
+        "text": "将危险或有毒废物（油类、液体、维修或更换残留物）丢弃在地上不会受到处罚"
+      }
+    },
+    "consumi-ambiente-inquinamento-divieti-generici-1": {
+      "ru": {
+        "text": "Запрещается выбрасывать предметы и мусор из движущегося транспортного средства."
+      }
+    },
+    "consumi-ambiente-inquinamento-divieti-generici-4": {
+      "en": {
+        "text": "Practising driving is prohibited on all roads"
+      },
+      "ru": {
+        "text": "На всех дорогах запрещена практика вождения."
+      },
+      "zh": {
+        "text": "所有道路上均禁止练习驾驶"
+      }
+    },
+    "consumi-ambiente-inquinamento-divieti-generici-5": {
+      "en": {
+        "text": "Acoustic warning devices (horns, air horns) are prohibited on all roads"
+      },
+      "ru": {
+        "text": "Акустические сигнальные устройства (сигналы, рожки) запрещены на всех дорогах."
+      },
+      "zh": {
+        "text": "所有道路上均禁止使用声学警示装置（喇叭、气喇叭）"
+      }
+    }
+  }
+}
