@@ -1,5 +1,39 @@
 # Журнал разработки
 
+## 2026-09-28 — S1.10: экран Exam вынесен в views/exam.js
+
+Что сделано: из `public/js/views.js` (635 → 440 строк) в новый
+`public/js/views/exam.js` (194 строки) дословно перенесены
+`renderExam` и её внутренний `runExam`. Вместе с функциями в заголовок
+нового файла перенесены только константы экрана `EXAM_QUESTIONS = 30`,
+`EXAM_SECONDS = 20 * 60`, `EXAM_MAX_ERRORS = 3` — они используются
+исключительно этим экраном, в `views.js` после переноса не нужны. В
+новый файл добавлены только импорты: `loadAllQuestions`,
+`recordAnswersResilient`, `recordExamResilient`, `shuffle` (state.js);
+`el`, `clear`, `fmtTime` (ui.js); `errorBanner`, `translationOf`,
+`translationArea` (views/common.js). В `views.js` — реэкспорт
+`export { renderExam } from './views/exam.js';` на месте секции EXAM.
+В `main.js` изменения не вносились — роуты импортируют `renderExam`
+из views.js, цепочка main.js → views.js → views/exam.js работает.
+После удаления
+exam-блока из `views.js` очищены импорты, которые перестали
+использоваться: `api` (api.js), `applyTheme`, `loadTheory`,
+`loadDictionary`, `loadAllQuestions`, `recordExamResilient`
+(state.js), `fmtTime`, `fmtDate` (ui.js), `CHAPTER_CATEGORY`
+(theory-map.js). `playCorrect`/`playWrong` (sound.js) оставлены —
+ещё используются практикой (строка 161). `sw.js`:
+`SHELL` + `/js/views/exam.js`, VERSION v36 → v37.
+
+Почему: Спринт 1 — разбить views.js на модули экранов, цель ≤ 500
+строк на файл. Exam — следующий по списку (S1.10).
+
+Как проверено: `node --check` по `exam.js`, `views.js`, `sw.js` —
+ок. `node qa-new-user.mjs` (сервер на :3000 с throwaway STORAGE_DIR,
+Chrome headless) — 25 PASS, 0 FAIL (включая шаг «экзамен: таймер идёт
+20:00 → 19:58»). `scripts/verify.sh` → VERIFY OK (zero-deps,
+protected paths, sw.js bump, overlay, npm test 84, smoke 8/8).
+Сервер убит по PID, порты :3000 и :3917 свободны, temp-файлы удалены.
+
 ## 2026-09-28 — S1.9: экран Theory вынесен в views/theory.js
 
 Что сделано: из `public/js/views.js` (1081 → 635 строк) в новый
