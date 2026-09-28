@@ -146,7 +146,7 @@ public/js/views/settings.js   ← renderSettings
 ```
 `main.js` и тесты продолжают импортировать из `views.js` — реэкспорт сохраняет API.
 
-- [ ] **S1.1 Тесты перестают зависеть от одного файла.**
+- [x] **S1.1 Тесты перестают зависеть от одного файла.**
       В `tests/security.test.js` строки ~247, 275, 300, 312 читают
       `public/js/views.js` как текст. Добавить хелпер `readViewsSource()`,
       который склеивает `views.js` + все `public/js/views/*.js` (если папка есть),
