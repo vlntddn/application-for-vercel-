@@ -1,5 +1,45 @@
 # Журнал разработки
 
+## 2026-09-28 — S1.11: экран Practice вынесен в views/practice.js
+
+Что сделано: из `public/js/views.js` (440 → 187 строк) в новый
+`public/js/views/practice.js` (266 строк) дословно перенесены `introQueue`,
+`renderPracticeList`, `renderQuizSession`, `renderPracticeSession` и их
+приватные хелперы/константы практики. В `views.js` на месте секции
+PRACTICE — реэкспорт
+`export { introQueue, renderPracticeList, renderQuizSession,
+renderPracticeSession } from './views/practice.js';`.
+В `main.js` изменения не вносились — роуты импортируют из views.js,
+цепочка main.js → views.js → views/practice.js работает. После удаления
+practice-блока из `views.js` очищены импорты, которые перестали
+использоваться (`playCorrect`/`playWrong` из sound.js, `titleCase` из
+ui.js, `loadLessons`/`recordAnswersResilient` из state.js,
+`CATEGORY_CHAPTER` из theory-map.js, ряд имён из views/common.js) —
+в фасаде остались только state.js, ui.js и views/common.js. `sw.js`:
+`SHELL` + `/js/views/practice.js`, VERSION v37 → v38.
+
+При переносе ловушка (пофиксено до коммита): секция PRACTICE в views.js
+находилась ПЕРЕД секциями DASHBOARD и THEORY, и «дословный вынос»
+забрал вместе с практикой и реэкспорты `renderDashboard`/`renderTheoryList`
+— а в practice.js их относительные пути `./views/...` ломаются. Реэкспорты
+DASHBOARD/THEORY возвращены в фасад views.js, в practice.js оставлены
+только функции практики + `introQueue`. Проверка поименовано:
+`node --check` всех трёх файлов, полный набор re-exports фасад =
+оригинальный + practice.
+
+Почему: Спринт 1 — разбить views.js на модули экранов, цель ≤ 500 строк
+на файл. Practice — самый большой оставшийся экран (~550 строк); по факту
+вынесся целиком, разрешённого разбиения S1.11a/b не понадобилось.
+
+Как проверено: `node --check` — ок. `node qa-new-user.mjs` (Chrome
+headless, сервер на :3000 с throwaway STORAGE_DIR — :3000 в момент
+проверки был свободен, сервер владельца не тронут; после — сервер убит
+по PID, порты :3000 и :3917 свободны) — 25 PASS, 0 FAIL (включая
+«практика: 20 вопросов отвечены до конца сессии», «EASY START»,
+self-check 5 вопросов). `scripts/verify.sh` → VERIFY OK (zero-deps,
+protected paths, sw.js bump, overlay, npm test 84, smoke 8/8).
+В `docs/TODO.md` отдельной строки по S1.11 нет — отметили только роадмап.
+
 ## 2026-09-28 — S1.10: экран Exam вынесен в views/exam.js
 
 Что сделано: из `public/js/views.js` (635 → 440 строк) в новый

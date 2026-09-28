@@ -161,6 +161,7 @@ public/js/views/settings.js   ← renderSettings
 - [ ] **S1.3 – S1.10 Один экран за задачу**, в порядке от простого к сложному:
       S1.3 settings [x] 2026-09-28 · S1.4 search [x] 2026-09-28 · S1.5 dictionary [x] 2026-09-28 · S1.6 stats [x] 2026-09-28 ·
       S1.7 onboarding [x] 2026-09-28 · S1.8 dashboard [x] 2026-09-28 · S1.9 theory [x] 2026-09-28 · S1.10 exam [x] 2026-09-28.
+      S1.11 practice [x] 2026-09-28 (вынесен целиком в `views/practice.js`, без разбиения).
       Для каждого: перенести функцию(и) и её **приватные** хелперы в
       `views/<экран>.js`; в `views.js` заменить на
       `export { renderX } from './views/<экран>.js';`; добавить файл в `SHELL`;
@@ -168,8 +169,9 @@ public/js/views/settings.js   ← renderSettings
       *Проверка:* verify OK **и** `node qa-new-user.mjs` → 25 PASS
       (нужен Chrome; если его нет в песочнице — записать это в DEVLOG,
       а проверку выполнить через `node --test`).
-- [ ] **S1.11 practice** (самый большой, ~550 строк) — разрешено разбить на
-      S1.11a `introQueue` + `renderQuizSession`, S1.11b остальное.
+- [x] **S1.11 practice** (самый большой, ~550 строк) — разрешено разбить на
+      S1.11a `introQueue` + `renderQuizSession`, S1.11b остальное. [x] 2026-09-28 —
+      вынесен целиком в `views/practice.js`, разбиение не понадобилось.
 - [ ] **S1.12 Итог.** `wc -l public/js/views.js public/js/views/*.js` →
       ни один файл > 500 строк. Обновить разделы «Где что лежит» в `CLAUDE.md`
       и `AGENTS.md` (одинаково в обоих), и `docs/ARCHITECTURE.html` (только
