@@ -44,6 +44,15 @@ test('daily goal defaults to 20 and only accepts an integer in range', async () 
   assert.equal((await service.updateProfile({ dailyGoal: 200 })).dailyGoal, 200, 'the upper bound is allowed');
 });
 
+test('signal hints default to auto and only accept the three modes', async () => {
+  const { service, store } = makeService();
+  assert.equal(store.data.profile.signalHints, 'auto');
+  const profile = await service.updateProfile({ signalHints: 'off' });
+  assert.equal(profile.signalHints, 'off');
+  await assert.rejects(() => service.updateProfile({ signalHints: 'sometimes' }), ValidationError);
+  await assert.rejects(() => service.updateProfile({ signalHints: null }), ValidationError);
+});
+
 test('answers update counters, mistakes and stats', async () => {
   const { service } = makeService();
   let snap = await service.recordAnswers({ answers: [{ id: 'sorpasso-q-1', correct: false }] });
@@ -285,6 +294,7 @@ test('a snapshot from an older version opens with everything intact', async () =
   assert.equal(m.profile.language, 'ru');
   assert.equal(m.profile.sound, true, 'a field added later gets its default');
   assert.equal(m.profile.dailyGoal, 20, 'the goal field added later gets its default');
+  assert.equal(m.profile.signalHints, 'auto', 'the hints field added later gets its default');
   assert.equal(Object.keys(m.answers).length, 2);
   assert.deepEqual(m.mistakes, ['sorpasso-q-2']);
   assert.equal(m.exams.length, 1);
@@ -339,12 +349,17 @@ test('daily goal migrates leniently and imports strictly', async () => {
   assert.equal(migrateProgress({ profile: { dailyGoal: 30 } }).profile.dailyGoal, 30, 'a saved goal is kept');
   assert.equal(migrateProgress({ profile: { dailyGoal: '30' } }).profile.dailyGoal, 30, 'a string number is repaired');
   assert.equal(migrateProgress({ profile: { dailyGoal: 999 } }).profile.dailyGoal, 20, 'out of range falls back');
+  assert.equal(migrateProgress({ profile: {} }).profile.signalHints, 'auto', 'missing hints default');
+  assert.equal(migrateProgress({ profile: { signalHints: 'off' } }).profile.signalHints, 'off', 'a saved mode is kept');
+  assert.equal(migrateProgress({ profile: { signalHints: 'sometimes' } }).profile.signalHints, 'auto', 'an unknown mode falls back');
 
   const { service } = makeService();
   const snap = await service.importProgress({ profile: { dailyGoal: 35 } });
   assert.equal(snap.profile.dailyGoal, 35, 'a backup goal is accepted when valid');
   await assert.rejects(() => service.importProgress({ profile: { dailyGoal: 0 } }), ValidationError);
   await assert.rejects(() => service.importProgress({ profile: { dailyGoal: 'a lot' } }), ValidationError);
+  assert.equal((await service.importProgress({ profile: { signalHints: 'on' } })).profile.signalHints, 'on');
+  await assert.rejects(() => service.importProgress({ profile: { signalHints: 'always' } }), ValidationError);
 });
 
 test('a progress file written by an older version still loads', async () => {

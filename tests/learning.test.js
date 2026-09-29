@@ -14,6 +14,9 @@ import {
   hasSignalWord,
   signalQueue,
   signalSpans,
+  attemptedCount,
+  signalHintsEnabled,
+  SIGNAL_HINTS_AUTO_LIMIT,
 } from '../public/js/domain/learning.js';
 
 const manifest = JSON.parse(
@@ -245,4 +248,34 @@ test('signalSpans: does not match substrings inside other words', () => {
 test('signalSpans: empty text or no words yields one plain segment', () => {
   assert.deepEqual(signalSpans('', ['solo']), [{ text: '', mark: false }]);
   assert.deepEqual(signalSpans('Mai qui', []), [{ text: 'Mai qui', mark: false }]);
+});
+
+test('attemptedCount: sums correct and wrong across all answer records', () => {
+  assert.equal(attemptedCount({}), 0);
+  assert.equal(attemptedCount(null), 0);
+  const answers = {
+    a: { correct: 2, wrong: 1 },
+    b: { correct: 0, wrong: 3 },
+    broken: 'junk',
+  };
+  assert.equal(attemptedCount(answers), 6);
+});
+
+test('signalHintsEnabled: on/off win over the auto threshold', () => {
+  assert.equal(signalHintsEnabled({ signalHints: 'on' }, {}), true);
+  assert.equal(signalHintsEnabled({ signalHints: 'off' }, { a: { correct: 500, wrong: 0 } }), false);
+});
+
+test('signalHintsEnabled: auto is on below the limit and off at or above it', () => {
+  const under = {};
+  for (let i = 0; i < SIGNAL_HINTS_AUTO_LIMIT - 1; i++) under[`q${i}`] = { correct: 1, wrong: 0 };
+  const at = { ...under, qLast: { correct: 1, wrong: 0 } };
+  assert.equal(signalHintsEnabled({ signalHints: 'auto' }, under), true, '99 answers: still on');
+  assert.equal(signalHintsEnabled({ signalHints: 'auto' }, at), false, '100 answers: switched off');
+});
+
+test('signalHintsEnabled: missing or legacy value behaves as auto', () => {
+  assert.equal(signalHintsEnabled({}, {}), true, 'missing field defaults to auto');
+  assert.equal(signalHintsEnabled({ signalHints: 'always' }, {}), true, 'unknown value falls back to auto');
+  assert.equal(signalHintsEnabled(null, { a: { correct: SIGNAL_HINTS_AUTO_LIMIT, wrong: 0 } }), false);
 });
