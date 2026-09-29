@@ -402,25 +402,24 @@ export async function renderTheoryChapter(root, id, opts = {}) {
  * takeaway. `bankStats` comes from data/lessons.json (built by
  * scripts/build-insights.mjs); entries without it render plain.
  */
-function absoluteWordData(w) {
-  const { questions, falseRatio, bank, firstTrue, takeaway } = w.bankStats;
+function absoluteWordData(w, bankStat) {
+  const { questions, falseRatio, firstTrue, takeaway } = w.bankStats;
   const nodes = [];
-  if (questions && firstTrue) {
-    const falseCount = Math.round(falseRatio * questions);
+  if (questions) {
     const revealed = falseRatio >= 0.5;
-    nodes.push(el('p.word-stat', {},
-      `IN THE BANK: ${falseCount} OF ${questions} ARE ${revealed ? 'FALSO' : 'TRUE'} · BANK ${bank}`,
-    ));
-    nodes.push(el('details.word-true', {},
-      el('summary', {}, 'SHOW A TRUE ONE'),
-      el('p.word-true-q', {}, `«${firstTrue.text_it}»`),
-      el('span.tag.ok', {}, 'VERO'),
-    ));
-  } else if (questions) {
     const falseCount = Math.round(falseRatio * questions);
+    const wordKey = revealed ? 'falso' : 'vero';
     nodes.push(el('p.word-stat', {},
-      `IN THE BANK: ${falseCount} OF ${questions} ARE FALSO · BANK ${bank}`,
+      loc(bankStat.template).replace('{f}', String(falseCount))
+        .replace('{n}', String(questions)).replace('{word}', loc(bankStat[wordKey])),
     ));
+    if (firstTrue) {
+      nodes.push(el('details.word-true', {},
+        el('summary', {}, loc(bankStat.showTrue)),
+        el('p.word-true-q', {}, `«${firstTrue.text_it}»`),
+        el('span.tag.ok', {}, 'VERO'),
+      ));
+    }
   }
   if (takeaway) nodes.push(el('p.word-takeaway', {}, loc(takeaway)));
   return nodes;
@@ -459,7 +458,7 @@ export async function renderExamItalian(root) {
               el('strong.word-it', {}, w.it),
               el('span.word-gloss', {}, loc(w.gloss)),
             );
-            if (w.bankStats) card.append(...absoluteWordData(w));
+            if (w.bankStats && guide.bankStat) card.append(...absoluteWordData(w, guide.bankStat));
             return card;
           }),
         ),
