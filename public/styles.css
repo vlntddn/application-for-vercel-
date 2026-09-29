@@ -1064,10 +1064,12 @@ kbd {
   display: block;
   text-decoration: none;
   color: var(--ink);
-  border-left: 10px solid var(--warn);
+  border-left: 10px solid var(--ok);
+  background: var(--ok-soft);
 }
 
-.exam-italian-banner:hover { background: var(--warn); color: #000; }
+.exam-italian-banner:hover { background: var(--ok); color: #fff; }
+.exam-italian-banner:hover .stat-sub { color: #e8f7f9; }
 
 .section-explain { line-height: 1.55; font-weight: 500; margin-bottom: 16px; }
 

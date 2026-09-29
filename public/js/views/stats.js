@@ -2,7 +2,8 @@
 // and the PROGRESS & STATS view. Extracted from views.js (Sprint 1, S1.6) —
 // pure code move, no behavior change.
 import { state } from '../state.js';
-import { el, clear, titleCase } from '../ui.js';
+import { el, clear } from '../ui.js';
+import { topicLabel } from '../topics.js';
 import { categoryStats } from './common.js';
 
 const EXAM_MAX_ERRORS = 3;
@@ -225,7 +226,7 @@ export function renderStats(root) {
           ...weak.map((c) =>
             el('div.row', {},
               el('div', { style: 'flex:1' },
-                el('strong', {}, titleCase(c.name)),
+                el('strong', {}, topicLabel(c)),
                 el('p.stat-sub', {}, `Mastered ${c.masteredPct}% · ${c.attempted}/${c.count} tried`),
               ),
               accTag(c.accuracy),
@@ -263,7 +264,7 @@ export function renderStats(root) {
       ...ranked.map((c) =>
         el('div.row', {},
           el('div', { style: 'flex:1' },
-            el('strong', {}, titleCase(c.name)),
+            el('strong', {}, topicLabel(c)),
             el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${c.masteredPct}%` })),
           ),
           el('span.stat-sub', { style: 'min-width:110px;text-align:right' },

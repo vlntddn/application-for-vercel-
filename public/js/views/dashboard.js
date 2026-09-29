@@ -1,5 +1,6 @@
 import { state } from '../state.js';
-import { el, clear, fmtDate, titleCase, svgIcon } from '../ui.js';
+import { el, clear, fmtDate, svgIcon } from '../ui.js';
+import { topicLabel } from '../topics.js';
 import { detectMode, MODE } from '../api.js';
 import { isInstalled } from '../install.js';
 import {
@@ -89,7 +90,7 @@ export function weakSpotsPanel() {
       ? el('div', {},
           ...weak.map((c) =>
             el('div.row', {},
-              el('span', {}, titleCase(c.name)),
+              el('span', {}, topicLabel(c)),
               el('span.tag', { className: 'tag bad' }, `${c.accuracy}%`),
             ),
           ),
@@ -98,7 +99,7 @@ export function weakSpotsPanel() {
     el('div.actions', {},
       weak.length
         ? el('a.btn.btn-primary', { href: `#/practice/${weak[0].slug}` },
-            `STRENGTHEN ${titleCase(weak[0].name).toUpperCase()}`)
+            `STRENGTHEN ${topicLabel(weak[0])}`)
         : el('a.btn.btn-primary', { href: '#/exam' }, 'ANOTHER MOCK EXAM'),
       state.progress.stats.mistakes > 0
         ? el('a.btn', { href: '#/mistakes' }, `REVIEW ${state.progress.stats.mistakes} MISTAKES`)

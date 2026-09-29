@@ -8,10 +8,11 @@ import {
   shuffle,
   recordAnswersResilient,
 } from '../state.js';
-import { el, clear, titleCase, svgIcon } from '../ui.js';
+import { el, clear, svgIcon } from '../ui.js';
 import { CATEGORY_CHAPTER } from '../theory-map.js';
 import { playCorrect, playWrong } from '../sound.js';
 import { errorBanner, translationOf, loc, pickQueue, queueOrder, masteryOf, categoryStats, translationArea, PRACTICE_BATCH } from './common.js';
+import { topicLabel, topicSub } from '../topics.js';
 
 // First-session on-ramp (Phase 2.2): a newcomer's first practice run opens
 // with the topic's easiest questions — short text, no sign image — so the
@@ -52,12 +53,17 @@ export function renderPracticeList(root) {
       el('a.btn', { href: '#/search' }, '🔍 SEARCH ALL QUESTIONS'),
     ),
     el('div.grid.grid-2', {},
-      ...state.manifest.categories.map((cat) => {
+      ...state.manifest.categories.map((cat, i) => {
         const mastered = Object.entries(answers)
           .filter(([id, a]) => a.lastCorrect && id.startsWith(`${cat.slug}-`)).length;
         const pct = Math.round((mastered / cat.count) * 100);
         return el('a.card', { href: `#/practice/${cat.slug}` },
-          el('h2', {}, titleCase(cat.name)),
+          el('div.quiz-head', {},
+            el('span.tag', {}, `TOPIC ${i + 1}`),
+            mastered === 0 ? el('span.tag', {}, 'NEW') : null,
+          ),
+          el('h2', {}, topicLabel(cat)),
+          topicSub(cat) ? el('p.stat-sub', {}, topicSub(cat)) : null,
           el('p.stat-sub', {}, `${mastered}/${cat.count} mastered (${pct}%)`),
           el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${pct}%` })),
         );
@@ -289,7 +295,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
 export async function renderPracticeSession(root, slug) {
   const cat = state.manifest.categories.find((c) => c.slug === slug);
   if (!cat) return clear(root, el('p.empty-note', {}, 'Topic not found'));
-  clear(root, el('h1', {}, titleCase(cat.name)), el('p.lede', {}, 'Loading questions...'));
+  clear(root, el('h1', {}, topicLabel(cat)), el('p.lede', {}, topicSub(cat) || 'Loading questions...'));
 
   let questions;
   try {
@@ -305,7 +311,7 @@ export async function renderPracticeSession(root, slug) {
   const queue = intro ?? pickQueue(questions, PRACTICE_BATCH);
 
   renderQuizSession(root, queue, {
-    title: titleCase(cat.name),
+    title: topicLabel(cat),
     backHash: '#/practice',
     easyStart: intro !== null,
     onFinish: (correct, total) => {
