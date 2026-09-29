@@ -384,7 +384,7 @@ S2.14–S2.15 (перенесены в конец Спринта L) → Спри
       слова с < 20 вопросами не выводить. Детерминированно (сортировка id).
       *Проверка:* `tests/insights.test.js`: файл === вывод скрипта сейчас; solo ≥ 70%
       FALSO, salvo ≤ 35%; все id существуют. verify OK. *S*
-- [ ] **L1b «L'italiano dell'esame» на данных.** В секции абсолютных слов у
+- [x] **L1b «L'italiano dell'esame» на данных.** В секции абсолютных слов у
       каждого слова из insights — «in the bank: 3 of 4 are FALSO» (дробь на языке
       ученика) + кнопка «Show a true one» (реальный контрпример: text_it + VERO) +
       одна строка вывода (для sempre: «1 in 3 is true — read for the exception»).
