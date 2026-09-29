@@ -252,7 +252,7 @@ README компонента задачи. Эталонные стили — `doc
       (не Passo!), одна строка, квадрат-акцент, `--sm` на телефоне; второе
       слово НЕ оранжевым; подзаголовок скрыть на ≤ 480px; высота ≤ 56px.
       *Цель:* p6 = 0 FAIL.
-- [ ] **S2.5 Приватность без пути к файлу** (`components/Callout`, `ds-notice`):
+- [x] **S2.5 Приватность без пути к файлу** (`components/Callout`, `ds-notice`):
       плашка в `index.html` → «Your progress stays on this device.» без
       `storage/progress.json`, не fixed, с кнопкой «Got it» (скрытие —
       в localStorage в try/catch). Тест онбординга должен остаться зелёным.

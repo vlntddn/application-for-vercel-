@@ -1,3 +1,44 @@
+## 2026-09-29 06:05 — S2.5: Приватность без пути к файлу (плашка вместо футера)
+
+Что сделано:
+- **public/index.html**: футер `<footer class="footer"><p id="privacy-note">…
+  storage/progress.json …</p></footer>` → `<div class="ds-notice"
+  id="privacy-notice">`: SVG-иконка (info-circle, stroke=currentColor),
+  текст «Your progress stays on this device.» (без пути к файлу) и кнопка
+  «Got it» (#privacy-notice-ok). Вёрстка — в потоке документа, НЕ fixed.
+- **public/styles.css**: новый блок `.ds-notice` (flex, иконка + текст +
+  кнопка с margin-left:auto, 2px-граница ink на surface-sunken, как Callout
+  из design-system) + `.ds-notice__btn` (min-height 40px, hover —
+  surface-sunken, focus-visible — 3px var(--focus)); @760px — сузены
+  отступы. Старые .footer-стили не тронуты (другие экраны их не используют,
+  но удаление — лишний риск).
+- **public/js/main.js**: IIFE `dismissPrivacyNoticeIfStored` в самом верху
+  модуля: восстанавливает скрытие (localStorage `pp-privacy-notice=1`)
+  до первого render'а (плашка не мигает) и вешает click на «Got it»
+  (remove + setItem в try/catch — приватный режим). Работает и в серверном,
+  и в офлайн-режиме (один индекс = одна плашка).
+- **public/sw.js**: VERSION v45 → v46 (public/ менялся).
+
+Почему: п.4 UX-аудита (qa-ux.mjs, «вредный текст») краснел — футер
+дословно показывал путь storage/progress.json пользователю. Формулировка
+«Your progress stays on this device.» — та же мысль, без пути к файлу;
+кнопка «Got it» даёт постоянный dismiss (localStorage).
+
+Важные решения:
+- Инлайн-`<script>` для восстановления скрытия НЕ использован: CSP
+  `script-src 'self'` (server/index.js + верcel.json) запрещает inline —
+  тест security.test.js:109 провалился бы. Логика — в main.js.
+- Старый тег «PROGRESS STAYS ON YOUR MACHINE» в шапке удалять НЕ пришлось:
+  его уже заменил wordmark S2.4.
+
+Проверка:
+- `scripts/verify.sh` → VERIFY OK: zero deps, protected paths, sw bump,
+  overlay, npm test 84 passed, smoke 8/8 200, qa-new-user 37 PASS 0 FAIL.
+- grep по public/*.js и index.html: видимого «storage/progress.json» нет
+  (осталось только в комментарии api.js — не рендерится).
+
+---
+
 ## 2026-09-29 05:05 — S2.4: Шапка + Wordmark (компонент design-system «Passo»)
 
 Что сделано:
