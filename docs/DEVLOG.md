@@ -1,3 +1,26 @@
+## 2026-09-29 13:55 — S2.9: Панель после ответа (components/Feedback)
+
+Что сделано (код — cd2aea7):
+- **public/js/views/practice.js**: `buildFeedbackPanel(q)` — вердикт с иконкой
+  (svgIcon check/cross из S2.8), при ошибке строка «Right answer: Vero/Falso»,
+  ниже — тот же контент, что был в блоке WHY? (`whyContents`, факты главы из
+  lesson, новых объяснений нет; асинхронно, сессийный кеш `lessonsPromise`),
+  кнопка NEXT → / FINISH (последний вопрос) сразу в фокусе, Enter — дальше
+  (keyHandler). `role="status"`. Кэш панели `feedbackPanel ??=` — строится
+  один раз на вопрос, сбрасывается в `next()`. Старый expandable WHY? /
+  why-box удалён.
+  Найденный и починенный баг: функция возвращала кнопку NEXT вместо панели —
+  панель не монтировалась в DOM (ловил qa-new-user, таймаут «feedback 1»).
+- **public/styles.css**: новый блок `.ds-feedback` (+ `--ok`/`--bad`, `__head`,
+  `__answer`, `__actions`, `.why-slot`) вместо старых `.feedback`/
+  `.feedback.ok`/`.feedback.bad`; анимации переназваны.
+- **public/js/views/theory.js**: мини-квик — классы `ds-feedback` /
+  `ds-feedback--ok` / `ds-feedback--bad`.
+- **qa-new-user.mjs**: селектор `#view .feedback` → `#view .ds-feedback`.
+- **public/sw.js**: v55 → v56 (публичные файлы менялись).
+
+Проверка: `scripts/verify.sh` → VERIFY OK (npm test 92 PASS, smoke 8/8,
+qa-new-user 37 PASS / 0 FAIL — включая прогон практики с новой панелью).
 ## 2026-09-29 13:20 — S2.8a4: Callout iPhone/iPad без установки на Home Screen
 
 Что сделано (код — 2d92429, 7ad6c8b):
