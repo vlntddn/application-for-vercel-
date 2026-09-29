@@ -274,8 +274,8 @@ README компонента задачи. Эталонные стили — `doc
 - [x] **S2.8z Закрыть S2.8 документально:** код VERO/FALSO уже в коммите
       6460fbd (запуск оборвался до записи). Только: [x] S2.8 здесь + запись в
       DEVLOG. Код не трогать. (закрыт 2026-09-29, docs-коммит этого же дня)
-- [ ] **S2.8a Сохранность прогресса — объяснить пользователю** (ПРИОРИТЕТ
-      владельца 2026-09-29: «чтобы пользователь не столкнулся с проблемами из-за
+- [x] **S2.8a1 Блок «Your progress» в Settings** (ПРИОРИТЕТ владельца
+      2026-09-29: «чтобы пользователь не столкнулся с проблемами из-за
       незнания»). Факты (не выдумывать сверх них): прогресс хранится ТОЛЬКО в
       этом браузере на этом устройстве (localStorage, standalone) или в
       progress.json (серверный режим); обновление сайта его НЕ стирает;
@@ -284,27 +284,28 @@ README компонента задачи. Эталонные стили — `doc
       ~7 дней без визитов; в другом браузере/устройстве его нет — переносится
       файлом экспорта. Тексты — по Content fundamentals (sentence case, «you»,
       без восклицаний), компоненты Callout/`ds-notice`/Button.
-      a) **Settings → блок «Your progress»** первым после профиля: статус
-         (существующий showStorageStatus, но обычным регистром, иконка + слово,
-         не цвет), список «What erases it» (4 пункта выше, коротко), кнопки
-         Export backup / Import backup крупно, «Last backup: <дата> / never».
-         Дату последнего экспорта хранить в localStorage `pp-last-backup`
-         (чтение/запись в try/catch; это не прогресс — домен не трогать).
-      b) **Плашка приватности** («Your progress stays on this device») —
-         добавить ссылку «How it's kept» → `#/settings` к блоку из (a).
-      c) **Напоминание о бэкапе на главной:** если ответов ≥ 50 и бэкапа не было
-         14+ дней (или никогда) — Callout «Save a backup copy — your progress
-         lives only in this browser» + кнопка Export, «Not now» скрывает на 7 дней.
-         Условие — чистая функция `shouldSuggestBackup(stats, lastBackupAt,
-         dismissedAt, now)` в `public/js/views/common.js` + тест (5 случаев).
-      d) **iPhone/iPad без установки** (`navigator.standalone === false` и iOS в
-         userAgent, только standalone-режим сайта): на главной один раз в
-         неделю Callout-alert «On iPhone, Safari may erase your progress after
-         a week away. Add Passo to your Home Screen» + ссылка на существующую
-         инструкцию установки в Settings.
-      Можно делать a → b → c → d отдельными запусками (S2.8a1…a4).
+      Блок — первым после профиля: статус (существующий showStorageStatus,
+      но обычным регистром, иконка + слово, не цвет), список «What erases it»
+      (4 пункта выше, коротко), кнопки Export backup / Import backup крупно,
+      «Last backup: <дата> / never». Дату последнего экспорта хранить в
+      localStorage `pp-last-backup` (чтение/запись в try/catch; это не
+      прогресс — домен не трогать). Выполнено 2026-09-29 (коммит 4b02324).
+- [x] **S2.8a2 Плашка приватности:** «Your progress stays on this device» —
+      ссылка «How it's kept» → `#/settings` к блоку из (a1). Выполнено
+      2026-09-29 вместе с S2.8a1 (коммит 4b02324).
+- [ ] **S2.8a3 Напоминание о бэкапе на главной:** если ответов ≥ 50 и бэкапа не
+      было 14+ дней (или никогда) — Callout «Save a backup copy — your progress
+      lives only in this browser» + кнопка Export, «Not now» скрывает на 7 дней.
+      Условие — чистая функция `shouldSuggestBackup(stats, lastBackupAt,
+      dismissedAt, now)` в `public/js/views/common.js` + тест (5 случаев).
       *Проверка:* verify OK; qa-ux не хуже; тест shouldSuggestBackup;
       qa-new-user зелёный (он проходит онбординг и настройки).
+- [ ] **S2.8a4 iPhone/iPad без установки** (`navigator.standalone === false` и
+      iOS в userAgent, только standalone-режим сайта): на главной один раз в
+      неделю Callout-alert «On iPhone, Safari may erase your progress after
+      a week away. Add Passo to your Home Screen» + ссылка на существующую
+      инструкцию установки в Settings. *Проверка:* verify OK; qa-ux не хуже;
+      qa-new-user зелёный.
 - [ ] **S2.9 Панель после ответа** (`components/Feedback`): вердикт с иконкой,
       при ошибке — «Right answer: Vero/Falso», ниже — ТОТ ЖЕ контент, что сейчас
       в блоке WHY? (новых объяснений не писать), кнопка Next в фокусе, Enter —

@@ -1,3 +1,37 @@
+## 2026-09-29 10:45 — S2.8a1 + S2.8a2: Блок «Your progress» в Settings и ссылка «How it's kept»
+
+Что сделано (код — 4b02324):
+- **public/js/views/settings.js**: новый блок «YOUR PROGRESS» — первым
+  после профиля. Статус `storageStatusLine()` (иконка + слово:
+  «Saved in this browser» / «Saved on the server», обычный регистр,
+  цвет не несёт смысла), список «What erases it» (4 пункта: очистка
+  данных сайта/истории, инкогнито, Safari на iPhone/iPad без установки
+  на «Домой» ~7 дней, другой браузер/устройство), кнопки Export backup
+  / Import backup, строка «Last backup: <дата> / never» — дата
+  последнего экспорта в localStorage `pp-last-backup` (try/catch,
+  домен не трогается). Старая панель BACKUP — одна строка-ссылка на
+  новый блок.
+- **public/index.html**: в плашке «Your progress stays on this device»
+  ссылка «How it's kept» → `#/settings`.
+- **public/styles.css**: `.row .ic` (иконка + слово в статусе),
+  `.progress-erases` (dl/dt/dd список).
+- **public/sw.js**: VERSION v52 → v53.
+- **tests/security.test.js**: тест S2.8a — блок на месте и после
+  профиля, 4 пункта + `pp-last-backup` + кнопки, ссылка в плашке.
+
+Почему: приоритет владельца 2026-09-29 — пользователь не должен
+столкнуться с потерей прогресса из-за незнания, где он хранится.
+Тексты — только факты из описания задачи, по Content fundamentals
+(sentence case, «you», без восклицаний).
+
+Как проверено: `scripts/verify.sh` → VERIFY OK (npm test 88 passed,
+smoke 8/8, qa-new-user 37 PASS); qa-ux: 173 PASS / 3 FAIL — те же 3
+не в «settings» (dashboard next-steps, review-кнопки), до правок было
+172/4 — не хуже; `node --check settings.js` OK.
+
+Осталось по S2.8a: S2.8a3 (напоминание о бэкапе на главной,
+`shouldSuggestBackup` + тест), S2.8a4 (callout iPhone/iPad).
+
 ## 2026-09-29 09:45 — S2.8 (+S2.8z): Ответы VERO/FALSO — нейтральные до ответа, ok/bad/reveal после
 
 Что сделано (код — 4658a58):
