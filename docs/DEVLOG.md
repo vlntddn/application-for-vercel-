@@ -1,3 +1,42 @@
+## 2026-09-29 05:05 — S2.4: Шапка + Wordmark (компонент design-system «Passo»)
+
+Что сделано:
+- **public/index.html**: brand в .masthead → wordmark: `.brand__name`
+  «Patente Pro» + акцентная квадратная точка `.brand__dot` (aria-hidden) +
+  теглайн `.brand__tag` «Italian theory master». \<title\> → «Patente Pro»
+  (sentence case, S2.3-паттерн). credits.html/privacy.html не тронуты
+  (protected).
+- **public/styles.css**:
+  - .masthead: padding 16→12px, align-items flex-start (теглайн не тянет
+    высоту у навигации).
+  - .brand: колонка gap 4px; .brand__name: 900 32px/1 var(--font-sans),
+    uppercase, letter-spacing -0.02em, цвет var(--ink) (НЕ accent —
+    контраст 2.9:1, правило ds-tokens); .brand__dot: 0.3em×0.3em,
+    background var(--accent), border 0.07em solid var(--ink);
+    .brand__tag: 600 12px/16px var(--font-mono), uppercase, var(--ink-muted).
+  - @760px: .masthead justify-center, padding 12px 16px; .brand__name
+    22px (wordmark --sm из design-system).
+  - @480px: .brand__tag display:none (роадмап: подзаголовок скрыть на ≤480px).
+- **public/sw.js**: VERSION v43 → v45 (public/ менялся в двух коммитах).
+- **public/js/views/settings.js:220** ('PATENTE PRO') — НЕ тронуто: это
+  отдельная текстовая строка экрана настроек, не brand-компонент шапки
+  (задача S2.4 = шапка + Wordmark; регистр текстов — зона S2.3).
+
+Почему: п.6 UX-аудита (шапка ≤ 64px @375) краснел на 11/22 — старая
+шапка 16px padding + 1.6rem brand + small-подпись. Wordmark по
+docs/design-system/components/Wordmark (README + bundle.css): имя в ink,
+второе слово НЕ оранжевым, квадрат-акцент после последнего символа.
+
+Проверка:
+- scripts/verify.sh → VERIFY OK (84 теста, 8 smoke, qa-new-user 37/0).
+- node scripts/qa-ux.mjs → **p6 (header ≤ 64px @375) = 0/22 FAIL**
+  (было 11/22); итог 146 PASS / 30 FAIL (было 135/41) — без отката.
+- Замер headless Chrome: @375 шапка = 49px (имя 22px, теглайн скрыт),
+  @1280 = 87px с видимым теглайном (p6 меряет только @375; высота
+  десктоп-шапки при реорганации навигации — зона S2.7).
+- Остальные FAIL (p2 touch targets, p4 «storage/» text, p7 next-steps) —
+  чужие задачи S2.5/S2.6, не затронуты.
+
 ## 2026-09-29 04:10 — S2.3b: типографика — sentence case на оставшихся экранах
 
 Что сделано:

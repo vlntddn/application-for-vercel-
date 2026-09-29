@@ -248,7 +248,7 @@ README компонента задачи. Эталонные стили — `doc
       case-insensitive (`/i` / `.toLowerCase()`). SW v42→v43.
       *Проверка:* verify.sh VERIFY OK (84 теста, 8 smoke, qa-new-user 37/0);
       qa-ux p5 = 0/22 FAIL (без отката).
-- [ ] **S2.4 Шапка + Wordmark** (`components/Wordmark`): имя **Patente Pro**
+- [x] **S2.4 Шапка + Wordmark** (`components/Wordmark`): имя **Patente Pro**
       (не Passo!), одна строка, квадрат-акцент, `--sm` на телефоне; второе
       слово НЕ оранжевым; подзаголовок скрыть на ≤ 480px; высота ≤ 56px.
       *Цель:* p6 = 0 FAIL.
