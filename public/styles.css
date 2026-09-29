@@ -360,9 +360,7 @@ a.card:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
 /* primary hover — остаётся accent, только подъём */
 .btn-primary:hover { background: var(--accent); }
 .btn-big { font-size: 1rem; padding: 16px 32px; }
-.btn-true { background: var(--ok); color: #fff; }
-.btn-false { background: var(--bad); color: #fff; }
-.btn-true:hover, .btn-false:hover { background: var(--ink); color: var(--paper); }
+/* S2.8: answer buttons now use .ds-answer (design system). They stay neutral at rest (no colour hint); the old solid ok/bad fills were intentionally removed. The .btn-true/.btn-false classes are kept only as stable QA/test selectors. */
 
 .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
 
@@ -448,7 +446,60 @@ input:focus-visible, select:focus-visible, .nav a:focus-visible, a.card:focus-vi
 }
 
 .answers { display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap; }
-.answers .btn { flex: 1; min-width: 140px; font-size: 1.1rem; padding: 18px; text-align: center; }
+.ds-answers { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: 24px; }
+.ds-answer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 72px;
+  padding: 0 16px;
+  border: var(--border-3) solid var(--ink);
+  border-radius: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font: 900 24px/28px var(--font-sans);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, background-color 0.08s ease;
+}
+.ds-answer svg.ic { width: 28px; height: 28px; stroke-width: 3; }
+.ds-answer:hover { background: var(--surface-sunken); }
+.ds-answer:active { transform: translate(3px, 3px); box-shadow: none; }
+.ds-answer:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.ds-answer__state { display: none; font: 800 12px/16px var(--font-sans); letter-spacing: 0.7px; }
+.ds-answer--ok,
+.ds-answer--bad,
+.ds-answer--reveal { flex-direction: column; gap: 2px; pointer-events: none; box-shadow: none; }
+.ds-answer--ok { background: var(--ok-soft); border-color: var(--ok); }
+.ds-answer--ok svg.ic,
+.ds-answer--ok .ds-answer__state { color: var(--ok); }
+.ds-answer--bad { background: var(--bad-soft); border-color: var(--bad); }
+.ds-answer--bad svg.ic,
+.ds-answer--bad .ds-answer__state { color: var(--bad); }
+.ds-answer--bad::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 14px;
+  background: repeating-linear-gradient(135deg, var(--bad) 0 2px, transparent 2px 7px);
+  opacity: 1;
+}
+.ds-answer--reveal { border-style: dashed; border-color: var(--ok); background: var(--surface); }
+.ds-answer--reveal svg.ic,
+.ds-answer--reveal .ds-answer__state { color: var(--ok); }
+.ds-answer--ok .ds-answer__state,
+.ds-answer--bad .ds-answer__state,
+.ds-answer--reveal .ds-answer__state { display: block; }
+/* exam: chosen answer locks with a neutral "picked" state — no ok/bad, so colour never hints the answer */
+.ds-answer--picked { background: var(--surface-sunken); box-shadow: none; }
+.ds-answer--picked:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 
 .feedback {
   margin-top: 20px;
@@ -671,8 +722,8 @@ kbd {
   h1 { font-size: 1.6rem; }
 
   /* Big thumb targets for answering */
-  .answers { gap: 10px; }
-  .answers .btn { min-width: 120px; padding: 20px 10px; font-size: 1.15rem; }
+  .ds-answers { gap: var(--space-3); }
+  .ds-answer { min-height: 64px; font: 900 20px/24px var(--font-sans); }
 
   .quiz-head { gap: 8px; }
   .quiz-head .btn { padding: 8px 12px; }

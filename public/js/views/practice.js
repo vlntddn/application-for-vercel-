@@ -8,7 +8,7 @@ import {
   shuffle,
   recordAnswersResilient,
 } from '../state.js';
-import { el, clear, titleCase } from '../ui.js';
+import { el, clear, titleCase, svgIcon } from '../ui.js';
 import { CATEGORY_CHAPTER } from '../theory-map.js';
 import { playCorrect, playWrong } from '../sound.js';
 import { errorBanner, translationOf, loc, pickQueue, queueOrder, masteryOf, categoryStats, translationArea, PRACTICE_BATCH } from './common.js';
@@ -219,9 +219,17 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
               el('p.kbd-hint', {}, el('kbd', {}, 'ENTER'), ' NEXT · ', el('kbd', {}, 'T'), ' TRANSLATE'),
             )
           : el('div', {},
-              el('div.answers', {},
-                el('button.btn.btn-true', { onclick: () => answer(true) }, 'VERO'),
-                el('button.btn.btn-false', { onclick: () => answer(false) }, 'FALSO'),
+              el('div.ds-answers', {},
+                el('button', {
+                  type: 'button',
+                  className: 'ds-answer btn-true',
+                  onclick: () => answer(true),
+                }, svgIcon('check'), 'VERO'),
+                el('button', {
+                  type: 'button',
+                  className: 'ds-answer btn-false',
+                  onclick: () => answer(false),
+                }, svgIcon('cross'), 'FALSO'),
               ),
               el('p.kbd-hint', {},
                 el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ', el('kbd', {}, 'T'), ' TRANSLATE'),

@@ -1,5 +1,5 @@
 import { loadAllQuestions, recordAnswersResilient, recordExamResilient, shuffle } from '../state.js';
-import { el, clear, fmtTime } from '../ui.js';
+import { el, clear, fmtTime, svgIcon } from '../ui.js';
 import { errorBanner, translationOf, translationArea } from './common.js';
 
 const EXAM_QUESTIONS = 30;
@@ -160,15 +160,19 @@ function runExam(root, questions) {
         q.image_url ? el('img.question-img', { src: q.image_url, alt: 'Road sign / situation', onerror: (e) => e.target.remove() }) : null,
         el('p.question-text', {}, q.text_it),
         translationArea(translationOf(q), revealed, () => { revealed = true; draw(); }),
-        el('div.answers', {},
-          el('button.btn.btn-true', {
-            style: chosen[index] === true ? 'outline:4px solid var(--ink)' : '',
+        el('div.ds-answers', {},
+          el('button', {
+            type: 'button',
+            className: `ds-answer btn-true${chosen[index] === true ? ' ds-answer--picked' : ''}`,
+            'aria-pressed': chosen[index] === true,
             onclick: () => choose(true),
-          }, 'VERO'),
-          el('button.btn.btn-false', {
-            style: chosen[index] === false ? 'outline:4px solid var(--ink)' : '',
+          }, svgIcon('check'), 'VERO'),
+          el('button', {
+            type: 'button',
+            className: `ds-answer btn-false${chosen[index] === false ? ' ds-answer--picked' : ''}`,
+            'aria-pressed': chosen[index] === false,
             onclick: () => choose(false),
-          }, 'FALSO'),
+          }, svgIcon('cross'), 'FALSO'),
         ),
         el('p.kbd-hint', {},
           el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ',

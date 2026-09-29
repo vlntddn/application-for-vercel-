@@ -23,6 +23,23 @@ export function clear(root, ...children) {
   root.replaceChildren(...children.filter((c) => c !== null && c !== undefined));
 }
 
+/** S2.8: inline SVG glyph (check / cross) built via createElementNS. */
+export function svgIcon(kind) {
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('class', 'ic');
+  svg.setAttribute('fill', 'none');
+  svg.setAttribute('stroke', 'currentColor');
+  svg.setAttribute('stroke-linecap', 'round');
+  svg.setAttribute('stroke-linejoin', 'round');
+  svg.setAttribute('aria-hidden', 'true');
+  const path = document.createElementNS(svgNS, 'path');
+  path.setAttribute('d', kind === 'check' ? 'M4 12.5l5 5 11-11' : 'M6 6l12 12M18 6L6 18');
+  svg.append(path);
+  return svg;
+}
+
 export function fmtTime(totalSeconds) {
   const m = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
   const s = String(totalSeconds % 60).padStart(2, '0');
