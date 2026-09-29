@@ -61,8 +61,13 @@ test('answers update counters, mistakes and stats', async () => {
 
   snap = await service.recordAnswers({ answers: [{ id: 'sorpasso-q-1', correct: true }] });
   assert.deepEqual(snap.mistakes, []);
+  // L6a: one correct answer is a streak of 1 — "mastered" needs two in a row.
+  assert.equal(snap.stats.mastered, 0);
+  assert.equal(snap.answers['sorpasso-q-1'].streak, 1);
+
+  snap = await service.recordAnswers({ answers: [{ id: 'sorpasso-q-1', correct: true }] });
   assert.equal(snap.stats.mastered, 1);
-  assert.equal(snap.answers['sorpasso-q-1'].correct, 1);
+  assert.equal(snap.answers['sorpasso-q-1'].correct, 2);
   assert.equal(snap.answers['sorpasso-q-1'].wrong, 1);
 });
 
@@ -140,7 +145,7 @@ test('import replaces progress and validates every field', async () => {
   const snap = await service.importProgress({
     profile: { name: '  Marco  ', language: 'zh', theme: 'dark', sound: false, onboarded: true },
     answers: {
-      'sorpasso-a-1': { correct: 2, wrong: 1, lastCorrect: true, last: '2026-01-01T00:00:00.000Z' },
+      'sorpasso-a-1': { correct: 2, wrong: 1, lastCorrect: true, last: '2026-01-01T00:00:00.000Z', streak: 3 },
       'sorpasso-a-2': { correct: 0, wrong: 3, lastCorrect: false, last: '2026-01-02T00:00:00.000Z' },
     },
     mistakes: ['sorpasso-a-2'],
@@ -159,7 +164,10 @@ test('import replaces progress and validates every field', async () => {
   assert.equal(snap.exams.length, 1);
   assert.deepEqual(snap.theoryRead, ['ch1', 'ch2']);
   assert.equal(snap.streak.current, 5);
+  // L6a: mastered now means streak >= 2; the imported record says streak 3.
   assert.equal(snap.stats.mastered, 1);
+  assert.equal(snap.answers['sorpasso-a-1'].streak, 3);
+  assert.equal(snap.answers['sorpasso-a-2'].streak, 0);
   assert.equal(snap.stats.answered, 2);
   assert.equal(snap.somethingUnknown, undefined);
 });
@@ -175,6 +183,9 @@ test('import rejects malformed backups', async () => {
     { exams: 'nope' },
     { mistakes: [42] },
     { streak: { current: -2 } },
+    { answers: { 'q-1': { correct: 1, wrong: 0, lastCorrect: true, streak: -1 } } },
+    { answers: { 'q-1': { correct: 1, wrong: 0, lastCorrect: true, streak: 1.5 } } },
+    { answers: { 'q-1': { correct: 1, wrong: 0, lastCorrect: true, due: 'next week' } } },
     [],
   ];
   for (const payload of bad) {
@@ -375,7 +386,10 @@ test('a progress file written by an older version still loads', async () => {
   const snap = new ProgressService(store).snapshot();
   assert.equal(snap.profile.name, 'Marco');
   assert.equal(snap.profile.sound, true, 'new field defaulted, not left undefined');
-  assert.equal(snap.stats.mastered, 1);
+  // L6a: a pre-streak record derives streak 1 from lastCorrect — not yet mastered.
+  assert.equal(snap.stats.mastered, 0);
+  assert.equal(snap.answers['q-1'].streak, 1);
+  assert.ok(snap.answers['q-1'].due, 'the derived due date exists');
   assert.equal(snap.streak.current, 3);
 });
 
@@ -393,4 +407,108 @@ test('recordChapterCheck keeps the best score and accepts 0-5', async () => {
   await assert.rejects(() => service.recordChapterCheck({ chapterId: 'ch1', correct: 6 }), ValidationError);
   await assert.rejects(() => service.recordChapterCheck({ chapterId: 'ch1', correct: -1 }), ValidationError);
   await assert.rejects(() => service.recordChapterCheck({ chapterId: 'ch1', correct: 2.5 }), ValidationError);
+});
+
+/* ---------------- L6a — spaced repetition (streak / due) ---------------- */
+
+const isoDay = (d) =>
+  `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const dayOffset = (n) => {
+  const d = new Date();
+  d.setDate(d.getDate() + n);
+  return isoDay(d);
+};
+
+test('correct answers extend the streak along the review intervals', async () => {
+  const { service } = makeService();
+  const rec = async () => (await service.recordAnswers({ answers: [{ id: 'q', correct: true }] })).answers.q;
+
+  assert.equal((await rec()).streak, 1);
+  assert.equal((await rec()).streak, 2);
+  assert.equal((await rec()).streak, 3);
+  const fourth = await rec();
+  assert.equal(fourth.streak, 4);
+  assert.equal(fourth.due, dayOffset(16), 'streak 4 -> 16 days');
+  const fifth = await rec();
+  assert.equal(fifth.due, dayOffset(35), 'streak 5 -> 35 days');
+  const sixth = await rec();
+  assert.equal(sixth.streak, 6);
+  assert.equal(sixth.due, dayOffset(35), 'streak beyond the table stays at 35 days');
+});
+
+test('an error resets the streak and brings the review to tomorrow', async () => {
+  const { service } = makeService();
+  await service.recordAnswers({ answers: [{ id: 'q', correct: true }, { id: 'q', correct: true }] });
+  const afterError = (await service.recordAnswers({ answers: [{ id: 'q', correct: false }] })).answers.q;
+  assert.equal(afterError.streak, 0);
+  assert.equal(afterError.due, dayOffset(1));
+
+  const afterFix = (await service.recordAnswers({ answers: [{ id: 'q', correct: true }] })).answers.q;
+  assert.equal(afterFix.streak, 1, 'the streak restarts from one');
+  assert.equal(afterFix.due, dayOffset(1));
+});
+
+test('migration of a pre-L6a snapshot derives streak and due per the rule', async () => {
+  const { migrateProgress } = await import('../public/js/domain/progress.js');
+
+  const legacy = {
+    profile: { name: 'Valentin', language: 'ru' },
+    answers: {
+      'q-right': { correct: 4, wrong: 1, lastCorrect: true, last: '2026-09-28T10:00:00.000Z' },
+      'q-wrong': { correct: 2, wrong: 5, lastCorrect: false, last: '2026-09-29T10:00:00.000Z' },
+      'q-quiet': { correct: 1, wrong: 0, lastCorrect: true },
+    },
+    mistakes: ['q-wrong'],
+  };
+
+  const m = migrateProgress(legacy);
+  assert.equal(m.answers['q-right'].streak, 1, 'lastCorrect -> streak 1');
+  assert.equal(m.answers['q-right'].due, '2026-09-29', 'due = last day + 1');
+  assert.equal(m.answers['q-wrong'].streak, 0, 'not lastCorrect -> streak 0');
+  assert.equal(m.answers['q-wrong'].due, '2026-09-30');
+  assert.equal(m.answers['q-quiet'].streak, 1);
+  assert.ok(m.answers['q-quiet'].due, 'no last date -> still a due date');
+});
+
+test('migration trusts well-formed streak/due and repairs broken ones', async () => {
+  const { migrateProgress } = await import('../public/js/domain/progress.js');
+  const m = migrateProgress({
+    answers: {
+      good: { correct: 2, wrong: 0, lastCorrect: true, last: '2026-09-28T10:00:00.000Z', streak: 4, due: '2026-10-14' },
+      broken: { correct: 1, wrong: 0, lastCorrect: true, last: '2026-09-28T10:00:00.000Z', streak: 'seven', due: 'next week' },
+    },
+  });
+  assert.deepEqual([m.answers.good.streak, m.answers.good.due], [4, '2026-10-14'], 'valid fields survive');
+  assert.equal(m.answers.broken.streak, 1, 'a broken streak falls back to the derived value');
+  assert.equal(m.answers.broken.due, '2026-09-29');
+});
+
+test('import derives missing streak/due and rejects garbage values', async () => {
+  const { service } = makeService();
+  const snap = await service.importProgress({
+    answers: {
+      derived: { correct: 1, wrong: 0, lastCorrect: true, last: '2026-09-28T10:00:00.000Z' },
+      trusted: { correct: 2, wrong: 0, lastCorrect: true, streak: 4, due: '2026-10-14' },
+    },
+  });
+  assert.equal(snap.answers.derived.streak, 1);
+  assert.equal(snap.answers.derived.due, '2026-09-29');
+  assert.deepEqual([snap.answers.trusted.streak, snap.answers.trusted.due], [4, '2026-10-14']);
+  assert.equal(snap.stats.mastered, 1, 'only streak >= 2 counts as mastered');
+
+  for (const payload of [
+    { answers: { 'q-1': { correct: 1, wrong: 0, lastCorrect: true, streak: 'soon' } } },
+    { answers: { 'q-1': { correct: 1, wrong: 0, lastCorrect: true, due: 42 } } },
+  ]) {
+    await assert.rejects(() => service.importProgress(payload), ValidationError);
+  }
+});
+
+test('an exported snapshot re-imports with streak and due intact', async () => {
+  const { service } = makeService();
+  await service.recordAnswers({ answers: [{ id: 'q', correct: true }, { id: 'q', correct: true }] });
+  const exported = JSON.parse(JSON.stringify(service.snapshot()));
+  delete exported.stats;
+  const reimported = await service.importProgress(exported);
+  assert.deepEqual([reimported.answers.q.streak, reimported.answers.q.due], [2, dayOffset(3)]);
 });

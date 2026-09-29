@@ -35,6 +35,9 @@ test('standalone records answers and derives the same stats', async () => {
 
   snap = await api.recordAnswers([{ id: 'sorpasso-q-1', correct: true }]);
   assert.deepEqual(snap.mistakes, []);
+  // L6a: mastered means two correct in a row.
+  assert.equal(snap.stats.mastered, 0);
+  snap = await api.recordAnswers([{ id: 'sorpasso-q-1', correct: true }]);
   assert.equal(snap.stats.mastered, 1);
   assert.equal(snap.stats.streak, 1);
 });
@@ -99,7 +102,9 @@ test('standalone import restores a backup exported anywhere', async () => {
     theoryRead: ['ch1'],
   });
   assert.equal(snap.profile.name, 'Marco');
-  assert.equal(snap.stats.mastered, 1);
+  // L6a: a pre-streak record derives streak 1 — mastered needs two in a row.
+  assert.equal(snap.stats.mastered, 0);
+  assert.equal(snap.answers['sorpasso-a-1'].streak, 1);
   assert.equal(snap.stats.examsPassed, 1);
 });
 
@@ -141,5 +146,6 @@ test('a browser that refuses to store does not break the session', async () => {
   const { localProgressApi } = await import(`../public/js/local-progress.js?quota=${Math.random()}`);
   // Saving fails, but the answer still counts for this session.
   const snap = await localProgressApi.recordAnswers([{ id: 'q-1', correct: true }]);
-  assert.equal(snap.stats.mastered, 1);
+  // One correct answer is not yet "mastered" (L6a: needs two in a row).
+  assert.equal(snap.stats.mastered, 0);
 });

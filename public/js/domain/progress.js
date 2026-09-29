@@ -22,12 +22,19 @@ const MAX_IMPORT_EXAMS = 2000;
  * translate it. migrateProgress() below is what actually does the work,
  * so a saved snapshot keeps opening after the app is updated.
  */
-export const SCHEMA_VERSION = 1;
+export const SCHEMA_VERSION = 2;
+
+// Spaced repetition (L6a): days until the next review, indexed by the
+// consecutive-correct streak (capped at the last interval).
+export const REVIEW_INTERVALS = [1, 3, 7, 16, 35];
+// "Mastered" (L6a) — a question needs two correct answers in a row,
+// not just one.
+export const MASTERY_STREAK = 2;
 
 export const EMPTY_PROGRESS = {
   version: SCHEMA_VERSION,
   profile: { name: '', language: 'en', theme: 'light', sound: true, dailyGoal: DAILY_GOAL_DEFAULT, signalHints: 'auto', onboarded: false },
-  answers: {}, // questionId -> { correct, wrong, lastCorrect, last }
+  answers: {}, // questionId -> { correct, wrong, lastCorrect, last, streak, due }
   mistakes: [], // questionIds currently answered wrong
   exams: [], // { date, total, errors, passed }
   activeDays: [], // YYYY-MM-DD of every day with activity (last 90)
@@ -84,6 +91,33 @@ function dayBefore(iso) {
   return today(date);
 }
 
+/** The ISO date N calendar days after `from` (default: today). DST-safe. */
+export function addDays(from, n, date = new Date()) {
+  const base = from
+    ? new Date(...from.split('-').map(Number).map((v, i) => (i === 1 ? v - 1 : v)))
+    : new Date(date);
+  base.setDate(base.getDate() + n);
+  return today(base);
+}
+
+const isDay = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v);
+
+/**
+ * L6a — recovers the spaced-repetition fields of an answer record.
+ * Records written before `streak`/`due` existed are re-derived:
+ * streak = lastCorrect ? 1 : 0, due = the day after the last activity
+ * (a question with no history is due tomorrow). A broken field falls
+ * back to the derived value instead of being trusted.
+ */
+function reviewFieldsFromRecord(rec, lastCorrect, last) {
+  const streak = Math.trunc(Number(rec.streak));
+  const due = isDay(rec.due) ? rec.due : addDays(isDay(last.slice(0, 10)) ? last.slice(0, 10) : '', 1);
+  return {
+    streak: Number.isFinite(streak) && streak > 0 ? streak : lastCorrect ? 1 : 0,
+    due,
+  };
+}
+
 
 const isPlainObject = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
 
@@ -129,11 +163,14 @@ export function migrateProgress(raw) {
       const correct = Math.trunc(Number(rec.correct));
       const wrong = Math.trunc(Number(rec.wrong));
       if (!Number.isFinite(correct) || !Number.isFinite(wrong)) continue;
+      const lastCorrect = Boolean(rec.lastCorrect);
+      const last = typeof rec.last === 'string' ? rec.last.slice(0, 40) : '';
       out.answers[id] = {
         correct: Math.max(0, correct),
         wrong: Math.max(0, wrong),
-        lastCorrect: Boolean(rec.lastCorrect),
-        last: typeof rec.last === 'string' ? rec.last.slice(0, 40) : '',
+        lastCorrect,
+        last,
+        ...reviewFieldsFromRecord(rec, lastCorrect, last),
       };
     }
   }
@@ -215,7 +252,7 @@ export class ProgressService {
   snapshot() {
     const d = this.store.data;
     const answered = Object.keys(d.answers).length;
-    const mastered = Object.values(d.answers).filter((a) => a.lastCorrect).length;
+    const mastered = Object.values(d.answers).filter((a) => a.streak >= MASTERY_STREAK).length;
     const passed = d.exams.filter((e) => e.passed).length;
     return {
       ...d,
@@ -326,12 +363,16 @@ export class ProgressService {
       if (typeof entry.correct !== 'boolean') {
         throw new ValidationError('"answers[].correct" must be a boolean');
       }
-      const rec = d.answers[id] ?? { correct: 0, wrong: 0, lastCorrect: false, last: '' };
+      const rec = d.answers[id] ?? { correct: 0, wrong: 0, lastCorrect: false, last: '', streak: 0, due: '' };
       if (entry.correct) {
         rec.correct += 1;
+        rec.streak = (Number.isInteger(rec.streak) ? rec.streak : 0) + 1;
+        rec.due = addDays('', REVIEW_INTERVALS[Math.min(rec.streak - 1, REVIEW_INTERVALS.length - 1)]);
         d.mistakes = d.mistakes.filter((m) => m !== id);
       } else {
         rec.wrong += 1;
+        rec.streak = 0;
+        rec.due = addDays('', 1);
         if (!d.mistakes.includes(id)) d.mistakes.push(id);
       }
       rec.lastCorrect = entry.correct;
@@ -469,11 +510,19 @@ export class ProgressService {
         if (typeof rec.lastCorrect !== 'boolean') {
           throw new ValidationError(`"answers.${id}.lastCorrect" must be a boolean`);
         }
+        if (rec.streak !== undefined && (!Number.isInteger(rec.streak) || rec.streak < 0)) {
+          throw new ValidationError(`"answers.${id}.streak" must be a non-negative integer`);
+        }
+        if (rec.due !== undefined && !isDay(rec.due)) {
+          throw new ValidationError(`"answers.${id}.due" must be a YYYY-MM-DD date`);
+        }
+        const last = typeof rec.last === 'string' ? rec.last.slice(0, 40) : '';
         clean.answers[id] = {
           correct,
           wrong,
           lastCorrect: rec.lastCorrect,
-          last: typeof rec.last === 'string' ? rec.last.slice(0, 40) : '',
+          last,
+          ...reviewFieldsFromRecord(rec, rec.lastCorrect, last),
         };
       }
     }

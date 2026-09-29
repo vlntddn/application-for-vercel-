@@ -1,5 +1,6 @@
 import { api, detectMode } from './api.js';
 import { loadOverlays } from './domain/translations.js';
+import { REVIEW_INTERVALS, MASTERY_STREAK, addDays } from './domain/progress.js';
 
 /** Shared app state: progress snapshot plus cached static data. */
 export const state = {
@@ -107,12 +108,16 @@ export function pendingCount() {
 function applyLocalAnswers(batch) {
   const d = state.progress;
   for (const { id, correct } of batch) {
-    const rec = d.answers[id] ?? { correct: 0, wrong: 0, lastCorrect: false, last: '' };
+    const rec = d.answers[id] ?? { correct: 0, wrong: 0, lastCorrect: false, last: '', streak: 0, due: '' };
     if (correct) {
       rec.correct += 1;
+      rec.streak = (Number.isInteger(rec.streak) ? rec.streak : 0) + 1;
+      rec.due = addDays('', REVIEW_INTERVALS[Math.min(rec.streak - 1, REVIEW_INTERVALS.length - 1)]);
       d.mistakes = d.mistakes.filter((m) => m !== id);
     } else {
       rec.wrong += 1;
+      rec.streak = 0;
+      rec.due = addDays('', 1);
       if (!d.mistakes.includes(id)) d.mistakes.push(id);
     }
     rec.lastCorrect = correct;
@@ -120,7 +125,7 @@ function applyLocalAnswers(batch) {
     d.answers[id] = rec;
   }
   d.stats.answered = Object.keys(d.answers).length;
-  d.stats.mastered = Object.values(d.answers).filter((a) => a.lastCorrect).length;
+  d.stats.mastered = Object.values(d.answers).filter((a) => a.streak >= MASTERY_STREAK).length;
   d.stats.mistakes = d.mistakes.length;
 }
 
