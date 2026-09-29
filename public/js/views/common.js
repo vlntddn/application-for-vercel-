@@ -3,6 +3,7 @@
 import { state, shuffle } from '../state.js';
 import { el } from '../ui.js';
 import { DAILY_GOAL_DEFAULT } from '../domain/progress.js';
+import { queueOrder as domainQueueOrder, masteryOf as domainMasteryOf, categoryStats as domainCategoryStats } from '../domain/learning.js';
 
 /** Size of one practice batch (dashboard hint, practice queue, search practice). */
 export const PRACTICE_BATCH = 20;
@@ -32,10 +33,7 @@ export function loc(obj) {
 
 /** Session queue order: unseen first, then current mistakes, then the rest. */
 export function queueOrder(questions, answers, count) {
-  const unseen = questions.filter((q) => !answers[q.id]);
-  const wrong = questions.filter((q) => answers[q.id] && !answers[q.id].lastCorrect);
-  const rest = questions.filter((q) => answers[q.id]?.lastCorrect);
-  return [...shuffle(unseen), ...shuffle(wrong), ...shuffle(rest)].slice(0, count);
+  return domainQueueOrder(questions, answers, count, Math.random);
 }
 
 /** Session queue: unseen questions first, then current mistakes, then the rest. */
@@ -44,9 +42,7 @@ export function pickQueue(questions, count) {
 }
 
 export function masteryOf(slug, count) {
-  const mastered = Object.entries(state.progress.answers)
-    .filter(([id, a]) => a.lastCorrect && id.startsWith(`${slug}-`)).length;
-  return { mastered, pct: Math.round((mastered / count) * 100) };
+  return domainMasteryOf(state.progress.answers, slug, count);
 }
 
 /**
@@ -56,30 +52,7 @@ export function masteryOf(slug, count) {
  * measures reliability while `masteredPct` measures coverage.
  */
 export function categoryStats() {
-  const answers = Object.entries(state.progress.answers);
-  return state.manifest.categories.map((cat) => {
-    let correct = 0;
-    let wrong = 0;
-    let attempted = 0;
-    let mastered = 0;
-    for (const [id, a] of answers) {
-      if (!id.startsWith(`${cat.slug}-`)) continue;
-      attempted += 1;
-      correct += a.correct;
-      wrong += a.wrong;
-      if (a.lastCorrect) mastered += 1;
-    }
-    const total = correct + wrong;
-    return {
-      slug: cat.slug,
-      name: cat.name,
-      count: cat.count,
-      attempted,
-      mastered,
-      masteredPct: Math.round((mastered / cat.count) * 100),
-      accuracy: total ? Math.round((correct / total) * 100) : null,
-    };
-  });
+  return domainCategoryStats(state.progress.answers, state.manifest.categories);
 }
 
 /**

@@ -5,44 +5,27 @@ import {
   loadLessons,
   loadQuestions,
   slugForQuestionId,
-  shuffle,
   recordAnswersResilient,
 } from '../state.js';
 import { el, clear, svgIcon } from '../ui.js';
 import { CATEGORY_CHAPTER } from '../theory-map.js';
 import { playCorrect, playWrong } from '../sound.js';
 import { errorBanner, translationOf, loc, pickQueue, queueOrder, masteryOf, categoryStats, translationArea, PRACTICE_BATCH, feedbackHref } from './common.js';
+import { introQueue as domainIntroQueue, INTRO_QUESTIONS, INTRO_TEXT_LEN } from '../domain/learning.js';
 import { topicLabel, topicSub } from '../topics.js';
 
 // First-session on-ramp (Phase 2.2): a newcomer's first practice run opens
 // with the topic's easiest questions — short text, no sign image — so the
 // VERO/FALSO mechanic is felt before the hard wording starts.
-const INTRO_QUESTIONS = 5;
-const INTRO_TEXT_LEN = 120;
 
 /**
  * First-session queue (Phase 2.2 "guaranteed first success").
- * A brand-new user opens on the topic's easiest questions — short Italian
- * (≤ INTRO_TEXT_LEN chars), no sign image, unseen — so the VERO/FALSO
- * mechanic is felt before the hard wording starts. Returns null when the
- * topic holds fewer than `count` such questions (image-heavy sign topics):
- * the caller then falls back to the regular queue and never pads with easy
- * questions stolen from other topics.
- *
- * Takes the topic's full question list (not a pre-sliced batch) and returns
- * the whole practice queue: the intro block first, then the rest of the
- * batch in the regular unseen→wrong→kept order.
+ * Thin wrapper over domain/learning.js `introQueue` — same options, same
+ * null fallback when the topic holds too few easy questions.
  */
-export function introQueue(questions, { answers = {}, batch = PRACTICE_BATCH, count = INTRO_QUESTIONS, textLen = INTRO_TEXT_LEN } = {}) {
-  const easy = shuffle(questions.filter(
-    (q) => !q.image_url && (q.text_it || '').length <= textLen && !answers[q.id],
-  ));
-  if (easy.length < count) return null;
-  const intro = easy.slice(0, count);
-  const introIds = new Set(intro.map((q) => q.id));
-  return [...intro, ...queueOrder(questions.filter((q) => !introIds.has(q.id)), answers, batch - count)];
+export function introQueue(questions, options = {}) {
+  return domainIntroQueue(questions, options);
 }
-
 
 export function renderPracticeList(root) {
   const answers = state.progress.answers;
