@@ -217,7 +217,7 @@ export function renderSettings(root) {
       el('h2', {}, 'ABOUT'),
       el('div.row', {},
         el('div', { style: 'flex:1' },
-          el('strong', {}, 'PATENTE PRO'),
+          el('strong', {}, 'PASSO'),
           el('p.stat-sub', {}, '7139 QUESTIONS · 25 LESSONS · NOT AN OFFICIAL APP'),
         ),
       ),

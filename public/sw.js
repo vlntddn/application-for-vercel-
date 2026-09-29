@@ -1,5 +1,5 @@
 /**
- * PATENTE PRO service worker.
+ * PASSO service worker.
  *
  * Strategy:
  * - App shell (HTML/CSS/JS/manifest/icons): network-first with cache
@@ -13,7 +13,7 @@
  *   replayed when the server responds again; other mutations error.
  */
 
-const VERSION = 'v49';
+const VERSION = 'v50';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -43,6 +43,11 @@ const SHELL = [
   '/js/domain/translations.js',
   '/js/theory-map.js',
   '/manifest.webmanifest',
+  '/fonts/onest-latin-wght-normal.woff2',
+  '/fonts/onest-latin-ext-wght-normal.woff2',
+  '/fonts/onest-cyrillic-wght-normal.woff2',
+  '/fonts/ibm-plex-mono-latin-500-normal.woff2',
+  '/fonts/ibm-plex-mono-latin-600-normal.woff2',
   '/credits.html',
   '/privacy.html',
   '/icons/icon-192.png',

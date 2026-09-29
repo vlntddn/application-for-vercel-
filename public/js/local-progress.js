@@ -38,7 +38,7 @@ class LocalStore {
     // backup written after the previous successful save.
     const backup = this.#readKey(BACKUP_KEY);
     if (backup) {
-      console.warn('Patente Pro: main snapshot unreadable, recovered the backup copy');
+      console.warn('Passo: main snapshot unreadable, recovered the backup copy');
       // Heal straight away, so the damaged value is not re-read (and
       // re-quarantined) on every future visit.
       try {
@@ -72,7 +72,7 @@ class LocalStore {
   #quarantine(key, raw) {
     try {
       localStorage.setItem(`${key}.corrupt.${Date.now()}`, raw);
-      console.error(`Patente Pro: could not parse ${key}; kept a copy under ${key}.corrupt.*`);
+      console.error(`Passo: could not parse ${key}; kept a copy under ${key}.corrupt.*`);
     } catch {
       /* nothing more we can do; never let this break startup */
     }
@@ -90,7 +90,7 @@ class LocalStore {
     } catch (err) {
       // Out of quota, or storage blocked. The in-memory snapshot is still
       // correct for this session; tell the console rather than crash the UI.
-      console.error('Patente Pro: could not save progress to this browser', err);
+      console.error('Passo: could not save progress to this browser', err);
     }
   }
 

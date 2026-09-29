@@ -1,6 +1,6 @@
 # Third-party notices
 
-Patente Pro ships content from the projects below. Their licence terms
+Passo ships content from the projects below. Their licence terms
 require that these notices travel with every copy of the application.
 
 ---
@@ -45,7 +45,7 @@ SOFTWARE.
 ## A note on the underlying exam material
 
 The questions originate from the theory quiz published by the Italian
-Ministero delle Infrastrutture e dei Trasporti. Patente Pro is an independent
+Ministero delle Infrastrutture e dei Trasporti. Passo is an independent
 study aid: it is **not** an official publication and is not affiliated with,
 endorsed by, or connected to any government body.
 
@@ -58,9 +58,20 @@ someone qualified.
 
 ---
 
+## Fonts — SIL Open Font License 1.1
+
+- **Onest** — © 2021 The Onest Project Authors (https://github.com/simpals/onest)
+- **IBM Plex Mono** — © 2017 IBM Corp.
+
+Shipped as woff2 in `public/fonts/` (obtained from the Fontsource packages),
+with the full licence texts next to them: `public/fonts/OFL-Onest.txt`,
+`public/fonts/OFL-IBMPlexMono.txt`.
+
+---
+
 ## The rest of the application
 
 The server, the frontend, the lessons in `data/lessons.json` and the
 dictionary in `data/dictionary.json` were written for this project and are
-covered by the repository's own MIT licence. Patente Pro has no runtime npm
-dependencies, so there are no further third-party notices.
+covered by the repository's own MIT licence. Passo has no runtime npm
+dependencies.

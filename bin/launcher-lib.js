@@ -8,7 +8,7 @@
 import net from 'node:net';
 import path from 'node:path';
 
-export const APP_NAME = 'Patente Pro';
+export const APP_NAME = 'Passo';
 export const DEFAULT_PORT = 3000;
 
 export function parseArgs(argv) {

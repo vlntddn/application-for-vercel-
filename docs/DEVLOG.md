@@ -491,6 +491,33 @@ theory.js). `main.js` не тронут — роуты импортируют и
 
 Хронология ключевых решений. Новые записи — сверху.
 
+## Переименование в Passo, шрифты Onest/IBM Plex Mono, конфетти убрано; выкладка в main (2026-09-29)
+
+Решения владельца: (1) продукт называется **Passo**; (2) конфетти убрано
+из планов (дизайн-система запрещает); (3) шрифт — скачать и встроить.
+
+1. Видимое имя → Passo: title, apple-title, wordmark, manifest
+   (name/short_name), privacy, credits, настройки «о приложении», лог
+   сервера, имя в лончере, app_name в Android, README, THIRD-PARTY-NOTICES.
+   НЕ менялись (намеренно): команда `patente-pro`, папки прогресса
+   `PatentePro`/`patente-pro`, `app.patentepro.twa`, имя репозитория,
+   `app: 'patente-pro'` в бэкапе, установщики (`Patente Pro.app`) — иначе
+   пропадёт прогресс, сломается удаление старых установок и Play сочтёт
+   приложение новым. Защищённые credits.html/THIRD-PARTY-NOTICES.md
+   правились осознанно (имя + лицензии шрифтов), лицензия банка не тронута.
+2. Шрифты: Onest variable (latin, latin-ext, cyrillic) + IBM Plex Mono
+   500/600, woff2 из Fontsource (jsDelivr), 108 KB, `public/fonts/` + OFL
+   рядом; `@font-face` с unicode-range, `--font-sans` начинается с Onest;
+   файлы в SHELL (SW v50); `.txt` отдаётся как text/plain; тест
+   `tests/fonts.test.js` (2 теста). CSP `font-src 'self'` — внешних запросов нет.
+3. S2.8 (VERO/FALSO) агент закоммитил, но не отметил и не запушил
+   (запуск остановлен) — код проверен общим прогоном ниже.
+
+Проверено: npm test 86/86, smoke 8/8, qa-new-user 37/37, qa-ux
+173 PASS / 3 FAIL (базовая линия была 112/64; остались p7 ×2 — главная
+новичка, S2.11, и p8 ×1 — перенос кнопки «CONTINUE →» в онбординге);
+в браузере 375px: шапка PASSO, Onest загружен, Settings открывается.
+
 ## Дизайн-система «Passo» в репозитории, Спринт 2 по ней; qa-ux.mjs работает; атомарный lock (2026-09-29)
 
 1. Дизайн-система владельца (артефакт claude.ai, собрана в Cowork по

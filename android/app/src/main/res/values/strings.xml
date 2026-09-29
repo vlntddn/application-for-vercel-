@@ -5,7 +5,7 @@
   BOTH here and in app/build.gradle (twaHost).
 -->
 <resources>
-    <string name="app_name">Patente Pro</string>
+    <string name="app_name">Passo</string>
     <string name="default_url">https://application-for-vercel.vercel.app/</string>
 
     <!-- Tells Chrome which website this app is allowed to render without a

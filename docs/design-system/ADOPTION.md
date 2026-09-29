@@ -21,11 +21,11 @@ claude.ai (артефакт U2zLPJLtuHSH8WPi4wgPxU). В этой папке — 
 
 | Система говорит | В этом репозитории | Почему |
 |---|---|---|
-| `@import` Google Fonts (Onest, IBM Plex Mono) в bundle.css | **НЕ подключать внешние шрифты.** Пока — системный стек из `tokens.json` без первого пункта. Onest — только отдельной задачей S2.13 (self-host woff2 в `public/fonts/`) | CSP `'self'`, «nothing leaves the device», тест `the frontend never references an external origin` |
+| `@import` Google Fonts (Onest, IBM Plex Mono) в bundle.css | **Внешние шрифты не подключать.** Onest и IBM Plex Mono уже лежат в `public/fonts/` (S2.13) — пользоваться `var(--font-sans)` / `var(--font-mono)` | CSP `'self'`, «nothing leaves the device», тест `the frontend never references an external origin` |
 | `innerHTML` в `preview.html` (heatmap) | Только `el()` из `public/js/ui.js` | Жёсткое правило проекта, есть тест |
-| Имя продукта «Passo» в Wordmark | Имя остаётся **«Patente Pro»**, пока владелец не решит переименование | Passo — рабочее имя, см. `guidelines/20-naming.md` |
+| Имя продукта «Passo» | **Принято 2026-09-29.** Видимое имя — Passo. Технические идентификаторы (`patente-pro` команда, папки прогресса `PatentePro`, пакет Android `app.patentepro.twa`, имя репозитория, формат бэкапа `app: 'patente-pro'`) НЕ менять | иначе пропадёт прогресс пользователей, Play сочтёт приложение новым |
 | Feedback: «причина, называющая слово-ловушку» | Причину НЕ выдумывать. Использовать то, что уже есть в блоке WHY? (факты урока главы). Новые тексты объяснений не генерировать | Решение Фазы 1: explanation не заполняем (неточность недопустима) |
-| «No shakes, bounces or confetti» | Встряску карточки при ошибке убрать (система права). Конфетти из Фазы 2.3 — **не делать**, пока владелец не решит | Конфликт системы и TODO — решает владелец |
+| «No shakes, bounces or confetti» | Встряску карточки при ошибке убрать (система права). Конфетти — **убрано** решением владельца 2026-09-29 | Конфликт системы и TODO — решает владелец |
 | Все классы `ds-*` | Можно вводить классы `ds-*` в `public/styles.css`, но старые классы удалять только когда ни один экран их не использует (`grep -rn "имя-класса" public/`) | Экраны переводятся по одному, остальные не должны сломаться |
 
 ## Токены → CSS-переменные

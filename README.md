@@ -1,4 +1,6 @@
-# PATENTE PRO
+# PASSO
+
+_Formerly Patente Pro. Install paths, commands (`patente-pro`) and data folders keep the old name so existing installs and progress are unaffected._
 
 Trainer for the Italian driving licence theory exam (patente B):
 **7139 official-style true/false questions** in 26 topics, a 25-chapter theory
@@ -134,7 +136,7 @@ npm test         # built-in node:test runner
 The 7139 questions and 413 sign images come from
 [QuizPatenteB](https://github.com/Ed0ardo/QuizPatenteB) by Edoardo, used under the
 MIT Licence — see [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md), which also ships
-inside the app at `/credits.html`. Patente Pro is an independent study aid and is not
+inside the app at `/credits.html`. Passo is an independent study aid and is not
 affiliated with any government body.
 
 ## Configuration

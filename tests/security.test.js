@@ -236,7 +236,7 @@ test('iOS home-screen install markers are present', () => {
   // browser chrome when the user taps "Add to Home Screen".
   assert.match(html, /<meta name="apple-mobile-web-app-capable" content="yes">/);
   assert.match(html, /<meta name="mobile-web-app-capable" content="yes">/);
-  assert.match(html, /<meta name="apple-mobile-web-app-title" content="Patente Pro">/);
+  assert.match(html, /<meta name="apple-mobile-web-app-title" content="Passo">/);
   assert.match(html, /<link rel="apple-touch-icon"/);
 });
 

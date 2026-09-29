@@ -1,7 +1,7 @@
 {
   "name": "patente-pro",
   "version": "2.0.0",
-  "description": "Patente Pro — Italian driving theory trainer. Local-first, zero-dependency Node.js backend, Minimal Brutalism UI.",
+  "description": "Passo (formerly Patente Pro) — Italian driving theory trainer. Local-first, zero-dependency Node.js backend, Minimal Brutalism UI.",
   "type": "module",
   "main": "server/index.js",
   "bin": {

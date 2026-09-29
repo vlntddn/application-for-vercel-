@@ -1,4 +1,4 @@
-# AGENTS.md — Patente Pro
+# AGENTS.md — Passo (бывш. Patente Pro)
 
 Тренажёр итальянского экзамена на права (patente B). Node.js-бэкенд с **нулевыми
 npm-зависимостями** + vanilla-JS фронтенд **без сборки**. Владелец общается на

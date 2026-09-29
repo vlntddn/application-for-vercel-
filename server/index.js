@@ -148,7 +148,7 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(config.port, config.host, () => {
   const { address, port } = server.address();
-  console.log(`PATENTE PRO running at http://${address}:${port}`);
+  console.log(`PASSO running at http://${address}:${port}`);
   console.log(`Progress file: ${path.join(config.storageDir, 'progress.json')}`);
 });
 
