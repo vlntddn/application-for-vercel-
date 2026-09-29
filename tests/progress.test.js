@@ -512,3 +512,35 @@ test('an exported snapshot re-imports with streak and due intact', async () => {
   const reimported = await service.importProgress(exported);
   assert.deepEqual([reimported.answers.q.streak, reimported.answers.q.due], [2, dayOffset(3)]);
 });
+
+test('dueReview picks cards whose review day has come, oldest due first', async () => {
+  const { dueReview, dueReviewCount } = await import('../public/js/domain/progress.js');
+
+  const answers = {
+    'q-future': { correct: 1, wrong: 0, lastCorrect: true, streak: 2, due: dayOffset(3) },
+    'q-due-yesterday': { correct: 1, wrong: 1, lastCorrect: false, streak: 0, due: dayOffset(-1) },
+    'q-due-today': { correct: 1, wrong: 0, lastCorrect: true, streak: 1, due: dayOffset(0) },
+    'q-no-due': { correct: 1, wrong: 0, lastCorrect: true, streak: 0 }, // pre-L6a record
+  };
+
+  assert.deepEqual(dueReview(answers), ['q-due-yesterday', 'q-due-today']);
+  assert.equal(dueReviewCount(answers), 2);
+  assert.deepEqual(dueReview({}), []);
+});
+
+test('the snapshot reports how many cards are due for review today', async () => {
+  const { service } = makeService();
+  assert.equal(service.snapshot().stats.reviewDue, 0, 'nothing answered -> nothing due');
+
+  await service.recordAnswers({ answers: [{ id: 'q', correct: true }] }); // due tomorrow
+  assert.equal(service.snapshot().stats.reviewDue, 0, 'a fresh correct answer is not due yet');
+
+  await service.recordAnswers({ answers: [{ id: 'q2', correct: false }] }); // due tomorrow
+  await service.recordAnswers({ answers: [{ id: 'q2', correct: false }] }); // answered today, due tomorrow
+  assert.equal(service.snapshot().stats.reviewDue, 0);
+
+  const due = dayOffset(-1);
+  service.store.data.answers.q.due = due; // simulate a review that has come due
+  service.store.data.answers.q2.due = dayOffset(0); // one due today, one overdue
+  assert.equal(service.snapshot().stats.reviewDue, 2);
+});

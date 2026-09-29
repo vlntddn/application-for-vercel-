@@ -11,6 +11,7 @@ import { el, clear } from '../ui.js';
 import { errorBanner, pickQueue, categoryStats } from './common.js';
 import { renderQuizSession } from './practice.js';
 import { mistakeCauses } from '../domain/learning.js';
+import { dueReview } from '../domain/progress.js';
 import { topicLabel } from '../topics.js';
 
 /* ============================== MISTAKES ============================== */
@@ -140,7 +141,16 @@ export async function renderQuickReview(root) {
     return out;
   }
 
+  // L6b — everything due today, oldest first, is the session's priority list.
+  const dueIds = dueReview(state.progress.answers);
   try {
+    // 0. L6b — spaced repetition: everything whose review date has come
+    //    (due <= today), oldest first. The rest of the old mix fills in
+    //    behind it, so a full session starts with the overdue cards.
+    for (const q of await resolveIds(dueIds)) {
+      picked.set(q.id, q);
+    }
+
     // 1. Mistakes — the highest-value repetitions (up to 4).
     for (const q of await resolveIds(shuffle(state.progress.mistakes).slice(0, 4))) {
       picked.set(q.id, q);
@@ -180,7 +190,12 @@ export async function renderQuickReview(root) {
     return clear(root, errorBanner(err));
   }
 
-  const queue = shuffle([...picked.values()]).slice(0, REVIEW_SIZE);
+  // L6b — due cards stay at the front of the session, oldest due first;
+  // everything else is shuffled behind them.
+  const dueSet = new Set(dueIds);
+  const dueFirst = [...picked.values()].filter((q) => dueSet.has(q.id));
+  const rest = shuffle([...picked.values()].filter((q) => !dueSet.has(q.id)));
+  const queue = [...dueFirst, ...rest].slice(0, REVIEW_SIZE);
   renderQuizSession(root, queue, {
     title: 'QUICK REVIEW',
     backHash: '#/',

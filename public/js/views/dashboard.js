@@ -141,6 +141,26 @@ export function nextStepsPanel() {
 }
 
 /**
+ * L6b — spaced-repetition nudge: how many cards are due today, with the
+ * review as the action. Hidden until at least one card is due (and for
+ * newcomers, who have no review history yet).
+ */
+export function reviewDuePanel() {
+  const due = state.progress.stats.reviewDue;
+  if (!due) return null;
+  return el('div.ds-card', { id: 'dashboard-review-due' },
+    el('div.ds-card__top', {},
+      el('span.ds-card__eyebrow', {}, 'Spaced repetition'),
+      el('span.ds-tag', {}, 'today'),
+    ),
+    el('h3.ds-card__title', {}, `${due} card${due > 1 ? 's' : ''} to review today`),
+    el('p.ds-card__sub', {},
+      'The questions that come back to you are already in the queue — a few minutes keeps them from fading.'),
+    el('a.ds-btn.ds-btn--primary', { href: '#/review' }, 'Review now'),
+  );
+}
+
+/**
  * "Until the exam" panel: what to fix next, computed from real data —
  * the weakest attempted topics (accuracy < 70%) and pending mistakes.
  * Shown once at least one mock exam exists.
@@ -280,6 +300,7 @@ export async function renderDashboard(root) {
     stats.answered === 0
       ? nextStepsPanel()
       : statsRow(week, daysThisWeek, answeredToday, goal, stats, total),
+    stats.answered > 0 ? reviewDuePanel() : null,
     exams.length > 0
       ? weakSpotsPanel()
       : null,

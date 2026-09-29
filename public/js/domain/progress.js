@@ -44,6 +44,26 @@ export const EMPTY_PROGRESS = {
   streak: { current: 0, lastDay: '' },
 };
 
+/**
+ * L6b — questions whose review date has come (due <= today). `answers` maps
+ * questionId -> answer record; entries without `due` (pre-L6a data) are
+ * skipped. Returned oldest-first so the review queue shows the most overdue
+ * cards first; ids are deduplicated.
+ */
+export function dueReview(answers, day = today()) {
+  const out = [];
+  for (const [id, a] of Object.entries(answers || {})) {
+    if (a && typeof a.due === 'string' && a.due.length === 10 && a.due <= day) out.push([id, a.due]);
+  }
+  return out.sort((x, y) => x[1].localeCompare(y[1]) || x[0].localeCompare(y[0]))
+    .map(([id]) => id);
+}
+
+/** Count of questions due for review today (answers.due <= today). */
+export function dueReviewCount(answers, day = today()) {
+  return dueReview(answers, day).length;
+}
+
 export class ValidationError extends Error {
   constructor(message) {
     super(message);
@@ -259,6 +279,7 @@ export class ProgressService {
       stats: {
         answered,
         mastered,
+        reviewDue: dueReviewCount(d.answers),
         mistakes: d.mistakes.length,
         examsTaken: d.exams.length,
         examsPassed: passed,

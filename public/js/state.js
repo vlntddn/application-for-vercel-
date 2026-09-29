@@ -1,6 +1,6 @@
 import { api, detectMode } from './api.js';
 import { loadOverlays } from './domain/translations.js';
-import { REVIEW_INTERVALS, MASTERY_STREAK, addDays } from './domain/progress.js';
+import { REVIEW_INTERVALS, MASTERY_STREAK, addDays, dueReviewCount } from './domain/progress.js';
 
 /** Shared app state: progress snapshot plus cached static data. */
 export const state = {
@@ -126,6 +126,7 @@ function applyLocalAnswers(batch) {
   }
   d.stats.answered = Object.keys(d.answers).length;
   d.stats.mastered = Object.values(d.answers).filter((a) => a.streak >= MASTERY_STREAK).length;
+  d.stats.reviewDue = dueReviewCount(d.answers);
   d.stats.mistakes = d.mistakes.length;
 }
 
