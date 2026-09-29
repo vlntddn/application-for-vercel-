@@ -574,6 +574,14 @@ kbd {
 }
 
 .row:last-child { border-bottom: none; }
+/* S2.8a: icon + word status line (no color coding). */
+.row .ic { width: 20px; height: 20px; flex: none; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* S2.8a: "What erases it" list in the Your progress block. */
+.progress-erases { margin: 0 0 8px; }
+.progress-erases dt { font-weight: 700; margin-bottom: 4px; }
+.progress-erases dd { margin: 0 0 6px 0; padding-left: 20px; position: relative; font-size: 0.875rem; color: var(--ink-muted); }
+.progress-erases dd::before { content: "\2013"; position: absolute; left: 4px; }
 
 .tag {
   font-size: 0.75rem;

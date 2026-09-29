@@ -333,6 +333,24 @@ test('settings offers an install path on phones', () => {
   assert.match(install, /ADD TO HOME SCREEN/i);
 });
 
+test('settings explains where progress lives and how to back it up (S2.8a)', () => {
+  const settings = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'settings.js'), 'utf8');
+  // The "Your progress" block comes right after the profile panel.
+  assert.ok(settings.indexOf('YOUR PROGRESS') > -1, 'progress panel missing');
+  const clearCall = settings.slice(settings.indexOf("clear(root,"));
+  assert.ok(clearCall.indexOf("profilePanel") < clearCall.indexOf("progressPanel"),
+    'progress panel must come after the profile panel');
+  // The four erasing cases, and the last-backup date in localStorage.
+  assert.match(settings, /What erases it/);
+  assert.match(settings, /pp-last-backup/);
+  // Export/import buttons live in the block.
+  assert.match(settings, /Export backup/);
+  assert.match(settings, /Import backup/);
+  // The privacy strip links to the block.
+  const index = fs.readFileSync(path.join(ROOT, 'public', 'index.html'), 'utf8');
+  assert.match(index, /href="#\/settings"[^>]*>How it's kept/);
+});
+
 /* ---------------- phase 2.2: first guaranteed success ---------------- */
 
 // views.js is a browser module; shim the bare globals it touches at import

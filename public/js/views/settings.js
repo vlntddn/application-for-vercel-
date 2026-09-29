@@ -17,19 +17,28 @@ const DAILY_GOAL_CHOICES = [5, 10, 15, 20, 25, 30, 40, 50, 75, 100];
  * keep their progress. iOS clears storage for sites that were never added
  * to the Home Screen after about a week of no visits, so this is worth
  * saying out loud rather than hiding behind a green tick.
+ * (S2.8a: sentence case, icon + word instead of a colored tag.)
  */
 async function showStorageStatus(root) {
-  const note = root.querySelector('#storage-note');
-  if (!note) return;
+  const line = root.querySelector('#storage-status');
+  if (!line) return;
+  const word = line.querySelector('#storage-status-word');
   const { supported, persisted } = await requestPersistentStorage();
   if (persisted) {
-    note.textContent = 'PROTECTED — THIS BROWSER WILL KEEP YOUR PROGRESS. EXPORT A BACKUP BEFORE CHANGING DEVICE.';
+    word.textContent = 'Protected';
   } else if (supported) {
-    note.textContent =
-      'NOT PROTECTED YET — ADD THE APP TO YOUR HOME SCREEN, OR THE BROWSER MAY CLEAR IT AFTER A WEEK UNUSED. EXPORT A BACKUP TO BE SAFE.';
+    word.textContent = 'Not protected yet — add the app to your Home Screen';
   } else {
-    note.textContent = 'PROGRESS IS SAVED IN THIS BROWSER. EXPORT A BACKUP TO KEEP A COPY.';
+    word.textContent = 'Saved in this browser';
   }
+}
+
+/** Last export date — UI metadata, not progress; localStorage, try/catch. */
+function readLastBackup() {
+  try { return localStorage.getItem('pp-last-backup'); } catch { return null; }
+}
+function writeLastBackup(iso) {
+  try { localStorage.setItem('pp-last-backup', iso); } catch { /* private mode */ }
 }
 
 /** Downloads the whole progress snapshot as a dated JSON backup. */
@@ -49,16 +58,15 @@ function exportProgress(button) {
   });
   link.click();
   URL.revokeObjectURL(url);
-  const done = el('span.tag.ok', {}, 'BACKUP SAVED');
-  button.replaceWith(done);
-  setTimeout(() => done.replaceWith(button), 2500);
+  writeLastBackup(backup.exportedAt);
+  const line = button.closest('.panel').querySelector('#last-backup');
+  if (line) line.textContent = `Last backup: ${new Date(backup.exportedAt).toLocaleDateString()}`;
 }
 
 /** Replaces all progress with a backup file, after confirmation. */
-async function importProgressFile(picker, root) {
+async function importProgressFile(picker, root, box) {
   const file = picker.files?.[0];
   if (!file) return;
-  const box = document.getElementById('backup-actions');
   try {
     const parsed = JSON.parse(await file.text());
     const answers = Object.keys(parsed.answers || {}).length;
@@ -124,6 +132,24 @@ async function downloadForOffline(button) {
   }
 }
 
+/** Small shield glyph next to the storage status (icon + word, no color). */
+function shieldIcon() {
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('class', 'ic');
+  svg.setAttribute('fill', 'none');
+  svg.setAttribute('stroke', 'currentColor');
+  svg.setAttribute('stroke-width', '2');
+  svg.setAttribute('stroke-linecap', 'round');
+  svg.setAttribute('stroke-linejoin', 'round');
+  svg.setAttribute('aria-hidden', 'true');
+  const path = document.createElementNS(svgNS, 'path');
+  path.setAttribute('d', 'M12 3l8 3v6c0 4.5-3.2 7.7-8 9-4.8-1.3-8-4.5-8-9V6z');
+  svg.append(path);
+  return svg;
+}
+
 export function renderSettings(root) {
   const { profile } = state.progress;
   const nameInput = el('input', { id: 's-name', type: 'text', maxLength: 40, value: profile.name });
@@ -153,57 +179,76 @@ export function renderSettings(root) {
   );
   goalSelect.value = String(storedGoal);
 
-  clear(root,
-    el('h1', {}, 'SETTINGS'),
-    el('div.panel', {},
-      el('h2', {}, 'PROFILE'),
-      el('div.field', {}, el('label', { htmlFor: 's-name' }, 'YOUR NAME'), nameInput),
-      el('div.field', {}, el('label', { htmlFor: 's-lang' }, 'TRANSLATION LANGUAGE'), langSelect),
-      el('div.field', {}, el('label', { htmlFor: 's-theme' }, 'THEME'), themeSelect),
-      el('div.field', {}, el('label', { htmlFor: 's-sound' }, 'ANSWER SOUNDS'), soundSelect),
-      el('div.field', {}, el('label', { htmlFor: 's-goal' }, 'DAILY GOAL'), goalSelect),
-      el('div.actions', {},
-        el('button.btn.btn-primary', {
-          onclick: async (e) => {
-            try {
-              const { profile: updated } = await api.updateProfile({
-                name: nameInput.value,
-                language: langSelect.value,
-                theme: themeSelect.value,
-                sound: soundSelect.value === 'on',
-                dailyGoal: Number(goalSelect.value),
-              });
-              state.progress.profile = updated;
-              applyTheme();
-              renderSettings(root);
-            } catch (err) {
-              e.target.closest('.panel').prepend(errorBanner(err));
-            }
-          },
-        }, 'SAVE'),
+  // S2.8a: the user must see where progress lives and how to keep a copy
+  // before anything else. Facts, not marketing (roadmap S2.8a).
+  const lastBackup = readLastBackup();
+  const importBox = el('div.actions', { id: 'backup-actions' });
+  const progressPanel = el('div.panel', {},
+    el('h2', {}, 'YOUR PROGRESS'),
+    el('p.lede', {}, 'Your progress stays on this device. A website update never erases it — only these do.'),
+    el('div.row', { id: 'storage-status' },
+      shieldIcon(),
+      el('div', { style: 'flex:1' },
+        el('strong', {}, el('span', { id: 'storage-status-word' }, 'Checking…')),
+        el('p.stat-sub', { id: 'last-backup' }, `Last backup: ${lastBackup ? new Date(lastBackup).toLocaleDateString() : 'never'}`),
       ),
     ),
+    el('dl.progress-erases', {},
+      el('dt', {}, 'What erases it'),
+      el('dd', {}, 'Clearing this site’s data or browser history'),
+      el('dd', {}, 'Private or incognito mode — when the window closes'),
+      el('dd', {}, 'Safari on iPhone/iPad, after ~7 days without a visit, if the app is not on your Home Screen'),
+      el('dd', {}, 'It is not in any other browser or device — move it with a backup file'),
+    ),
+    el('div.actions', { id: 'progress-actions' },
+      el('button.btn.btn-primary', { onclick: (e) => exportProgress(e.target) }, 'Export backup'),
+      el('button.btn', {
+        onclick: (e) => {
+          const picker = el('input', {
+            type: 'file', accept: 'application/json,.json',
+            onchange: () => importProgressFile(picker, root, importBox),
+          });
+          picker.click();
+        },
+      }, 'Import backup'),
+    ),
+    importBox,
+  );
+  const profilePanel = el('div.panel', {},
+    el('h2', {}, 'PROFILE'),
+    el('div.field', {}, el('label', { htmlFor: 's-name' }, 'YOUR NAME'), nameInput),
+    el('div.field', {}, el('label', { htmlFor: 's-lang' }, 'TRANSLATION LANGUAGE'), langSelect),
+    el('div.field', {}, el('label', { htmlFor: 's-theme' }, 'THEME'), themeSelect),
+    el('div.field', {}, el('label', { htmlFor: 's-sound' }, 'ANSWER SOUNDS'), soundSelect),
+    el('div.field', {}, el('label', { htmlFor: 's-goal' }, 'DAILY GOAL'), goalSelect),
+    el('div.actions', {},
+      el('button.btn.btn-primary', {
+        onclick: async (e) => {
+          try {
+            const { profile: updated } = await api.updateProfile({
+              name: nameInput.value,
+              language: langSelect.value,
+              theme: themeSelect.value,
+              sound: soundSelect.value === 'on',
+              dailyGoal: Number(goalSelect.value),
+            });
+            state.progress.profile = updated;
+            applyTheme();
+            renderSettings(root);
+          } catch (err) {
+            e.target.closest('.panel').prepend(errorBanner(err));
+          }
+        },
+      }, 'SAVE'),
+    ),
+  );
+  clear(root,
+    el('h1', {}, 'SETTINGS'),
+    profilePanel,
+    progressPanel,
     el('div.panel', {},
       el('h2', {}, 'BACKUP'),
-      el('p.lede', {}, 'YOUR PROGRESS LIVES ON THIS MACHINE ONLY. KEEP A COPY, OR MOVE IT TO ANOTHER COMPUTER.'),
-      el('div.row', {},
-        el('div', { style: 'flex:1' },
-          el('strong', {}, 'STORAGE ON THIS DEVICE'),
-          el('p.stat-sub', { id: 'storage-note' }, 'CHECKING…'),
-        ),
-      ),
-      el('div.actions', { id: 'backup-actions' },
-        el('button.btn', { onclick: (e) => exportProgress(e.target) }, 'EXPORT TO FILE'),
-        el('button.btn', {
-          onclick: (e) => {
-            const picker = el('input', {
-              type: 'file', accept: 'application/json,.json',
-              onchange: () => importProgressFile(picker, root),
-            });
-            picker.click();
-          },
-        }, 'IMPORT FROM FILE'),
-      ),
+      el('p.lede', {}, 'Export and import your backup in the "Your progress" block above — it also tells you what erases your progress and when the last backup was.'),
     ),
     el('div.panel', { id: 'install-panel' }),
     el('div.panel', {},
