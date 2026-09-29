@@ -217,7 +217,7 @@ async function main() {
   await waitFor(`(document.getElementById('view')?.innerText||'').includes('HOW THE REAL EXAM WORKS')`, 'exam pre-start');
   txt = await viewText();
   check(/THIS IS PRACTICE, NOT THE OFFICIAL EXAM/i.test(txt), 'экзамен: честная строка «это тренировка»');
-  check(/30 RANDOM QUESTIONS/.test(txt) && /20 MINUTES/.test(txt) && /AT MOST 3 ERRORS/i.test(txt), 'экзамен: объясняет 30/20/3');
+  check(/30 RANDOM QUESTIONS/i.test(txt) && /20 MINUTES/i.test(txt) && /AT MOST 3 ERRORS/i.test(txt), 'экзамен: объясняет 30/20/3');
   await shot('08-exam-presstart.png');
   await click('BEGIN EXAM');
   await waitFor(`!!document.querySelector('#view .timer')`, 'exam running (timer)');

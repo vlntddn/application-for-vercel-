@@ -10,16 +10,16 @@ export async function renderExam(root) {
   clear(root,
     el('h1', {}, 'MOCK EXAM'),
     el('p.lede', {},
-      'THIS IS PRACTICE, NOT THE OFFICIAL EXAM — BUT THE FORMAT AND THE DIFFICULTY ARE IDENTICAL.'),
+      'This is practice, not the official exam — but the format and the difficulty are identical.'),
     el('div.panel', {},
       el('h2', {}, 'HOW THE REAL EXAM WORKS'),
-      el('p.stat-sub', {}, '30 RANDOM QUESTIONS ON SIGNS AND TRAFFIC RULES'),
-      el('p.stat-sub', {}, '20 MINUTES — THE TIMER STARTS THE MOMENT YOU BEGIN'),
-      el('p.stat-sub', {}, 'PASS WITH AT MOST 3 ERRORS — MORE, AND THE EXAM FAILS'),
-      el('p.stat-sub', {}, 'MOVE BACK AND FORTH BETWEEN QUESTIONS — UNANSWERED COUNTS AS WRONG'),
+      el('p.stat-sub', {}, '30 random questions on signs and traffic rules'),
+      el('p.stat-sub', {}, '20 minutes — the timer starts the moment you begin'),
+      el('p.stat-sub', {}, 'Pass with at most 3 errors — more, and the exam fails'),
+      el('p.stat-sub', {}, 'Move back and forth between questions — unanswered counts as wrong'),
       el('p.stat-sub', {},
-        'QUESTIONS ARE IN ITALIAN; ', el('kbd', {}, 'T'),
-        ' OR THE TRANSLATE BUTTON SHOWS YOUR LANGUAGE'),
+        'Questions are in Italian; ', el('kbd', {}, 'T'),
+        ' or the translate button shows your language'),
       el('div.actions', {},
         el('button.btn.btn-primary.btn-big', { onclick: start }, 'BEGIN EXAM'),
         el('a.btn', { href: '#/' }, 'NOT YET'),
@@ -28,12 +28,12 @@ export async function renderExam(root) {
   );
 
   async function start() {
-    clear(root, el('h1', {}, 'MOCK EXAM'), el('p.lede', { id: 'load-note' }, 'LOADING QUESTION BANK...'));
+    clear(root, el('h1', {}, 'MOCK EXAM'), el('p.lede', { id: 'load-note' }, 'Loading question bank...'));
     let all;
     try {
       all = await loadAllQuestions((done, total) => {
         const note = document.getElementById('load-note');
-        if (note) note.textContent = `LOADING QUESTION BANK... ${done}/${total}`;
+        if (note) note.textContent = `Loading question bank... ${done}/${total}`;
       });
     } catch (err) {
       return clear(root, errorBanner(err));
@@ -98,7 +98,7 @@ function runExam(root, questions) {
       (n, q, i) => n + (chosen[i] === q.is_true ? 0 : 1), 0);
     const passed = errors <= EXAM_MAX_ERRORS;
 
-    clear(root, el('h1', {}, 'MOCK EXAM'), el('p.lede', {}, 'SAVING RESULT...'));
+    clear(root, el('h1', {}, 'MOCK EXAM'), el('p.lede', {}, 'Saving result...'));
     // A finished exam must survive a network blip: both the result and
     // the answers go through the offline-capable queue.
     let synced = true;
@@ -117,12 +117,12 @@ function runExam(root, questions) {
       synced
         ? null
         : el('p.offline-note', { role: 'status' },
-            'OFFLINE — THIS RESULT IS SAVED ON THIS DEVICE AND WILL SYNC LATER'),
+            'Offline — this result is saved on this device and will sync later'),
       el('div.panel', { style: 'text-align:center' },
         el('h1', {}, passed ? 'PROMOSSO!' : 'BOCCIATO'),
         el('p.stat-value', { className: `stat-value ${passed ? 'ok' : 'accent'}` },
-          `${errors} ERRORS`),
-        el('p.lede', {}, `OUT OF ${questions.length} QUESTIONS (LIMIT: ${EXAM_MAX_ERRORS})`),
+          `${errors} errors`),
+        el('p.lede', {}, `out of ${questions.length} questions (limit: ${EXAM_MAX_ERRORS})`),
         el('div.actions', { style: 'justify-content:center' },
           el('button.btn.btn-primary', { onclick: () => renderExam(root) }, 'TRY AGAIN'),
           wrongOnes.length ? el('a.btn', { href: '#/mistakes' }, 'REVIEW MISTAKES') : null,

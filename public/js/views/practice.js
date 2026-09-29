@@ -47,7 +47,7 @@ export function renderPracticeList(root) {
   const answers = state.progress.answers;
   clear(root,
     el('h1', {}, 'PRACTICE'),
-    el('p.lede', {}, 'PICK A TOPIC. UNSEEN AND WRONG QUESTIONS COME FIRST.'),
+    el('p.lede', {}, 'Pick a topic. Unseen and wrong questions come first.'),
     el('div.actions', { style: 'margin-bottom:20px' },
       el('a.btn', { href: '#/search' }, '🔍 SEARCH ALL QUESTIONS'),
     ),
@@ -58,7 +58,7 @@ export function renderPracticeList(root) {
         const pct = Math.round((mastered / cat.count) * 100);
         return el('a.card', { href: `#/practice/${cat.slug}` },
           el('h2', {}, titleCase(cat.name)),
-          el('p.stat-sub', {}, `${mastered}/${cat.count} MASTERED (${pct}%)`),
+          el('p.stat-sub', {}, `${mastered}/${cat.count} mastered (${pct}%)`),
           el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${pct}%` })),
         );
       }),
@@ -177,7 +177,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     clear(root,
       offline
         ? el('p.offline-note', { role: 'status' },
-            'OFFLINE — ANSWERS SAVED ON THIS DEVICE, WILL SYNC WHEN THE SERVER IS BACK')
+            'Offline — answers saved on this device, will sync when the server is back')
         : null,
       el('div.quiz-head', {},
         el('a.btn', {
@@ -228,8 +228,8 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
 
 export async function renderPracticeSession(root, slug) {
   const cat = state.manifest.categories.find((c) => c.slug === slug);
-  if (!cat) return clear(root, el('p.empty-note', {}, 'TOPIC NOT FOUND'));
-  clear(root, el('h1', {}, titleCase(cat.name)), el('p.lede', {}, 'LOADING QUESTIONS...'));
+  if (!cat) return clear(root, el('p.empty-note', {}, 'Topic not found'));
+  clear(root, el('h1', {}, titleCase(cat.name)), el('p.lede', {}, 'Loading questions...'));
 
   let questions;
   try {
@@ -245,15 +245,15 @@ export async function renderPracticeSession(root, slug) {
   const queue = intro ?? pickQueue(questions, PRACTICE_BATCH);
 
   renderQuizSession(root, queue, {
-    title: titleCase(cat.name).toUpperCase(),
+    title: titleCase(cat.name),
     backHash: '#/practice',
     easyStart: intro !== null,
     onFinish: (correct, total) => {
       clear(root,
         el('div.panel', { style: 'text-align:center' },
-          el('h1', {}, 'SESSION COMPLETE'),
+          el('h1', {}, 'Session complete'),
           el('p.stat-value.ok', {}, `${correct}/${total}`),
-          el('p.lede', {}, 'CORRECT ANSWERS'),
+          el('p.lede', {}, 'Correct answers'),
           el('div.actions', { style: 'justify-content:center' },
             el('a.btn.btn-primary', { href: `#/practice/${slug}`, onclick: () => renderPracticeSession(root, slug) }, 'ONE MORE ROUND'),
             el('a.btn', { href: '#/practice' }, 'ALL TOPICS'),

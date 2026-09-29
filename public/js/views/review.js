@@ -14,13 +14,13 @@ import { renderQuizSession } from './practice.js';
 
 export async function renderMistakes(root) {
   const ids = state.progress.mistakes;
-  clear(root, el('h1', {}, 'MISTAKES REVIEW'), el('p.lede', {}, 'LOADING...'));
+  clear(root, el('h1', {}, 'MISTAKES REVIEW'), el('p.lede', {}, 'Loading...'));
 
   if (ids.length === 0) {
     return clear(root,
       el('h1', {}, 'MISTAKES REVIEW'),
       el('div.panel', {},
-        el('p.empty-note', {}, 'NO MISTAKES TO REVIEW. NICE WORK.'),
+        el('p.empty-note', {}, 'No mistakes to review. Nice work.'),
         el('div.actions', {}, el('a.btn.btn-primary', { href: '#/practice' }, 'GO PRACTICE')),
       ),
     );
@@ -72,7 +72,7 @@ const REVIEW_SIZE = 10;
  * longest time ago. New users just get a starter mix.
  */
 export async function renderQuickReview(root) {
-  clear(root, el('h1', {}, 'QUICK REVIEW'), el('p.lede', {}, 'BUILDING YOUR SESSION...'));
+  clear(root, el('h1', {}, 'QUICK REVIEW'), el('p.lede', {}, 'Building your session...'));
   const picked = new Map(); // id -> question
 
   async function resolveIds(ids) {
@@ -141,13 +141,13 @@ export async function renderQuickReview(root) {
     onQuit: () => { location.hash = '#/'; },
     onFinish: (correct, total) => {
       clear(root,
-        el('h1', {}, 'QUICK REVIEW DONE'),
+        el('h1', {}, 'Quick review done'),
         el('div.panel', {},
           el('p.stat-value', { className: `stat-value ${correct === total ? 'ok' : ''}` },
             `${correct}/${total}`),
           el('p.stat-sub', {}, correct === total
-            ? 'PERFECT. SAME TIME TOMORROW.'
-            : 'MISSES WENT TO YOUR MISTAKES LIST — THEY WILL COME BACK.'),
+            ? 'Perfect. Same time tomorrow.'
+            : 'Misses went to your mistakes list — they will come back.'),
           el('div.actions', { style: 'margin-top:16px' },
             el('a.btn.btn-primary', { href: '#/' }, 'DASHBOARD'),
             el('button.btn', { onclick: () => renderQuickReview(root) }, 'ONE MORE ROUND'),
