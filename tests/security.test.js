@@ -384,26 +384,24 @@ test('the dashboard shows a backup reminder with Export and Not now (S2.8a3)', (
   assert.match(css, /\.ds-callout__action/);
 });
 
-test('install reminder decision: iOS uninstalled only, 7-day dismissal (S2.8a4)', async () => {
+test('install reminder decision: uninstalled iOS only, 7-day dismissal (S2.8a4)', async () => {
   const { shouldSuggestInstallReminder, isIOSUserAgent } = await import('../public/js/views/common.js');
   const now = 1_700_000_000_000;
   const iOS = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15';
   const android = 'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36';
-  // iOS UA + standalone + uninstalled + never dismissed -> suggest.
-  assert.equal(shouldSuggestInstallReminder(iOS, true, false, null, now), true);
+  // iOS UA + not on the Home Screen + never dismissed -> suggest.
+  assert.equal(shouldSuggestInstallReminder(iOS, false, null, now), true);
   // Desktop or Android UA -> never suggest.
-  assert.equal(shouldSuggestInstallReminder('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)', true, false, null, now), false);
-  assert.equal(shouldSuggestInstallReminder(android, true, false, null, now), false);
+  assert.equal(shouldSuggestInstallReminder('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)', false, null, now), false);
+  assert.equal(shouldSuggestInstallReminder(android, false, null, now), false);
   assert.equal(isIOSUserAgent('iPad; CPU OS 16'), true);
   assert.equal(isIOSUserAgent('Linux; Android'), false);
-  // Not standalone (normal browser tab) -> no reminder.
-  assert.equal(shouldSuggestInstallReminder(iOS, false, false, null, now), false);
   // Already on the Home Screen -> no reminder.
-  assert.equal(shouldSuggestInstallReminder(iOS, true, true, null, now), false);
+  assert.equal(shouldSuggestInstallReminder(iOS, true, null, now), false);
   // Dismissed recently (< 7 days) -> silence; 7+ days ago -> back.
   const daysAgo = (d) => new Date(now - d * 86400000).toISOString();
-  assert.equal(shouldSuggestInstallReminder(iOS, true, false, daysAgo(2), now), false);
-  assert.equal(shouldSuggestInstallReminder(iOS, true, false, daysAgo(7), now), true);
+  assert.equal(shouldSuggestInstallReminder(iOS, false, daysAgo(2), now), false);
+  assert.equal(shouldSuggestInstallReminder(iOS, false, daysAgo(7), now), true);
 });
 
 test('dashboard renders the iOS install callout with Not now (S2.8a4)', () => {

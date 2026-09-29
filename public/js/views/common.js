@@ -151,13 +151,15 @@ export function isIOSUserAgent(ua) {
 }
 
 /**
- * Pure decision (unit-testable without a browser): true only on uninstalled
- * iOS Safari in standalone mode, and "Not now" was not pressed recently.
+ * Pure decision (unit-testable without a browser): true only for an uninstalled
+ * iPhone/iPad (not on the Home Screen) when "Not now" was not pressed within
+ * 7 days. `isInstalled` is the iOS Home-Screen signal (navigator.standalone /
+ * display-mode:standalone). The app's data-mode gate (server vs standalone)
+ * lives in the view, not here — in server mode progress is not at risk.
  */
-export function shouldSuggestInstallReminder(userAgent, standalone, installed, dismissedAt, now) {
+export function shouldSuggestInstallReminder(userAgent, isInstalled, dismissedAt, now) {
   if (!isIOSUserAgent(userAgent)) return false;
-  if (!standalone) return false;
-  if (installed) return false;
+  if (isInstalled) return false;
   if (dismissedAt) {
     const t = new Date(dismissedAt).getTime();
     if (!Number.isNaN(t) && now - t < INSTALL_REMINDER_DISMISS_MS) return false;

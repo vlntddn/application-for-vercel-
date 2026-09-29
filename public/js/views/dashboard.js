@@ -147,8 +147,11 @@ export function backupReminderPanel() {
  * Safari → one callout per week pointing at the Settings instructions.
  */
 export function installReminderPanel() {
+  // Server mode: progress lives on the server, Safari can't erase it.
   if (detectMode() !== MODE.standalone) return null;
-  if (!shouldSuggestInstallReminder(navigator.userAgent, true, isInstalled(), readInstallDismissed(), Date.now())) {
+  // isInstalled() is the iOS Home-Screen signal (navigator.standalone /
+  // display-mode:standalone); only nudge users who have NOT added the app.
+  if (!shouldSuggestInstallReminder(navigator.userAgent, isInstalled(), readInstallDismissed(), Date.now())) {
     return null;
   }
   return el('div.ds-callout', { id: 'install-reminder', style: 'margin-top:24px' },
