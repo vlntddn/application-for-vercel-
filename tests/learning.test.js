@@ -18,10 +18,17 @@ import {
   signalHintsEnabled,
   SIGNAL_HINTS_AUTO_LIMIT,
   mistakeCauses,
+  learningPath,
+  PATH_ORDER,
+  PATH_MINI_PASS,
+  PATH_MASTERY_PCT,
 } from '../public/js/domain/learning.js';
 
 const manifest = JSON.parse(
   fs.readFileSync(path.join(import.meta.dirname, '..', 'data', 'manifest.json'), 'utf8'),
+);
+const lessons = JSON.parse(
+  fs.readFileSync(path.join(import.meta.dirname, '..', 'data', 'lessons.json'), 'utf8'),
 );
 
 /** Deterministic PRNG (mulberry32) — stable order across runs/Node versions. */
@@ -319,4 +326,81 @@ test('mistakeCauses: tags each current mistake with signal/sign/number/rule', ()
 test('mistakeCauses: empty or null inputs produce empty result', () => {
   assert.deepEqual(mistakeCauses({}, [], null, null), { perQuestion: [], counts: { signal: 0, sign: 0, number: 0, rule: 0 } });
   assert.deepEqual(mistakeCauses(null, null, null, null), { perQuestion: [], counts: { signal: 0, sign: 0, number: 0, rule: 0 } });
+});
+
+// --- L5a — learning path model ------------------------------------------------
+
+const ALL_CHAPTERS = Object.keys(lessons.chapters);
+
+test('learningPath: one step per lesson chapter, ordered by PATH_ORDER then number', () => {
+  const { steps } = learningPath({}, manifest, lessons);
+  assert.equal(steps.length, ALL_CHAPTERS.length);
+  // core sequence comes first
+  assert.deepEqual(steps.slice(0, 9).map((s) => s.id), ['ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ch6', 'ch7', 'ch8', 'ch9']);
+  assert.deepEqual(steps.slice(9, 11).map((s) => s.id), ['ch12', 'ch13']);
+  // tail: the rest in chapter-number order
+  const tail = steps.slice(11).map((s) => s.id);
+  assert.deepEqual(tail, [...tail].sort((a, b) => Number(a.slice(3)) - Number(b.slice(3))));
+});
+
+test('learningPath: fresh progress — ch1 is ready, nothing done, not exam-ready', () => {
+  const p = learningPath({ answers: {}, theoryRead: [] }, manifest, lessons);
+  assert.equal(p.currentIndex, 0);
+  assert.equal(p.ready, false);
+  assert.equal(p.steps[0].id, 'ch1');
+  assert.equal(p.steps[0].status, 'ready');
+  assert.ok(p.steps.slice(1).every((s) => s.status === 'open'));
+  assert.equal(p.steps[0].name, manifest.categories.find((c) => c.slug === 'definizioni-generali-doveri-strada').name);
+});
+
+test('learningPath: read lesson marks the step done', () => {
+  const p = learningPath({ answers: {}, theoryRead: ['ch2'] }, manifest, lessons);
+  const step = p.steps.find((s) => s.id === 'ch2');
+  assert.equal(step.read, true);
+  assert.equal(step.status, 'done');
+  // ch1 still the first not-done step
+  assert.equal(p.currentIndex, 0);
+  assert.equal(p.steps[0].status, 'ready');
+});
+
+test('learningPath: mini-check >= 4/5 marks the step done (3 is not enough)', () => {
+  const atPass = learningPath({ answers: {}, theoryRead: [], chapters: { ch3: { check: PATH_MINI_PASS } } }, manifest, lessons);
+  assert.equal(atPass.steps.find((s) => s.id === 'ch3').status, 'done');
+  const belowPass = learningPath({ answers: {}, theoryRead: [], chapters: { ch3: { check: PATH_MINI_PASS - 1 } } }, manifest, lessons);
+  assert.equal(belowPass.steps.find((s) => s.id === 'ch3').status, 'open');
+});
+
+test('learningPath: mastery >= 80% of the topic bank marks the step done', () => {
+  const slug = 'definizioni-generali-doveri-strada';
+  const count = manifest.categories.find((c) => c.slug === slug).count;
+  const enough = Math.ceil((PATH_MASTERY_PCT / 100) * count);
+  const ok = (n) => Object.fromEntries(
+    Array.from({ length: n }, (_, i) => [`${slug}-q${i}`, { correct: 1, wrong: 0, lastCorrect: true }]),
+  );
+  const done = learningPath({ answers: ok(enough), theoryRead: [] }, manifest, lessons);
+  assert.equal(done.steps[0].status, 'done');
+  assert.equal(done.steps[0].masteryPct, PATH_MASTERY_PCT);
+  const notDone = learningPath({ answers: ok(enough - 1), theoryRead: [] }, manifest, lessons);
+  // 424/531 = 79.85% → still not done (the exact threshold, not the rounded display)
+  assert.equal(notDone.steps[0].status, 'ready');
+});
+
+test('learningPath: all steps done → currentIndex -1, ready true', () => {
+  const p = learningPath({ answers: {}, theoryRead: [...ALL_CHAPTERS] }, manifest, lessons);
+  assert.equal(p.ready, true);
+  assert.equal(p.currentIndex, -1);
+  assert.ok(p.steps.every((s) => s.status === 'done'));
+});
+
+test('learningPath: tolerates missing/null inputs without throwing', () => {
+  const p = learningPath(null, null, null);
+  assert.equal(p.steps.length, 0);
+  assert.equal(p.ready, true);
+  assert.equal(p.currentIndex, -1);
+});
+
+test('learningPath: unknown chapters (e.g. ch99 in theoryRead) are never produced as steps', () => {
+  const { steps } = learningPath({ answers: {}, theoryRead: ['ch99'] }, manifest, lessons);
+  assert.ok(steps.every((s) => ALL_CHAPTERS.includes(s.id)));
+  assert.equal(steps.length, ALL_CHAPTERS.length);
 });

@@ -2,6 +2,10 @@
 // Runs in browser and Node 18+ (tests). Randomness is injected via `rand`
 // (a 0..1 function) so order-dependent tests stay deterministic.
 
+// L5a — chapter→topic mapping (pure data, no view imports), used by
+// learningPath() below.
+import { CHAPTER_CATEGORY } from '../theory-map.js';
+
 const DEFAULT_RAND = Math.random;
 
 /** Fisher–Yates shuffle (new array) driven by the injected `rand`. */
@@ -361,5 +365,76 @@ export function numberSpans(text, tokens) {
   segs.push({ text: text.slice(best.start, best.end), mark: true });
   if (best.end < text.length) segs.push({ text: text.slice(best.end), mark: false });
   return segs;
+}
+
+
+/**
+ * Recommended order of the learning path. First eight groups follow the
+ * exam's core sequence (definitions → danger/prohibition/obligation signs →
+ * priority → markings → traffic lights → speed/distance → overtaking →
+ * stopping); everything not listed here comes after, chapter number order.
+ */
+export const PATH_ORDER = [
+  'ch1', 'ch2', 'ch3', 'ch4', 'ch5', 'ch6', 'ch7', 'ch8', 'ch9',
+  'ch12', 'ch13',
+];
+
+/** Self-check quiz passes the path step at 4 of 5. */
+export const PATH_MINI_PASS = 4;
+/** Topic mastery counts as "done" from 80% of the bank. */
+export const PATH_MASTERY_PCT = 80;
+
+function orderedChapters(lessons) {
+  const all = Object.keys(lessons?.chapters || {});
+  const rest = all
+    .filter((id) => !PATH_ORDER.includes(id))
+    .sort((a, b) => Number(a.slice(3)) - Number(b.slice(3)));
+  return [...PATH_ORDER.filter((id) => all.includes(id)), ...rest];
+}
+
+/**
+ * L5a — the learning path as a flat list of steps, one per chapter, in
+ * recommended order. Per step:
+ * - `read` — the lesson is marked read (`progress.theoryRead`);
+ * - `check` — the chapter's self-check quiz last passed with at least 4/5
+ *   (`progress.chapters[id] = { check: N }`);
+ * - `masteryPct` — coverage of the linked topic's bank
+ *   (last-correct answers / bank count, `masteryOf` semantics);
+ * - `status` — 'done' when any of read/check/mastery holds (soft: nothing
+ *   is blocked), 'ready' for the first not-done step, 'open' otherwise.
+ * `ready` is true while every step is done (exam ready).
+ */
+export function learningPath(progress, manifest, lessons) {
+  const steps = orderedChapters(lessons).map((id) => {
+    const slug = CHAPTER_CATEGORY[id];
+    const cat = (manifest?.categories || []).find((c) => c.slug === slug) || null;
+    const m = masteryOf(progress?.answers || {}, slug, cat?.count || 0);
+    const read = (progress?.theoryRead || []).includes(id);
+    const check = progress?.chapters?.[id]?.check || 0;
+    // Exact (unrounded) 80% threshold: at 531 questions, 424/531 is
+    // 79.85% → not done, even though the rounded display says "80%".
+    const masteryDone = cat?.count ? m.mastered * 100 >= PATH_MASTERY_PCT * cat.count : false;
+    const done = read || check >= PATH_MINI_PASS || masteryDone;
+    return {
+      id,
+      chapter: Number(id.slice(3)),
+      slug,
+      name: cat?.name || id,
+      read,
+      check,
+      mastered: m.mastered,
+      masteryPct: m.pct,
+      done,
+      // status assigned below: only the first not-done step is 'ready'
+      status: done ? 'done' : 'open',
+    };
+  });
+  const current = steps.find((s) => !s.done) || null;
+  if (current) current.status = 'ready';
+  return {
+    steps,
+    currentIndex: current ? steps.indexOf(current) : -1,
+    ready: current === null,
+  };
 }
 
