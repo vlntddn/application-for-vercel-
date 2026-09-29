@@ -475,6 +475,7 @@ export async function renderExamItalian(root) {
     ),
     el('div.actions', {},
       el('a.btn.btn-primary', { href: '#/practice' }, 'APPLY IT — PRACTICE NOW'),
+      el('a.btn', { href: '#/drill/signals' }, 'SIGNAL-WORD DRILL'),
     ),
   );
 }

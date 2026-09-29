@@ -2,6 +2,9 @@
 // Practice screens live in views/practice.js (Sprint 1, S1.11).
 export { introQueue, renderPracticeList, renderQuizSession, renderPracticeSession } from './views/practice.js';
 
+/* Signal-word drill lives in views/drill.js (L1c). */
+export { renderSignalDrill } from './views/drill.js';
+
 /* ============================== ONBOARDING ================ */
 export { renderOnboarding } from './views/onboarding.js';
 

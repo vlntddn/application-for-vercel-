@@ -11,6 +11,9 @@ import {
   introQueue,
   INTRO_QUESTIONS,
   INTRO_TEXT_LEN,
+  hasSignalWord,
+  signalQueue,
+  signalSpans,
 } from '../public/js/domain/learning.js';
 
 const manifest = JSON.parse(
@@ -171,4 +174,75 @@ test('shuffled is a pure permutation and respects injected rand', () => {
   assert.deepEqual(a, b);
   assert.deepEqual([...a].sort((x, y) => x - y), list);
   assert.notDeepEqual(a, list);
+});
+
+test('hasSignalWord: word boundaries, case, accents and phrases', () => {
+  assert.equal(hasSignalWord('Deve sempre frenare', 'sempre'), true);
+  assert.equal(hasSignalWord('Maiolati e mai dire', 'mai'), true); // word boundary
+  assert.equal(hasSignalWord('Maiolati', 'mai'), false);
+  assert.equal(hasSignalWord('PUÒ andare', 'può'), true); // case
+  assert.equal(hasSignalWord('Purchè non piove', 'purché'), true); // accents folded
+  assert.equal(hasSignalWord('Non oltre i 90', 'non oltre'), true); // phrase
+  assert.equal(hasSignalWord('Non oltranza', 'non oltre'), false);
+});
+
+test('signalQueue: ~50/50 FALSO/VERO mix, tagged, no duplicates', () => {
+  const insights = { words: [{ word: 'solo' }, { word: 'mai' }] };
+  const questions = [
+    q('solo-f1', { text_it: 'Solo i taxi possono', is_true: false }),
+    q('solo-f2', { text_it: 'Ecco solo un caso', is_true: false }),
+    q('solo-t1', { text_it: 'Solo questo è vero', is_true: true }),
+    q('solo-t2', { text_it: 'Solo il gatto', is_true: true }),
+    q('mai-f1', { text_it: 'Mai superare', is_true: false }),
+    q('mai-t1', { text_it: 'Mai più di 50', is_true: true }),
+    q('other-1', { text_it: 'Nessun segnale qui', is_true: false }),
+  ];
+  const order = signalQueue(questions, insights, 6, rand32());
+  assert.equal(order.length, 6);
+  const falses = order.filter((x) => x.is_true === false);
+  const trues = order.filter((x) => x.is_true === true);
+  assert.equal(falses.length, 3);
+  assert.equal(trues.length, 3);
+  assert.ok(order.every((x) => ['solo', 'mai'].includes(x.signalWord)));
+  assert.ok(!order.some((x) => x.id === 'other-1'));
+  assert.equal(new Set(order.map((x) => x.id)).size, 6);
+});
+
+test('signalQueue: does not pad when the bank holds fewer questions', () => {
+  const insights = { words: [{ word: 'solo' }] };
+  const questions = [
+    q('solo-f1', { text_it: 'Solo i taxi', is_true: false }),
+    q('solo-t1', { text_it: 'Solo questo', is_true: true }),
+    q('solo-t2', { text_it: 'Solo il gatto', is_true: true }),
+  ];
+  const order = signalQueue(questions, insights, 20, rand32());
+  assert.equal(order.length, 3);
+  assert.equal(new Set(order.map((x) => x.id)).size, 3);
+});
+
+test('signalSpans: marks the first occurrence of the signal word', () => {
+  const segs = signalSpans('Solo i taxi possono', ['solo']);
+  assert.deepEqual(segs, [
+    { text: 'Solo', mark: true },
+    { text: ' i taxi possono', mark: false },
+  ]);
+});
+
+test('signalSpans: ignores accents and case, keeps original text', () => {
+  const segs = signalSpans('La città è chiusa', ['città']);
+  assert.deepEqual(segs, [
+    { text: 'La ', mark: false },
+    { text: 'città', mark: true },
+    { text: ' è chiusa', mark: false },
+  ]);
+});
+
+test('signalSpans: does not match substrings inside other words', () => {
+  const segs = signalSpans('Il sole splende', ['solo']);
+  assert.deepEqual(segs, [{ text: 'Il sole splende', mark: false }]);
+});
+
+test('signalSpans: empty text or no words yields one plain segment', () => {
+  assert.deepEqual(signalSpans('', ['solo']), [{ text: '', mark: false }]);
+  assert.deepEqual(signalSpans('Mai qui', []), [{ text: 'Mai qui', mark: false }]);
 });

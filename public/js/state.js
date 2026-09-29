@@ -8,6 +8,7 @@ export const state = {
   theory: null,
   dictionary: null,
   lessons: null,
+  insights: null,
   questionsBySlug: new Map(),
 };
 
@@ -36,6 +37,11 @@ export async function loadDictionary() {
 export async function loadLessons() {
   if (!state.lessons) state.lessons = await api.lessons();
   return state.lessons;
+}
+
+export async function loadInsights() {
+  if (!state.insights) state.insights = await api.insights();
+  return state.insights;
 }
 
 export async function loadQuestions(slug) {

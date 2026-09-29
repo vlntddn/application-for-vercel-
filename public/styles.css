@@ -1130,6 +1130,27 @@ details.word-true[open] summary { color: var(--muted); }
 
 .tag.accent-tag { background: var(--accent); color: var(--on-accent); }
 
+/* L1c — signal-word drill: highlighted word + post-answer note */
+mark.ds-signal {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  padding: 0 2px;
+  border-bottom: 3px solid var(--accent);
+}
+.signal-notes { margin-top: 12px; display: grid; gap: 4px; }
+.signal-ratio {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--accent-ink, #8a6100);
+}
+.signal-true {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--ink);
+  font-weight: 600;
+}
+
 /* ---------- Search ---------- */
 
 .search-sign {
@@ -1451,3 +1472,26 @@ main:focus { outline: none; }
 
 /* Report a problem — quiet link under the after-answer actions. */
 .report-link { display: inline-block; margin-top: 8px; font-size: 14px; line-height: 20px; color: var(--ink-muted); text-decoration: underline; text-underline-offset: 3px; }
+
+
+/* L1c — тренажёр «Язык экзамена»: подсветка слова-сигнала + заметки в Feedback */
+mark.ds-signal {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  border-radius: 3px;
+  padding: 0 3px;
+  font-weight: 800;
+}
+.signal-notes { margin-top: var(--space-2); }
+.signal-ratio {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-ink);
+  margin: 0 0 4px;
+}
+.signal-true {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--ok);
+  margin: 0;
+}

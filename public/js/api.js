@@ -56,6 +56,7 @@ const staticApi = {
   theory: () => request('/data/theory.json'),
   dictionary: () => request('/data/dictionary.json'),
   lessons: () => request('/data/lessons.json'),
+  insights: () => request('/data/insights/signal-words.json'),
   questions: (slug) => request(`/data/questions/${slug}.json`),
 };
 

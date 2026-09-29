@@ -88,3 +88,98 @@ export function introQueue(questions, { answers = {}, batch = 20, count = INTRO_
   const introIds = new Set(intro.map((q) => q.id));
   return [...intro, ...queueOrder(questions.filter((q) => !introIds.has(q.id)), answers, batch - count, rand)];
 }
+
+/** Accent-insensitive lowercase — "Purché" normalizes to "purch". */
+function normalizeText(it) {
+  return (it || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+/** Does `word` (as written in signal-words.json) occur in `text`?
+ *  Accent-folded word-boundary match: "mai" matches "Mai" but not
+ *  "maimai"; the phrase "purché" matches "Purchè"/"Purché". */
+export function hasSignalWord(text, word) {
+  const pattern = normalizeText(word);
+  const re = new RegExp(`(^|[^a-z0-9])${pattern}([^a-z0-9]|$)`, 'g');
+  re.lastIndex = 0;
+  return re.test(normalizeText(text));
+}
+
+/**
+ * Drill «Язык экзамена» (L1c) queue: `count` bank questions that contain a
+ * signal word, ~50/50 between FALSO traps and VERO counter-examples, and
+ * with as many distinct signal words as the pools allow (no two in a row
+ * share a word). Each question is tagged `{ ...q, signalWord }`.
+ * Returns fewer than `count` when the bank holds less — never pads.
+ */
+export function signalQueue(questions, insights, count = 20, rand = DEFAULT_RAND) {
+  const words = (insights?.words || []).map((w) => w.word);
+  const falseByWord = new Map();
+  const trueByWord = new Map();
+  for (const q of questions) {
+    const word = words.find((w) => hasSignalWord(q.text_it, w));
+    if (!word) continue;
+    const pool = q.is_true ? trueByWord : falseByWord;
+    if (!pool.has(word)) pool.set(word, []);
+    pool.get(word).push(q);
+  }
+  const queue = [];
+  let lastWord = null;
+  for (let i = 0; i < count; i++) {
+    // Alternate sides so the mix stays ~50/50; when one side is empty
+    // take the other, still preferring a new word.
+    const sides = i % 2 === 0
+      ? [falseByWord, trueByWord]
+      : [trueByWord, falseByWord];
+    let chosen = null;
+    for (const byWord of sides) {
+      const candidates = [...byWord.entries()]
+        .filter(([w]) => w !== lastWord)
+        .map(([w, arr]) => [w, arr]);
+      if (candidates.length) {
+        const pick = shuffled(candidates, rand)[0][1].shift();
+        if (pick) { chosen = pick; break; }
+      }
+    }
+    if (!chosen) {
+      // Allow a repeated word as a last resort, then any side.
+      for (const byWord of sides) {
+        const arr = [...byWord.values()].find((a) => a.length);
+        if (arr) { chosen = arr.shift(); break; }
+      }
+    }
+    if (!chosen) break;
+    const word = words.find((w) => hasSignalWord(chosen.text_it, w));
+    queue.push({ ...chosen, signalWord: word });
+    lastWord = word;
+  }
+  return queue;
+}
+
+/**
+ * L1c — разметка слов-сигналов в тексте вопроса (чистая, без DOM):
+ * возвращает сегменты `{ text, mark }` — кусок текста и флаг «это слово-сигнал».
+ * Подсвечивается самое первое вхождение; акценты игнорируются при поиске,
+ * в сегментах — оригинальный текст.
+ */
+export function signalSpans(text, words) {
+  if (!text || !words.length) return [{ text: text ?? '', mark: false }];
+  const norm = (x) => x.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const n = norm(text);
+  if (n.length !== text.length) return [{ text, mark: false }];
+  let best = null; // { start, end }
+  for (const w of words) {
+    const re = new RegExp(`(^|[^a-z0-9])${norm(w)}([^a-z0-9]|$)`, 'gi');
+    const m = re.exec(n);
+    if (m) {
+      const start = m.index + (m[1] ? m[1].length : 0);
+      const end = start + norm(w).length;
+      if (!best || start < best.start) best = { start, end };
+    }
+  }
+  if (!best) return [{ text, mark: false }];
+  const segs = [];
+  if (best.start) segs.push({ text: text.slice(0, best.start), mark: false });
+  segs.push({ text: text.slice(best.start, best.end), mark: true });
+  if (best.end < text.length) segs.push({ text: text.slice(best.end), mark: false });
+  return segs;
+}

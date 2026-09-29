@@ -276,6 +276,7 @@ export function renderDashboard(root) {
         el('a.btn.btn-primary.btn-big', { href: '#/exam' }, 'START MOCK EXAM'),
         el('a.btn', { href: '#/review' }, `QUICK REVIEW — ${REVIEW_SIZE} QUESTIONS`),
         el('a.btn', { href: '#/practice' }, 'PRACTICE BY TOPIC'),
+        el('a.btn', { href: '#/drill/signals' }, 'THE LANGUAGE OF THE EXAM'),
         el('a.btn', { href: '#/theory' }, 'READ THEORY'),
         el('a.btn', { href: '#/stats' }, 'PROGRESS & STATS'),
         stats.mistakes > 0
