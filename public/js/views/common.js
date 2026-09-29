@@ -137,6 +137,42 @@ const BACKUP_MIN_ANSWERS = 50;
 const BACKUP_STALE_MS = 14 * 24 * 60 * 60 * 1000;
 const BACKUP_DISMISS_MS = 7 * 24 * 60 * 60 * 1000;
 
+/*
+ * Install reminder (S2.8a4). The wipe risk it warns about: in standalone
+ * mode progress lives in this browser, and Safari on iPhone/iPad erases
+ * site data after ~7 days when the app is not on the Home Screen. Server
+ * mode is out of scope — its progress.json is not touched by the browser.
+ */
+export const INSTALL_REMINDER_DISMISS_MS = 7 * 24 * 3600 * 1000;
+
+/** iOS device in the user agent (iPhone/iPad/iPod). */
+export function isIOSUserAgent(ua) {
+  return typeof ua === 'string' && /iphone|ipad|ipod/i.test(ua);
+}
+
+/**
+ * Pure decision (unit-testable without a browser): true only on uninstalled
+ * iOS Safari in standalone mode, and "Not now" was not pressed recently.
+ */
+export function shouldSuggestInstallReminder(userAgent, standalone, installed, dismissedAt, now) {
+  if (!isIOSUserAgent(userAgent)) return false;
+  if (!standalone) return false;
+  if (installed) return false;
+  if (dismissedAt) {
+    const t = new Date(dismissedAt).getTime();
+    if (!Number.isNaN(t) && now - t < INSTALL_REMINDER_DISMISS_MS) return false;
+  }
+  return true;
+}
+
+export function readInstallDismissed() {
+  try { return localStorage.getItem('pp-install-dismissed'); } catch { return null; }
+}
+
+export function writeInstallDismissed() {
+  try { localStorage.setItem('pp-install-dismissed', new Date().toISOString()); } catch { /* private mode */ }
+}
+
 /**
  * Decide whether the home screen should nudge a backup export (S2.8a3).
  * Pure: all inputs by argument, `now` (ms) injected for testability.

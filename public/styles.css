@@ -710,6 +710,8 @@ kbd {
 }
 
 .ds-callout__icon .ic { width: 28px; height: 28px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+/* Alert tone (S2.8a4): bad-soft block with a triangle, per Callout spec. */
+.ds-callout__icon--bad { background: var(--bad-soft); color: var(--bad); }
 
 .ds-callout__body { flex: 1; display: grid; gap: 2px; padding: var(--space-3) var(--space-4); }
 

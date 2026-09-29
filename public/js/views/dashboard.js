@@ -1,9 +1,12 @@
 import { state } from '../state.js';
-import { el, clear, fmtDate, titleCase } from '../ui.js';
+import { el, clear, fmtDate, titleCase, svgIcon } from '../ui.js';
+import { detectMode, MODE } from '../api.js';
+import { isInstalled } from '../install.js';
 import {
   dailyGoal, categoryStats, PRACTICE_BATCH,
   shouldSuggestBackup, readLastBackup, readBackupDismissed,
   writeBackupDismissed, exportProgressSnapshot,
+  shouldSuggestInstallReminder, readInstallDismissed, writeInstallDismissed,
 } from './common.js';
 import { dayKey, weekStrip } from './stats.js';
 
@@ -139,6 +142,30 @@ export function backupReminderPanel() {
   );
 }
 
+/**
+ * iOS install reminder (S2.8a4): standalone mode + uninstalled iPhone/iPad
+ * Safari → one callout per week pointing at the Settings instructions.
+ */
+export function installReminderPanel() {
+  if (detectMode() !== MODE.standalone) return null;
+  if (!shouldSuggestInstallReminder(navigator.userAgent, true, isInstalled(), readInstallDismissed(), Date.now())) {
+    return null;
+  }
+  return el('div.ds-callout', { id: 'install-reminder', style: 'margin-top:24px' },
+    el('div.ds-callout__icon.ds-callout__icon--bad', {}, svgIcon('warn')),
+    el('div.ds-callout__body', {},
+      el('span.ds-callout__title', {}, 'iPhone'),
+      el('p.ds-callout__text', {},
+        'On iPhone, Safari may erase your progress after a week away. Add Passo to your Home Screen. ',
+        el('a', { href: '#/settings' }, 'How to install'),
+      ),
+    ),
+    el('div.ds-callout__action', {},
+      el('button.btn', { onclick: (e) => { writeInstallDismissed(); e.target.closest('.ds-callout').remove(); } }, 'Not now'),
+    ),
+  );
+}
+
 export function renderDashboard(root) {
   const { profile, stats, exams } = state.progress;
   const total = state.manifest.totalQuestions;
@@ -155,8 +182,9 @@ export function renderDashboard(root) {
     el('h1', {}, profile.name ? `CIAO, ${profile.name}` : 'CIAO'),
     el('p.lede', {}, 'Ready for the exam? Keep the streak alive.'),
 
-    // One callout per section: the backup reminder goes right under the
-    // greeting, before the week panel (S2.8a3).
+    // One callout per section: install alert (iOS), then the backup
+    // reminder; both sit under the greeting, before the week panel.
+    installReminderPanel(),
     backupReminderPanel(),
 
     // The habit, at a glance: which of the last seven days you studied.

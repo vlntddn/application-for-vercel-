@@ -384,6 +384,43 @@ test('the dashboard shows a backup reminder with Export and Not now (S2.8a3)', (
   assert.match(css, /\.ds-callout__action/);
 });
 
+test('install reminder decision: iOS uninstalled only, 7-day dismissal (S2.8a4)', async () => {
+  const { shouldSuggestInstallReminder, isIOSUserAgent } = await import('../public/js/views/common.js');
+  const now = 1_700_000_000_000;
+  const iOS = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15';
+  const android = 'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36';
+  // iOS UA + standalone + uninstalled + never dismissed -> suggest.
+  assert.equal(shouldSuggestInstallReminder(iOS, true, false, null, now), true);
+  // Desktop or Android UA -> never suggest.
+  assert.equal(shouldSuggestInstallReminder('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)', true, false, null, now), false);
+  assert.equal(shouldSuggestInstallReminder(android, true, false, null, now), false);
+  assert.equal(isIOSUserAgent('iPad; CPU OS 16'), true);
+  assert.equal(isIOSUserAgent('Linux; Android'), false);
+  // Not standalone (normal browser tab) -> no reminder.
+  assert.equal(shouldSuggestInstallReminder(iOS, false, false, null, now), false);
+  // Already on the Home Screen -> no reminder.
+  assert.equal(shouldSuggestInstallReminder(iOS, true, true, null, now), false);
+  // Dismissed recently (< 7 days) -> silence; 7+ days ago -> back.
+  const daysAgo = (d) => new Date(now - d * 86400000).toISOString();
+  assert.equal(shouldSuggestInstallReminder(iOS, true, false, daysAgo(2), now), false);
+  assert.equal(shouldSuggestInstallReminder(iOS, true, false, daysAgo(7), now), true);
+});
+
+test('dashboard renders the iOS install callout with Not now (S2.8a4)', () => {
+  const dashboard = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'dashboard.js'), 'utf8');
+  const common = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'common.js'), 'utf8');
+  assert.ok(dashboard.includes('installReminderPanel()'), 'callout not rendered');
+  assert.ok(dashboard.includes('shouldSuggestInstallReminder'), 'decision not driven by the pure function');
+  assert.ok(dashboard.includes('isInstalled'), 'must check navigator.standalone/installed');
+  assert.ok(dashboard.includes('detectMode'), 'server mode must be excluded');
+  assert.match(dashboard, /Not now/);
+  assert.match(dashboard, /How to install/);
+  assert.match(dashboard, /href: '#\/settings'/, 'must link to the Settings instructions');
+  assert.ok(common.includes('pp-install-dismissed'), 'dismissal must be stored in localStorage');
+  const css = fs.readFileSync(path.join(ROOT, 'public', 'styles.css'), 'utf8');
+  assert.match(css, /\.ds-callout__icon--bad/);
+});
+
 /* ---------------- phase 2.2: first guaranteed success ---------------- */
 
 // views.js is a browser module; shim the bare globals it touches at import

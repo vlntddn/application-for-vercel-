@@ -35,7 +35,12 @@ export function svgIcon(kind) {
   svg.setAttribute('stroke-linejoin', 'round');
   svg.setAttribute('aria-hidden', 'true');
   const path = document.createElementNS(svgNS, 'path');
-  path.setAttribute('d', kind === 'check' ? 'M4 12.5l5 5 11-11' : 'M6 6l12 12M18 6L6 18');
+  const d = kind === 'check'
+    ? 'M4 12.5l5 5 11-11'
+    : kind === 'warn'
+      ? 'M12 4L2.5 20h19L12 4zm0 5.5v4.5m0 3v.5'
+      : 'M6 6l12 12M18 6L6 18';
+  path.setAttribute('d', d);
   svg.append(path);
   return svg;
 }
