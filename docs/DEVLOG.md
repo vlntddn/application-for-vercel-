@@ -1,3 +1,53 @@
+## 2026-09-29 11:35 — S2.8a3: Напоминание о бэкапе на главной (callout Export / Not now)
+
+Что сделано (код — 8c46662):
+- **public/js/views/common.js**: новая чистая функция
+  `shouldSuggestBackup(stats, lastBackupAt, dismissedAt, now)` —
+  true только если ответов ≥ 50, бэкапа нет 14+ дней (или никогда)
+  и «Not now» не было 7+ дней. Константы `BACKUP_MIN_ANSWERS=50`,
+  `BACKUP_STALE_MS=14д`, `BACKUP_DISMISS_MS=7д`; ISO-строка сравнивается
+  через `new Date(...).getTime()` (null/битая дата → null → условие
+  «никогда»). Хелперы бэкапа вынесены из settings.js в общий модуль:
+  `readLastBackup`/`writeLastBackup` (localStorage `pp-last-backup`,
+  try/catch), `readBackupDismissed`/`writeBackupDismissed`
+  (`pp-backup-dismissed`), `exportProgressSnapshot()` (скачивает JSON
+  снапшот, пишет дату экспорта, возвращает ISO).
+- **public/js/views/settings.js**: локальные `readLastBackup`/
+  `writeLastBackup`/`exportProgress` удалены — блок Your progress теперь
+  импортирует `readLastBackup` и `exportProgressSnapshot` из common.js
+  (поведение то же: скачать файл + обновить «Last backup: <дата>»).
+- **public/js/views/dashboard.js**: `backupReminderPanel()` — callout
+  `.ds-callout` (иконка-щит в жёлтом слоте `--warn`/`--on-warn`,
+  заголовок «Backup», текст «Save a backup copy — your progress lives only
+  in this browser.», кнопки Export / Not now). Рендерится в
+  `renderDashboard` сразу под greeting, до панели недели (одно callout —
+  одна секция). Export → `exportProgressSnapshot()` + снять callout;
+  Not now → `writeBackupDismissed()` + снять callout.
+- **public/styles.css**: блок `.ds-callout` по спецификации
+  design-system (flex, `--surface`, `--border-3` solid ink, `--shadow-sm`;
+  `__icon` 56px сеткой по центру, `__action` справа, mobile: wrap +
+  action во всю ширину снизу).
+- **public/sw.js**: VERSION v53 → v54.
+- **tests/security.test.js**: новый тест `shouldSuggestBackup` (5
+  случаев + граница 49/50) и тест присутствия callout (панель рендерится,
+  чистая функция, текст, «Not now», `pp-backup-dismissed`, CSS). Старый
+  тест S2.8a поправлен: `pp-last-backup` теперь ищется в common.js
+  (хелперы переехали), в settings.js проверяется импорт `readLastBackup`.
+
+Почему: приоритет владельца 2026-09-29 — пользователь не должен
+потерять прогресс из-за незнания. Напоминание на главной — точка
+наибольшего касания: увидел достаточно ответов → один раз попросить
+сохранить копию; «Not now» не досаждает (7 дней), свежий бэкап не
+напоминает (14 дней). Экспорт теперь один общий — без дублей кода.
+
+Как проверено: `node --check` по 3 JS-файлам OK;
+`node --test tests/security.test.js` — 25/25; `scripts/verify.sh` →
+VERIFY OK (npm test 90 passed, smoke 8/8, qa-new-user 37 PASS);
+qa-ux: 173 PASS / 3 FAIL — те же 3 что до правок (next-steps,
+review-кнопки; не в settings/dashboard-callout) — не хуже.
+
+Осталось по S2.8a: S2.8a4 (callout iPhone/iPad, один раз в неделю).
+
 ## 2026-09-29 10:45 — S2.8a1 + S2.8a2: Блок «Your progress» в Settings и ссылка «How it's kept»
 
 Что сделано (код — 4b02324):

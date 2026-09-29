@@ -293,13 +293,18 @@ README компонента задачи. Эталонные стили — `doc
 - [x] **S2.8a2 Плашка приватности:** «Your progress stays on this device» —
       ссылка «How it's kept» → `#/settings` к блоку из (a1). Выполнено
       2026-09-29 вместе с S2.8a1 (коммит 4b02324).
-- [ ] **S2.8a3 Напоминание о бэкапе на главной:** если ответов ≥ 50 и бэкапа не
+- [x] **S2.8a3 Напоминание о бэкапе на главной:** если ответов ≥ 50 и бэкапа не
       было 14+ дней (или никогда) — Callout «Save a backup copy — your progress
       lives only in this browser» + кнопка Export, «Not now» скрывает на 7 дней.
       Условие — чистая функция `shouldSuggestBackup(stats, lastBackupAt,
       dismissedAt, now)` в `public/js/views/common.js` + тест (5 случаев).
       *Проверка:* verify OK; qa-ux не хуже; тест shouldSuggestBackup;
       qa-new-user зелёный (он проходит онбординг и настройки).
+      Выполнено 2026-09-29 (коммит 8c46662): `shouldSuggestBackup` + общие
+      хелперы `readLastBackup`/`writeLastBackup`/`exportProgressSnapshot`/
+      `pp-backup-dismissed` вынесены в common.js (Settings теперь переиспользует
+      их), callout на главной ниже greeting, `.ds-callout` в styles.css,
+      sw.js v54, 2 новых теста (25/25, всего 90 PASS).
 - [ ] **S2.8a4 iPhone/iPad без установки** (`navigator.standalone === false` и
       iOS в userAgent, только standalone-режим сайта): на главной один раз в
       неделю Callout-alert «On iPhone, Safari may erase your progress after
