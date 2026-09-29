@@ -1,3 +1,36 @@
+## 2026-09-29 — L4: «Числа, которые надо знать» — таблица-справка + тренажёр #/numbers
+
+Что сделано (коммит `feat: L4 — … #/numbers (L4)` на self-improve):
+- **scripts/build-numbers.mjs** (новый): из data/lessons.json берёт все
+  mustKnow-строки, чей value содержит число (токены: km/h, м, ‰, баллы/пункты,
+  годы, метры, сек), собирает per-chapter счётчик вопросов банка, содержащих эти
+  числа. Детерминированный — штамп contentHash; повторный запуск не меняет файл.
+  Вывод: data/insights/numbers.json (18 строк таблицы, 20 числовых токенов).
+- **data/insights/numbers.json** (новый): таблица по темам + токены с
+  распределением FALSO/VERO в банке.
+- **public/js/views/numbers.js** (новый): renderNumbers — экран #/numbers.
+  State 1: таблица-справка (тема → факт → значение, число выделено
+  num-highlight). State 2: тренажёр 20 вопросов FALSO/VERO с числами
+  (numbersQueue, ~50/50, нет двух одинаковых чисел подряд), подсветка числа,
+  feedback, звук, NEXT/FINISH.
+- **public/js/domain/learning.js**: numbersQueue(questions, numbers, size) —
+  выборка 50/50 FALSO/VERO с допусками под кособокость банка (230 F / 182 T),
+  numberSpans(text, tokens) — разметка первого числового токена.
+- **public/js/api.js**: endpoint numbers(). **public/js/state.js**:
+  loadNumbers(). **public/js/views.js** + **public/js/main.js**: маршрут
+  #/numbers. **public/js/views/dashboard.js**: кнопка «THE NUMBERS YOU MUST KNOW».
+- **public/styles.css**: блок .numbers-table (тема/факт/значение, полосатые
+  строки, num-highlight). **public/sw.js**: v66 → v67, numbers.js в SHELL.
+- **tests/numbers.test.js** (новый, 5 тестов): hasNumber-границы, numbersQueue
+  (50/50, не падает, детерминизм при rand), numberSpans, «файл = скрипт»
+  (execFileSync build-numbers.mjs → файл не меняется) и согласованность с
+  lessons.json.
+
+Как проверено: npm test — 137 passed / 0 fail; verify.sh — VERIFY OK
+(incl. «no public/ changes needing a sw.js bump», smoke 8 endpoints 200).
+Тест «файл = скрипт» подтверждает, что закоммиченный numbers.json воспроизводится
+скриптом. Экран #/numbers, кнопка на главной, offline (SW shell v67, /data/ SWR).
+
 ## 2026-09-29 — L3: «Почему я ошибаюсь» — причины на /#/mistakes
 
 Что сделано (коммиты `feat: L3 — ...` и `docs: L3 ...` на self-improve):
