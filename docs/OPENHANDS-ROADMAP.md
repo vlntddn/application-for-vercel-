@@ -307,12 +307,19 @@ README компонента задачи. Эталонные стили — `doc
       `pp-backup-dismissed` вынесены в common.js (Settings теперь переиспользует
       их), callout на главной ниже greeting, `.ds-callout` в styles.css,
       sw.js v54, 2 новых теста (25/25, всего 90 PASS).
-- [ ] **S2.8a4 iPhone/iPad без установки** (`navigator.standalone === false` и
+- [x] **S2.8a4 iPhone/iPad без установки** (`navigator.standalone === false` и
       iOS в userAgent, только standalone-режим сайта): на главной один раз в
-      неделю Callout-alert «On iPhone, Safari may erase your progress after
+      неделю Callout-alert       «On iPhone, Safari may erase your progress after
       a week away. Add Passo to your Home Screen» + ссылка на существующую
       инструкцию установки в Settings. *Проверка:* verify OK; qa-ux не хуже;
       qa-new-user зелёный.
+      Выполнено 2026-09-29 (коммиты 2d92429, 7ad6c8b): чистая функция
+      `shouldSuggestInstallReminder(userAgent, isInstalled, dismissedAt, now)`
+      в common.js (iOS UA + не на Home Screen + «Not now» > 7 дней назад),
+      callout `installReminderPanel()` на главной под greeting, только в
+      standalone-режиме (в server-режиме прогресс на сервере); иконка
+      `warn`-треугольник в svgIcon(), `.ds-callout__icon--bad` в styles.css,
+      sw.js v54→v55, 2 новых теста (27/27, всего 92 PASS), qa-ux 173/3 как до.
 **Порядок (решение владельца 2026-09-29):** S2.8a4 → S2.9–S2.12 → **Спринт L** →
 S2.14–S2.15 (перенесены в конец Спринта L) → Спринт 2.5.
 

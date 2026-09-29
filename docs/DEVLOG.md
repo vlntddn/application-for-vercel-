@@ -1,3 +1,58 @@
+## 2026-09-29 13:20 — S2.8a4: Callout iPhone/iPad без установки на Home Screen
+
+Что сделано (код — 2d92429, 7ad6c8b):
+- **public/js/views/common.js**: чистая функция
+  `shouldSuggestInstallReminder(userAgent, isInstalled, dismissedAt, now)` —
+  true только если iOS UA (iPhone/iPad/iPod), приложение НЕ на Home Screen
+  и «Not now» не было 7+ дней назад. `isIOSUserAgent(ua)`, хелперы
+  `readInstallDismissed`/`writeInstallDismissed` (localStorage
+  `pp-install-dismissed`, ISO-строка, try/catch), константа
+  `INSTALL_REMINDER_DISMISS_MS` = 7 дней. ISO-дата сравнения — тот же
+  приём, что в S2.8a3 (`new Date(...).getTime()`, null/битая → null →
+  «никогда»).
+- **public/js/views/dashboard.js**: `installReminderPanel()` под greeting
+  (до practice-секций): только standalone-режим сайта (`detectMode() !==
+  MODE.standalone` → null — в server-режиме прогресс на сервере, Safari
+  стирать нечего). Контент по spec S2.8a3: `ds-callout` +
+  `ds-callout__icon--bad` (треугольник, bad-soft блок) + title «iPhone» +
+  текст «On iPhone, Safari may erase your progress after a week away.
+  Add Passo to your Home Screen. Your progress stays on this device.» +
+  `ds-callout__actions`: кнопка `Not now` (пишет timestamp, панель
+  исчезает) и ссылка `How to install` → `#/settings` (инструкции уже
+  есть, S2.8a1).
+- **public/js/ui.js**: `svgIcon('warn')` — треугольный alert (path
+  `M12 9v4 ... m0 3v.5`), stroke как у остальных иконок.
+- **public/styles.css**: `.ds-callout__icon--bad { background: var(--bad-soft);
+  color: var(--bad); }` — alert-tone по Callout-спецификации.
+- **public/sw.js**: VERSION v54 → v55 (менялись public-файлы).
+- **tests/security.test.js**: 2 новых теста — 9 случаев чистой функции
+  (iOS/desktop/android, installed/not, dismissal 2 дня vs 7 дней) и
+  смоук-тест рендера (id, кнопки, ссылка, tone-класс, ключ
+  `pp-install-dismissed`).
+
+Почему так: Safari на iPhone/iPad в обычном режиме (без Home Screen)
+стирает данные сайта через ~7 дней простоя — прогресс ученика теряется
+молча. Callout один раз в неделю, только для реально затронутых
+(не установленное приложение), с выходом (Not now). На iOS единственный
+источник правды об установке — `navigator.standalone` /
+`display-mode:standalone` (это и есть `isInstalled()` из install.js);
+отдельный параметр standalone у функции не нужен — второй коммит
+(7ad6c8b) убрал мёртвый параметр и сузил сигнатуру до 4 аргументов.
+
+Как проверено:
+- `node --check` на common.js, dashboard.js, ui.js — чисто.
+- `node --test tests/security.test.js` — 27/27 (до: 25).
+- `npm test` — 92 PASS.
+- `bash scripts/verify.sh origin/self-improve` — VERIFY OK (8/8).
+- `node scripts/qa-ux.mjs` — 173 PASS / 3 FAIL, ровно как до изменений
+  (те же 3 baseline-FAIL, регрессий нет).
+- Ручной сценарий: чистый iPhone 15 в Safari (не standalone, UA с
+  iPhone) → на главной виден callout; «Not now» → скрыт, в
+  localStorage `pp-install-dismissed` ISO-дата; повторный заход — нет;
+  «How to install» → Settings, секция установки видна.
+
+---
+
 ## 2026-09-29 11:35 — S2.8a3: Напоминание о бэкапе на главной (callout Export / Not now)
 
 Что сделано (код — 8c46662):
