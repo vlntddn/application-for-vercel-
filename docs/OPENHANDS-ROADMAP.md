@@ -257,7 +257,7 @@ README компонента задачи. Эталонные стили — `doc
       `storage/progress.json`, не fixed, с кнопкой «Got it» (скрытие —
       в localStorage в try/catch). Тест онбординга должен остаться зелёным.
       *Цель:* p4 = 0 FAIL.
-- [ ] **S2.6 Кнопки** (`components/Button`): primary = `accent` + ЧЁРНЫЙ текст
+- [x] **S2.6 Кнопки** (`components/Button`): primary = `accent` + ЧЁРНЫЙ текст
       (`on-accent`), hover — подъём и `surface-sunken` (не жёлтый), press —
       «проваливание» в тень, фокус — синий `focus` 3px, мин. 48×48.
       *Цель:* p2 ↓, p5 ↓.

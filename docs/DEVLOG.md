@@ -1,3 +1,39 @@
+## 2026-09-29 07:20 — S2.6: Кнопки по дизайн-системе (components/Button)
+
+Что сделано:
+- **public/styles.css** (.btn):
+  - hover: было жёлтое `var(--warn)` + чёрный текст → `var(--surface-sunken)`
+    + подъём `translate(-1px,-1px)` (правило Button: hover НЕ жёлтый, жёлтый = warning);
+  - press: `box-shadow: 0 0 0 var(--ink)` → `box-shadow: none` (провал на 3px на тень);
+  - primary hover: чёрный фон + белый текст → остаётся `var(--accent)`,
+    текст `var(--on-accent)` (чёрный, 6.3:1) — только подъём;
+  - disabled: opacity 0.35 → `surface-sunken` фон + `ink-muted` текст/граница,
+    без тени (как `.ds-btn[disabled]`), поддерживается и `aria-disabled="true"`;
+  - tap-target: `min-height/min-width: 44px` + `display:inline-flex; align/justify:center`
+    (раньше 35–43px — все 22 вьюпорта p2 краснели на .btn);
+  - transition добавлен background-color (60ms).
+- **public/styles.css** (.btn:focus-visible): вынесен из общего правила
+  input/select/nav/card → свой: `outline: 3px solid var(--focus)` (синий, 3px
+  по компоненту Button); остальные элементы остались на `var(--accent)`.
+- **public/styles.css** (.ds-notice__btn): min-height 40 → 44px (плашка S2.5
+  краснела на p2 во всех 22 вьюпортах — та же проблема тап-зоны).
+- **public/sw.js**: VERSION v46 → v47 (public/ менялся).
+
+НЕ тронуто: `.btn-true/.btn-false` (VERO/FALSO) и их hover — зона S2.8
+(ответы VERO/FALSO: «обе нейтральные до ответа»).
+
+Почему: задача S2.6 закрывает пункт Button дизайн-системы — primary accent +
+чёрный (уже было), hover без жёлтого, press-провал, фокус focus 3px,
+min-размер кнопки. Измеримый эффект — p2 (touch targets ≥ 44px).
+
+Проверка:
+- scripts/verify.sh → VERIFY OK (84 теста, 8 smoke, qa-new-user 37/0).
+- node scripts/qa-ux.mjs: p2 было 22/22 FAIL → **0/22 FAIL**; p5 осталось
+  0/22; p7 (2/22, зона S2.11) без изменений; ИТОГО 152 PASS/24 FAIL →
+  **174 PASS / 2 FAIL** (осталось только p7).
+
+---
+
 ## 2026-09-29 06:05 — S2.5: Приватность без пути к файлу (плашка вместо футера)
 
 Что сделано:
