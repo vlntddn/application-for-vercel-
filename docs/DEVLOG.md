@@ -1,6 +1,33 @@
 # DEVLOG — Passo (последнее сверху)
 
 
+## 2026-09-30 — L6b: Повторение — экран (due-first очередь + счётчик на главной)
+
+Что сделано (коммит `feat: повторение — очередь due-first и «N cards to review today» на главной (L6b)` на self-improve):
+- **public/js/domain/progress.js** — `dueReview(answers, day)`: чистая
+  выборка вопросов с `due ≤ сегодня`, по возрастанию due (самые просроченные
+  первыми), записи без `due` (до-L6a) пропускаются; `dueReviewCount()` —
+  та же выборка, длина. `snapshot()`: в stats добавлено `reviewDue`.
+- **public/js/views/review.js** — `renderQuickReview`: шаг 0 собирает
+  due-вопросы (до ошибок/слабых тем), финальная очередь = due-карточки
+  в порядке due + остальное перемешано позади; `REVIEW_SIZE` не меняется.
+- **public/js/views/dashboard.js** — `reviewDuePanel()`: карточка
+  «N cards to review today» (ds-классы, кнопка «Review now» → #/review),
+  показывается только при `answered > 0` и `reviewDue > 0` — новичок её не
+  видит. Вставлена между stats-рядом и weak-spots панелью.
+- **public/js/state.js** — `applyLocalAnswers` (офлайн-ветка) считает
+  `stats.reviewDue` через `dueReviewCount`, иначе в offline-режиме счётчик
+  бы затёрся при следующем ответе.
+- **sw.js**: v70 → v71 (public/ изменился; все задействованные файлы уже в
+  SHELL-листе).
+- **tests/progress.test.js**: `dueReview` на микс-ответе (просроченный/
+  сегодня/будущий/без due → ровно [просроченный, сегодня]), `reviewDue` в
+  snapshot: 0 на пустом, 0 после свежих ответов (due завтра), 2 после
+  симуляции наступления due.
+Проверено: verify.sh — 157 тестов PASS, qa-new-user 42/42, smoke 8/8,
+sw-bump PASS, protected paths нетронуты → VERIFY OK.
+
+
 ## 2026-09-30 — L6a: Повторение — данные (streak/due)
 
 Что сделано (коммит `feat: повторение — streak/due по ответам, mastered = 2 подряд (L6a)` на self-improve):
