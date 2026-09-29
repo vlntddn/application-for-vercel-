@@ -1,5 +1,33 @@
 # DEVLOG — Passo (последнее сверху)
 
+
+## 2026-09-29 — L5b: Путь обучения — экран `#/path`
+
+Что сделано (коммит `feat: экран пути обучения #/path — карточки шагов, Continue, запись self-check в прогресс (L5b)` на self-improve):
+- **public/js/views/path.js** (новый) — `renderPath`: карточка на каждый шаг
+  (25 глав, `PATH_ORDER`), «Step N of 25», пайплайн Read → Check → Practice
+  с отметкой текущей фазы, кнопка «Continue» ведёт в нужную часть шага
+  (`pathContinueTarget`: Read → `#/theory/<id>`, Check → `#/theory/<id>/check`,
+  Practice → практика темы); завершённые шаги — с отметкой done, готовность
+  `ready` → карточка «Start a mock exam». `pathLinkCard` — карточка-ссылка
+  первой на главной («Step N of 25 — <тема>», «0 of 25 steps done»).
+- **public/js/main.js / views.js** — маршрут `#/path`, реэкспорт `renderPath`,
+  `pathLinkCard`. **dashboard.js** — `renderDashboard` стал async, вставляет
+  `pathLinkCard` первой.
+- **Запись self-check в прогресс** (без неё статус шага не двигался):
+  `api.recordChapterCheck` + `POST /api/progress/chapters` +
+  `recordChapterCheck` в `domain/progress.js`/`local-progress.js`
+  (`chapters[id].check = { correct, total, date }`); theory.js пишет результат
+  чек-а (5 вопросов = `PATH_CHECK_QUESTIONS`), `#/theory/<id>/check` сразу
+  открывает чек.
+- **tests**: learning/progress — тесты recordChapterCheck; security.test.js —
+  `renderDashboard` теперь async (строчный маркер). **sw.js**: v68 → v69.
+- **qa-new-user.mjs** — новый шаг «путь ведёт новичка в урок 1»:
+  `#/path` рендерит заголовок, первый шаг — «Step 1 of 25», Continue новичка
+  ведёт в `#/theory/ch1`; `#/path` добавлен в список маршрутов.
+- **Как проверено:** verify — 149 unit-тестов, smoke 8 эндпоинтов,
+  qa-new-user 42 PASS / 0 FAIL (VERIFY OK).
+
 ## 2026-09-29 — L5a: Путь обучения — модель `learningPath()`
 
 Что сделано (коммит `feat: L5a — модель пути обучения learningPath … (L5a)` на self-improve):
