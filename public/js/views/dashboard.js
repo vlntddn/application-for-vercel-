@@ -11,6 +11,7 @@ import {
   shouldSuggestInstallReminder, readInstallDismissed, writeInstallDismissed,
 } from './common.js';
 import { dayKey, weekStrip } from './stats.js';
+import { examReadiness } from '../domain/learning.js';
 
 const EXAM_QUESTIONS = 30;
 const EXAM_SECONDS = 20 * 60;
@@ -161,6 +162,31 @@ export function reviewDuePanel() {
 }
 
 /**
+ * "Chance to pass now" panel (L7). Shown once the learner has at least
+ * EXAM_READINESS_MIN_ANSWERS distinct answers. The estimate is honest — it
+ * says so in the caption. `biggestGain` names the topic whose improvement to
+ * 90% mastery lifts the estimate the most.
+ */
+export function examReadinessPanel() {
+  const r = examReadiness(state.progress.answers, state.manifest.categories);
+  if (!r.ready) return null;
+  const gain = r.biggestGain;
+  return el('div.ds-card', { id: 'dashboard-exam-readiness' },
+    el('div.ds-card__top', {},
+      el('span.ds-card__eyebrow', {}, 'Exam readiness'),
+      el('span.ds-tag', {}, r.passPct >= 70 ? 'ready' : 'working'),
+    ),
+    el('h3.ds-card__title', {}, `Chance to pass now: ~${r.passPct}%`),
+    gain
+      ? el('p.ds-card__sub', {},
+          `Biggest gain: ${topicLabel({ slug: gain.slug, name: gain.name })} (+${gain.gainPct}%)`)
+      : null,
+    el('p.ds-card__sub', { style: 'opacity:.65;font-size:.82em' },
+      'estimate from your answers, not a guarantee'),
+  );
+}
+
+/**
  * "Until the exam" panel: what to fix next, computed from real data —
  * the weakest attempted topics (accuracy < 70%) and pending mistakes.
  * Shown once at least one mock exam exists.
@@ -301,6 +327,7 @@ export async function renderDashboard(root) {
       ? nextStepsPanel()
       : statsRow(week, daysThisWeek, answeredToday, goal, stats, total),
     stats.answered > 0 ? reviewDuePanel() : null,
+    examReadinessPanel(),
     exams.length > 0
       ? weakSpotsPanel()
       : null,

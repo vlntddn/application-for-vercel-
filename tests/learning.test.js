@@ -23,6 +23,8 @@ import {
   PATH_MINI_PASS,
   PATH_MASTERY_PCT,
   nextStepAction,
+  examReadiness,
+  EXAM_READINESS_MIN_ANSWERS,
 } from '../public/js/domain/learning.js';
 import { CHAPTER_CATEGORY } from '../public/js/theory-map.js';
 
@@ -436,4 +438,60 @@ test('learningPath: continue target — fresh step is read', () => {
   const { steps } = learningPath({ answers: {}, theoryRead: [], chapters: {} }, manifest, lessons);
   // First step is 'ready' and unread → continue means "read".
   assert.equal(nextStepAction(steps[0]), 'read');
+});
+
+// --- L7 — exam readiness ------------------------------------------------------
+
+test('examReadiness: below 150 distinct answers → not ready', () => {
+  const r = examReadiness({ 'segnali-precedenza-a': { correct: 1, wrong: 0, lastCorrect: true } }, manifest.categories);
+  assert.equal(r.ready, false);
+  assert.equal(r.answers, 1);
+  assert.equal(r.needed, EXAM_READINESS_MIN_ANSWERS);
+});
+
+test('examReadiness: perfect learner → > 95%', () => {
+  // Covers every category; enough volume that Laplace smoothing stops
+  // dominating, so the estimate reflects real mastery.
+  const answers = {};
+  for (const cat of manifest.categories) {
+    for (let i = 0; i < 30; i++) {
+      answers[`${cat.slug}-q${i}`] = { correct: 1, wrong: 0, lastCorrect: true };
+    }
+  }
+  assert.equal(Object.keys(answers).length, manifest.categories.length * 30);
+  const r = examReadiness(answers, manifest.categories);
+  assert.equal(r.ready, true);
+  assert.ok(r.passPct > 95, `expected > 95%, got ${r.passPct}`);
+});
+
+test('examReadiness: ~50% error learner → < 1%', () => {
+  const answers = {};
+  let n = 0;
+  for (const cat of manifest.categories) {
+    for (let i = 0; i < 12 && n < 200; i++) {
+      const wrong = n % 2 === 0;
+      answers[`${cat.slug}-q${i}`] = { correct: wrong ? 0 : 1, wrong: wrong ? 1 : 0, lastCorrect: !wrong };
+      n++;
+    }
+  }
+  const r = examReadiness(answers, manifest.categories);
+  assert.equal(r.ready, true);
+  assert.ok(r.passPct < 1, `expected < 1%, got ${r.passPct}`);
+});
+
+test('examReadiness: biggestGain names the weakest topic', () => {
+  const answers = {};
+  const weak = manifest.categories[1];
+  for (const cat of manifest.categories) {
+    for (let i = 0; i < 30; i++) {
+      // Weak topic: only 3 of 30 correct. Every other topic: 27 of 30 correct.
+      const wrong = cat.slug === weak.slug ? i >= 3 : i >= 27;
+      answers[`${cat.slug}-q${i}`] = { correct: wrong ? 0 : 1, wrong: wrong ? 1 : 0 };
+    }
+  }
+  const r = examReadiness(answers, manifest.categories);
+  assert.equal(r.ready, true);
+  assert.ok(r.biggestGain, 'expected a biggest gain topic');
+  assert.equal(r.biggestGain.slug, weak.slug);
+  assert.ok(r.biggestGain.gainPct >= 1);
 });

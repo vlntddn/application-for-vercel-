@@ -72,6 +72,80 @@ export function categoryStats(answers, categories) {
   });
 }
 
+// L7 — exam readiness model. Defaults mirror the mock exam constants.
+export const EXAM_QUESTIONS = 30;
+export const EXAM_MAX_ERRORS = 3;
+export const EXAM_READINESS_MIN_ANSWERS = 150;
+
+/** P(X ≤ k) for X ~ Binomial(n, p) — cumulative binomial. */
+function binomLEq(n, k, p) {
+  if (p <= 0) return 1;
+  if (p >= 1) return k >= n ? 1 : 0;
+  const q = 1 - p;
+  let sum = 0;
+  let c = 1;
+  for (let i = 0; i <= Math.min(k, n); i++) {
+    c = i === 0 ? 1 : c * ((n - i + 1) / i);
+    sum += c * Math.pow(p, i) * Math.pow(q, n - i);
+  }
+  return sum;
+}
+
+/**
+ * Pass-chance estimate from the learner's own answers.
+ *
+ * Per-topic error rate = (wrong + 1) / (attempts + 2) (Laplace smoothing, so
+ * untried questions count as mistakes). The ticket is proportional to topic
+ * sizes (same as shuffling the whole bank), so the per-question error rate is
+ * the size-weighted mean, and P(≤ 3 of 30 wrong) is binomial over it.
+ *
+ * `attempts` = distinct questions tried. Returns `{ ready: false, answers,
+ * needed }` below EXAM_READINESS_MIN_ANSWERS, otherwise `{ ready: true,
+ * passPct, biggestGain: { slug, name, gainPct } | null }` — the topic whose
+ * improvement to 90% mastery lifts the estimate the most (gain ≥ 1 pt).
+ */
+export function examReadiness(answers, categories, { minAnswers = EXAM_READINESS_MIN_ANSWERS } = {}) {
+  const entries = Object.entries(answers || {});
+  const totalAnswers = entries.length;
+  if (totalAnswers < minAnswers) {
+    return { ready: false, answers: totalAnswers, needed: minAnswers };
+  }
+
+  const total = categories.reduce((s, c) => s + c.count, 0) || 1;
+  const compute = (fix) => {
+    let p = 0;
+    for (const cat of categories) {
+      let attempts = 0;
+      let wrong = 0;
+      for (const [id, a] of entries) {
+        if (!id.startsWith(`${cat.slug}-`)) continue;
+        attempts += 1;
+        wrong += a.wrong;
+      }
+      const r = fix?.[cat.slug] ?? (wrong + 1) / (attempts + 2);
+      p += r * (cat.count / total);
+    }
+    return p;
+  };
+
+  const passPct = Math.round(binomLEq(EXAM_QUESTIONS, EXAM_MAX_ERRORS, compute()) * 100);
+
+  // Biggest gain: which topic, improved to 90% mastery (error 0.1), moves
+  // the estimate the most?
+  const MASTERY_TARGET = 0.1;
+  let best = null;
+  for (const cat of categories) {
+    const fix = { [cat.slug]: MASTERY_TARGET };
+    const p2 = compute(fix);
+    const gain = Math.round(binomLEq(EXAM_QUESTIONS, EXAM_MAX_ERRORS, p2) * 100) - passPct;
+    if (gain >= 1 && (!best || gain > best.gainPct)) {
+      best = { slug: cat.slug, name: cat.name, gainPct: gain };
+    }
+  }
+
+  return { ready: true, passPct, biggestGain: best };
+}
+
 // Defaults for the intro on-ramp (kept here so the view wrapper is thin).
 export const INTRO_QUESTIONS = 5;
 export const INTRO_TEXT_LEN = 120;
