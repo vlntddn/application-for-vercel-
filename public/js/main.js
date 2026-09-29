@@ -63,6 +63,17 @@ function route() {
     if (active) a.setAttribute('aria-current', 'page');
     else a.removeAttribute('aria-current');
   }
+  // S2.7: on phones the Settings tab lives behind the masthead gear — keep it
+  // highlighted too so the current page is never ambiguous.
+  const gear = document.querySelector('.settings-gear');
+  if (gear) gear.classList.toggle('active', match.r.name === 'settings');
+  // S2.7: the Mistakes tab shows the count of open mistakes (badge).
+  const badge = document.getElementById('nav-mistakes-badge');
+  if (badge) {
+    const n = (state.progress.mistakes || []).length;
+    badge.textContent = n > 99 ? '99+' : String(n);
+    badge.hidden = n === 0;
+  }
   window.scrollTo(0, 0);
   match.r.render(match.m);
 }

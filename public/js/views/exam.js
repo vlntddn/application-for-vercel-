@@ -43,6 +43,8 @@ export async function renderExam(root) {
 }
 
 function runExam(root, questions) {
+  // S2.7: hide the fixed bottom bar while the timed exam runs.
+  document.body.classList.add('in-session');
   const chosen = new Array(questions.length).fill(null);
   let index = 0;
   let secondsLeft = EXAM_SECONDS;
@@ -56,6 +58,7 @@ function runExam(root, questions) {
     finished = true;
     clearInterval(interval);
     document.removeEventListener('keydown', keyHandler);
+    document.body.classList.remove('in-session');
   }, { once: true });
   const interval = setInterval(() => {
     if (finished) return clearInterval(interval);
@@ -94,6 +97,7 @@ function runExam(root, questions) {
     finished = true;
     clearInterval(interval);
     document.removeEventListener('keydown', keyHandler);
+    document.body.classList.remove('in-session');
     const errors = questions.reduce(
       (n, q, i) => n + (chosen[i] === q.is_true ? 0 : 1), 0);
     const passed = errors <= EXAM_MAX_ERRORS;

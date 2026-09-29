@@ -172,6 +172,21 @@ body {
 
 .accent { color: var(--accent-ink); }
 
+/* S2.7: Settings gear in the masthead -- phones only (bar has five tabs) */
+.settings-gear {
+  display: none;
+  align-self: flex-start;
+  color: var(--ink);
+  border: var(--border);
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.settings-gear svg { width: 24px; height: 24px; display: block; }
+.settings-gear:hover { background: var(--surface-sunken); }
+.settings-gear.active { background: var(--ink); color: var(--on-ink); }
+
 .nav {
   display: flex;
   gap: 0;
@@ -183,6 +198,7 @@ body {
   color: var(--ink);
   text-decoration: none;
   font-size: 0.75rem;
+  text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 0.04em;
   padding: 8px 14px;
@@ -196,8 +212,29 @@ body {
 .nav svg { width: 22px; height: 22px; display: block; }
 
 .nav a:last-child { border-right: none; }
-.nav a:hover { background: var(--warn); color: #000; }
-.nav a.active { background: var(--ink); color: var(--paper); }
+.nav a { position: relative; }
+
+/* S2.7: count of open mistakes on the Mistakes tab */
+.nav-badge {
+  position: absolute;
+  top: 2px;
+  left: calc(50% + 2px);
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bad);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1;
+  border-radius: 9px;
+}
+.nav a:hover { background: var(--surface-sunken); }
+.nav a.active { background: var(--ink); color: var(--on-ink); }
 
 main {
   flex: 1;
@@ -270,6 +307,7 @@ a.card:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
 
 .stat-value.ok { color: var(--ok); }
 .stat-value.accent { color: var(--accent-ink); }
+
 .stat-sub { font-size: 0.875rem; font-weight: 500; color: var(--muted); margin-top: 6px; }
 
 .bar {
@@ -579,10 +617,14 @@ kbd {
   main { padding: 20px 14px calc(96px + env(safe-area-inset-bottom, 0px)); }
 
   .masthead {
-    justify-content: center;
+    /* S2.7: brand left, Settings gear right (nav is a fixed bottom bar) */
+    justify-content: space-between;
     padding: 12px 16px;
     padding-top: calc(12px + env(safe-area-inset-top, 0px));
   }
+  /* S2.7: 44px touch target without growing the 64px masthead —
+     negative margins keep the box at 40px while the hit area stays 44px */
+  .settings-gear { display: block; margin: -12px 0; }
 
   .brand__name { font-size: 22px; line-height: 1; } /* wordmark --sm */
 
@@ -598,19 +640,28 @@ kbd {
     border-top: var(--border);
     background: var(--surface);
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    /* S2.7: five tabs on phones -- Settings sits behind the masthead gear */
+    grid-template-columns: repeat(5, 1fr);
     /* The bar must reach the physical bottom edge: without these insets
        iOS leaves a strip below it where the page shows through. */
     padding-bottom: env(safe-area-inset-bottom, 0px);
     padding-left: env(safe-area-inset-left, 0px);
     padding-right: env(safe-area-inset-right, 0px);
   }
+  .nav .nav-settings { display: none; }
 
   .nav a {
+    /* S2.7: 64px bar (design system --nav-h), >= 72px targets */
+    min-height: var(--nav-h);
+    justify-content: center;
     padding: 8px 2px 10px;
     font-size: 0.75rem;
     letter-spacing: 0.02em;
   }
+  .nav-badge { top: 6px; }
+
+  /* S2.7: quiz/exam session owns the bottom of the screen */
+  body.in-session .nav { display: none; }
 
   .footer { margin-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); text-align: center; }
 

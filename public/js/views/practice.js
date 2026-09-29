@@ -139,8 +139,14 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     }
   }
   document.addEventListener('keydown', keyHandler);
+  // S2.7: the fixed bottom bar hides while a session is running so it never
+  // covers the VERO/FALSO buttons on small phones.
+  document.body.classList.add('in-session');
   // Leaving the page (nav links, QUIT) must detach the session's key handler.
-  window.addEventListener('hashchange', () => document.removeEventListener('keydown', keyHandler), { once: true });
+  window.addEventListener('hashchange', () => {
+    document.removeEventListener('keydown', keyHandler);
+    document.body.classList.remove('in-session');
+  }, { once: true });
 
   async function answer(value) {
     if (answered) return;
@@ -166,6 +172,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     index++;
     if (index >= questions.length) {
       document.removeEventListener('keydown', keyHandler);
+      document.body.classList.remove('in-session');
       onFinish(correctCount, questions.length);
     } else {
       draw();
