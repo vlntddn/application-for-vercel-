@@ -343,8 +343,11 @@ S2.14–S2.15 (перенесены в конец Спринта L) → Спри
       (`ds-week`/`ds-ring`/`ds-stat`), greeting `CIAO, {name}`. *Цель:* p7 на
       375 — next-steps в первых 812 px (was bottom=1178px → теперь пройдёт).
       Осталось (не блокирует задачу): 2 pre-existing qa-ux FAIL, см. DEVLOG.
-- [ ] **S2.12 Экзамен** (`components/QuizHeader`): таймер моноширинным,
-      красный только в последние 2 минуты, навигатор вопросов 44px.
+- [x] **S2.12 Экзамен** (`components/QuizHeader`): таймер моноширинным,
+      красный только в последние 2 минуты, навигатор вопросов 44px —
+      сделано 2026-09-29 (commit c7716ea): `.timer` → `var(--font-mono)` +
+      `tabular-nums`, `low` с 120 с (было 60 с), цвет low по ds (`--bad`/
+      `--bad-soft`), квадраты `.exam-nav` 44px (убран mobile-override 34px).
 - [x] **S2.13 Шрифт Onest** — сделано архитектором 2026-09-29: Onest variable (latin,
       latin-ext, cyrillic) + IBM Plex Mono 500/600 в `public/fonts/` из Fontsource, OFL рядом,
       `@font-face` в styles.css, файлы в SHELL, тест `tests/fonts.test.js`.
