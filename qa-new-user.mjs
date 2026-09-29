@@ -208,8 +208,8 @@ async function main() {
   await waitFor(`!!document.querySelector('#view .question-card')`, 'self-check question');
   const checked = await practiceRound(5);
   check(checked, 'self-check: 5 вопросов отвечены');
-  await waitFor(`(document.getElementById('view')?.innerText||'').includes('SELF-CHECK')`, 'self-check result');
-  check((await viewText()).includes('SELF-CHECK'), 'self-check: результат вернулся на главу');
+  await waitFor(`(document.getElementById('view')?.innerText||'').toLowerCase().includes('self-check')`, 'self-check result');
+  check((await viewText()).toLowerCase().includes('self-check'), 'self-check: результат вернулся на главу');
   await shot('07-theory-selfcheck.png');
 
   /* ---- 5. Экзамен: пре-старт + 5 минут (не доигрывая) ---- */

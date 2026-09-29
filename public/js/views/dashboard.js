@@ -87,7 +87,7 @@ export function weakSpotsPanel() {
             ),
           ),
         )
-      : el('p.empty-note', {}, 'NO WEAK TOPIC UNDER 70% — KEEP THE STREAK ALIVE'),
+      : el('p.empty-note', {}, 'No weak topic under 70% — keep the streak alive.'),
     el('div.actions', {},
       weak.length
         ? el('a.btn.btn-primary', { href: `#/practice/${weak[0].slug}` },
@@ -114,7 +114,7 @@ export function renderDashboard(root) {
 
   clear(root,
     el('h1', {}, profile.name ? `CIAO, ${profile.name}` : 'CIAO'),
-    el('p.lede', {}, 'READY FOR THE EXAM? KEEP THE STREAK ALIVE.'),
+    el('p.lede', {}, 'Ready for the exam? Keep the streak alive.'),
 
     // The habit, at a glance: which of the last seven days you studied.
     el('div.panel.week-panel', {},
@@ -153,18 +153,18 @@ export function renderDashboard(root) {
       el('div.card', {},
         el('h2', {}, 'LOGIN STREAK'),
         el('p.stat-value.accent', {}, String(stats.streak)),
-        el('p.stat-sub', {}, stats.streak === 1 ? 'DAY IN A ROW' : 'DAYS IN A ROW'),
+        el('p.stat-sub', {}, stats.streak === 1 ? 'Day in a row' : 'Days in a row'),
       ),
       el('div.card', {},
         el('h2', {}, 'QUESTIONS MASTERED'),
         el('p.stat-value.ok', {}, String(stats.mastered)),
-        el('p.stat-sub', {}, `OF ${total} (${masteredPct}%)`),
+        el('p.stat-sub', {}, `Of ${total} (${masteredPct}%)`),
         el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${masteredPct}%` })),
       ),
       el('div.card', {},
         el('h2', {}, 'EXAM SUCCESS'),
         el('p.stat-value', {}, `${stats.examSuccess}%`),
-        el('p.stat-sub', {}, `${stats.examsPassed}/${stats.examsTaken} MOCK EXAMS PASSED`),
+        el('p.stat-sub', {}, `${stats.examsPassed}/${stats.examsTaken} mock exams passed`),
       ),
     ),
     // A newcomer gets the next action instead of raw zeros (Phase 2.2);

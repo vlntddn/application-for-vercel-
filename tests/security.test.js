@@ -330,7 +330,7 @@ test('settings offers an install path on phones', () => {
   // The real install mechanism on Android is beforeinstallprompt.
   assert.match(install, /beforeinstallprompt/);
   // iOS has no prompt API: written instructions are the only path.
-  assert.match(install, /ADD TO HOME SCREEN/);
+  assert.match(install, /ADD TO HOME SCREEN/i);
 });
 
 /* ---------------- phase 2.2: first guaranteed success ---------------- */

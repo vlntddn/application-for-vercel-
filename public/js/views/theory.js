@@ -50,7 +50,7 @@ function showSignModal(imageUrl, signQuestions, onPractice) {
                   }, `TRANSLATE (${lang().toUpperCase()})`)
                 : null,
             )
-          : el('p.empty-note', {}, 'NO DESCRIPTION IN THE QUESTION BANK'),
+          : el('p.empty-note', {}, 'No description in the question bank'),
         el('div.actions', {},
           el('button.btn.btn-primary', {
             onclick: () => { close(); onPractice(); },
@@ -69,7 +69,7 @@ function showSignModal(imageUrl, signQuestions, onPractice) {
 /* ============================== THEORY ============================== */
 
 export async function renderTheoryList(root) {
-  clear(root, el('h1', {}, 'THEORY MANUAL'), el('p.lede', {}, 'LOADING...'));
+  clear(root, el('h1', {}, 'THEORY MANUAL'), el('p.lede', {}, 'Loading...'));
   let chapters;
   try {
     chapters = await loadTheory();
@@ -89,7 +89,7 @@ export async function renderTheoryList(root) {
 
   clear(root,
     el('h1', {}, 'THEORY MANUAL'),
-    el('p.lede', {}, 'READ THE ITALIAN FIRST — TRANSLATE ONLY WHEN STUCK.'),
+    el('p.lede', {}, 'Read the Italian first — translate only when stuck.'),
     el('div.panel', {},
       el('div.quiz-head', {},
         el('h2', { style: 'margin:0' }, 'READING PROGRESS'),
@@ -110,7 +110,7 @@ export async function renderTheoryList(root) {
         el('div', {},
           el('h2', { style: 'margin-bottom:4px' }, "L'ITALIANO DELL'ESAME"),
           el('p.stat-sub', {},
-            'SEMPRE · MAI · SOLO · DEVE · PUÒ — THE WORDS THAT DECIDE VERO OR FALSO. START HERE.'),
+            'Sempre · Mai · Solo · Deve · Può — the words that decide VERO or FALSO. Start here.'),
         ),
         el('span.tag.warn', {}, 'GUIDE'),
       ),
@@ -132,7 +132,7 @@ export async function renderTheoryList(root) {
           el('p.stat-sub', {}, ch.translations?.[lang()]?.title || ''),
           m
             ? el('div', {},
-                el('p.stat-sub', {}, `${cat.count} QUESTIONS · MASTERED ${m.pct}%`),
+                el('p.stat-sub', {}, `${cat.count} questions · mastered ${m.pct}%`),
                 el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${m.pct}%` })),
               )
             : null,
@@ -150,7 +150,7 @@ export async function renderTheoryChapter(root, id, opts = {}) {
     return clear(root, errorBanner(err));
   }
   const ch = chapters.find((c) => c.id === id);
-  if (!ch) return clear(root, el('p.empty-note', {}, 'CHAPTER NOT FOUND'));
+  if (!ch) return clear(root, el('p.empty-note', {}, 'Chapter not found'));
   const tr = ch.translations?.[lang()];
 
   // Linked question-bank topic: powers the signs gallery and self-check.
@@ -231,19 +231,19 @@ export async function renderTheoryChapter(root, id, opts = {}) {
         isRead ? el('span.tag.ok', {}, 'READ') : el('span.tag.warn', {}, 'NEW'),
       ),
       el('h1', { style: 'margin-top:20px' }, ch.title_it),
-      revealed && tr?.title ? el('p.lede', {}, tr.title.toUpperCase()) : null,
+      revealed && tr?.title ? el('p.lede', {}, tr.title) : null,
 
       opts.quizResult
         ? el('div.feedback', {
             className: `feedback ${opts.quizResult.correct === opts.quizResult.total ? 'ok' : 'bad'}`,
             style: 'margin:0 0 20px',
-          }, `SELF-CHECK: ${opts.quizResult.correct}/${opts.quizResult.total} CORRECT`)
+          }, `Self-check: ${opts.quizResult.correct}/${opts.quizResult.total} correct`)
         : null,
 
       lesson
         ? el('div.panel.lesson-objective', {},
             el('h2', {}, 'IN THIS LESSON'),
-            el('p.lede', { style: 'margin:0' }, loc(lesson.objective).toUpperCase()),
+            el('p.lede', { style: 'margin:0' }, loc(lesson.objective)),
           )
         : null,
 
@@ -266,10 +266,10 @@ export async function renderTheoryChapter(root, id, opts = {}) {
         el('h2', {}, 'ORIGINAL TEXT (ITALIAN)'),
         el('p', {}, ch.content_it),
         revealed && tr?.content
-          ? el('div.translation-block', {}, el('strong', {}, 'TRANSLATION — '), tr.content)
+          ? el('div.translation-block', {}, el('strong', {}, 'Translation — '), tr.content)
           : null,
         revealed && tr?.simple_it
-          ? el('div.simple-block', {}, el('strong', {}, 'IN SIMPLE WORDS — '), tr.simple_it)
+          ? el('div.simple-block', {}, el('strong', {}, 'In simple words — '), tr.simple_it)
           : null,
         !revealed && (tr?.content || tr?.simple_it)
           ? el('button.btn.btn-small.btn-translate', {
@@ -297,7 +297,7 @@ export async function renderTheoryChapter(root, id, opts = {}) {
         ? el('div.panel.traps-panel', {},
             el('h2', {}, 'HOW THE EXAM TRICKS YOU HERE'),
             el('p.stat-sub', { style: 'margin-bottom:14px' },
-              'REAL EXAM QUESTIONS. DECIDE VERO OR FALSO, THEN REVEAL THE TRAP.'),
+              'Real exam questions. Decide VERO or FALSO, then reveal the trap.'),
             ...traps.map((t, i) =>
               el('div.trap', {},
                 t.q.image_url
@@ -402,7 +402,7 @@ export async function renderTheoryChapter(root, id, opts = {}) {
  * valuable page for non-Italian speakers.
  */
 export async function renderExamItalian(root) {
-  clear(root, el('h1', {}, "L'ITALIANO DELL'ESAME"), el('p.lede', {}, 'LOADING...'));
+  clear(root, el('h1', {}, "L'ITALIANO DELL'ESAME"), el('p.lede', {}, 'Loading...'));
   let guide;
   try {
     guide = (await loadLessons()).examItalian;
@@ -415,7 +415,7 @@ export async function renderExamItalian(root) {
       el('h1', { style: 'margin:0' }, "L'ITALIANO DELL'ESAME"),
       el('a.btn', { href: '#/theory' }, '← THEORY'),
     ),
-    el('p.lede', {}, 'THE WORDS THAT DECIDE VERO OR FALSO.'),
+    el('p.lede', {}, 'The words that decide VERO or FALSO.'),
     el('div.panel.lesson-objective', {},
       el('p', { style: 'margin:0;font-weight:600' }, loc(guide.intro)),
     ),

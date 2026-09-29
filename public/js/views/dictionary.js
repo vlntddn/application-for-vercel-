@@ -6,7 +6,7 @@ import { errorBanner, lang } from './common.js';
 /* ============================== DICTIONARY ============================== */
 
 export async function renderDictionary(root, sectionId) {
-  clear(root, el('h1', {}, 'DIZIONARIO'), el('p.lede', {}, 'LOADING...'));
+  clear(root, el('h1', {}, 'DIZIONARIO'), el('p.lede', {}, 'Loading...'));
   let dictionary;
   try {
     dictionary = await loadDictionary();
@@ -34,7 +34,7 @@ export async function renderDictionary(root, sectionId) {
     },
       el('strong.term-it', {}, term.it),
       hidden
-        ? el('span.term-veil', {}, 'TAP TO REVEAL')
+        ? el('span.term-veil', {}, 'Tap to reveal')
         : el('span.term-tr', {}, term[lang()] || term.en),
     );
   }
@@ -42,7 +42,7 @@ export async function renderDictionary(root, sectionId) {
   function draw() {
     clear(root,
       el('h1', {}, 'DIZIONARIO'),
-      el('p.lede', {}, 'THE EXAM VOCABULARY, BY TOPIC. LEARN THE ITALIAN TERM — THE EXAM HAS NO TRANSLATIONS.'),
+      el('p.lede', {}, 'The exam vocabulary, by topic. Learn the Italian term — the exam has no translations.'),
       el('div.actions', { style: 'margin:0 0 24px' },
         el('a.btn', { href: '#/theory' }, '← THEORY'),
         el('button.btn', {
@@ -56,7 +56,7 @@ export async function renderDictionary(root, sectionId) {
             el('h2', { style: 'margin:0' }, sec.title_it),
             el('span.tag', {}, `${sec.terms.length} TERMS`),
           ),
-          el('p.stat-sub', { style: 'margin-bottom:10px' }, (sec.titles?.[lang()] || '').toUpperCase()),
+          el('p.stat-sub', { style: 'margin-bottom:10px' }, sec.titles?.[lang()] || ''),
           ...sec.terms.map((t, i) => termRow(sec, i, t)),
         ),
       ),

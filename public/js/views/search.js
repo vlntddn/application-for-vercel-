@@ -16,7 +16,7 @@ function fold(s) {
  * translation language). Results can be practiced as a session.
  */
 export async function renderSearch(root) {
-  clear(root, el('h1', {}, 'SEARCH'), el('p.lede', {}, 'LOADING THE QUESTION BANK...'));
+  clear(root, el('h1', {}, 'SEARCH'), el('p.lede', {}, 'Loading the question bank...'));
   let all;
   try {
     all = await loadAllQuestions();
@@ -64,12 +64,12 @@ export async function renderSearch(root) {
     const q = fold(query.trim());
     if (q.length < 3) {
       resultsBox.replaceChildren(
-        el('p.empty-note', {}, 'TYPE AT LEAST 3 CHARACTERS. SEARCH COVERS ITALIAN AND YOUR LANGUAGE.'),
+        el('p.empty-note', {}, 'Type at least 3 characters. Search covers Italian and your language.'),
       );
       return;
     }
     if (!results.length) {
-      resultsBox.replaceChildren(el('p.empty-note', {}, `NOTHING FOUND FOR «${query.trim().toUpperCase()}»`));
+      resultsBox.replaceChildren(el('p.empty-note', {}, `Nothing found for «${query.trim().toUpperCase()}»`));
       return;
     }
     resultsBox.replaceChildren(
@@ -100,7 +100,7 @@ export async function renderSearch(root) {
       el('h1', { style: 'margin:0' }, 'SEARCH'),
       el('a.btn', { href: '#/practice' }, '← PRACTICE'),
     ),
-    el('p.lede', {}, `ALL ${all.length} QUESTIONS. FIND A WORDING, CHECK THE ANSWER, PRACTICE THE RESULTS.`),
+    el('p.lede', {}, `All ${all.length} questions. Find a wording, check the answer, practice the results.`),
     el('div.panel', {},
       el('div.field', { style: 'margin:0' },
         el('label', { htmlFor: 'search-input' }, 'FIND IN QUESTIONS'),

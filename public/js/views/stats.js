@@ -76,7 +76,7 @@ function activityHeatmap() {
   if (!active) {
     return el('div.panel', {},
       el('h2', {}, 'ACTIVITY — LAST 90 DAYS'),
-      el('p.empty-note', {}, 'ANSWER SOME QUESTIONS AND YOUR DAILY ACTIVITY WILL SHOW UP HERE.'),
+      el('p.empty-note', {}, 'Answer some questions and your daily activity will show up here.'),
     );
   }
 
@@ -142,7 +142,7 @@ function activityHeatmap() {
   return el('div.panel', {},
     el('h2', {}, 'ACTIVITY — LAST 90 DAYS'),
     el('p.stat-sub', { style: 'margin-bottom:12px' },
-      `${active} ACTIVE DAYS · ${total} QUESTIONS ANSWERED · BEST DAY ${best.count} (${best.key})`),
+      `${active} active days · ${total} questions answered · best day ${best.count} (${best.key})`),
     el('div.heat-months', { 'aria-hidden': 'true' },
       ...columns.map((col) => el('span.heat-month', {}, col.label)),
     ),
@@ -196,24 +196,24 @@ export function renderStats(root) {
       el('h1', { style: 'margin:0' }, 'PROGRESS & STATS'),
       el('a.btn', { href: '#/' }, '← DASHBOARD'),
     ),
-    el('p.lede', {}, 'FIND YOUR WEAKEST TOPIC AND PRACTICE IT UNTIL THE TAG READS GREEN.'),
+    el('p.lede', {}, 'Find your weakest topic and practice it until the tag reads green.'),
 
     el('div.grid.grid-3', {},
       el('div.card', {},
         el('h2', {}, 'MASTERED'),
         el('p.stat-value.ok', {}, `${Math.round((stats.mastered / total) * 100)}%`),
-        el('p.stat-sub', {}, `${stats.mastered} OF ${total} QUESTIONS`),
+        el('p.stat-sub', {}, `${stats.mastered} of ${total} questions`),
         el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${Math.round((stats.mastered / total) * 100)}%` })),
       ),
       el('div.card', {},
         el('h2', {}, 'OVERALL ACCURACY'),
         el('p.stat-value', {}, overallAccuracy === null ? '—' : `${overallAccuracy}%`),
-        el('p.stat-sub', {}, `${attempted} QUESTIONS TRIED (${coveragePct}% COVERAGE)`),
+        el('p.stat-sub', {}, `${attempted} questions tried (${coveragePct}% coverage)`),
       ),
       el('div.card', {},
         el('h2', {}, 'EXAM SUCCESS'),
         el('p.stat-value.accent', {}, `${stats.examSuccess}%`),
-        el('p.stat-sub', {}, `${stats.examsPassed}/${stats.examsTaken} PASSED · STREAK ${stats.streak}`),
+        el('p.stat-sub', {}, `${stats.examsPassed}/${stats.examsTaken} passed · streak ${stats.streak}`),
       ),
     ),
 
@@ -226,7 +226,7 @@ export function renderStats(root) {
             el('div.row', {},
               el('div', { style: 'flex:1' },
                 el('strong', {}, titleCase(c.name)),
-                el('p.stat-sub', {}, `MASTERED ${c.masteredPct}% · ${c.attempted}/${c.count} TRIED`),
+                el('p.stat-sub', {}, `Mastered ${c.masteredPct}% · ${c.attempted}/${c.count} tried`),
               ),
               accTag(c.accuracy),
               el('a.btn.btn-small', { href: `#/practice/${c.slug}` }, 'PRACTICE'),
@@ -235,7 +235,7 @@ export function renderStats(root) {
         )
       : el('div.panel', {},
           el('h2', {}, 'WEAK SPOTS'),
-          el('p.empty-note', {}, 'ANSWER SOME QUESTIONS AND YOUR WEAK TOPICS WILL SHOW UP HERE.'),
+          el('p.empty-note', {}, 'Answer some questions and your weak topics will show up here.'),
           el('div.actions', {}, el('a.btn.btn-primary', { href: '#/practice' }, 'START PRACTICE')),
         ),
 
@@ -243,7 +243,7 @@ export function renderStats(root) {
       ? el('div.panel', {},
           el('h2', {}, 'MOCK-EXAM TREND'),
           el('p.stat-sub', { style: 'margin-bottom:12px' },
-            `ERRORS PER EXAM · PASS LINE AT ${EXAM_MAX_ERRORS} (LATEST ${recentExams.length})`),
+            `Errors per exam · pass line at ${EXAM_MAX_ERRORS} (latest ${recentExams.length})`),
           el('div.exam-trend', {},
             ...recentExams.map((e) =>
               el('div.trend-col', { title: `${e.errors} errors` },

@@ -50,13 +50,13 @@ export function renderInstallPanel(panel) {
 
   if (isInstalled()) {
     target.append(
-      el('p.lede', {}, 'INSTALLED. IT OPENS AS A FULL APP, WORKS OFFLINE, AND YOUR PROGRESS LIVES ONLY ON THIS DEVICE.'),
+      el('p.lede', {}, 'Installed. It opens as a full app, works offline, and your progress lives only on this device.'),
     );
     return;
   }
   if (isIOSSafari()) {
     target.append(
-      el('p.lede', {}, 'IN SAFARI: TAP THE SHARE BUTTON, THEN ADD TO HOME SCREEN. THE APP OPENS WITHOUT THE BROWSER BAR, AND INSTALLING IT KEEPS YOUR PROGRESS SAFE FROM BROWSER CLEANUP.'),
+      el('p.lede', {}, 'In Safari: tap the Share button, then Add to Home Screen. The app opens without the browser bar, and installing it keeps your progress safe from browser cleanup.'),
     );
     return;
   }
@@ -71,7 +71,7 @@ export function renderInstallPanel(panel) {
     return;
   }
   target.append(
-    el('p.lede', {}, 'IN CHROME OR ANDROID: MENU (THREE DOTS) THEN INSTALL APP, OR ADD TO HOME SCREEN.'),
+    el('p.lede', {}, 'In Chrome or Android: menu (three dots) then Install App, or Add to Home Screen.'),
   );
 }
 
