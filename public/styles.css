@@ -124,9 +124,9 @@ body {
 .masthead {
   border-bottom: var(--border);
   background: var(--surface);
-  padding: 12px 24px;
+  padding: 16px 24px;
   /* viewport-fit=cover lets content sit under the status bar/notch. */
-  padding-top: calc(12px + env(safe-area-inset-top, 0px));
+  padding-top: calc(16px + env(safe-area-inset-top, 0px));
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -528,9 +528,6 @@ kbd {
   }
 
   .brand__name { font-size: 22px; line-height: 1; } /* wordmark --sm */
-
-  /* tagline hidden on small phones (S2.4) */
-  .brand__tag { display: none; }
 
 
   /* Navigation becomes a fixed, thumb-reachable bottom bar */
@@ -1076,4 +1073,10 @@ main:focus { outline: none; }
   .week-row { gap: 14px; }
   .today-goal .ring-wrap, .today-goal .ring { width: 76px; height: 76px; }
   .today-goal .ring-pct { font-size: 1.1rem; }
+}
+
+
+@media (max-width: 480px) {
+  /* S2.4: подзаголовок wordmark скрыт на <= 480px */
+  .brand__tag { display: none; }
 }
