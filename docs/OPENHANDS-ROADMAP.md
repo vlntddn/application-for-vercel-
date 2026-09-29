@@ -367,7 +367,7 @@ S2.14–S2.15 (перенесены в конец Спринта L) → Спри
 логика — чистые функции в `public/js/domain/learning.js` + тест. Новые файлы
 `public/` — в SHELL, `VERSION` +1.
 
-- [ ] **L0 Фундамент `domain/learning.js`** (бывш. T2). Перенести `queueOrder`,
+- [x] **L0 Фундамент `domain/learning.js`** (бывш. T2). Перенести `queueOrder`,
       `masteryOf`, `categoryStats` (views/common.js) и `introQueue`
       (views/practice.js) чистыми функциями (answers/manifest/questions/`rand` —
       аргументами); в старых местах — тонкие обёртки с прежними именами.

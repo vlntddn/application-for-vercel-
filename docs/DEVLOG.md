@@ -1,3 +1,41 @@
+## 2026-09-29 16:10 — S2.L0: Фундамент `domain/learning.js` (бывш. T2)
+
+Что сделано (код — см. commit `feat: L0 — domain/learning.js ...` на self-improve):
+- **public/js/domain/learning.js** (новый) — чистые функции учебной логики:
+  `domainQueueOrder(questions, answers, count, rand)`,
+  `masteryOf(answers, slug, total)`, `categoryStats(answers, categories)`,
+  `domainIntroQueue(questions, options)` + константы `INTRO_QUESTIONS = 5`,
+  `INTRO_TEXT_LEN = 120`, `shuffled`. Единственная зависимость — `shuffle` из
+  `state.js` (чистая, детерминированная с `seed`); все источники рандома —
+  аргумент `rand`, что даёт детерминизм тестов.
+- **public/js/views/common.js** — `queueOrder`, `masteryOf`, `categoryStats`
+  заменены тонкими обёртками с прежними именами и сигнатурами (вызывают
+  domain-функции с `Math.random`). Поведение экранов не изменилось.
+- **public/js/views/practice.js** — `introQueue` теперь обёртка над
+  `domainIntroQueue` (прежняя сигнатура `(questions, options)` сохранена).
+- **public/sw.js** — `/js/domain/learning.js` добавлен в SHELL, VERSION v60 → v61.
+- **tests/learning.test.js** (новый) — 11 тестов: порядок очереди (unseen →
+  ошибки → остальное), детерминизм по injected `rand`, `count` без
+  дубликатов, `masteryOf` по всем 25 slug из manifest.json (каждый slug
+  считает только свои id — `segnali` ≠ `segnali-divieto`), `categoryStats`
+  (accuracy null без ответов), `introQueue` (лёгкие unseen первыми, остаток —
+  в порядке очереди; null при нехватке; кастомные count/textLen; пропуск
+  отвеченных), перестановка `shuffled`.
+
+Почему: Спринт L (Learning) начинается с фундамента — вся новая учебная
+логика будет жить чистыми функциями в `domain/learning.js` (правило спринта),
+поэтому T2 перенесён сюда первым. Экрани не должны меняться: тонкие
+обёртки сохраняют прежние имена/сигнатуры, только вычислительное ядро
+вынесено наружу.
+
+Как проверено: `node --test tests/learning.test.js` → 11/11; `npm test` →
+106/106 (95 прежних + 11 новых, регрессий нет); `scripts/verify.sh` →
+VERIFY OK (zero deps, protected paths, sw.js bump, npm test 106, smoke 8/8
+на :3917, qa-new-user 37 PASS / 0 FAIL).
+
+Следующая задача: L1a — `scripts/build-insights.mjs` →
+`data/insights/signal-words.json`.
+
 ## 2026-09-29 15:40 — S2.12: Экзамен (components/QuizHeader)
 
 Что сделано (код — commit c7716ea на self-improve):
