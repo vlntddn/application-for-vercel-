@@ -1,6 +1,10 @@
 import { state } from '../state.js';
 import { el, clear, fmtDate, titleCase } from '../ui.js';
-import { dailyGoal, categoryStats, PRACTICE_BATCH } from './common.js';
+import {
+  dailyGoal, categoryStats, PRACTICE_BATCH,
+  shouldSuggestBackup, readLastBackup, readBackupDismissed,
+  writeBackupDismissed, exportProgressSnapshot,
+} from './common.js';
 import { dayKey, weekStrip } from './stats.js';
 
 const EXAM_QUESTIONS = 30;
@@ -100,6 +104,41 @@ export function weakSpotsPanel() {
   );
 }
 
+/**
+ * Backup reminder (S2.8a3): enough answers + no fresh backup → one callout
+ * with Export as the action; "Not now" hides it for a week (localStorage).
+ */
+export function backupReminderPanel() {
+  if (!shouldSuggestBackup(state.progress.stats, readLastBackup(), readBackupDismissed(), Date.now())) {
+    return null;
+  }
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('class', 'ic');
+  svg.setAttribute('fill', 'none');
+  svg.setAttribute('stroke', 'currentColor');
+  svg.setAttribute('stroke-width', '2');
+  svg.setAttribute('stroke-linecap', 'round');
+  svg.setAttribute('stroke-linejoin', 'round');
+  svg.setAttribute('aria-hidden', 'true');
+  // shield: progress is safe only on this device
+  const path = document.createElementNS(svgNS, 'path');
+  path.setAttribute('d', 'M12 3l8 3v6c0 4.5-3.2 7.7-8 9-4.8-1.3-8-4.5-8-9V6z');
+  svg.append(path);
+  return el('div.ds-callout', { id: 'backup-reminder', style: 'margin-top:24px' },
+    el('div.ds-callout__icon', {}, svg),
+    el('div.ds-callout__body', {},
+      el('span.ds-callout__title', {}, 'Backup'),
+      el('p.ds-callout__text', {}, 'Save a backup copy — your progress lives only in this browser.'),
+    ),
+    el('div.ds-callout__action', {},
+      el('button.btn.btn-primary', { onclick: (e) => { exportProgressSnapshot(); e.target.closest('.ds-callout').remove(); } }, 'Export'),
+      el('button.btn', { onclick: (e) => { writeBackupDismissed(); e.target.closest('.ds-callout').remove(); } }, 'Not now'),
+    ),
+  );
+}
+
 export function renderDashboard(root) {
   const { profile, stats, exams } = state.progress;
   const total = state.manifest.totalQuestions;
@@ -115,6 +154,10 @@ export function renderDashboard(root) {
   clear(root,
     el('h1', {}, profile.name ? `CIAO, ${profile.name}` : 'CIAO'),
     el('p.lede', {}, 'Ready for the exam? Keep the streak alive.'),
+
+    // One callout per section: the backup reminder goes right under the
+    // greeting, before the week panel (S2.8a3).
+    backupReminderPanel(),
 
     // The habit, at a glance: which of the last seven days you studied.
     el('div.panel.week-panel', {},

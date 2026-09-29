@@ -5,7 +5,7 @@ import { el, clear } from '../ui.js';
 import { requestPersistentStorage } from '../local-progress.js';
 import { renderInstallPanel } from '../install.js';
 import { DAILY_GOAL_DEFAULT } from '../domain/progress.js';
-import { errorBanner } from './common.js';
+import { errorBanner, readLastBackup, exportProgressSnapshot } from './common.js';
 
 // Options of the daily-goal selector (lost in the S1.3 move — restored).
 const DAILY_GOAL_CHOICES = [5, 10, 15, 20, 25, 30, 40, 50, 75, 100];
@@ -33,34 +33,11 @@ async function showStorageStatus(root) {
   }
 }
 
-/** Last export date — UI metadata, not progress; localStorage, try/catch. */
-function readLastBackup() {
-  try { return localStorage.getItem('pp-last-backup'); } catch { return null; }
-}
-function writeLastBackup(iso) {
-  try { localStorage.setItem('pp-last-backup', iso); } catch { /* private mode */ }
-}
-
-/** Downloads the whole progress snapshot as a dated JSON backup. */
+/** Downloads the backup (shared snapshot, common.js) and updates the label. */
 function exportProgress(button) {
-  const backup = {
-    app: 'patente-pro',
-    exportedAt: new Date().toISOString(),
-    ...state.progress,
-  };
-  delete backup.stats; // derived on the server, not part of the data
-  const url = URL.createObjectURL(
-    new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }),
-  );
-  const link = el('a', {
-    href: url,
-    download: `patente-pro-backup-${new Date().toISOString().slice(0, 10)}.json`,
-  });
-  link.click();
-  URL.revokeObjectURL(url);
-  writeLastBackup(backup.exportedAt);
+  const exportedAt = exportProgressSnapshot();
   const line = button.closest('.panel').querySelector('#last-backup');
-  if (line) line.textContent = `Last backup: ${new Date(backup.exportedAt).toLocaleDateString()}`;
+  if (line) line.textContent = `Last backup: ${new Date(exportedAt).toLocaleDateString()}`;
 }
 
 /** Replaces all progress with a backup file, after confirmation. */

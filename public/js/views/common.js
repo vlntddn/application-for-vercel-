@@ -92,3 +92,67 @@ export function translationArea(translation, revealed, onReveal) {
   return el('button.btn.btn-small.btn-translate', { onclick: onReveal },
     `TRANSLATE (${lang().toUpperCase()})`);
 }
+
+/** Last export date — UI metadata, not progress; localStorage, try/catch. */
+export function readLastBackup() {
+  try { return localStorage.getItem('pp-last-backup'); } catch { return null; }
+}
+export function writeLastBackup(iso) {
+  try { localStorage.setItem('pp-last-backup', iso); } catch { /* private mode */ }
+}
+
+/** "Not now" on the home backup reminder: hidden for a week (try/catch). */
+export function readBackupDismissed() {
+  try { return localStorage.getItem('pp-backup-dismissed'); } catch { return null; }
+}
+export function writeBackupDismissed() {
+  try { localStorage.setItem('pp-backup-dismissed', new Date().toISOString()); } catch { /* private mode */ }
+}
+
+/**
+ * Downloads the whole progress snapshot as a dated JSON backup and records
+ * the export time. Returns the ISO timestamp of the export.
+ */
+export function exportProgressSnapshot() {
+  const backup = {
+    app: 'patente-pro',
+    exportedAt: new Date().toISOString(),
+    ...state.progress,
+  };
+  delete backup.stats; // derived on the server, not part of the data
+  const url = URL.createObjectURL(
+    new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }),
+  );
+  const link = el('a', {
+    href: url,
+    download: `patente-pro-backup-${backup.exportedAt.slice(0, 10)}.json`,
+  });
+  link.click();
+  URL.revokeObjectURL(url);
+  writeLastBackup(backup.exportedAt);
+  return backup.exportedAt;
+}
+
+const BACKUP_MIN_ANSWERS = 50;
+const BACKUP_STALE_MS = 14 * 24 * 60 * 60 * 1000;
+const BACKUP_DISMISS_MS = 7 * 24 * 60 * 60 * 1000;
+
+/**
+ * Decide whether the home screen should nudge a backup export (S2.8a3).
+ * Pure: all inputs by argument, `now` (ms) injected for testability.
+ * Suggest when the user has ≥50 answers and the last backup is older than
+ * 14 days (or never made), unless "Not now" was tapped within 7 days.
+ */
+export function shouldSuggestBackup(stats, lastBackupAt, dismissedAt, now) {
+  const answered = stats?.answered ?? 0;
+  if (answered < BACKUP_MIN_ANSWERS) return false;
+  if (lastBackupAt) {
+    const age = now - Date.parse(lastBackupAt);
+    if (Number.isFinite(age) && age < BACKUP_STALE_MS) return false;
+  }
+  if (dismissedAt) {
+    const since = now - Date.parse(dismissedAt);
+    if (Number.isFinite(since) && since < BACKUP_DISMISS_MS) return false;
+  }
+  return true;
+}

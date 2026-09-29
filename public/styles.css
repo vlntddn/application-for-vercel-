@@ -689,6 +689,53 @@ kbd {
   .ds-notice { margin: 0 16px 12px; padding: var(--space-2) var(--space-3); }
 }
 
+/* ---------- Callout (ds-callout, S2.8a3) ---------- */
+
+.ds-callout {
+  display: flex;
+  background: var(--surface);
+  color: var(--ink);
+  border: var(--border-3) solid var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.ds-callout__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  background: var(--warn);
+  color: var(--on-warn);
+  border-right: var(--border-3) solid var(--ink);
+}
+
+.ds-callout__icon .ic { width: 28px; height: 28px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.ds-callout__body { flex: 1; display: grid; gap: 2px; padding: var(--space-3) var(--space-4); }
+
+.ds-callout__title { font: 800 13px/16px var(--font-sans); letter-spacing: .8px; text-transform: uppercase; }
+
+.ds-callout__text { margin: 0; font: 400 16px/24px var(--font-sans); }
+
+.ds-callout__action {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: var(--space-3);
+}
+
+@media (max-width: 760px) {
+  .ds-callout { flex-wrap: wrap; }
+  .ds-callout__body { flex: 1 1 calc(100% - 56px - 24px); }
+  .ds-callout__action {
+    flex: 1 1 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 var(--space-3) var(--space-3);
+  }
+}
+
 .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
 
 /* ---------- Mobile ---------- */

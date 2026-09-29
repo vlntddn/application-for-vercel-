@@ -342,13 +342,46 @@ test('settings explains where progress lives and how to back it up (S2.8a)', () 
     'progress panel must come after the profile panel');
   // The four erasing cases, and the last-backup date in localStorage.
   assert.match(settings, /What erases it/);
-  assert.match(settings, /pp-last-backup/);
+  // The backup storage moved to the shared module (S2.8a3); settings reads it.
+  const common = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'common.js'), 'utf8');
+  assert.match(common, /pp-last-backup/);
+  assert.match(settings, /readLastBackup/);
   // Export/import buttons live in the block.
   assert.match(settings, /Export backup/);
   assert.match(settings, /Import backup/);
   // The privacy strip links to the block.
   const index = fs.readFileSync(path.join(ROOT, 'public', 'index.html'), 'utf8');
   assert.match(index, /href="#\/settings"[^>]*>How it's kept/);
+});
+
+test('shouldSuggestBackup decides on answers, backup age and dismissal (S2.8a3)', async () => {
+  const { shouldSuggestBackup } = await import('../public/js/views/common.js');
+  const now = 1_700_000_000_000;
+  const daysAgo = (d) => new Date(now - d * 86400000).toISOString();
+  // 1. Enough answers, never backed up, never dismissed -> suggest.
+  assert.equal(shouldSuggestBackup({ answered: 50 }, null, null, now), true);
+  // 2. Too few answers -> never suggest, no matter the rest.
+  assert.equal(shouldSuggestBackup({ answered: 49 }, null, null, now), false);
+  // 3. A recent backup (< 14 days) silences the reminder.
+  assert.equal(shouldSuggestBackup({ answered: 200 }, daysAgo(3), null, now), false);
+  // 4. An old backup (>= 14 days) re-enables it.
+  assert.equal(shouldSuggestBackup({ answered: 200 }, daysAgo(15), null, now), true);
+  // 5. "Not now" (< 7 days) silences it even with a stale backup; after 7+ days it returns.
+  assert.equal(shouldSuggestBackup({ answered: 200 }, daysAgo(30), daysAgo(2), now), false);
+  assert.equal(shouldSuggestBackup({ answered: 200 }, daysAgo(30), daysAgo(8), now), true);
+});
+
+test('the dashboard shows a backup reminder with Export and Not now (S2.8a3)', () => {
+  const dashboard = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'dashboard.js'), 'utf8');
+  const common = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'common.js'), 'utf8');
+  assert.ok(dashboard.includes('backupReminderPanel()'), 'reminder panel not rendered');
+  assert.ok(dashboard.includes('shouldSuggestBackup'), 'decision not driven by the pure function');
+  assert.match(dashboard, /Save a backup copy — your progress lives only in this browser\./);
+  assert.match(dashboard, /Not now/);
+  assert.ok(common.includes('pp-backup-dismissed'), 'dismissal must be stored in localStorage');
+  const css = fs.readFileSync(path.join(ROOT, 'public', 'styles.css'), 'utf8');
+  assert.match(css, /\.ds-callout \{/);
+  assert.match(css, /\.ds-callout__action/);
 });
 
 /* ---------------- phase 2.2: first guaranteed success ---------------- */
