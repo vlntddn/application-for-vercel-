@@ -1,3 +1,34 @@
+## 2026-09-29 16:40 — S2.L1a: Скрипт инсайтов слов-сигналов
+
+Что сделано (код — см. commit `feat: L1a — скрипт инсайтов слов-сигналов ...` на self-improve):
+- **scripts/build-insights.mjs** (новый) — детерминированная сборка `data/insights/`:
+  берёт 17 слов/фраз-сигналов из роадмапа, нормализует (нижний регистр, без
+  акцентов, `\b`-границы — для фраз «e obbligatorio»/«non oltre» граница у краёв
+  фразы), для каждого считает число вопросов банка, долю FALSO, 2 id FALSO и
+  1–2 id ВЕРНЫХ-контрпримера. Слова с < 20 вопросами не выводятся. Все id —
+  в порядке возрастания, вывод стабильный (идемпотентная перезапись файла).
+  Экспортирует `normalize`/`loadQuestions`/`buildSignalWords` для тестов.
+- **data/insights/signal-words.json** (новый) — 12 слов (exclusivamente, mai,
+  eccetto, tranne, non oltre не прошли порог 20): solo 246 (75.2% FALSO),
+  soltanto 31 (71.0%), sempre 80 (66.3%), tutti 108 (63.9%), qualsiasi 27 (70.4%),
+  purché 61 (73.8%), è obbligatorio 78 (70.5%), deve 702 (40.0%), può 621 (39.3%),
+  salvo 50 (28.0%), anche 242 (43.4%), almeno 67 (59.7%); bank = 7139.
+- **tests/insights.test.js** (новый) — 9 тестов: нормализация; файл === вывод
+  скрипта (deepEqual + пересборка байт-в-байт); bank совпадает с 7139; solo ≥ 70%
+  FALSO и salvo ≤ 35%; порог < 20 соблюдён; независимый пересчёт счётчиков;
+  по 2 FALSO + 1–2 VERO на слово; все id существуют, ложь/правда как заявлено,
+  списки сортированы.
+
+Почему: L1a — данные для «L'italiano dell'esame» (L1b) и тренажёра (L1c):
+доли FALSO и реальные контрпримеры должны считаться из банка, а не храниться
+«по памяти», и быть воспроизводимыми (тест «файл = скрипт»).
+
+Как проверено: `node --test tests/insights.test.js` → 9/9; `scripts/verify.sh` →
+VERIFY OK (zero deps, protected paths, npm test 115 = 106 + 9 новых, smoke 8/8
+на :3917).
+
+Следующая задача: L1b — «L'italiano dell'esame» на данных.
+
 ## 2026-09-29 16:10 — S2.L0: Фундамент `domain/learning.js` (бывш. T2)
 
 Что сделано (код — см. commit `feat: L0 — domain/learning.js ...` на self-improve):

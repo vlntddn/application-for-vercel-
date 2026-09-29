@@ -375,7 +375,7 @@ S2.14–S2.15 (перенесены в конец Спринта L) → Спри
       считает только свои id (`segnali` ≠ `segnali-divieto`).
       *Проверка:* `tests/learning.test.js` (≥ 6 тестов) + verify OK (qa-new-user).
       *Файлы:* domain/learning.js, views/common.js, views/practice.js, sw.js, тест. *M*
-- [ ] **L1a Скрипт инсайтов слов-сигналов** `scripts/build-insights.mjs` →
+- [x] **L1a Скрипт инсайтов слов-сигналов** `scripts/build-insights.mjs` →
       `data/insights/signal-words.json`. Для списка слов/фраз (solo, soltanto,
       esclusivamente, sempre, mai, tutti, qualsiasi, purché, è obbligatorio, deve,
       può, salvo, eccetto, tranne, anche, almeno, non oltre — нормализация: нижний
