@@ -1,3 +1,43 @@
+## 2026-09-29 15:05 — S2.11: Главная новичка (components/Stat, WeekStrip, GoalRing)
+
+Что сделано (код — текущий HEAD self-improve):
+- **public/js/views/dashboard.js** — `renderDashboard` переведён на
+  дизайн-систему: вместо старых `week-panel`/`ring-card`/`ring-wrap` —
+  компоненты `ds-week`/`ds-ring`/`ds-stat` (строители `weekStrip`, кольцо
+  `ds-ring__edge/track/value` stroke 16/10/10, `statCard`). `statsRow()` —
+  единый блок недели+цели+статов для пользователя с прогрессом.
+  - **Новичок (0 ответов)**: вместо нулей — `nextStepsPanel()` (`#dashboard-
+    next-steps`) сразу под приветствием — «следующий шаг» с крупной кнопкой.
+    `weakSpotsPanel()` только если есть экзамен. Гейт `stats.answered === 0`
+    сохранён (совпадает с ожиданием теста и QA p7).
+  - Гreeting: `CIAO, {name}` / `CIAO`; lede «Ready for the exam? Keep the
+    streak alive.». Убрано сырое число `masteredPct` как отдельная стата.
+- **public/styles.css** — блок старых `.week-*`/`.ring-*` (~80 строк, строки
+  ~1177–1260) заменён CSS дизайн-системы из `docs/design-system/components/
+  bundle.css` (`.ds-stat`/`.ds-week`/`.ds-ring`); heat-map (`.heat-months/
+  -grid/-col`) сохранён. Файл 1412 строк.
+- **public/sw.js**: VERSION v57 → v58 (public/ менялся).
+
+Почему: владелец — приоритет «удобство новичка»: первая загрузка не должна
+показывать экран нулей, а сразу — действие. Токены (`--surface-sunken`,
+`--shadow-sm`, `--border-2/3`, `--tap-min`, `--ok-soft`, `--on-accent` и др.)
+проверены на наличие в `styles.css`.
+
+Как проверено: `node --check` dashboard.js; `scripts/verify.sh` → VERIFY OK
+(npm test 95 passed — вкл. «dashboard shows the next step, not raw zeros»,
+smoke 8/8, qa-new-user 37 PASS / 0 FAIL). `node scripts/qa-ux.mjs` →
+p7@375 next-steps теперь в первых 812 px (было bottom=1178px на HEAD — мои
+изменения ИСПРАВИЛИ этот FAIL); 174 PASS / 2 FAIL.
+
+Остаток (НЕ блокирует S2.11, предсуществующий, не мой гейт — одинаковое
+условие `answered===0 → nextStepsPanel` и в старой, и в новой версии):
+- `p8 #/review @375` — две кнопки `.ds-answer` @64px (текст переносится).
+  Независимо от главной (я review/ds-answer не трогал).
+- `p7 #/ @1280` — `#dashboard-next-steps отсутствует`: на desktop-прогоне
+  QA после onboarding-сброса (DELETE /api/progress) `onboarded` сбрасывается
+  в false, app рисует онбординг вместо дашборда → id не монтируется. Это
+  артефакт QA-сценария (свежий профиль + 2-й вьюпорт), не баг гейта.
+
 ## 2026-09-29 14:30 — S2.10: Названия тем (components/Card)
 
 Что сделано (код — текущий HEAD self-improve):
