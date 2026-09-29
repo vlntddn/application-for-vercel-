@@ -1090,6 +1090,44 @@ kbd {
 .word-it { font-size: 1rem; }
 .word-gloss { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
 
+/* L1b — bank data under an absolute word */
+.word-stat {
+  margin: 8px 0 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--accent-ink, #8a6100);
+}
+details.word-true { margin-top: 6px; }
+details.word-true summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+details.word-true summary::-webkit-details-marker { display: none; }
+details.word-true[open] summary { color: var(--muted); }
+.word-true-q {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--ink);
+  margin: 4px 0 8px;
+}
+.word-takeaway {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 8px 0 0;
+}
+
 .tag.accent-tag { background: var(--accent); color: var(--on-accent); }
 
 /* ---------- Search ---------- */

@@ -63,6 +63,39 @@ test('exam-italian guide is complete in all languages', () => {
   for (const t of g.tips) assertLocalized(t, 'tip');
 });
 
+test('exam-italian absolute words carry bank stats from the real bank', () => {
+  const fsq = fs.readFileSync(path.join(ROOT, 'data', 'insights', 'signal-words.json'), 'utf8');
+  const sw = JSON.parse(fsq);
+  const byWord = new Map(sw.words.map((w) => [w.word, w]));
+  const section = lessons.examItalian.sections.find((x) => x.title_it.startsWith('Le parole assolute'));
+  assert.ok(section, 'absolute-words section');
+  const stats = new Map(section.entries.filter((e) => e.bankStats).map((e) => [e.it, e.bankStats]));
+  // words that passed the >=20 threshold in L1a must show their stats
+  for (const key of ['sempre', 'solo / soltanto', 'anche']) {
+    const b = stats.get(key);
+    assert.ok(b, `entry "${key}" must have bankStats`);
+    const ref = byWord.get(key.split(' ')[0]);
+    assert.ok(ref, `signal word for "${key}"`);
+    assert.equal(b.questions, ref.questions);
+    assert.equal(b.falseRatio, ref.falseRatio);
+    assert.equal(b.bank, ref.bank);
+    assertLocalized(b.takeaway, `takeaway of "${key}"`);
+    // the counter-example must be a real, TRUE question of the bank
+    if (b.firstTrue) {
+      assert.ok(b.firstTrue.questionId && b.firstTrue.text_it, `firstTrue of "${key}"`);
+      const file = path.join(ROOT, 'data', 'questions', `${b.firstTrue.id}.json`);
+      const bank = JSON.parse(fs.readFileSync(file, 'utf8'));
+      const found = bank.find((x) => x.id === b.firstTrue.questionId);
+      assert.ok(found, `counter-example question exists in bank`);
+      assert.equal(found.is_true, true, 'counter-example is actually VERO');
+    }
+  }
+  // mai has no stats (below threshold) but a takeaway explaining why
+  const mai = section.entries.find((e) => e.it.startsWith('mai'));
+  assert.ok(mai && mai.bankStats && !mai.bankStats.questions, 'mai: takeaway without a number');
+  assertLocalized(mai.bankStats.takeaway, 'mai takeaway');
+});
+
 test('chapter lessons are well-formed and fully translated', () => {
   const ids = Object.keys(lessons.chapters);
   assert.ok(ids.length >= 8, 'expected lessons for the core chapters');

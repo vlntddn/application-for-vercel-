@@ -21,6 +21,21 @@
               "en": "always",
               "ru": "всегда",
               "zh": "总是"
+            },
+            "bankStats": {
+              "questions": 80,
+              "falseRatio": 0.6625,
+              "bank": 7139,
+              "firstTrue": {
+                "id": "cinture-casco-sicurezza",
+                "questionId": "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-3",
+                "text_it": "Le cinture di sicurezza devono essere di tipo omologato e devono essere mantenute sempre efficienti"
+              },
+              "takeaway": {
+                "en": "Most are false — but not all: the STOP sign ALWAYS requires stopping.",
+                "ru": "Чаще ложь — но не всегда: знак STOP ОБЯЗЫВАЕТ остановиться.",
+                "zh": "多半是错的——但不是全部：STOP标志始终要求停车。"
+              }
             }
           },
           {
@@ -29,6 +44,13 @@
               "en": "never",
               "ru": "никогда",
               "zh": "从不"
+            },
+            "bankStats": {
+              "takeaway": {
+                "en": "Not in the bank — but treat “never” as an alarm bell: find the exception before answering.",
+                "ru": "В банке не проходит порог — но «никогда» всё равно сигнал: ищи исключение, прежде чем отвечать.",
+                "zh": "银行里未达阈值——但“从不”仍是警铃：回答前先找例外。"
+              }
             }
           },
           {
@@ -37,6 +59,21 @@
               "en": "only",
               "ru": "только",
               "zh": "只有"
+            },
+            "bankStats": {
+              "questions": 246,
+              "falseRatio": 0.7520325203252033,
+              "bank": 7139,
+              "firstTrue": {
+                "id": "alcool-droga-primo-soccorso",
+                "questionId": "alcool-droga-primo-soccorso-ferito-stato-incoscienza-1",
+                "text_it": "Se un ferito della strada è in stato di incoscienza, può essere mosso solo se si è certi che non abbia traumi alla colonna vertebrale"
+              },
+              "takeaway": {
+                "en": "The most frequent trap word: 75% of “solo” statements are false.",
+                "ru": "Самое частое слово-ловушка: 75% утверждений с «только» — ложь.",
+                "zh": "最高频的陷阱词：含“只有”的题75%是错的。"
+              }
             }
           },
           {
@@ -61,6 +98,21 @@
               "en": "also / even",
               "ru": "также / даже",
               "zh": "也 / 甚至"
+            },
+            "bankStats": {
+              "questions": 242,
+              "falseRatio": 0.43388429752066116,
+              "bank": 7139,
+              "firstTrue": {
+                "id": "alcool-droga-primo-soccorso",
+                "questionId": "alcool-droga-primo-soccorso-eccesso-bevande-alcoliche-1",
+                "text_it": "Un conducente che ha assunto una quantità eccessiva di bevande alcoliche non può recuperare velocemente l'idoneità alla guida, specie se ha assunto anche dei farmaci"
+              },
+              "takeaway": {
+                "en": "“Also” often turns the rule upside down: it adds the case that is actually excluded.",
+                "ru": "«Также» часто переворачивает правило: добавляет случай, который на деле исключён.",
+                "zh": "“也”常常反转规则：它加上了实际被排除的情况。"
+              }
             }
           }
         ]

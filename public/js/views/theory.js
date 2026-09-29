@@ -397,6 +397,36 @@ export async function renderTheoryChapter(root, id, opts = {}) {
 /* ========================== EXAM ITALIAN GUIDE ========================== */
 
 /**
+ * L1b — bank data under an absolute word: the FALSO fraction ("3 of 4 are
+ * FALSO"), a real VERO counter-example behind a button, and a one-line
+ * takeaway. `bankStats` comes from data/lessons.json (built by
+ * scripts/build-insights.mjs); entries without it render plain.
+ */
+function absoluteWordData(w) {
+  const { questions, falseRatio, bank, firstTrue, takeaway } = w.bankStats;
+  const nodes = [];
+  if (questions && firstTrue) {
+    const falseCount = Math.round(falseRatio * questions);
+    const revealed = falseRatio >= 0.5;
+    nodes.push(el('p.word-stat', {},
+      `IN THE BANK: ${falseCount} OF ${questions} ARE ${revealed ? 'FALSO' : 'TRUE'} · BANK ${bank}`,
+    ));
+    nodes.push(el('details.word-true', {},
+      el('summary', {}, 'SHOW A TRUE ONE'),
+      el('p.word-true-q', {}, `«${firstTrue.text_it}»`),
+      el('span.tag.ok', {}, 'VERO'),
+    ));
+  } else if (questions) {
+    const falseCount = Math.round(falseRatio * questions);
+    nodes.push(el('p.word-stat', {},
+      `IN THE BANK: ${falseCount} OF ${questions} ARE FALSO · BANK ${bank}`,
+    ));
+  }
+  if (takeaway) nodes.push(el('p.word-takeaway', {}, loc(takeaway)));
+  return nodes;
+}
+
+/**
  * A language survival guide for the quiz: the small set of Italian words
  * and sentence patterns that decide VERO/FALSO. This is the single most
  * valuable page for non-Italian speakers.
@@ -424,12 +454,14 @@ export async function renderExamItalian(root) {
         el('h2', {}, s.title_it.toUpperCase()),
         el('p.section-explain', {}, loc(s.explain)),
         el('div.word-grid', {},
-          ...s.entries.map((w) =>
-            el('div.word-card', {},
+          ...s.entries.map((w) => {
+            const card = el('div.word-card', {},
               el('strong.word-it', {}, w.it),
               el('span.word-gloss', {}, loc(w.gloss)),
-            ),
-          ),
+            );
+            if (w.bankStats) card.append(...absoluteWordData(w));
+            return card;
+          }),
         ),
       ),
     ),
