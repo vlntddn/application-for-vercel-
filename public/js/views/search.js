@@ -2,7 +2,7 @@
 import { loadAllQuestions, shuffle } from '../state.js';
 import { el, clear } from '../ui.js';
 import { errorBanner, translationOf, PRACTICE_BATCH } from './common.js';
-import { renderQuizSession } from '../views.js';
+import { renderQuizSession } from './practice.js';
 
 /* ============================== SEARCH ============================== */
 

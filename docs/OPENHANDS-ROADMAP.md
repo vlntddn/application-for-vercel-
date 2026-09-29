@@ -331,6 +331,39 @@ README компонента задачи. Эталонные стили — `doc
 
 ---
 
+### Спринт 2.5 — Техдолг по ревью архитектора (2026-09-29)
+
+Код в целом здоров; это точечные вещи, которые мешают расти. Каждая — один запуск.
+
+- [x] **T1** Циклический импорт: `views/search.js` брал `renderQuizSession` из
+      `views.js` (который сам реэкспортирует search.js) — теперь из
+      `./practice.js`. Сделано архитектором.
+- [ ] **T2 Логика обучения — в домен с тестами.** `queueOrder`, `masteryOf`,
+      `categoryStats` (views/common.js) и `introQueue` (views/practice.js) решают,
+      какие вопросы видит ученик и что считать «освоено», но живут в слое экранов,
+      читают глобальный `state` и почти не покрыты тестами. Перенести в
+      `public/js/domain/learning.js` как ЧИСТЫЕ функции (answers, manifest,
+      questions — аргументами; `shuffle` — параметром для детерминизма в тестах);
+      в common.js оставить тонкие обёртки с тем же именем и сигнатурой. Файл — в
+      SHELL. Тесты `tests/learning.test.js`: порядок unseen → wrong → rest;
+      mastered по префиксу slug (темы `segnali-*` не должны цеплять друг друга —
+      проверить `id.startsWith(slug + '-')` на всех 25 slug из манифеста); accuracy
+      vs masteredPct; introQueue.
+- [ ] **T3 Виджеты главной отдельно от экрана статистики.** `dashboard.js`
+      импортирует `weekStrip`/`dayKey` из `stats.js` (экран зависит от экрана).
+      Вынести в `views/widgets.js` (+ SHELL), оба экрана импортируют оттуда.
+- [ ] **T4 QA-сценарии в CI.** В `.github/workflows/ci.yml` job `e2e` (ubuntu,
+      Node 22; Chrome на раннере: `google-chrome`): `node qa-new-user.mjs` и
+      `node scripts/qa-ux.mjs`. В обоих скриптах путь к Chrome —
+      `process.env.CHROME_PATH || '/Applications/Google Chrome.app/…'`, в CI
+      `CHROME_PATH=$(which google-chrome)`. qa-ux в CI падает при любом FAIL
+      (флаг `--strict`), локально — как сейчас.
+- [ ] **T5 Старые классы.** После S2.14: старые `.btn`, `.tag`, `.card`,
+      `.panel` — где есть `ds-*` аналог и старый не используется — удалить из
+      styles.css (qa-ux и скриншоты — без изменений).
+
+---
+
 ### Спринт 3 — Фаза 2.3 «Крутость приложения» (после Спринта 2)
 
 Общие правила спринта: новые данные/правила — только в
