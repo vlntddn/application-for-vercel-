@@ -1,5 +1,6 @@
 export const LANGUAGES = ['en', 'ru', 'zh'];
 export const THEMES = ['light', 'dark'];
+export const SIGNAL_HINT_MODES = ['auto', 'on', 'off'];
 
 // The daily-goal ring on the dashboard: how many questions a day the user
 // aims for. A constant per user is stored in the profile, not in code.
@@ -23,7 +24,7 @@ export const SCHEMA_VERSION = 1;
 
 export const EMPTY_PROGRESS = {
   version: SCHEMA_VERSION,
-  profile: { name: '', language: 'en', theme: 'light', sound: true, dailyGoal: DAILY_GOAL_DEFAULT, onboarded: false },
+  profile: { name: '', language: 'en', theme: 'light', sound: true, dailyGoal: DAILY_GOAL_DEFAULT, signalHints: 'auto', onboarded: false },
   answers: {}, // questionId -> { correct, wrong, lastCorrect, last }
   mistakes: [], // questionIds currently answered wrong
   exams: [], // { date, total, errors, passed }
@@ -115,6 +116,7 @@ export function migrateProgress(raw) {
     if (Number.isFinite(goal) && goal >= DAILY_GOAL_MIN && goal <= DAILY_GOAL_MAX) {
       out.profile.dailyGoal = goal;
     }
+    if (SIGNAL_HINT_MODES.includes(p.signalHints)) out.profile.signalHints = p.signalHints;
     if (typeof p.onboarded === 'boolean') out.profile.onboarded = p.onboarded;
   }
 
@@ -278,6 +280,12 @@ export class ProgressService {
     if (body.dailyGoal !== undefined) {
       profile.dailyGoal = assertDailyGoal(body.dailyGoal);
     }
+    if (body.signalHints !== undefined) {
+      if (!SIGNAL_HINT_MODES.includes(body.signalHints)) {
+        throw new ValidationError(`"signalHints" must be one of: ${SIGNAL_HINT_MODES.join(', ')}`);
+      }
+      profile.signalHints = body.signalHints;
+    }
     if (body.onboarded !== undefined) {
       if (typeof body.onboarded !== 'boolean') {
         throw new ValidationError('"onboarded" must be a boolean');
@@ -398,6 +406,12 @@ export class ProgressService {
       }
       if (profile.dailyGoal !== undefined) {
         clean.profile.dailyGoal = assertDailyGoal(profile.dailyGoal, 'profile.dailyGoal');
+      }
+      if (profile.signalHints !== undefined) {
+        if (!SIGNAL_HINT_MODES.includes(profile.signalHints)) {
+          throw new ValidationError(`"profile.signalHints" must be one of: ${SIGNAL_HINT_MODES.join(', ')}`);
+        }
+        clean.profile.signalHints = profile.signalHints;
       }
       if (profile.onboarded !== undefined) {
         if (typeof profile.onboarded !== 'boolean') {

@@ -4,7 +4,7 @@ import { state, applyTheme } from '../state.js';
 import { el, clear } from '../ui.js';
 import { requestPersistentStorage } from '../local-progress.js';
 import { renderInstallPanel } from '../install.js';
-import { DAILY_GOAL_DEFAULT } from '../domain/progress.js';
+import { DAILY_GOAL_DEFAULT, SIGNAL_HINT_MODES } from '../domain/progress.js';
 import { errorBanner, readLastBackup, exportProgressSnapshot, feedbackHref, FEEDBACK_EMAIL } from './common.js';
 
 // Options of the daily-goal selector (lost in the S1.3 move — restored).
@@ -146,6 +146,14 @@ export function renderSettings(root) {
     el('option', { value: 'off', textContent: 'OFF' }),
   );
   soundSelect.value = profile.sound === false ? 'off' : 'on';
+  // L2 — signal-word hints in practice questions: auto (default; off after
+  // 100 answers), on (always), off (never). Invalid stored value → 'auto'.
+  const signalSelect = el('select', { id: 's-signal-hints' },
+    el('option', { value: 'auto', textContent: 'AUTO (OFF AFTER 100 ANSWERS)' }),
+    el('option', { value: 'on', textContent: 'ALWAYS ON' }),
+    el('option', { value: 'off', textContent: 'OFF' }),
+  );
+  signalSelect.value = SIGNAL_HINT_MODES.includes(profile.signalHints) ? profile.signalHints : 'auto';
   const storedGoal = Number.isInteger(profile.dailyGoal) ? profile.dailyGoal : DAILY_GOAL_DEFAULT;
   // A value outside the presets (set on an older build) still shows up.
   const goalOptions = DAILY_GOAL_CHOICES.includes(storedGoal)
@@ -197,6 +205,7 @@ export function renderSettings(root) {
     el('div.field', {}, el('label', { htmlFor: 's-lang' }, 'TRANSLATION LANGUAGE'), langSelect),
     el('div.field', {}, el('label', { htmlFor: 's-theme' }, 'THEME'), themeSelect),
     el('div.field', {}, el('label', { htmlFor: 's-sound' }, 'ANSWER SOUNDS'), soundSelect),
+    el('div.field', {}, el('label', { htmlFor: 's-signal-hints' }, 'SIGNAL HINTS IN QUESTIONS'), signalSelect),
     el('div.field', {}, el('label', { htmlFor: 's-goal' }, 'DAILY GOAL'), goalSelect),
     el('div.actions', {},
       el('button.btn.btn-primary', {
@@ -207,6 +216,7 @@ export function renderSettings(root) {
               language: langSelect.value,
               theme: themeSelect.value,
               sound: soundSelect.value === 'on',
+              signalHints: signalSelect.value,
               dailyGoal: Number(goalSelect.value),
             });
             state.progress.profile = updated;

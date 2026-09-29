@@ -183,3 +183,64 @@ export function signalSpans(text, words) {
   if (best.end < text.length) segs.push({ text: text.slice(best.end), mark: false });
   return segs;
 }
+
+
+/** Total answers recorded (correct + wrong across all question records). */
+export function attemptedCount(answers) {
+  let n = 0;
+  for (const a of Object.values(answers || {})) {
+    n += (a?.correct ?? 0) + (a?.wrong ?? 0);
+  }
+  return n;
+}
+
+// «auto» switches the hints off once the learner has answered this many
+// questions — the highlight is an on-ramp, not a crutch (owner's call, L2).
+export const SIGNAL_HINTS_AUTO_LIMIT = 100;
+
+/**
+ * L2 — should signal words be highlighted? `profile.signalHints` is
+ * `auto` | `on` | `off`; anything else (missing/legacy value) behaves as
+ * `auto`: on while the learner has answered fewer than 100 questions.
+ */
+export function signalHintsEnabled(profile, answers) {
+  const mode = profile?.signalHints;
+  if (mode === 'on') return true;
+  if (mode === 'off') return false;
+  return attemptedCount(answers) < SIGNAL_HINTS_AUTO_LIMIT;
+}
+
+/**
+ * First signal word (as written in signal-words.json) that occurs in the
+ * text — accent-insensitive word-boundary match. null when none.
+ */
+export function findSignalWord(text, words) {
+  if (!text || !words?.length) return null;
+  return words.find((w) => hasSignalWord(text, w.word ?? w)) ?? null;
+}
+
+/**
+ * L2 — glossary for the tap callout: one entry per bank signal word with
+ * a translation (en/ru/zh) from the exam-Italian lesson. A lesson entry
+ * that covers a pair ("solo / soltanto") is mapped to both spellings.
+ * Words without a lesson entry are kept without a `gloss`.
+ */
+export function signalGlossary(lessons, insights) {
+  const examItalian = lessons?.examItalian;
+  if (!examItalian?.sections) return [];
+  const byKey = new Map();
+  for (const section of examItalian.sections) {
+    for (const entry of section.entries || []) {
+      if (!entry.it || !entry.gloss) continue;
+      for (const variant of entry.it.split('/').map((s) => s.trim()).filter(Boolean)) {
+        if (!byKey.has(variant)) byKey.set(variant, entry.gloss);
+      }
+    }
+  }
+  const out = [];
+  for (const w of insights?.words || []) {
+    const key = (w.word || '').split('/').map((s) => s.trim()).filter(Boolean).find((k) => byKey.has(k));
+    out.push({ word: w.word, questions: w.questions, falseRatio: w.falseRatio, gloss: key ? byKey.get(key) : null });
+  }
+  return out;
+}

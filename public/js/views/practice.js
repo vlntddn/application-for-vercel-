@@ -3,6 +3,7 @@
 import {
   state,
   loadLessons,
+  loadInsights,
   loadQuestions,
   slugForQuestionId,
   recordAnswersResilient,
@@ -11,7 +12,15 @@ import { el, clear, svgIcon } from '../ui.js';
 import { CATEGORY_CHAPTER } from '../theory-map.js';
 import { playCorrect, playWrong } from '../sound.js';
 import { errorBanner, translationOf, loc, pickQueue, queueOrder, masteryOf, categoryStats, translationArea, PRACTICE_BATCH, feedbackHref } from './common.js';
-import { introQueue as domainIntroQueue, INTRO_QUESTIONS, INTRO_TEXT_LEN } from '../domain/learning.js';
+import {
+  introQueue as domainIntroQueue,
+  INTRO_QUESTIONS,
+  INTRO_TEXT_LEN,
+  signalHintsEnabled,
+  signalSpans,
+  signalGlossary,
+  hasSignalWord,
+} from '../domain/learning.js';
 import { topicLabel, topicSub } from '../topics.js';
 
 // First-session on-ramp (Phase 2.2): a newcomer's first practice run opens
@@ -101,6 +110,108 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     return lessonsPromise;
   }
 
+  // L2 — signal-word highlight (practice/review only, never the exam):
+  // first signal occurrence becomes a tappable <mark> that opens a small
+  // callout with the word, its translation and its FALSO share in the bank.
+  // Disabled by profile.signalHints (`auto` turns off after 100 answers).
+  const hintsOn = signalHintsEnabled(state.progress.profile, state.progress.answers);
+  let insightsPromise = null; // session cache: loadInsights() once per session
+  let signalCache = new Map(); // mark id -> glossary entry (word, falseRatio, gloss)
+  let markSeq = 0;
+
+  function signalText(q) {
+    if (!hintsOn) return el('p.question-text', {}, q.text_it);
+    const p = (insightsPromise ??= loadInsights().then((ins) => ({
+      words: (ins?.words || []).map((w) => w.word),
+      byWord: new Map((ins?.words || []).map((w) => [w.word, w])),
+    })).catch(() => ({ words: [], byWord: new Map() })));
+    const para = el('p.question-text', {}, q.text_it);
+    p.then(({ words, byWord }) => {
+      if (!para.isConnected || para.children.length > 1) return; // re-rendered
+      const segs = signalSpans(q.text_it, words);
+      const marked = segs.some((s) => s.mark);
+      if (!marked) return;
+      // First signal word that actually occurs in this question (spans marks
+      // exactly that one) — its insight row is the callout's source of truth.
+      const word = words.find((w) => hasSignalWord(q.text_it, w));
+      const entry = byWord.get(word) ?? { word };
+      const id = `signal-gloss-${markSeq++}`;
+      const glossId = `signal-gloss-text-${markSeq++}`;
+      const frag = document.createDocumentFragment();
+      for (const seg of segs) {
+        if (!seg.mark) { frag.append(seg.text); continue; }
+        frag.append(el('mark.ds-signal', {
+          id,
+          role: 'button',
+          tabindex: '0',
+          'aria-describedby': glossId,
+          onclick: (e) => { e.stopPropagation(); openSignalCallout(e.target, entry, para); },
+          onkeydown: (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              e.stopPropagation();
+              openSignalCallout(e.target, entry, para);
+            }
+          },
+        }, seg.text));
+      }
+      // Hidden gloss region: a11y description of the marked word (translation).
+      const glossRegion = el('span', { id: glossId, style: 'display:none' });
+      frag.append(glossRegion);
+      para.replaceChildren(frag);
+      // Translation comes from the exam-Italian lesson — fill lazily so the
+      // callout and the a11y region stay in sync with what the user sees.
+      lessons().then((ls) => {
+        const gloss = (signalGlossary(ls, { words: [...byWord.values()] }) || [])
+          .find((g) => g.word === entry.word);
+        signalCache.set(id, gloss);
+        if (glossRegion.isConnected) glossRegion.textContent = loc(gloss?.gloss) || '';
+      });
+    });
+    return para;
+  }
+
+  let openCallout = null; // currently open callout element (one at a time)
+  let closeCallout = null; // removes the element AND its document listeners
+
+  function closeSignalCallout() {
+    if (openCallout) { openCallout.remove(); openCallout = null; }
+    if (closeCallout) { closeCallout(); closeCallout = null; }
+  }
+
+  function openSignalCallout(anchor, entry, para) {
+    closeSignalCallout();
+    const gloss = signalCache.get(anchor.id); // translation (may not be ready yet)
+    const falsePct = entry.falseRatio != null
+      ? `${Math.round(entry.falseRatio * 100)}%`
+      : null;
+    const callout = el('div.ds-signal-callout', {
+      role: 'status',
+      'aria-label': `Signal word ${entry.word}`,
+    },
+      el('strong', {}, entry.word),
+      el('span.ds-signal-callout__gloss', {}, loc(gloss?.gloss) || '—'),
+      falsePct ? el('span.tag.bad', {}, `FALSO IN ${falsePct} OF ${entry.questions} QUESTIONS`) : null,
+    );
+    para.insertAdjacentElement('afterend', callout);
+    openCallout = callout;
+    // Close on outside tap or Escape.
+    const onDocTap = (e) => {
+      if (!openCallout?.isConnected) return;
+      if (openCallout.contains(e.target) || anchor.contains(e.target)) return;
+      closeSignalCallout();
+    };
+    const onKey = (e) => {
+      if (e.key === 'Escape') closeSignalCallout();
+    };
+    closeCallout = () => {
+      document.removeEventListener('click', onDocTap, true);
+      document.removeEventListener('keydown', onKey);
+    };
+    document.addEventListener('click', onDocTap, true);
+    document.addEventListener('keydown', onKey);
+  }
+
   /** S2.9: the "why" content, shown directly under the verdict. Same
    *  chapter facts as the old expandable WHY? block — no new explanations. */
   async function whyBlock(question) {
@@ -162,6 +273,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     chosenValue = null;
     revealed = false;
     feedbackPanel = null;
+    closeSignalCallout();
     index++;
     if (index >= questions.length) {
       document.removeEventListener('keydown', keyHandler);
@@ -250,6 +362,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
           href: backHash,
           onclick: (e) => {
             document.removeEventListener('keydown', keyHandler);
+            closeSignalCallout();
             if (onQuit) {
               e.preventDefault();
               onQuit();
@@ -262,7 +375,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
       ),
       el('div.panel.question-card', {},
         q.image_url ? el('img.question-img', { src: q.image_url, alt: 'Road sign / situation', onerror: (e) => e.target.remove() }) : null,
-        el('p.question-text', {}, q.text_it),
+        signalText(q),
         translationArea(translationOf(q), revealed, reveal),
         answerButtons(q),
         answered
