@@ -390,7 +390,7 @@ S2.14–S2.15 (перенесены в конец Спринта L) → Спри
       одна строка вывода (для sempre: «1 in 3 is true — read for the exception»).
       Тексты-выводы — в `lessons.json → examItalian` (en/ru/zh), не в коде.
       *Проверка:* verify OK; qa-ux не хуже; скриншот 375px. *M*
-- [ ] **L1c Тренажёр «Язык экзамена».** Маршрут `#/drill/signals`: 20 вопросов
+- [x] **L1c Тренажёр «Язык экзамена».** Маршрут `#/drill/signals`: 20 вопросов
       банка с сигналами (смесь FALSO и ВЕРНЫХ-контрпримеров 50/50), после ответа —
       Feedback: слово-сигнал выделено + «this word is FALSO in N% — here it is
       TRUE because …» только если у вопроса есть trap-why в lessons, иначе без

@@ -1,3 +1,29 @@
+## 2026-09-29 18:20 — S2.L1c: тренажёр «Язык экзамена» (#/drill/signals)
+
+Что сделано (коммит `feat: тренажёр «Язык экзамена» #/drill/signals … (L1c)`
+на self-improve):
+- **public/js/domain/learning.js**: `signalQueue(questions, insights, size, rand)`
+  — очередь из 20 вопросов банка со словами-сигналами, ровно 50/50 между
+  FALSO и ВЕРНЫМИ-контрпримерами (взвешенный выбор, дедупликация по id);
+  `signalSpans(text, words)` — чистая функция, возвращает сегменты
+  `[{text, mark}]` для подсветки **первого** вхождения сигнала (без учёта
+  регистра/акцентов, без совпадения подстрок в других словах). Оба —
+  примитивы, потому что чистые, живут в learning.js (требование архитектуры).
+- **public/js/views/drill.js**: рендер drill-сессии; `questionText()` строит
+  DOM из сегментов `signalSpans` → `<mark.ds-signal>` для сигнала. Post-answer
+  feedback: «this word is FALSO in N% — here it is TRUE because …» — `because`
+  только если у вопроса есть `trap-why` в lessons, иначе без него.
+- **Маршруты**: `api.insights`, `state.loadInsights`, роут `#/drill/signals`;
+  ссылки из «L'italiano dell'esame» (theory) и с главной (dashboard).
+- **public/styles.css**: `mark.ds-signal`, `.signal-notes`. **public/sw.js**: v64.
+- **tests/learning.test.js**: +4 теста `signalQueue`, +4 теста `signalSpans`
+  (подсветка первого вхождения, акценты/регистр, без подстрок, пустой ввод).
+
+Проверка: `scripts/verify.sh` → VERIFY OK (123 npm-теста, smoke 8/200 на :3917,
+qa-new-user 37/0). `scripts/qa-ux.mjs` → 174 PASS, 2 FAIL — оба pre-existing
+(не блок, см. S2.L1b): p7 `#/` next-steps и p8 `#/review` button-wrap. Новый
+маршрут не в покрытии qa-ux. Проблем: нет.
+
 ## 2026-09-29 17:05 — S2.L1b: «L'italiano dell'esame» на данных банка
 
 Что сделано (коммиты `feat: слова-сигналы в гайде экзамена … (L1b)` и
