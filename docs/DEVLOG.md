@@ -1,6 +1,34 @@
 # DEVLOG — Passo (последнее сверху)
 
 
+## 2026-09-30 — L6a: Повторение — данные (streak/due)
+
+Что сделано (коммит `feat: повторение — streak/due по ответам, mastered = 2 подряд (L6a)` на self-improve):
+- **public/js/domain/progress.js** — в запись ответа добавлены поля spaced
+  repetition: `streak` (подряд верных) и `due` (YYYY-MM-DD).
+  - `recordAnswers`: верно → `streak+1`, `due = сегодня + [1,3,7,16,35][min(streak-1,4)]`
+    дней (`REVIEW_INTERVALS`); ошибка → `streak 0`, `due = завтра`.
+  - `addDays(from, n)` — экспорт, DST-безопасное смещение календарных дней.
+  - `migrateProgress` (SCHEMA_VERSION 1 → 2): старые записи восстанавливаются —
+    `streak = lastCorrect ? 1 : 0`, `due = last + 1 день`; битые значения
+    полей отбрасываются к вычисленным.
+  - `importProgress`: валидация `streak` (non-negative integer) и `due`
+    (строгий YYYY-MM-DD), мусор → 422; отсутствие полей → миграция.
+  - «Освоено» в `snapshot()` — теперь `streak >= MASTERY_STREAK` (2 подряд),
+    было `lastCorrect`. Тексты «mastered» на главной смысл не меняют (метрика
+    стала строже), не трогал; чипы тем в practice/stats считают coverage темы
+    (`masteryOf`/`categoryStats`) — отдельная метрика, к L6a не относится.
+- **public/js/state.js** — `applyLocalAnswers` (офлайн-ветка) дублирует ту же
+  логику streak/due (иначе offline-ответы бы теряли поля) и новый порог
+  `mastered`. **sw.js**: v69 → v70 (изменился public/).
+- **tests**: progress.test.js — тесты интервалов (1/3/7/16/35 с потолком),
+  миграция снапшота старого формата, импорт мусора → 422, `standalone.test.js`
+  — новый порог mastered. Серверная часть переиспользует доменную логику —
+  отдельной реализации нет.
+Проверка: `scripts/verify.sh` — VERIFY OK (155 тестов, smoke 8/8, qa-new-user
+42 PASS, zero-deps). Риск высокий — без UI, экран повторения — отдельная L6b.
+
+
 ## 2026-09-29 — L5b: Путь обучения — экран `#/path`
 
 Что сделано (коммит `feat: экран пути обучения #/path — карточки шагов, Continue, запись self-check в прогресс (L5b)` на self-improve):

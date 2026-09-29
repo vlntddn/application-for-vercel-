@@ -434,7 +434,7 @@ _Точка обзора A (не блокирует, решение владел
       «Step 3 of 25 — Segnali di divieto · Read → Check → Practice»); одна кнопка
       «Continue» ведёт в нужную часть шага. Card/ProgressBar системы.
       *Проверка:* verify; qa-new-user + новый шаг «путь ведёт новичка в урок 1». *M*
-- [ ] **L6a Повторение: данные.** В `domain/progress.js` к ответу — `streak`
+- [x] **L6a Повторение: данные.** В `domain/progress.js` к ответу — `streak`
       (подряд верных) и `due` (YYYY-MM-DD): верно → streak+1, due = сегодня +
       [1, 3, 7, 16, 35][min(streak-1,4)] дней; ошибка → streak 0, due = завтра.
       Миграция старых записей: streak = lastCorrect ? 1 : 0, due = last + 1 день.
