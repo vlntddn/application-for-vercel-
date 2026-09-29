@@ -9,6 +9,7 @@ export const state = {
   dictionary: null,
   lessons: null,
   insights: null,
+  numbers: null,
   questionsBySlug: new Map(),
 };
 
@@ -42,6 +43,11 @@ export async function loadLessons() {
 export async function loadInsights() {
   if (!state.insights) state.insights = await api.insights();
   return state.insights;
+}
+
+export async function loadNumbers() {
+  if (!state.numbers) state.numbers = await api.numbers();
+  return state.numbers;
 }
 
 export async function loadQuestions(slug) {

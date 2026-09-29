@@ -5,6 +5,9 @@ export { introQueue, renderPracticeList, renderQuizSession, renderPracticeSessio
 /* Signal-word drill lives in views/drill.js (L1c). */
 export { renderSignalDrill } from './views/drill.js';
 
+/* Numbers reference + drill lives in views/numbers.js (L4). */
+export { renderNumbers } from './views/numbers.js';
+
 /* ============================== ONBOARDING ================ */
 export { renderOnboarding } from './views/onboarding.js';
 

@@ -273,3 +273,93 @@ export function mistakeCauses(answers, questions, insights, lessons) {
   for (const { causes } of perQuestion) for (const c of causes) counts[c] += 1;
   return { perQuestion, counts };
 }
+
+/** Escape special RegExp characters inside a number token. */
+function escapeRe(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * L4 — does the text contain the number token? Digit-boundary guards:
+ * "50" matches "50 km/h" but not "150" or "500", "0,5" does not match
+ * "0,50". Letters never matter (a number is a number).
+ */
+export function hasNumber(text, token) {
+  if (!text || !token) return false;
+  const re = new RegExp(`(^|[^0-9])${escapeRe(token)}([^0-9]|$)`);
+  return re.test(text);
+}
+
+/**
+ * L4 — «Числа, которые надо знать» drill queue: `count` bank questions
+ * that contain at least one known number, ~50/50 between FALSO traps and
+ * VERO counter-examples, as many distinct numbers as the pools allow
+ * (the L1c signalQueue idea). Each question is tagged
+ * `{ ...q, number }` with the first matched token.
+ * Returns fewer than `count` when the bank holds less — never pads.
+ */
+export function numbersQueue(questions, numbersData, count = 20, rand = DEFAULT_RAND) {
+  const tokens = (numbersData?.tokens || []).map((t) => t.token);
+  const falseByToken = new Map();
+  const trueByToken = new Map();
+  for (const q of questions) {
+    const token = tokens.find((t) => hasNumber(q.text_it, t));
+    if (!token) continue;
+    const pool = q.is_true ? trueByToken : falseByToken;
+    if (!pool.has(token)) pool.set(token, []);
+    pool.get(token).push(q);
+  }
+  const queue = [];
+  let lastToken = null;
+  for (let i = 0; i < count; i++) {
+    const sides = i % 2 === 0
+      ? [falseByToken, trueByToken]
+      : [trueByToken, falseByToken];
+    let chosen = null;
+    for (const byToken of sides) {
+      const candidates = [...byToken.entries()]
+        .filter(([t]) => t !== lastToken)
+        .map(([t, arr]) => [t, arr]);
+      if (candidates.length) {
+        const pick = shuffled(candidates, rand)[0][1].shift();
+        if (pick) { chosen = pick; break; }
+      }
+    }
+    if (!chosen) {
+      // Allow a repeated number as a last resort, then any side.
+      for (const byToken of sides) {
+        const arr = [...byToken.values()].find((a) => a.length);
+        if (arr) { chosen = arr.shift(); break; }
+      }
+    }
+    if (!chosen) break;
+    const token = tokens.find((t) => hasNumber(chosen.text_it, t));
+    queue.push({ ...chosen, number: token });
+    lastToken = token;
+  }
+  return queue;
+}
+
+/**
+ * L4 — разметка числа в тексте вопроса (чистая, без DOM): сегменты
+ * `{ text, mark }`, подсвечивается самое первое вхождение числа из списка.
+ */
+export function numberSpans(text, tokens) {
+  if (!text || !tokens?.length) return [{ text: text ?? '', mark: false }];
+  let best = null; // { start, end }
+  for (const t of tokens) {
+    const re = new RegExp(`(^|[^0-9])${escapeRe(t)}([^0-9]|$)`);
+    const m = re.exec(text);
+    if (!m) continue;
+    const start = m.index + (m[1] ? m[1].length : 0);
+    const end = start + t.length;
+    if (!best || start < best.start) best = { start, end };
+  }
+  if (!best) return [{ text, mark: false }];
+  const segs = [];
+  if (best.start) segs.push({ text: text.slice(0, best.start), mark: false });
+  segs.push({ text: text.slice(best.start, best.end), mark: true });
+  if (best.end < text.length) segs.push({ text: text.slice(best.end), mark: false });
+  return segs;
+}
+

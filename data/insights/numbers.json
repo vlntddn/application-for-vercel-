@@ -1,0 +1,298 @@
+{
+  "generatedAt": "2026-09-29T18:25:42.520Z",
+  "contentHash": "def0c5295cf3c825",
+  "bank": 7139,
+  "table": [
+    {
+      "chapter": "ch1",
+      "fact": "Corsia",
+      "value": "1 fila di veicoli",
+      "tokens": [
+        "1"
+      ],
+      "questions": 0
+    },
+    {
+      "chapter": "ch2",
+      "fact": "Distanza dal pericolo (extraurbane)",
+      "value": "150 m",
+      "tokens": [
+        "150"
+      ],
+      "questions": 16
+    },
+    {
+      "chapter": "ch2",
+      "fact": "Croce di Sant'Andrea singola",
+      "value": "1 binario",
+      "tokens": [
+        "1"
+      ],
+      "questions": 0
+    },
+    {
+      "chapter": "ch3",
+      "fact": "Divieto di sosta (centro abitato)",
+      "value": "8:00–20:00",
+      "tokens": [
+        "8:00",
+        "20:00"
+      ],
+      "questions": 0
+    },
+    {
+      "chapter": "ch8",
+      "fact": "Centro abitato",
+      "value": "50 km/h",
+      "tokens": [
+        "50"
+      ],
+      "questions": 7
+    },
+    {
+      "chapter": "ch8",
+      "fact": "Extraurbane secondarie",
+      "value": "90 km/h",
+      "tokens": [
+        "90"
+      ],
+      "questions": 15
+    },
+    {
+      "chapter": "ch8",
+      "fact": "Extraurbane principali",
+      "value": "110 km/h",
+      "tokens": [
+        "110"
+      ],
+      "questions": 13
+    },
+    {
+      "chapter": "ch8",
+      "fact": "Autostrade",
+      "value": "130 km/h",
+      "tokens": [
+        "130"
+      ],
+      "questions": 10
+    },
+    {
+      "chapter": "ch8",
+      "fact": "Neopatentati (3 anni)",
+      "value": "100 / 90",
+      "tokens": [
+        "100",
+        "90"
+      ],
+      "questions": 25
+    },
+    {
+      "chapter": "ch9",
+      "fact": "Spazio di reazione (1 sec)",
+      "value": "≈ v/10 × 3 m",
+      "tokens": [
+        "10",
+        "3"
+      ],
+      "questions": 4
+    },
+    {
+      "chapter": "ch13",
+      "fact": "Distanza dall'incrocio (sosta)",
+      "value": "≥ 5 m",
+      "tokens": [
+        "5"
+      ],
+      "questions": 4
+    },
+    {
+      "chapter": "ch14",
+      "fact": "Triangolo: distanza",
+      "value": "≥ 50 m",
+      "tokens": [
+        "50"
+      ],
+      "questions": 8
+    },
+    {
+      "chapter": "ch16",
+      "fact": "Età minime",
+      "value": "AM 14 · A1 16 · B 18",
+      "tokens": [
+        "14",
+        "16",
+        "18"
+      ],
+      "questions": 9
+    },
+    {
+      "chapter": "ch16",
+      "fact": "Punti iniziali",
+      "value": "20 (max 30)",
+      "tokens": [
+        "20",
+        "30"
+      ],
+      "questions": 9
+    },
+    {
+      "chapter": "ch18",
+      "fact": "Tasso alcolemico",
+      "value": "0,5 g/l",
+      "tokens": [
+        "0,5"
+      ],
+      "questions": 0
+    },
+    {
+      "chapter": "ch18",
+      "fact": "Neopatentati / under 21 / professionali",
+      "value": "0 g/l",
+      "tokens": [
+        "0"
+      ],
+      "questions": 0
+    },
+    {
+      "chapter": "ch21",
+      "fact": "Battistrada (autovetture)",
+      "value": "≥ 1,6 mm",
+      "tokens": [
+        "1,6"
+      ],
+      "questions": 1
+    },
+    {
+      "chapter": "ch23",
+      "fact": "Sporgenza posteriore",
+      "value": "max 3/10 lunghezza",
+      "tokens": [
+        "3",
+        "10"
+      ],
+      "questions": 14
+    }
+  ],
+  "tokens": [
+    {
+      "token": "0",
+      "false": 7,
+      "true": 5,
+      "total": 12
+    },
+    {
+      "token": "0,5",
+      "false": 1,
+      "true": 1,
+      "total": 2
+    },
+    {
+      "token": "1",
+      "false": 20,
+      "true": 18,
+      "total": 38
+    },
+    {
+      "token": "1,6",
+      "false": 0,
+      "true": 1,
+      "total": 1
+    },
+    {
+      "token": "3",
+      "false": 52,
+      "true": 64,
+      "total": 116
+    },
+    {
+      "token": "5",
+      "false": 39,
+      "true": 49,
+      "total": 88
+    },
+    {
+      "token": "8:00",
+      "false": 0,
+      "true": 0,
+      "total": 0
+    },
+    {
+      "token": "10",
+      "false": 19,
+      "true": 5,
+      "total": 24
+    },
+    {
+      "token": "14",
+      "false": 1,
+      "true": 3,
+      "total": 4
+    },
+    {
+      "token": "16",
+      "false": 1,
+      "true": 2,
+      "total": 3
+    },
+    {
+      "token": "18",
+      "false": 3,
+      "true": 2,
+      "total": 5
+    },
+    {
+      "token": "20",
+      "false": 28,
+      "true": 15,
+      "total": 43
+    },
+    {
+      "token": "20:00",
+      "false": 0,
+      "true": 0,
+      "total": 0
+    },
+    {
+      "token": "30",
+      "false": 25,
+      "true": 9,
+      "total": 34
+    },
+    {
+      "token": "50",
+      "false": 32,
+      "true": 30,
+      "total": 62
+    },
+    {
+      "token": "90",
+      "false": 6,
+      "true": 11,
+      "total": 17
+    },
+    {
+      "token": "100",
+      "false": 19,
+      "true": 10,
+      "total": 29
+    },
+    {
+      "token": "110",
+      "false": 4,
+      "true": 10,
+      "total": 14
+    },
+    {
+      "token": "130",
+      "false": 8,
+      "true": 9,
+      "total": 17
+    },
+    {
+      "token": "150",
+      "false": 24,
+      "true": 18,
+      "total": 42
+    }
+  ]
+}

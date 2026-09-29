@@ -17,6 +17,7 @@ import {
   renderExam,
   renderSettings,
   renderSignalDrill,
+  renderNumbers,
 } from './views.js';
 
 const view = document.getElementById('view');
@@ -34,6 +35,7 @@ const routes = [
   { pattern: /^#\/practice$/, name: 'practice', render: () => renderPracticeList(view) },
   { pattern: /^#\/practice\/([\w-]+)$/, name: 'practice', render: (m) => renderPracticeSession(view, m[1]) },
   { pattern: /^#\/drill\/signals$/, name: 'practice', render: () => renderSignalDrill(view) },
+  { pattern: /^#\/numbers$/, name: 'practice', render: () => renderNumbers(view) },
   { pattern: /^#\/exam$/, name: 'exam', render: () => renderExam(view) },
   { pattern: /^#\/review$/, name: 'practice', render: () => renderQuickReview(view) },
   { pattern: /^#\/mistakes$/, name: 'mistakes', render: () => renderMistakes(view) },
