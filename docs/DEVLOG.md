@@ -1,3 +1,43 @@
+## 2026-09-29 03:05 — S2.3a: типографика — контраст p5 22/22 → 0, sentence case в ядре обучения
+
+Что сделано:
+- **Контраст (цель S2.3 «p5 ↓» достигнута: 22/22 → 0/22 FAIL).** Корень
+  проблемы — S2.2 подтянул токены, но `--accent` (#ff4d00) использовался как
+  ФОН с белым текстом (3.33:1) и как ТЕКСТ на `--paper` (3.33:1). Дизайн-система
+  уже давала правильные токены, их просто не применяли:
+  - accent как фон → чёрный текст `var(--on-accent)`: `.btn-primary`,
+    `.footer code`, `.tag.accent-tag` (чёрный на #ff4d00 ≈ 7:1).
+  - accent как текст → `var(--accent-ink)`: `.accent`, `.stat-value.accent`
+    (было `var(--accent)`, 2.9:1), `.week-day.today .week-label`.
+    В тёмной теме `--accent-ink: #ff7a3d` уже задан — обе темы зелёные.
+- **Размеры по токенам:** метки меню/теги/буквы недели/footer/kbd-hint — 12px
+  (0.75rem), lede/stat-sub/empty-note — body-sm 14/20 (0.875rem), h2 в
+  `.card`/`.panel`/`.term-card`/`.term-row` — heading 1.25rem.
+- **Регистр (правило Content fundamentals):** exam/practice/review — lede,
+  правила экзамена («30 random questions…»), статусы («Saving result…»),
+  подсказки и empty-note переведены в sentence case. Капс оставлен только у
+  заголовков экранов, лейблов, тегов и кнопок.
+- **QA:** в qa-new-user.mjs правила экзамена `/30 RANDOM QUESTIONS/`,
+  `/20 MINUTES/`, `/3 ERRORS/` → добавлен флаг `/i` (как уже соседняя
+  case-insensitive «это тренировка») — QA теперь проверяет регистронезависимо
+  и соответствует design-intent.
+- `public/sw.js`: VERSION v41 → v42.
+
+Как проверялось:
+- scripts/verify.sh — VERIFY OK: 84 теста, 8 smoke-эндпоинтов 200, zero deps,
+  «public/ changed and sw.js VERSION bumped», qa-new-user 37 PASS / 0 FAIL.
+- node scripts/qa-ux.mjs — **p5 контраст: 22/22 → 0/22 FAIL** (цель S2.3
+  «p5 ↓» выполнена полностью, а не «заметно»). Остальные метрики на уровне
+  базовой линии S2.1 (p4 22/22 «storage/» — задача S2.5, p2 6/22 — S2.6,
+  p6 11/22 — S2.4).
+
+Коммиты: 1f5ccbf (code + qa-new-user.mjs + sw.js), docs — текущий.
+
+Замечание: задача S2.3 в роадмапе разбита на **S2.3a** (контраст + ядро
+обучения, эта запись — ЗАКРЫТА) и **S2.3b** (sentence case в остальных
+экранах: dashboard, theory, stats, search, dictionary, install.js, onboarding)
+— остаётся открытой, берётся следующим запуском.
+
 ## 2026-09-29 02:12 — S2.2: токены дизайн-системы в public/styles.css, SW v40 → v41
 
 Что сделано:

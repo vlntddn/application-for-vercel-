@@ -227,11 +227,27 @@ README компонента задачи. Эталонные стили — `doc
       `--font-sans` = стек из tokens.json **без** "Onest" (внешние шрифты
       запрещены до S2.13). Никакие экраны в этой задаче не переделывать.
       *Цель:* p5 (контраст) заметно меньше FAIL.
-- [ ] **S2.3 Типографика.** Правило README → Content fundamentals: капс только
-      у заголовков экранов, лейблов, тегов и кнопок; lede, вопросы, подсказки,
-      тексты онбординга и правила экзамена — обычным регистром. Минимум 12px
-      (метки меню, теги, буквы недели). Размеры — по стилям `tokens.json`
-      (`question` 20/30, `body` 16/24, `body-sm` 14/20…). *Цель:* p5 ↓.
+- [x] **S2.3a Типографика: контраст + ядро обучения** — сделано 2026-09-29.
+      *Контраст (цель p5 ↓, достигнута 22/22→0):* accent как фон получил чёрный
+      текст `--on-accent` (`.btn-primary`, `.footer code`, `.tag.accent-tag`);
+      accent как текст — `--accent-ink` (`.accent`, `.stat-value.accent`,
+      `.week-day.today .week-label`). *Размеры:* метки меню/теги/буквы недели/
+      footer/kbd-hint подведены к 12px (0.75rem), lede/stat-sub/empty-note —
+      body-sm 14/20 (0.875rem), card/panel h2 — heading 1.25rem по токенам.
+      *Регистр:* exam/practice/review — lede, правила экзамена, статусы и
+      подсказки переведены в sentence case (капс только у заголовков экранов,
+      лейблов, тегов и кнопок). QA: правила экзамена в qa-new-user.mjs теперь
+      case-insensitive (`/i`) — как уже соседняя «это тренировка». SW v41→v42.
+      *Проверка:* verify.sh VERIFY OK (84 теста, 8 smoke, qa-new-user 37/0);
+      qa-ux p5 = 0/22 FAIL.
+- [ ] **S2.3b Типографика: оставшиеся экраны** — sentence case для lede/вопросов/
+      подсказок/текстов онбординга ещё в dashboard, theory, stats, search,
+      dictionary, install.js, onboarding (правило: капс только у заголовков
+      экранов, лейблов, тегов и кнопок; «IN SIMPLE WORDS», lede дашборда,
+      тексты install → sentence case). Проверить по qa-new-user.mjs
+      (case-sensitive: onboarding «How you will study», «How THE REAL EXAM
+      WORKS» h2 остаётся капсом) и qa-ux p4/p5. *Цель:* весь фронт — в
+      едином регистре без отката p4/p5.
 - [ ] **S2.4 Шапка + Wordmark** (`components/Wordmark`): имя **Patente Pro**
       (не Passo!), одна строка, квадрат-акцент, `--sm` на телефоне; второе
       слово НЕ оранжевым; подзаголовок скрыть на ≤ 480px; высота ≤ 56px.
