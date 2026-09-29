@@ -1,3 +1,33 @@
+# DEVLOG — Passo (последнее сверху)
+
+## 2026-09-29 — L5a: Путь обучения — модель `learningPath()`
+
+Что сделано (коммит `feat: L5a — модель пути обучения learningPath … (L5a)` на self-improve):
+- **public/js/domain/learning.js** — новая модель пути обучения:
+  - `PATH_ORDER` — рекомендованный порядок глав (ch1…ch9 → ch12/ch13,
+    остальное — по номеру главы);
+  - `PATH_MINI_PASS = 4` (мини-проверка: ≥ 4/5), `PATH_MASTERY_PCT = 80`
+    (освоение темы ≥ 80% банка);
+  - `learningPath(progress, manifest, lessons)` → `{ steps, currentIndex, ready }`:
+    один шаг на главу (id, chapter, slug, name, read, check, mastered,
+    masteryPct, done, status). `done` — мягкий: прочитан урок **или**
+    последний мини-чек ≥ 4/5 **или** mastery ≥ 80% банка темы
+    (сравнение без округления: 424/531 = 79.85% → не done, хотя дисплей
+    покажет «80%»). `status`: 'done' / 'ready' (первый незавершённый) /
+    'open'; следующие шаги не блокируются. `ready` = true, когда все шаги
+    done («exam ready»). `masteryOf` вызывается с `progress?.answers || {}`
+    (устойчиво к прогрессу без ключа). Поле `progress.chapters[id].check`
+    пока не в схеме progress — писать его будет L5b.
+- **tests/learning.test.js** — блок L5a (6 тестов): порядок PATH_ORDER + хвост
+  по номеру; новичок → шаг 1 'ready', остальные 'open'; прочитан → done;
+  мини-чек 4/5 done, 3 — open; mastery порог (enough → done, enough−1 → ready);
+  всё прочитано → currentIndex −1, ready true.
+- **public/sw.js**: v67 → v68.
+
+Как проверено: node --test tests/learning.test.js — 32/32 pass;
+scripts/verify.sh — VERIFY OK (npm test 145 passed, smoke 8×200,
+qa-new-user 37 PASS). Проблем не было.
+
 ## 2026-09-29 — L4: «Числа, которые надо знать» — таблица-справка + тренажёр #/numbers
 
 Что сделано (коммит `feat: L4 — … #/numbers (L4)` на self-improve):
