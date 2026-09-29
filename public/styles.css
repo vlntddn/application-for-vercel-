@@ -1174,59 +1174,180 @@ main:focus { outline: none; }
 
 .why-fact:last-of-type { border-bottom: none; margin-bottom: 10px; }
 
-/* ---------- Dashboard: week strip & progress ring ---------- */
+/* ---------- Design system (S2.11): Card, Tag, Button, Stat, WeekStrip, GoalRing ----------
+   Source of truth: docs/design-system/components/bundle.css. The app ships
+   its own copy of the rules so the public/ build stays dependency-free;
+   keep the two in sync when a component changes. */
 
-.week-panel { margin-bottom: 24px; }
-
-.week {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
+.ds-card {
+  display: block;
+  position: relative;
+  background: var(--surface);
+  color: var(--ink);
+  border: var(--border-3) solid var(--ink);
+  border-radius: 0;
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-4);
+  text-decoration: none;
+  text-align: left;
+  font: inherit;
 }
 
-.week-day {
+.ds-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: var(--space-3);
+}
+
+.ds-card__eyebrow {
+  font: 800 13px/16px var(--font-sans);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.ds-card__title { margin: 0 0 4px; font: 800 20px/24px var(--font-sans); }
+.ds-card__sub { margin: 0 0 var(--space-3); font: 400 14px/20px var(--font-sans); color: var(--ink-muted); }
+
+.ds-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 24px;
+  padding: 0 8px;
+  border: var(--border-2) solid var(--ink);
+  background: var(--surface);
+  color: var(--ink);
+  font: 800 12px/16px var(--font-sans);
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ds-tag svg.ic { width: 14px; height: 14px; stroke-width: 3; }
+.ds-tag--accent { background: var(--accent); color: var(--on-accent); }
+.ds-tag--ok { background: var(--ok-soft); border-color: var(--ok); color: var(--ok); }
+
+.ds-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--tap-min);
+  min-width: var(--tap-min);
+  padding: 0 20px;
+  border: var(--border-3) solid var(--ink);
+  border-radius: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font: 800 16px/20px var(--font-sans);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform 80ms ease, box-shadow 80ms ease, background-color 80ms ease;
+}
+
+.ds-btn:hover { background: var(--surface-sunken); transform: translate(-1px, -1px); }
+.ds-btn:active { transform: translate(3px, 3px); box-shadow: none; }
+.ds-btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.ds-btn--primary { background: var(--accent); color: var(--on-accent); }
+.ds-btn--primary:hover { background: var(--accent); }
+.ds-btn--lg { min-height: 56px; padding: 0 28px; font-size: 18px; line-height: 22px; font-weight: 900; }
+.ds-btn--block { display: flex; width: 100%; }
+.ds-btn[disabled], .ds-btn[aria-disabled="true"] {
+  background: var(--surface-sunken);
+  border-color: var(--ink-muted);
+  color: var(--ink-muted);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Stat: label, one big number, one sub line. Friendly zeros, no third line. */
+.ds-stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+.ds-stat {
+  display: grid;
+  gap: 4px;
+  align-content: start;
+  background: var(--surface);
+  border: var(--border-3) solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-4);
+}
+
+.ds-stat__label {
+  font: 800 13px/16px var(--font-sans);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.ds-stat__value {
+  font: 900 44px/44px var(--font-sans);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.ds-stat__value--streak { color: var(--accent-ink); }
+.ds-stat__value--ok { color: var(--ok); }
+.ds-stat__sub { margin: 0; font: 400 14px/20px var(--font-sans); color: var(--ink-muted); }
+
+/* WeekStrip: 7 cells, 44px tall, accent fill = goal met, today outlined. */
+.ds-week { display: grid; grid-template-columns: repeat(7, 1fr); gap: var(--space-2); }
+.ds-week__day { display: grid; gap: 6px; justify-items: center; }
+.ds-week__cell {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 44px;
+  border: var(--border-2) solid var(--ink);
+  background: var(--surface);
+  color: var(--on-accent);
+}
+
+.ds-week__cell svg.ic { width: 20px; height: 20px; stroke-width: 3; }
+.ds-week__cell--done { background: var(--accent); }
+.ds-week__cell--today { border-width: 3px; box-shadow: var(--shadow-sm); }
+.ds-week__label {
+  font: 800 12px/16px var(--font-sans);
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.ds-week__day--today .ds-week__label { color: var(--accent-ink); }
+
+/* GoalRing: ink outline as the 3:1 boundary, sunken track, accent arc
+   from twelve o'clock (the svg is rotated -90deg). */
+.ds-ring { position: relative; display: inline-grid; place-items: center; width: 112px; height: 112px; }
+.ds-ring svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.ds-ring__edge { fill: none; stroke: var(--ink); stroke-width: 16; }
+.ds-ring__track { fill: none; stroke: var(--surface-sunken); stroke-width: 10; }
+.ds-ring__value { fill: none; stroke: var(--accent); stroke-width: 10; stroke-linecap: butt; transition: stroke-dashoffset 400ms ease-out; }
+.ds-ring__centre { position: relative; display: grid; justify-items: center; text-align: center; }
+.ds-ring__num { font: 900 28px/28px var(--font-sans); font-variant-numeric: tabular-nums; }
+.ds-ring__sub {
+  font: 800 12px/16px var(--font-sans);
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+/* Dashboard: week strip and the daily-goal ring sit side by side. */
+.week-panel { margin-bottom: 24px; }
+.week-row { display: flex; align-items: center; gap: 20px; }
+.week-row .ds-week { flex: 1; }
+
+.today-goal {
+  flex: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
 }
-
-.week-cell {
-  width: 100%;
-  aspect-ratio: 1;
-  max-height: 52px;
-  border: var(--border-thin);
-  background: var(--surface);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.week-day.done .week-cell {
-  background: var(--ok);
-  color: #fff;
-  border-color: var(--ok);
-}
-
-/* Today reads as "the one to fill in next", so it gets the accent. */
-.week-day.today .week-cell {
-  border: 3px solid var(--accent);
-  box-shadow: var(--shadow-small);
-}
-
-.week-day.today.done .week-cell { background: var(--ok); }
-
-.week-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-}
-
-.week-day.today .week-label { color: var(--accent-ink); }
 
 /* Activity heat map: last 90 days, weeks as columns (Monday-first, as in
    Italy). The grid itself is decorative — the numbers live in the text
@@ -1260,76 +1381,32 @@ main:focus { outline: none; }
   color: var(--muted);
 }
 
-.ring-card { display: flex; flex-direction: column; align-items: flex-start; }
-
-.ring-wrap {
-  position: relative;
-  width: 104px;
-  height: 104px;
-  margin: 6px 0 10px;
-}
-
-.ring { width: 104px; height: 104px; display: block; }
-
-.ring-track { fill: none; stroke: var(--ink); opacity: 0.15; }
-
-.ring-value {
-  fill: none;
-  stroke: var(--ok);
-  stroke-linecap: butt; /* hard ends: brutalism, not a rounded meter */
-  transition: stroke-dashoffset 400ms ease-out;
-}
-
-.ring-centre {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-}
-
-.ring-pct { font-size: 1.5rem; font-weight: 900; line-height: 1; }
-.ring-sub { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.02em; color: var(--muted); }
-
-@media (prefers-reduced-motion: reduce) {
-  .ring-value { transition: none; }
-}
-
-@media (max-width: 760px) {
-  .week-cell { max-height: 44px; font-size: 1rem; }
-  .ring-wrap, .ring { width: 92px; height: 92px; }
-}
-
 /* On a phone the 13 heat columns must fit: slightly smaller cells. */
 @media (max-width: 420px) {
   .heat-month, .heat-cell { width: 10px; height: 10px; }
 }
 
-/* Week strip and the daily-goal ring sit side by side. */
-.week-row { display: flex; align-items: center; gap: 20px; }
-.week-row .week { flex: 1; }
-
-.today-goal {
-  flex: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-.today-goal .ring-value { stroke: var(--accent); }
-.today-goal .ring-pct { font-size: 1.35rem; }
-
-@media (max-width: 520px) {
-  .week-row { gap: 14px; }
-  .today-goal .ring-wrap, .today-goal .ring { width: 76px; height: 76px; }
-  .today-goal .ring-pct { font-size: 1.1rem; }
-}
 
 
 @media (max-width: 480px) {
   /* S2.4: подзаголовок wordmark скрыт на <= 480px */
   .brand__tag { display: none; }
 }
+
+/* S2.11: Stat cards stack to one column under 480px (Stat README), the
+   week+ring panel tightens so the ring stays first-screen on a phone. */
+@media (max-width: 480px) {
+  .ds-stat-row { grid-template-columns: 1fr; }
+  .ds-stat__value { font-size: 40px; line-height: 40px; }
+  .week-row { gap: 14px; }
+  .ds-ring { width: 96px; height: 96px; }
+  .ds-ring__num { font-size: 24px; line-height: 24px; }
+  .today-goal .ds-ring__sub { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ds-ring__value { transition: none; }
+  .ds-btn, .ds-card { transition: none; }
+}
+
+
