@@ -294,19 +294,33 @@ a.card:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
   border: var(--border-thin);
   border-radius: 0;
   padding: 12px 22px;
+  min-height: 44px;
+  min-width: 44px;
   cursor: pointer;
   box-shadow: var(--shadow-small);
-  transition: transform 60ms ease, box-shadow 60ms ease;
+  transition: transform 60ms ease, box-shadow 60ms ease, background-color 60ms ease;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn:hover { background: var(--warn); color: #000; }
-.btn:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
-.btn:disabled { opacity: 0.35; cursor: not-allowed; }
+/* hover — подъём на 1px + surface-sunken (не жёлтый: жёлтый = warning) */
+.btn:hover { background: var(--surface-sunken); transform: translate(-1px, -1px); }
+/* press — провал на 3px, тень убирается */
+.btn:active { transform: translate(3px, 3px); box-shadow: none; }
+.btn:disabled, .btn[aria-disabled="true"] {
+  background: var(--surface-sunken);
+  border-color: var(--ink-muted);
+  color: var(--ink-muted);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
 
 .btn-primary { background: var(--accent); color: var(--on-accent); }
-.btn-primary:hover { background: var(--ink); color: var(--paper); }
+/* primary hover — остаётся accent, только подъём */
+.btn-primary:hover { background: var(--accent); }
 .btn-big { font-size: 1rem; padding: 16px 32px; }
 .btn-true { background: var(--ok); color: #fff; }
 .btn-false { background: var(--bad); color: #fff; }
@@ -332,8 +346,14 @@ input, select {
   appearance: none;
 }
 
-input:focus-visible, select:focus-visible, .btn:focus-visible, .nav a:focus-visible, a.card:focus-visible {
+input:focus-visible, select:focus-visible, .nav a:focus-visible, a.card:focus-visible {
   outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* фокус кнопки — синий --focus 3px (дизайн-система) */
+.btn:focus-visible {
+  outline: 3px solid var(--focus);
   outline-offset: 2px;
 }
 
@@ -533,8 +553,8 @@ kbd {
   margin-left: auto;
   flex: none;
   white-space: nowrap;
-  min-height: 40px;
-  padding: 6px 16px;
+  min-height: 44px;
+  padding: 8px 16px;
   border: var(--border-2) solid var(--ink);
   background: var(--paper);
   color: var(--ink);
