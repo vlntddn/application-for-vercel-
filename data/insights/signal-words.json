@@ -1,0 +1,174 @@
+{
+  "generatedBy": "scripts/build-insights.mjs",
+  "bank": 7139,
+  "words": [
+    {
+      "word": "solo",
+      "questions": 246,
+      "falseRatio": 0.7520325203252033,
+      "bank": 7139,
+      "falseIds": [
+        "alcool-droga-primo-soccorso-attivita-soccorritore-4",
+        "alcool-droga-primo-soccorso-emorragia-esterna-4"
+      ],
+      "trueIds": [
+        "alcool-droga-primo-soccorso-ferito-stato-incoscienza-1",
+        "cinture-casco-sicurezza-sistemi-trasporto-bambini-2"
+      ]
+    },
+    {
+      "word": "soltanto",
+      "questions": 31,
+      "falseRatio": 0.7096774193548387,
+      "bank": 7139,
+      "falseIds": [
+        "alcool-droga-primo-soccorso-occhiali-lenti-contatto-6",
+        "alcool-droga-primo-soccorso-occhiali-lenti-contatto-7"
+      ],
+      "trueIds": [
+        "consumi-ambiente-inquinamento-salvaguardare-ambiente-0",
+        "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-7"
+      ]
+    },
+    {
+      "word": "sempre",
+      "questions": 80,
+      "falseRatio": 0.6625,
+      "bank": 7139,
+      "falseIds": [
+        "alcool-droga-primo-soccorso-attivita-soccorritore-3",
+        "alcool-droga-primo-soccorso-corpo-estraneo-occhio-3"
+      ],
+      "trueIds": [
+        "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-3",
+        "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-9"
+      ]
+    },
+    {
+      "word": "tutti",
+      "questions": 108,
+      "falseRatio": 0.6388888888888888,
+      "bank": 7139,
+      "falseIds": [
+        "cinture-casco-sicurezza-sistemi-trasporto-bambini-5",
+        "definizioni-generali-doveri-strada-aree-pedonali-6"
+      ],
+      "trueIds": [
+        "definizioni-generali-doveri-strada-autostrada-5",
+        "definizioni-generali-doveri-strada-ciclomotori-2"
+      ]
+    },
+    {
+      "word": "qualsiasi",
+      "questions": 27,
+      "falseRatio": 0.7037037037037037,
+      "bank": 7139,
+      "falseIds": [
+        "definizioni-generali-doveri-strada-strada-definizione-9",
+        "elementi-veicolo-manutenzione-comportamenti-sostituzione-ruota-7"
+      ],
+      "trueIds": [
+        "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-7",
+        "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-4"
+      ]
+    },
+    {
+      "word": "purché",
+      "questions": 61,
+      "falseRatio": 0.7377049180327869,
+      "bank": 7139,
+      "falseIds": [
+        "cinture-casco-sicurezza-sistemi-trasporto-bambini-10",
+        "cinture-casco-sicurezza-sistemi-trasporto-bambini-11"
+      ],
+      "trueIds": [
+        "definizioni-generali-doveri-strada-inquinamento-strade-6",
+        "fermata-sosta-arresto-sosta-fuori-centri-abitati-0"
+      ]
+    },
+    {
+      "word": "è obbligatorio",
+      "questions": 78,
+      "falseRatio": 0.7051282051282052,
+      "bank": 7139,
+      "falseIds": [
+        "alcool-droga-primo-soccorso-soccorso-ferito-5",
+        "alcool-droga-primo-soccorso-soccorso-ferito-6"
+      ],
+      "trueIds": [
+        "alcool-droga-primo-soccorso-soccorso-ferito-0",
+        "cinture-casco-sicurezza-casco-obbligatorio-0"
+      ]
+    },
+    {
+      "word": "deve",
+      "questions": 702,
+      "falseRatio": 0.40028490028490027,
+      "bank": 7139,
+      "falseIds": [
+        "alcool-droga-primo-soccorso-attivita-soccorritore-3",
+        "alcool-droga-primo-soccorso-attivita-soccorritore-5"
+      ],
+      "trueIds": [
+        "alcool-droga-primo-soccorso-attivita-soccorritore-0",
+        "alcool-droga-primo-soccorso-attivita-soccorritore-1"
+      ]
+    },
+    {
+      "word": "può",
+      "questions": 621,
+      "falseRatio": 0.392914653784219,
+      "bank": 7139,
+      "falseIds": [
+        "alcool-droga-primo-soccorso-cause-shock-4",
+        "alcool-droga-primo-soccorso-eccesso-bevande-alcoliche-2"
+      ],
+      "trueIds": [
+        "alcool-droga-primo-soccorso-assunzione-alcool-0",
+        "alcool-droga-primo-soccorso-assunzione-alcool-1"
+      ]
+    },
+    {
+      "word": "salvo",
+      "questions": 50,
+      "falseRatio": 0.28,
+      "bank": 7139,
+      "falseIds": [
+        "limiti-di-velocita-Comportamenti-passaggio-livello-9",
+        "limiti-di-velocita-diminuzione-velocita-4"
+      ],
+      "trueIds": [
+        "fermata-sosta-arresto-divieto-sosta-fermata-2",
+        "fermata-sosta-arresto-fermata-vietata-2"
+      ]
+    },
+    {
+      "word": "anche",
+      "questions": 242,
+      "falseRatio": 0.43388429752066116,
+      "bank": 7139,
+      "falseIds": [
+        "cinture-casco-sicurezza-guanti-uso-motociclistico-11",
+        "cinture-casco-sicurezza-sistemi-trasporto-bambini-11"
+      ],
+      "trueIds": [
+        "alcool-droga-primo-soccorso-eccesso-bevande-alcoliche-1",
+        "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-8"
+      ]
+    },
+    {
+      "word": "almeno",
+      "questions": 67,
+      "falseRatio": 0.5970149253731343,
+      "bank": 7139,
+      "falseIds": [
+        "definizioni-generali-doveri-strada-autoveicoli-6",
+        "definizioni-generali-doveri-strada-autoveicoli-7"
+      ],
+      "trueIds": [
+        "definizioni-generali-doveri-strada-autostrada-3",
+        "definizioni-generali-doveri-strada-autoveicoli-0"
+      ]
+    }
+  ]
+}
