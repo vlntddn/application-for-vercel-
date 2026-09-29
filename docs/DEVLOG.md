@@ -1,3 +1,31 @@
+## 2026-09-29 02:12 — S2.2: токены дизайн-системы в public/styles.css, SW v40 → v41
+
+Что сделано:
+- В начале styles.css переписаны :root и [data-theme="dark"] по токенам из
+  docs/design-system/tokens.json (Passo v1): цвета (paper/surface/surface-sunken/ink/
+  ink-muted/line-soft/on-ink/accent/on-accent/accent-ink/accent-soft/ok/ok-soft/bad/
+  bad-soft/warn/on-warn/warn-ink/warn-soft/focus/heat-0..4), spacing (--space-1..16),
+  radius, shadow-sm/md, border-2/3, tap-min/nav-h/content-max, z-nav/z-overlay,
+  --font-sans (стек без Onest — шрифт self-hostится в S2.13) и --font-mono.
+  Тёмная тема получает только цветовые переопределения + тени, как в tokens.json.
+- Старые имена (--muted, --border, --border-thin, --shadow, --shadow-small, --font)
+  оставлены как алиасы на новые токены — все 72 использования в файле продолжают
+  работать. --ok изменён #00a651 → #006b7a, --bad #e4002b → #b3002c (значения из
+  tokens.json) — это осознанное изменение контраста.
+- public/sw.js: VERSION v40 → v41 (правило: любое изменение public/ → bump).
+
+Как проверялось:
+- scripts/verify.sh — VERIFY OK: 84 теста, 8 smoke-эндпоинтов 200, zero deps,
+  «public/ changed and sw.js VERSION bumped», qa-new-user 37/0.
+- node scripts/qa-ux.mjs: ИТОГО 113 PASS / 63 FAIL (было 112/64) — p5 (контраст)
+  поправился на @375, остался только на @1280 (span.accent/button.btn/code 3.33:1 —
+  это --accent #ff4d00 на --paper #f4f1ea, 3.33:1 — значение из tokens.json.
+  Дальнейший фикс — за задачами S2.3 (типографика) и S2.6 (кнопки: primary =
+  accent + ЧЁРНЫЙ текст on-accent).
+  Справедливость p4 (22/22 «storage/») не подтвердилась — задача S2.5 «Приватность без пути к файлу».
+
+Коммит: ab8a6bd (code), docs — текущий.
+
 # Журнал разработки
 
 ## 2026-09-29 01:40 — S2.1 (докраска черновика): qa-ux.mjs без дебага, базовая линия подтверждена
