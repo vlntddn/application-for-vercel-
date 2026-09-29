@@ -244,3 +244,32 @@ export function signalGlossary(lessons, insights) {
   }
   return out;
 }
+
+/**
+ * L3 — why the learner keeps missing a question. For every CURRENT mistake
+ * (answered, last answer wrong) the causes: `signal` (a signal word occurs
+ * in the text), `sign` (the question carries an image), `number` (the text
+ * contains a digit) — several may apply. A mistake with none of the three
+ * specific causes is a plain `rule` mistake (road-rule knowledge).
+ * Returns `{ perQuestion: [{ questionId, causes }], counts }` where counts
+ * tallies each cause across all mistakes.
+ */
+export function mistakeCauses(answers, questions, insights, lessons) {
+  const words = (insights?.words || []).map((w) => w.word).filter(Boolean);
+  const perQuestion = (questions || [])
+    .filter((q) => {
+      const a = answers?.[q.id];
+      return !!a && !a.lastCorrect;
+    })
+    .map((q) => {
+      const causes = [];
+      if (words.length && findSignalWord(q.text_it, words)) causes.push('signal');
+      if (q.image_url) causes.push('sign');
+      if (/\d/.test(q.text_it || '')) causes.push('number');
+      if (causes.length === 0) causes.push('rule');
+      return { questionId: q.id, causes };
+    });
+  const counts = { signal: 0, sign: 0, number: 0, rule: 0 };
+  for (const { causes } of perQuestion) for (const c of causes) counts[c] += 1;
+  return { perQuestion, counts };
+}

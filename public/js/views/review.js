@@ -3,12 +3,15 @@
 import {
   state,
   loadQuestions,
+  loadInsights,
   slugForQuestionId,
   shuffle,
 } from '../state.js';
 import { el, clear } from '../ui.js';
 import { errorBanner, pickQueue, categoryStats } from './common.js';
 import { renderQuizSession } from './practice.js';
+import { mistakeCauses } from '../domain/learning.js';
+import { topicLabel } from '../topics.js';
 
 /* ============================== MISTAKES ============================== */
 
@@ -37,9 +40,52 @@ export async function renderMistakes(root) {
   }
   const questions = ids.map((id) => byId.get(id)).filter(Boolean);
 
+  // L3 — «why you keep missing»: top cause across current mistakes + drill link.
+  let causePanel = null;
+  try {
+    const insights = await loadInsights();
+    const { perQuestion, counts } = mistakeCauses(state.progress.answers, questions, insights, null);
+    const causesById = new Map(perQuestion.map((p) => [p.questionId, p.causes]));
+    const order = ['signal', 'sign', 'number', 'rule'];
+    const top = order.map((c) => [c, counts[c]]).filter(([, n]) => n > 0)
+      .sort((a, b) => b[1] - a[1] || order.indexOf(a[0]) - order.indexOf(b[0]))[0];
+    if (top) {
+      const [cause, n] = top;
+      const LABEL = { signal: 'absolute words', sign: 'sign questions', number: 'numbers', rule: 'road rules' };
+      // signal → the L1c drill; number → L4 (not built yet) → practice;
+      // sign → practice (sign-heavy questions come first there);
+      // rule → the chapter with the most rule mistakes.
+      let href = '#/practice';
+      let extra = '';
+      if (cause === 'signal') {
+        href = '#/drill/signals';
+      } else if (cause === 'rule') {
+        const bySlug = new Map();
+        for (const q of questions) {
+          if (!causesById.get(q.id)?.includes('rule')) continue;
+          const slug = slugForQuestionId(q.id);
+          if (slug) bySlug.set(slug, (bySlug.get(slug) || 0) + 1);
+        }
+        const best = [...bySlug.entries()].sort((a, b) => b[1] - a[1])[0]?.[0];
+        if (best) {
+          href = `#/practice/${best}`;
+          const cat = state.manifest.categories.find((c) => c.slug === best);
+          if (cat) extra = ` — ${topicLabel(cat)}`;
+        }
+      }
+      causePanel = el('div.panel', { style: 'margin-bottom:24px' },
+        el('h2', {}, `Most of your mistakes: ${LABEL[cause]}${extra} (${n} of ${questions.length})`),
+        el('div.actions', {}, el('a.btn.btn-primary', { href }, 'PRACTICE THIS')),
+      );
+    }
+  } catch {
+    /* insights unavailable — the panel is optional */
+  }
+
   clear(root,
     el('h1', {}, 'MISTAKES REVIEW'),
     el('p.lede', {}, `${questions.length} QUESTIONS YOU LAST ANSWERED WRONG. ANSWER CORRECTLY TO CLEAR THEM.`),
+    causePanel,
     el('div.actions', { style: 'margin-bottom:24px' },
       el('button.btn.btn-primary.btn-big', {
         onclick: () =>

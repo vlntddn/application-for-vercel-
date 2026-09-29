@@ -17,6 +17,7 @@ import {
   attemptedCount,
   signalHintsEnabled,
   SIGNAL_HINTS_AUTO_LIMIT,
+  mistakeCauses,
 } from '../public/js/domain/learning.js';
 
 const manifest = JSON.parse(
@@ -278,4 +279,44 @@ test('signalHintsEnabled: missing or legacy value behaves as auto', () => {
   assert.equal(signalHintsEnabled({}, {}), true, 'missing field defaults to auto');
   assert.equal(signalHintsEnabled({ signalHints: 'always' }, {}), true, 'unknown value falls back to auto');
   assert.equal(signalHintsEnabled(null, { a: { correct: SIGNAL_HINTS_AUTO_LIMIT, wrong: 0 } }), false);
+});
+
+test('mistakeCauses: tags each current mistake with signal/sign/number/rule', () => {
+  const questions = [
+    { id: 't-1', text_it: 'La velocità è sempre di 50 km/h', is_true: false, image_url: null },
+    { id: 't-2', text_it: 'Il segnale raffigurato', is_true: true, image_url: '/images/1.png' },
+    { id: 't-3', text_it: 'Il conducente deve rallentare', is_true: false, image_url: null },
+    { id: 't-4', text_it: 'Solo i vigili regolano', is_true: true, image_url: '/images/2.png' },
+    { id: 't-5', text_it: 'Mai superato limite', is_true: false, image_url: null },
+    // not a current mistake — excluded
+    { id: 't-6', text_it: 'Punto 5', is_true: true, image_url: null },
+  ];
+  const answers = {
+    't-1': { correct: 0, wrong: 1, lastCorrect: false },
+    't-2': { correct: 0, wrong: 1, lastCorrect: false },
+    't-3': { correct: 0, wrong: 1, lastCorrect: false },
+    't-4': { correct: 0, wrong: 2, lastCorrect: false },
+    't-5': { correct: 0, wrong: 1, lastCorrect: false },
+    't-6': { correct: 1, wrong: 1, lastCorrect: true },
+  };
+  const insights = { words: [{ word: 'sempre' }, { word: 'mai' }, { word: 'solo' }] };
+  const { perQuestion, counts } = mistakeCauses(answers, questions, insights, null);
+  assert.equal(perQuestion.length, 5, 'only current mistakes are tagged');
+  const byId = new Map(perQuestion.map((p) => [p.questionId, p.causes]));
+  // signal + number
+  assert.deepEqual([...byId.get('t-1')].sort(), ['number', 'signal']);
+  // sign only
+  assert.deepEqual(byId.get('t-2'), ['sign']);
+  // rule — no specific cause
+  assert.deepEqual(byId.get('t-3'), ['rule']);
+  // signal + sign (several causes may apply)
+  assert.deepEqual([...byId.get('t-4')].sort(), ['sign', 'signal']);
+  // signal only
+  assert.deepEqual(byId.get('t-5'), ['signal']);
+  assert.deepEqual(counts, { signal: 3, sign: 2, number: 1, rule: 1 });
+});
+
+test('mistakeCauses: empty or null inputs produce empty result', () => {
+  assert.deepEqual(mistakeCauses({}, [], null, null), { perQuestion: [], counts: { signal: 0, sign: 0, number: 0, rule: 0 } });
+  assert.deepEqual(mistakeCauses(null, null, null, null), { perQuestion: [], counts: { signal: 0, sign: 0, number: 0, rule: 0 } });
 });
