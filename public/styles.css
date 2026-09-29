@@ -424,14 +424,15 @@ input:focus-visible, select:focus-visible, .nav a:focus-visible, a.card:focus-vi
 .quiz-progress { font-weight: 900; font-size: 0.9rem; letter-spacing: 0.1em; }
 
 .timer {
-  font-size: 1.4rem;
-  font-weight: 900;
+  font: 600 1.4rem/1 var(--font-mono);
+  font-variant-numeric: tabular-nums;
   border: var(--border-thin);
-  padding: 6px 14px;
+  padding: 8px 14px;
   background: var(--surface);
+  color: var(--ink);
 }
 
-.timer.low { background: var(--bad); color: #fff; }
+.timer.low { border-color: var(--bad); background: var(--bad-soft); color: var(--bad); }
 
 .question-card { text-align: left; }
 
@@ -573,8 +574,8 @@ kbd {
 .exam-nav { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
 
 .exam-nav button {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border: var(--border-thin);
   background: var(--surface);
   color: var(--ink);
@@ -829,8 +830,6 @@ kbd {
 
   .quiz-head { gap: 8px; }
   .quiz-head .btn { padding: 8px 12px; }
-
-  .exam-nav button { width: 34px; height: 34px; }
 
   .actions .btn { flex: 1; text-align: center; }
 

@@ -64,7 +64,7 @@ function runExam(root, questions) {
     if (finished) return clearInterval(interval);
     secondsLeft--;
     timerEl.textContent = fmtTime(secondsLeft);
-    if (secondsLeft <= 60) timerEl.classList.add('low');
+    if (secondsLeft <= 2 * 60) timerEl.classList.add('low');
     if (secondsLeft <= 0) submit();
   }, 1000);
 
