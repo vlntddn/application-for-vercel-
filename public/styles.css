@@ -3,38 +3,106 @@
    Hard borders, hard shadows, high contrast, sans-serif type.
    ============================================================ */
 
+/* Токены дизайн-системы (docs/design-system/tokens.json).
+   Имена переменных = имена токенов; светлая тема в :root, тёмная в
+   [data-theme="dark"]. Старые имена ниже — алиасы, удаляем, когда ни
+   один экран их не использует. */
+
 :root {
-  --ink: #000000;
   --paper: #f4f1ea;
   --surface: #ffffff;
+  --surface-sunken: #ebe7dd;
+  --ink: #000000;
+  --ink-muted: #55514a;
+  --line-soft: #d8d2c4;
+  --on-ink: #f4f1ea;
   --accent: #ff4d00;
-  --ok: #00a651;
+  --on-accent: #000000;
+  --accent-ink: #b83a00;
+  --accent-soft: #ffe3d6;
+  --ok: #006b7a;
+  --ok-soft: #d9f1f4;
+  --bad: #b3002c;
+  --bad-soft: #ffe0e6;
   --warn: #ffd000;
-  --bad: #e4002b;
-  --muted: rgba(0, 0, 0, 0.45);
-  --border: 3px solid var(--ink);
-  --border-thin: 2px solid var(--ink);
-  --shadow: 6px 6px 0 var(--ink);
-  --shadow-small: 3px 3px 0 var(--ink);
-  --font: "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif;
+  --on-warn: #000000;
+  --warn-ink: #6b5000;
+  --warn-soft: #fff3bf;
+  --focus: #0044cc;
   /* activity heat map, low to high */
   --heat-0: #eceae3;
   --heat-1: #ffd9c2;
   --heat-2: #ffb380;
   --heat-3: #ff8138;
   --heat-4: #ff4d00;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  --radius-none: 0;
+  --radius-xs: 2px;
+  --radius-full: 999px;
+
+  --shadow-sm: 3px 3px 0 #000000;
+  --shadow-md: 6px 6px 0 #000000;
+
+  --border-2: 2px;
+  --border-3: 3px;
+
+  --tap-min: 48px;
+  --nav-h: 64px;
+  --content-max: 720px;
+
+  --z-nav: 100;
+  --z-overlay: 200;
+
+  /* Стек из tokens.json без "Onest" — он self-hostится только в S2.13. */
+  --font-sans: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* --- алиасы старых имён (пока их используют экраны) --- */
+  --muted: var(--ink-muted);
+  --border: var(--border-3) solid var(--ink);
+  --border-thin: var(--border-2) solid var(--ink);
+  --shadow: var(--shadow-md);
+  --shadow-small: var(--shadow-sm);
+  --font: var(--font-sans);
 }
 
 [data-theme="dark"] {
-  --ink: #f4f1ea;
   --paper: #0c0c0c;
   --surface: #1a1a1a;
-  --muted: rgba(244, 241, 234, 0.62);
+  --surface-sunken: #121212;
+  --ink: #f4f1ea;
+  --ink-muted: #b5b0a5;
+  --line-soft: #2e2e2e;
+  --on-ink: #0c0c0c;
+  --accent-ink: #ff7a3d;
+  --accent-soft: #3a1a0d;
+  --ok: #4fd0e0;
+  --ok-soft: #0c2f35;
+  --bad: #ff7b96;
+  --bad-soft: #3a0f1a;
+  --warn-ink: #ffd000;
+  --warn-soft: #3a3000;
+  --focus: #7aa2ff;
+  /* activity heat map, low to high */
   --heat-0: #262626;
   --heat-1: #5c2c14;
   --heat-2: #93431c;
   --heat-3: #c25a20;
   --heat-4: #ff4d00;
+
+  --shadow-sm: 3px 3px 0 #f4f1ea;
+  --shadow-md: 6px 6px 0 #f4f1ea;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
