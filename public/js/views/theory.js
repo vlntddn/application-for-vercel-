@@ -234,8 +234,8 @@ export async function renderTheoryChapter(root, id, opts = {}) {
       revealed && tr?.title ? el('p.lede', {}, tr.title) : null,
 
       opts.quizResult
-        ? el('div.feedback', {
-            className: `feedback ${opts.quizResult.correct === opts.quizResult.total ? 'ok' : 'bad'}`,
+        ? el('div.ds-feedback', {
+            className: `ds-feedback ${opts.quizResult.correct === opts.quizResult.total ? 'ds-feedback--ok' : 'ds-feedback--bad'}`,
             style: 'margin:0 0 20px',
           }, `Self-check: ${opts.quizResult.correct}/${opts.quizResult.total} correct`)
         : null,

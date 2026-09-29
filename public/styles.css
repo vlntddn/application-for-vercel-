@@ -523,16 +523,39 @@ input:focus-visible, select:focus-visible, .nav a:focus-visible, a.card:focus-vi
   color: var(--ink-muted);
 }
 
-.feedback {
+/* S2.9 (components/Feedback): post-answer panel */
+.ds-feedback {
   margin-top: 20px;
-  padding: 14px;
-  border: var(--border-thin);
-  font-weight: 900;
-  letter-spacing: 0.1em;
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: var(--border-3) solid var(--ink);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-md);
 }
-
-.feedback.ok { background: var(--ok); color: #fff; }
-.feedback.bad { background: var(--bad); color: #fff; }
+.ds-feedback--ok { border-color: var(--ok); background: var(--ok-soft); }
+.ds-feedback--bad { border-color: var(--bad); background: var(--bad-soft); }
+.ds-feedback__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: 900 20px/24px var(--font-sans);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.ds-feedback__head svg.ic { width: 22px; height: 22px; stroke-width: 3; }
+.ds-feedback--ok .ds-feedback__head { color: var(--ok); }
+.ds-feedback--bad .ds-feedback__head { color: var(--bad); }
+.ds-feedback__answer {
+  font: 700 14px/20px var(--font-sans);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.ds-feedback .why-objective,
+.ds-feedback .why-fact { background: var(--paper); }
+.ds-feedback .why-fact:last-of-type { margin-bottom: 0; }
+.ds-feedback__actions { display: flex; gap: var(--space-3); margin-top: var(--space-2); }
 
 .kbd-hint { margin-top: 16px; font-size: 0.75rem; font-weight: 600; color: var(--muted); letter-spacing: 0.05em; }
 
@@ -1082,7 +1105,7 @@ kbd {
 
 /* ---------- Answer feedback animation ---------- */
 
-.feedback { animation: feedback-pop 140ms ease-out; }
+.ds-feedback { animation: feedback-pop 140ms ease-out; }
 
 @keyframes feedback-pop {
   from { transform: scale(0.96); opacity: 0.4; }
@@ -1090,7 +1113,7 @@ kbd {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .feedback { animation: none; }
+  .ds-feedback { animation: none; }
 }
 
 /* ---------- Accessibility ---------- */

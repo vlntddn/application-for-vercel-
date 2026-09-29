@@ -73,45 +73,27 @@ export function renderPracticeList(root) {
  * question, so instead of inventing text we surface the chapter's
  * must-know facts — short, factual and exactly what the miss was about.
  */
-function whyBlock(question, onNavigate) {
-  const slug = slugForQuestionId(question.id);
-  const chapterId = slug ? CATEGORY_CHAPTER[slug] : null;
-  if (!chapterId) return null;
-
-  const box = el('div.why-box', {});
-  const button = el('button.btn.btn-small.btn-why', { onclick: open }, 'WHY? — KEY FACTS');
-  box.append(button);
-
-  async function open() {
-    button.disabled = true;
-    let lesson;
-    try {
-      lesson = (await loadLessons()).chapters?.[chapterId];
-    } catch {
-      lesson = null;
-    }
-    if (!lesson) {
-      // No lesson for this chapter yet: send the reader to the theory.
-      box.replaceChildren(el('a.btn.btn-small', {
-        href: `#/theory/${chapterId}`, onclick: () => onNavigate?.(),
-      }, 'READ THE CHAPTER →'));
-      return;
-    }
-    box.replaceChildren(
-      el('p.why-objective', {}, loc(lesson.objective)),
-      ...(lesson.mustKnow || []).slice(0, 4).map((fact) =>
-        el('div.why-fact', {},
-          el('strong', {}, fact.fact_it),
-          el('span.tag.must-value', {}, fact.value.toUpperCase()),
-        ),
-      ),
-      el('a.btn.btn-small', {
-        href: `#/theory/${chapterId}`, onclick: () => onNavigate?.(),
-      }, 'FULL LESSON →'),
-    );
+async function whyContents(chapterId, lessonsPromise) {
+  let lesson;
+  try {
+    lesson = (await lessonsPromise).chapters?.[chapterId];
+  } catch {
+    lesson = null;
   }
-
-  return box;
+  if (!lesson) {
+    // No lesson for this chapter yet: just the chapter title, reader can
+    // open it from the theory section.
+    return null;
+  }
+  return [
+    el('p.why-objective', {}, loc(lesson.objective)),
+    ...(lesson.mustKnow || []).slice(0, 4).map((fact) =>
+      el('div.why-fact', {},
+        el('strong', {}, fact.fact_it),
+        el('span.tag.must-value', {}, fact.value.toUpperCase()),
+      ),
+    ),
+  ];
 }
 
 export function renderQuizSession(root, questions, { title, backHash, onFinish, onQuit, easyStart }) {
@@ -122,6 +104,24 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
   let chosenValue = null; // the answer the learner picked (for button states)
   let revealed = false; // translation visibility, reset per question
   let offline = false; // answers are queuing locally
+  let lessonsPromise = null; // session cache: loadLessons() once per session
+  let feedbackPanel = null; // built once per question, reset in next()
+
+  function lessons() {
+    if (!lessonsPromise) lessonsPromise = loadLessons();
+    return lessonsPromise;
+  }
+
+  /** S2.9: the "why" content, shown directly under the verdict. Same
+   *  chapter facts as the old expandable WHY? block — no new explanations. */
+  async function whyBlock(question) {
+    const slug = slugForQuestionId(question.id);
+    const chapterId = slug ? CATEGORY_CHAPTER[slug] : null;
+    if (!chapterId) return null;
+    const contents = await whyContents(chapterId, lessons());
+    if (!contents) return null;
+    return el('div.why-block', {}, ...contents);
+  }
 
   function reveal() {
     revealed = true;
@@ -158,7 +158,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     if (lastCorrect) correctCount++;
     if (lastCorrect) playCorrect(); else playWrong();
     draw();
-    root.querySelector('.btn-primary')?.focus();
+    feedbackPanel?.querySelector('button')?.focus();
     try {
       const { synced } = await recordAnswersResilient([{ id: q.id, correct: lastCorrect }]);
       if (offline !== !synced) { offline = !synced; draw(); }
@@ -172,6 +172,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     lastCorrect = null;
     chosenValue = null;
     revealed = false;
+    feedbackPanel = null;
     index++;
     if (index >= questions.length) {
       document.removeEventListener('keydown', keyHandler);
@@ -180,6 +181,41 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     } else {
       draw();
     }
+  }
+
+  /** S2.9 (components/Feedback): the post-answer panel. Verdict with icon,
+   *  the right answer in words when wrong, the same chapter facts the old
+   *  WHY? block showed (no invented explanations), and the focused Next
+   *  button. Returns the panel so the caller can mount and focus it. */
+  function buildFeedbackPanel(q) {
+    const panel = el('div', {
+      className: `ds-feedback ${lastCorrect ? 'ds-feedback--ok' : 'ds-feedback--bad'}`,
+      role: 'status',
+    },
+      el('div.ds-feedback__head', {},
+        svgIcon(lastCorrect ? 'check' : 'cross'),
+        lastCorrect ? 'Correct' : 'Not quite'),
+      lastCorrect
+        ? null
+        : el('div.ds-feedback__answer', {}, `Right answer: ${q.is_true ? 'Vero' : 'Falso'}`),
+    );
+    const whySlot = el('div.why-slot', {});
+    panel.append(whySlot);
+    const actions = el('div.ds-feedback__actions', {},
+      el('button.btn.btn-primary', { onclick: next },
+        index + 1 >= questions.length ? 'FINISH' : 'NEXT →'),
+    );
+    panel.append(actions);
+    const atIndex = index; // question the panel was built for
+
+    // Chapter facts: insert when loaded (and still on this question, in case
+    // the learner raced ahead) — never hide the explanation behind a tap.
+    whyBlock(q).then((block) => {
+      if (index === atIndex && whySlot.isConnected && !whySlot.firstChild) {
+        whySlot.replaceChildren(block ?? el('span', { style: 'display:none' }));
+      }
+    });
+    return panel;
   }
 
   function answerButtons(q) {
@@ -237,20 +273,12 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
         translationArea(translationOf(q), revealed, reveal),
         answerButtons(q),
         answered
-          ? el('div', {},
-              el('div.feedback', { className: `feedback ${lastCorrect ? 'ok' : 'bad'}`, role: 'status' },
-                lastCorrect ? 'CORRECT' : `WRONG — THE ANSWER IS ${q.is_true ? 'VERO' : 'FALSO'}`),
-              lastCorrect
-                ? null
-                : whyBlock(q, () => document.removeEventListener('keydown', keyHandler)),
-              el('div.actions', {},
-                el('button.btn.btn-primary.btn-big', { onclick: next },
-                  index + 1 >= questions.length ? 'FINISH' : 'NEXT →'),
-              ),
-              el('p.kbd-hint', {}, el('kbd', {}, 'ENTER'), ' NEXT · ', el('kbd', {}, 'T'), ' TRANSLATE'),
-            )
-          : el('p.kbd-hint', {},
-              el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ', el('kbd', {}, 'T'), ' TRANSLATE'),
+          ? (feedbackPanel ??= buildFeedbackPanel(q))
+          : null,
+        el('p.kbd-hint', {},
+          answered
+            ? [el('kbd', {}, 'ENTER'), ' NEXT · ', el('kbd', {}, 'T'), ' TRANSLATE']
+            : [el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ', el('kbd', {}, 'T'), ' TRANSLATE']),
       ),
     );
   }

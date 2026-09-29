@@ -286,7 +286,7 @@ async function practiceRound(max) {
     // читаем is_true через текст не выходит — кликаем VERO,
     // это не важно для QA (проверяем механику, не правильность).
     await answer(true);
-    await waitFor(`!!document.querySelector('#view .feedback')`, `feedback ${i + 1}`);
+    await waitFor(`!!document.querySelector('#view .ds-feedback')`, `feedback ${i + 1}`);
     // NEXT → — на каждом вопросе, FINISH — только на последнем
     if (!(await click('NEXT') || await click('FINISH'))) {
       log(`debug: кнопки NEXT/FINISH не найдены; кнопки: ${await evaluate(`JSON.stringify(Array.from(document.querySelectorAll('#view button')).map(b => b.innerText.trim()).slice(0, 10))`)}`);
