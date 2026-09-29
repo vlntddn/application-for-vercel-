@@ -194,3 +194,13 @@ export function shouldSuggestBackup(stats, lastBackupAt, dismissedAt, now) {
   }
   return true;
 }
+
+/** Owner's feedback address (2026-09-29). mailto: opens the user's own mail app —
+ *  nothing is sent by Passo itself. */
+export const FEEDBACK_EMAIL = 'hello@studiodudin.com';
+
+/** mailto: link with a prefilled subject (and optional body). */
+export function feedbackHref(subject, body = '') {
+  const q = `subject=${encodeURIComponent(subject)}${body ? `&body=${encodeURIComponent(body)}` : ''}`;
+  return `mailto:${FEEDBACK_EMAIL}?${q}`;
+}

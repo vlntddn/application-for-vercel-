@@ -1408,4 +1408,8 @@ main:focus { outline: none; }
   .ds-btn, .ds-card { transition: none; }
 }
 
+/* The nav badge sets display; [hidden] must still win (bug: «0» showed on MISTAKES). */
+.nav-badge[hidden] { display: none !important; }
 
+/* Report a problem — quiet link under the after-answer actions. */
+.report-link { display: inline-block; margin-top: 8px; font-size: 14px; line-height: 20px; color: var(--ink-muted); text-decoration: underline; text-underline-offset: 3px; }

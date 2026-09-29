@@ -5,7 +5,7 @@ import { el, clear } from '../ui.js';
 import { requestPersistentStorage } from '../local-progress.js';
 import { renderInstallPanel } from '../install.js';
 import { DAILY_GOAL_DEFAULT } from '../domain/progress.js';
-import { errorBanner, readLastBackup, exportProgressSnapshot } from './common.js';
+import { errorBanner, readLastBackup, exportProgressSnapshot, feedbackHref, FEEDBACK_EMAIL } from './common.js';
 
 // Options of the daily-goal selector (lost in the S1.3 move — restored).
 const DAILY_GOAL_CHOICES = [5, 10, 15, 20, 25, 30, 40, 50, 75, 100];
@@ -234,6 +234,14 @@ export function renderSettings(root) {
       el('div.actions', { id: 'offline-actions' },
         el('button.btn.btn-primary', { onclick: (e) => downloadForOffline(e.target) }, 'DOWNLOAD FOR OFFLINE'),
       ),
+    ),
+    el('div.panel', {},
+      el('h2', {}, 'FEEDBACK'),
+      el('p.lede', {}, 'Found a mistake in a question or a translation, or have an idea? Write to us — we read every message.'),
+      el('div.actions', {},
+        el('a.btn.btn-primary', { href: feedbackHref('Passo feedback') }, 'WRITE TO US'),
+      ),
+      el('p.stat-sub', {}, FEEDBACK_EMAIL),
     ),
     el('div.panel', {},
       el('h2', {}, 'ABOUT'),

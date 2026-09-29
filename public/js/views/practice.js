@@ -11,7 +11,7 @@ import {
 import { el, clear, svgIcon } from '../ui.js';
 import { CATEGORY_CHAPTER } from '../theory-map.js';
 import { playCorrect, playWrong } from '../sound.js';
-import { errorBanner, translationOf, loc, pickQueue, queueOrder, masteryOf, categoryStats, translationArea, PRACTICE_BATCH } from './common.js';
+import { errorBanner, translationOf, loc, pickQueue, queueOrder, masteryOf, categoryStats, translationArea, PRACTICE_BATCH, feedbackHref } from './common.js';
 import { topicLabel, topicSub } from '../topics.js';
 
 // First-session on-ramp (Phase 2.2): a newcomer's first practice run opens
@@ -212,6 +212,10 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
         index + 1 >= questions.length ? 'FINISH' : 'NEXT →'),
     );
     panel.append(actions);
+    panel.append(el('a.report-link', {
+      href: feedbackHref(`Passo: problem with question ${q.id}`,
+        `Question: ${q.id}\n«${q.text_it}»\nCorrect answer in the app: ${q.is_true ? 'VERO' : 'FALSO'}\n\nWhat is wrong:\n`),
+    }, 'Report a problem with this question'));
     const atIndex = index; // question the panel was built for
 
     // Chapter facts: insert when loaded (and still on this question, in case
