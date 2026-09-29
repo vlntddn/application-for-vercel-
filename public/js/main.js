@@ -1,5 +1,5 @@
 import { boot, state, flushQueue, scheduleQueueRetry } from './state.js';
-import { api, currentMode, MODE } from './api.js';
+import { api } from './api.js';
 import { el, clear } from './ui.js';
 import {
   renderOnboarding,
@@ -85,14 +85,23 @@ document.addEventListener('visibilitychange', () => {
   });
 });
 
+// Privacy notice (S2.5): one dismissible strip for both modes — progress
+// never leaves the device, whether it lives on the local server or in the
+// browser. Restore the dismissed state as early as the module loads so the
+// strip does not flash before the first route.
+(function dismissPrivacyNoticeIfStored() {
+  const notice = document.getElementById('privacy-notice');
+  try {
+    if (localStorage.getItem('pp-privacy-notice') === '1') notice?.remove();
+  } catch { /* private mode: notice just stays visible */ }
+  notice?.querySelector('#privacy-notice-ok')?.addEventListener('click', () => {
+    notice.remove();
+    try { localStorage.setItem('pp-privacy-notice', '1'); } catch { /* no persistence */ }
+  });
+})();
+
 boot()
   .then(async () => {
-    // The footer text in index.html describes the local server; the hosted
-    // (standalone) build keeps progress in the browser instead.
-    if (currentMode() === MODE.standalone) {
-      const note = document.getElementById('privacy-note');
-      if (note) note.textContent = 'YOUR PROGRESS LIVES ONLY IN THIS BROWSER — NOTHING LEAVES YOUR DEVICE';
-    }
     // Drain answers queued in a previous offline session, then render
     // with the server's authoritative snapshot. Never blocks startup.
     try {

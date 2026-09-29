@@ -513,6 +513,43 @@ kbd {
 
 .footer code { background: var(--accent); color: var(--on-accent); padding: 1px 6px; }
 
+/* ---------- Privacy notice (ds-notice, S2.5) ---------- */
+
+.ds-notice {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  margin: 0 24px 16px;
+  background: var(--surface-sunken);
+  color: var(--ink);
+  border: var(--border-2) solid var(--ink);
+  font: 400 14px/20px var(--font-sans);
+}
+
+.ds-notice .ic { width: 20px; height: 20px; flex: none; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+
+.ds-notice__btn {
+  margin-left: auto;
+  flex: none;
+  white-space: nowrap;
+  min-height: 40px;
+  padding: 6px 16px;
+  border: var(--border-2) solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  font: 600 13px/1 var(--font-sans);
+  cursor: pointer;
+}
+
+.ds-notice__btn:hover { background: var(--surface-sunken); }
+.ds-notice__btn:active { transform: translateY(1px); }
+.ds-notice__btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+@media (max-width: 760px) {
+  .ds-notice { margin: 0 16px 12px; padding: var(--space-2) var(--space-3); }
+}
+
 .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
 
 /* ---------- Mobile ---------- */
