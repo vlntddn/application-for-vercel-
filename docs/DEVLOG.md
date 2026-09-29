@@ -1,3 +1,55 @@
+## 2026-09-29 08:19 — S2.7: Нижнее меню по дизайн-системе (components/Nav)
+
+Что сделано:
+- **public/styles.css** (.nav): нижняя навигация — фиксированная панель
+  `bottom:0` + `safe-area-inset-bottom` (iOS), высота `var(--nav-h)` = 64px,
+  тёмная граница сверху (компонент Nav). Подписи 12px (0.75rem), жирные,
+  `text-transform: uppercase` (markup — обычный регистр ради переводов,
+  дисплей — капс по дизайн-системе). Активная вкладка — фон `var(--ink)`
+  + текст `var(--on-ink)` (было: hover жёлтый `--warn` + чёрный, active —
+  `--paper`; жёлтый больше не в nav).
+- **public/index.html**: 6 ссылок → 5 вкладок на телефоне (Home, Theory,
+  Practice, Exam, Mistakes); Settings оставлен в DOM (desktop + aria),
+  на ≤ 760px `.nav .nav-settings { display:none }` (grid 6→5 колонок).
+  В шапке — `.settings-gear` (шестерёнка 24px, тап-зона 44×44px,
+  `display:block` только на ≤ 760px, `.active` — ink/on-ink).
+- **public/styles.css** (.nav-badge): счётчик открытых ошибок на вкладке
+  Mistakes — красный `var(--bad)`, 18px, absolute в углу иконки
+  (скрывается при 0 — main.js).
+- **public/js/main.js**: маршрутизация шестерёнки — на телефоне Settings
+  открывается/закрывается по шестерёнке (`.active` синхрон с роутом),
+  бейдж Mistakes заполняется из progress (открытые ошибки).
+- **public/js/views/practice.js / exam.js**: класс `body.in-session` на
+  время сессии; `body.in-session .nav { display:none }` — панель уступает
+  место карточке вопроса; `main` поднимает padding, чтобы контент не
+  прятался под панелью (mobile).
+- **public/styles.css** (фикс регрессии): шестерёнка `margin: -12px 0` —
+  тап-зона остаётся 44×44, но шапка при этом не разрастается за 64px
+  (padding 12 + иконка 44 = 68px → qa-ux p6 краснел на 11/22).
+- **public/sw.js**: VERSION v47 → v48 (public/ менялся).
+
+Почему: задача S2.7 закрывает пункт Nav дизайн-системы — 5 вкладок на
+телефоне, Settings за шестерёнкой в шапке, активная — ink, скрыто в
+практике/экзамене. Измеримый эффект — p3 (aria-current) + удобство (p7):
+панель не конкурирует с карточкой на узком экране.
+
+Проверка:
+- scripts/verify.sh → VERIFY OK (84 теста, 8 smoke, qa-new-user 37/0).
+- node scripts/qa-ux.mjs: **174 PASS / 2 FAIL** — ровно базовое состояние
+  до S2.7 (база мерилась в worktree на cb06271: 174/2, единственный
+  п7 next-steps 2/22 — зона S2.11). p3 (aria-current) 0/22 — Settings
+  физически остался в #nav (скрыт CSS на ≤ 760px), data-route на месте.
+  p6 (шапка ≤ 64px) 0/22 — после фикса margin шестерёнки; первый вариант
+  кода дал p6 = 11/22 (шапка 68px), откат не требовался, починено в
+  том же коммите.
+- Вручную (headless через qa-ux): на 375px 5 вкладок, шестерёнка в шапке
+  справа, в сессии `.nav` display:none.
+
+НЕ тронуто: `.btn-true/.btn-false` (S2.8), данные/manifest, переводы
+(подписи — sentence case в markup, i18n-ключи уже существуют).
+
+---
+
 ## 2026-09-29 07:20 — S2.6: Кнопки по дизайн-системе (components/Button)
 
 Что сделано:
