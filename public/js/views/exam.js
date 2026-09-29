@@ -160,20 +160,31 @@ function runExam(root, questions) {
         q.image_url ? el('img.question-img', { src: q.image_url, alt: 'Road sign / situation', onerror: (e) => e.target.remove() }) : null,
         el('p.question-text', {}, q.text_it),
         translationArea(translationOf(q), revealed, () => { revealed = true; draw(); }),
-        el('div.ds-answers', {},
-          el('button', {
-            type: 'button',
-            className: `ds-answer btn-true${chosen[index] === true ? ' ds-answer--picked' : ''}`,
-            'aria-pressed': chosen[index] === true,
-            onclick: () => choose(true),
-          }, svgIcon('check'), 'VERO'),
-          el('button', {
-            type: 'button',
-            className: `ds-answer btn-false${chosen[index] === false ? ' ds-answer--picked' : ''}`,
-            'aria-pressed': chosen[index] === false,
-            onclick: () => choose(false),
-          }, svgIcon('cross'), 'FALSO'),
-        ),
+        (() => {
+          // Neutral at rest; after choosing: the picked button shows ok/bad +
+          // a word, a wrong pick gets the dashed "Right answer" reveal on the
+          // correct one (AnswerButton component).
+          const btn = (value, icon, label) => {
+            let state = '';
+            let word = null;
+            const picked = chosen[index] === value;
+            if (picked) {
+              const right = value === q.is_true;
+              state = right ? 'ds-answer--ok' : 'ds-answer--bad';
+              word = right ? 'Correct' : 'Wrong';
+            } else if (chosen[index] !== null && !chosen[index] && value === q.is_true) {
+              state = 'ds-answer--reveal';
+              word = 'Right answer';
+            }
+            return el('button', {
+              type: 'button',
+              className: `ds-answer ${value ? 'btn-true' : 'btn-false'}${state ? ` ${state}` : ''}`,
+              'aria-pressed': picked,
+              onclick: () => choose(value),
+            }, svgIcon(icon), label, word ? el('span.ds-answer__state', {}, word) : null);
+          };
+          return el('div.ds-answers', {}, btn(true, 'check', 'VERO'), btn(false, 'cross', 'FALSO'));
+        })(),
         el('p.kbd-hint', {},
           el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ',
           el('kbd', {}, '←'), el('kbd', {}, '→'), ' NAVIGATE · ', el('kbd', {}, 'T'), ' TRANSLATE'),

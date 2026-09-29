@@ -119,6 +119,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
   let correctCount = 0;
   let answered = false;
   let lastCorrect = null;
+  let chosenValue = null; // the answer the learner picked (for button states)
   let revealed = false; // translation visibility, reset per question
   let offline = false; // answers are queuing locally
 
@@ -151,12 +152,13 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
   async function answer(value) {
     if (answered) return;
     answered = true;
+    chosenValue = value;
     const q = questions[index];
     lastCorrect = value === q.is_true;
     if (lastCorrect) correctCount++;
     if (lastCorrect) playCorrect(); else playWrong();
     draw();
-    if (!lastCorrect) root.querySelector('.question-card')?.classList.add('shake');
+    root.querySelector('.btn-primary')?.focus();
     try {
       const { synced } = await recordAnswersResilient([{ id: q.id, correct: lastCorrect }]);
       if (offline !== !synced) { offline = !synced; draw(); }
@@ -168,6 +170,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
   function next() {
     answered = false;
     lastCorrect = null;
+    chosenValue = null;
     revealed = false;
     index++;
     if (index >= questions.length) {
@@ -177,6 +180,33 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     } else {
       draw();
     }
+  }
+
+  function answerButtons(q) {
+    // Rest state: both buttons neutral (no colour hint). After the answer the
+    // picked one shows ok/bad + a word; if the learner was wrong the other
+    // button (the correct one) gets the dashed "Right answer" reveal.
+    const btn = (value, icon, label) => {
+      let state = '';
+      let word = null;
+      const picked = chosenValue === value;
+      const isRight = value === q.is_true;
+      if (answered) {
+        if (picked && lastCorrect) { state = 'ds-answer--ok'; word = 'Correct'; }
+        else if (picked && !lastCorrect) { state = 'ds-answer--bad'; word = 'Wrong'; }
+        else if (!picked && !lastCorrect && isRight) { state = 'ds-answer--reveal'; word = 'Right answer'; }
+      }
+      return el('button', {
+        type: 'button',
+        className: `ds-answer ${value ? 'btn-true' : 'btn-false'}${state ? ` ${state}` : ''}`,
+        'aria-pressed': answered ? picked : null,
+        disabled: answered,
+        onclick: answered ? undefined : () => answer(value),
+      },
+        svgIcon(icon), label,
+        word ? el('span.ds-answer__state', {}, word) : null);
+    };
+    return el('div.ds-answers', {}, btn(true, 'check', 'VERO'), btn(false, 'cross', 'FALSO'));
   }
 
   function draw() {
@@ -205,6 +235,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
         q.image_url ? el('img.question-img', { src: q.image_url, alt: 'Road sign / situation', onerror: (e) => e.target.remove() }) : null,
         el('p.question-text', {}, q.text_it),
         translationArea(translationOf(q), revealed, reveal),
+        answerButtons(q),
         answered
           ? el('div', {},
               el('div.feedback', { className: `feedback ${lastCorrect ? 'ok' : 'bad'}`, role: 'status' },
@@ -218,22 +249,8 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
               ),
               el('p.kbd-hint', {}, el('kbd', {}, 'ENTER'), ' NEXT · ', el('kbd', {}, 'T'), ' TRANSLATE'),
             )
-          : el('div', {},
-              el('div.ds-answers', {},
-                el('button', {
-                  type: 'button',
-                  className: 'ds-answer btn-true',
-                  onclick: () => answer(true),
-                }, svgIcon('check'), 'VERO'),
-                el('button', {
-                  type: 'button',
-                  className: 'ds-answer btn-false',
-                  onclick: () => answer(false),
-                }, svgIcon('cross'), 'FALSO'),
-              ),
-              el('p.kbd-hint', {},
-                el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ', el('kbd', {}, 'T'), ' TRANSLATE'),
-            ),
+          : el('p.kbd-hint', {},
+              el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ', el('kbd', {}, 'T'), ' TRANSLATE'),
       ),
     );
   }

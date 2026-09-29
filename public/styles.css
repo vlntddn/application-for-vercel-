@@ -514,9 +514,14 @@ input:focus-visible, select:focus-visible, .nav a:focus-visible, a.card:focus-vi
 .ds-answer--ok .ds-answer__state,
 .ds-answer--bad .ds-answer__state,
 .ds-answer--reveal .ds-answer__state { display: block; }
-/* exam: chosen answer locks with a neutral "picked" state — no ok/bad, so colour never hints the answer */
-.ds-answer--picked { background: var(--surface-sunken); box-shadow: none; }
-.ds-answer--picked:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+/* the answer is locked: untouched buttons drop to ink-muted */
+.ds-answer:disabled:not(.ds-answer--ok):not(.ds-answer--bad):not(.ds-answer--reveal) {
+  color: var(--ink-muted);
+  cursor: default;
+}
+.ds-answer:disabled:not(.ds-answer--ok):not(.ds-answer--bad):not(.ds-answer--reveal) svg.ic {
+  color: var(--ink-muted);
+}
 
 .feedback {
   margin-top: 20px;
@@ -1020,16 +1025,6 @@ kbd {
 
 /* ---------- Answer feedback animation ---------- */
 
-@keyframes card-shake {
-  0%, 100% { transform: translateX(0); }
-  20% { transform: translateX(-8px); }
-  40% { transform: translateX(8px); }
-  60% { transform: translateX(-5px); }
-  80% { transform: translateX(5px); }
-}
-
-.question-card.shake { animation: card-shake 260ms ease-in-out; }
-
 .feedback { animation: feedback-pop 140ms ease-out; }
 
 @keyframes feedback-pop {
@@ -1038,7 +1033,7 @@ kbd {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .question-card.shake, .feedback { animation: none; }
+  .feedback { animation: none; }
 }
 
 /* ---------- Accessibility ---------- */

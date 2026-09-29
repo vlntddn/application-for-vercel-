@@ -435,3 +435,40 @@ test('introQueue still serves a full batch when few easy questions remain', asyn
   assert.ok(queue.every((q) => q.category === 'fake-topic'), 'whole batch from the same topic');
 });
 
+/* ---------------- S2.8: AnswerButton component states ---------------- */
+
+test('VERO/FALSO answers follow the AnswerButton component: neutral at rest, ok/bad/reveal after answering', () => {
+  const views = readViewsSource();
+  // No shake animation anywhere: wrong answers are shown on the buttons
+  // themselves, not by jolting the card.
+  assert.ok(!views.includes("classList.add('shake')"), 'no card-shake on wrong answers');
+  assert.ok(!fs.readFileSync(path.join(ROOT, 'public', 'styles.css'), 'utf8').includes('card-shake'),
+    'card-shake keyframes removed from styles.css');
+  // The component states exist in the CSS (design system, not ad-hoc).
+  const css = fs.readFileSync(path.join(ROOT, 'public', 'styles.css'), 'utf8');
+  for (const sel of ['.ds-answer--ok', '.ds-answer--bad', '.ds-answer--reveal']) {
+    assert.match(css, new RegExp(sel.replace('--', '--')), `missing CSS state ${sel}`);
+  }
+  // Practice: buttons are neutral until the answer (state computed only in
+  // the answered branch) and afterwards show icon + word.
+  const practice = views.slice(views.indexOf('export function renderQuizSession('), views.indexOf('export async function renderPracticeSession('));
+  assert.match(practice, /answerButtons/, 'practice renders through the answerButtons() helper');
+  const restState = practice.slice(practice.indexOf("let state = ''"), practice.indexOf('if (answered)'));
+  assert.ok(!restState.includes("state = 'ds-answer"), 'at rest no state is set — it may only change after the answer');
+  assert.match(practice, /let state = '';[\s\S]*?if \(answered\) \{/);
+  for (const token of ['ds-answer--ok', 'ds-answer--bad', 'ds-answer--reveal',
+    "'Correct'", "'Wrong'", "'Right answer'"]) {
+    assert.match(practice, new RegExp(token.replace(/[-']/g, (m) => `\\${m}`)), `practice missing ${token}`);
+  }
+  // Exam: the same states, and the old neutral "--picked" hack is gone.
+  const exam = views.slice(views.indexOf('renderExam('));
+  for (const token of ['ds-answer--ok', 'ds-answer--bad', 'ds-answer--reveal']) {
+    assert.match(exam, new RegExp(token), `exam missing ${token}`);
+  }
+  assert.ok(!exam.includes('ds-answer--picked'), 'exam no longer uses the ad-hoc --picked state');
+  // Both flows keep the V/F keyboard shortcuts (discoverability, not buttons only).
+  assert.match(practice, /key === 'v'/);
+  assert.match(exam, /'v'/);
+});
+
+
