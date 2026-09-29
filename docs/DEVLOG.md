@@ -1,3 +1,41 @@
+## 2026-09-29 04:10 — S2.3b: типографика — sentence case на оставшихся экранах
+
+Что сделано:
+- Sentence case для lede/подсказок/пустых нот/инлайн-лейблов на
+  **dashboard, stats, search, theory, dictionary, install.js**. Правило:
+  капс остаётся только у h1, h2-заголовков панелей, тегов и кнопок
+  (подтверждено в ADOPTION.md).
+  - dashboard: lede «Ready for the exam?…», empty-note слабых тем,
+    stat-sub «Day(s) in a row» / «Of N (pct%)» / «mock exams passed».
+  - stats: lede, все stat-sub (mastered, accuracy, exam success, weak
+    spots, mock-exam trend), empty-note активности и слабых тем.
+  - search: оба lede (loading + «All N questions…»), empty-note
+    (мин. 3 символа / ничего не найдено).
+  - theory: lede списка и глав, «IN THIS LESSON» objective (убран
+    `.toUpperCase()`), stat-sub, feedback «Self-check: X/Y correct»,
+    инлайн-лейблы «Translation —» / «In simple words —», «CHAPTER NOT
+    FOUND», lede страницы «L'Italiano dell'esame».
+  - dictionary: оба lede, «Tap to reveal» (term-veil), убран
+    `.toUpperCase()` в описании секций.
+  - install.js: три варианта lede (installed / iOS Safari / Chrome-Android)
+    → sentence case.
+- onboarding.js не трогался — переведён ещё в S2.3a.
+- **Тесты приведены к case-insensitive** (иначе ломались после смены регистра):
+  - tests/security.test.js:333 `/ADD TO HOME SCREEN/` → `/ADD TO HOME SCREEN/i`.
+  - qa-new-user.mjs self-check: `includes('SELF-CHECK')` →
+    `.toLowerCase().includes('self-check')` (в waitFor и в check).
+- SW v42 → v43 (public/ поменялся).
+
+Почему: цель S2.3b — весь фронт в едином регистре без отката qa-ux p4/p5.
+Смена регистра текстов ломала 2 case-sensitive ассерта — их ослабили
+(это уже устоявшийся паттерн: S2.3a тоже делал соседний `/i`).
+
+Проверка:
+- scripts/verify.sh → VERIFY OK (84 теста, 8 smoke, qa-new-user 37 PASS / 0 FAIL).
+- node scripts/qa-ux.mjs → p5 (контраст) = 0 FAIL на всех экранах (без отката).
+  Остались FAIL p2/p4/p6/p7 — чужие задачи S2.4 (header@91px), S2.5
+  («storage/» text), S2.6 (кнопки) — не введённые моим изменением.
+
 ## 2026-09-29 03:05 — S2.3a: типографика — контраст p5 22/22 → 0, sentence case в ядре обучения
 
 Что сделано:

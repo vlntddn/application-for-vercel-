@@ -240,14 +240,14 @@ README компонента задачи. Эталонные стили — `doc
       case-insensitive (`/i`) — как уже соседняя «это тренировка». SW v41→v42.
       *Проверка:* verify.sh VERIFY OK (84 теста, 8 smoke, qa-new-user 37/0);
       qa-ux p5 = 0/22 FAIL.
-- [ ] **S2.3b Типографика: оставшиеся экраны** — sentence case для lede/вопросов/
-      подсказок/текстов онбординга ещё в dashboard, theory, stats, search,
-      dictionary, install.js, onboarding (правило: капс только у заголовков
-      экранов, лейблов, тегов и кнопок; «IN SIMPLE WORDS», lede дашборда,
-      тексты install → sentence case). Проверить по qa-new-user.mjs
-      (case-sensitive: onboarding «How you will study», «How THE REAL EXAM
-      WORKS» h2 остаётся капсом) и qa-ux p4/p5. *Цель:* весь фронт — в
-      едином регистре без отката p4/p5.
+- [x] **S2.3b Типографика: оставшиеся экраны** — сделано 2026-09-29. Sentence
+      case для lede/подсказок/пустых нот/инлайн-лейблов на dashboard, stats,
+      search, theory, dictionary, install (onboarding был переведён ещё в
+      S2.3a). Капс сохранён у h1, h2-заголовков панелей, тегов и кнопок.
+      Тесты: security.test.js и self-check в qa-new-user.mjs приведены к
+      case-insensitive (`/i` / `.toLowerCase()`). SW v42→v43.
+      *Проверка:* verify.sh VERIFY OK (84 теста, 8 smoke, qa-new-user 37/0);
+      qa-ux p5 = 0/22 FAIL (без отката).
 - [ ] **S2.4 Шапка + Wordmark** (`components/Wordmark`): имя **Patente Pro**
       (не Passo!), одна строка, квадрат-акцент, `--sm` на телефоне; второе
       слово НЕ оранжевым; подзаголовок скрыть на ≤ 480px; высота ≤ 56px.
