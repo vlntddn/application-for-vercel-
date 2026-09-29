@@ -1,3 +1,31 @@
+## 2026-09-29 14:30 — S2.10: Названия тем (components/Card)
+
+Что сделано (код — текущий HEAD self-improve):
+- **public/js/topics.js** (новый, единый источник имён): для всех 25 slug —
+  итальянское название с предлогами (sentence case) + en/ru/zh + `sub`
+  (строка на языке ученика en/ru). `topicLabel(cat)` — итальянское имя
+  (fallback — titleCase slug), `topicSub(cat)` — подстрока на языке ученика.
+- **public/js/views/practice.js**: `renderPracticeSession` — `h1` = `topicLabel(cat)`,
+  lede = `topicSub(cat)`; quiz-заголовок = `topicLabel(cat)`; убран импорт
+  `titleCase`. Прогресс с числом — уже был (`title — index/total`).
+- **public/js/views/dashboard.js** и **stats.js**: слабые темы и CTA/бары —
+  `topicLabel(c)` вместо `titleCase(c.name)`; импорты заменены.
+- **Жёлтая карточка** (`public/js/views/theory.js` + `styles.css`): баннер
+  `#/exam-italian` читался как предупреждение (жёлтый `--warn`). Подписал смысл:
+  это урок «L'ITALIANO DELL'ESAME», tag `LESSON`, подстрока объясняет, зачем
+  нужен; акцент перекрасил в нейтральный teal `--ok`/`--ok-soft`, hover тоже.
+- **public/sw.js**: +`/js/topics.js` в SHELL, VERSION v56 → v57.
+- **tests/topics.test.js** (новый): все slug из `data/manifest.json` есть в
+  topics.js по 4 языка; `topicLabel` отдаёт итальянское имя в обычном регистре;
+  fallback на незнакомый slug.
+
+Почему: владелец жалуется на обрезанные ЗАГЛАВНЫЕ slug («SEGNALI DIVIETO»);
+по дизайн-системе Card — имя в языке экзамена, подстрока на языке ученика.
+`data/manifest.json` НЕ трогали (protected) — имена живут только в topics.js.
+
+Как проверено: `node --test tests/topics.test.js` (3/3); `scripts/verify.sh` →
+VERIFY OK (95 passed, smoke + qa-new-user).
+
 ## 2026-09-29 13:55 — S2.9: Панель после ответа (components/Feedback)
 
 Что сделано (код — cd2aea7):
