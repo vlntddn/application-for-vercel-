@@ -1,6 +1,36 @@
 # DEVLOG — Passo (последнее сверху)
 
 
+## 2026-09-30 — L7: Готовность к экзамену (оценка шанса пройти по ответам)
+
+Что сделано (коммит `feat: готовность к экзамену — оценка шанса пройти по ответам, weakest-topic gain (L7)` на self-improve):
+- **public/js/domain/learning.js** — `examReadiness(answers, categories)`:
+  - ошибка по теме = `(wrong + 1) / (attempts + 2)` — сглаживание Лапласа,
+    неотвеченные вопросы считаются ошибками (honesty при малом объёме);
+  - состав билета пропорционален размерам тем (как shuffle всего банка),
+    значит вероятность ошибки вопроса = средневзвешенное по `cat.count`;
+  - `binomLEq(n, k, p)` — кумулятивная биномиальная P(X ≤ k);
+    ответ = `binomLEq(30, 3, p)` = P(≤ 3 ошибки из 30);
+  - `< 150` разных ответов → `{ ready: false, answers, needed }`;
+  - `biggestGain` — тема, чьё доведение до 90% mastery (ошибка 0.1)
+    сильнее всего поднимает оценку (gain ≥ 1 п.п.), иначе `null`.
+- **public/js/views/dashboard.js** — `examReadinessPanel()`: карточка
+  «Chance to pass now: ~N%» + тег ready/working + «Biggest gain: Тема (+X%)»
+  (label через `topicLabel`) + честная подпись «estimate from your answers,
+  not a guarantee». Вставлена после `reviewDuePanel()`.
+- **tests/learning.test.js** — 4 теста: < 150 → not ready; идеальный
+  ученик (30 верных на тему × 25 тем = 750) → passPct > 95; ~50% ошибок →
+  < 1%; weakest topic → biggestGain = слабая тема (3/30 верных против
+  27/30 у остальных).
+- **sw.js**: v71 → v72 (public/ изменился).
+
+Замечание по модели: с сглаживанием Лапласа идеальный ученик с 6 ответами
+на тему даёт только ~47% — это честно (мало данных), тест «идеальный
+ученик» поэтому использует 30 ответов на тему (→ 99%).
+
+Проверено: verify.sh — 161 тест PASS, qa-new-user 42/42, smoke 8/8,
+sw-bump PASS, protected paths нетронуты → VERIFY OK.
+
 ## 2026-09-30 — L6b: Повторение — экран (due-first очередь + счётчик на главной)
 
 Что сделано (коммит `feat: повторение — очередь due-first и «N cards to review today» на главной (L6b)` на self-improve):
