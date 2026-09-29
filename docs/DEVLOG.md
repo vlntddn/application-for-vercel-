@@ -1,3 +1,31 @@
+## 2026-09-29 — S2.L2: подсветка сигналов в вопросе (практика/повторение)
+
+Что сделано (коммиты `feat: L2 — подсветка сигнала в вопросе … (L2)` и
+`test: L2 — тесты signalHints … (L2)` на self-improve; код — остатки
+предыдущего незавершённого запуска, тесты — новые этого запуска):
+- **public/js/domain/learning.js**: `attemptedCount(answers)`,
+  `SIGNAL_HINTS_AUTO_LIMIT = 100`, `signalHintsEnabled(profile, answers)`
+  (auto = вкл. пока отвечено < 100 вопросов, потом выкл.; on/off всегда),
+  `findSignalWord`, `signalGlossary(lessons, insights)` — переводы
+  слов-сигналов из экзамен-урока.
+- **public/js/domain/progress.js**: `SIGNAL_HINT_MODES = [auto, on, off]`;
+  поле `profile.signalHints` (дефолт auto) в EMPTY_PROGRESS, migrateProgress
+  (невалидное значение → auto) и валидация updateProfile/importProgress (422).
+- **public/js/views/practice.js**: `signalText(q)` — первое вхождение
+  слова-сигнала в `<mark.ds-signal role=button>` c aria-describedby; тап/Enter
+  → Callout (слово, перевод, доля FALSO в банке); закрытие тапом вне / Escape
+  / сменой вопроса. ЭКЗАМЕН НЕ ЗАТРАГИВАЕТСЯ (grep ds-signal в exam.js пуст).
+- **public/js/views/settings.js**: селект Auto/On/Off. **public/styles.css**:
+  `.ds-signal-callout`. **public/sw.js**: v65.
+- **tests/learning.test.js**: +4 теста (attemptedCount, on/off, порог 99/100,
+  legacy-значение). **tests/progress.test.js**: тест дефолта/валидации
+  updateProfile, миграция (дефолт/сохранено/фолбэк), import (принято/422).
+
+Проверка: `scripts/verify.sh` → VERIFY OK (128 npm-тестов, smoke 8/200 на
+:3917), grep ds-signal в exam.js пуст. Проблем: нет. Примечание: кодовый
+коммит 8525999 из прошлого запуска был локальным (не запушен) — в этом
+запуске задача дополнена тестами, закрыта и запушена.
+
 ## 2026-09-29 18:20 — S2.L1c: тренажёр «Язык экзамена» (#/drill/signals)
 
 Что сделано (коммит `feat: тренажёр «Язык экзамена» #/drill/signals … (L1c)`
