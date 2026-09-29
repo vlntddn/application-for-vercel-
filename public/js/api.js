@@ -71,6 +71,8 @@ const serverProgressApi = {
     request('/api/progress/exams', { method: 'POST', body: JSON.stringify(exam) }),
   markTheoryRead: (chapterId) =>
     request('/api/progress/theory', { method: 'POST', body: JSON.stringify({ chapterId }) }),
+  recordChapterCheck: (chapterId, correct) =>
+    request('/api/progress/chapters', { method: 'POST', body: JSON.stringify({ chapterId, correct }) }),
   importProgress: (data) =>
     request('/api/progress/import', { method: 'POST', body: JSON.stringify(data) }),
   resetProgress: () => request('/api/progress', { method: 'DELETE' }),
@@ -87,6 +89,7 @@ export const api = {
   recordAnswers: (...a) => progressApi().recordAnswers(...a),
   recordExam: (...a) => progressApi().recordExam(...a),
   markTheoryRead: (...a) => progressApi().markTheoryRead(...a),
+  recordChapterCheck: (...a) => progressApi().recordChapterCheck(...a),
   importProgress: (...a) => progressApi().importProgress(...a),
   resetProgress: (...a) => progressApi().resetProgress(...a),
 };

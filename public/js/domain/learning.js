@@ -381,6 +381,8 @@ export const PATH_ORDER = [
 
 /** Self-check quiz passes the path step at 4 of 5. */
 export const PATH_MINI_PASS = 4;
+/** The chapter self-check always shows this many questions (theory.js). */
+export const PATH_CHECK_QUESTIONS = 5;
 /** Topic mastery counts as "done" from 80% of the bank. */
 export const PATH_MASTERY_PCT = 80;
 
@@ -436,5 +438,18 @@ export function learningPath(progress, manifest, lessons) {
     currentIndex: current ? steps.indexOf(current) : -1,
     ready: current === null,
   };
+}
+
+/**
+ * L5b — what the learner does next in a step. Order Read → Check → Practice:
+ * the first missing part of the step wins. A step that has a read lesson
+ * and a passed check (or a topic without a bank) lands on 'practice'.
+ * Returns null when the step has no question bank to practice against.
+ */
+export function nextStepAction(step) {
+  if (!step) return null;
+  if (!step.read) return 'read';
+  if (step.check < PATH_MINI_PASS) return 'check';
+  return step.slug ? 'practice' : null;
 }
 

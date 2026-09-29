@@ -1,5 +1,6 @@
-import { state } from '../state.js';
+import { state, loadLessons } from '../state.js';
 import { el, clear, fmtDate, svgIcon } from '../ui.js';
+import { pathLinkCard } from './path.js';
 import { topicLabel } from '../topics.js';
 import { detectMode, MODE } from '../api.js';
 import { isInstalled } from '../install.js';
@@ -241,7 +242,7 @@ export function installReminderPanel() {
   );
 }
 
-export function renderDashboard(root) {
+export async function renderDashboard(root) {
   const { profile, stats, exams } = state.progress;
   const total = state.manifest.totalQuestions;
   const recentExams = [...exams].slice(-5).reverse();
@@ -251,6 +252,17 @@ export function renderDashboard(root) {
   const answeredToday = state.progress.dailyAnswers?.[dayKey(new Date())] ?? 0;
   const goal = dailyGoal();
 
+  // L5b — the learning path is the spine of the app, so its link card is the
+  // first thing on the dashboard. The card needs the lesson list (the path
+  // model runs over chapters), which is lazy-loaded here.
+  let pathCard = null;
+  try {
+    state.lessons = await loadLessons();
+    pathCard = pathLinkCard();
+  } catch {
+    pathCard = null; // no lessons → no path card; the rest of the dashboard is fine
+  }
+
   clear(root,
     el('h1', {}, profile.name ? `CIAO, ${profile.name}` : 'CIAO'),
     el('p.lede', {}, 'Ready for the exam? Keep the streak alive.'),
@@ -259,6 +271,8 @@ export function renderDashboard(root) {
     // reminder; both sit under the greeting, before the content.
     installReminderPanel(),
     backupReminderPanel(),
+
+    pathCard,
 
     // A newcomer gets the next action instead of raw statistics
     // (Phase 2.2); a user with practice history gets the week + goal

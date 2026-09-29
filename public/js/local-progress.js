@@ -117,6 +117,7 @@ export const localProgressApi = {
   recordAnswers: async (answers) => service.recordAnswers({ answers }),
   recordExam: async (exam) => ({ exam: await service.recordExam(exam) }),
   markTheoryRead: async (chapterId) => service.markTheoryRead({ chapterId }),
+  recordChapterCheck: async (chapterId, correct) => service.recordChapterCheck({ chapterId, correct }),
   importProgress: async (data) => service.importProgress(data),
   resetProgress: async () => service.reset(),
 };

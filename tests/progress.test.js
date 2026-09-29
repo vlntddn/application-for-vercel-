@@ -378,3 +378,19 @@ test('a progress file written by an older version still loads', async () => {
   assert.equal(snap.stats.mastered, 1);
   assert.equal(snap.streak.current, 3);
 });
+
+
+test('recordChapterCheck keeps the best score and accepts 0-5', async () => {
+  const { service, store } = makeService();
+  // A perfect 5/5 is the quiz's max and must be accepted (PATH_CHECK_QUESTIONS = 5).
+  const first = await service.recordChapterCheck({ chapterId: 'ch1', correct: 5 });
+  assert.equal(first.chapters.ch1.check, 5);
+  // A later worse score must not lower the kept best.
+  const second = await service.recordChapterCheck({ chapterId: 'ch1', correct: 2 });
+  assert.equal(second.chapters.ch1.check, 5);
+  assert.equal(store.data.chapters.ch1.check, 5);
+  // Out-of-range and non-integer scores are rejected.
+  await assert.rejects(() => service.recordChapterCheck({ chapterId: 'ch1', correct: 6 }), ValidationError);
+  await assert.rejects(() => service.recordChapterCheck({ chapterId: 'ch1', correct: -1 }), ValidationError);
+  await assert.rejects(() => service.recordChapterCheck({ chapterId: 'ch1', correct: 2.5 }), ValidationError);
+});

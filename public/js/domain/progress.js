@@ -1,3 +1,5 @@
+import { PATH_MINI_PASS, PATH_CHECK_QUESTIONS } from './learning.js';
+
 export const LANGUAGES = ['en', 'ru', 'zh'];
 export const THEMES = ['light', 'dark'];
 export const SIGNAL_HINT_MODES = ['auto', 'on', 'off'];
@@ -31,6 +33,7 @@ export const EMPTY_PROGRESS = {
   activeDays: [], // YYYY-MM-DD of every day with activity (last 90)
   dailyAnswers: {}, // YYYY-MM-DD -> answers given that day (last 90)
   theoryRead: [], // chapter ids
+  chapters: {}, // chapterId -> { check: N } (best self-check score, L5b)
   streak: { current: 0, lastDay: '' },
 };
 
@@ -141,6 +144,16 @@ export function migrateProgress(raw) {
   }
   // A mistake only means something if the answer behind it is still wrong.
   out.mistakes = out.mistakes.filter((id) => out.answers[id] && !out.answers[id].lastCorrect);
+
+  if (isPlainObject(raw.chapters)) {
+    for (const [id, rec] of Object.entries(raw.chapters)) {
+      if (id === '__proto__' || !id || id.length > ID_MAX || !isPlainObject(rec)) continue;
+      const check = Math.trunc(Number(rec.check));
+      if (Number.isFinite(check) && check >= 0 && check <= PATH_CHECK_QUESTIONS) {
+        out.chapters[id] = { check };
+      }
+    }
+  }
 
   if (Array.isArray(raw.exams)) {
     for (const exam of raw.exams) {
@@ -363,6 +376,24 @@ export class ProgressService {
     return { theoryRead: list };
   }
 
+  /** L5b — the chapter self-check score. Only a better score is kept:
+   *  a learner who passes once does not lose that by failing later. */
+  async recordChapterCheck(body) {
+    assertObject(body);
+    const id = assertId(body.chapterId, 'chapterId');
+    const correct = Number(body.correct);
+    if (!Number.isInteger(correct) || correct < 0 || correct > PATH_CHECK_QUESTIONS) {
+      throw new ValidationError(`"correct" must be an integer between 0 and ${PATH_CHECK_QUESTIONS}`);
+    }
+    const data = this.store.data;
+    if (!isPlainObject(data.chapters)) data.chapters = {};
+    const rec = isPlainObject(data.chapters[id]) ? data.chapters[id] : { check: 0 };
+    rec.check = Math.max(rec.check, correct);
+    data.chapters[id] = rec;
+    await this.store.persist();
+    return { chapters: { [id]: rec } };
+  }
+
   async reset() {
     await this.store.reset();
     return this.snapshot();
@@ -495,6 +526,23 @@ export class ProgressService {
         throw new ValidationError(`"${field}" is too long`);
       }
       clean[field] = body[field].map((id) => assertId(id, `${field}[]`));
+    }
+
+    if (body.chapters !== undefined) {
+      assertObject(body.chapters);
+      const entries = Object.entries(body.chapters);
+      if (entries.length > MAX_IMPORT_ANSWERS) {
+        throw new ValidationError('"chapters" is too long');
+      }
+      for (const [id, rec] of entries) {
+        assertId(id, 'chapters key');
+        assertObject(rec);
+        const check = Number(rec.check);
+        if (!Number.isInteger(check) || check < 0 || check > PATH_CHECK_QUESTIONS) {
+          throw new ValidationError(`"chapters.${id}.check" must be an integer between 0 and ${PATH_CHECK_QUESTIONS}`);
+        }
+        clean.chapters[id] = { check };
+      }
     }
 
     if (body.streak !== undefined) {

@@ -175,6 +175,25 @@ async function main() {
   check(await evaluate(`document.querySelector('nav') ? getComputedStyle(document.querySelector('nav')).display !== 'none' : false`), 'навигация появилась после онбординга');
   await shot('03-dashboard.png');
 
+  /* ---- 2a. L5b: путь ведёт новичка в урок 1 ---- */
+  await waitFor(`!!document.getElementById('dashboard-learning-path')`, 'карточка пути на дашборде');
+  txt = await viewText();
+  check(txt.includes('Step 1 of 25'), 'путь: новичок стоит на шаге 1 из 25');
+  // hashchange не срабатывает, если hash уже #/path — подписываемся вручную
+  await evaluate(`window.__pathNav = () => { if (location.hash !== '#/path') location.hash = '#/path'; else location.replace(location.href); window.removeEventListener('hashchange', window.__pathNav); }`);
+  await evaluate(`window.addEventListener('hashchange', window.__pathNav); window.__pathNav();`);
+  await waitFor(`(document.getElementById('view')?.innerText||'').toUpperCase().includes('LEARNING PATH')`, 'экран пути');
+  txt = await viewText();
+  check(/LEARNING PATH/i.test(txt), 'путь: экран #/path рендерит заголовок');
+  check(/Step 1 of 25/i.test(txt), 'путь: первый шаг — шаг 1 из 25');
+  const contHref = await evaluate(`(() => {
+    const a = Array.from(document.querySelectorAll('#view .path-card a.ds-btn'))
+      .find((x) => ((x.innerText || '') + ' ' + (x.textContent || '')).toLowerCase().includes('continue'));
+    return a ? a.getAttribute('href') : null;
+  })()`);
+  check(contHref === '#/theory/ch1', `путь: Continue новичка ведёт в урок 1 (${contHref})`);
+  await shot('03b-path.png');
+
   /* ---- 3. Практика: тема → 5 вопросов → результат ---- */
   await evaluate(`location.hash = '#/practice'`);
   await waitFor(`!!Array.from(document.querySelectorAll('#view a.card')).length`, 'practice list');
@@ -257,7 +276,7 @@ async function main() {
    * Ловит потерянные при рефакторинге импорты/константы (S1.3 потерял
    * DAILY_GOAL_CHOICES — Settings не открывался, а тесты молчали). */
   const ROUTES = ['#/', '#/theory', '#/practice', '#/exam', '#/mistakes', '#/review',
-    '#/search', '#/dictionary', '#/stats', '#/settings', '#/exam-italian'];
+    '#/search', '#/dictionary', '#/path', '#/stats', '#/settings', '#/exam-italian'];
   for (const r of ROUTES) {
     const before = jsErrors.length;
     await evaluate(`location.hash = ${JSON.stringify(r)}`);

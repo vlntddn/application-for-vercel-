@@ -22,7 +22,9 @@ import {
   PATH_ORDER,
   PATH_MINI_PASS,
   PATH_MASTERY_PCT,
+  nextStepAction,
 } from '../public/js/domain/learning.js';
+import { CHAPTER_CATEGORY } from '../public/js/theory-map.js';
 
 const manifest = JSON.parse(
   fs.readFileSync(path.join(import.meta.dirname, '..', 'data', 'manifest.json'), 'utf8'),
@@ -403,4 +405,35 @@ test('learningPath: unknown chapters (e.g. ch99 in theoryRead) are never produce
   const { steps } = learningPath({ answers: {}, theoryRead: ['ch99'] }, manifest, lessons);
   assert.ok(steps.every((s) => ALL_CHAPTERS.includes(s.id)));
   assert.equal(steps.length, ALL_CHAPTERS.length);
+});
+
+// ---- L5b: "Continue" action (first missing part) + check score domain ----
+
+test('nextStepAction: read → check → practice, in order', () => {
+  assert.equal(nextStepAction(null), null);
+  assert.equal(nextStepAction({ read: false, check: 0, slug: 'segno-obbligo' }), 'read');
+  assert.equal(nextStepAction({ read: true, check: 0, slug: 'segno-obbligo' }), 'check');
+  assert.equal(nextStepAction({ read: true, check: 3, slug: 'segno-obbligo' }), 'check');
+  assert.equal(nextStepAction({ read: true, check: 4, slug: 'segno-obbligo' }), 'practice');
+  assert.equal(nextStepAction({ read: true, check: 5, slug: 'segno-obbligo' }), 'practice');
+  // A step whose topic has no question bank cannot be practiced.
+  assert.equal(nextStepAction({ read: true, check: 4, slug: null }), null);
+});
+
+test('learningPath: a perfect 5/5 check is stored and passes the step', () => {
+  const { steps } = learningPath(
+    { answers: {}, theoryRead: ['ch1'], chapters: { ch1: { check: 5 } } },
+    manifest,
+    lessons,
+  );
+  const ch1 = steps.find((s) => s.id === 'ch1');
+  assert.equal(ch1.check, 5);
+  assert.ok(ch1.done);
+  assert.equal(nextStepAction(ch1), 'practice');
+});
+
+test('learningPath: continue target — fresh step is read', () => {
+  const { steps } = learningPath({ answers: {}, theoryRead: [], chapters: {} }, manifest, lessons);
+  // First step is 'ready' and unread → continue means "read".
+  assert.equal(nextStepAction(steps[0]), 'read');
 });

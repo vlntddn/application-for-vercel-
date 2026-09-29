@@ -67,6 +67,10 @@ async function handleApi(req, res, pathname) {
     const body = await readJsonBody(req, config.maxBodyBytes);
     return sendJson(res, 200, await progress.markTheoryRead(body));
   }
+  if (req.method === 'POST' && pathname === '/api/progress/chapters') {
+    const body = await readJsonBody(req, config.maxBodyBytes);
+    return sendJson(res, 200, await progress.recordChapterCheck(body));
+  }
   if (req.method === 'DELETE' && pathname === '/api/progress') {
     return sendJson(res, 200, await progress.reset());
   }

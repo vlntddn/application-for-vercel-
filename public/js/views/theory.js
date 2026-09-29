@@ -4,6 +4,7 @@ import { el, clear } from '../ui.js';
 import { CHAPTER_CATEGORY } from '../theory-map.js';
 import { translationOf, lang, loc, pickQueue, masteryOf, errorBanner } from './common.js';
 import { renderQuizSession } from '../views.js';
+import { PATH_CHECK_QUESTIONS } from '../domain/learning.js';
 
 function showSignModal(imageUrl, signQuestions, onPractice) {
   const facts = signQuestions.filter((q) => q.is_true).slice(0, 4);
@@ -203,11 +204,16 @@ export async function renderTheoryChapter(root, id, opts = {}) {
 
   function startCheck() {
     document.removeEventListener('keydown', keyHandler);
-    renderQuizSession(root, pickQueue(catQuestions, 5), {
+    renderQuizSession(root, pickQueue(catQuestions, PATH_CHECK_QUESTIONS), {
       title: `CHECK — CAP. ${ch.chapter}`,
       backHash: `#/theory/${id}`,
       onQuit: () => renderTheoryChapter(root, id),
-      onFinish: (correct, total) => renderTheoryChapter(root, id, { quizResult: { correct, total } }),
+      onFinish: (correct, total) => {
+        // L5b — record the self-check result so the learning path can mark the
+        // step done once the learner gets PATH_MINI_PASS+ of the 5 right.
+        api.recordChapterCheck(id, correct).catch(() => {});
+        renderTheoryChapter(root, id, { quizResult: { correct, total } });
+      },
     });
   }
 
@@ -392,6 +398,9 @@ export async function renderTheoryChapter(root, id, opts = {}) {
   }
 
   draw();
+  // L5b — `#/theory/<id>/check` opens the lesson and starts the 5-question
+  // self-check straight away (used by the learning-path Continue button).
+  if (opts.check) startCheck();
 }
 
 /* ========================== EXAM ITALIAN GUIDE ========================== */

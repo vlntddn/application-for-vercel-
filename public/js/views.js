@@ -18,6 +18,9 @@ export { renderDashboard } from './views/dashboard.js';
 /* ============================== THEORY ============================== */
 export { renderTheoryList, renderTheoryChapter, renderExamItalian } from './views/theory.js';
 
+/* Learning path screen lives in views/path.js (L5b). */
+export { renderPath, pathLinkCard } from './views/path.js';
+
 /* Review screens live in views/review.js (Sprint 1, S1.11c). */
 export { renderMistakes, renderQuickReview } from './views/review.js';
 

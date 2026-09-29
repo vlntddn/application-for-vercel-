@@ -18,6 +18,7 @@ import {
   renderSettings,
   renderSignalDrill,
   renderNumbers,
+  renderPath,
 } from './views.js';
 
 const view = document.getElementById('view');
@@ -26,7 +27,9 @@ const nav = document.getElementById('nav');
 const routes = [
   { pattern: /^#?\/?$/, name: 'dashboard', render: () => renderDashboard(view) },
   { pattern: /^#\/stats$/, name: 'dashboard', render: () => renderStats(view) },
+  { pattern: /^#\/path$/, name: 'dashboard', render: () => renderPath(view) },
   { pattern: /^#\/theory$/, name: 'theory', render: () => renderTheoryList(view) },
+  { pattern: /^#\/theory\/([\w-]+)\/check$/, name: 'theory', render: (m) => renderTheoryChapter(view, m[1], { check: true }) },
   { pattern: /^#\/theory\/([\w-]+)$/, name: 'theory', render: (m) => renderTheoryChapter(view, m[1]) },
   { pattern: /^#\/exam-italian$/, name: 'theory', render: () => renderExamItalian(view) },
   { pattern: /^#\/dictionary$/, name: 'theory', render: () => renderDictionary(view) },

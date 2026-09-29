@@ -315,7 +315,8 @@ test('the dashboard shows the next step, not raw zeros', () => {
   const views = readViewsSource();
   assert.match(views, /dashboard-next-steps/);
   assert.match(views, /dashboard-exam-readiness/);
-  const dashboard = views.slice(views.indexOf('export function renderDashboard'));
+  // L5b: renderDashboard is async (it lazy-loads lessons for the path card).
+  const dashboard = views.slice(views.indexOf('export async function renderDashboard'));
   // The panels are actually wired into the dashboard render.
   assert.match(dashboard, /stats\.answered === 0\s*\?\s*nextStepsPanel\(\)/,
     'no answers -> next-step panel with the practice link');
