@@ -1,3 +1,22 @@
+## 2026-09-29 — L3: «Почему я ошибаюсь» — причины на /#/mistakes
+
+Что сделано (коммиты `feat: L3 — ...` и `docs: L3 ...` на self-improve):
+- **public/js/domain/learning.js**: `mistakeCauses(answers, questions, insights, lessons)` —
+  по текущим ошибкам (lastCorrect=false) теги причин: signal (слово-сигнал из
+  data/insights/signal-words.json), sign (есть image_url), number (цифра в тексте),
+  rule (фолбэк); возвращает perQuestion + counts.
+- **public/js/views/review.js** (`renderMistakes`): панель «Most of your
+  mistakes: … (N of M)» + PRACTICE THIS — signal → #/drill/signals, rule →
+  глава с максимумом rule-ошибок (с её названием), sign/number → #/practice.
+  При недоступности insights (standalone) панель тихо не показывается.
+- **tests/learning.test.js**: 2 теста mistakeCauses (тэгирование, комбинации,
+  counts; пустые/null-входы) — 24/24 pass.
+- **public/sw.js**: v65 → v66.
+Почему: задача L3 роадмапа — объяснить ученику, в чём именно он ошибается,
+и дать кнопку сразу в нужное место. Как проверено: unit-тесты, verify.sh
+(VERIFY OK).
+
+
 ## 2026-09-29 — S2.L2: подсветка сигналов в вопросе (практика/повторение)
 
 Что сделано (коммиты `feat: L2 — подсветка сигнала в вопросе … (L2)` и

@@ -407,7 +407,7 @@ _Промежуточная проверка после L1c: verify + qa-ux, с�
       в Settings — сегмент Auto/On/Off.
       *Проверка:* тест функции разметки (чистая, в learning.js: `signalSpans(text,
       words)` → отрезки); verify; в экзамене grep `ds-signal` пусто. *M*
-- [ ] **L3 Почему я ошибаюсь.** `mistakeCauses(answers, questions, insights,
+- [x] **L3 Почему я ошибаюсь.** `mistakeCauses(answers, questions, insights,
       lessons)` в learning.js: каждой текущей ошибке — причины (может быть
       несколько): `signal` (есть слово-сигнал), `sign` (есть image_url), `number`
       (в text_it есть число), `rule` (остальное). На `#/mistakes` сверху — «Most of
