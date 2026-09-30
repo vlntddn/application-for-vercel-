@@ -260,6 +260,201 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-targa-posteriore-veicolo-3": {
+      "verdict": "FALSO",
+      "key_it": "deve rimanere accesa se si sosta fuori dalla strada",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: when the vehicle is stopped off the roadway, the lights are switched off and the plate lamp goes out with them — there is no duty to keep the plate light on while parked off the road.",
+        "ru": "Неверно: при остановке вне проезжей части свет гасят, и плафон номера гаснет вместе с остальными — держать его включённым при парковке вне дороги не нужно.",
+        "zh": "错误：车停在路外时应关闭灯光，车牌灯随之熄灭；停在路外并没有保持车牌灯点亮的义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-utilizzo-degli-indicatori-direzione-2": {
+      "verdict": "VERO",
+      "key_it": "ogni volta che si deve effettuare una manovra di svolta",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: every turning manoeuvre requires the turn signals — that is exactly what the indicators are for, so «ogni volta» is the correct reading here.",
+        "ru": "Верно: каждый маневр с поворотом требует поворотников — для этого они и существуют, «каждый раз» здесь правильное прочтение.",
+        "zh": "正确：每次转弯操作都必须使用转向灯——这正是转向灯的作用，此处“每次”读法正确。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-utilizzo-degli-indicatori-direzione-13": {
+      "verdict": "FALSO",
+      "key_it": "sinistri quando si deve percorrere un tornante verso sinistra",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: through a long left curve the signal would have to stay on for the whole bend — indicators announce a turn or lane change, not the normal running of a curve.",
+        "ru": "Неверно: на затяжном левом повороте поворотник пришлось бы держать всю дугу — он оповещает о повороте или смене полосы, а не о обычном прохождении изгиба.",
+        "zh": "错误：通过左侧长弯道时转向灯须保持整个弯道开启——转向灯预告转弯或变道，而非正常行驶过弯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-necessita-utilizzo-indicatori-direzione-3": {
+      "verdict": "VERO",
+      "key_it": "ogni qualvolta si deve fare una manovra di svolta",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: each time a turning manoeuvre has to be made, the indicators are compulsory — the same rule as its twin statement.",
+        "ru": "Верно: каждый раз, когда выполняется маневр с поворотом, поворотники обязательны — то же правило, что у близнецового утверждения.",
+        "zh": "正确：每次进行转弯操作时转向灯都属强制——与姊妹题的规则相同。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-necessita-utilizzo-indicatori-direzione-5": {
+      "verdict": "FALSO",
+      "key_it": "anche se non si effettuano cambiamenti di corsia",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: driving in a parallel file without changing lanes is not a turning manoeuvre — the indicators are required when a lane change is made, not during straight parallel driving.",
+        "ru": "Неверно: движение в параллельном строю без смены полосы — не поворотная маневрация; поворотники нужны при смене полосы, а не при прямолинейном параллельном движении.",
+        "zh": "错误：并行队列行驶且不变道并非转弯操作——变道时才需转向灯，直线并行行驶不需要。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-necessita-utilizzo-indicatori-direzione-6": {
+      "verdict": "FALSO",
+      "key_it": "per almeno 500 metri dopo aver effettuato un sorpasso",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: «at least 500 m after overtaking» is invented. The indicator is switched on to return to the right lane once it can be done safely — no distance rule exists.",
+        "ru": "Неверно: «не менее 500 м после обгона» — выдумка. Поворотник подаётся для возврата в правый ряд, когда это можно сделать безопасно; правила про расстояние нет.",
+        "zh": "错误：“超车后至少500米”系捏造。转向灯用于在可安全驶回右侧车道时提示并道，并不存在距离规定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-necessita-utilizzo-indicatori-direzione-8": {
+      "verdict": "FALSO",
+      "key_it": "spostandosi verso il margine destro della carreggiata",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: moving to the right edge of the carriageway to park is a lane-change manoeuvre, so the right indicator is still required before making it.",
+        "ru": "Неверно: движение к правому краю проезжей части для парковки — маневр со сменой полосы, и правый поворотник перед ним по-прежнему обязателен.",
+        "zh": "错误：为停车而靠向行车道右缘属于变道操作，执行前仍须使用右转向灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-uso-abbaglianti-6": {
+      "verdict": "FALSO",
+      "key_it": "è sempre ammesso quando si trasportano feriti o ammalati gravi",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: «sempre» is the trap. High beam stays forbidden with oncoming traffic, behind the vehicle ahead, and inside built-up areas — transporting the injured changes nothing about that.",
+        "ru": "Неверно: «всегда» — ловушка. Дальний свет по-прежнему запрещён при встрече, за идущим впереди и в населённом пункте — перевозка раненых этого не меняет.",
+        "zh": "错误：“总是”是陷阱。会车、跟随前车及市区内仍禁止远光灯——运送伤员并不改变这一点。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-uso-intermittente-proiettori-profondita-1": {
+      "verdict": "VERO",
+      "key_it": "per dare avvertimenti utili al fine di evitare incidenti",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: brief warning flashes of the high beam are allowed even inside built-up areas when they serve to avoid an accident — «in town, brief flashes to warn are allowed».",
+        "ru": "Верно: краткие предупредительные вспышки дальнего света разрешены даже в населённом пункте, если они нужны, чтобы избежать ДТП — «короткие мигания-предупреждения можно».",
+        "zh": "正确：远光灯短促闪烁警告即使在市区内也获允许，前提是为避免事故——“可短暂闪灯示意”。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-uso-intermittente-proiettori-profondita-3": {
+      "verdict": "VERO",
+      "key_it": "l’intenzione di sorpassare",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: a short flash of the high beam may signal the vehicle ahead your intention to overtake, even inside built-up areas.",
+        "ru": "Верно: короткой вспышкой дальнего света можно сообщить идущему впереди о намерении обогнать, даже в населённом пункте.",
+        "zh": "正确：远光灯短闪可用于向前车示意超车意图，即使在市区内亦可。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-uso-intermittente-proiettori-profondita-4": {
+      "verdict": "FALSO",
+      "key_it": "soltanto sulle strade extraurbane",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: «soltanto» is the trap — the warning flash is allowed inside built-up areas too (see the true twin above), not exclusively on extra-urban roads.",
+        "ru": "Неверно: «только» — ловушка: предупреждающие вспышки разрешены и в населённом пункте (см. правдивый близнец выше), а не только на загородных дорогах.",
+        "zh": "错误：“仅”是陷阱——警告性闪灯在市区内同样允许（参见上方正确题），并非仅限城外道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-uso-intermittente-proiettori-profondita-5": {
+      "verdict": "FALSO",
+      "key_it": "ma unicamente di giorno",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: the «only by day» condition is invented — the warning flash may be used night or day; it is exactly in the dark hours that a flash warning serves best.",
+        "ru": "Неверно: условие «только днём» выдумано — предупреждающая вспышка допустима и днём, и ночью; именно в тёмное время суток она работает лучше всего.",
+        "zh": "错误：“仅白天”条件系捏造——警告闪灯昼夜均可使用；恰恰在夜间它最能发挥作用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-uso-intermittente-proiettori-profondita-6": {
+      "verdict": "FALSO",
+      "key_it": "solo quando si trasportano feriti o ammalati gravi",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: the flash is not reserved for carrying the injured — it is a general warning tool, allowed whenever it serves to avoid an accident.",
+        "ru": "Неверно: вспышка не зарезервирована для перевозки раненых — это общий предупредительный инструмент, допустимый всякий раз, когда он помогает избежать ДТП.",
+        "zh": "错误：闪灯并非专为运送伤员保留——它是通用警示手段，凡用于避免事故即被允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-uso-intermittente-proiettori-profondita-7": {
+      "verdict": "FALSO",
+      "key_it": "purché l’illuminazione esterna manchi o sia insufficiente",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: «purché» plants a made-up condition — the warning flash does not depend on street lighting; it is about the useful warning, not about darkness.",
+        "ru": "Неверно: «при условии» подставляет выдуманное условие — предупреждающая вспышка не зависит от уличного освещения; она про полезное предупреждение, а не про темноту.",
+        "zh": "错误：“只要”塞入了捏造条件——警告闪灯与路灯照明无关；关键在于是否构成有效警示，而非天色明暗。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-uso-proiettori-fuori-centri-abitati-6": {
+      "verdict": "FALSO",
+      "key_it": "solo quando il veicolo che li precede a breve distanza è un’autovettura",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: «soltanto… un’autovettura» narrows the rule wrongly — you dip the high beam when following any vehicle at short distance, and also for oncoming traffic; the type of vehicle does not matter.",
+        "ru": "Неверно: «только… легковой автомобиль» ошибочно сужает правило — дальний свет выключают, следуя вблизи за любым впереди идущим, и при встрече; тип автомобиля не важен.",
+        "zh": "错误：“仅……小汽车”错误缩小了规则——紧随任何前车近距离行驶及会车时都应切换近光灯；车辆类型无关紧要。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
