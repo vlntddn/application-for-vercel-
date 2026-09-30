@@ -520,6 +520,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-divieto-circolazione-9": {
+      "verdict": "FALSO",
+      "key_it": "almeno 50 km/h",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: access of mopeds to motorways and main extra-urban roads is not set by a 50 km/h top-speed threshold — the code names lower-speed classes (50 km/h moped class) as excluded from those roads.",
+        "ru": "Ложно: допуск мопедов на автомагистрали и основные загородные не привязан к порогу «минимум 50 км/ч» — класс мопедов с максимальной скоростью 50 км/ч как раз исключён из их движения.",
+        "zh": "错误：轻便摩托车能否上高速和主要城外公路，并不以“最低时速50公里”为标准——最高时速50公里级的轻便摩托车恰恰被禁止在这类道路上行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-traino-veicoli-avaria-1": {
+      "verdict": "VERO",
+      "key_it": "solo se debitamente custoditi",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: animals may be on motorway and main extra-urban service and rest areas, but only under proper control (leashed or in a crate) — loose animals would endanger everyone there.",
+        "ru": "Верно: животные в зонах обслуживания и отдыха автомагистралей и основных загородных допустимы, но только под должным контролем (на поводке или в перевозке) — свободное животное стало бы угрозой для всех.",
+        "zh": "正确：高速公路和主要城外公路的服务区与休息区可以有动物，但必须妥善看管（牵绳或笼内运输）——散放的动物会危及所有人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-traino-veicoli-avaria-2": {
+      "verdict": "VERO",
+      "key_it": "solo per raggiungere i punti per le richieste di soccorso",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: on motorway emergency lanes pedestrians may pass only with a purpose — to reach the help-request points (emergency telephones). Walking along the emergency lane otherwise is forbidden.",
+        "ru": "Верно: по аварийным полосам автомагистралей пешеходы могут двигаться только с целью — дойти до пунктов вызова помощи (аварийных телефонов). Прочие прогулки по аварийной полосе запрещены.",
+        "zh": "正确：在高速应急车道上，行人只能朝求助点（应急电话）方向通行。其他情况沿应急车道行走都是禁止的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-traino-veicoli-avaria-3": {
+      "verdict": "VERO",
+      "key_it": "solo ai veicoli di soccorso autorizzati",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: towing a broken-down vehicle on motorway carriageways, ramps, junctions and service areas is reserved to authorized rescue vehicles — any other driver towing there would create a hazard at full speed.",
+        "ru": "Верно: эвакуация сломанного авто на проезжих частях, подъёмных полосах, съездах и зонах обслуживания автомагистралей — прерогатива уполномоченных спасательных средств; буксир со стороны любого другого водителя на высокой скорости — угроза всем.",
+        "zh": "正确：在高速行车道、坡道、出入口和服务区内拖带故障车辆，只允许授权的救援车辆执行——其他司机拖带会在高速下危及所有人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-traino-veicoli-avaria-4": {
+      "verdict": "FALSO",
+      "key_it": "anche nelle aree di servizio e nelle aree di sosta",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: the ban on pedestrians and animals covers motorway carriageways, ramps and junctions — but not the service and rest areas, where they are allowed under the conditions just seen. The 'anche' word extends the ban where it does not reach.",
+        "ru": "Ложно: запрет пешеходам и животным касается проезжих частей, подъёмных полос и съездов автомагистралей — но не зон обслуживания и отдыха, где они допустимы при описанных условиях. Слово «anche» («также») растягивает запрет дальше, чем он реально действует.",
+        "zh": "错误：禁止行人和动物的规定适用于高速行车道、坡道和出入口——但不适用于服务区和休息区，那里在相应条件下是允许的。“anche（也）”一词把禁令扩到了它实际不及的范围。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-aree-servizio-1": {
+      "verdict": "VERO",
+      "key_it": "solo se autorizzate dall'ente proprietario della strada",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: commercial activity in motorway service areas and any motorway dependency requires authorization from the road's owning body — those areas are part of the road infrastructure, not free business ground.",
+        "ru": "Верно: коммерческая деятельность в зонах обслуживания автомагистралей и любой их принадлежности требует разрешения владельца дороги — эти зоны часть дорожной инфраструктуры, а не свободная торговая территория.",
+        "zh": "正确：高速公路服务区及其他附属区域内开展商业活动，须经道路产权管理单位批准——这些区域属于道路基础设施，并非自由经营之地。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-aree-servizio-2": {
+      "verdict": "VERO",
+      "key_it": "solo nelle aree a ciò destinate e per il periodo stabilito",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: camping on motorways is allowed only in areas specifically designated for it and within the period set by the road's owning body — nowhere else, no open-ended duration.",
+        "ru": "Верно: кемпинг на автомагистралях допустим только в специально отведённых для этого зонах и в сроки, установленные владельцем дороги; нигде больше и не бессрочно.",
+        "zh": "正确：在高速公路上露营只允许在专门指定的区域、且须在道路产权单位规定的期限内——别处不行，也不能无限期停留。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-aree-servizio-3": {
+      "verdict": "VERO",
+      "key_it": "per più di 24 ore",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: in motorway service areas a vehicle may be parked at most 24 hours; longer stops are considered abandonment — the areas are for brief stops, not long parking.",
+        "ru": "Верно: в зонах обслуживания автомагистралей стоять можно не более 24 часов; дальше это считается оставлением — зоны рассчитаны на короткий отдых, не на долгую парковку.",
+        "zh": "正确：高速公路服务区停车不得超过24小时，超时即视为弃车——服务区是为短暂停留设计的，不是长期停车场。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-proiettori-anabbaglianti-0": {
+      "verdict": "VERO",
+      "key_it": "è obbligatorio l'uso dei proiettori anabbaglianti anche di giorno",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: low-beam headlights are compulsory on motorways and main extra-urban roads even in daylight — the goal is that your vehicle is seen by others in any light conditions.",
+        "ru": "Верно: на автомагистралях и основных загородных фары ближнего света обязательны и днём — цель, чтобы вашу машину видели при любых световых условиях.",
+        "zh": "正确：在高速公路和主要城外公路行驶，白天也必须开启近光灯——目的是让其他车辆在一切光线下都能看见你。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-retromarcia-inversione-marcia-0": {
+      "verdict": "VERO",
+      "key_it": "è vietato invertire il senso di marcia e attraversare lo spartitraffico",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: on motorway and main extra-urban carriageways, ramps and junctions, reversing the direction and crossing the median is forbidden — also at gantries. Full-speed flow leaves no safe way to do it; you missed an exit, drive to the next one.",
+        "ru": "Верно: на автомагистралях и основных загородных запрет разворота и пересечения разделителя — в том числе на путях; поток на высокой скорости не даёт безопасного способа. Пропустили съезд — едете на следующий.",
+        "zh": "正确：在高速公路和主要城外公路的行车道、坡道和出入口，禁止掉头、禁止穿越中央隔离带，门架处也不允许。高速车流下没有安全做法；错过出口就开到下一个。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-retromarcia-inversione-marcia-5": {
+      "verdict": "FALSO",
+      "key_it": "può invertire il senso di marcia adottando tutti gli accorgimenti necessari",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: no 'all the necessary precautions' make it legal — direction reversal on these roads is an absolute prohibition; the only legal move after a missed exit is to continue to the next one.",
+        "ru": "Ложно: ни «все необходимые меры предосторожности» не делают разворот законным — на этих дорогах это абсолютный запрет; единственное законное действие после пропущенного съезда — продолжить до следующего.",
+        "zh": "错误：“采取一切必要措施”也不能让掉头变合法——在这类道路上它是绝对禁止；错过出口后唯一合法的做法是继续开到下一个出口。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-retromarcia-inversione-marcia-6": {
+      "verdict": "FALSO",
+      "key_it": "può invertire il senso di marcia in casi di particolare emergenza",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: even 'special emergency cases' do not open an exception — the prohibition is unconditional; a real emergency is handled by exiting at the next junction or calling rescue.",
+        "ru": "Ложно: даже «особые случаи ЧП» не открывают исключения — запрет безусловен; реальное ЧП решается выходом на следующем съезде или вызовом помощи.",
+        "zh": "错误：即使是“特别紧急的情况”也不构成例外——这一禁令是无条件的；真正的紧急情况应通过下一个出口驶离或呼叫救援处理。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-retromarcia-inversione-marcia-7": {
+      "verdict": "FALSO",
+      "key_it": "può procedere in senso contrario al normale flusso del traffico, per brevi tratti",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: driving against the flow on these roads is forbidden even 'for short stretches' — at motorway speed there is no safe short reverse trip.",
+        "ru": "Ложно: движение против потока на этих дорогах запрещено и «на коротких отрезках» — на скоростях автомагистрали безопасного короткого обратного пути не существует.",
+        "zh": "错误：在这类道路上逆向行驶即便“很短一段”也被禁止——以高速的速度，不存在安全的短距离逆行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-retromarcia-inversione-marcia-8": {
+      "verdict": "FALSO",
+      "key_it": "può utilizzare la corsia di emergenza se il traffico è intenso",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: heavy traffic is not a reason to use the emergency lane — it exists for breakdowns and rescue, and blocking it with slow traffic would block the rescuers themselves.",
+        "ru": "Ложно: плотный трафик — не причина ехать по аварийной полосе; она существует для аварий и спасателей, и закрывая её медленным потоком, вы закроете дорогу самим спасателям.",
+        "zh": "错误：车流量大不是走应急车道的理由——它专为故障和救援而设；被慢车流占住，救援车辆反而进不来。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingorgo-uscita-immissione-0": {
+      "verdict": "VERO",
+      "key_it": "deve dare la precedenza ai veicoli in circolazione",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: on the acceleration lane you must yield to vehicles already on the carriageway — merging always gives way to the established flow.",
+        "ru": "Верно: на полосе разгона уступайте машинам, уже движущимся по проезжей части; въезжающий всегда уступает устоявшемуся потоку.",
+        "zh": "正确：在加速车道上，必须给已在行车道上行驶的车辆让路——汇入方始终要让行已形成的车流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingorgo-uscita-immissione-1": {
+      "verdict": "VERO",
+      "key_it": "deve impegnare per tempo la corsia di destra",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: to leave the carriageway you move to the right lane in good time and enter the deceleration lane from its very start — slowing in the flow lanes would endanger everyone behind you.",
+        "ru": "Верно: чтобы съехать, заранее перестраиваются в правую полосу и вползают в полосу торможения с её самого начала; тормозить прямо в потоке — значит поставить под угрозу всех сзади.",
+        "zh": "正确：驶离行车道时，应提前并入最右侧车道，并从减速车道起点进入——在行车道上减速会危及后方所有车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingorgo-uscita-immissione-2": {
+      "verdict": "VERO",
+      "key_it": "deve segnalare tempestivamente il cambiamento di corsia",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: any lane change on these roads must be signalled promptly with the indicators — at high speed drivers around you need that warning early to react safely.",
+        "ru": "Верно: любое перестроение на этих дорогах обязательно заранее обозначать указателями поворота — на высокой скорости окружающим нужен сигнал заблаговременно, чтобы безопасно среагировать.",
+        "zh": "正确：在这类道路上任何变道都必须及时打转向灯——高速行驶时，周边车辆需要尽早收到提示才能安全应对。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingorgo-uscita-immissione-3": {
+      "verdict": "VERO",
+      "key_it": "deve disporsi il più vicino possibile alla striscia di sinistra",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: in a jam where the emergency lane is missing or too narrow for police and rescue vehicles, drivers in the rightmost lane must hug the left edge of it — deliberately keeping the right side clear for the rescuers.",
+        "ru": "Верно: при заторе, где аварийной полосы нет или её мало для полиции и спасателей, водитель в крайней правой полосе стоит максимально у левого её края — сознательно оставляя правый край свободным для служб.",
+        "zh": "正确：拥堵时若应急车道缺失或不够警车和救援车通行，最右侧车道的车辆应尽量靠左行驶——有意留出右侧给救援力量通过。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingorgo-uscita-immissione-4": {
+      "verdict": "VERO",
+      "key_it": "solo per uscire dall'autostrada, a partire dal cartello di preavviso di uscita posto a 500 metri",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: in a jam the emergency parking lane may be used on motorways only to leave, and only from the exit advance sign 500 m before the junction — its job is to keep an exit open, not to become a fourth lane.",
+        "ru": "Верно: в заторе аварийная полоса на автомагистрали допустима только чтобы съехать, начиная с таблички предвещения выхода в 500 м от съезда; её задача — держать съезд свободным, а не стать четвёртой полосой.",
+        "zh": "正确：拥堵时高速应急停车带只可用于驶离，且须从距出口500米处的预告标志起使用——它的功能是保持出口畅通，不是当作第四条行车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingorgo-uscita-immissione-5": {
+      "verdict": "FALSO",
+      "key_it": "può immettersi nella corsia di decelerazione anche nel tratto successivo al suo inizio",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: the deceleration lane is entered from its start, not later — 'also in the following stretch' wrongly allows joining it late, which forces late braking in the flow.",
+        "ru": "Ложно: в полосу торможения вползают с её начала, а не позже; «а также на следующем отрезке» неверно разрешает вползти в неё поздно, что вынуждает поздно тормозить прямо в потоке.",
+        "zh": "错误：减速车道应从起点进入，而不是更晚进入——“也可以在后续路段汇入”的说法错误地允许了延迟进入，迫使车辆直接在车流中急刹车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
