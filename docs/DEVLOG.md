@@ -1,5 +1,30 @@
 # DEVLOG — Passo (последнее сверху)
 
+## 2026-09-30 — L9a: Пояснения к ошибкам (офлайн-гейт, формат, показ)
+
+Что сделано (коммит feat: L9a на self-improve):
+- **data/explanations/<category>.json** — офлайн-формат (приложение ИИ не вызывает: нет сети, CSP, приватность):
+  `{category, items:{<id>:{verdict VERO|FALSO, key_it дословная фраза из text_it, chapter chN, why {en,ru,zh}, source ai-draft, model, at}}}`.
+  Сэмпл: cinture-casco-sicurezza.json (2 вопроса из ch22, ручной черновик).
+- **scripts/check-explanations.mjs + tests/explanations.test.js** — 6 правил гейта (в npm test):
+  (1) verdict = is_true; (2) key_it — подстрока text_it; (3) chapter = CATEGORY_CHAPTER темы;
+  (4) каждое число в why есть в text_it или mustKnow главы («нельзя выдумывать числа»);
+  (5) why ≤ 280 симв./язык, все 3 языка, не дубль text_it; (6) id существует в банке.
+  Тесты: валидный пример + 5 видов сломанных примеров (по одному на ошибку) + checkAll на реальном каталоге.
+- **scripts/verify.sh** — п.4 расширен на data/explanations/: записи (id) нельзя терять, только добавлять (merge-only),
+  как и overlay.
+- **public/js/state.js** — `explanationsBySlug` Map + `loadExplanations(slug)` (кэш; 404 → пустой объект, не бросает).
+- **public/js/api.js** — `explanations: (slug) => /data/explanations/<slug>.json`.
+- **public/js/views/practice.js** — `explanationBlock(q)`: показ ТОЛЬКО в разборе ошибки и после **2-й ошибки**
+  на вопросе (учитывает текущий ещё не записанный неверный ответ), тег «AI draft — check the lesson»,
+  ссылка на главу, why на языке ученика (loc). Экзамен — никогда. Отдельный слот под фактами главы.
+- **public/styles.css** — .explanation (жёлтая левая граница, отлична от фактов); **public/sw.js** v73→v74.
+
+Проверка: verify.sh → VERIFY OK (184 unit, 8 endpoint 200, qa-new-user 42 PASS).
+Порядок гейта: правильная → null; 1-я ошибка → null (wrongTotal=1); 2-я ошибка → блок (wrongTotal=2).
+
+TODO.md: пунктом «Заполнить explanation» (Спринт L, L9) занимается вся серия L9a…L9N — L9a не закрывает его полностью, чекбокс оставлен.
+
 
 ## 2026-09-30 — L8: Слово по тапу (тап по слову text_it → перевод)
 
