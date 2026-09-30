@@ -1521,6 +1521,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-vietata-sosta-5": {
+      "verdict": "VERO",
+      "key_it": "in prossimità dei dossi",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: outside built-up areas and on fast urban roads, parking is forbidden in the vicinity of speed bumps.",
+        "ru": "Верно: вне населённых пунктов и на городских скоростных дорогах остановка с оставлением автомобиля запрещена вблизи «лежачих полицейских».",
+        "zh": "正确：在建成区外和城市快速道路上，减速带附近禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-vietata-sosta-6": {
+      "verdict": "FALSO",
+      "key_it": "ma non in loro prossimità",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: parking is forbidden at railway level crossings and in their vicinity — the \"not in the vicinity\" extension is wrong.",
+        "ru": "Ложь: на переездах и вблизи них остановка с оставлением автомобиля запрещена — расширение «но не вблизи» неверно.",
+        "zh": "错误：在铁路道口处及其附近均禁止停车(sosta)——“但附近除外”的说法不成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-vietata-sosta-7": {
+      "verdict": "FALSO",
+      "key_it": "ma non di quelle tranviarie",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: parking is forbidden on the rails of both railway and tram lines — the tram lines are not excluded.",
+        "ru": "Ложь: на рельсы и железных, и трамвайных линий ставить автомобиль запрещено — трамвайные линии не исключены.",
+        "zh": "错误：在铁路和有轨电车线路的轨道上均禁止停车——有轨电车轨道并不例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-vietata-sosta-8": {
+      "verdict": "FALSO",
+      "key_it": "nelle gallerie illuminate",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: parking inside a tunnel is forbidden unless signs say otherwise — the tunnel being lit does not change the rule.",
+        "ru": "Ложь: в тоннелях остановка с оставлением автомобиля запрещена, если знаки не указывают иное — освещение тоннеля правило не меняет.",
+        "zh": "错误：隧道内禁止停车(sosta)，标志另有规定除外——隧道是否照明不改变该规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-vietata-sosta-9": {
+      "verdict": "FALSO",
+      "key_it": "La sosta, ma non la fermata",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: in underpasses, under overpasses, and under arches and porticoes both sosta and fermata are forbidden, not just the sosta.",
+        "ru": "Ложь: в подпортовых, под эстакадами, под арками и портиками запрещены и «соста», и «фермата» — а не только «соста».",
+        "zh": "错误：在下穿通道、高架桥下、拱廊和骑楼下，停车(sosta)和临时停靠(fermata)都被禁止——并非只禁止停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-vietata-sosta-10": {
+      "verdict": "FALSO",
+      "key_it": "è consentita la sosta in prossimità dei dossi",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: outside built-up areas and on fast urban roads parking is not allowed in the vicinity of speed bumps — it is forbidden there.",
+        "ru": "Ложь: вне населённых пунктов и на городских скоростных дорогах вблизи «лежачих полицейских» останавливаться с оставлением автомобиля нельзя — там это запрещено.",
+        "zh": "错误：在建成区外和城市快速道路上，减速带附近不允许停车(sosta)——那里是被禁止的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-0": {
+      "verdict": "VERO",
+      "key_it": "anche in loro prossimità",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: both sosta and fermata are forbidden on curves, and outside built-up areas and on fast urban roads also in the vicinity of curves.",
+        "ru": "Верно: и «соста», и «фермата» запрещены на поворотах, а вне населённых пунктов и на городских скоростных дорогах — и вблизи поворотов.",
+        "zh": "正确：停车(sosta)和临时停靠(fermata)在弯道处均被禁止；在建成区外和城市快速道路上，弯道附近也被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-1": {
+      "verdict": "VERO",
+      "key_it": "segnali stradali verticali in modo da occultarne la vista",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: both sosta and fermata are forbidden at and near vertical road signs in such a way as to hide them from view.",
+        "ru": "Верно: «соста» и «фермата» запрещены на месте и вблизи вертикальных дорожных знаков так, что закрывается на них вид.",
+        "zh": "正确：在垂直道路标志处及其附近，若会遮挡标志视线，停车(sosta)和临时停靠(fermata)均被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-2": {
+      "verdict": "VERO",
+      "key_it": "segnali semaforici in modo da occultarne la vista",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: both sosta and fermata are forbidden at and near traffic lights in such a way as to hide them from view.",
+        "ru": "Верно: «соста» и «фермата» запрещены на месте и вблизи светофоров так, что закрывается на них вид.",
+        "zh": "正确：在交通信号灯处及其附近，若会遮挡信号灯视线，停车(sosta)和临时停靠(fermata)均被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-3": {
+      "verdict": "VERO",
+      "key_it": "lungo le corsie di canalizzazione",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: both sosta and fermata are forbidden at the horizontal pre-selection signs and along the channelization lanes.",
+        "ru": "Верно: «соста» и «фермата» запрещены в местах горизонтальной разметки предварительного выбора полосы и вдоль полос канализации.",
+        "zh": "正确：在地面预选车道标线和导向车道沿线，停车(sosta)和临时停靠(fermata)均被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-4": {
+      "verdict": "VERO",
+      "key_it": "in prossimità delle aree di intersezione",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: outside built-up areas both sosta and fermata are forbidden at and in the vicinity of intersection areas.",
+        "ru": "Верно: вне населённых пунктов «соста» и «фермата» запрещены в местах пересечения дорог и вблизи них.",
+        "zh": "正确：在建成区外，路口区域处及其附近，停车(sosta)和临时停靠(fermata)均被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-5": {
+      "verdict": "VERO",
+      "key_it": "allo sbocco dei passi carrabili",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden at the exit of driveways.",
+        "ru": "Верно: в местах выезда с домовладений (съездов) остановка с оставлением автомобиля запрещена.",
+        "zh": "正确：在车道出口(私人通道出口)处禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-6": {
+      "verdict": "FALSO",
+      "key_it": "non è vietata in loro prossimità",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: outside built-up areas and on fast roads the vicinity of curves is not free — both sosta and fermata are forbidden there too.",
+        "ru": "Ложь: вне населённых пунктов и на скоростных дорогах окрестности поворотов не свободны — и «соста», и «фермата» запрещены и там.",
+        "zh": "错误：在建成区外和快速路上，弯道附近并不允许——停车(sosta)和临时停靠(fermata)在那里同样被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-7": {
+      "verdict": "FALSO",
+      "key_it": "La sosta, ma non la fermata",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: at and near traffic lights, both sosta and fermata are forbidden when they would hide the lights — the fermata is not exempt.",
+        "ru": "Ложь: на месте и вблизи светофоров запрещены и «соста», и «фермата», если закрывают вид на светофор — «фермата» не исключена.",
+        "zh": "错误：在交通信号灯处及其附近，若会遮挡信号灯，停车(sosta)和临时停靠(fermata)均被禁止——临时停靠并不例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-8": {
+      "verdict": "FALSO",
+      "key_it": "ma non lungo le corsie di canalizzazione",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the channelization lanes are not exempt — both sosta and fermata are forbidden there as well as at the pre-selection markings.",
+        "ru": "Ложь: полосы канализации не исключены — «соста» и «фермата» запрещены и на них, и в местах горизонтальной разметки предварительного выбора.",
+        "zh": "错误：导向车道并不例外——停车(sosta)和临时停靠(fermata)在预选标线和导向车道上均被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-9": {
+      "verdict": "FALSO",
+      "key_it": "ma non in loro prossimità",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: outside built-up areas the vicinity of intersection areas is not free — both sosta and fermata are forbidden there too.",
+        "ru": "Ложь: вне населённых пунктов окрестности мест пересечения дорог не свободны — и «соста», и «фермата» запрещены и там.",
+        "zh": "错误：在建成区外，路口区域附近并不允许——停车(sosta)和临时停靠(fermata)在那里同样被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-10": {
+      "verdict": "FALSO",
+      "key_it": "La sosta ma non la fermata è vietata sugli attraversamenti pedonali",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: on pedestrian crossings both sosta and fermata are forbidden — the fermata is not exempt there.",
+        "ru": "Ложь: на пешеходных переходах запрещены и «соста», и «фермата» — «фермата» там не исключена.",
+        "zh": "错误：在人行横道上，停车(sosta)和临时停靠(fermata)均被禁止——临时停靠并不例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-11": {
+      "verdict": "FALSO",
+      "key_it": "breve durata",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: parking on cycle lanes and at their exits is not allowed even for a brief duration — the short stay does not make it legal.",
+        "ru": "Ложь: на велосипедных дорожках и на выездах с них останавливаться с оставлением автомобиля нельзя даже кратковременно — короткая длительность не делает это законным.",
+        "zh": "错误：在自行车道上及其出口处停车(sosta)即使是短暂的也不允许——时间短暂并不使其合法。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-divieto-fermata-12": {
+      "verdict": "FALSO",
+      "key_it": "solo se di breve durata",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: parking on the pavement (sidewalk) is not allowed \"only if brief\" — there is no such exception for short stays on the sidewalk.",
+        "ru": "Ложь: на тротуарах остановка с оставлением автомобиля не разрешена «только при краткой» — такого исключения для короткой длительности нет.",
+        "zh": "错误：在人行道上停车(sosta)并不因为“时间短”就允许——不存在此类短暂停靠的例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-sosta-fermata-autobus-0": {
+      "verdict": "VERO",
+      "key_it": "impedisce l’accesso ad altro veicolo già regolarmente in sosta",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden if it blocks access to another vehicle already lawfully parked.",
+        "ru": "Верно: если остановка закрывает доступ к другому автомобилю, уже законно стоящему, — это запрещено.",
+        "zh": "正确：如果停车(sosta)妨碍对已合法停放的另一辆车辆的出入，则被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
