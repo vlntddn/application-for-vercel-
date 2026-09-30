@@ -260,6 +260,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "limiti-di-velocita-obbligo-regolazione-27": {
+      "verdict": "FALSO",
+      "key_it": "solo se l'autovettura è scarica",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the word \"only\" makes it false — you must slow for the road, weather, traffic and vehicle load, not merely when the car happens to be unloaded.",
+        "ru": "Неверно: слово «только» делает его ложным — снижать скорость нужно из-за дороги, погоды, трафика и нагрузки, а не лишь когда машина бывает разгружена.",
+        "zh": "错误：“仅”使其错误——你必须因道路、天气、车流和载重而减速，而非只因车辆恰好空载。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-limite-velocita-generali-16": {
+      "verdict": "FALSO",
+      "key_it": "su una qualsiasi autostrada",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the standard motorway cap is 130, not one uniform top speed for every highway — only specially designed sections, flagged by their own sign, may allow a higher cap.",
+        "ru": "Неверно: стандартный потолок на автомагистрали 130, а не единая высшая скорость для любой трассы — повышенный допуск только на особых участках, отмеченных собственным знаком.",
+        "zh": "错误：高速公路的标准上限是130，而非任何公路的统一最高车速——只有带有专用标志的特殊路段才允许更高上限。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-limite-velocita-generali-19": {
+      "verdict": "FALSO",
+      "key_it": "nei centri abitati è sempre di 70 km/h",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: in built-up areas the general cap is 50, not 70 — the figure is wrong, and \"always\" would be a trap anyway.",
+        "ru": "Неверно: в населённых пунктах общий лимит 50, а не 70 — цифра неверна, да и «всегда» стало бы ловушкой.",
+        "zh": "错误：建成区内通用限速是50而非70——数字错误，而且“始终”本就会是陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-limite-velocita-generali-20": {
+      "verdict": "FALSO",
+      "key_it": "nei centri abitati è sempre di 50 km/h",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: 50 is the standard cap in built-up areas, but it can be reduced further by signs, so the word \"always\" is the trap.",
+        "ru": "Неверно: 50 — стандартный лимит в населённых пунктах, но знак может его ещё понизить, поэтому слово «всегда» и есть ловушка.",
+        "zh": "错误：50是建成区的标准限速，但标志可将其进一步降低，因此“始终”才是陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-limite-velocita-generali-26": {
+      "verdict": "FALSO",
+      "key_it": "per qualsiasi veicolo nei centri abitati",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the general cap in built-up areas is 50 and it also depends on the vehicle type, not one uniform figure for \"any\" vehicle.",
+        "ru": "Неверно: общий лимит в населённых пунктах 50, и он ещё зависит от типа транспортного средства, — а не единая цифра «для любого».",
+        "zh": "错误：建成区的通用限速是50，还取决于车辆类型——并非“任何”车辆统一的数字。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-limiti-velocita-eta-5": {
+      "verdict": "VERO",
+      "key_it": "velocità in curva può determinare il ribaltamento del veicolo",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: going too fast through a curve can generate centrifugal force that topples the vehicle, especially if it is tall or heavily loaded.",
+        "ru": "Верно: слишком быстрое прохождение поворота создаёт центробежную силу, способную опрокинуть автомобиль, особенно высокий или нагруженный.",
+        "zh": "正确：弯道中速度过快会产生离心力，可能使车辆（尤其高或载重的）侧翻。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-velocita-0": {
+      "verdict": "VERO",
+      "key_it": "in modo da non causare intralcio alla circolazione",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: speed must never obstruct the smooth flow of traffic, so it has to match the flow around you.",
+        "ru": "Верно: скорость никогда не должна мешать плавному потоку, поэтому она должна соответствовать движению вокруг.",
+        "zh": "正确：车速绝不能妨碍交通的平稳流动，因此要与你周围的车流相匹配。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-doveri-velocita-0": {
+      "verdict": "VERO",
+      "key_it": "moderata nei tratti di strada a visuale non libera",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: on stretches with blocked visibility you cannot see far enough ahead, so speed must be reduced to stay in control.",
+        "ru": "Верно: на участках с ограниченной видимостью видно не достаточно далеко вперёд, поэтому скорость нужно снизить, чтобы оставаться под контролем.",
+        "zh": "正确：在视距受阻的路段看不清远处，因此必须降速以始终可控。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-doveri-velocita-1": {
+      "verdict": "VERO",
+      "key_it": "una velocità che non costituisca pericolo per la sicurezza della circolazione",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: speed must never put the safety of the traffic around you at risk, which is the whole point of choosing a safe speed.",
+        "ru": "Верно: скорость никогда не должна ставить под угрозу безопасность окружающего движения — это и есть суть выбора безопасной скорости.",
+        "zh": "正确：车速绝不能危及周围交通的安全——这正是选择安全车速的意义。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-doveri-velocita-2": {
+      "verdict": "VERO",
+      "key_it": "una velocità che consenta di intervenire con sicurezza in caso di imprevisti",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: you must keep a speed that leaves you time and space to react safely to any unexpected event.",
+        "ru": "Верно: скорость должна оставлять время и пространство, чтобы безопасно отреагировать на любой неожиданность.",
+        "zh": "正确：车速必须留出时间与空间，以安全应对任何突发状况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-doveri-velocita-3": {
+      "verdict": "VERO",
+      "key_it": "una velocità adeguata alle proprie condizioni psicofisiche",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: fatigue, stress or poor form reduce your reaction, so speed must fit your current physical and mental condition.",
+        "ru": "Верно: усталость, стресс или плохая форма замедляют реакцию, поэтому скорость должна соответствовать вашему текущему физическому и ментальному состоянию.",
+        "zh": "正确：疲劳、压力或状态不佳会降低反应，因此车速要与你当前的身心状态相匹配。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-doveri-velocita-5": {
+      "verdict": "FALSO",
+      "key_it": "una velocità regolata in funzione del tempo che abbiamo a disposizione",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: you may not speed up just because you are running late — speed is set by the road, weather and traffic, never by how much time you have.",
+        "ru": "Неверно: нельзя разгоняться только потому, что опаздываешь — скорость задают дорога, погода и трафик, а не количество свободного времени.",
+        "zh": "错误：不能因为赶时间就提速——车速由道路、天气和车流决定，而非由你有多少时间决定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-doveri-velocita-6": {
+      "verdict": "FALSO",
+      "key_it": "moderata fuori dai centri abitati",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: outside built-up areas the caps are higher, not a generally \"moderate\" speed — up to 90, 110 or 130 depending on the road.",
+        "ru": "Неверно: вне населённых пунктов лимиты выше, а не обобщённо «умеренная» скорость — до 90, 110 или 130 в зависимости от дороги.",
+        "zh": "错误：建成区外限速更高，而非笼统的“温和”车速——视道路可达90、110或130。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-norme-velocita-0": {
+      "verdict": "VERO",
+      "key_it": "può essere di 150 km/h su tratti di autostrade con particolari caratteristiche",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: specially designed motorway sections, indicated by a dedicated sign, are allowed a cap above the normal motorway ceiling — that is the exception the statement refers to.",
+        "ru": "Верно: на особых участках автомагистрали, отмеченных собственным знаком, допускается потолок выше обычного предела трассы — именно это исключение и имеется в виду.",
+        "zh": "正确：带有专用标志的特殊高速路段允许高于常规上限的车速——陈述指的就是这一例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-norme-velocita-1": {
+      "verdict": "VERO",
+      "key_it": "il limite massimo di velocità consentito è di 130 km/h sulle autostrade",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: absent other signs, the standard motorway cap is 130.",
+        "ru": "Верно: при отсутствии иных знаков стандартный потолок на автомагистрали — 130.",
+        "zh": "正确：在没有其他标志时，高速公路标准上限为130。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-norme-velocita-2": {
+      "verdict": "VERO",
+      "key_it": "è di 50 km/h nei centri abitati",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: absent other signs, the general cap in built-up areas is 50.",
+        "ru": "Верно: при отсутствии иных знаков общий лимит в населённых пунктах — 50.",
+        "zh": "正确：在没有其他标志时，建成区通用限速为50。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-norme-velocita-3": {
+      "verdict": "VERO",
+      "key_it": "per i ciclomotori il limite massimo di velocità consentito è di 45 km/h",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: mopeds have a lower maximum than cars, set by their own vehicle category, so the statement is correct.",
+        "ru": "Верно: у мотороллеров потолок ниже, чем у легковых, — он задаётся их собственным классом, поэтому утверждение верно.",
+        "zh": "正确：轻便摩托车的上限低于轿车，由其自身类别设定，因此陈述正确。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-norme-velocita-4": {
+      "verdict": "VERO",
+      "key_it": "per macchine agricole e macchine operatrici con pneumatici è di 40 km/h",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: agricultural and self-propelled working machines have a reduced cap set by their vehicle category, so the statement is correct.",
+        "ru": "Верно: у сельскохозяйственных и самоходных рабочих машин пониженный лимит, задаваемый их классом, поэтому утверждение верно.",
+        "zh": "正确：农用及自走式作业机械有由自身类别设定的较低上限，因此陈述正确。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-norme-velocita-5": {
+      "verdict": "VERO",
+      "key_it": "sulle autostrade è di 110 km/h in caso di pioggia",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: in rain the standard motorway cap drops from 130 to 110.",
+        "ru": "Верно: в дождь стандартный потолок автомагистрали снижается с 130 до 110.",
+        "zh": "正确：下雨时高速公路标准上限从130降至110。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-norme-velocita-6": {
+      "verdict": "VERO",
+      "key_it": "su strade extraurbane principali è di 90 km/h in caso di grandine",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: in hail the cap on main extra-urban roads drops from 110 to 90.",
+        "ru": "Верно: при граде лимит на главных внегородских дорогах снижается с 110 до 90.",
+        "zh": "正确：下冰雹时主要城外公路的上限从110降至90。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
