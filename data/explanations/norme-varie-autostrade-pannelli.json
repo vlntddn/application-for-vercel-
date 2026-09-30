@@ -1,0 +1,265 @@
+{
+  "category": "norme-varie-autostrade-pannelli",
+  "items": {
+    "norme-varie-autostrade-pannelli-ingombro-carreggiata-caduta-carico-0": {
+      "verdict": "VERO",
+      "key_it": "deve provvedere a rimuovere il carico, se possibile",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: if the load falls onto the road and obstructs it, the driver must remove it as soon as possible, as far as physically possible for him alone.",
+        "ru": "Верно: при падении груза, перекрывшего дорогу, водитель обязан по возможности освободить проезжую часть, убрав груз, в тех пределах, что реально сделать самому.",
+        "zh": "正确：货物掉落阻碍车道时，驾驶人应当尽可能自行清除货物、尽快恢复通行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingombro-carreggiata-caduta-carico-1": {
+      "verdict": "VERO",
+      "key_it": "deve presegnalare l'ostacolo mediante il segnale di veicolo fermo (triangolo)",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: outside built-up areas an obstruction from a fallen load must be pre-signalled with the mobile danger triangle — the dedicated tool for a stopped vehicle or obstacle on the road.",
+        "ru": "Верно: вне населённого пункта препятствие от упавшего груза обязаны обвести заранее — для этого нужен именно переносной знак (треугольник).",
+        "zh": "正确：在城外道路上，掉落货物造成的障碍必须用可移动三角警示牌预先警示。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingombro-carreggiata-caduta-carico-2": {
+      "verdict": "VERO",
+      "key_it": "deve rendere sollecitamente libero, per quanto possibile, il transito",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the first rule with any obstruction of the carriageway is to clear traffic flow as quickly as possible, within what is realistically achievable.",
+        "ru": "Верно: главное правило при любом препятствии на проезжей части — как можно скорее освободить движение в пределах, что реально выполнимо.",
+        "zh": "正确：车道受阻时，首要义务是在可能范围内尽快恢复交通通行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingombro-carreggiata-caduta-carico-3": {
+      "verdict": "FALSO",
+      "key_it": "deve presegnalare l'ostacolo mediante il segnale di STOP",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the STOP sign is a vertical sign that belongs at an intersection, never to a driver's kit. A fallen load on the road is pre-signalled with the mobile danger triangle.",
+        "ru": "Неверно: знак STOP — вертикальный знак для перекрёстков, он не входит в комплект водителя. Упавший груз обводится переносным знаком опасности (треугольником).",
+        "zh": "错误：STOP 是路口用的固定标志，不属于随车装备；掉落货物应用可移动三角警示牌警示。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingombro-carreggiata-caduta-carico-4": {
+      "verdict": "FALSO",
+      "key_it": "deve restare a bordo del veicolo in attesa dei soccorsi",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: staying on board while the road is obstructed blocks traffic and, worse, the driver risks being hit by approaching cars. The rule is the opposite — get the vehicle off the road and pre-signal the hazard.",
+        "ru": "Неверно: оставаться в машине при перекрытой дороге — значит и блокировать движение, и рисковать быть сбитым. Правильно: убрать авто с проезжей части и заранее обозначить опасность.",
+        "zh": "错误：障碍挡路时留在车内既堵塞交通又可能被后方车辆撞上；正确做法是把车移出车道并提前示警。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingombro-avaria-0": {
+      "verdict": "VERO",
+      "key_it": "deve sollecitamente rendere libero il transito per il traffico sopraggiungente",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a breakdown that blocks the carriageway obliges the driver to free the way for following traffic as quickly as possible — first people, then metal.",
+        "ru": "Верно: если поломка перекрывает проезжую часть, водитель обязан как можно скорее освободить путь для следующих за ним — сначала люди, потом железо.",
+        "zh": "正确：故障挡住车道时，驾驶人应尽快为后车腾出通道——先保人，再保车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingombro-avaria-1": {
+      "verdict": "VERO",
+      "key_it": "collocarlo sul margine destro della carreggiata",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a broken-down vehicle should be pushed off the carriageway; if that is impossible, it goes to the right edge of the road — the safest position for approaching traffic.",
+        "ru": "Верно: неисправный автомобиль надо убрать с проезжей части; если это невозможно — поставить его на правый край дороги, это самая безопасная позиция для следующих.",
+        "zh": "正确：故障车应推出车道；无法移动时停放到车道右边缘，对后车最安全。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingombro-avaria-2": {
+      "verdict": "VERO",
+      "key_it": "deve rimuovere l'ingombro, per quanto possibile",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: no matter the cause of the obstruction — a fallen load or anything else — the driver must clear it as far as possible; the \"per quanto possibile\" is the key qualifier.",
+        "ru": "Верно: независимо от причины препятствия — упавший груз или что-то ещё — водитель обязан устранить его в пределах возможного; ключевая оговорка — «насколько возможно».",
+        "zh": "正确：无论障碍成因是货物掉落还是其他，驾驶人都应尽可能清除，关键限定语是「在可能范围内」。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingombro-avaria-5": {
+      "verdict": "FALSO",
+      "key_it": "deve evitare di spostarlo per consentire la ricostruzione corretta dell'accaduto",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the instinct to preserve the \"scene\" does not apply to a load that blocks the road. Obstructing traffic is a greater danger — the load must be removed as far as possible.",
+        "ru": "Неверно: «не трогать место происшествия» здесь не работает. Груз, перекрывающий дорогу, — большая опасность, его надо убирать в пределах возможного.",
+        "zh": "错误：这里不适用“保护现场”的直觉——挡住车道的货物危害更大，应在可能范围内清除。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingombro-avaria-6": {
+      "verdict": "FALSO",
+      "key_it": "senza dover opportunamente presegnalare la zona",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: informing the police is required, but it does not cancel the other half of the duty. If the vehicle cannot be moved, the zone must still be pre-signalled with the triangle.",
+        "ru": "Неверно: сообщить в полицию нужно, но это не отменяет вторую половину обязанности. Если машину не уехать, зону всё равно обязан обвести треугольником.",
+        "zh": "错误：报警是必须的，但不能免除另一项义务——车开不走时，仍须用三角牌提前警示该区域。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingombro-avaria-7": {
+      "verdict": "FALSO",
+      "key_it": "può evitare di informare un organo di polizia se presegnala la zona con efficaci segnali manuali",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: hand signals and the triangle do not replace notifying the police about a load that cannot be removed. The two duties are cumulative, not alternatives.",
+        "ru": "Неверно: ручные сигналы и треугольник не заменяют уведомление полиции о неудалимом грузе. Эти обязанности складываются, а не заменяют друг друга.",
+        "zh": "错误：手势信号和三角牌不能替代向警方报告无法清除的货物；两项义务是叠加的，不是二选一。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-caduta-spargimento-materie-pericolose-0": {
+      "verdict": "VERO",
+      "key_it": "presegnalare la zona con il segnale mobile di pericolo anche in mezzo alla carreggiata",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: spill of slippery or dangerous substances demands maximum warning — the mobile danger sign may be placed in the middle of the carriageway, and the driver wears a high-vis jacket.",
+        "ru": "Верно: разлив скользких или опасных веществ требует максимального предупреждения — переносной знак можно поставить прямо посередине проезжей части, а на себе — сигнальный жилет.",
+        "zh": "正确：泄漏滑腻或危险物质时必须最大限度警示——警示牌可放在车道中央，驾驶人须穿反光背心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-caduta-spargimento-materie-pericolose-1": {
+      "verdict": "VERO",
+      "key_it": "eseguire segnali manuali per impedire il transito dei veicoli dalla parte dove non è stato posto il segnale mobile",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: one triangle cannot cover the road from both directions. The side without the mobile sign is protected by the driver's own hand signals stopping traffic there.",
+        "ru": "Верно: одного треугольника не хватает, чтобы закрыть дорогу с обеих сторон. Сторону без переносного знака закрывает сам водитель — ручными сигналами.",
+        "zh": "正确：一块三角牌无法同时封住两个方向；没有牌子的一侧由驾驶人用手势信号拦停车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-caduta-spargimento-materie-pericolose-2": {
+      "verdict": "VERO",
+      "key_it": "spargere sul terreno, se possibile, sabbia, terra, segatura o altro materiale idoneo a ripristinare l'aderenza",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: if a spill cannot be fully cleaned, the driver must restore grip — spreading sand, earth, sawdust or any suitable material over the slippery zone is exactly the required move.",
+        "ru": "Верно: если разлив не убрать полностью, водитель обязан восстановить сцепление — рассыпать на скользкое место песок, землю, опилки или любой подходящий материал.",
+        "zh": "正确：若无法完全清理泄漏物，驾驶人应撒沙土、锯末等合适材料以恢复路面附着力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-caduta-spargimento-materie-pericolose-3": {
+      "verdict": "VERO",
+      "key_it": "presegnalare la zona con il segnale mobile di pericolo posto anche in mezzo alla carreggiata",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: outside a town the mobile danger sign for a dangerous spill may stand in the middle of the carriageway — the hazard is so severe that the warning must dominate the whole road.",
+        "ru": "Верно: за городом переносной знак при разливе опасных веществ можно ставить прямо посередине проезжей части — опасность настолько велика, что предупреждение должно закрывать всю дорогу.",
+        "zh": "正确：城外道路上，危险物质泄漏的警示牌可放在车道中央——危险程度要求警示覆盖整条道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-caduta-spargimento-materie-pericolose-4": {
+      "verdict": "FALSO",
+      "key_it": "può evitare di presegnalare la zona con il segnale mobile di pericolo se esegue segnali sonori",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: a horn is not a substitute for the triangle. Sound cannot pre-signal a hazardous zone at a distance — the mobile danger sign remains mandatory.",
+        "ru": "Неверно: клаксон не заменяет треугольник. Звук не способен заранее обозначить опасную зону на расстоянии — переносной знак остаётся обязательным.",
+        "zh": "错误：鸣笛不能替代三角牌。声音无法在远处预先警示危险区域，可移动警示牌仍属强制。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-caduta-spargimento-materie-pericolose-5": {
+      "verdict": "FALSO",
+      "key_it": "deve deviare il traffico in attesa che l'ente proprietario della strada intervenga",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the driver does not stand around redirecting traffic until the road authority shows up. His duties are pre-signalling, restoring grip if possible, and informing the police.",
+        "ru": "Неверно: ждать прибытия дорожной службы и «руками» отводить трафик — не обязанность водителя. Его долг — обозначить зону, при возможности восстановить сцепление и сообщить в полицию.",
+        "zh": "错误：驾驶人无需原地拦车分流等待路政到场；其义务是提前警示、尽可能恢复附着力并报警。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-caduta-spargimento-materie-pericolose-6": {
+      "verdict": "FALSO",
+      "key_it": "solo dalla parte dove è stato posto il segnale triangolare mobile di pericolo",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: hand signals work exactly on the side WITHOUT the triangle. The triangle guards one direction; the driver's hands guard the other. \"Solo\" flips the logic.",
+        "ru": "Неверно: ручные сигналы нужны ровно там, где НЕТ треугольника. Знак закрывает одно направление, руки водителя — другое. Слово «только» переворачивает логику.",
+        "zh": "错误：手势信号恰恰要在没有三角牌的一侧使用。牌子护一个方向，驾驶人的手护另一侧——「只」字把逻辑说反了。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-0": {
+      "verdict": "VERO",
+      "key_it": "è obbligatorio presegnalare il veicolo, fermo sulla carreggiata, con il segnale triangolare mobile di pericolo",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: at night outside a town, when rear position or emergency lights are missing or too weak, a vehicle standing on the carriageway must be pre-signalled with the mobile triangle.",
+        "ru": "Верно: ночью за городом, если задние габаритные или аварийные огни отсутствуют или слабы, машину, стоящую на проезжей части, обязан обвести переносным треугольником.",
+        "zh": "正确：夜间城外，若后位置灯或双闪缺失、不足，停在车道上的车辆必须用可移动三角牌提前警示。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-1": {
+      "verdict": "VERO",
+      "key_it": "è obbligatorio presegnalare con il segnale triangolare mobile di pericolo ogni carico caduto accidentalmente",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: outside a town at night every load that has accidentally fallen onto the road must be pre-signalled with the mobile danger triangle — visibility is worst exactly when the danger is most deadly.",
+        "ru": "Верно: ночью за городом каждый случайно упавший на дорогу груз обязан быть обведён переносным треугольником — именно ночью видимость хуже всего, а опасность смертельнее.",
+        "zh": "正确：夜间城外，任何意外掉落的货物都必须用可移动三角牌警示——夜间能见度最差，危险也最大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    }
+  }
+}
