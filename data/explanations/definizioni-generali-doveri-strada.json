@@ -1,0 +1,265 @@
+{
+  "category": "definizioni-generali-doveri-strada",
+  "items": {
+    "definizioni-generali-doveri-strada-aree-pedonali-10": {
+      "verdict": "FALSO",
+      "key_it": "possono transitare i quadricicli a motore",
+      "chapter": "ch1",
+      "why": {
+        "en": "Pedestrian areas are reserved for pedestrians: motorised vehicles — quadricycles included — may not drive in them, whatever their speed.",
+        "ru": "Пешеходные зоны отведены пешеходам: на них не может ездить ни один моторный транспорт, включая квадрициклы, — какая бы скорость ни была.",
+        "zh": "步行区专供行人使用：任何机动车辆（包括四轮机动车）都不得驶入，与车速无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-aree-pedonali-6": {
+      "verdict": "FALSO",
+      "key_it": "possono transitare tutti i motocicli",
+      "chapter": "ch1",
+      "why": {
+        "en": "No motorcycles may enter pedestrian areas; yielding to pedestrians does not legalise driving in a space reserved for pedestrians.",
+        "ru": "Мотоциклы в пешеходные зоны въезжать не могут; уступка пешеходам не легализует движение в пространстве, отведённом пешеходам.",
+        "zh": "摩托车不得驶入步行区；给行人让行并不能使在专供行人使用的空间里行驶变得合法。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-aree-pedonali-8": {
+      "verdict": "FALSO",
+      "key_it": "i ciclomotori possono transitare solo di giorno",
+      "chapter": "ch1",
+      "why": {
+        "en": "Mopeds may not drive in pedestrian areas at all — a day/night condition does not exist; the area is closed to motor traffic.",
+        "ru": "Мопеды в пешеходных зонах ездить не могут вовсе — условия «только днём» не существует; зона закрыта для моторного транспорта.",
+        "zh": "轻便摩托车完全不得在步行区内行驶——不存在「仅限白天」的条件；该区域对机动车封闭。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-aree-pedonali-9": {
+      "verdict": "FALSO",
+      "key_it": "possono transitare tutti gli autoveicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Pedestrian areas admit pedestrians; \"all motor vehicles may pass with care\" is invented — motor vehicles simply do not drive in them.",
+        "ru": "В пешеходных зонах бывают пешеходы; «все машины могут проезжать с осторожностью» — выдумка: на них автомобили просто не ездят.",
+        "zh": "步行区通行的是行人；「所有机动车均可小心通过」是编造的——机动车根本不在其中行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-attenzion-conducente-0": {
+      "verdict": "VERO",
+      "key_it": "anche a bassa velocità",
+      "chapter": "ch1",
+      "why": {
+        "en": "Pedestrians, cyclists and motorcyclists are unprotected road users: even a low-speed impact can cause serious injuries, so drivers must be extra careful.",
+        "ru": "Пешеходы, велосипедисты и мотоциклисты — незащищённые участники движения: даже столкновение на малой скорости может вызвать тяжёлые травмы.",
+        "zh": "行人、骑车者和摩托车手都是无防护的参与者：即使低速碰撞也可能造成重伤，司机必须格外小心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-attenzion-conducente-10": {
+      "verdict": "FALSO",
+      "key_it": "può circolare sul marciapiede",
+      "chapter": "ch1",
+      "why": {
+        "en": "The pavement is reserved for pedestrians; riding on it because the road is blocked is never allowed, for motorcycles or any other vehicle.",
+        "ru": "Тротуар отведён пешеходам; ехать по нему «потому что дорога закрыта» запрещено — мотоциклу, как и любому другому транспорту.",
+        "zh": "人行道专供行人使用；因道路拥堵而骑车在人行道上行驶是绝对不允许的，无论摩托车还是任何车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-attenzion-conducente-2": {
+      "verdict": "VERO",
+      "key_it": "prima di aprire lo sportello deve controllare",
+      "chapter": "ch1",
+      "why": {
+        "en": "Before opening the door of a parked car you must check for cyclists and motorcyclists: they can be hidden in the blind spot and knocked down by the opening door.",
+        "ru": "Прежде чем открыть дверь припаркованного авто, надо проверить, не приближаются ли велосипедисты и мотоциклисты — их не видно, и дверь может их сбить.",
+        "zh": "打开停着的车门前必须查看是否有骑车者驶来：他们可能位于盲区内，被打开的车门撞倒。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-attenzion-conducente-6": {
+      "verdict": "FALSO",
+      "key_it": "non deve controllare",
+      "chapter": "ch1",
+      "why": {
+        "en": "The opposite: before getting out of a parked vehicle you must check for approaching cyclists — skipping the check is exactly what the question forbids.",
+        "ru": "Наоборот: выходя из припаркованного авто, надо проверить, не едут ли велосипедисты — пропускать эту проверку как раз и нельзя.",
+        "zh": "恰恰相反：从停着的车上下来之前必须查看是否有骑车人驶来——不能跳过这项检查。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-attenzion-conducente-7": {
+      "verdict": "FALSO",
+      "key_it": "deve controllare solo se sopraggiungono autocarri o autobus",
+      "chapter": "ch1",
+      "why": {
+        "en": "In the rear-view mirror you check all approaching vehicles, not only trucks and buses: any vehicle, cyclist or motorcyclist matters.",
+        "ru": "В зеркало заднего вида проверяют ВСЕ приближающиеся транспортные средства, а не только грузовики и автобусы.",
+        "zh": "后视镜里要查看所有驶来的车辆，而不只是卡车和公共汽车：任何车辆、骑车人都与你有关系。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-attenzion-conducente-8": {
+      "verdict": "FALSO",
+      "key_it": "può fare lo slalom tra i veicoli fermi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Weaving between the rows of vehicles stopped at a light is dangerous and forbidden: their drivers may simply not see the incoming motorcycle.",
+        "ru": "Рыскать зигзагом между остановившимися на светофоре машинами опасно и запрещено: их водители могут просто не заметить мотоцикл.",
+        "zh": "在等红灯的车流之间穿插骑行既危险又被禁止：等车的司机往往注意不到驶来的摩托车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-attenzion-conducente-9": {
+      "verdict": "FALSO",
+      "key_it": "può parcheggiare sul marciapiede",
+      "chapter": "ch1",
+      "why": {
+        "en": "The pavement is for pedestrians: parking a motorcycle on it — even when no designated spaces exist — is not allowed.",
+        "ru": "Тротуар нужен пешеходам: парковать мотоцикл на нём нельзя — даже когда нет выделенных мест.",
+        "zh": "人行道是行人的：摩托车不能停放在人行道上——即使没有专门的停车区域。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autocaravan-camper-7": {
+      "verdict": "FALSO",
+      "key_it": "viaggiare in piedi, solo per brevi tratti",
+      "chapter": "ch1",
+      "why": {
+        "en": "On a camper in motion passengers must be seated in approved seats with belts; standing while driving — even \"for short stretches\" — is not allowed.",
+        "ru": "В движущемся кемпере пассажиры сидят в сертифицированных сиденьях с ремнями; стоять во время движения — даже «короткие участки» — нельзя.",
+        "zh": "行驶中的房车里，乘客必须系安全带坐在认证座椅上；站立行驶——即使是「短路段」——都不允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autostrada-10": {
+      "verdict": "FALSO",
+      "key_it": "può comprendere piste ciclabili",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorways are closed to bicycles: a dedicated cycle path cannot exist on a motorway.",
+        "ru": "Для велосипедов автострада закрыта: велодорожка на автостраде не предусмотрена.",
+        "zh": "高速公路不向自行车开放：高速公路上不会有专门的自行车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autostrada-12": {
+      "verdict": "FALSO",
+      "key_it": "possono circolare solo gli autoveicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorways also admit motorcycles that meet the minimum displacement — \"only motor vehicles\" is too narrow.",
+        "ru": "На автостраде ездят не только автомобили: допускаются и мотоциклы, отвечающие минимальному объёму двигателя.",
+        "zh": "高速公路上通行的不只是汽车：符合最低排量要求的摩托车也可以上高速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autostrada-13": {
+      "verdict": "FALSO",
+      "key_it": "possono circolare tutti i motocicli e i ciclomotori",
+      "chapter": "ch1",
+      "why": {
+        "en": "Mopeds are excluded from motorways outright, and motorcycles must meet the minimum displacement — so \"all\" is wrong twice over.",
+        "ru": "Мопеды на автостраду вообще не допускаются, а мотоциклы — от минимального объёма двигателя: «все» неверно вдвое.",
+        "zh": "轻便摩托车根本禁止上高速，摩托车须达到最低排量——所以「所有」错了两层。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autostrada-3": {
+      "verdict": "VERO",
+      "key_it": "almeno 150 cm3",
+      "chapter": "ch1",
+      "why": {
+        "en": "Yes: motorway access for motorcycles is limited by a minimum displacement, which this course sets at 150 cm3 — smaller ones stay on ordinary roads.",
+        "ru": "Да: доступ мотоциклов на автостраду ограничен минимальным объёмом двигателя — по курсу это 150 см3; меньшие остаются на обычных дорогах.",
+        "zh": "对：摩托车上高速有最低排量限制，本课程规定为150立方厘米——排量更小的留在普通道路上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autostrada-5": {
+      "verdict": "VERO",
+      "key_it": "Non tutti i tipi di veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: motorways exclude several vehicle types — mopeds, bicycles, tractors and others — each with its own rule.",
+        "ru": "Верно: автострада исключает ряд типов — мопеды, велосипеды, тракторы и другие — у каждого своё правило.",
+        "zh": "对：高速公路排除若干类车辆——轻便摩托车、自行车、拖拉机等——每类都有自己的规定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autostrada-7": {
+      "verdict": "VERO",
+      "key_it": "deve essere lateralmente recintata",
+      "chapter": "ch1",
+      "why": {
+        "en": "Yes: a motorway is fenced on both sides — it keeps unauthorised people and animals off the carriageway.",
+        "ru": "Да: автострада с обеих сторон ограждена — это не даёт посторонним людям и животным попасть на полотно.",
+        "zh": "对：高速公路两侧设有围栏——防止未经授权的人和动物进入路面。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autostrada-8": {
+      "verdict": "FALSO",
+      "key_it": "possono circolare solo le autovetture",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorways admit trucks, buses and eligible motorcycles too — the \"passenger cars only\" rule does not exist.",
+        "ru": "На автостраде ездят грузовики, автобусы и допущенные мотоциклы — правила «только легковые» не существует.",
+        "zh": "高速公路上还通行货车、公共汽车和符合条件的摩托车——不存在「仅限小客车」的规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autostrada-9": {
+      "verdict": "FALSO",
+      "key_it": "possono circolare tutti i tipi di motocicli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Only motorcycles that meet the minimum displacement may enter motorways — smaller motorcycles stay on ordinary roads.",
+        "ru": "На автостраду допускаются лишь мотоциклы от минимального объёма двигателя — меньшие остаются на обычных дорогах.",
+        "zh": "只有达到最低排量的摩托车才能上高速——排量更小的留在普通道路上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    }
+  }
+}
