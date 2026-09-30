@@ -702,6 +702,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-primo-soccorso-6": {
+      "verdict": "FALSO",
+      "key_it": "non bisogna mai toccare il ferito",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: first aid is given to the injured immediately, without waiting for the police to arrive.",
+        "ru": "Неверно: первую помощь пострадавшему оказывают сразу, не дожидаясь прибытия полиции.",
+        "zh": "错误：应第一时间为伤者施救，无需等待警察到场。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-corpo-estraneo-occhio-6": {
+      "verdict": "FALSO",
+      "key_it": "non bisogna mai bendargli",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: the injured eye should be covered and protected to shield it and prevent further damage.",
+        "ru": "Неверно: травмированный глаз нужно закрыть и защитить, чтобы оградить его от дальнейших повреждений.",
+        "zh": "错误：受伤的双眼应遮盖保护，避免受到进一步伤害。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-stato-shock-5": {
+      "verdict": "FALSO",
+      "key_it": "si manifesta sempre con un forte aumento della temperatura corporea",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: in shock the body temperature falls, so the person becomes cold and pale, not hot.",
+        "ru": "Неверно: при шоке температура тела понижается — человек холодеет и бледнеет, а не краснеет.",
+        "zh": "错误：休克时体温下降，人会发冷、面色苍白，而非发热。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-ferito-ustionato-2": {
+      "verdict": "VERO",
+      "key_it": "fare uso di acqua fredda",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: if possible, cold water on a burn helps cool the area and reduce pain.",
+        "ru": "Верно: по возможности холодная вода на ожог помогает охладить зону и снять боль.",
+        "zh": "正确：在可能的情况下，冷水用于灼伤处有助于降温并缓解疼痛。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-ferito-ustionato-5": {
+      "verdict": "FALSO",
+      "key_it": "bisogna sempre togliere le parti dei vestiti",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: clothing stuck to a burn must not be pulled off; only emergency services should remove it.",
+        "ru": "Неверно: одежду, прилипшую к ожогу, нельзя срывать; удаляет её только скорая помощь.",
+        "zh": "错误：粘在灼伤皮肤上的衣物不可撕扯，应由急救人员处理。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-attivita-soccorritore-2": {
+      "verdict": "VERO",
+      "key_it": "deve prestare assistenza agli infortunati",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: the rescuer must help the injured within the limits of their own abilities and knowledge.",
+        "ru": "Верно: спасатель обязан помочь пострадавшему в пределах своих возможностей и знаний.",
+        "zh": "正确：施救者应在自身能力与知识范围内救助伤者。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-attivita-soccorritore-6": {
+      "verdict": "FALSO",
+      "key_it": "il soccorritore deve somministrare farmaci alla vittima",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: the rescuer must not give any drugs to the victim.",
+        "ru": "Неверно: спасатель не должен давать пострадавшему какие-либо лекарства.",
+        "zh": "错误：施救者不得给受害者服用任何药物。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-cause-shock-5": {
+      "verdict": "FALSO",
+      "key_it": "non si verifica mai nelle persone che hanno avuto un trauma",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: trauma can indeed cause shock; it is one of its causes.",
+        "ru": "Неверно: травма действительно может вызвать шок — это одна из его причин.",
+        "zh": "错误：创伤确实可能引起休克，它是休克的原因之一。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-cause-shock-6": {
+      "verdict": "FALSO",
+      "key_it": "non si verifica mai nelle persone che hanno perso molto sangue",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: heavy blood loss is one of the main causes of shock.",
+        "ru": "Неверно: сильная потеря крови — одна из главных причин шока.",
+        "zh": "错误：大量失血是休克的主要原因之一。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-occhiali-lenti-contatto-4": {
+      "verdict": "FALSO",
+      "key_it": "occhiali da vista o di lenti a contatto solo quando",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: glasses or contacts must be used whenever vision is not sufficient for safe driving, not only above a fixed threshold.",
+        "ru": "Неверно: очки или линзы нужны, когда зрение недостаточно для безопасного вождения, а не только выше фиксированного порога.",
+        "zh": "错误：只要视力不足以安全驾驶就应使用眼镜或隐形眼镜，而非仅在超过某一固定数值时。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-occhiali-lenti-contatto-5": {
+      "verdict": "FALSO",
+      "key_it": "occhiali da vista o di lenti a contatto",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: corrective lenses must be worn whenever they are needed for vision, not only in that specific time window.",
+        "ru": "Неверно: корректирующие линзы нужно носить всякий раз, когда они нужны для зрения, а не только в этом интервале.",
+        "zh": "错误：需要时即应佩戴矫正镜片，而非仅限于该时段。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-assunzione-droghe-2": {
+      "verdict": "VERO",
+      "key_it": "Nei farmaci sedativi sono presenti alcune sostanze",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: sedative drugs contain substances that can impair the ability to drive.",
+        "ru": "Верно: седативные препараты содержат вещества, способные ухудшить способность вести машину.",
+        "zh": "正确：镇静类药物含有一些可能削弱驾驶能力的成分。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-assunzione-droghe-3": {
+      "verdict": "FALSO",
+      "key_it": "non compromette la facoltà di guida",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: LSD and amphetamines do impair the ability to drive.",
+        "ru": "Неверно: ЛСД и амфетамины ухудшают способность вести машину.",
+        "zh": "错误：LSD 和安非他命会削弱驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-assunzione-droghe-4": {
+      "verdict": "FALSO",
+      "key_it": "hashish o di marijuana non compromette",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: hashish and marijuana do impair the ability to drive.",
+        "ru": "Неверно: гашиш и марихуана ухудшают способность вести машину.",
+        "zh": "错误：哈希什和大麻会削弱驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-guida-alimentazione-2": {
+      "verdict": "FALSO",
+      "key_it": "durante un pasto abbondante non compromette",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: eating a large meal does not prevent alcohol from impairing driving.",
+        "ru": "Неверно: обильная еда не мешает алкоголю ухудшать вождение.",
+        "zh": "错误：吃得很饱并不能阻止酒精削弱驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-guida-stato-ebbrezza-1": {
+      "verdict": "VERO",
+      "key_it": "Chi guida in stato di ebbrezza alcolica rischia",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: driving while intoxicated is a serious offence and risks arrest.",
+        "ru": "Верно: вождение в нетрезвом виде — серьёзное правонарушение, за которое грозит арест.",
+        "zh": "正确：酒后驾车属严重违法行为，可能面临拘捕。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-guida-stato-ebbrezza-2": {
+      "verdict": "VERO",
+      "key_it": "sconsigliabile guidare quando si ha uno stato emotivo alterato",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: it is inadvisable to drive while emotionally disturbed, as concentration and reactions suffer.",
+        "ru": "Верно: вождение в изменённом эмоциональном состоянии нежелательно — оно ухудшает концентрацию и реакции.",
+        "zh": "正确：在情绪波动时不建议驾车，因为这会损害注意力与反应。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-guida-stato-ebbrezza-3": {
+      "verdict": "FALSO",
+      "key_it": "con una concentrazione di alcool nel sangue superiore al limite",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: even driving a vehicle without an engine above the alcohol limit is subject to sanctions.",
+        "ru": "Неверно: вождение бездвигательного ТС при превышении лимита алкоголя тоже влечёт санкции.",
+        "zh": "错误：即使驾驶无动力车辆，酒精含量超限同样会受处罚。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-guida-stato-ebbrezza-4": {
+      "verdict": "FALSO",
+      "key_it": "Chi guida in stato di ebbrezza alcoolica ha tempi di reazione più rapidi",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: intoxication slows reaction times, it does not make them quicker.",
+        "ru": "Неверно: опьянение замедляет реакции, а не делает их быстрее.",
+        "zh": "错误：醉酒会减慢反应速度，而非使其更快。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-primo-soccorso-0": {
+      "verdict": "VERO",
+      "key_it": "mantenere in vita il ferito con semplici e immediati interventi",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: the aim of first aid is to keep the injured person alive using simple, immediate measures.",
+        "ru": "Верно: цель первой помощи — сохранить жизнь пострадавшему простыми и немедленными мерами.",
+        "zh": "正确：急救的目的是用简单而即时的措施维持伤者生命。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
