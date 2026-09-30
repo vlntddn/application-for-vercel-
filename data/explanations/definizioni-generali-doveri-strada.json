@@ -520,6 +520,201 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-carreggiata-2": {
+      "verdict": "VERO",
+      "key_it": "può essere suddivisa in corsie",
+      "chapter": "ch1",
+      "why": {
+        "en": "Yes: the carriageway is divided into corsie (lanes), each wide enough for one file of vehicles — the nesting road > carriageway > lane.",
+        "ru": "Да: проезжая часть делится на полосы (corsie), каждая — на один ряд машин; вложенность дорога → полотно → полоса.",
+        "zh": "对：车行道被划分为车道，每条车道容纳一列车辆——道路、车行道、车道三层嵌套。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-carreggiata-6": {
+      "verdict": "FALSO",
+      "key_it": "destinata soltanto alla circolazione di carri a trazione animale",
+      "chapter": "ch1",
+      "why": {
+        "en": "The carriageway is for all motorized traffic, not \"only animal-drawn carts\" — that inverts the whole purpose of the road.",
+        "ru": "Проезжая часть — для всего движущегося транспорта, а не «только для повозок с лошадьми»: это переворачивает назначение дороги.",
+        "zh": "车行道供所有机动交通使用，而非「仅供畜力车」——这颠倒了道路的全部用途。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-centro-abitato-0": {
+      "verdict": "VERO",
+      "key_it": "può cambiare spesso la precedenza agli incroci",
+      "chapter": "ch1",
+      "why": {
+        "en": "Yes: in built-up areas intersections can be give-way, roundabout, or unsignalled — the priority order is not the same everywhere, so you must read the signs.",
+        "ru": "Да: в населённых пунктах перекрёстки бывают «уступите», круговым движением и без знаков — порядок приоритета не одинаков, знаки обязательны к чтению.",
+        "zh": "对：在市区，路口可能是让行、环形或无标志——优先顺序各处不同，必须阅读标志。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-centro-abitato-4": {
+      "verdict": "VERO",
+      "key_it": "bisogna continuare a mantenere la concentrazione alla guida",
+      "chapter": "ch1",
+      "why": {
+        "en": "Right: a town multiplies the distractions (pedestrians, cyclists, parked cars, kids), so attention must stay as high as — or higher than — on open roads.",
+        "ru": "Правда: город множит отвлекающие факторы (пешеходы, велосипедисты, припаркованные, дети), внимание должно быть не ниже, чем на трассе.",
+        "zh": "对：城市让干扰因素增多（行人、骑车人、停放的车辆、孩子），注意力必须不亚于甚至高于空旷道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-centro-abitato-6": {
+      "verdict": "FALSO",
+      "key_it": "è sempre consentita la marcia per file parallele",
+      "chapter": "ch1",
+      "why": {
+        "en": "No — the word \"sempre\" is the trap: driving in parallel files (multiple files per direction) is only allowed on multi-lane roads, not everywhere in town.",
+        "ru": "Нет — ловит слово «всегда»: движение параллельными колоннами разрешено только на многополосных дорогах, а не везде в городе.",
+        "zh": "不对——陷阱是「总是」：同向并列车队行驶只允许在多车道道路上，而非市区内任何地方。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-centro-abitato-7": {
+      "verdict": "FALSO",
+      "key_it": "i pedoni e i diversamente abili devono sempre dare la precedenza ai veicoli a motore",
+      "chapter": "ch1",
+      "why": {
+        "en": "Reversed: the rule is the other way — vehicles must yield to pedestrians, especially at crossings; pedestrians never \"always yield\" to motorized traffic.",
+        "ru": "Наоборот: правило другое — транспорт уступает пешеходам, особенно на переходах; пешеходы никогда не «всегда уступают» машинам.",
+        "zh": "正好相反：规则是车辆必须让行行人，尤其在人行横道处；行人从不「总是」给车辆让行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-ciclisti-pedoni-1": {
+      "verdict": "VERO",
+      "key_it": "non è prudente sorpassarli se non si può rispettare una distanza laterale sufficiente",
+      "chapter": "ch1",
+      "why": {
+        "en": "Yes: if you cannot keep a safe lateral gap, do not overtake cyclists or pedestrians — pull back and wait rather than squeeze past.",
+        "ru": "Да: если не можете держать безопасный боковой интервал — не обгоняйте велосипедистов и пешеходов, отстаньте и дождитесь.",
+        "zh": "对：如果不能保持安全的横向间距，就不要超越自行车或行人——退后等待而非勉强挤过。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-ciclisti-pedoni-3": {
+      "verdict": "VERO",
+      "key_it": "deve usare molta prudenza",
+      "chapter": "ch1",
+      "why": {
+        "en": "Right: cyclists and pedestrians are the most vulnerable road users, so overtaking them demands extra caution — slow down and check the gap before passing.",
+        "ru": "Правда: велосипедисты и пешеходы — самые уязвимые участники; обгон требует особой осторожности, сбросьте скорость и проверьте интервал.",
+        "zh": "对：骑车人和行人是最脆弱的道路使用者，超越他们需要格外小心——减速并在超车前检查间距。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-ciclisti-pedoni-4": {
+      "verdict": "VERO",
+      "key_it": "la marcia dei ciclisti a volte avviene con leggeri sbandamenti",
+      "chapter": "ch1",
+      "why": {
+        "en": "Yes: a cyclist can sway slightly while riding, so a driver must expect small deviations and give room when passing — never cut them in close.",
+        "ru": "Да: велосипедист может слегка раскачиваться, водитель обязан ждать таких отклонений и давать запас при обгоне, не жать вплотную.",
+        "zh": "对：骑车人有时会有轻微摇摆，司机须预料这种偏移并在超越时留出空间——切勿贴近。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-ciclisti-pedoni-5": {
+      "verdict": "FALSO",
+      "key_it": "deve mantenere una distanza laterale di almeno 2 metri",
+      "chapter": "ch1",
+      "why": {
+        "en": "No — the figure \"2 metri\" is invented: the rule only requires a \"sufficient\" lateral distance, with no fixed number like two metres.",
+        "ru": "Нет — число «2 метра» выдумано: правило требует лишь «достаточного» бокового интервала, без фиксированной цифры в два метра.",
+        "zh": "不对——「2米」这个数字是编造的：规则只要求「足够」的横向距离，没有两米这样的固定数值。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-ciclisti-pedoni-7": {
+      "verdict": "FALSO",
+      "key_it": "di notte, non deve dare la precedenza ai pedoni che attraversano sulle strisce pedonali",
+      "chapter": "ch1",
+      "why": {
+        "en": "No: the crossing right of pedestrians on a zebra does not depend on the time of day — at night the driver must still yield at the crossing.",
+        "ru": "Нет: право переходить на зебре не зависит от времени суток — ночью водитель тоже обязан уступить пешеходам на переходе.",
+        "zh": "不对：行人走人行横道的权利与时间无关——夜里司机在人行横道处仍必须让行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-ciclomotori-2": {
+      "verdict": "VERO",
+      "key_it": "Non tutti i veicoli a motore a due ruote vengono classificati ciclomotori",
+      "chapter": "ch1",
+      "why": {
+        "en": "True: two-wheeled motor vehicles include both low-displacement ciclomotori and larger motorcycles, so the category is wider than \"ciclomotore\".",
+        "ru": "Правда: двухколёсные с двигателем — это и малолитражные мопеды, и мотоциклы, категория шире, чем «цикломотор».",
+        "zh": "对：两轮机动车辆既包括排量小的轻便摩托也包括大型摩托车，类别比「轻便摩托」更宽。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-ciclomotori-7": {
+      "verdict": "FALSO",
+      "key_it": "tutti i veicoli a due ruote di cilindrata superiore a 50 cm3",
+      "chapter": "ch1",
+      "why": {
+        "en": "No: a ciclomotore is limited to a small displacement — the description \"above that limit\" matches motorcycles, not ciclomotori.",
+        "ru": "Нет: мопед ограничен малым объёмом цилиндра, а «свыше этого предела» — уже мотоциклы, не мопеды.",
+        "zh": "不对：轻便摩托排量有限额，「超过该限额」描述的是摩托车而非轻便摩托。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-0": {
+      "verdict": "VERO",
+      "key_it": "deve tenere un rapporto corretto e tollerante verso gli altri utenti della strada",
+      "chapter": "ch1",
+      "why": {
+        "en": "Yes: besides the technical rules, the driver owes the others a correct and tolerant attitude — safe driving is also about how you treat fellow users.",
+        "ru": "Да: кроме технических правил водитель должен вести себя корректно и терпимо к другим участникам — безопасная езда это и отношение к ним.",
+        "zh": "对：除了技术规则，司机还应以正确和宽容的态度对待其他道路使用者——安全驾驶也关乎待人方式。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-1": {
+      "verdict": "VERO",
+      "key_it": "il conducente deve sempre usare la massima prudenza",
+      "chapter": "ch1",
+      "why": {
+        "en": "Yes: near an intersection you drive with maximum caution even when others owe you the right of way — priority never removes your own duty to look and be ready to stop.",
+        "ru": "Да: у перекрёстка ездите с максимальной осторожностью, даже когда другим обязаны уступать вам — приоритет не снимает вашу обязанность смотреть и быть готовым остановиться.",
+        "zh": "对：接近路口时即使他人应让你，也要以最大谨慎行驶——优先权并不能免除你观察和随时准备停车的义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
