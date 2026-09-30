@@ -2080,6 +2080,123 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-7": {
+      "verdict": "FALSO",
+      "key_it": "senza mai dare la precedenza ai pedoni",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: a green light does not cancel the duty to yield to pedestrians. When turning you must give way to those crossing the road you enter, whatever the light shows.",
+        "ru": "Ложь: зелёный сигнал не отменяет обязанность уступить пешеходам. Поворачивая, вы обязаны уступить идущим по дороге, на которую поворачиваете, — независимо от света.",
+        "zh": "错误：绿灯并不取消让行行人的义务。转弯时必须让正在横穿你所转入道路的行人，无论信号灯如何。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corrispondenza-incroci-5": {
+      "verdict": "VERO",
+      "key_it": "non è consentito sorpassare una bicicletta",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: overtaking by moving into the opposite lane near or at intersections is forbidden — the sight of what approaches from the other side is too limited to make the manoeuvre safe.",
+        "ru": "Верно: обгон с выездом на встречную полосу вблизи перекрёстков и на них запрещён — обзор встречной стороны слишком ограничен, чтобы манёвр был безопасен.",
+        "zh": "正确：在路口附近或路口处以驶入对向车道的方式超车是被禁止的——对向视野过于有限，无法保证超车安全。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corrispondenza-incroci-10": {
+      "verdict": "FALSO",
+      "key_it": "luce gialla lampeggiante",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: a flashing yellow means proceed with caution — you must be ready to slow down or stop and check the intersection, not treat the light as an absolute green.",
+        "ru": "Ложь: мигающий жёлтый означает «движись с осторожностью» — надо быть готовым снизить скорость или остановиться и проверить перекрёсток, а не считать сигнал безусловным зелёным.",
+        "zh": "错误：闪烁黄灯表示谨慎通行——必须准备好减速或停车并确认路口情况，而不是把它当成绝对的绿灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-proprieta-privata-7": {
+      "verdict": "FALSO",
+      "key_it": "è obbligatorio suonare il clacson",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: leaving a private property obliges you to give way to everyone and to signal with the turn indicator, but honking the horn is not a legal requirement anywhere.",
+        "ru": "Ложь: выезжая с частной территории, вы обязаны уступить всем и включить указатель поворота, но гудок клаксона законным требованием нигде не является.",
+        "zh": "错误：驶出私人地块时，你应当让行所有车辆并打转向灯，但鸣喇叭在任何地方都不是法律要求。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-7": {
+      "verdict": "VERO",
+      "key_it": "deve essere integrato con un rapido controllo visivo laterale diretto",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: mirrors have blind spots, so the mirror check must be completed by a quick direct sideways glance before overtaking — otherwise a vehicle right beside you stays invisible.",
+        "ru": "Верно: у зеркал есть слепые зоны, поэтому перед обгоном контроль в зеркале обязательно дополняется быстрым прямым взглядом в сторону — иначе машина прямо рядом остаётся невидимой.",
+        "zh": "正确：后视镜有盲区，因此超车前必须在查看后视镜后快速直接地侧目确认——否则紧贴在你旁边的车辆将保持不可见。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-9": {
+      "verdict": "FALSO",
+      "key_it": "controllare il comportamento di eventuali bambini",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the left side mirror is adjusted to see the traffic behind and beside you, not the passengers. The rear seats are monitored through the central rear-view mirror.",
+        "ru": "Ложь: левое боковое зеркало настраивают на обзор движения позади и сбоку, а не на пассажиров. За задними сиденьями наблюдают через центральное зеркало заднего вида.",
+        "zh": "错误：左侧后视镜是调节来观察车后方和侧方交通的，而不是看乘客。后排座位应通过中央后视镜来观察。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-10": {
+      "verdict": "FALSO",
+      "key_it": "deve essere chiuso quando si circola su strade strette di montagna",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: folding the side mirror removes your rear-side sight exactly when you need it most. On narrow mountain roads the mirrors stay in working position — they are not optional.",
+        "ru": "Ложь: сложив боковое зеркало, вы убираете обзор сзади и сбоку именно тогда, когда он нужнее всего. На узких горных дорогах зеркала остаются в рабочем положении — это не опция.",
+        "zh": "错误：收起侧后视镜恰恰在最需要它的时候取消了后侧方视野。在狭窄的山路上后视镜必须保持工作位置——它不是可选项。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-12": {
+      "verdict": "FALSO",
+      "key_it": "è bene non controllare anche con uno sguardo diretto",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the correct technique is the opposite — mirror first, then a quick direct look into the blind spot before merging. Skipping the direct glance leaves exactly the zone where vehicles are most dangerous.",
+        "ru": "Ложь: правильная техника обратная — сначала зеркало, затем быстрый прямой взгляд в слепую зону перед выездом. Пропуская прямой взгляд, вы как раз не видите ту зону, где машины опаснее всего.",
+        "zh": "错误：正确做法恰恰相反——先看后视镜，再快速直接地看向盲区，然后再并入车流。跳过直接观察，正好看不见车辆最危险的那个区域。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-16": {
+      "verdict": "FALSO",
+      "key_it": "può essere utilizzato come schermo per il navigatore satellitare",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the central mirror exists to watch the traffic behind you; turning it into a GPS screen blocks that sight and adds a distraction. A device must not hide the road view.",
+        "ru": "Ложь: центральное зеркало существует, чтобы наблюдать за движением позади; превращая его в экран навигатора, вы закрываете этот обзор и добавляете отвлекающий фактор. Устройство не должно скрывать вид на дорогу.",
+        "zh": "错误：中央后视镜是用来观察后方交通的；把它当作导航屏会挡住这一视野并增加分心。任何设备都不能遮挡对道路的观察。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
