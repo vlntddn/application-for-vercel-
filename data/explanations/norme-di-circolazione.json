@@ -3757,6 +3757,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-proprieta-privata-3": {
+      "verdict": "VERO",
+      "key_it": "bisogna procedere con prudenza",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when leaving a private property you must proceed with care, watching for pedestrians and traffic, to avoid forcing other road users to brake.",
+        "ru": "Верно: выезжая с частной территории, нужно действовать осторожно, наблюдая за пешеходами и движением, чтобы не заставить других участников тормозить.",
+        "zh": "正确：驶出私人区域时必须谨慎行事，注意观察行人和交通状况，以免迫使其他道路使用者急刹车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-proprieta-privata-4": {
+      "verdict": "VERO",
+      "key_it": "bisogna dare la precedenza agli eventuali pedoni",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: leaving a private property you must give way to any pedestrians who may be crossing the roadway.",
+        "ru": "Верно: выезжая с частной территории, нужно уступать дорогу пешеходам, которые могут пересекать проезжую часть.",
+        "zh": "正确：驶出私人区域时，必须让行可能正在横穿道路的任何行人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-proprieta-privata-5": {
+      "verdict": "VERO",
+      "key_it": "bisogna procedere lentamente, specie se in retromarcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when exiting a private property you must move slowly, especially while reversing, to have time to stop in case of danger.",
+        "ru": "Верно: выезжая с частной территории, нужно двигаться медленно, особенно при движении задним ходом, чтобы успеть остановиться в случае опасности.",
+        "zh": "正确：驶出私人区域时必须慢行，倒车时尤其如此，以便在危险情况下及时停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-proprieta-privata-6": {
+      "verdict": "FALSO",
+      "key_it": "spetta al conducente del veicolo che percorre la strada più stretta",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: at an uncontrolled intersection the one who must give way is the driver on the secondary road or the one coming from the left. The width of the road is irrelevant.",
+        "ru": "Неверно: на нерегулируемом перекрёстке обязан уступить тот, кто движется по второстепенной дороге, или тот, кто слева. Ширина дороги значения не имеет.",
+        "zh": "错误：在无信号路口，必须让行的是行驶在次要道路或从左侧驶来的车辆。道路宽度无关紧要。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-proprieta-privata-8": {
+      "verdict": "FALSO",
+      "key_it": "si ha la precedenza sui pedoni",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: when leaving a private property you do not have priority over pedestrians. On the contrary, you must give them way and proceed with care.",
+        "ru": "Неверно: выезжая с частной территории, вы не имеете преимущества перед пешеходами, а наоборот обязаны уступить им дорогу и действовать осторожно.",
+        "zh": "错误：驶出私人区域时，您并不比行人享有优先权。相反，您必须让行行人并谨慎行事。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-autotreno-0": {
+      "verdict": "VERO",
+      "key_it": "potrebbe diminuire notevolmente la velocità",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a semi-trailer turning right on a narrow road may have to slow down a lot, because of its size and the wide turning radius.",
+        "ru": "Верно: полуприцеп, поворачивающий направо на узкой дороге, может заметно снизить скорость из-за своих габаритов и большого радиуса поворота.",
+        "zh": "正确：在半挂车右转的狭窄道路上，由于其尺寸和较大的转弯半径，它可能需要大幅降低速度。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-autotreno-1": {
+      "verdict": "VERO",
+      "key_it": "nella manovra si sposti a sinistra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when turning right on a narrow road, a semi-trailer may swing out to the left to gain the space needed to complete the manoeuvre.",
+        "ru": "Верно: поворачивая направо на узкой дороге, полуприцеп может сместиться влево, чтобы освободить место для завершения манёвра.",
+        "zh": "正确：在狭窄道路上右转时，半挂车可能会向左偏移，以便腾出完成转向所需的空间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-autotreno-2": {
+      "verdict": "VERO",
+      "key_it": "non bisogna stargli troppo vicino",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: do not follow a semi-trailer too closely when it turns right on a narrow road: it may be forced to reverse, and you would be in the way.",
+        "ru": "Верно: не следует ехать слишком близко за полуприцепом, поворачивающим направо на узкой дороге: ему может потребоваться движение задним ходом, и вы будете мешать.",
+        "zh": "正确：不要紧跟在狭窄道路上右转的半挂车后面：它可能被迫倒车，而你会妨碍它。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-autotreno-3": {
+      "verdict": "VERO",
+      "key_it": "occorre rinunciare a sorpassarlo",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: you should not overtake a semi-trailer that intends to turn right at an intersection: it blocks the view of vehicles and signs coming from the side.",
+        "ru": "Верно: не следует обгонять полуприцеп, поворачивающий направо на перекрёстке: он перекрывает обзор на транспорт и знаки, идущие с боковых направлений.",
+        "zh": "正确：不要超车准备在路口右转的半挂车：它会遮挡来自侧方车辆和交通标志的视野。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-autotreno-4": {
+      "verdict": "FALSO",
+      "key_it": "bisogna sorpassarlo subito a sinistra",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: overtaking a semi-trailer on the left, right when it intends to turn right on a narrow road, is dangerous and must not be done.",
+        "ru": "Неверно: обгон полуприцепа слева в тот момент, когда он собирается повернуть направо на узкой дороге, опасен и не допускается.",
+        "zh": "错误：在狭窄道路上，当半挂车准备右转时立即从其左侧超车，是非常危险的，不应这样做。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-autotreno-5": {
+      "verdict": "FALSO",
+      "key_it": "devono sorpassarlo appena aziona l'indicatore di direzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: drivers behind a semi-trailer must not overtake it the moment it activates the turn indicator: they must slow down and keep a safe distance.",
+        "ru": "Неверно: водители, идущие за полуприцепом, не должны обгонять его сразу после включения указателя поворота, а должны сбавить скорость и выдержать дистанцию.",
+        "zh": "错误：跟随半挂车的驾驶员不应在车辆刚开启转向灯时立即超车，而应减速并保持安全距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-autotreno-6": {
+      "verdict": "FALSO",
+      "key_it": "debbono azionare la segnalazione luminosa di pericolo",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the obligation to signal a hazard belongs to the one causing it. Following drivers do not have to switch on the hazard lights; they must keep distance and slow down.",
+        "ru": "Неверно: обязанность предупреждать об опасности лежит на том, кто её создаёт, а идущие сзади водители просто выдерживают дистанцию и снижают скорость.",
+        "zh": "错误：警示义务属于造成危险的一方，跟随的驾驶员无需开启危险警示灯，只需保持距离并减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovre-consentite-0": {
+      "verdict": "VERO",
+      "key_it": "non è consentito effettuare l'inversione del senso di marcia in vicinanza o in corrispondenza di curve",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a two-way road a U-turn is forbidden near or at a curve, because it would hide oncoming traffic.",
+        "ru": "Верно: на дороге с двусторонним движением разворот запрещён вблизи и на изгибе дороги, поскольку он скрыл бы встречный поток.",
+        "zh": "正确：在双向道路上，禁止在弯道附近或弯道上进行掉头，因为这会遮挡对向交通。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovre-consentite-1": {
+      "verdict": "VERO",
+      "key_it": "L'inversione del senso di marcia non è consentita in vicinanza o in corrispondenza degli incroci",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a U-turn is not allowed near or at an intersection: visibility is poor and it would block cross traffic.",
+        "ru": "Верно: разворот запрещён вблизи и на перекрёстке: там плохая видимость и он преградил бы путь поперечному движению.",
+        "zh": "正确：禁止在路口附近或路口上进行掉头：那里能见度差，并且会阻碍横向交通。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovre-consentite-3": {
+      "verdict": "VERO",
+      "key_it": "non è consentito effettuare l'inversione del senso di marcia in vicinanza o in corrispondenza di dossi",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a two-way road a U-turn is forbidden near or at a crest of a rise (a hump), because it hides oncoming vehicles.",
+        "ru": "Верно: на дороге с двусторонним движением разворот запрещён вблизи и на гребне возвышения (горбинки), так как он скрыл бы встречные автомобили.",
+        "zh": "正确：在双向道路上，禁止在路肩凸起（驼峰）附近或上方掉头，因为它会遮挡对向车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovre-consentite-4": {
+      "verdict": "FALSO",
+      "key_it": "non è consentito effettuare manovre di inversione del senso di marcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the absence of horizontal markings does not by itself forbid a U-turn. It is allowed wherever visibility and safety conditions make it possible.",
+        "ru": "Неверно: отсутствие дорожной разметки само по себе не запрещает разворот. Он допустим везде, где это позволяют видимость и безопасность.",
+        "zh": "错误：缺乏路面标线本身并不禁止掉头。只要视野和条件允许，掉头在任何地方都是允许的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovre-consentite-5": {
+      "verdict": "FALSO",
+      "key_it": "non è consentito effettuare l'inversione di marcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: a continuous edge line of the roadway does not, in itself, forbid a U-turn. The manoeuvre is allowed wherever visibility and safety permit.",
+        "ru": "Неверно: сплошная линия по краю проезжей части сама по себе не запрещает разворот. Он допустим везде, где это позволяют видимость и безопасность.",
+        "zh": "错误：连续的路边线本身并不禁止掉头。只要视野和安全条件允许，掉头是允许的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovre-consentite-6": {
+      "verdict": "FALSO",
+      "key_it": "Fuori dai centri abitati non è consentito effettuare l'inversione di marcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: a U-turn is not forbidden outside built-up areas. It can be done wherever there is no specific prohibition and visibility is sufficient.",
+        "ru": "Неверно: разворот вне населённых пунктов не запрещён. Он возможен везде, где нет конкретного запрета и достаточно хорошая видимость.",
+        "zh": "错误：在建成区域之外掉头并非被禁止。在没有具体禁令且视野充足的地方是可以掉头的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovre-consentite-7": {
+      "verdict": "FALSO",
+      "key_it": "è consentito l'inversione del senso di marcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: on a highway a U-turn is strictly forbidden. It would endanger all traffic moving at high speed, and the rules do not allow it anywhere on the carriageway.",
+        "ru": "Неверно: на автомагистрали разворот строго запрещён. Он ставил бы под угрозу всё движение на высокой скорости и правилами не допускается.",
+        "zh": "错误：在高速公路上掉头是严格禁止的。它会对所有高速行驶的交通构成危险，规则不允许在车道上进行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incroci-circolazione-rotatoria-1": {
+      "verdict": "VERO",
+      "key_it": "vale la regola generale di dare la precedenza a destra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: at a roundabout with no specific sign, the general rule applies and you must give way to vehicles coming from the right.",
+        "ru": "Верно: на развязке без специального знака действует общее правило: нужно уступать дорогу тем, кто подъезжает справа.",
+        "zh": "正确：在没有特定标志的环形交叉口，一般规则适用，必须让行从右侧驶来的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
