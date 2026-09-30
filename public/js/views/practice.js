@@ -5,13 +5,14 @@ import {
   loadLessons,
   loadInsights,
   loadQuestions,
+  loadDictionary,
   slugForQuestionId,
   recordAnswersResilient,
 } from '../state.js';
 import { el, clear, svgIcon } from '../ui.js';
 import { CATEGORY_CHAPTER } from '../theory-map.js';
 import { playCorrect, playWrong } from '../sound.js';
-import { errorBanner, translationOf, loc, pickQueue, queueOrder, masteryOf, categoryStats, translationArea, PRACTICE_BATCH, feedbackHref } from './common.js';
+import { errorBanner, translationOf, loc, lang, pickQueue, queueOrder, masteryOf, categoryStats, translationArea, PRACTICE_BATCH, feedbackHref } from './common.js';
 import {
   introQueue as domainIntroQueue,
   INTRO_QUESTIONS,
@@ -20,6 +21,8 @@ import {
   signalSpans,
   signalGlossary,
   hasSignalWord,
+  buildDictionaryTapIndex,
+  dictionaryTapTerms,
 } from '../domain/learning.js';
 import { topicLabel, topicSub } from '../topics.js';
 
@@ -212,6 +215,90 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     document.addEventListener('keydown', onKey);
   }
 
+  // L8 — «Слово по тапу»: any `text_it` word present in the dictionary (by
+  // lemma, article-agnostic) becomes a tappable <mark>; the callout shows
+  // the translation in the learner's language. Session-scoped index; the
+  // dictionary is cached in state, so this costs one fetch at most.
+  let tapIndexPromise = null; // resolves to buildDictionaryTapIndex(...)
+  let markedTerm = false;
+
+  function tapIndex() {
+    if (!tapIndexPromise) {
+      tapIndexPromise = loadDictionary()
+        .then((d) => buildDictionaryTapIndex(d.sections))
+        .catch(() => null);
+    }
+    return tapIndexPromise;
+  }
+
+  function openTermCallout(anchor, term) {
+    closeSignalCallout();
+    const callout = el('div.ds-term-callout', {
+      role: 'status',
+      'aria-label': `Translation of ${term.it}`,
+    },
+      el('strong', {}, term.it),
+      el('span.ds-term-callout__gloss', {}, term[lang()] || term.en || '—'),
+    );
+    const card = anchor.closest('.question-card');
+    if (card) card.insertAdjacentElement('afterbegin', callout);
+    openCallout = callout;
+    const onDocTap = (e) => {
+      if (!openCallout?.isConnected) return;
+      if (openCallout.contains(e.target) || anchor.contains(e.target)) return;
+      closeSignalCallout();
+    };
+    const onKey = (e) => {
+      if (e.key === 'Escape') closeSignalCallout();
+    };
+    closeCallout = () => {
+      document.removeEventListener('click', onDocTap, true);
+      document.removeEventListener('keydown', onKey);
+    };
+    document.addEventListener('click', onDocTap, true);
+    document.addEventListener('keydown', onKey);
+  }
+
+  /**
+   * L8 — question text with dictionary-tappable words. Builds plain text
+   * first, then (when the index is ready and the paragraph is still the
+   * original text node) re-renders it with a `<mark.ds-term>` per matched
+   * word. Signal hints are unaffected — if they are on, the signal render
+   * owns the paragraph and this one stays out.
+   */
+  function termText(q) {
+    if (hintsOn) return signalText(q);
+    const para = el('p.question-text', {}, q.text_it);
+    tapIndex().then((index) => {
+      if (!index || markedTerm || !para.isConnected || para.childNodes.length !== 1
+          || para.firstChild.nodeType !== Node.TEXT_NODE) return;
+      const hits = dictionaryTapTerms(q.text_it, index);
+      if (!hits.length) return;
+      markedTerm = true;
+      const frag = document.createDocumentFragment();
+      let cursor = 0;
+      for (const hit of hits) {
+        if (hit.start > cursor) frag.append(q.text_it.slice(cursor, hit.start));
+        frag.append(el('mark.ds-term', {
+          role: 'button',
+          tabindex: '0',
+          onclick: (e) => { e.stopPropagation(); openTermCallout(e.target, hit.term); },
+          onkeydown: (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              e.stopPropagation();
+              openTermCallout(e.target, hit.term);
+            }
+          },
+        }, q.text_it.slice(hit.start, hit.end)));
+        cursor = hit.end;
+      }
+      if (cursor < q.text_it.length) frag.append(q.text_it.slice(cursor));
+      para.replaceChildren(frag);
+    });
+    return para;
+  }
+
   /** S2.9: the "why" content, shown directly under the verdict. Same
    *  chapter facts as the old expandable WHY? block — no new explanations. */
   async function whyBlock(question) {
@@ -273,6 +360,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     chosenValue = null;
     revealed = false;
     feedbackPanel = null;
+    markedTerm = false;
     closeSignalCallout();
     index++;
     if (index >= questions.length) {
@@ -375,7 +463,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
       ),
       el('div.panel.question-card', {},
         q.image_url ? el('img.question-img', { src: q.image_url, alt: 'Road sign / situation', onerror: (e) => e.target.remove() }) : null,
-        signalText(q),
+        termText(q),
         translationArea(translationOf(q), revealed, reveal),
         answerButtons(q),
         answered

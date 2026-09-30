@@ -1555,6 +1555,38 @@ mark.ds-signal[role='button']:focus-visible {
 }
 .ds-signal-callout__gloss { opacity: .9; }
 .ds-signal-callout .tag { margin: 0; }
+
+/* L8 — «Слово по тапу»: tap any dictionary word in text_it → translation
+   callout. Teal palette so it stays distinct from the orange L2 signal mark. */
+mark.ds-term {
+  background: var(--ok-soft);
+  color: var(--ok);
+  border-radius: 3px;
+  padding: 0 3px;
+  font-weight: 700;
+}
+mark.ds-term[role='button'] {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+mark.ds-term[role='button']:focus-visible {
+  outline: 2px solid var(--ok);
+  outline-offset: 2px;
+}
+.ds-term-callout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin: 0 0 var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--ok-soft);
+  border-left: 3px solid var(--ok);
+  border-radius: 6px;
+  font: 400 14px/20px var(--font-sans);
+  color: var(--ok);
+}
+.ds-term-callout__gloss { opacity: .9; }
 .signal-ratio {
   font-size: 0.85rem;
   font-weight: 700;

@@ -262,6 +262,82 @@ export function signalSpans(text, words) {
   return segs;
 }
 
+// L8 — «Слово по тапу»: dictionary words in a question's `text_it` become
+// tappable; tapping opens a callout with the translation in the learner's
+// language. Matching is by lemma: the leading article and any parenthetical
+// gloss ("l'incidente (stradale)") are stripped, and apostrophes are treated
+// as word boundaries ("l'incrocio" in the question matches "incrocio").
+const ARTICLE_RE = /^(?:l'|(?:la|il|lo|le|gli)\s+)/i;
+
+/** Lemma of a dictionary term: no article, no "(…)" gloss, lowercase.
+ *  "la carreggiata" → "carreggiata"; "l'incidente (stradale)" → "incidente". */
+export function termLemma(term) {
+  let l = (term || '').trim();
+  const m = /\(.*\)$/.exec(l);
+  if (m) l = l.slice(0, m.index);
+  l = l.replace(ARTICLE_RE, '').trim().toLowerCase();
+  return l.replace(/\s+/g, ' ').trim();
+}
+
+/**
+ * Build a flat lookup of dictionary terms for `text_it` matching.
+ *
+ * @param {object[]} sections - `data/dictionary.json → sections`; each has
+ *   `terms: [{ it, en, ru, zh }, …]`.
+ * @returns {object[]} `[{ lemma, term, words }]` sorted by lemma length
+ *   (longest first) so "doppio senso" wins over a single word "senso".
+ */
+export function buildDictionaryTapIndex(sections) {
+  const index = [];
+  for (const sec of sections || []) {
+    for (const t of sec.terms || []) {
+      const lemma = termLemma(t.it);
+      if (!lemma) continue;
+      index.push({ lemma, term: t, words: lemma.split(' ').map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) });
+    }
+  }
+  index.sort((a, b) => b.lemma.length - a.lemma.length);
+  return index;
+}
+
+/**
+ * Find every dictionary term (by lemma) that occurs in `text` as a whole
+ * word, accent-insensitively. Apostrophes count as word boundaries, so the
+ * contracted form "l'incrocio" matches the lemma "incrocio"; multi-word
+ * lemmas may have a hyphen in the question instead of a space. Overlapping
+ * spans are dropped (longer terms win — the index is longest-first).
+ *
+ * @returns {object[]} `[{ term, start, end }]` sorted by `start`, where
+ *   `start`/`end` span the matched lemma text in `text`. Empty when no term
+ *   occurs.
+ */
+export function dictionaryTapTerms(text, index) {
+  if (!text || !index || !index.length) return [];
+  // The fold is length-preserving, so offsets map 1:1 back to `text`.
+  const n = normalizeText(text);
+  const hits = [];
+  for (const { lemma, term, words } of index) {
+    const re = new RegExp(`(^|[^a-z0-9])${words.join(`(?:'\\s*|\\s+|(?<=\\w)-)`)}($|[^a-z0-9])`, 'g');
+    let m;
+    while ((m = re.exec(n))) {
+      const start = m.index + (m[1] ? m[1].length : 0);
+      const end = start + lemma.length;
+      if (hits.some((h) => start < h.end && end > h.start)) {
+        re.lastIndex = m.index + 1;
+        continue;
+      }
+      hits.push({ term, start, end });
+    }
+  }
+  hits.sort((a, b) => a.start - b.start || b.end - a.end);
+  return hits;
+}
+
+/** First dictionary term in `text` (by lemma) — or `null` (see `dictionaryTapTerms`). */
+export function dictionaryTapTerm(text, index) {
+  return dictionaryTapTerms(text, index)[0] ?? null;
+}
+
 
 /** Total answers recorded (correct + wrong across all question records). */
 export function attemptedCount(answers) {
