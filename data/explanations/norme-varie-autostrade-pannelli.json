@@ -260,6 +260,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-2": {
+      "verdict": "VERO",
+      "key_it": "è obbligatorio anche di giorno presegnalare un veicolo fermo sulla carreggiata",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the triangle is not a night-only device. Outside built-up areas a vehicle standing on the carriageway must be pre-signalled day or night whenever it cannot be clearly seen from 100 metres away.",
+        "ru": "Верно: треугольник — не «ночной» прибор. Вне населённого пункта машину, стоящую на проезжей части, обязан обвести днём и ночью, если её не видно отчётно со 100 метров.",
+        "zh": "正确：三角牌并非只夜间使用。在城外，停在车道上的车辆只要不能在100米外被清楚看到，白天和夜间都必须提前警示。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-3": {
+      "verdict": "VERO",
+      "key_it": "presegnalare un carico accidentalmente caduto sulla carreggiata",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: like a stopped vehicle, a load that falls onto the road must be pre-signalled with the mobile triangle outside a town, day or night, when it cannot be clearly seen at 100 metres.",
+        "ru": "Верно: как и с машиной, упавший на дорогу груз вне города обязан быть обведён переносным треугольником днём и ночью, если его не видно отчётно со 100 метров.",
+        "zh": "正确：与故障车一样，掉落到车道的货物在城外白天或夜间只要100米外看不清楚，都必须用可移动三角牌警示。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-5": {
+      "verdict": "VERO",
+      "key_it": "ad almeno 50 metri",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the triangle is placed BEHIND the vehicle or the obstacle, at least 50 metres away, so approaching drivers have enough distance to slow and react.",
+        "ru": "Верно: треугольник ставят ЗА машиной или препятствием, минимум в 50 метрах, чтобы у следующих было расстояние, чтобы притормозить и среагировать.",
+        "zh": "正确：三角牌要放在车辆或障碍物后方至少50米处，让来车有足够距离减速反应。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-6": {
+      "verdict": "VERO",
+      "key_it": "nella posizione più idonea ad essere avvistato",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: if an intersection lies closer than 50 metres the fixed distance cannot be kept, so the triangle goes behind the vehicle in whatever spot makes it most visible.",
+        "ru": "Верно: если перекрёсток ближе, чем 50 метров, стандартное расстояние не выдержать — треугольник ставят за машиной в самой заметной позиции.",
+        "zh": "正确：若路口距离不足50米，标准距离无法保持，三角牌应放在车辆后方最易被发现的位置。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-7": {
+      "verdict": "VERO",
+      "key_it": "visibile ad una distanza di almeno 100 metri dai veicoli sopraggiungenti",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the point of the placement is visibility — the triangle must be seen from at least 100 metres by approaching traffic, which is exactly what the 50-metre setback serves.",
+        "ru": "Верно: цель установки — видимость: треугольник надо видеть минимум со 100 метров встречным/следующим трафиком, ради этого его и отодвигают на 50 метров назад.",
+        "zh": "正确：摆放目的是可视性——三角牌须从至少100米外被来车看到，后移50米正是为此。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-9": {
+      "verdict": "FALSO",
+      "key_it": "non è visibile ad almeno 150 metri di distanza",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the 150-metre figure is invented. The reference values are 50 metres behind the vehicle and visibility from 100 metres — there is no 150-metre rule.",
+        "ru": "Неверно: цифра 150 метров выдумана. Ориентир — 50 метров за машиной и видимость со 100 метров; правила про 150 метров нет.",
+        "zh": "错误：150米这个数字是编造的。标准是车后50米、100米外可见，并不存在150米的规定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-10": {
+      "verdict": "FALSO",
+      "key_it": "è facoltativo presegnalare, anche di giorno, un carico accidentalmente caduto",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: it is not optional. Outside a built-up area the fallen load must be pre-signalled day or night whenever it cannot be clearly seen at 100 metres. 'Facoltativo' is the trap.",
+        "ru": "Неверно: это не по желанию. Вне города упавший груз обязан быть обведён днём и ночью, если его не видно со 100 метров. Подвох — слово «facoltativo».",
+        "zh": "错误：这不是可选项。在城外，掉落货物只要100米外看不清楚，白天夜间都必须警示。陷阱在「可选」一词。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-11": {
+      "verdict": "FALSO",
+      "key_it": "presegnalare il veicolo fermo con il segnale triangolare mobile di pericolo anche nei centri abitati",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the mobile-triangle obligation applies OUTSIDE built-up areas. The duty is not extended to inside towns — the 'anche nei centri abitati' clause is what breaks it.",
+        "ru": "Неверно: обязанность ставить треугольник действует ВНЕ населённых пунктов. На город её не распространяют — всё ломает оговорка «в том числе в населённых пунктах».",
+        "zh": "错误：使用可移动三角牌的义务适用于城外。它不延伸到城镇内部——错在「包括在居民区」这一限定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-12": {
+      "verdict": "FALSO",
+      "key_it": "è obbligatorio presegnalare velocipedi, ciclomotori e motocicli fermi",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the mobile triangle does not cover bicycles, mopeds and motorcycles stopped in town, and the rule is not extended to built-up areas. The 'anche nei centri abitati' wording makes it false.",
+        "ru": "Неверно: треугольник не покрывает стоящие в городе велосипеды, мопеды и мотоциклы, а на населённые пункты правило не распространяется. Оговорка «в том числе в городе» делает фразу ложной.",
+        "zh": "错误：可移动三角牌不覆盖停在城内的自行车、助力车与摩托车，且规定不延伸到居民区。「包括居民区」的说法使其错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-13": {
+      "verdict": "FALSO",
+      "key_it": "deve essere posto sul carico accidentalmente caduto sulla carreggiata",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the triangle is placed on the road BEHIND the obstacle, not on top of the fallen load. It warns approaching traffic, so it stands on the carriageway, not on the cargo itself.",
+        "ru": "Неверно: треугольник ставят на дорогу ЗА препятствием, а не на сам упавший груз. Он предупреждает едущих, поэтому стоит на проезжей части, а не на грузе.",
+        "zh": "错误：三角牌放在障碍物后方的路面上，而不是放在掉落货物上。它是警示来车，故应放在车道上而非货物本身。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-segnale-mobile-triangolare-14": {
+      "verdict": "FALSO",
+      "key_it": "visibile ad una distanza di almeno 50 metri dai veicoli sopraggiungenti",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the required visibility distance is 100 metres, not 50. The 50 metres is how far behind the vehicle to place the triangle, not how far away it must be seen.",
+        "ru": "Неверно: требуемая дистанция видимости — 100 метров, а не 50. 50 метров — это на каком расстоянии за машиной ставить знак, а не с какого его должны видеть.",
+        "zh": "错误：要求的可视距离是100米，不是50米。50米是三角牌距车辆后方的距离，而不是来车须能看到的距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-posizione-triangolo-0": {
+      "verdict": "VERO",
+      "key_it": "posto sulla corsia occupata dal veicolo fermo o dal carico caduto",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the triangle goes on the lane actually occupied by the stopped vehicle or the fallen load — its whole purpose is to warn traffic travelling in that same lane.",
+        "ru": "Верно: треугольник ставят именно на ту полосу, которую занимает остановленная машина или упавший груз, — его смысл в том, чтобы предупредить едущих по этой полосе.",
+        "zh": "正确：三角牌应放在被停放车辆或掉落货物实际占用的车道上——它的作用就是警示该车道上的车流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-posizione-triangolo-1": {
+      "verdict": "VERO",
+      "key_it": "ad almeno un metro dal bordo esterno",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the triangle stands on the carriageway at least one metre from its outer edge, keeping it in the driving path where approaching traffic will actually see it.",
+        "ru": "Верно: треугольник стоит на проезжей части минимум в метре от её внешнего края — чтобы остаться в пути движения и быть замеченным следующими.",
+        "zh": "正确：三角牌放在车道上，距外边缘至少一米，使其处在行车路径上、能被来车看到。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-posizione-triangolo-2": {
+      "verdict": "FALSO",
+      "key_it": "deve essere posto sulla corsia immediatamente a sinistra del veicolo fermo",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: on a multi-lane carriageway the triangle stays on the SAME lane the vehicle occupies, not on the lane to its left. Warning the wrong lane would mislead traffic.",
+        "ru": "Неверно: на многополосной дороге треугольник остаётся в ТОЙ же полосе, где стоит машина, а не в полосе слева. Предупреждение не той полосы введёт трафик в заблуждение.",
+        "zh": "错误：多车道时，三角牌应留在车辆所在的那条车道上，而不是左侧相邻车道。警示错车道会误导车流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-posizione-triangolo-3": {
+      "verdict": "FALSO",
+      "key_it": "ad almeno un metro dalla striscia di separazione dei sensi di marcia",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the one-metre clearance is measured from the OUTER edge of the carriageway, not from the central dividing line. The triangle belongs at the roadside side, kept in view.",
+        "ru": "Неверно: метровый зазор отсчитывают от ВНЕШНЕГО края проезжей части, а не от разделительной полосы по центру. Треугольник — со стороны обочины, на виду.",
+        "zh": "错误：一米间距是从车道外边缘量起，而不是从中线量起。三角牌应放在靠路缘一侧、保持可见。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-giubbotto-alta-visibilita-0": {
+      "verdict": "VERO",
+      "key_it": "deve rendersi visibile indossando il giubbotto o le bretelle retroriflettenti",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: while placing the triangle the driver must make himself visible with a retroreflective vest or braces — the vest is about being seen, not about protecting from impact.",
+        "ru": "Верно: при установке треугольника водитель обязан сделать себя видимым в светоотражающем жилете или нагруднике — жилет нужен, чтобы тебя увидели, а не для защиты от удара.",
+        "zh": "正确：放置三角牌时驾驶人必须穿反光背心或背带让自己可见——背心的作用是让人看见你，而非防撞击。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-giubbotto-alta-visibilita-2": {
+      "verdict": "VERO",
+      "key_it": "deve indossare il giubbotto ad alta visibilità anche se si trova sulle corsie di emergenza",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the high-vis vest is required whenever you step onto the carriageway, including the emergency lane and the rest areas — not only on the main running lanes.",
+        "ru": "Верно: сигнальный жилет нужен, когда вы выходите на проезжую часть, — включая аварийную полосу и площадки отдыха, а не только на основных полосах.",
+        "zh": "正确：只要下车到车道上就必须穿高可视背心——包括应急车道和休息区，而非仅主行车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-giubbotto-alta-visibilita-5": {
+      "verdict": "FALSO",
+      "key_it": "il conducente non deve indossare il giubbotto ad alta visibilità se si trova sulle corsie di emergenza",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the opposite is true — the vest is required even on the emergency lane and rest areas. 'Non deve' inverts the rule the moment you step onto the road.",
+        "ru": "Неверно: верно обратное — жилет обязателен и на аварийной полосе, и на площадках отдыха. «Non deve» переворачивает правило, как только вы выходите на дорогу.",
+        "zh": "错误：恰恰相反——在应急车道和休息区同样必须穿背心。「不得穿」的说法颠倒了下车到路面上时的规定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-giubbotto-alta-visibilita-6": {
+      "verdict": "FALSO",
+      "key_it": "deve indossare il giubbotto ad alta visibilità di notte, anche nei centri abitati",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the vest duty is tied to getting out of the vehicle on the carriageway outside built-up areas at night or in poor visibility. It is not extended to a breakdown inside a town.",
+        "ru": "Неверно: обязанность надеть жилет связана с выходом из машины на проезжую часть ВНЕ населённых пунктов ночью или при плохой видимости. На поломку в городе она не распространяется.",
+        "zh": "错误：穿背心的义务与在城外夜间或能见度差时下车到车道上相关。它不延伸到城镇内的故障停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-divieto-circolazione-1": {
+      "verdict": "VERO",
+      "key_it": "è vietata la circolazione di autovetture che non sono in grado di sviluppare per costruzione la velocità in piano di almeno 80 km/h",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: on motorways and main extra-urban roads cars that by construction cannot reach 80 km/h are banned — the vehicle must be able to keep up with the flow of traffic.",
+        "ru": "Верно: на автомагистралях и основных загородных дорогах запрещены легковушки, конструктивно не разгоняющиеся до 80 км/ч, — машина должна успевать за потоком.",
+        "zh": "正确：在高速和主要城外公路上，构造上无法达到80公里/小时的汽车被禁止通行——车辆须能跟上车流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
