@@ -2015,6 +2015,71 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-taxi-conducente-5": {
+      "verdict": "FALSO",
+      "key_it": "deve dare la precedenza ai taxi in partenza, qualora s",
+      "chapter": "ch1",
+      "why": {
+        "en": "You do not have to yield to a taxi leaving the rank from the left: the merging taxi must itself give way, so this is false.",
+        "ru": "Вы не обязаны уступать такси, выезжающему с левой стороны: выезжающий сам уступает - неверно.",
+        "zh": "你无须让行从左侧驶出的出租车：驶出车辆须自己让行，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-gravidanza-carrozzine-0": {
+      "verdict": "VERO",
+      "key_it": "consentire ad una donna incinta di attraversare la strada senza metterle fretta",
+      "chapter": "ch1",
+      "why": {
+        "en": "You must let a pregnant woman cross without rushing her, so the statement is true.",
+        "ru": "Следует дать беременной женщине перейти дорогу, не торопя её - верно.",
+        "zh": "应允许孕妇从容过街、不予催促，说法成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-gravidanza-carrozzine-7": {
+      "verdict": "FALSO",
+      "key_it": "posteggiare un veicolo davanti agli scivoli del marciapiede",
+      "chapter": "ch1",
+      "why": {
+        "en": "Parking in front of a sidewalk ramp (for wheelchairs) is never allowed, not even at night, so the time window in this statement is false.",
+        "ru": "Остановка перед пандусом тротуара (для колясок) запрещена всегда, а не только днём - указанное время неверно.",
+        "zh": "在人行横道坡道（供轮椅使用）前停车任何时段都禁止，而非仅白天，故该时间窗口错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-gravidanza-carrozzine-8": {
+      "verdict": "FALSO",
+      "key_it": "bisogna darle la precedenza solo se attraversa da sinistra a destra",
+      "chapter": "ch1",
+      "why": {
+        "en": "You must yield to a pregnant woman crossing from any direction, not only left-to-right, so the \"only if\" is false.",
+        "ru": "Уступать беременной, переходящей дорогу, нужно из любого направления, а не только слева направо - «только если» неверно.",
+        "zh": "孕妇过街无论从哪个方向都要让行，而非仅从左到右，故\"仅当\"错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-gravidanza-carrozzine-9": {
+      "verdict": "FALSO",
+      "key_it": "bisogna dargli la precedenza solo se attraversa da sinistra a destra",
+      "chapter": "ch1",
+      "why": {
+        "en": "You must yield to a pedestrian pushing a baby stroller from any direction, not only left-to-right, so the \"only if\" is false.",
+        "ru": "Уступать пешеходу с детской коляской нужно из любого направления, а не только слева направо - «только если» неверно.",
+        "zh": "推婴儿车的行人无论从哪个方向都要让行，而非仅从左到右，故\"仅当\"错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
