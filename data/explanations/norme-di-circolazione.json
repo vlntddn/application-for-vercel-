@@ -1300,6 +1300,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovre-consentite-2": {
+      "verdict": "VERO",
+      "key_it": "non è consentito effettuare l'inversione del senso di marcia in tutti i casi di scarsa visibilità",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: turning around on a two-way road is not allowed whenever visibility is poor — you must be able to see clearly in both directions.",
+        "ru": "Верно: разворот на двусторонней дороге запрещён во всех случаях плохой видимости.",
+        "zh": "正确：在双向道路上，凡视线不佳时均不得调头。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incroci-circolazione-rotatoria-2": {
+      "verdict": "VERO",
+      "key_it": "la circolazione può essere disciplinata in modo che i veicoli in entrata diano la precedenza a quelli già circolanti nell'anello",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: at roundabouts the traffic can be regulated so that entering vehicles give way to those already circulating in the ring.",
+        "ru": "Верно: на кольцевых перекрёстках движение может быть организовано так, что въезжающие уступают уже движущимся по кольцу.",
+        "zh": "正确：环岛可规定驶入车辆让已在环内行驶的车辆先行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incroci-circolazione-rotatoria-3": {
+      "verdict": "VERO",
+      "key_it": "l'obbligo di dare la precedenza può essere imposto ai veicoli che stanno per immettersi",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: at a roundabout the obligation to give way can be imposed on the vehicles that are about to enter.",
+        "ru": "Верно: на кольце обязанность уступать может возлагаться на въезжающие машины.",
+        "zh": "正确：环岛上可将让行义务赋予即将驶入的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incroci-circolazione-rotatoria-7": {
+      "verdict": "FALSO",
+      "key_it": "è obbligatorio dare la precedenza ai veicoli provenienti da sinistra",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: at a roundabout there is no general duty to give way to vehicles from the left — the order is set by the signs, often giving the ring priority.",
+        "ru": "Неверно: на кольце нет общего «уступать слева» — порядок задают знаки, обычно приоритет у колевого потока.",
+        "zh": "错误：环岛没有通用的“让左侧来车”——通行顺序由标志决定，通常环内优先。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incroci-circolazione-rotatoria-8": {
+      "verdict": "FALSO",
+      "key_it": "bisogna dare sempre la precedenza ai veicoli già circolanti all'interno della rotatoria",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not always have to give way to traffic already on the roundabout — it depends on the signs at that intersection.",
+        "ru": "Неверно: не «всегда» уступают движущимся по кольцу — зависит от знаков данного перекрёстка.",
+        "zh": "错误：并非总要让行环内车辆——取决于该路口的标志。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-veicolo-1": {
+      "verdict": "VERO",
+      "key_it": "occorre arrestarsi solo in caso di necessità",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: at a give-way sign you slow down with care, but you stop only if necessary to let the other traffic pass.",
+        "ru": "Верно: на знаке «уступи дорогу» едут с осторожностью и снижают скорость, но останавливаются только при необходимости.",
+        "zh": "正确：遇让行标志须谨慎减速，但仅在必要时停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-auto-della-polizia-2": {
+      "verdict": "VERO",
+      "key_it": "solo voi avete l'obbligo di arrestarvi",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when a police car with the siren on overtakes, moves in front and shows the lit \"STOP POLICE\" sign, only you must stop.",
+        "ru": "Верно: если полицейская машина с сиреной обгоняет, останавливается впереди и показывает световой знак «СТОП ПОЛИЦИЯ», обязаны остановиться только вы.",
+        "zh": "正确：警车开警报超越、停于前方并显示发光“停车 警察”字样时，只有你有义务停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-immissione-flusso-della-circolazione-0": {
+      "verdict": "VERO",
+      "key_it": "deve assicurarsi di poter effettuare la manovra senza creare pericolo o intralcio agli altri utenti della strada",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before merging into traffic you must be sure the manoeuvre creates no danger or obstruction for other road users.",
+        "ru": "Верно: перед выездом в поток нужно убедиться, что манёвр не создаёт опасности или помех другим участникам.",
+        "zh": "正确：汇入车流前须确认该动作不会给其他道路使用者带来危险或阻碍。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-immissione-flusso-della-circolazione-1": {
+      "verdict": "VERO",
+      "key_it": "deve tenere conto della posizione, distanza, direzione degli altri utenti della strada",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: merging into traffic requires taking into account the position, distance and direction of the other road users.",
+        "ru": "Верно: при выезде в поток учитывают положение, дистанцию и направление других участников.",
+        "zh": "正确：汇入车流时须考虑其他车辆的位置、距离和方向。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-immissione-flusso-della-circolazione-2": {
+      "verdict": "VERO",
+      "key_it": "deve azionare l'indicatore di direzione per segnalare con sufficiente anticipo",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: merging into traffic is signalled with the direction indicator well in advance.",
+        "ru": "Верно: выезд в поток объявляется указателем поворота с достаточным запасом.",
+        "zh": "正确：汇入车流须提前用转向灯示意。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-immissione-flusso-della-circolazione-3": {
+      "verdict": "VERO",
+      "key_it": "deve dare la precedenza ai veicoli in transito",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a driver merging into the flow must give way to the vehicles already in motion.",
+        "ru": "Верно: выезжающий в поток обязан уступить едущим машинам.",
+        "zh": "正确：驶入车流的驾驶人必须让正在行驶的车辆先行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-immissione-flusso-della-circolazione-4": {
+      "verdict": "FALSO",
+      "key_it": "può evitare di azionare l'indicatore di direzione se non sopraggiungono altri veicoli",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the direction indicator for merging must be used in advance — it cannot be skipped just because no other vehicles seem to be coming.",
+        "ru": "Неверно: указатель при выезде в поток включается заранее — не отменяется даже если «кажется, что никого нет».",
+        "zh": "错误：汇入前的转向灯不可省略——即使暂时看不到来车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-immissione-flusso-della-circolazione-5": {
+      "verdict": "FALSO",
+      "key_it": "deve dare la precedenza ai veicoli in transito solo in presenza di apposito segnale",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the duty to give way when merging does not depend on a sign — it always applies to the vehicles in the flow.",
+        "ru": "Неверно: обязанность уступить при выезде в поток не зависит от знака — она действует всегда.",
+        "zh": "错误：汇入时的让行义务与标志无关——始终有效。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-immissione-flusso-della-circolazione-6": {
+      "verdict": "FALSO",
+      "key_it": "deve dare la precedenza ai veicoli in transito ad eccezione delle biciclette",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: when merging you give way to all vehicles in motion — bicycles are not excluded.",
+        "ru": "Неверно: при выезде в поток уступают всем едущим — велосипеды не исключаются.",
+        "zh": "错误：汇入时对正在行驶的所有车辆让行——自行车也不例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-partenza-margine-della-carreggiata-0": {
+      "verdict": "VERO",
+      "key_it": "deve indossare ed allacciare il casco",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a motorcycle rider who pulls out from the edge of the carriageway must wear and fasten the helmet before joining the flow.",
+        "ru": "Верно: мотоциклист, выезжающий с края дороги, обязан надеть и застегнуть шлем до выезда в поток.",
+        "zh": "正确：摩托车手从路侧驶入车流前，必须佩戴并系好头盔。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-partenza-margine-della-carreggiata-1": {
+      "verdict": "VERO",
+      "key_it": "deve allacciare la cintura di sicurezza salvo che non sia esentato",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a driver pulling out from the edge of the carriageway must fasten the seat belt unless exempt.",
+        "ru": "Верно: выезжающий с края дороги водитель обязан пристегнуться, если только он не освобождён от этого.",
+        "zh": "正确：从路侧驶入车流的驾驶人必须系好安全带，除非获豁免。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-partenza-margine-della-carreggiata-2": {
+      "verdict": "VERO",
+      "key_it": "deve accendere il proiettore anabbagliante",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a motorcycle rider pulling out from the edge of the carriageway must turn on the low-beam headlights.",
+        "ru": "Верно: выезжающий с края дороги мотоциклист обязан включить ближний свет.",
+        "zh": "正确：从路侧驶入车流的摩托车手必须开启近光灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-partenza-margine-della-carreggiata-3": {
+      "verdict": "VERO",
+      "key_it": "deve accertarsi che la strada sia libera",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before pulling out from the edge of the carriageway you must check the road is clear, also using the mirrors.",
+        "ru": "Верно: перед выездом с края дороги нужно убедиться, что дорога свободна, глядя и в зеркала.",
+        "zh": "正确：从路侧驶出前须确认道路畅通，并观察后视镜。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-partenza-margine-della-carreggiata-4": {
+      "verdict": "FALSO",
+      "key_it": "può allacciare la cintura di sicurezza dopo avere concluso tale manovra",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the seat belt must be fastened before the manoeuvre, not after merging into the flow.",
+        "ru": "Неверно: пристёгиваются до манёвра, а не после выезда в поток.",
+        "zh": "错误：安全带必须在动作前系好，而不是汇入之后再系。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-partenza-margine-della-carreggiata-5": {
+      "verdict": "FALSO",
+      "key_it": "può indossare il casco dopo avere concluso tale manovra",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the helmet is worn and fastened before the manoeuvre — not after merging into traffic.",
+        "ru": "Неверно: шлем надевают и застёгивают до манёвра, а не после выезда в поток.",
+        "zh": "错误：头盔必须在动作前佩戴系好，而非汇入车流之后再戴。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
