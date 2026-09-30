@@ -1,4 +1,24 @@
+## 2026-09-30 — L9b: пояснения, порция 66 — ch15 (luci-dispositivi-acustici) +20, сигнал 774→794/2030
+
+Что сделано (коммит feat: L9b пояснения порция 66 на self-improve):
+- **data/explanations/luci-dispositivi-acustici.json**: новый файл, 20 записей
+  (первая порция ch15; из 37 не-картинковых сигнальных вопросов ch15 закрыто
+  20 — осталось 17).
+- Темы порции: luci-anabbaglianti-0/1/6/7/8 (обязательный ближний на
+  освещённой/неосвещённой дороге, тоннели, парковка, перекрёстки),
+  dispositivi-utilizzare-durante-marcia-0/1/3/4/5/6 (дневные ходовые огни,
+  габариты, освещение номера, стоп-сигналы, поворотники), obbligo-anabbaglianti-0/2,
+  uso-luci-anabbaglianti-1/2/6/7 (тоннели, встречный поток, встречный в
+  горах), catadiottri-3, targa-posteriore-veicolo-1/2 (подсветка номера).
+- Сигнал: 774 → 794/2030 (+20, все 20 id — сигнальные: «anche», «deve», «è obbligatorio»);
+  не-картинковый сигнал: 749 → 769/1253 (+20, все без image_url).
+- Дальше по PATH_ORDER: ch15 luci-dispositivi-acustici — ещё 17 не-карт.
+  сигналов (порции 67), затем ch16 patente-punti-documenti (110).
+- Проверка: dry-run validateExplanation 20/20 OK, scripts/verify.sh — VERIFY OK.
+
 ## 2026-09-30 — L9b: пояснения, порция 65 — ch14 +17, ch14 = 159/159 (ЗАВЕРШЁН)
+
+
 
 Что сделано (коммит feat: L9b пояснения порция 65 на self-improve):
 - **data/explanations/norme-varie-autostrade-pannelli.json**: +17 запись
