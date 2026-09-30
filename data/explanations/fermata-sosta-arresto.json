@@ -1261,6 +1261,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-fuori-centri-abitati-2": {
+      "verdict": "VERO",
+      "key_it": "fuori della carreggiata",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: outside built-up areas, whoever must park has to place the vehicle off the carriageway whenever possible.",
+        "ru": "Верно: вне населённых пунктов при необходимости остановиться с оставлением автомобиля водитель обязан, где возможно, выехать с проезжей части.",
+        "zh": "正确：在建成区外，如需停车(sosta)，驾驶员在可能的情况下必须将车辆停到行车道之外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-fuori-centri-abitati-3": {
+      "verdict": "VERO",
+      "key_it": "ma non sulle piste ciclabili",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: outside built-up areas the vehicle must be placed off the carriageway, but never on the cycle lanes — those are reserved for cyclists.",
+        "ru": "Верно: вне населённых пунктов автомобиль ставят с проезжей части, но не на велосипедные дорожки — они предназначены для велосипедистов.",
+        "zh": "正确：在建成区外应将车辆停到行车道之外，但不得停在自行车道上——自行车道是供骑行者使用的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-fuori-centri-abitati-4": {
+      "verdict": "VERO",
+      "key_it": "ma non sulle banchine, salvo diversa segnalazione",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: outside built-up areas the vehicle must be parked off the carriageway but not on the shoulders, unless the signage says otherwise.",
+        "ru": "Верно: вне населённых пунктов автомобиль ставят с проезжей части, но не на обочины, если знаки не указывают иное.",
+        "zh": "正确：在建成区外应将车辆停到行车道之外，但不得停在路肩上，标志另有规定除外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-fuori-centri-abitati-5": {
+      "verdict": "VERO",
+      "key_it": "il più vicino possibile al margine destro",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: outside built-up areas, if the vehicle cannot be placed off the carriageway, it must be parked as close as possible to the right edge of the carriageway.",
+        "ru": "Верно: вне населённых пунктов, если выехать с проезжей части невозможно, автомобиль ставят максимально близко к правому краю проезжей части.",
+        "zh": "正确：在建成区外，若无法将车辆停到行车道之外，必须尽量靠行车道右侧边缘停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-fuori-centri-abitati-6": {
+      "verdict": "FALSO",
+      "key_it": "anche dove non esiste il marciapiede rialzato",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the duty to park as close as possible to the right edge of the carriageway applies where there is no raised pavement — the \"even where it exists\" extension is not the rule.",
+        "ru": "Ложь: обязанность ставить автомобиль максимально близко к правому краю проезжей части действует там, где НЕТ приподнятого тротуара — расширение «даже где он есть» правилу не соответствует.",
+        "zh": "错误：尽量靠行车道右侧边缘停车的义务适用于没有抬高人行道的地段——“即使有人行道也如此”的扩展并非规则内容。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-fuori-centri-abitati-7": {
+      "verdict": "FALSO",
+      "key_it": "eventualmente anche sulle piste ciclabili",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: outside built-up areas the vehicle must be parked off the carriageway, and the cycle lanes are excluded — parking on them is not allowed.",
+        "ru": "Ложь: вне населённых пунктов автомобиль ставят с проезжей части, а велосипедные дорожки исключены — на них ставить автомобиль нельзя.",
+        "zh": "错误：在建成区外应将车辆停到行车道之外，而自行车道被排除在外——不得在自行车道上停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-fuori-centri-abitati-8": {
+      "verdict": "FALSO",
+      "key_it": "non deve effettuare la sosta",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: if the vehicle cannot be placed off the carriageway, the driver does not have to cancel the sosta — the vehicle is parked as close as possible to the right edge of the carriageway.",
+        "ru": "Ложь: если выехать с проезжей части невозможно, от «состы» не отказываются — автомобиль ставят максимально близко к правому краю проезжей части.",
+        "zh": "错误：若无法将车辆停到行车道之外，并不需要取消停车(sosta)——应将车辆尽量靠行车道右侧边缘停放。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-spazi-sosta-0": {
+      "verdict": "VERO",
+      "key_it": "margine sinistro della carreggiata",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: on urban one-way streets parking is also allowed along the left edge of the carriageway, provided a space is left sufficient for the passage of at least one row of vehicles.",
+        "ru": "Верно: на городских односторонних улицах можно парковаться и вдоль левого края проезжей части, если остаётся достаточно места для проезда хотя бы одного ряда автомобилей.",
+        "zh": "正确：在城市单行道上，也可以沿行车道左侧边缘停车，前提是为至少一列车辆通行留出足够空间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-spazi-sosta-1": {
+      "verdict": "VERO",
+      "key_it": "non inferiore a tre metri di larghezza",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: on urban one-way streets parking along the left edge is allowed provided a passage at least as wide as the three metres stated is left for the vehicles.",
+        "ru": "Верно: на городских односторонних улицах остановка вдоль левого края разрешена, если для проезда автомобилей остаётся полоса шириной не менее трёх метров, как указано.",
+        "zh": "正确：在城市单行道上，沿行车道左侧边缘停车是允许的，前提是为车辆通行留出宽度不少于三米的通道，如规定所述。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-spazi-sosta-2": {
+      "verdict": "VERO",
+      "key_it": "nel modo prescritto dalla segnaletica",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: in areas laid out for parking the vehicle must be placed in the manner prescribed by the signage.",
+        "ru": "Верно: в зонах, приспособленных для стоянки, автомобиль должен быть установлен в порядке, предписанном дорожными знаками.",
+        "zh": "正确：在划定的停车区域内，必须按照交通标志规定的方向停放车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-spazi-sosta-3": {
+      "verdict": "VERO",
+      "key_it": "senza invadere quelli contigui",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: where the parking spaces are marked by horizontal signage, the vehicle must always be placed inside one of the spaces without encroaching on the neighbouring ones.",
+        "ru": "Верно: где места для стоянки очерчены горизонтальной разметкой, автомобиль всегда ставят внутрь одного из мест, не вторгаясь в соседние.",
+        "zh": "正确：当停车位由地面标线划定时，必须始终将车辆停入其中一个车位内，不得侵占相邻车位。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-spazi-sosta-4": {
+      "verdict": "FALSO",
+      "key_it": "la sosta è sempre consentita",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: on urban one-way streets parking along the left edge is not allowed in every case — the space for the passage of a row of vehicles must remain.",
+        "ru": "Ложь: на городских односторонних улицах стоянка вдоль левого края разрешена не в каждом случае — должен оставаться проезд для ряда автомобилей.",
+        "zh": "错误：在城市单行道上，沿行车道左侧边缘停车并非在任何情况下都允许——必须保留供一列车辆通行的空间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-spazi-sosta-5": {
+      "verdict": "FALSO",
+      "key_it": "E' vietato sostare con autoveicoli o motocicli",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: in built-up areas parking is not forbidden simply because the designated spaces or stripes are missing — the general rules on where parking is allowed apply.",
+        "ru": "Ложь: в населённых пунктах остановка с оставлением автомобиля не запрещена лишь потому, что отсутствуют специальные места или разметка — действуют общие правила о допустимых местах.",
+        "zh": "错误：在建成区内，停车(sosta)并不仅仅因为缺少专用车位或标线就被禁止——适用关于允许停车位置的一般规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-spazi-sosta-6": {
+      "verdict": "FALSO",
+      "key_it": "anche fuori dall'apposito spazio (stallo)",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: where the spaces are marked, the vehicle must stay inside its designated space even for a very brief sosta — the short duration does not excuse overstepping the lines.",
+        "ru": "Ложь: если места очерчены разметкой, автомобиль должен оставаться в своём месте даже при самой краткой «состе» — короткая длительность не освобождает от пересечения границ.",
+        "zh": "错误：当车位有标线划定时，即使是最短暂的停车(sosta)，车辆也必须停在指定车位内——时间短暂并不允许越过标线。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-spazi-sosta-7": {
+      "verdict": "FALSO",
+      "key_it": "se la sosta è di breve durata",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: any sosta in a metered zone requires the meter, however short — only a fermata (loading/unloading, passengers getting in or out) is exempt.",
+        "ru": "Ложь: любая «соста» в зоне с паркиметром требует паркиметра, как бы коротка ни была; освобождаются только «ферматы» (погрузка, посадка-высадка).",
+        "zh": "错误：计时停车区的任何停车都必须使用计时器，多短都不行；只有“临时停靠(fermata)”（装卸、上下客）才豁免。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-vietata-sosta-0": {
+      "verdict": "VERO",
+      "key_it": "in corrispondenza o in prossimità dei passaggi a livello",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden at or in the vicinity of railway level crossings.",
+        "ru": "Верно: остановка с оставлением автомобиля запрещена на железнодорожных переездах и вблизи них.",
+        "zh": "正确：在铁路道口处及其附近禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-vietata-sosta-1": {
+      "verdict": "VERO",
+      "key_it": "sui binari di linee ferroviarie o tranviarie",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden on the rails of railway or tram lines, or so close to them as to obstruct the movement of rail vehicles.",
+        "ru": "Верно: запрещено ставить автомобиль на рельсы железных дорог или трамвайных линий, а также так близко к ним, чтобы мешать движению рельсового транспорта.",
+        "zh": "正确：禁止在铁路或有轨电车线路的轨道上停车，也禁止停得离轨道太近而妨碍轨道车辆通行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-vietata-sosta-2": {
+      "verdict": "VERO",
+      "key_it": "nelle gallerie, salvo diversa segnalazione",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden inside tunnels, unless the signage says otherwise.",
+        "ru": "Верно: в тоннелях остановка с оставлением автомобиля запрещена, если знаки не указывают иное.",
+        "zh": "正确：在隧道内禁止停车(sosta)，标志另有规定除外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-vietata-sosta-3": {
+      "verdict": "VERO",
+      "key_it": "nei sottovia, sotto i sovrapassaggi",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden in underpasses, under overpasses, and under arches and porticoes, unless the signage says otherwise.",
+        "ru": "Верно: в тоннелях-подъездах, под эстакадами, а также под арками и портиками остановка с оставлением автомобиля запрещена, если знаки не указывают иное.",
+        "zh": "正确：在下穿通道、高架桥下以及拱廊和骑楼下禁止停车(sosta)，标志另有规定除外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-vietata-sosta-4": {
+      "verdict": "VERO",
+      "key_it": "sui dossi",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking on speed bumps is forbidden.",
+        "ru": "Верно: останавливаться с оставлением автомобиля на «лежачих полицейских» запрещено.",
+        "zh": "正确：在减速带上禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
