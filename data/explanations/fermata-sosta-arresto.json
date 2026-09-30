@@ -221,6 +221,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-vietata-2": {
+      "verdict": "VERO",
+      "key_it": "salvo diversa segnalazione",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: stopping (fermata) is prohibited in tunnels unless signs say otherwise; a tunnel offers no safe place to pull in, so any stop beyond the strictly brief kind is forbidden.",
+        "ru": "Верно: «фермата» (короткая остановка) в туннелях запрещена, если знаки не говорят иного; в тоннеле нет безопасного места, куда можно отъехать, поэтому любая остановка сверх предельно краткой запрещена.",
+        "zh": "正确：隧道内禁止临时停靠(fermata)，除非标志另有说明；隧道内没有安全停靠空间，任何超出极短时间的停车都禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-divieto-sosta-fermata-2": {
+      "verdict": "VERO",
+      "key_it": "sui marciapiedi",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking (sosta) and stopping (fermata) are both forbidden on the pavement unless signs allow it — the pavement is for pedestrians.",
+        "ru": "Верно: и «соста» (стоянка), и «фермата» (короткая остановка) на тротуаре запрещены, если знаки не разрешают иное — тротуар принадлежит пешеходам.",
+        "zh": "正确：停车(sosta)和临时停靠(fermata)都禁止在人行道上进行，除非标志允许——人行道属于行人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-fuori-centri-abitati-0": {
+      "verdict": "VERO",
+      "key_it": "il più vicino possibile al margine destro della carreggiata",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: when parking in a built-up area you must place the vehicle as close as possible to the right edge of the roadway, parallel to it and in the direction of travel, provided a raised pavement exists.",
+        "ru": "Верно: при стоянке в населённом пункте автомобиль нужно поставить как можно ближе к правому краю проезжей части, параллельно ему и по направлению движения — при наличии приподнятого тротуара.",
+        "zh": "正确：在建成区停车时，车辆须尽量靠近道路右边缘、与之平行且顺行驶方向停放（前提是有抬高的人行道）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-3": {
+      "verdict": "VERO",
+      "key_it": "carta di circolazione, certificato di assicurazione, patente",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: you must carry the vehicle documents and have them valid — the registration, the insurance certificate and your licence.",
+        "ru": "Верно: с собой необходимо иметь действующие документы на транспортное средство — регистрацию, страховое свидетельство и водительские права.",
+        "zh": "正确：必须随身携带有效的车辆文件——登记证、保险凭证和驾驶证。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-4": {
+      "verdict": "VERO",
+      "key_it": "la categoria di patente posseduta",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: before driving you must be sure your licence category actually covers that vehicle.",
+        "ru": "Верно: перед поездкой нужно убедиться, что категория ваших прав действительно разрешает управлять этим транспортным средством.",
+        "zh": "正确：开车前必须确认自己的驾照类别确实可以驾驶该车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-5": {
+      "verdict": "VERO",
+      "key_it": "perfetto stato di efficienza del mezzo",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: before starting a trip you must check that the vehicle is fully roadworthy — lights, tyres, brakes and so on.",
+        "ru": "Верно: перед поездкой нужно убедиться, что автомобиль полностью исправен — свет, шины, тормоза и так далее.",
+        "zh": "正确：出发前必须确认车辆处于完全良好状态——灯光、轮胎、刹车等。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-6": {
+      "verdict": "VERO",
+      "key_it": "evitarne la caduta o dispersione",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: the load must be secured so that nothing falls out or scatters while driving — it endangers other road users.",
+        "ru": "Верно: груз нужно закрепить так, чтобы во время движения ничего не падало и не рассыпалось — это опасно для других участников движения.",
+        "zh": "正确：货物必须固定好，防止行驶中掉落或散落——那会危及其他道路使用者。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-7": {
+      "verdict": "VERO",
+      "key_it": "la visibilità posteriore e laterale",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: before driving you must make sure rear and side visibility is not blocked by passengers or badly placed cargo.",
+        "ru": "Верно: перед поездкой нужно убедиться, что задний и боковой обзор не перекрыты пассажирами или неаккуратно уложенным грузом.",
+        "zh": "正确：开车前必须确认后方和侧方视野没有被乘客或摆放不当的货物遮挡。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-8": {
+      "verdict": "VERO",
+      "key_it": "comprenderne bene il funzionamento",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: before driving you should familiarise yourself with the controls — levers and buttons — and understand how they work.",
+        "ru": "Верно: перед поездкой стоит освоить органы управления — рычаги и кнопки — и понять, как они работают.",
+        "zh": "正确：开车前应熟悉操纵装置（拨杆和按钮）并理解其工作原理。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-9": {
+      "verdict": "VERO",
+      "key_it": "abbiano regolarmente allacciato le cinture",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: before setting off the driver must check that the passengers have fastened their seatbelts.",
+        "ru": "Верно: перед отъездом водитель должен убедиться, что пассажиры пристегнулись.",
+        "zh": "正确：出发前驾驶员必须确认乘客已系好安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-10": {
+      "verdict": "FALSO",
+      "key_it": "regolare il contachilometri parziale",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: resetting the trip meter is a convenience, not a duty; nothing in the code obliges it before driving.",
+        "ru": "Ложь: сброс одометра поездки — удобство, а не обязанность; ничего в Кодексе не требует этого перед поездкой.",
+        "zh": "错误：归零小计里程表只是便利操作，不是义务；法规不要求出发前这样做。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-11": {
+      "verdict": "FALSO",
+      "key_it": "disinserire l'airbag",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the airbag must never be deactivated — it is a life-saving protection for the driver.",
+        "ru": "Ложь: подушку безопасности никогда нельзя отключать — это средство спасения жизни водителя.",
+        "zh": "错误：安全气囊绝不可关闭——它是保护驾驶员生命的安全装置。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-12": {
+      "verdict": "FALSO",
+      "key_it": "dotate di pretensionatore",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: pre-tensioners are not mandatory equipment on every car, so checking for them is not a duty before driving; the duty is that the belts exist and are worn.",
+        "ru": "Ложь: преднатяжители — не обязательное оборудование на каждом автомобиле, поэтому проверять их наличие перед поездкой не нужно; обязанность — наличие ремней и их использование.",
+        "zh": "错误：预紧装置并非每辆车的强制配置，因此开车前检查它不是义务；义务是安全带存在并被系好。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-13": {
+      "verdict": "FALSO",
+      "key_it": "solo se si deve intraprendere un lungo viaggio",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the roadworthiness check is required before every trip, not only before a long one.",
+        "ru": "Ложь: проверка исправности нужна перед каждой поездкой, а не только перед дальней.",
+        "zh": "错误：车辆状况检查在每次出行前都需要，而不只是长途之前。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-veicolo-0": {
+      "verdict": "VERO",
+      "key_it": "esigenze della circolazione",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: \"arresto\" (a full halt of the vehicle, engine off) happens for the needs of traffic flow — for example at a red light.",
+        "ru": "Верно: «арресто» (полная остановка с заглушённым двигателем) происходит из-за требований движения — например, на красный свет.",
+        "zh": "正确：\"arresto\"（彻底停车、熄火）是因交通运行需要而发生——例如红灯前。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-veicolo-1": {
+      "verdict": "VERO",
+      "key_it": "la salita o la discesa delle persone",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: \"fermata\" is a brief suspension of the drive to let people get in or out.",
+        "ru": "Верно: «фермата» — это краткая приостановка движения для посадки или высадки людей.",
+        "zh": "正确：\"fermata\"是短暂的停车，用于上下乘客。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-veicolo-2": {
+      "verdict": "VERO",
+      "key_it": "esigenze di brevissima durata",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: a fermata lasts very briefly — for instance stopping only to ask a traffic officer for directions.",
+        "ru": "Верно: «фермата» длится предельно коротко — например, остановиться только чтобы спросить у сотрудника ДПС дорогу.",
+        "zh": "正确：临时停靠时间极短——例如仅为向交警问路而停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-veicolo-3": {
+      "verdict": "VERO",
+      "key_it": "esigenze di brevissima durata",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: that is the definition — a fermata is a temporary, very brief suspension of driving.",
+        "ru": "Верно: это и есть определение — «фермата» это временная, предельно краткая приостановка движения.",
+        "zh": "正确：这正是定义——\"fermata\"是短暂的临时停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-veicolo-4": {
+      "verdict": "FALSO",
+      "key_it": "esigenze del conducente o dei passeggeri",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: that definition mixes up the concepts — an arresto is for the needs of traffic flow, while a break for the driver or passengers (sosta) is something else.",
+        "ru": "Ложь: определение перепутано — «арресто» происходит из-за требований движения, а отдых водителя или пассажиров («соста») — совсем другое понятие.",
+        "zh": "错误：定义混淆了概念——\"arresto\"是交通运行所需，而司机或乘客的休息（sosta）是另一回事。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-veicolo-5": {
+      "verdict": "FALSO",
+      "key_it": "esigenze della circolazione",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: a stop for the needs of traffic flow (like a red light) is an arresto, not a fermata — the fermata is for brief passenger or loading needs.",
+        "ru": "Ложь: остановка из-за требований движения (например, красный) — это «арресто», а не «фермата»; «фермата» нужна для краткой посадки-высадки или погрузки.",
+        "zh": "错误：因交通运行需要（如红灯）而停是\"arresto\"，不是\"fermata\"——临时停靠用于短暂的上下客或装卸。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
