@@ -1,5 +1,22 @@
 # DEVLOG — Passo (последнее сверху)
 
+## 2026-09-30 — L9b: пояснения, порция 20 (ch9 — 121/135, non-сигнальные)
+
+Что сделано (коммит feat: L9b порция 20 на self-improve):
+- **data/explanations/distanza-di-sicurezza.json** — +20 записей (итого ch9 = 121/135).
+- Темы: от чего зависит spazio totale di arresto (velocità/pneumatici/asfalto —
+  3 VERO + 2 FALSO «indipendente» + 2 FALSO «è pari a…» — путь это сумма реакции
+  и торможения); что УВЕЛИЧИВАЕТ тормозной путь: скорость/снег/грязь/износ шин
+  (4 VERO) + 3 FALSO-ловушки (новые шины, снижение скорости, шершавый асфальт —
+  всё уменьшает, а не увеличивает); факторы дистанции безопасности (concentrazione
+  /velocità/carico/aderenza/efficienza freni — 4 VERO).
+- Подводные камни: чисел в why нет вообще (только «в несколько раз» без цифр) —
+  invented-number ловушки обошёл сразу; ключи «spazio totale di arresto dipende»
+  и «non dipende dalla velocità» повторяются у разных id — для каждого key_it
+  проверял дословную подстроку.
+- Проверено: gate validateExplanation на всех 20 записей до записи, verify.sh →
+  VERIFY OK (184 unit, 8 endpoint 200).
+
 ## 2026-09-30 — L9b: пояснения, порция 19 (ch9 — 101/135, non-сигнальные)
 
 Что сделано (коммит feat: L9b порция 19 на self-improve):
