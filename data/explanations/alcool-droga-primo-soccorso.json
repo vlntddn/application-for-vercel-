@@ -442,6 +442,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-assunzione-alcool-0": {
+      "verdict": "VERO",
+      "key_it": "eccitazione e imprudenza",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: alcohol makes driving less safe because it can cause excitement and imprudence.",
+        "ru": "Верно: алкоголь делает езду менее безопасной, так как может вызывать возбуждение и беспечность.",
+        "zh": "正确：饮酒会使驾驶变得不安全，因为它可能引起兴奋和鲁莽。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-assunzione-alcool-1": {
+      "verdict": "VERO",
+      "key_it": "rallentare i riflessi",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: alcohol makes driving less safe because it can slow the driver down.",
+        "ru": "Верно: алкоголь делает езду менее безопасной, так как может замедлять реакцию водителя.",
+        "zh": "正确：饮酒会使驾驶变得不安全，因为它可能减慢驾驶员的反应。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-assunzione-alcool-2": {
+      "verdict": "VERO",
+      "key_it": "sonnolenza",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: alcohol makes driving less safe because it can cause drowsiness.",
+        "ru": "Верно: алкоголь делает езду менее безопасной, так как может вызывать сонливость.",
+        "zh": "正确：饮酒会使驾驶变得不安全，因为它可能引起困倦。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-assunzione-alcool-3": {
+      "verdict": "VERO",
+      "key_it": "concentrazione e attenzione",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: alcohol makes driving less safe because it can dangerously impair concentration and attention.",
+        "ru": "Верно: алкоголь делает езду менее безопасной, так как может опасно снижать способность к концентрации и вниманию.",
+        "zh": "正确：饮酒会使驾驶变得不安全，因为它可能有害地削弱注意力和集中力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-assunzione-alcool-4": {
+      "verdict": "VERO",
+      "key_it": "diminuire il livello di attenzione",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: alcohol can lower the level of attention.",
+        "ru": "Верно: алкоголь может снижать уровень внимания.",
+        "zh": "正确：饮酒可能降低注意水平。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-assunzione-alcool-5": {
+      "verdict": "FALSO",
+      "key_it": "annulla la stanchezza",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: alcohol does not eliminate fatigue; it makes driving drowsier and therefore less safe.",
+        "ru": "Неверно: алкоголь не устраняет усталость — он вызывает сонливость и делает езду менее безопасной.",
+        "zh": "错误：酒精不能消除疲劳，它反而引起嗜睡，使驾驶更不安全。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-assunzione-alcool-6": {
+      "verdict": "FALSO",
+      "key_it": "aumentare la capacità di concentrazione",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: alcohol does not increase concentration; it impairs it and makes driving more dangerous.",
+        "ru": "Неверно: алкоголь не повышает концентрацию — он её нарушает и делает езду опаснее.",
+        "zh": "错误：酒精不能提高注意力，反而会削弱它，使驾驶更危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-assunzione-alcool-7": {
+      "verdict": "FALSO",
+      "key_it": "più vigili e attenti",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: alcohol does not make the driver more alert and careful; it reduces vigilance and attention.",
+        "ru": "Неверно: алкоголь не делает водителя бодрее и внимательнее — он снижает бдительность и внимание.",
+        "zh": "错误：酒精不会使驾驶员更警觉、更细心，而是降低警觉性和注意力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-assunzione-alcool-8": {
+      "verdict": "FALSO",
+      "key_it": "più sicura, più allegra e meno noiosa",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: alcohol makes driving less safe; the feeling of \"cheerfulness\" masks impaired reaction and attention.",
+        "ru": "Неверно: алкоголь делает езду менее безопасной; ощущение «весёлости» лишь маскирует снижение реакции и внимания.",
+        "zh": "错误：饮酒会使驾驶更不安全；所谓“更开心、不那么无聊”的错觉只是掩盖了反应和注意力的下降。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-assunzione-alcool-9": {
+      "verdict": "FALSO",
+      "key_it": "migliora la vista",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: alcohol does not improve vision; it impairs the driver.",
+        "ru": "Неверно: алкоголь не улучшает зрение — он ухудшает состояние водителя.",
+        "zh": "错误：饮酒不会改善视力，反而损害驾驶员的能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-attivita-soccorritore-0": {
+      "verdict": "VERO",
+      "key_it": "valutare bene la situazione",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: after an accident the rescuer must first assess the situation in order to protect the injured from other dangers.",
+        "ru": "Верно: после аварии сначала нужно хорошо оценить обстановку, чтобы защитить пострадавших от других опасностей.",
+        "zh": "正确：发生事故后，施救者应首先仔细评估现场，以保护伤者免受其他危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-attivita-soccorritore-1": {
+      "verdict": "VERO",
+      "key_it": "senza però prendere iniziative di specifica competenza medica",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: the rescuer helps the injured to the best of his ability, without doing anything that is specific medical work.",
+        "ru": "Верно: оказывающий помощь действует в своих силах, не прибегая к приёмам, требующим медицинского образования.",
+        "zh": "正确：施救者应在力所能及的范围内救助伤者，但不做属于专业医疗范畴的处理。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-attivita-soccorritore-3": {
+      "verdict": "FALSO",
+      "key_it": "allontanarsi sempre e subito",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: a person involved in an accident must not leave the scene; he must stop, help the injured and call for assistance.",
+        "ru": "Неверно: участник аварии не должен покидать место происшествия — нужно остановиться, оказать помощь и вызвать подмогу.",
+        "zh": "错误：交通事故当事人不能立即离开现场；必须停车、救助伤者并呼叫救援。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-attivita-soccorritore-4": {
+      "verdict": "FALSO",
+      "key_it": "aspettare solo l'arrivo dei soccorsi, senza fare nulla",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: one must not simply wait for the rescue teams; first aid and a call for help are required at once.",
+        "ru": "Неверно: просто ждать приезда помощи нельзя — нужно сразу оказывать первую помощь и вызывать подмогу.",
+        "zh": "错误：不能只是等待救援到来；应立即实施急救并呼叫帮助。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-attivita-soccorritore-5": {
+      "verdict": "FALSO",
+      "key_it": "identificare l'infortunato, chiedendogli nome e cognome",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: the rescuer's first task is not to find out the victim's name but to check the safety of the scene and help the injured.",
+        "ru": "Неверно: первое дело оказывающего помощь — не устанавливать фамилию пострадавшего, а оценить безопасность места и оказать помощь.",
+        "zh": "错误：施救者的首要任务不是询问伤者姓名，而是确认现场安全并救助伤者。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-cause-shock-4": {
+      "verdict": "FALSO",
+      "key_it": "non può dipendere da forti emozioni",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: shock can be caused by strong emotions; it can also result from pain, trauma, or heavy blood loss.",
+        "ru": "Неверно: сильные эмоции могут вызвать шок; его вызывают также сильная боль, травма и значительная потеря крови.",
+        "zh": "错误：强烈的情绪可以引起休克；剧烈疼痛、创伤和大量失血同样可以。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-incoscienza-1": {
+      "verdict": "VERO",
+      "key_it": "solo se si è certi che non abbia traumi alla colonna vertebrale",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: an unconscious injured person may be moved only if there is certainty that the spine is not injured.",
+        "ru": "Верно: пострадавшего без сознания перемещают только если уверены, что нет травмы позвоночника.",
+        "zh": "正确：失去知觉的伤者只有在确定没有脊柱损伤时才能移动。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-occhiali-lenti-contatto-6": {
+      "verdict": "FALSO",
+      "key_it": "soltanto in caso di scarsa visibilità",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: if the licence prescribes correction, glasses or contact lenses must be worn whenever driving, not only in bad visibility.",
+        "ru": "Неверно: если водительское удостоверение предписывает коррекцию зрения, очки или линзы нужны при любой езде, а не только при плохой видимости.",
+        "zh": "错误：若驾驶证要求矫正视力，则任何时候驾驶都必须佩戴眼镜或隐形眼镜，而不仅限于视线不良时。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-occhiali-lenti-contatto-7": {
+      "verdict": "FALSO",
+      "key_it": "soltanto sulle autostrade e sulle strade extraurbane principali",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: if correction is prescribed, glasses or contact lenses are worn whenever driving, not only on motorways and main extra-urban roads.",
+        "ru": "Неверно: при предписанной коррекции очки или линзы надевают при любой езде, а не только на автомагистралях и главных загородных дорогах.",
+        "zh": "错误：若需矫正视力，任何时候驾驶都应佩戴眼镜或隐形眼镜，而不仅在高速公路和主要城郊道路上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-eccesso-bevande-alcoliche-0": {
+      "verdict": "VERO",
+      "key_it": "trascorrano alcune ore affinché",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: after excessive alcohol intake it takes several hours for driving fitness to recover.",
+        "ru": "Верно: после чрезмерного употребления алкоголя на восстановление пригодности к езде нужны часы.",
+        "zh": "正确：过量饮酒后，需要数小时才能恢复驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
