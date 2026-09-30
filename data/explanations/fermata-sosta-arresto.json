@@ -481,6 +481,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-veicolo-6": {
+      "verdict": "FALSO",
+      "key_it": "dieci minuti",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the fermata is for very brief needs only; a ten-minute maximum for a stop made for the driver's needs is not a rule.",
+        "ru": "Ложь: «фермата» нужна только для предельно кратких нужд; десятиминутный максимум для остановки по нуждам водителя — не правило.",
+        "zh": "错误：临时停靠只用于极短暂的需要；为司机需要而停车设有十分钟上限的说法并非法规规定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-veicolo-7": {
+      "verdict": "FALSO",
+      "key_it": "i passeggeri che scendono sono più di uno",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: letting more than one passenger out does not make the fermata forbidden — the number of passengers is not the criterion.",
+        "ru": "Ложь: высадка нескольких пассажиров не делает «фермату» запрещённой — количество пассажиров не является критерием.",
+        "zh": "错误：让不止一名乘客下车并不使临时停靠被禁止——乘客数量不是判断标准。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-durante-fermata-0": {
+      "verdict": "VERO",
+      "key_it": "non deve arrecare intralcio alla circolazione",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: a stop must never obstruct traffic flow.",
+        "ru": "Верно: остановка никогда не должна препятствовать движению.",
+        "zh": "正确：临时停靠绝不能妨碍交通。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-durante-fermata-1": {
+      "verdict": "VERO",
+      "key_it": "non deve impedire",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: while stopped, the driver must not block the normal flow of traffic with the vehicle.",
+        "ru": "Верно: во время остановки водитель не должен своим автомобилем блокировать нормальный поток движения.",
+        "zh": "正确：停车时，驾驶员不得用车阻碍正常车流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-durante-fermata-2": {
+      "verdict": "VERO",
+      "key_it": "non costituire pericolo",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: during a stop the driver must behave so as not to endanger other road users.",
+        "ru": "Верно: во время остановки водитель должен действовать так, чтобы не создавать опасность для других участников движения.",
+        "zh": "正确：停车时驾驶员的行为不得危及其他道路使用者。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-durante-fermata-3": {
+      "verdict": "VERO",
+      "key_it": "sempre presente e pronto a riprendere la marcia",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: during a fermata the driver must remain at the vehicle and be ready to move off at once.",
+        "ru": "Верно: во время «ферматы» водитель должен оставаться у автомобиля и быть готов немедленно тронуться.",
+        "zh": "正确：临时停靠时驾驶员必须留在车旁，随时准备立即起步。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-durante-fermata-4": {
+      "verdict": "VERO",
+      "key_it": "evitare incidenti",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: while stopped the driver must take appropriate precautions to avoid accidents.",
+        "ru": "Верно: во время остановки водитель должен принимать разумные меры предосторожности, чтобы избежать ДТП.",
+        "zh": "正确：停车时驾驶员应采取适当的预防措施以避免事故。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-durante-fermata-5": {
+      "verdict": "VERO",
+      "key_it": "chiedere informazioni agli agenti del traffico",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: you may not stop to ask an officer for directions if doing so would obstruct or slow down traffic.",
+        "ru": "Верно: останавливаться, чтобы спросить сотрудника ДПС дорогу, нельзя, если это создаст помехи или замедлит движение.",
+        "zh": "正确：如果会造成交通阻碍或减速，不允许停车向交警问路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-durante-fermata-6": {
+      "verdict": "FALSO",
+      "key_it": "può allontanarsi per brevissimo tempo",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: leaving the vehicle during a fermata turns it into a sosta; the driver must stay at the wheel, ready to move off.",
+        "ru": "Ложь: покидать автомобиль во время «ферматы» нельзя — это превращает её в «состу»; водитель должен оставаться у руля, готовый тронуться.",
+        "zh": "错误：临时停靠时不能离开车辆——那会变成\"停车(sosta)\"；驾驶员必须留在驾驶位随时准备起步。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-durante-fermata-7": {
+      "verdict": "FALSO",
+      "key_it": "è sempre consentita",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: stopping to ask directions is allowed only when it does not obstruct or slow traffic — not always.",
+        "ru": "Ложь: остановиться, чтобы спросить дорогу, можно только тогда, когда это не мешает движению и не замедляет его — а не всегда.",
+        "zh": "错误：停车问路只有在不妨碍、不减速交通时才允许——并非总是可以。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-durante-fermata-8": {
+      "verdict": "FALSO",
+      "key_it": "con il motore acceso",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: if you must step away even briefly, the engine must be off and the vehicle secured — not left running.",
+        "ru": "Ложь: если нужно отойти, даже на короткое время, двигатель нужно заглушить, а автомобиль зафиксировать — а не оставлять его на ходу.",
+        "zh": "错误：即使短暂离开，也必须熄火并固定车辆——不能保持发动机运转。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-fuori-centri-abitati-0": {
+      "verdict": "VERO",
+      "key_it": "non inferiore ad un metro",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: where there is no raised pavement, when stopping you must leave a passage of at least one metre for pedestrians.",
+        "ru": "Верно: если нет приподнятого тротуара, при остановке нужно оставить пешеходам проход не менее одного метра.",
+        "zh": "正确：没有抬高的人行道时，停车必须为行人留出足够宽的行人通道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-fuori-centri-abitati-1": {
+      "verdict": "VERO",
+      "key_it": "fuori della carreggiata",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: outside built-up areas, when stopping you should place the vehicle off the roadway where possible.",
+        "ru": "Верно: вне населённых пунктов при остановке нужно, по возможности, вывести автомобиль с проезжей части.",
+        "zh": "正确：在建成区外停车时，应尽量把车停在行车道之外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-fuori-centri-abitati-2": {
+      "verdict": "VERO",
+      "key_it": "ma non sulle piste ciclabili",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: outside built-up areas you stop off the roadway — but never on a cycle path.",
+        "ru": "Верно: вне населённых пунктов останавливаются вне проезжей части — но никогда на велосипедной дорожке.",
+        "zh": "正确：建成区外停车应在行车道之外——但绝不能停在自行车道上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-fuori-centri-abitati-3": {
+      "verdict": "VERO",
+      "key_it": "il più vicino possibile al margine destro",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: outside built-up areas, if you cannot get off the roadway, stop as close as possible to the right edge.",
+        "ru": "Верно: вне населённых пунктов, если выехать с проезжей части невозможно, остановитесь максимально у правого края.",
+        "zh": "正确：建成区外若无法驶离行车道，应尽量靠最右侧停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-fuori-centri-abitati-4": {
+      "verdict": "FALSO",
+      "key_it": "non esiste il marciapiede rialzato",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: in an urban street without a raised pavement the rule is to leave a pedestrian passage of at least one metre, not to hug the right edge.",
+        "ru": "Ложь: в городской дороге без приподнятого тротуара правило — оставить пешеходам проход не менее одного метра, а не прижаться к правому краю.",
+        "zh": "错误：在没有抬高人行道的城市道路上，规则是为行人留出通道，而不是贴最右侧停放。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-fuori-centri-abitati-5": {
+      "verdict": "FALSO",
+      "key_it": "su una pista ciclabile",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: stopping off the roadway is required only where possible, and a cycle path is never an allowed place to stop.",
+        "ru": "Ложь: выезжать с проезжей части нужно лишь по возможности, а велосипедная дорожка никогда не является разрешённым местом для остановки.",
+        "zh": "错误：只有在可能时才需驶离行车道，且自行车道绝不是允许停车的地方。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-vietata-0": {
+      "verdict": "VERO",
+      "key_it": "passaggi a livello",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: stopping at or near a level crossing is forbidden — it would block the view and the road for the train.",
+        "ru": "Верно: останавливаться на переезде или вблизи него запрещено — это перекроет обзор и путь для поезда.",
+        "zh": "正确：在平交道口或附近停车被禁止——那会遮挡视线和列车通行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-vietata-1": {
+      "verdict": "VERO",
+      "key_it": "così vicino ad essi da intralciare",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: stopping on the rails of a railway or tram line, or so close as to obstruct the rail vehicles, is forbidden.",
+        "ru": "Верно: останавливаться на путях железной дороги или трамвая, или так близко, чтобы мешать рельсовым вагонам, запрещено.",
+        "zh": "正确：禁止在铁路或电车轨道上、或近到妨碍轨道车辆行驶的地方停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-vietata-3": {
+      "verdict": "VERO",
+      "key_it": "nei sottovia",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: stopping in underpasses, under overpasses, under arches and porticoes is forbidden unless signs say otherwise.",
+        "ru": "Верно: останавливаться в переходах под дорогой, под надземными переходами, под арками и аркадами запрещено, если знаки не говорят иного.",
+        "zh": "正确：禁止在地下通道、天桥下、拱廊和拱廊亭下停车，除非标志另有说明。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
