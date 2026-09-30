@@ -1781,6 +1781,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-sosta-fermata-autobus-1": {
+      "verdict": "VERO",
+      "key_it": "impedito lo spostamento di veicoli in sosta",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden anywhere it prevents the movement of other parked vehicles.",
+        "ru": "Верно: остановка с оставлением автомобиля запрещена в любом месте, где мешает движению других припаркованных автомобилей.",
+        "zh": "正确：凡是妨碍其他停放车辆移动的地方，均禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-sosta-fermata-autobus-2": {
+      "verdict": "VERO",
+      "key_it": "in seconda fila, salvo che si tratti di veicoli a due ruote",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking in a double row is forbidden, except for two-wheeled vehicles.",
+        "ru": "Верно: стоянка в два ряда запрещена, кроме двухколёсных транспортных средств.",
+        "zh": "正确：禁止双排停放(sosta)，两轮车辆除外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-sosta-fermata-autobus-3": {
+      "verdict": "VERO",
+      "key_it": "autobus, dei filobus e dei veicoli circolanti su rotaia",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden in the spaces reserved for the standing and stopping of buses, trolleybuses, and rail vehicles.",
+        "ru": "Верно: остановка с оставлением автомобиля запрещена на местах, отведённых под стоянку и остановку автобусов, троллейбусов и рельсового транспорта.",
+        "zh": "正确：在专供公交车、无轨电车和有轨电车停靠和停放的空间内禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-sosta-fermata-autobus-4": {
+      "verdict": "VERO",
+      "key_it": "a meno di 15 metri dal segnale di fermata",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: where the stopping space is not marked, parking is forbidden within 15 m of the stop sign for buses, trolleybuses, and rail vehicles.",
+        "ru": "Верно: если места остановки не размечены, в пределах 15 м от знака остановки автобусов, троллейбусов и рельсового транспорта останавливаться с оставлением автомобиля нельзя.",
+        "zh": "正确：当停靠空间未划线时，在公交车、无轨电车和有轨电车停靠标志15米范围内禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-sosta-fermata-autobus-5": {
+      "verdict": "FALSO",
+      "key_it": "per pochi minuti, azionando le luci di emergenza",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: double-row parking for cars is not made legal by \"a few minutes\" with the hazard lights on — double-row parking is simply forbidden.",
+        "ru": "Ложь: стоянка в два ряда у легковых не становится разрешённой «на несколько минут» с включённой аварийкой — два ряда запрещены в принципе.",
+        "zh": "错误：轿车“开双闪停几分钟”并不使双排停放合法——双排停放本身即被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-sosta-fermata-autobus-6": {
+      "verdict": "FALSO",
+      "key_it": "purché rimanga spazio sufficiente per la circolazione di due file",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: double-row parking is not allowed \"as long as two rows can pass\" — the rule does not depend on the remaining width.",
+        "ru": "Ложь: стоянка в два ряда не разрешена «при условии, что останется место для проезда двух рядов» — правило не зависит от оставшейся ширины.",
+        "zh": "错误：双排停放并不因为“仍留有足够空间供两列车通行”就允许——该规则与剩余宽度无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-zone-sosta-fermata-autobus-7": {
+      "verdict": "FALSO",
+      "key_it": "purché sia di breve durata",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the spaces reserved for buses, trolleybuses, and rail vehicles cannot be used for parking even briefly — a short stay does not open them.",
+        "ru": "Ложь: на местах для автобусов, троллейбусов и рельсового транспорта останавливаться с оставлением автомобиля нельзя даже кратковременно — короткая длительность их не открывает.",
+        "zh": "错误：专供公交、无轨电车和有轨电车使用的空间即使是短暂停车(sosta)也不得占用——时间短并不使其可用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-soste-veicoli-persone-invalide-0": {
+      "verdict": "VERO",
+      "key_it": "spazi riservati allo stazionamento dei veicoli in servizio di piazza",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden in the spaces reserved for the standing of taxi vehicles on call (taxi ranks).",
+        "ru": "Верно: остановка с оставлением автомобиля запрещена на местах, отведённых под стоянку автомобилей такси, ожидающих заказов (таксопарков/таксомест).",
+        "zh": "正确：在专供出租车待客停放(sosta)的空间内禁止停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-soste-veicoli-persone-invalide-1": {
+      "verdict": "VERO",
+      "key_it": "nelle ore stabilite",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: during the established hours, parking is forbidden on the areas intended for the market and for loading and unloading vehicles.",
+        "ru": "Верно: в установленные часы на площадках для рынка и для погрузки-разгрузки останавливаться с оставлением автомобиля нельзя.",
+        "zh": "正确：在规定时段内，市场区域和装卸货车辆区域禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-soste-veicoli-persone-invalide-2": {
+      "verdict": "VERO",
+      "key_it": "sulle banchine, salvo diversa segnalazione",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking on the loading bays is forbidden unless signs say otherwise.",
+        "ru": "Верно: на площадках для погрузки-разгрузки (башинных площадках) останавливаться с оставлением автомобиля нельзя, если знаки не указывают иное.",
+        "zh": "正确：在装卸货停车带(banchina)上禁止停车(sosta)，标志另有规定除外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-soste-veicoli-persone-invalide-3": {
+      "verdict": "VERO",
+      "key_it": "veicoli per persone invalide",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden in the spaces reserved for the stopping or parking of vehicles for disabled persons.",
+        "ru": "Верно: на местах, отведённых под остановку или стоянку автомобилей инвалидов, останавливаться с оставлением автомобиля запрещено.",
+        "zh": "正确：在专供残疾人车辆停靠或停放的空间内禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-soste-veicoli-persone-invalide-4": {
+      "verdict": "VERO",
+      "key_it": "scivoli o dei raccordi tra i marciapiedi e la carreggiata",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden at the ramps or junctions between the sidewalk and the roadway used by vehicles for disabled persons.",
+        "ru": "Верно: на пандусах и съездах между тротуаром и проезжей частью, которыми пользуются автомобили инвалидов, останавливаться с оставлением автомобиля запрещено.",
+        "zh": "正确：在残疾人车辆使用的、连接人行道与路面的坡道或接驳处禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-soste-veicoli-persone-invalide-5": {
+      "verdict": "FALSO",
+      "key_it": "non si protrae per lungo tempo",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: taxi standing spaces cannot be used for parking even \"as long as it is not for a long time\" — they are reserved, period.",
+        "ru": "Ложь: такса не могут использоваться под остановку с оставлением автомобиля «если не надолго» — они отведены и только.",
+        "zh": "错误：出租车停放空间不能“不长时间”就占用来停车(sosta)——它们是被专供的，没有例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-soste-veicoli-persone-invalide-6": {
+      "verdict": "FALSO",
+      "key_it": "soltanto se di breve durata",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: on the loading/unloading areas, during the established hours, parking is not opened up \"only if brief\" — the established hours close them.",
+        "ru": "Ложь: на площадках для погрузки-разгрузки в установленные часы останавливаться с оставлением автомобиля нельзя «даже кратко» — установленные часы их закрывают.",
+        "zh": "错误：在装卸货车辆区域，规定时段内停车(sosta)即使“时间短”也不允许——规定时段将其关闭。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-soste-veicoli-persone-invalide-7": {
+      "verdict": "FALSO",
+      "key_it": "purché di breve durata",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the spaces for vehicles for disabled persons are not opened to everyone \"if brief\" — they are reserved for disabled drivers.",
+        "ru": "Ложь: места для автомобилей инвалидов не открываются всем «если кратко» — они отведены только водителям-инвалидам.",
+        "zh": "错误：残疾人车辆使用的空间并不是“时间短”就可以占用——它们专供残疾人驾驶者使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-0": {
+      "verdict": "VERO",
+      "key_it": "corsie o carreggiate riservate ai mezzi pubblici",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden in the lanes or roadways reserved for public transport.",
+        "ru": "Верно: на полосах или частях проезжей части, отведённых под общественный транспорт, останавливаться с оставлением автомобиля запрещено.",
+        "zh": "正确：在专供公共交通工具使用的车道或路面上禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-1": {
+      "verdict": "VERO",
+      "key_it": "aree pedonali urbane",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden in urban pedestrian areas.",
+        "ru": "Верно: в городских пешеходных зонах останавливаться с оставлением автомобиля запрещено.",
+        "zh": "正确：在城市人行区内禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-2": {
+      "verdict": "VERO",
+      "key_it": "zone a traffico limitato per i veicoli non autorizzati",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: in limited-traffic zones (ZTL) parking is forbidden for unauthorized vehicles.",
+        "ru": "Верно: в зонах с ограниченным движением (ZTL) остановка с оставлением автомобиля запрещена для не имеющих разрешения.",
+        "zh": "正确：在限制交通区(ZTL)内，未经授权的车辆禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-3": {
+      "verdict": "VERO",
+      "key_it": "servizi di emergenza o di igiene pubblica",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden in the spaces intended for emergency or public-hygiene services, marked by the appropriate signs.",
+        "ru": "Верно: на местах, отведённых под аварийные службы или коммунальную санитарную службу (указанных специальными знаками), останавливаться с оставлением автомобиля запрещено.",
+        "zh": "正确：在标示有相应标志、专供应急服务或公共卫生服务使用的空间内禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-4": {
+      "verdict": "VERO",
+      "key_it": "davanti ai cassonetti dei rifiuti urbani",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden in front of the urban waste bins.",
+        "ru": "Верно: перед городскими мусорными контейнерами останавливаться с оставлением автомобиля запрещено.",
+        "zh": "正确：在城市垃圾箱(cassonetto)前禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
