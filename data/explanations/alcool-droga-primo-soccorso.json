@@ -182,6 +182,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-assunzione-droghe-1": {
+      "verdict": "VERO",
+      "key_it": "eroina o di cocaina può compromettere la facoltà di guida",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: taking heroin or cocaine can impair the ability to drive.",
+        "ru": "Верно: употребление героина или кокаина может нарушить способность к вождению.",
+        "zh": "正确：使用海洛因或可卡因可能损害驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-guida-alimentazione-0": {
+      "verdict": "VERO",
+      "key_it": "pesante ed eccessiva è sconsigliata per chi deve guidare",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: heavy and excessive food is not recommended for someone who is going to drive.",
+        "ru": "Верно: тяжёлая и чрезмерная пища не рекомендуется тому, кто собирается водить.",
+        "zh": "正确：准备驾车的人不宜吃过于油腻和过量的食物。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-guida-alimentazione-1": {
+      "verdict": "VERO",
+      "key_it": "cibi di difficile digestione",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: food that is hard to digest can lower attention and increase reaction times.",
+        "ru": "Верно: трудноперевариваемая пища может снизить внимание и увеличить время реакции.",
+        "zh": "正确：难消化的食物可能降低注意力并延长反应时间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-guida-stato-ebbrezza-0": {
+      "verdict": "VERO",
+      "key_it": "stato di euforia, con conseguente sottovalutazione del pericolo",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: alcohol can cause a state of euphoria, leading to an underestimation of the danger.",
+        "ru": "Верно: алкоголь может вызывать эйфорию, что ведёт к недооценке опасности.",
+        "zh": "正确：酒精可引起欣快状态，从而导致低估危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-soccorso-ferito-0": {
+      "verdict": "VERO",
+      "key_it": "Soccorrere un ferito della strada è obbligatorio per legge",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: assisting an injured road user is mandatory by law.",
+        "ru": "Верно: оказание помощи пострадавшему на дороге обязательно по закону.",
+        "zh": "正确：救助道路伤者依法是义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-soccorso-ferito-1": {
+      "verdict": "VERO",
+      "key_it": "può significare salvargli la vita",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: assisting an injured road user can mean saving their life.",
+        "ru": "Верно: помощь пострадавшему на дороге может означать спасение его жизни.",
+        "zh": "正确：救助道路伤者可能意味着挽救其生命。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-soccorso-ferito-2": {
+      "verdict": "VERO",
+      "key_it": "può evitare che subisca ulteriori danni fisici",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: promptly assisting an injured road user can prevent further physical harm.",
+        "ru": "Верно: своевременная помощь пострадавшему на дороге может избежать дополнительных физических повреждений.",
+        "zh": "正确：及时救助道路伤者可避免其遭受进一步的身体伤害。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-soccorso-ferito-3": {
+      "verdict": "FALSO",
+      "key_it": "non è un obbligo imposto dalla legge, ma solo un dovere morale",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: assisting an injured road user is NOT merely a moral duty — it is a legal obligation.",
+        "ru": "Неверно: помощь пострадавшему на дороге — это НЕ «только моральный долг», а правовая обязанность.",
+        "zh": "错误：救助道路伤者并非“仅是道德义务”，而是法定义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-soccorso-ferito-4": {
+      "verdict": "FALSO",
+      "key_it": "solo se si considera grave",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: you must assist an injured road user, not only when you consider the accident serious.",
+        "ru": "Неверно: помогать пострадавшему на дороге нужно, а не только когда вы считаете аварию серьёзной.",
+        "zh": "错误：无论是否认为事故严重，都必须救助道路伤者。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-soccorso-ferito-5": {
+      "verdict": "FALSO",
+      "key_it": "per non mettere a repentaglio la propria sicurezza",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: assisting an injured road user is mandatory even if it seems to put your own safety at risk.",
+        "ru": "Неверно: помощь пострадавшему на дороге обязательна, даже если кажется, что это ставит под угрозу вашу безопасность.",
+        "zh": "错误：即使似乎危及自身安全，也负有救助道路伤者的义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-soccorso-ferito-6": {
+      "verdict": "FALSO",
+      "key_it": "obbligatorio solo per i medici e il personale sanitario",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: assisting an injured road user is mandatory for everyone, not only for doctors and medical staff.",
+        "ru": "Неверно: помощь пострадавшему на дороге обязательна для всех, а не только для врачей и медперсонала.",
+        "zh": "错误：救助道路伤者对所有人都强制，而非仅限医生和医护人员。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-soccorso-ferito-7": {
+      "verdict": "FALSO",
+      "key_it": "si crea intralcio alla circolazione",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: assisting an injured road user is still mandatory even if it obstructs traffic.",
+        "ru": "Неверно: помощь пострадавшему на дороге обязательна, даже если она создаёт помехи движению.",
+        "zh": "错误：即使妨碍交通，救助道路伤者仍属义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-infortunato-ferita-sanguinante-0": {
+      "verdict": "VERO",
+      "key_it": "coprire con materiale sterile o quanto più possibile pulito",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: a bleeding wound should be covered with sterile or as clean as possible material to stop the bleeding.",
+        "ru": "Верно: кровоточащую рану нужно закрыть стерильным или как можно более чистым материалом, чтобы остановить кровотечение.",
+        "zh": "正确：流血伤口应覆盖无菌或尽可能干净的敷料以止血。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-infortunato-ferita-sanguinante-7": {
+      "verdict": "FALSO",
+      "key_it": "versarvi sopra acqua calda",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: pouring hot water on a bleeding wound is wrong — it is covered with sterile/clean material and pressed.",
+        "ru": "Неверно: лить горячую воду на кровоточащую рану — ошибка: её прикрывают стерильным/чистым материалом и прижимают.",
+        "zh": "错误：不可向流血伤口浇热水，应覆盖干净敷料并加压。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-emorragia-esterna-1": {
+      "verdict": "VERO",
+      "key_it": "tamponare subito la ferita, facendo pressione",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: with an abundant external bleeding you must immediately tampon the wound, applying pressure with clean or possibly sterile material.",
+        "ru": "Верно: при обильном наружном кровотечении нужно сразу прижать рану (тампонировать), прилагая усилие чистым или стерильным материалом.",
+        "zh": "正确：大量外部出血时应立即用干净或无菌敷料加压止血。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-emorragia-esterna-4": {
+      "verdict": "FALSO",
+      "key_it": "bisogna solo medicare la ferita",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: with abundant external bleeding it is not enough to merely bandage the wound — pressure must be applied to stop the bleeding.",
+        "ru": "Неверно: при обильном наружном кровотечении недостаточно просто перевязать рану — нужно прижать, чтобы остановить кровотечение.",
+        "zh": "错误：大量外部出血时仅包扎不够，必须加压止血。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-emorragia-esterna-5": {
+      "verdict": "FALSO",
+      "key_it": "coprire la ferita e far camminare",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: with abundant external bleeding the injured person must not be made to walk — they should be kept still and the wound pressed.",
+        "ru": "Неверно: при обильном наружном кровотечении пострадавшего нельзя заставлять ходить — его укладывают, рану прижимают.",
+        "zh": "错误：大量外部出血时不可让伤者行走，应使其保持静止并加压伤口。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-emorragia-esterna-6": {
+      "verdict": "FALSO",
+      "key_it": "non si può assolutamente dargli da bere acqua",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: it is NOT absolutely forbidden to give water to a person with external bleeding — the absolute ban applies to other cases (e.g. possible abdominal injury).",
+        "ru": "Неверно: давать воду человеку с наружным кровотечением НЕ «абсолютно запрещено» — абсолютный запрет действует в других случаях (напр. возможное повреждение живота).",
+        "zh": "错误：对仅有外部出血者并非“绝对不可给水”——绝对禁忌适用于其他情形（如疑似腹部损伤）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-corpo-estraneo-occhio-3": {
+      "verdict": "FALSO",
+      "key_it": "bisogna cercare sempre e comunque di toglierglielo",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: if a foreign body has entered the eye, it must NOT always be removed by force — that can cause further damage; it should be handled carefully or left to a professional.",
+        "ru": "Неверно: при попадании инородного тела в глаз нельзя «всегда и в любом случае» вытаскивать его — это может нанести ещё больше вреда; действовать осторожно или передать специалисту.",
+        "zh": "错误：异物入眼时不可“无论如何都强行取出”，以免加重损伤，应谨慎处理或交由专业人员。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-stato-shock-4": {
+      "verdict": "VERO",
+      "key_it": "improvvisa pronuncia di frasi e parole senza senso",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: shock can manifest with sudden uttering of nonsensical phrases and words.",
+        "ru": "Верно: шок может проявляться внезапным произнесением бессмысленных фраз и слов.",
+        "zh": "正确：休克可表现为突然说出毫无意义的词句。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
