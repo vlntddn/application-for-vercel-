@@ -1040,6 +1040,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovra-retromarcia-0": {
+      "verdict": "VERO",
+      "key_it": "deve dare la precedenza ai veicoli provenienti sia da destra che da sinistra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: entering traffic in reverse requires giving way to vehicles coming from both the right and the left.",
+        "ru": "Верно: въезжая в поток задним ходом, нужно уступить транспорт, идущему и справа, и слева.",
+        "zh": "正确：倒车驶入车流时，必须让从右侧和左侧驶来的车辆先行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovra-retromarcia-1": {
+      "verdict": "VERO",
+      "key_it": "deve azionare gli indicatori di direzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when backing out into traffic you must use the direction indicator for the direction you will enter.",
+        "ru": "Верно: выезжая задним ходом, нужно включить указатель поворота в сторону, куда вы въезжаете.",
+        "zh": "正确：倒车驶入车流时必须开启相应方向的转向灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovra-retromarcia-2": {
+      "verdict": "VERO",
+      "key_it": "deve fare attenzione agli eventuali pedoni in transito dietro di esso",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when reversing you must watch for pedestrians behind the vehicle and give them priority.",
+        "ru": "Верно: при заднем ходе нужно следить за пешеходами позади машины и уступать им.",
+        "zh": "正确：倒车时要留意车后行人并让其先行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovra-retromarcia-3": {
+      "verdict": "VERO",
+      "key_it": "deve dare la precedenza a tutti i veicoli in transito",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a vehicle moving in reverse must give way to all vehicles in motion.",
+        "ru": "Верно: автомобиль, движущийся задним ходом, обязан уступить всем едущим машинам.",
+        "zh": "正确：倒车行驶的车辆必须让所有正在行驶的车辆先行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovra-retromarcia-4": {
+      "verdict": "VERO",
+      "key_it": "deve assicurarsi che la strada sia libera",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before reversing into traffic you must make sure the road is clear and move with special care.",
+        "ru": "Верно: перед выездом задним ходом нужно убедиться, что дорога свободна, и маневрировать особенно осторожно.",
+        "zh": "正确：倒车前须确认道路畅通，并格外小心地操作。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovra-retromarcia-5": {
+      "verdict": "FALSO",
+      "key_it": "deve azionare la segnalazione luminosa di pericolo",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: reversing to join traffic is not a hazard that requires the warning flashers; you signal with the direction indicator instead.",
+        "ru": "Неверно: выезд задним ходом в поток не требует аварийной сигнализации — достаточно указателя поворота.",
+        "zh": "错误：倒车驶入车流无需开双闪，只需开启转向灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovra-retromarcia-6": {
+      "verdict": "FALSO",
+      "key_it": "deve accendere la luce posteriore per nebbia",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: reversing into traffic does not require the rear fog light — that light is for poor visibility, not for this manoeuvre.",
+        "ru": "Неверно: задний противотуманный фонарь не требуется при въезде задним ходом — он для плохой видимости.",
+        "zh": "错误：倒车驶入车流不需要开启后雾灯，那是为低能见度准备的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovra-retromarcia-7": {
+      "verdict": "FALSO",
+      "key_it": "deve dare la precedenza solo ai veicoli che transitano nel suo senso di marcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: in reverse you must give way to all passing vehicles, not only those coming from your own direction.",
+        "ru": "Неверно: при заднем ходе уступают всем едущим, а не только тем, что идут в вашем направлении.",
+        "zh": "错误：倒车时须让所有来车，而不仅是同向行驶的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovra-retromarcia-8": {
+      "verdict": "FALSO",
+      "key_it": "deve manovrare velocemente per liberare il posteggio",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: a reversing manoeuvre is done slowly and carefully — leaving the parking space quickly is never the rule.",
+        "ru": "Неверно: маневр задним ходом выполняется медленно и осторожно, а не быстро, чтобы освободить место.",
+        "zh": "错误：倒车操作应缓慢谨慎，而不是快速进行以腾出车位。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-manovra-retromarcia-9": {
+      "verdict": "FALSO",
+      "key_it": "deve suonare ripetutamente il clacson durante la manovra",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: repeatedly honking while reversing is not required; you must check mirrors and surroundings instead.",
+        "ru": "Неверно: многократные гудки при заднем ходе не обязательны — нужно смотреть в зеркала и по сторонам.",
+        "zh": "错误：倒车时无需连续按喇叭，应观察后视镜和周围情况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-impegno-delle-corsie-0": {
+      "verdict": "VERO",
+      "key_it": "si deve impegnare quella centrale solo per il sorpasso",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a three-lane two-way road the middle lane is used only for overtaking, the rest of the time you keep right.",
+        "ru": "Верно: на дороге с тремя полосами в обе стороны средняя полоса используется только для обгона.",
+        "zh": "正确：在三车道双向道路上，中间车道仅供超车使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-impegno-delle-corsie-1": {
+      "verdict": "VERO",
+      "key_it": "si deve impegnare quella di sinistra solo per il sorpasso",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a two-lane two-way road the left lane is used only for overtaking.",
+        "ru": "Верно: на двухполосной в обе стороны дороге левая полоса используется только для обгона.",
+        "zh": "正确：在双向两车道道路上，左侧车道仅供超车使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-3": {
+      "verdict": "VERO",
+      "key_it": "i veicoli devono circolare nella corsia di destra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a two-lane two-way road vehicles must use the right lane, taking the left one only to overtake.",
+        "ru": "Верно: на двухполосной в обе стороны дороге едут по правой полосе, левую берут только для обгона.",
+        "zh": "正确：双向两车道道路应靠右行驶，左车道仅供超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-9": {
+      "verdict": "VERO",
+      "key_it": "impegnando quella di sinistra solo per il sorpasso",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the left lane on a two-lane two-way road is taken only when overtaking.",
+        "ru": "Верно: левая полоса на такой дороге берётся только при обгоне.",
+        "zh": "正确：这种道路上左车道仅在超车时使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-attenzione-cambio-corsia-9": {
+      "verdict": "FALSO",
+      "key_it": "si può sempre cambiare corsia fino alla striscia trasversale di arresto",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: near intersections you cannot always change lanes up to the stop line — a change must be safe and must not impede other traffic.",
+        "ru": "Неверно: вблизи перекрёстка «всегда можно менять полосу до стоп-линии» — смена должна быть безопасной и не мешать другим.",
+        "zh": "错误：路口附近并非总能变道到停止线前——变道必须安全且不妨碍他人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-doppio-senso-marcia-1": {
+      "verdict": "VERO",
+      "key_it": "si deve, di norma, lasciare il centro dell'incrocio alla nostra destra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when turning left on a two-way road you normally turn close to the centre of the intersection, leaving it to your right.",
+        "ru": "Верно: поворачивая налево на двусторонней дороге, поворачивают по центру перекрёстка, оставляя его справа.",
+        "zh": "正确：在双向道路左转时，通常沿路口中心转弯，使路口保持在右侧。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-4": {
+      "verdict": "VERO",
+      "key_it": "qualora il traffico sia intenso, si può viaggiare per file parallele",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a road with at least two lanes per direction, in heavy traffic you may drive in parallel files, lane by lane.",
+        "ru": "Верно: на дороге с двумя полосами в каждую сторону в плотном потоке можно ехать параллельными колоннами по полосам.",
+        "zh": "正确：每个方向至少两条车道的道路，交通拥堵时可按车道并行行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-10": {
+      "verdict": "FALSO",
+      "key_it": "sempre consentito viaggiare per file parallele",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: parallel-file driving is not always allowed just because the road has two lanes each way — it applies in heavy traffic, not as a standing rule.",
+        "ru": "Неверно: параллельное движение не «всегда разрешено» на двухполосных — оно уместно в плотном потоке.",
+        "zh": "错误：只要双向各有两条车道就允许并排行驶是不对的——这适用于拥堵车流，而非任何时候。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-vicinanza-incrocio-6": {
+      "verdict": "FALSO",
+      "key_it": "bisogna passare sempre prima dei veicoli che arrivano da destra",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: approaching an intersection you do not always pass before vehicles coming from the right — priority follows the intersection signs.",
+        "ru": "Неверно: приближаясь к перекрёстку, не всегда проходят раньше машин справа — приоритет задают знаки перекрёстка.",
+        "zh": "错误：接近路口时并非总能先于右侧来车通过——优先权由路口标志决定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corrispondenza-incroci-0": {
+      "verdict": "VERO",
+      "key_it": "non è consentito procedere a zig zag",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: near or at intersections zig-zagging between lanes is not allowed, even where directional lanes are marked with broken lines.",
+        "ru": "Верно: вблизи и на перекрёстках «зигзагом» между полосами ехать нельзя, даже если полосы обозначены прерывистой.",
+        "zh": "正确：路口附近禁止在车道间“之”字行驶，即使方向车道用虚线标示。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
