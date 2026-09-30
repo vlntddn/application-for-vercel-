@@ -1001,6 +1001,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-vietata-6": {
+      "verdict": "VERO",
+      "key_it": "in loro prossimità",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: stopping is forbidden on curves, and outside built-up areas and on fast urban roads it is also forbidden in their vicinity.",
+        "ru": "Верно: останавливаться на поворотах запрещено, а вне населённых пунктов и на городских скоростных дорогах — и вблизи них.",
+        "zh": "正确：在弯道处禁止临时停靠；在建成区外和城市快速道路上，靠近弯道处也禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-vietata-9": {
+      "verdict": "FALSO",
+      "key_it": "breve durata",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: a brief fermata is not allowed on a curve — stopping is forbidden there in the first place.",
+        "ru": "Ложь: кратковременная «фермата» на повороте не разрешена — останавливаться там запрещено в принципе.",
+        "zh": "错误：在弯道处不允许短暂停靠——那里本来就禁止停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermate-cartelli-intersezione-4": {
+      "verdict": "VERO",
+      "key_it": "a meno di 5 metri",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: in built-up areas both fermata and sosta are forbidden at intersection areas and within less than 5 metres from them, unless signs say otherwise.",
+        "ru": "Верно: в населённых пунктах и «фермата», и «соста» запрещены в местах пересечения дорог и ближе 5 метров от них, если знаки не указывают иное.",
+        "zh": "正确：在建成区内，临时停靠和停车在路口区域及距其不足5米处均被禁止，标志另有规定除外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermate-cartelli-intersezione-7": {
+      "verdict": "FALSO",
+      "key_it": "anche se il veicolo non ne occulta la vista",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: stopping near a road sign is forbidden even if the vehicle does not hide it from view.",
+        "ru": "Ложь: останавливаться вблизи дорожного знака запрещено даже если автомобиль не перекрывает его видимость.",
+        "zh": "错误：在交通标志附近停车被禁止，即使车辆并未遮挡标志的可见性。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermate-cartelli-intersezione-8": {
+      "verdict": "FALSO",
+      "key_it": "in caso di emergenza",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: precisely in an emergency stopping on the motorway is allowed — on the emergency lane at the edge of the carriageway; what is forbidden is stopping on the carriageway itself.",
+        "ru": "Ложь: именно в экстренной ситуации останавливаться на автостраде разрешается — на аварийной полосе у края проезжей части; запрещена остановка на самой проезжей части.",
+        "zh": "错误：恰恰在紧急情况下，高速公路上的停车是被允许的——应停在行车道边缘的应急车道上；被禁止的是停在行车道本身上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermate-cartelli-intersezione-10": {
+      "verdict": "FALSO",
+      "key_it": "corsie di accelerazione",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: acceleration lanes exist so that you join the traffic flow, not stop in them — even a very brief fermata is not allowed there.",
+        "ru": "Ложь: полосы ускорения предназначены для встраивания в поток, а не для остановки — даже очень краткая «фермата» там не разрешена.",
+        "zh": "错误：加速车道用于汇入车流而非停车——即使极短暂的临时停靠也不允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-divieto-sosta-fermata-0": {
+      "verdict": "VERO",
+      "key_it": "attraversamenti pedonali",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: on pedestrian crossings both the sosta and the fermata are always forbidden.",
+        "ru": "Верно: на пешеходных переходах и «соста», и «фермата» запрещены всегда.",
+        "zh": "正确：在人行横道上，停车和临时停靠一律被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-divieto-sosta-fermata-8": {
+      "verdict": "FALSO",
+      "key_it": "sempre vietata in seconda fila",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the absolute ban in a second row applies to the sosta, not to the brief fermata — a short stop with the driver at the wheel is not generally forbidden there.",
+        "ru": "Ложь: безусловный запрет в два ряда касается «состы», а не кратковременной «ферматы» — короткая остановка с водителем у руля по умолчанию не запрещена.",
+        "zh": "错误：对“第二排”的绝对禁止针对的是停车(sosta)，而非临时停靠(fermata)——驾驶员在座时的短暂停靠并非被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-cautele-durante-sosta-1": {
+      "verdict": "VERO",
+      "key_it": "può allontanarsi dal veicolo",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: during a sosta the driver may leave the vehicle — that is exactly what distinguishes the sosta from the fermata.",
+        "ru": "Верно: во время «состы» водитель может покинуть автомобиль — именно это отличает «состу» от «ферматы».",
+        "zh": "正确：在停车(sosta)期间，驾驶员可以离开车辆——这正是它与临时停靠(fermata)的区别所在。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-cautele-durante-sosta-2": {
+      "verdict": "VERO",
+      "key_it": "opportune cautele atte ad evitare incidenti",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: during the sosta the driver must take the appropriate precautions to avoid accidents.",
+        "ru": "Верно: во время «состы» водитель обязан принять необходимые меры, чтобы избежать происшествий.",
+        "zh": "正确：停车期间，驾驶员必须采取适当的防范措施以防止事故。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-cautele-durante-sosta-3": {
+      "verdict": "VERO",
+      "key_it": "senza il suo consenso",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: during the sosta the driver must make sure the vehicle cannot be used without his or her consent.",
+        "ru": "Верно: во время «состы» водитель должен обеспечить, чтобы автомобилем нельзя было пользоваться без его согласия.",
+        "zh": "正确：停车期间，驾驶员应确保车辆不会被未经其同意而使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-cautele-durante-sosta-4": {
+      "verdict": "VERO",
+      "key_it": "rapporto più basso del cambio di velocità",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: during the sosta it is advisable to apply the parking brake and select the lowest gear of the transmission.",
+        "ru": "Верно: при «состе» желательно установить стояночный тормоз и включить низшую передачу.",
+        "zh": "正确：停车时建议拉紧驻车制动并将变速箱挂入最低挡。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-cautele-durante-sosta-5": {
+      "verdict": "VERO",
+      "key_it": "indipendentemente dal grado di pendenza",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: the driver must make sure the vehicle stays immobile regardless of the road gradient.",
+        "ru": "Верно: водитель должен обеспечить неподвижность автомобиля независимо от крутизны уклона дороги.",
+        "zh": "正确：驾驶员必须确保车辆保持静止，与道路坡度大小无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-cautele-durante-sosta-6": {
+      "verdict": "VERO",
+      "key_it": "ruote sterzate verso il marciapiede",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: on roads with a steep gradient the driver should apply the parking brake, select the lowest gear and leave the wheels turned toward the curb.",
+        "ru": "Верно: на дорогах с крутым уклоном следует установить стояночный тормоз, включить низшую передачу и повернуть колёса к бордюру.",
+        "zh": "正确：在坡度较大的道路上，应拉紧驻车制动、挂入最低挡，并将车轮转向路缘一侧。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-cautele-durante-sosta-7": {
+      "verdict": "VERO",
+      "key_it": "motore spento",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: during the sosta the driver must leave the vehicle with the engine switched off.",
+        "ru": "Верно: при «состе» автомобиль должен быть оставлен с заглушённым двигателем.",
+        "zh": "正确：停车时，车辆必须熄火停放。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-cautele-durante-sosta-8": {
+      "verdict": "FALSO",
+      "key_it": "in ogni caso accese le luci di posizione",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: there is no absolute night duty to leave the position lights on in every case — the obligation to light the vehicle depends on the circumstances, not on the time of day alone.",
+        "ru": "Ложь: безусловной ночной обязанности держать габаритные огни включёнными в любом случае нет — требование о свете зависит от обстоятельств, а не только от времени суток.",
+        "zh": "错误：并不存在“夜间任何情况下都必须开启示廓灯”的绝对义务——车辆照明要求取决于具体情形，而非仅由时段决定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-cautele-durante-sosta-9": {
+      "verdict": "FALSO",
+      "key_it": "per più di tre ore",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: there is no limit of three hours for leaving the vehicle during the sosta — the duration itself does not change the rules.",
+        "ru": "Ложь: не существует ограничения «три часа» на покидание автомобиля при «состе» — длительность сама по себе правила не меняет.",
+        "zh": "错误：停车(sosta)期间离开车辆并不存在“三小时”的限制——停留时间本身并不改变规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-cautele-durante-sosta-10": {
+      "verdict": "FALSO",
+      "key_it": "inserire la quarta marcia",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: when leaving the vehicle on an uphill road the rule is the lowest gear, not the fourth — so engaging fourth is not what the statement prescribes correctly.",
+        "ru": "Ложь: при оставлении автомобиля на подъеме по правилу включается низшая передача, а не четвёртая — утверждение с «четвёртой» неверно.",
+        "zh": "错误：将车辆停放在上坡路段时，按规定应挂入最低挡，而非四挡——该说法提及“四挡”并不正确。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-cautele-durante-sosta-11": {
+      "verdict": "FALSO",
+      "key_it": "in folle",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: leaving the transmission in neutral during the sosta is not required — the opposite applies, the lowest gear helps keep the vehicle immobile.",
+        "ru": "Ложь: оставлять коробку в нейтрали при «состе» не требуется — напротив, низшая передача помогает удерживать автомобиль на месте.",
+        "zh": "错误：停车(sosta)时并不需要把变速箱挂在空挡——恰恰相反，最低挡有助于保持车辆静止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-fuori-centri-abitati-1": {
+      "verdict": "VERO",
+      "key_it": "non inferiore ad un metro per il transito dei pedoni",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: when parking where there is no raised pavement, the driver must leave a space of at least one metre for pedestrians to pass.",
+        "ru": "Верно: при остановке там, где нет приподнятого тротуара, водитель обязан оставить не менее метра прохода для пешеходов.",
+        "zh": "正确：在没有抬高的人行道的地方停车时，驾驶员必须为行人留出不少于一米的通行空间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
