@@ -1755,6 +1755,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-0": {
+      "verdict": "VERO",
+      "key_it": "può diventare insicuro e ritornare improvvisamente indietro",
+      "chapter": "ch1",
+      "why": {
+        "en": "Near a crosswalk a pedestrian can lose confidence and step back at the last moment, so you must expect a sudden reversal - the statement is true.",
+        "ru": "Рядом с зеброй пешеход может растеряться и вдруг отступить назад, поэтому нужно ждать резкого разворота - верно.",
+        "zh": "靠近斑马线时行人可能突然犹豫后退，必须预见到这种突然倒退，说法成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-1": {
+      "verdict": "VERO",
+      "key_it": "le persone anziane solitamente attraversano lentamente e con difficoltà",
+      "chapter": "ch1",
+      "why": {
+        "en": "Elderly pedestrians usually cross slowly and with difficulty, so near a crossing you must expect them to take longer - true.",
+        "ru": "Пожилые люди обычно переходят медленно и с трудом, поэтому у зебры нужно закладывать им больше времени - верно.",
+        "zh": "老年人过街通常缓慢吃力，因此斑马线旁要给他们更多时间，说法成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-2": {
+      "verdict": "VERO",
+      "key_it": "le reazioni dei bambini che attraversano sono imprevedibili",
+      "chapter": "ch1",
+      "why": {
+        "en": "Children crossing the road react unpredictably and can create a hazard, so a driver near a crosswalk must stay alert - true.",
+        "ru": "Переходящие дети ведут себя непредсказуемо и могут создать опасность, поэтому у зебры надо держать концентрацию - верно.",
+        "zh": "过街的儿童反应难以预测，可能制造危险，因此斑马线旁司机须保持警觉，成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-3": {
+      "verdict": "VERO",
+      "key_it": "i bambini potrebbero avanzare sulle strisce, per poi tornare indietro improvvisamente",
+      "chapter": "ch1",
+      "why": {
+        "en": "Children may step onto the crossing and then back off for no apparent reason, so you must expect sudden stops - true.",
+        "ru": "Дети могут выйти на зебру и вдруг без причины отойти назад, поэтому нужно ждать резких остановок - верно.",
+        "zh": "儿童可能走上斑马线后又毫无理由地退回，必须预料这种突然停止，成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-4": {
+      "verdict": "VERO",
+      "key_it": "il pedone potrebbe fermarsi improvvisamente sulle strisce",
+      "chapter": "ch1",
+      "why": {
+        "en": "A pedestrian may stop dead in the middle of the crossing, so you must be ready to brake at any moment - true.",
+        "ru": "Пешеход может замереть посреди зебры, поэтому нужно быть готовым тормознуть в любой момент - верно.",
+        "zh": "行人可能停在斑马线中间不动，随时要准备刹车，说法成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-5": {
+      "verdict": "VERO",
+      "key_it": "possono sbucare all'improvviso tra i veicoli parcheggiati",
+      "chapter": "ch1",
+      "why": {
+        "en": "Pedestrians, above all children, can emerge suddenly between parked cars, so extra care is needed near a crossing - true.",
+        "ru": "Пешеходы, особенно дети, могут внезапно выскочить между припаркованными машинами, поэтому нужна особая осторожность - верно.",
+        "zh": "行人、尤其是儿童，可能从停着的车之间突然出现，因此需格外小心，成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-6": {
+      "verdict": "VERO",
+      "key_it": "i veicoli parcheggiati in prossimità delle strisce impediscono la visuale dei pedoni",
+      "chapter": "ch1",
+      "why": {
+        "en": "Cars parked next to the crossing block the pedestrian's view, so you must slow down because they may not see you coming - true.",
+        "ru": "Припаркованные у зебры машины закрывают пешеходам обзор, поэтому надо сбавить — они могут вас не видеть - верно.",
+        "zh": "停在斑马线旁的车辆挡住行人视线，因此应减速，他们可能看不到你，成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-7": {
+      "verdict": "FALSO",
+      "key_it": "aspettarsi dai bambini una reazione rapida e un comportamento corretto",
+      "chapter": "ch1",
+      "why": {
+        "en": "You must not count on children reacting quickly and behaving correctly near a crossing: they are unpredictable, so this is false.",
+        "ru": "Нельзя рассчитывать, что рядом с зеброй дети быстро отреагируют и будут вести себя правильно: они непредсказуемы - неверно.",
+        "zh": "不能指望儿童在斑马线旁反应快且行为正确：他们难以预测，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-9": {
+      "verdict": "FALSO",
+      "key_it": "un pedone munito di bastone bianco ha più esperienza su come attraversare",
+      "chapter": "ch1",
+      "why": {
+        "en": "A pedestrian with a white cane is blind, not more experienced: you must not assume they cross confidently, so this is false.",
+        "ru": "Пешеход с белой тростью слеп, а не более опытен: нельзя считать, что он уверенно переходит дорогу - неверно.",
+        "zh": "持白手杖的行人是盲人，而非更有经验：不能假定他自信地过街，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-10": {
+      "verdict": "FALSO",
+      "key_it": "deve solo rallentare se, invece, è munito di bastone bianco",
+      "chapter": "ch1",
+      "why": {
+        "en": "The white-red versus white cane does not change your duty to stop: you must yield in either case, so this split is false.",
+        "ru": "Бело-красная трость или белая не отменяют обязанность остановиться: уступать нужно в обоих случаях - деление неверно.",
+        "zh": "红白手杖或白手杖都不改变停车义务：两种情况都要让行，故这种区分错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-11": {
+      "verdict": "FALSO",
+      "key_it": "deve accelerare quel tanto che basta per passare davanti al pedone",
+      "chapter": "ch1",
+      "why": {
+        "en": "You must never speed up to beat a pedestrian who is crossing: accelerating at a crossing is dangerous and forbidden - false.",
+        "ru": "Нельзя ускоряться, чтобы опередить переходящего пешехода: разгон у зебры опасен и запрещён - неверно.",
+        "zh": "绝不能加速抢先于过街的行人：斑马线前加速危险且被禁止，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-12": {
+      "verdict": "FALSO",
+      "key_it": "ha rinunciato al suo diritto di passare",
+      "chapter": "ch1",
+      "why": {
+        "en": "A pedestrian who stops in the middle of the crossing has not given up the right to cross: you must still wait, so this is false.",
+        "ru": "Оставшийся посреди зебры пешеход не отказывается от права перехода: всё равно нужно ждать - неверно.",
+        "zh": "停在斑马线中间的行人并未放弃过街权利：仍须等待，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-13": {
+      "verdict": "FALSO",
+      "key_it": "i pedoni devono attraversare la strada affiancati, in modo da impiegare meno tempo",
+      "chapter": "ch1",
+      "why": {
+        "en": "Pedestrians are not required to cross side by side to save time; that rule does not exist, so the statement is false.",
+        "ru": "Пешеходы не обязаны переходить бок о бок, чтобы быстрее: такого правила нет - утверждение ложно.",
+        "zh": "行人并无义务并排过街以省时：不存在该规则，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-piazzole-6": {
+      "verdict": "FALSO",
+      "key_it": "non si deve rallentare, per evitare di ostacolare la circolazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "Near a school-bus stop you must not skip slowing down to avoid holding up traffic: children make this a danger zone, so this is false.",
+        "ru": "У остановки школьного автобуса нельзя избегать замедления, чтобы не мешать потоку: дети делают это опасной зоной - неверно.",
+        "zh": "在校车停靠点附近不能为避免拥堵而不减速：孩子使此处成为危险区，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-piazzole-7": {
+      "verdict": "FALSO",
+      "key_it": "occorre passare per primi, avendo sempre la precedenza sui bambini",
+      "chapter": "ch1",
+      "why": {
+        "en": "You never take priority over crossing children: at a school-bus stop children cross first, so claiming the right-of-way is false.",
+        "ru": "Вы никогда не имеете приоритета над переходящими детьми: у остановки школьного автобуса первыми идут дети - неверно.",
+        "zh": "过街儿童永远优先：校车停靠点处孩子先行，声称自己有路权是错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-piazzole-9": {
+      "verdict": "FALSO",
+      "key_it": "si deve rallentare solo se vi sono bambini che attraversano",
+      "chapter": "ch1",
+      "why": {
+        "en": "Near a school-bus stop you must slow down even before children start crossing, not only when you already see them - the \"only if\" is false.",
+        "ru": "У остановки школьного автобуса сбавляют ещё до того, как дети начнут переходить, а не только когда их уже видно - «только если» неверно.",
+        "zh": "校车停靠点附近即便孩子还没开始过街也应减速，而非只有看到他们时——\"仅当\"错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-taxi-conducente-0": {
+      "verdict": "VERO",
+      "key_it": "deve rallentare ed eventualmente fermarsi se vi sono pedoni che attraversano",
+      "chapter": "ch1",
+      "why": {
+        "en": "Near a taxi rank you must slow down and stop if pedestrians cross without looking, so the statement is true.",
+        "ru": "Рядом с таксопарком надо сбавить и при необходимости остановиться, если переходят не глядя пешеходы - верно.",
+        "zh": "靠近出租车候客区，若有行人没看就过街，须减速必要时停车，说法成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-taxi-conducente-1": {
+      "verdict": "VERO",
+      "key_it": "deve fare attenzione ai pedoni che salgono o scendono dal taxi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Near a taxi rank you must watch out for passengers getting in or out, as they may step onto the road unexpectedly - true.",
+        "ru": "У таксопарка надо следить за пассажирами, которые садятся и выходят, — они могут внезапно шагнуть на дорогу - верно.",
+        "zh": "出租车候客区须留意上下车的乘客，他们可能突然迈步到路上，成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-taxi-conducente-3": {
+      "verdict": "VERO",
+      "key_it": "possono attraversare improvvisamente la strada senza le dovute precauzioni",
+      "chapter": "ch1",
+      "why": {
+        "en": "Near a taxi rank pedestrians may cross suddenly without precautions, so you must stay alert and ready to stop - true.",
+        "ru": "У таксопарка пешеходы могут внезапно перейти дорогу без оглядки, поэтому надо быть готовым затормозить - верно.",
+        "zh": "出租车候客区行人可能不看就突然过街，因此须保持警觉并准备刹车，成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-taxi-conducente-4": {
+      "verdict": "FALSO",
+      "key_it": "deve dare la precedenza ai taxi che s'immettono sulla strada",
+      "chapter": "ch1",
+      "why": {
+        "en": "You are not obliged to give way to a taxi pulling out of its rank: merging vehicles must themselves yield, so this is false.",
+        "ru": "Вы не обязаны уступать выезжающему из таксопарка такси: выезжающий сам должен уступить - неверно.",
+        "zh": "你没有义务让行从候客区驶出的出租车：驶出车辆须自己让行，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
