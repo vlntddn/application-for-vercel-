@@ -715,6 +715,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-2": {
+      "verdict": "VERO",
+      "key_it": "deve tutelare la propria e l'altrui sicurezza",
+      "chapter": "ch1",
+      "why": {
+        "en": "The duty of safe driving means the driver must take care of both his own and everyone else’s safety, not only follow the written rules.",
+        "ru": "Обязательство безопасного вождения: водитель обязан заботиться о безопасности — и своей, и всех остальных на дороге, а не просто следовать букве правил.",
+        "zh": "安全驾驶的义务意味着驾驶员既要保障自己的安全，也要保障所有他人的安全，而不只是遵守规则条文。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-3": {
+      "verdict": "VERO",
+      "key_it": "rispettare gli agenti del traffico e collaborare con essi",
+      "chapter": "ch1",
+      "why": {
+        "en": "The driver must respect the traffic officers and cooperate with them; their instructions bind every road user.",
+        "ru": "Водитель обязан уважать инспекторов движения и взаимодействовать с ними: их указания обязательны для всех участников движения.",
+        "zh": "驾驶员必须尊重并配合交警，交警的指令对每一位道路使用者都有约束力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-4": {
+      "verdict": "VERO",
+      "key_it": "prevedere il comportamento degli altri utenti",
+      "chapter": "ch1",
+      "why": {
+        "en": "Anticipating the behaviour of other road users is part of the duty of care: driving safely means not only reacting to what happens, but foreseeing it.",
+        "ru": "Предвидение поведения других участников движения — часть обязанности осторожного вождения: безопасно значит не только реагировать на события, но и предвидеть их.",
+        "zh": "预判其他交通参与者的行为是谨慎驾驶义务的一部分：安全驾驶不仅是应对，还要预见。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-5": {
+      "verdict": "VERO",
+      "key_it": "paziente e tollerante anche in caso di rallentamento",
+      "chapter": "ch1",
+      "why": {
+        "en": "Patience and tolerance when traffic is slow are required: frustration is not a reason to drive carelessly or force one’s way through.",
+        "ru": "Терпение и выдержка при замедлении движения обязательны: раздражение не даёт права ездить небрежно и протискиваться.",
+        "zh": "车流减速时必须有耐心和宽容：焦躁不是鲁莽驾驶或强行超车插队的理由。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-6": {
+      "verdict": "VERO",
+      "key_it": "non deve fare sempre affidamento sul comportamento degli altri",
+      "chapter": "ch1",
+      "why": {
+        "en": "You may never rely on the other drivers’ correctness: their behaviour can be wrong, so you must protect yourself without counting on them.",
+        "ru": "Нельзя полагаться на корректность поведения других: оно может быть неверным, поэтому о своей безопасности надо заботиться самому.",
+        "zh": "绝不能依赖他人的正确行为：他们可能犯错，因此必须独立保障自身安全，不能指望别人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-7": {
+      "verdict": "VERO",
+      "key_it": "non può pretendere di passare per primo",
+      "chapter": "ch1",
+      "why": {
+        "en": "When in doubt about right of way, you must yield, not claim to go first: asserting priority on a mere assumption is how collisions start.",
+        "ru": "Если в праве преимущественного проезда есть сомнение — его надо уступить, а не требовать пройти первым: претензия, основанная на допущении, — это путь к столкновению.",
+        "zh": "当不确定谁有优先权时必须让行，而不是坚持先走：仅凭臆测主张优先权是事故的开端。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-10": {
+      "verdict": "FALSO",
+      "key_it": "approfittare della potenza del proprio veicolo per non dare la precedenza",
+      "chapter": "ch1",
+      "why": {
+        "en": "Engine power or vehicle size give no right to refuse the required right of way: whoever must yield yields, whatever the vehicle is.",
+        "ru": "Мощность двигателя и размер машины не дают права отказаться от положенного уступки: кто обязан уступить — уступает, какая бы машина ни была.",
+        "zh": "发动机功率或车辆尺寸都不能成为拒绝让行的理由：谁该让行就必须让行，与车辆无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-11": {
+      "verdict": "FALSO",
+      "key_it": "tenere un comportamento che è causa di insofferenza negli altri",
+      "chapter": "ch1",
+      "why": {
+        "en": "Heavy-vehicle drivers have no special right to be obstructive: they must drive with the same care as anyone, without causing irritation to other traffic.",
+        "ru": "У водителей тяжёлых машин нет привилегии создавать помехи: они обязаны ездить с той же осторожностью, что и все, не раздражая остальных.",
+        "zh": "大型车驾驶员没有制造阻碍的特权：他们必须以同样的谨慎驾驶，不引起其他交通参与者的不满。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-12": {
+      "verdict": "FALSO",
+      "key_it": "rispettare gli agenti del traffico solo se sono in divisa",
+      "chapter": "ch1",
+      "why": {
+        "en": "The officer’s authority does not depend on the uniform: traffic officers must be respected and obeyed regardless of what they are wearing.",
+        "ru": "Авторитет инспектора не зависит от формы: инспекторов движения надо уважать и подчиняться им вне зависимости от одежды.",
+        "zh": "交警的权威不取决于是否穿制服：无论穿什么，都必须尊重并服从交警。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-13": {
+      "verdict": "FALSO",
+      "key_it": "fare a meno di usare la massima prudenza quando si avvicina ad un incrocio",
+      "chapter": "ch1",
+      "why": {
+        "en": "Having the right of way at a junction never allows you to drop maximum caution: the others’ mistakes can still cause an accident, so check before entering.",
+        "ru": "Право преимущественного проезда на перекрёстке не отменяет предельной осторожности: чужие ошибки способны вызвать аварию, поэтому пересекаться надо с проверкой обстановки.",
+        "zh": "在路口有优先权也不意味着可以放下最大谨慎：他人的失误仍可能造成事故，驶入前必须确认。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-14": {
+      "verdict": "FALSO",
+      "key_it": "dare segni di impazienza, se il veicolo che sta davanti procede troppo lentamente",
+      "chapter": "ch1",
+      "why": {
+        "en": "A driver must stay calm even in slow traffic; showing impatience or pressing the horn at a slow vehicle does not speed the flow and only disturbs others.",
+        "ru": "Водитель обязан сохранять спокойствие даже в медленном потоке: показывать нетерпение и давить на клаксон медленной машине нельзя — это не ускоряет поток, а только раздражает.",
+        "zh": "即使车流缓慢，驾驶员也必须保持冷静：对慢车表现出不耐烦或按喇叭无济于事，只会干扰他人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-conducente-precedenze-0": {
+      "verdict": "VERO",
+      "key_it": "fermarsi e dare la precedenza al pedone non vedente con il bastone bianco",
+      "chapter": "ch1",
+      "why": {
+        "en": "A visually impaired pedestrian with the white stick has right of way even off the crossing: you must stop and let him cross, not only at a marked crosswalk.",
+        "ru": "Невидимый пешеход с белой тростью имеет преимущество и вне пешеходного перехода: надо остановиться и пропустить его, а не только на переходе.",
+        "zh": "持白杖的视障行人在人行横道外也有优先权：必须停车让他通过，而不能只在过街处才让。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-conducente-precedenze-1": {
+      "verdict": "VERO",
+      "key_it": "facilitare l'attraversamento al pedone non vedente con il bastone bianco",
+      "chapter": "ch1",
+      "why": {
+        "en": "The white stick marks a blind pedestrian: the driver must stop and facilitate his crossing outside the crosswalk, just as at one.",
+        "ru": "Белая трость — знак невидимого пешехода: водитель обязан остановиться и помочь ему перейти дорогу вне перехода, как и на переходе.",
+        "zh": "白杖是视障行人的标志：驾驶员必须停车并协助其过街，无论是否在人行横道上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-conducente-precedenze-2": {
+      "verdict": "VERO",
+      "key_it": "anche se non è accompagnato da un cane guida",
+      "chapter": "ch1",
+      "why": {
+        "en": "The right of way of a visually impaired pedestrian with the white stick holds even without a guide dog: the stick alone is the signal that you must yield.",
+        "ru": "Преимущество невидимого пешехода с белой тростью действует и без собаки-поводыря: достаточно одной трости, чтобы надо было уступить.",
+        "zh": "持白杖的视障行人即使没有导盲犬也享有优先权：仅凭白杖就必须让行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-conducente-precedenze-3": {
+      "verdict": "VERO",
+      "key_it": "pedone sordocieco che, con il bastone bianco-rosso",
+      "chapter": "ch1",
+      "why": {
+        "en": "A deaf-blind pedestrian with the white-and-red stick must be yielded to when he crosses off the crosswalk: the stick signals that he cannot sense approaching vehicles.",
+        "ru": "Глухонемой пешеход с бело-красной тростью имеет преимущество при переходе вне перехода: трость обозначает, что он не воспринимает приближающиеся машины.",
+        "zh": "持白红杖的聋盲行人在人行横道外横穿时享有优先权：该杖表明他无法感知来车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-conducente-precedenze-4": {
+      "verdict": "VERO",
+      "key_it": "bastone bianco o bianco-rosso",
+      "chapter": "ch1",
+      "why": {
+        "en": "The duty to yield applies to any pedestrian with a white or white-and-red stick, even outside a marked crossing: the stick, not the crossing, creates the priority.",
+        "ru": "Обязанность уступить распространяется на любого пешехода с белой или бело-красной тростью, даже вне перехода: преимущество даёт трость, а не переход.",
+        "zh": "对持白杖或白红杖的行人一律让行，即使在人行横道之外：优先权由杖决定，而非由过街处决定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-conducente-precedenze-5": {
+      "verdict": "VERO",
+      "key_it": "evitando di frenare bruscamente per non spaventarlo",
+      "chapter": "ch1",
+      "why": {
+        "en": "You must stop smoothly in time for a blind pedestrian with a white stick: a sudden brake can startle him, so stop calmly before the crossing.",
+        "ru": "Надо плавно остановиться заранее перед невидимым пешеходом с белой тростью: резкое торможение может его напугать, поэтому останавливаются спокойно.",
+        "zh": "必须在视障行人面前平稳提前停车：急刹会吓到他，所以要安静地停住。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-conducente-precedenze-6": {
+      "verdict": "FALSO",
+      "key_it": "accelerare per sgombrare rapidamente la carreggiata",
+      "chapter": "ch1",
+      "why": {
+        "en": "Accelerating to clear the road when a blind pedestrian with a white stick crosses is dangerous and forbidden: the driver must stop and yield, not speed up.",
+        "ru": "Разгоняться, чтобы быстро освободить дорогу, когда невидимый пешеход с белой тростью переходит её, опасно и запрещено: водитель должен остановиться и уступить, а не наращивать скорость.",
+        "zh": "当持白杖的视障行人过街时加速让开是危险且被禁止的：驾驶员必须停车让行，而不是加速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-conducente-precedenze-7": {
+      "verdict": "FALSO",
+      "key_it": "deve passare per primo, in quanto ha la precedenza",
+      "chapter": "ch1",
+      "why": {
+        "en": "Right of way never beats a blind pedestrian with a white stick crossing off the crosswalk: the driver must yield, even if signs grant him priority.",
+        "ru": "Право преимущественного проезда не ставит выше невидимого пешехода с белой тростью, переходящего вне перехода: водитель обязан уступить, даже если знаки дают ему приоритет.",
+        "zh": "优先权不能凌驾于持白杖在人行横道外过街的视障行人之上：即使标志赋予他优先权，驾驶员也必须让行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-conducente-precedenze-8": {
+      "verdict": "FALSO",
+      "key_it": "dargli la precedenza solo se l'attraversamento pedonale dista oltre 100 metri",
+      "chapter": "ch1",
+      "why": {
+        "en": "The 100-metre condition is invented: a blind pedestrian with a white stick must be yielded to whenever he crosses, no matter how close the nearest crossing is.",
+        "ru": "Условие о 100 метрах выдумано: невидимому пешеходу с белой тростью уступают при любом его переходе, независимо от расстояния до ближайшего перехода.",
+        "zh": "「100米以上才让行」的条件是虚构的：持白杖的视障行人只要过街就必须让行，与最近人行横道的距离无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
