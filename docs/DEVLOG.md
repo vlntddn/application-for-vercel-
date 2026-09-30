@@ -1,5 +1,20 @@
 # DEVLOG — Passo (последнее сверху)
 
+## 2026-09-30 — L9b: пояснения, порция 5 (ch1, слова-сигналы)
+
+Что сделано (коммит feat: L9b порция 5 на self-improve):
+- **data/explanations/definizioni-generali-doveri-strada.json** — ещё 20 записей
+  (итого 95/1993): attraversamento-pedonale-0, strade-extraurbane-principali-4,
+  isola-traffico (1/2/11), intersezione-raso-1, zona-traffico-limitato (0/1/2/3/6/7),
+  passaggio-livello (4/5), strada-definizione (0/1/2/3/9), corsia-12.
+- Темы: перекрёсток/остров/ЗТЛ/переезд/устройство дороги и полос. Числа не
+  использовал (в тексте их нет). Факты только из text_it + mustKnow ch1
+  (ZTL = solo autorizzati; isola di traffico = transito vietato).
+- Файл правлен node-скриптом (чтение → добавление объектов → запись); ни одного
+  существующего id не удалено (95 = 75 + 20).
+- Проверено гейтом checkAll (0 ошибок) + verify.sh → VERIFY OK (184 unit,
+  8 endpoint 200). Прогресс в строке L9b: сигналы 95/1993.
+
 ## 2026-09-30 — L9b: пояснения, порция 4 (ch1, слова-сигналы)
 
 Что сделано (коммит feat: L9b порция 4 на self-improve):
