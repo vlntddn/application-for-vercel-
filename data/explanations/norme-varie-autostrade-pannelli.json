@@ -780,6 +780,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ingorgo-uscita-immissione-7": {
+      "verdict": "FALSO",
+      "key_it": "la marcia per file parallele anche in assenza di traffico",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: parallel file driving (driving in serpentine) is a jam tool — used only in a real traffic jam so that every lane keeps moving. With no traffic it is pointless and dangerous.",
+        "ru": "Ложно: «змейка» (марш в параллельных очередях) — инструмент затора, чтобы все полосы продолжали двигаться; при отсутствии трафика она бессмысленна и опасна.",
+        "zh": "错误：并行车列行驶（“蛇形”通行）是应对拥堵的手段，让每条车道都能继续移动；没有交通堵塞时采用它既无意义也危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-rampe-svincoli-autostradali-0": {
+      "verdict": "VERO",
+      "key_it": "sostare solo in situazioni di emergenza",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: stopping on motorway carriageways, ramps and junctions is allowed only in genuine emergencies — the driver or a passenger feeling unwell, or a vehicle malfunction. Any other reason is a ban.",
+        "ru": "Верно: останавливаться на проезжих частях, подъёмных полосах и съездах автомагистралей можно только при настоящих ЧП — плохое самочувствие водителя или пассажира, неисправность машины; любое иное основание — нарушение.",
+        "zh": "正确：在高速公路行车道、坡道和出入口停车，只允许在真正的紧急情况下——司机或乘客身体不适，或车辆故障；其他任何理由都属违规。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-rampe-svincoli-autostradali-2": {
+      "verdict": "VERO",
+      "key_it": "non deve superare il tempo strettamente necessario e non deve protrarsi comunque oltre tre ore",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: an emergency stop is limited to strictly necessary time and may not exceed three hours in any case — if the problem cannot be fixed that fast, the vehicle must be removed.",
+        "ru": "Верно: аварийная остановка ограничена строго необходимым временем и никак не более трёх часов; если за это время не устранить причину — машину нужно убрать (эвакуация).",
+        "zh": "正确：紧急停车不得超过严格必要的时间，无论如何不得超过三小时——若届时问题仍未解决，车辆必须被拖离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-rampe-svincoli-autostradali-5": {
+      "verdict": "FALSO",
+      "key_it": "può protrarsi fino a 24 ore",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: '24 ore' is a number transposed from the service-area rule — on carriageways, ramps and junctions the hard ceiling is three hours, not a full day.",
+        "ru": "Ложно: «24 часа» — подставленная цифра из правила о зонах обслуживания; на проезжих частях, подъёмных полосах и съездах верхняя граница — три часа, а не сутки.",
+        "zh": "错误：“24小时”是从服务区规则里挪来的数字——在行车道、坡道和出入口，上限是三小时，而不是整整一天。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-automobilista-fermo-autostrada-1": {
+      "verdict": "FALSO",
+      "key_it": "lo deve accompagnare fino alla stazione di servizio più vicina",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: there is no duty to escort a stopped driver to a service area — doing so at motorway speed would create a hazard for everyone; the correct help is to call the rescue service.",
+        "ru": "Ложно: обязанности «провозить» остановившегося до ближайшей зоны обслуживания нет — ехать с ним на скоростях автомагистрали — опасность для всех; правильная помощь — вызов спасательной службы.",
+        "zh": "错误：没有义务把抛锚的司机“捎”到最近的服务区——以高速的速度搭载他是所有人的危险；正确的帮助是呼叫救援服务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-automobilista-fermo-autostrada-2": {
+      "verdict": "FALSO",
+      "key_it": "si deve fermare a prestare soccorso",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: stopping on a motorway to help is itself forbidden — an emergency stop for a third party creates exactly the kind of hazard the rules eliminate; help means calling the emergency services, not stopping yourself.",
+        "ru": "Ложно: останавливаться на автомагистрали ради помощи — само по себе запрет: такая остановка из-за чужого ЧП создаёт ровно ту опасность, которую правила убирают; помощь = вызов служб, а не собственная остановка.",
+        "zh": "错误：在高速上停车施救本身是被禁止的——为别人而做的紧急停车恰恰制造了规则要消除的那种危险；正确的帮助是呼叫救援服务，而不是自己停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-automobilista-fermo-autostrada-3": {
+      "verdict": "FALSO",
+      "key_it": "può retrocedere con prudenza per soccorrerlo",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'retrocedere con prudenza' (back up carefully) is not a legal move on these roads — reversing on a carriageway is an absolute prohibition, emergency or not.",
+        "ru": "Ложно: «отъехать назад с осторожностью» — незаконное действие на этих дорогах: движение задним ходом по проезжей части — абсолютный запрет, в ЧП или нет.",
+        "zh": "错误：“谨慎倒车”在这类道路上不是合法操作——在行车道上倒车是绝对禁止，无论是否处于紧急情况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-automobilista-fermo-autostrada-4": {
+      "verdict": "FALSO",
+      "key_it": "può trainare prudentemente il veicolo, fino al primo casello di uscita",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: private towing on a motorway is not allowed 'up to the first exit' — towing a broken-down vehicle there belongs to authorized rescue vehicles only (see the related rule).",
+        "ru": "Ложно: частный буксир на автомагистрали «до первого съезда» — не разрешён; буксировку неисправной машины там выполняют только уполномоченные спасательные средства.",
+        "zh": "错误：在高速上私人拖带“到第一个出口”是不允许的——那里拖带故障车辆只能由授权的救援车辆执行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-trasporto-animali-persone-0": {
+      "verdict": "VERO",
+      "key_it": "in modo da non limitare la libertà del conducente e da non impedirgli la visibilità",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: every passenger must sit so as not to restrict the driver’s freedom of movement and not to block his view — seats, belts and a clear line to the mirrors are part of safe driving.",
+        "ru": "Верно: каждый пассажир садится так, чтобы не ограничивать свободу движений водителя и не перекрывать ему обзор; посадка и ремни — часть безопасной езды.",
+        "zh": "正确：每位乘客的乘坐方式都不得限制驾驶员的操作自由、不得遮挡其视线——正确的坐姿和安全带是安全驾驶的组成部分。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-trasporto-animali-persone-3": {
+      "verdict": "VERO",
+      "key_it": "purché custoditi in gabbia o nel vano posteriore, appositamente diviso da rete",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: more than one pet animal may be carried, provided they are confined in a cage or in a rear compartment specifically divided off by a mesh — the point is that no animal can reach the driver's space.",
+        "ru": "Верно: несколько домашних животных можно везти, если они в клетке или в задней части, специально отделённой сеткой; суть — ни одно животное не может попасть в пространство водителя.",
+        "zh": "正确：可运输多只宠物，前提是它们被关在笼内，或放在专门用网隔开的后部空间——关键是任何动物都不能进入驾驶员区域。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-trasporto-animali-persone-5": {
+      "verdict": "FALSO",
+      "key_it": "può raggiungere il massimo di dieci",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'dieci' (ten) is invented — a car’s occupant maximum is set by the approved seats (and thus by the vehicle's registration data), not by a universal figure of ten.",
+        "ru": "Ложно: «десять» — выдуманная цифра; максимум пассажиров авто определяется количеством одобренных сидений (и записью в регистрационных данных), а не универсальной десяткой.",
+        "zh": "错误：“最多十人”是编造的数字——汽车的载客上限由认证座位数（即车辆登记数据）决定，而非统一的“十人”标准。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-trasporto-animali-persone-6": {
+      "verdict": "FALSO",
+      "key_it": "purché adeguatamente trattenuti al guinzaglio",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: the leash is not the approved restraint for cars — 'anche in numero superiore ad uno ... al guinzaglio' fails because dogs must be kept in a cage or a rear mesh-divided compartment; a leashed dog is free to move into the cabin.",
+        "ru": "Ложно: поводок — не одобренный способ фиксации собак в авто; при «более чем одной» собака обязана быть в клетке или в задней части за сеткой — на поводке она свободна попасть в кабину.",
+        "zh": "错误：牵引绳并不是汽车内固定犬只的合规方式——带多只狗时，必须关在笼内或放在网隔开的后部；拴绳的狗仍可能跑进车厢。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-trasporto-traino-motocicli-4": {
+      "verdict": "FALSO",
+      "key_it": "solo se quest'ultimo è maggiorenne",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: a motorcycle passenger is not required to be an adult — 'solo se maggiorenne' adds a restriction the code does not contain; the passenger just needs to be carried properly (helmet, feet on pegs).",
+        "ru": "Ложно: пассажир мотоцикла не обязан быть взрослым — «только совершеннолетний» добавляет ограничение, которого в ПДД нет; нужно, чтобы пассажир был правильно размещён (шлем, ноги на подножках).",
+        "zh": "错误：摩托车乘客无需是成年人——“仅限成年人”添加了法规中不存在的限制；要求只是乘客按规定乘坐（头盔、双脚踩脚蹬）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-trasporto-traino-motocicli-5": {
+      "verdict": "FALSO",
+      "key_it": "E' consentito ai motocicli farsi trainare, ma solo da autovetture",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: motorcycles may not be towed 'only by cars' — towing a motorcycle is generally not a normal operation under the rules as stated here; the premise that it is allowed by cars alone is wrong.",
+        "ru": "Ложно: мотоциклы не буксируются «только легковушками» — сам вывод о допустимости такого буксира в описанной форме неверен; это не штатная операция по правилам.",
+        "zh": "错误：摩托车并非“只能由小汽车拖带”——就本题所述形式而言，摩托车拖带本就不是规则所允许的正常操作，前提即错。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-sistemazione-carico-veicoli-0": {
+      "verdict": "VERO",
+      "key_it": "in modo da evitarne la caduta o la dispersione",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a load must be secured so it cannot fall off or scatter — loose cargo on the road endangers every vehicle behind and is a classic source of accidents.",
+        "ru": "Верно: груз крепится так, чтобы не падал и не рассыпался; рассыпавшийся груз на дороге — опасность для всех идущих сзади и классическая причина ДТП.",
+        "zh": "正确：货物必须固定牢靠，不能坠落或散落——散落在路上的货物是对后方所有车辆的危险，也是交通事故的经典诱因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-sistemazione-carico-veicoli-1": {
+      "verdict": "VERO",
+      "key_it": "in modo da non diminuire la visibilità al conducente né impedirgli la libertà dei movimenti",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a load must not cut the driver's visibility or block his movement — the same logic as the passenger rule: the driver keeps full view and full freedom to steer, brake and shift.",
+        "ru": "Верно: груз не должен сужать обзор водителя и мешать его движениям; та же логика, что и с пассажирами: у водителя — полный обзор и полная свобода руля, тормоза и рычага.",
+        "zh": "正确：货物不得削减驾驶员的视野、不得妨碍其肢体活动——与乘客规则同理：驾驶员须保持完整视野和操作自由（转向、制动、换挡）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-sistemazione-carico-veicoli-2": {
+      "verdict": "VERO",
+      "key_it": "in modo da non compromettere la stabilità del veicolo",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a load must not compromise the vehicle’s stability — overloaded axles or a high center of gravity make the car sway, brake longer and roll over.",
+        "ru": "Верно: груз не должен подтачивать устойчивость машины; перегруз осей или высоко расположенный центр тяжести — крен, длинный тормозной путь и риск переворота.",
+        "zh": "正确：货物不得损害车辆稳定性——车轴超载或重心过高会导致侧倾、制动距离拉长和翻车风险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-sistemazione-carico-veicoli-3": {
+      "verdict": "VERO",
+      "key_it": "in modo da non mascherare dispositivi di illuminazione e di segnalazione visiva né le targhe di riconoscimento",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a load must not mask the lights, visual signals, registration plates or hand signals — other road users identify and respond to exactly those elements.",
+        "ru": "Верно: груз не должен закрывать фары, визуальные сигналы, номера и жестикуляцию — остальные участники реагируют именно на эти элементы.",
+        "zh": "正确：货物不得遮挡灯光装置、视觉信号、车牌和手势——其他道路参与者正是依据这些元素识别和应对你的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-sistemazione-carico-veicoli-4": {
+      "verdict": "FALSO",
+      "key_it": "solo se il conducente deve condurre il veicolo su strada extraurbana",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: the 'only on extra-urban roads' restriction narrows a universal duty — cargo must be secured against falling and scattering on any road, urban or otherwise.",
+        "ru": "Ложно: «только на загородных» сужает универсальный долг; груз должен быть закреплён против падения и рассыпания на любой дороге, городской ли она или нет.",
+        "zh": "错误：“仅在城外公路”将一条普遍义务限缩了——无论城市还是城外公路，货物都必须固定以防坠落和散落。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-sistemazione-carico-veicoli-5": {
+      "verdict": "FALSO",
+      "key_it": "soltanto durante la circolazione notturna",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'only at night' fails because masking lights, signals and plates is always illegal — daytime visibility does not make it legal to hide the elements other drivers rely on.",
+        "ru": "Ложно: «только ночью» неверно: закрывать фары, сигналы и номера незаконно всегда; дневная видимость не делает законным скрывать элементы, на которые полагаются другие.",
+        "zh": "错误：“仅夜间”的说法不成立——遮挡灯光、信号和车牌在任何时候都违法；白天视线好，也不能据此藏起其他司机所依赖的要素。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
