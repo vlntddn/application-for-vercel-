@@ -1560,6 +1560,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-retromarcia-immissione-0": {
+      "verdict": "VERO",
+      "key_it": "deve assicurarsi che la strada sia libera ed eseguire la manovra con prudenza",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a driver moving in reverse to merge into traffic must be sure the road is clear and perform the manoeuvre with care.",
+        "ru": "Верно: при выезде задним ходом в поток нужно убедиться, что дорога свободна, и действовать осторожно.",
+        "zh": "正确：倒车驶入车流前须确认道路畅通，并谨慎完成操作。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-retromarcia-immissione-1": {
+      "verdict": "VERO",
+      "key_it": "deve azionare gli indicatori di direzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when reversing to merge into traffic you must use the direction indicators.",
+        "ru": "Верно: при выезде задним ходом в поток включают указатели поворота.",
+        "zh": "正确：倒车驶入车流时应开启转向灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-retromarcia-immissione-2": {
+      "verdict": "VERO",
+      "key_it": "deve dare la precedenza a tutti i veicoli provenienti sia da destra sia da sinistra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: reversing into the flow, you give way to all vehicles coming from both the right and the left.",
+        "ru": "Верно: при выезде задним ходом уступают всем машинам и справа, и слева.",
+        "zh": "正确：倒车汇入车流时须让所有从左右两侧驶来的车辆先行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-retromarcia-immissione-3": {
+      "verdict": "VERO",
+      "key_it": "deve fare attenzione agli eventuali pedoni in transito dietro di esso",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when reversing to merge you must watch for pedestrians behind the vehicle.",
+        "ru": "Верно: при выезде задним ходом следят за пешеходами позади машины.",
+        "zh": "正确：倒车汇入时须留意车后的行人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-retromarcia-immissione-4": {
+      "verdict": "FALSO",
+      "key_it": "deve azionare la segnalazione luminosa di pericolo",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: reversing to merge into traffic does not require the warning flashers (four flashing arrows) — the direction indicator is what you use.",
+        "ru": "Неверно: выезд задним ходом в поток не требует аварийной сигнализации — используется указатель поворота.",
+        "zh": "错误：倒车汇入车流不需要双闪——应使用转向灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-retromarcia-immissione-5": {
+      "verdict": "FALSO",
+      "key_it": "deve suonare il clacson durante l'intera manovra",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not honk continuously during the whole reversing manoeuvre to merge.",
+        "ru": "Неверно: при манёвре задним ходом нельзя гудеть на протяжении всего действия.",
+        "zh": "错误：倒车汇入操作全程不应持续按喇叭。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-retromarcia-immissione-6": {
+      "verdict": "FALSO",
+      "key_it": "deve dare la precedenza ai veicoli che transitano nel suo senso di marcia, ad eccezione delle biciclette",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: in reverse you give way to all vehicles in motion — bicycles are not excluded.",
+        "ru": "Неверно: при заднем ходе уступают всем едущим — велосипеды не исключаются.",
+        "zh": "错误：倒车时对所有正在行驶的车辆让行——自行车也不例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-margine-destro-della-carreggiata-0": {
+      "verdict": "VERO",
+      "key_it": "deve effettuare la manovra senza creare pericolo o intralcio agli altri utenti della strada",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: pulling over to the right edge must be done without creating danger or obstruction for other road users.",
+        "ru": "Верно: заезд на правый край выполняют без опасности и помех другим участникам.",
+        "zh": "正确：靠右停车不得给其他道路使用者带来危险或阻碍。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-margine-destro-della-carreggiata-1": {
+      "verdict": "VERO",
+      "key_it": "deve tenere conto della posizione, distanza, direzione degli altri utenti della strada",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before stopping at the right edge you must take into account the position, distance and direction of the other road users.",
+        "ru": "Верно: перед остановкой у правого края учитывают положение, дистанцию и направление других участников.",
+        "zh": "正确：靠右停车前须考虑其他道路使用者的位置、距离和方向。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-margine-destro-della-carreggiata-2": {
+      "verdict": "VERO",
+      "key_it": "deve evitare di creare pericolo ai conducenti di veicoli a due ruote sopraggiungenti",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when pulling over you must not create danger for approaching two-wheeled vehicles.",
+        "ru": "Верно: при заезде на край нельзя создавать опасность для приближающихся двухколёсных.",
+        "zh": "正确：靠边停车时不得给接近的两轮车辆带来危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-margine-destro-della-carreggiata-3": {
+      "verdict": "VERO",
+      "key_it": "deve segnalare con sufficiente anticipo la sua intenzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the intention to stop at the right edge must be signalled with sufficient advance (direction indicator).",
+        "ru": "Верно: намерение остановиться у правого края объявляется заранее (указателем).",
+        "zh": "正确：靠右停车的意图须提前（用转向灯）示意。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-margine-destro-della-carreggiata-4": {
+      "verdict": "VERO",
+      "key_it": "deve evitare brusche frenate, per garantire la sicurezza degli altri utenti della strada",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when pulling over you must avoid sudden braking to keep the other road users safe.",
+        "ru": "Верно: при заезде на край избегают резкого торможения, чтобы не подвергать опасности других участников.",
+        "zh": "正确：靠边停车时应避免急刹车，以保障其他道路使用者的安全。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-margine-destro-della-carreggiata-5": {
+      "verdict": "FALSO",
+      "key_it": "deve eseguire la manovra lampeggiando ripetutamente",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: pulling over is not done by flashing the lights repeatedly.",
+        "ru": "Неверно: заезд на край выполняют с указателем поворота, а не многократным миганием света.",
+        "zh": "错误：靠边停车不是反复闪灯完成的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-margine-destro-della-carreggiata-6": {
+      "verdict": "FALSO",
+      "key_it": "deve segnalare con sufficiente anticipo azionando la segnalazione luminosa di pericolo",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: to stop at the right edge you signal with the direction indicator, not the warning flashers.",
+        "ru": "Неверно: для остановки у правого края включают указатель поворота, а не аварийную сигнализацию.",
+        "zh": "错误：靠右停车应打转向灯，而不是双闪。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-margine-destro-della-carreggiata-7": {
+      "verdict": "FALSO",
+      "key_it": "può evitare di segnalare la sua intenzione di effettuare tale manovra se il traffico è scarso",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the intention to pull over must be signalled regardless of how light the traffic is.",
+        "ru": "Неверно: намерение остановиться у края объявляют всегда, независимо от плотности движения.",
+        "zh": "错误：无论交通多稀疏，靠边停车的意图都必须示意。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-13": {
+      "verdict": "FALSO",
+      "key_it": "non può essere utilizzata quando si circola su autostrada",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the anti-glare (night) position of the central rear-view mirror can be used on the motorway too — it is chosen to reduce glare, not forbidden on any road.",
+        "ru": "Неверно: антибликовое положение центрального зеркала можно использовать и на автомагистрали — оно снимает ослепление, не запрещено нигде.",
+        "zh": "错误：中央后视镜的防眩光位置在高速上也可以使用——它用于减少眩光，并非任何道路都禁用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-17": {
+      "verdict": "FALSO",
+      "key_it": "può essere rimosso se il veicolo è dotato di specchio laterale sinistro",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the central rear-view mirror cannot be removed just because the vehicle has a left side mirror — it is required equipment.",
+        "ru": "Неверно: центральное зеркало нельзя снять только потому, что есть левое боковое — оно обязательный элемент.",
+        "zh": "错误：不能因为有左侧后视镜就拆掉中央后视镜——它是必备部件。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-21": {
+      "verdict": "FALSO",
+      "key_it": "deve di norma essere effettuata con il veicolo in marcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: mirrors are normally adjusted with the vehicle stopped, not while it is moving.",
+        "ru": "Неверно: зеркала настраивают, как правило, на стоящей машине, а не в движении.",
+        "zh": "错误：后视镜通常在停车状态下调节，而不是在行驶中。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-22": {
+      "verdict": "FALSO",
+      "key_it": "specchi retrovisori esterni degli autoveicoli possono essere sostituiti con altri di tipo differente, purché di superficie maggiore",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the external mirrors cannot simply be swapped for a different type — even with a larger surface.",
+        "ru": "Неверно: внешние зеркала нельзя просто заменить на другой тип — даже с большей площадью.",
+        "zh": "错误：外部后视镜不能随意换成不同类型——即使面积更大也不行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-23": {
+      "verdict": "FALSO",
+      "key_it": "Si può circolare con un autoveicolo in cui mancano temporaneamente gli specchi retrovisori",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you cannot drive a car without its rear-view mirrors, even at low speed with the flashers on.",
+        "ru": "Неверно: без зеркал заднего вида ездить нельзя — даже медленно и с аварийкой.",
+        "zh": "错误：不能没有后视镜就驾车——即使低速并开双闪也不行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
