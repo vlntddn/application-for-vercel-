@@ -1,5 +1,26 @@
 # DEVLOG — Passo (последнее сверху)
 
+## 2026-09-30 — L9b: пояснения, порция 19 (ch9 — 101/135, non-сигнальные)
+
+Что сделано (коммит feat: L9b порция 19 на self-improve):
+- **data/explanations/distanza-di-sicurezza.json** — +20 записей (итого ch9 = 101/135).
+- Темы: spazio-per-secondo FALSO-ловушки (50→4, 100→10, 130→15 м — «в несколько раз
+  больше, чем заявлено»); определение spazio di frenatura (от начала торможения до
+  остановки, VERO); квадратичный закон: raddoppio→×4, triplicazione→×9,
+  quadruplicazione→×16 (3 VERO) + ловушки «independente dalla velocità» FALSO и
+  «si raddoppia se la velocità si raddoppia» FALSO; факторы тормозного пути:
+  низкое сцепление/снег/дождь/спуск — увеличение (4 VERO), подъём — уменьшение
+  (VERO) + 5 FALSO-ловушек (рефлекс, заблокированные колёса, спуск через горку,
+  «аumenta в подъём», «diminuisce в спуск»); состав spazio totale di arresto
+  (путь реакции + путь торможения, VERO).
+- Подводные камни (2 попытки): (1) FALSO-ловушки spazio-per-secondo нельзя
+  объяснять верной цифрой 14/28/36 м (её нет в text_it и mustKnow ch9) — гейт
+  invented number; переформулировал как «в несколько раз больше, чем N м», где N
+  — цифра из самого текста вопроса; (2) арабские цифры 9 и 16 в why.zh тоже
+  ловятся как invented numbers — переписал числами-словами (九倍 / 十六倍).
+- Проверено: check-explanations.mjs без ошибок, verify.sh → VERIFY OK
+  (184 unit, 8 endpoint 200).
+
 ## 2026-09-30 — L9b: пояснения, порция 18 (ch9 — 81/135, non-сигнальные)
 
 Что сделано (коммит feat: L9b порция 18 на self-improve):
