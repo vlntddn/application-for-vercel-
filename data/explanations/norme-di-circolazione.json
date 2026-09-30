@@ -4017,6 +4017,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incroci-circolazione-rotatoria-4": {
+      "verdict": "VERO",
+      "key_it": "è opportuno moderare la velocità ed usare la massima prudenza",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before entering a roundabout you should slow down and be extra careful, watching the behaviour of the other users inside the circle before you join.",
+        "ru": "Верно: перед въездом в кольцевой перекрёсток нужно снизить скорость и проявить особую осторожность, наблюдая за поведением участников в кольце.",
+        "zh": "正确：驶入环形交叉口前，应减速并格外谨慎，同时观察环内其他交通参与者的行为。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incroci-circolazione-rotatoria-5": {
+      "verdict": "VERO",
+      "key_it": "in genere spetta al conducente che procede in discesa arrestarsi ed eventualmente fare retromarcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a steep hill where passing is difficult, it is usually the driver going downhill who stops and backs up, because reversing uphill is easier and safer to control.",
+        "ru": "Верно: на крутом подъёме, где разъезд затруднён, обычно останавливается и при необходимости отъезжает задним ходом тот, кто едет вниз — это безопаснее контролировать.",
+        "zh": "正确：在坡度大、难以会车的路段，通常由下行车辆停车并必要时倒车，因为这样更容易控制、更安全。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incroci-circolazione-rotatoria-6": {
+      "verdict": "VERO",
+      "key_it": "bisogna che ciò avvenga in corrispondenza della striscia trasversale",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: at a yield sign you must stop exactly at the transverse strip with the row of white triangles, not before it, so you can give way clearly and predictably.",
+        "ru": "Верно: у знака «Уступите дорогу» остановка должна происходить именно на поперечной полосе из белых треугольников — так уступка очевидна и предсказуема.",
+        "zh": "正确：在“让行”标志处，必须停在由白色三角形组成的横线上，这样才能清晰、可预测地让行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incroci-circolazione-rotatoria-9": {
+      "verdict": "FALSO",
+      "key_it": "i veicoli circolanti nell'anello possono effettuare manovre di retromarcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: inside a roundabout vehicles must keep the flow direction; reversing in the ring is prohibited because it is dangerous and breaks the expected movement of other drivers.",
+        "ru": "Неверно: в кольце автомобили обязаны двигаться по ходу потока; движение задним ходом по кольцу запрещено, потому что опасно и нарушает ожидаемое движение других водителей.",
+        "zh": "错误：在环岛内，车辆必须沿环流方向行驶；在环内倒车是禁止的，因为它危险且打乱其他驾驶员的预期行驶方向。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incroci-circolazione-rotatoria-10": {
+      "verdict": "FALSO",
+      "key_it": "i veicoli circolanti all'interno dell'anello possono sorpassare sia a destra che a sinistra",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: overtaking inside a roundabout is not allowed either on the right or on the left; the ring is designed for an orderly flow, and overtaking would be unpredictable and dangerous.",
+        "ru": "Неверно: обгон в кольце запрещён и справа, и слева; кольцо рассчитано на упорядоченный поток, а обгон в нём непредсказуем и опасен.",
+        "zh": "错误：在环岛内禁止从右侧或左侧超车；环岛用于保持有序车流，在环内超车既不可预测又危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-veicolo-0": {
+      "verdict": "VERO",
+      "key_it": "in genere spetta al conducente che procede in discesa arrestarsi",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a steep grade where passing is not easy, it is generally the driver descending who must stop, since backing uphill is easier to handle than backing downhill.",
+        "ru": "Верно: на крутом участке, где разъезд затруднён, обычно останавливается тот, кто едет под уклон — закатить вверх задним ходом безопаснее, чем скатываться вниз.",
+        "zh": "正确：在坡度大、难以会车的路段，一般由下坡一方停车，因为向上倒车比向下倒车更安全可控。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-veicolo-2": {
+      "verdict": "VERO",
+      "key_it": "spetta a lui accostare e lasciar passare l’altro conducente",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if one driver is next to a passing bay on a steep hill, that driver should pull over and let the other one pass, because the bay is exactly what it is for.",
+        "ru": "Верно: если один из водителей рядом с местом разъезда на крутом участке, ему следует отъехать к краю и пропустить второго — место разъезда создано именно для этого.",
+        "zh": "正确：如果其中一名驾驶员位于陡坡上的会让车台旁，他应靠边让另一名驾驶员通过，因为会让台正是为此而设。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-veicolo-3": {
+      "verdict": "FALSO",
+      "key_it": "In presenza del segnale di STOP non occorre arrestarsi",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: a STOP sign always requires a full stop at the stop line, whatever the conditions — you cannot skip stopping just because no other vehicle is visible.",
+        "ru": "Неверно: знак STOP всегда требует полной остановки на стоп-линии, в любых условиях — пропускать остановку «потому что машины не видно» нельзя.",
+        "zh": "错误：STOP标志在任何情况下都要求在停车线处完全停车——不能因为看不到其他车辆就跳过停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-veicolo-4": {
+      "verdict": "FALSO",
+      "key_it": "in genere spetta al conducente che procede in salita arrestarsi",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: on a steep hill where passing is difficult it is not the driver going uphill who stops; it is the one descending, because reversing uphill is easier and safer.",
+        "ru": "Неверно: на крутом участке с затруднённым разъездом не тот, кто едет в гору, должен останавливаться, а тот, кто едет под уклон — так безопаснее.",
+        "zh": "错误：在坡度大、难以会车的路段，停车的不应是上坡车辆，而是下坡车辆，因为这样更安全。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-arresto-veicolo-5": {
+      "verdict": "FALSO",
+      "key_it": "è consentito arrestarsi sulle strisce pedonali",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: you must never stop on the pedestrian crossing, even if the pedestrian light is red; vehicles that cannot clear the crossing are to wait before it.",
+        "ru": "Неверно: останавливаться на пешеходном переходе нельзя даже тогда, когда пешеходам горит красный; ждущие машины останавливаются перед переходом.",
+        "zh": "错误：即使行人信号灯是红灯，也不得停在人行横道上；无法越过横道的车辆应在横道前等候。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-auto-della-polizia-0": {
+      "verdict": "VERO",
+      "key_it": "I conducenti devono attenersi alle segnalazioni di pericolo o alle prescrizioni",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the danger signals and instructions displayed on the illuminated panels of police vehicles are binding for all drivers, like any official traffic instruction.",
+        "ru": "Верно: сигналы опасности и предписания на световых панелях полицейских автомобилей обязательны для всех водителей, как любое официальное регулирование.",
+        "zh": "正确：警车照明面板上显示的险情信号和指示对所有驾驶员具有约束力，如同任何官方交通指令。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-auto-della-polizia-1": {
+      "verdict": "VERO",
+      "key_it": "avete l'obbligo di arrestarvi",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when a police car with siren pulls up in front of you and shows the illuminated word ACCOSTARE, you are obliged to stop.",
+        "ru": "Верно: если полицейская машина с сиреной обгоняет вас, выезжает впереди и показывает надпись «Остановиться» (ACCOSTARE), вы обязаны остановиться.",
+        "zh": "正确：当开启警笛的警车超越您并停在前方、车顶显示“停车”（ACCOSTARE）字样时，您必须停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-auto-della-polizia-3": {
+      "verdict": "VERO",
+      "key_it": "bisogna diminuire la velocità",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the illuminated word INCIDENTE on a police car tells you that an accident or intervention is nearby, so you must slow down and proceed with care.",
+        "ru": "Верно: надпись «АВАРИЯ» (INCIDENTE) на полицейской машине сообщает, что рядом авария или вмешательство, поэтому нужно снизить скорость и ехать осторожно.",
+        "zh": "正确：警车上的“事故”（INCIDENTE）字样提示前方附近有事故或处置现场，因此必须减速谨慎行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-auto-della-polizia-4": {
+      "verdict": "FALSO",
+      "key_it": "significa che quella zona è ad alto rischio di incidenti",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the word INCIDENTE on a police vehicle is not a general warning that the area is accident-prone; it points to a concrete incident or intervention happening now.",
+        "ru": "Неверно: надпись «АВАРИЯ» на полицейской машине — не общая предупреждающая метка «зона повышенного риска», а указание на конкретное происшествие, которое происходит сейчас.",
+        "zh": "错误：警车上的“事故”字样并不是表示该区域属于事故高发区，而是提示此刻正在发生的具体事故或处置。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-auto-della-polizia-5": {
+      "verdict": "FALSO",
+      "key_it": "significa che avete l'obbligo di svoltare",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the illuminated word ACCOSTARE means you must stop, not turn; there is no obligation to change direction in this situation.",
+        "ru": "Неверно: надпись «Остановиться» (ACCOSTARE) означает обязанность остановиться, а не повернуть; менять направление в этой ситуации не требуется.",
+        "zh": "正确：“停车”（ACCOSTARE）字样表示必须停车，而不是转弯；此情形下没有改变行驶方向的义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-auto-della-polizia-6": {
+      "verdict": "FALSO",
+      "key_it": "l'obbligo è rivolto ai soli veicoli pesanti",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the illuminated word RALLENTARE on a police car addresses all drivers, not only heavy vehicles; everyone must slow down.",
+        "ru": "Неверно: надпись «Снизить скорость» (RALLENTARE) на полицейской машине обращена ко всем водителям, а не только к тяжёлым машинам; снижать скорость обязан каждый.",
+        "zh": "错误：警车上的“减速”（RALLENTARE）字样面向所有驾驶员，而不仅仅是重型车辆；人人都必须减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-mancato-rispetto-delle-norme-0": {
+      "verdict": "VERO",
+      "key_it": "comporta, tra l'altro, la perdita di punti dalla patente",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: entering traffic without following the prescribed joining rules is a sanctionable violation and, among other things, leads to demerit points on the licence.",
+        "ru": "Верно: въезд в поток с нарушением установленных правил въезда — нарушение, за которое, в частности, списываются баллы с водительского удостоверения.",
+        "zh": "正确：未按规定规则汇入车流属于违规行为，除其他处罚外，还会被扣除驾照分数。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-mancato-rispetto-delle-norme-1": {
+      "verdict": "FALSO",
+      "key_it": "non comporta la sottrazione di punti dalla patente",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: ignoring the rules for joining traffic does carry demerit points, not only a fine; the statement mixes up the consequences.",
+        "ru": "Неверно: за нарушение правил въезда в поток снимаются баллы с удостоверения, а не только штраф; утверждение путает последствия.",
+        "zh": "错误：违反汇入车流的规则会导致驾照扣分，而不仅仅是罚款；该说法混淆了处罚后果。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-mancato-rispetto-delle-norme-2": {
+      "verdict": "FALSO",
+      "key_it": "sottrazione di 4 punti dalla patente",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: stopping at the right edge without signalling in advance is indeed a sanctionable violation, but the number of demerit points stated here is wrong for this case.",
+        "ru": "Неверно: остановка у правого края без своевременной подачи сигнала действительно является нарушением, но число баллов, указанное в утверждении, для этого случая неверно.",
+        "zh": "错误：在道路右侧停车而未提前示意，确实属于违规行为，但本句中列出的扣分数量针对该情形是错误的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-0": {
+      "verdict": "VERO",
+      "key_it": "Gli specchi retrovisori contribuiscono alla visione panoramica del conducente",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the mirrors are part of the driver's field of view: they extend the panoramic vision behind and beside the vehicle, so using them is part of the normal driving technique.",
+        "ru": "Верно: зеркала — часть обзора водителя: они расширяют панорамное видимость позади и по бокам машины, поэтому их использование входит в нормальную технику вождения.",
+        "zh": "正确：后视镜是驾驶员视野的组成部分：它扩展了车辆后方和侧方的全景视野，因此使用后视镜属于常规驾驶技术。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
