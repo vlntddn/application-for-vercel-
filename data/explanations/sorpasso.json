@@ -520,6 +520,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-3": {
+      "verdict": "VERO",
+      "key_it": "due carreggiate separate con almeno due corsie",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking in a curve is allowed when the road has two separate carriageways with at least two lanes per direction.",
+        "ru": "Верно: обгон в повороте допустим, если дорога имеет две раздельные проезжие части с минимум двумя полосами в каждую сторону.",
+        "zh": "正确：道路为双幅分离且每方向至少两条车道时，弯道允许超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-4": {
+      "verdict": "VERO",
+      "key_it": "due carreggiate separate e a due corsie per senso",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking over a speed hump is allowed on roads with two separate carriageways and two lanes per direction.",
+        "ru": "Верно: обгон на лежачем полицейском допустим, если дорога с двумя раздельными проезжими частями и двумя полосами в каждую сторону.",
+        "zh": "正确：双幅分离且每方向两条车道的道路上，减速带上允许超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-5": {
+      "verdict": "VERO",
+      "key_it": "spostarsi sul lato riservato all'altro senso di marcia",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking a car that is itself overtaking is forbidden if it means moving onto the opposite carriageway.",
+        "ru": "Верно: обгонять обгоняющий автомобиль запрещено, если для этого нужно выехать на встречную полосу.",
+        "zh": "正确：若超车需驶入对向车道，则禁止超越正在超车的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-6": {
+      "verdict": "VERO",
+      "key_it": "fermi ai passaggi a livello",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking vehicles stopped at a level crossing is forbidden when it requires entering the opposite half of the road.",
+        "ru": "Верно: обгон остановившихся на железнодорожном переезде запрещён, если нужно выехать на встречную половину.",
+        "zh": "正确：若需驶入对向车道，禁止超越在铁路道口停车的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-7": {
+      "verdict": "VERO",
+      "key_it": "in lento movimento ai passaggi a livello",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking vehicles moving slowly at a level crossing is banned when it requires moving onto the opposite carriageway.",
+        "ru": "Верно: обгон медленно движущихся у железнодорожного переезда запрещён, если нужно выехать на встречную полосу.",
+        "zh": "正确：若需驶入对向车道，禁止超越在铁路道口缓慢行驶的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-8": {
+      "verdict": "VERO",
+      "key_it": "fermi ai semafori",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking vehicles stopped at a traffic light is forbidden when it requires entering the opposite carriageway.",
+        "ru": "Верно: обгон остановившихся на светофоре запрещён, если нужно выехать на встречную полосу.",
+        "zh": "正确：若需驶入对向车道，禁止超越在信号灯前停车的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-9": {
+      "verdict": "VERO",
+      "key_it": "a causa di congestione della circolazione",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking in slow traffic caused by congestion is banned when it requires moving onto the opposite carriageway.",
+        "ru": "Верно: обгон в медленном потоке из-за затора запрещён, если нужно выехать на встречную полосу.",
+        "zh": "正确：若需驶入对向车道，禁止在拥堵慢流中超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-10": {
+      "verdict": "VERO",
+      "key_it": "intersezioni se regolate dai semafori",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking near or at intersections controlled by traffic lights is allowed.",
+        "ru": "Верно: обгон вблизи или на перекрёстке со светофором разрешён.",
+        "zh": "正确：在信号灯控制的路口附近或路口处允许超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-11": {
+      "verdict": "VERO",
+      "key_it": "ha indicato di voler svoltare a sinistra",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: right-hand overtaking at a signalised intersection is allowed if the car ahead signalled a left turn and has started the manoeuvre.",
+        "ru": "Верно: на регулируемом перекрёстке обгон справа допустим, если впереди включил левоповоротный и начал манёвр.",
+        "zh": "正确：信号灯路口，前方车辆已打左转灯并开始转弯时，允许从其右侧超越。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-12": {
+      "verdict": "VERO",
+      "key_it": "precedenza purché a due carreggiate separate",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking at priority intersections is allowed if the road has two separate carriageways and the lanes are marked by horizontal road markings.",
+        "ru": "Верно: на перекрёстке без приоритета обгон допустим при двух раздельных проезжих частях и полосах, обозначенных горизонтальной разметкой.",
+        "zh": "正确：无优先权的路口，若为双幅分离且车道有专用横向标线，允许超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-13": {
+      "verdict": "VERO",
+      "key_it": "non a motore e non si invade il lato riservato",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking a non-motorised two-wheeler at an intersection is allowed if you do not enter the opposite side.",
+        "ru": "Верно: обгон немоторизированного двухколёсного средства на перекрёстке разрешён, если не выезжать на встречную сторону.",
+        "zh": "正确：路口处超越非机动车，只要不驶入对向一侧，即为允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-14": {
+      "verdict": "VERO",
+      "key_it": "intersezioni regolate da agenti del traffico",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking at intersections regulated by traffic officers is allowed.",
+        "ru": "Верно: обгон на перекрёстке, где регулируют движение инспекторы, разрешён.",
+        "zh": "正确：在交通管理员指挥的路口允许超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-15": {
+      "verdict": "VERO",
+      "key_it": "passaggi a livello senza barriere",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking near or at a level crossing without barriers is allowed if traffic is controlled by traffic lights.",
+        "ru": "Верно: обгон вблизи или на железнодорожном переезде без шлагбаума допустим при управлении движением светофорами.",
+        "zh": "正确：无人看守的铁路道口，若交通由信号灯控制，附近或道口处允许超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-16": {
+      "verdict": "VERO",
+      "key_it": "arrestato in corrispondenza di un passaggio pedonale",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking a vehicle that has stopped at a pedestrian crossing to let pedestrians cross is forbidden.",
+        "ru": "Верно: обгон остановившегося у пешеходного перехода, чтобы пропустить пешеходов, запрещён.",
+        "zh": "正确：禁止超越在人行横道前停车让行的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-17": {
+      "verdict": "VERO",
+      "key_it": "abbia rallentato in corrispondenza di un passaggio pedonale",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking a vehicle that has slowed down at a pedestrian crossing to let pedestrians cross is forbidden.",
+        "ru": "Верно: обгон замедлившегося у пешеходного перехода для пропуска пешеходов запрещён.",
+        "zh": "正确：禁止超越在人行横道处减速让行的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-18": {
+      "verdict": "VERO",
+      "key_it": "corsie di accelerazione o di decelerazione",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking on acceleration or deceleration lanes is forbidden.",
+        "ru": "Верно: обгон на полосах разгона и торможения запрещён.",
+        "zh": "正确：禁止在加速车道或减速车道上超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-19": {
+      "verdict": "VERO",
+      "key_it": "striscia longitudinale bianca continua",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking is forbidden when it requires crossing a single or double continuous white longitudinal line.",
+        "ru": "Верно: обгон запрещён, если нужно пересечь сплошную белую продольную линию — одинарную или двойную.",
+        "zh": "正确：若需跨越单条或双条白色实线，禁止超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-20": {
+      "verdict": "VERO",
+      "key_it": "aumenta se il veicolo da sorpassare accelera",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the space needed to overtake grows when the car being overtaken accelerates.",
+        "ru": "Верно: при обгоне, если обгоняемый ускоряется, требуемый запас расстояния растёт.",
+        "zh": "正确：被超车辆加速时，完成超车所需的距离增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-21": {
+      "verdict": "VERO",
+      "key_it": "lunghezza del veicolo da sorpassare",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the space needed to overtake grows with the length of the vehicle being overtaken.",
+        "ru": "Верно: чем длиннее обгоняемый автомобиль, тем больше расстояние нужно для обгона.",
+        "zh": "正确：被超车辆越长，完成超车所需的距离越大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-22": {
+      "verdict": "VERO",
+      "key_it": "lunghezza del veicolo che sorpassa",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the space needed for the manoeuvre grows with the length of the vehicle doing the overtaking.",
+        "ru": "Верно: чем длиннее автомобиль, выполняющий обгон, тем больше требуется пространства для манёвра.",
+        "zh": "正确：执行超车的车辆越长，完成该操作所需的空间越大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
