@@ -260,6 +260,84 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-8": {
+      "verdict": "FALSO",
+      "key_it": "anche nei centri abitati",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: the mobile warning device is NOT placed in built-up areas — there it is forbidden; it is used on extra-urban roads.",
+        "ru": "Неверно: мобильный знак опасности НЕ ставится в населённых пунктах — там это запрещено; его используют на загородных дорогах.",
+        "zh": "错误：在居民区不得放置临时警告标志——那里是禁止的，它用于城外道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-salita-discesa-passeggero-1": {
+      "verdict": "VERO",
+      "key_it": "aprire la portiera solamente quando non si causa pericolo",
+      "chapter": "ch17",
+      "why": {
+        "en": "True: the door must be opened to let a passenger in or out only when it does not endanger other road users.",
+        "ru": "Верно: дверца открывается для посадки/высадки пассажира только тогда, когда это не создаёт опасности другим участникам движения.",
+        "zh": "正确：只有在不妨碍其他道路使用者时，才可开关车门让乘客上下车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-salita-discesa-passeggero-2": {
+      "verdict": "VERO",
+      "key_it": "fino a che il veicolo sia completamente fermo",
+      "chapter": "ch17",
+      "why": {
+        "en": "True: the passenger must wait until the vehicle is completely stopped before getting in or out.",
+        "ru": "Верно: пассажиру нужно дождаться полной остановки автомобиля перед посадкой или высадкой.",
+        "zh": "正确：乘客须等车辆完全停稳后再上下车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-salita-discesa-passeggero-3": {
+      "verdict": "VERO",
+      "key_it": "il controllo di un adulto",
+      "chapter": "ch17",
+      "why": {
+        "en": "True: a child should get in or out of the vehicle only under an adult in charge of them.",
+        "ru": "Верно: ребёнку садиться/выходить из автомобиля следует только под присмотром взрослого, за него отвечающего.",
+        "zh": "正确：儿童上下车时应由负责的成人在旁看护。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-salita-discesa-passeggero-4": {
+      "verdict": "FALSO",
+      "key_it": "l'apertura della portiera di destra è priva di qualsiasi rischio e pericolo",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: the right-hand door opens toward the traffic side and is the MOST dangerous to open — it is not without any risk.",
+        "ru": "Неверно: правая дверца открывается со стороны встречного потока — это САМАЯ ОПАСНАЯ, а не «без какого-либо риска».",
+        "zh": "错误：右侧车门朝车流方向开启，是最危险的，并非“毫无风险和危险”。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-pannelli-galleria-6": {
+      "verdict": "FALSO",
+      "key_it": "in netto contrasto con gli ordini vocali impartiti dai vigili del fuoco",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: in a tunnel fire you must follow the firefighters orders; the emergency signs do NOT override their instructions when they clearly contradict them.",
+        "ru": "Неверно: при пожаре в тоннеле подчиняются указаниям пожарных; аварийная разметка НЕ отменяет их команды при явном противоречии.",
+        "zh": "错误：隧道起火时必须服从消防人员的指令；当两者明显矛盾时，不应只按紧急标志行事而违背消防员的口头命令。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }

@@ -1,0 +1,187 @@
+{
+  "category": "alcool-droga-primo-soccorso",
+  "items": {
+    "alcool-droga-primo-soccorso-segni-stanchezza-0": {
+      "verdict": "VERO",
+      "key_it": "raggiungere la più vicina piazzola di sosta e riposare",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: a driver showing signs of fatigue should reach the nearest rest area and rest.",
+        "ru": "Верно: водителю с признаками усталости нужно доехать до ближайшего пункта отдыха и отдохнуть.",
+        "zh": "正确：出现疲劳迹象的驾驶人应到最近的休息区休息。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-segni-stanchezza-1": {
+      "verdict": "FALSO",
+      "key_it": "avvicinarsi il più possibile al veicolo che lo precede nella marcia",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: following the vehicle ahead as closely as possible is dangerous — fatigue requires stopping to rest, not closing the distance.",
+        "ru": "Неверно: подбираться к впереди идущему автомобилю как можно ближе опасно — усталость требует остановки для отдыха, а не сокращения дистанции.",
+        "zh": "错误：尽量贴近前车行驶很危险——疲劳时应当停车休息，而不是缩短跟车距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-eccesso-bevande-alcoliche-1": {
+      "verdict": "VERO",
+      "key_it": "non può recuperare velocemente l'idoneità alla guida, specie se ha assunto anche dei farmaci",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: after an excessive amount of alcohol the fitness to drive cannot be recovered quickly, especially if drugs have also been taken.",
+        "ru": "Верно: после чрезмерного количества алкоголя пригодность к вождению не восстанавливается быстро, особенно если приняты ещё и препараты.",
+        "zh": "正确：过量饮酒后无法迅速恢复驾驶能力，尤其同时还服用了药物时。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-eccesso-bevande-alcoliche-2": {
+      "verdict": "FALSO",
+      "key_it": "assume cibi piuttosto salati",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: eating rather salty food does NOT quickly restore the fitness to drive after excessive alcohol.",
+        "ru": "Неверно: довольно солёная пища НЕ восстанавливает быстро пригодность к вождению после чрезмерного алкоголя.",
+        "zh": "错误：吃较咸的食物并不能让过量饮酒者迅速恢复驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-eccesso-bevande-alcoliche-3": {
+      "verdict": "FALSO",
+      "key_it": "assume caffè amaro",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: drinking bitter coffee does NOT quickly restore the fitness to drive after excessive alcohol.",
+        "ru": "Неверно: горький кофе НЕ восстанавливает быстро пригодность к вождению после чрезмерного алкоголя.",
+        "zh": "错误：喝浓咖啡并不能让过量饮酒者迅速恢复驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-idoneita-alla-guida-0": {
+      "verdict": "VERO",
+      "key_it": "alcuni farmaci sedativi",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: the fitness to drive can be impaired by the use of some sedative drugs.",
+        "ru": "Верно: пригодность к вождению может быть нарушена приёмом некоторых снотворных (седативных) препаратов.",
+        "zh": "正确：服用某些镇静类药物可能损害驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-idoneita-alla-guida-1": {
+      "verdict": "VERO",
+      "key_it": "farmaci antidepressivi",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: the fitness to drive can be impaired by the use of antidepressant drugs.",
+        "ru": "Верно: пригодность к вождению может быть нарушена приёмом антидепрессантов.",
+        "zh": "正确：服用抗抑郁药物可能损害驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-idoneita-alla-guida-2": {
+      "verdict": "VERO",
+      "key_it": "allucinogeni (LSD, ecstasy, ecc.)",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: the fitness to drive can be impaired by the use of hallucinogens (LSD, ecstasy, etc.).",
+        "ru": "Верно: пригодность к вождению может быть нарушена приёмом галлюциногенов (LSD, экстази и т. п.).",
+        "zh": "正确：服用致幻剂（LSD、摇头丸等）可能损害驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-idoneita-alla-guida-3": {
+      "verdict": "VERO",
+      "key_it": "bevande alcoliche",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: the fitness to drive can be impaired by the use of alcoholic drinks.",
+        "ru": "Верно: пригодность к вождению может быть нарушена употреблением алкогольных напитков.",
+        "zh": "正确：饮用含酒精饮料可能损害驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-idoneita-alla-guida-4": {
+      "verdict": "FALSO",
+      "key_it": "caffè amaro",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: bitter coffee does not impair the fitness to drive — only sedatives, drugs and alcohol of the kind listed do.",
+        "ru": "Неверно: горький кофе не нарушает пригодность к вождению — её нарушают седативные, наркотики и алкоголь из перечисленных.",
+        "zh": "错误：浓咖啡不会损害驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-idoneita-alla-guida-5": {
+      "verdict": "FALSO",
+      "key_it": "bevande gassate",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: carbonated (non-alcoholic) drinks do not impair the fitness to drive.",
+        "ru": "Неверно: газированные (неалкогольные) напитки не нарушают пригодность к вождению.",
+        "zh": "错误：碳酸饮料（非酒精）不会损害驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-idoneita-alla-guida-6": {
+      "verdict": "FALSO",
+      "key_it": "integratori di sali minerali",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: mineral-salt supplements do not impair the fitness to drive.",
+        "ru": "Неверно: добавки с минеральными солями не нарушают пригодность к вождению.",
+        "zh": "错误：矿物质补充剂不会损害驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-idoneita-alla-guida-7": {
+      "verdict": "FALSO",
+      "key_it": "integratori alimentari",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: food supplements do not impair the fitness to drive.",
+        "ru": "Неверно: пищевые добавки не нарушают пригодность к вождению.",
+        "zh": "错误：营养补充剂不会损害驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "alcool-droga-primo-soccorso-assunzione-droghe-0": {
+      "verdict": "VERO",
+      "key_it": "hashish o di marijuana può compromettere la facoltà di guida",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: taking hashish or marijuana can impair the ability to drive.",
+        "ru": "Верно: употребление гашиша или марихуаны может нарушить способность к вождению.",
+        "zh": "正确：吸食哈希什或大麻可能损害驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    }
+  }
+}
