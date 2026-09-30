@@ -1,0 +1,265 @@
+{
+  "category": "limiti-di-velocita",
+  "items": {
+    "limiti-di-velocita-regolazione-conducente-velocita-0": {
+      "verdict": "VERO",
+      "key_it": "in relazione alle caratteristiche del veicolo",
+      "chapter": "ch8",
+      "why": {
+        "en": "Speed must always suit the vehicle itself — its size, weight, braking and handling — because what is safe in a small car can be unsafe in a heavy one.",
+        "ru": "Скорость всегда должна подходить самому автомобилю — его размеру, массе, торможению и управляемости, — ведь безопасная для лёгкой машины может оказаться небезопасной для тяжёлой.",
+        "zh": "车速始终要适配车辆本身——尺寸、质量、制动和操控——因为对小轿车安全的速度对重型车可能并不安全。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-1": {
+      "verdict": "VERO",
+      "key_it": "in relazione allo stato del veicolo",
+      "chapter": "ch8",
+      "why": {
+        "en": "A well-kept vehicle lets you drive safely; worn brakes, tyres or lights force you to slow down, so the vehicle condition directly sets a safe speed.",
+        "ru": "Состояние машины напрямую задаёт безопасную скорость: износ тормозов, шин или света заставляют ехать медленнее, чем на исправном аналоге.",
+        "zh": "车况直接决定安全车速：刹车、轮胎或灯光的磨损会迫使开得比车况良好的车更慢。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-2": {
+      "verdict": "VERO",
+      "key_it": "in relazione al carico del veicolo",
+      "chapter": "ch8",
+      "why": {
+        "en": "A loaded vehicle brakes and turns more slowly, so you must lower your speed in proportion to the weight you carry.",
+        "ru": "Загруженный автомобиль дольше тормозит и хуже манёврирует, поэтому скорость нужно снижать в зависимости от массы груза.",
+        "zh": "满载车辆制动更慢、变道更笨拙，因此车速要随载重增加而降低。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-3": {
+      "verdict": "VERO",
+      "key_it": "in relazione alle caratteristiche della strada",
+      "chapter": "ch8",
+      "why": {
+        "en": "Curves, width, surface and gradient define how fast the road itself allows you to go, so speed must match the road, not just the posted limit.",
+        "ru": "Скорость должна соответствовать самой дороге — её поворотам, ширине, покрытию и уклону, — а не только знаку, потому что дорога диктует свой максимум.",
+        "zh": "车速要适应道路本身——弯道、宽度、路面和坡度——而不只是标志上的限制。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-4": {
+      "verdict": "VERO",
+      "key_it": "in relazione alle condizioni della strada",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wet, muddy, snowy or potholed road surfaces reduce grip and demand a lower speed than the same road in good condition.",
+        "ru": "Сырая, грязная, заснеженная или разбитая дорога снижают сцепление и требуют меньшей скорости, чем та же дорога в хорошем состоянии.",
+        "zh": "湿滑、泥泞、积雪或破损的路面会降低抓地力，需要比良好状态下更低的车速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-5": {
+      "verdict": "VERO",
+      "key_it": "in relazione alle condizioni del traffico",
+      "chapter": "ch8",
+      "why": {
+        "en": "Heavy, slow or unpredictable traffic forces you to slow down and keep a safe distance, so speed must always follow the flow around you.",
+        "ru": "Густой, медленный или непредсказуемый трафик заставляют снижать скорость и держать дистанцию, поэтому скорость всегда подстраивается под поток.",
+        "zh": "密集、缓慢或难以预测的车流会迫使你降速并保持安全距离，车速必须随时跟随周围车流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-6": {
+      "verdict": "VERO",
+      "key_it": "da non costituire pericolo di danno alle cose",
+      "chapter": "ch8",
+      "why": {
+        "en": "Adjusting speed so you endanger neither people nor property is the core of safe driving: a too-high speed turns a minor touch into damage or an accident.",
+        "ru": "Подбирать скорость так, чтобы не создавать опасность для людей и вещей, — основа безопасной езды: избыточная скорость превращает мелкий заде в ущерб или аварию.",
+        "zh": "选择速度以免危及人财物是安全驾驶的核心：过高的车速会把轻微剐蹭变成损失或事故。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-7": {
+      "verdict": "VERO",
+      "key_it": "in modo da non costituire pericolo per le persone",
+      "chapter": "ch8",
+      "why": {
+        "en": "The driver first protects people: speed must leave you enough time to see, react and stop before any person on the road.",
+        "ru": "Главный долг водителя — люди: скорость должна оставлять время увидеть, отреагировать и остановиться до любого человека на дороге.",
+        "zh": "驾驶员首要保护的是人：车速必须留出足够时间让你看到、反应并在任何路旁人员前停下。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-8": {
+      "verdict": "VERO",
+      "key_it": "in modo da non costituire disordine per la circolazione",
+      "chapter": "ch8",
+      "why": {
+        "en": "Driving at a speed that disrupts the smooth flow of traffic is itself a fault, so speed must keep the traffic moving safely and orderly.",
+        "ru": "Езда со скоростью, нарушающей плавный поток, сама по себе нарушение, поэтому скорость должна сохранять движение безопасным и упорядоченным.",
+        "zh": "以扰乱车流平稳的速度行驶本身即属违规，因此车速必须保持交通安全有序。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-9": {
+      "verdict": "VERO",
+      "key_it": "entro i limiti massimi consentiti",
+      "chapter": "ch8",
+      "why": {
+        "en": "The posted limit is a ceiling, not a target: staying under the maximum is a necessary condition of correct speed regulation.",
+        "ru": "Знак задаёт потолок, а не цель: не превышать максимальный лимит — необходимое условие правильной регуляции скорости.",
+        "zh": "限速标志是上限而非目标：不超过最高限速是正确控制车速的必要条件。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-10": {
+      "verdict": "VERO",
+      "key_it": "da rispettare le limitazioni imposte",
+      "chapter": "ch8",
+      "why": {
+        "en": "Every imposed restriction — signs, road type, conditions — must be respected, and speed is the main tool you use to comply with them.",
+        "ru": "Каждое наложенное ограничение — знаки, тип дороги, условия — нужно соблюдать, и скорость — главный инструмент, которым вы их выполняете.",
+        "zh": "一切施加的限制——标志、道路类型、路况——都必须遵守，而车速是你执行它们的主要手段。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-11": {
+      "verdict": "VERO",
+      "key_it": "in relazione alle condizioni atmosferiche",
+      "chapter": "ch8",
+      "why": {
+        "en": "Rain, fog, ice and wind cut visibility and grip, so weather alone can require you to slow well below the posted limit.",
+        "ru": "Дождь, туман, лёд и ветер снижают видимость и сцепление, поэтому только погода может потребовать ехать заметно ниже знака.",
+        "zh": "雨、雾、冰和风会降低能见度与抓地力，仅天气就可能要求车速明显低于限速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-12": {
+      "verdict": "FALSO",
+      "key_it": "esclusivamente dei limiti massimi",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: speed is set by the vehicle, the road, traffic and weather together, not \"exclusively\" by the posted maximum — the limit is only the upper bound of that calculation.",
+        "ru": "Неверно: скорость задают автомобиль, дорога, трафик и погода вместе, а не «исключительно» максимальный знак — лимит лишь верхняя граница этого расчёта.",
+        "zh": "错误：车速由车辆、道路、车流和天气共同决定，而非“仅由”最高限速决定——限速只是该计算的上界。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-13": {
+      "verdict": "FALSO",
+      "key_it": "in relazione alla propria abilità alla guida",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: you may not speed up because you feel experienced — the limits and the conditions apply equally to a careful beginner and a skilled driver.",
+        "ru": "Неверно: нельзя разгоняться из-за чувства опыта — лимиты и условия одинаково действуют и на осторожного новичка, и на опытного водителя.",
+        "zh": "错误：不能因为觉得自己有经验就提速——限速和路况对谨慎的新手和熟练司机同样适用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-14": {
+      "verdict": "FALSO",
+      "key_it": "in relazione alla marca dei pneumatici",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the brand of the tyres is not a lawful factor for choosing speed — only their actual state (wear, pressure) and the road conditions matter.",
+        "ru": "Неверно: марка шин не является правовым фактором выбора скорости — важна лишь их фактическая исправность (износ, давление) и условия дороги.",
+        "zh": "错误：轮胎品牌不是选择车速的合法因素——只有轮胎的实际状况（磨损、气压）和路况才重要。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-regolazione-conducente-velocita-15": {
+      "verdict": "FALSO",
+      "key_it": "in relazione alla distanza del luogo da raggiungere",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: how far you still have to go never justifies speeding — the same limits and the same conditions apply on the last kilometre as on the first.",
+        "ru": "Неверно: сколько осталось пути, никогда не оправдание для превышения: на последнем километре действуют те же лимиты и те же условия, что и на первом.",
+        "zh": "错误：还剩多远从不是超速的理由——最后一公里与第一公里适用同样的限速和同样的路况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-obbligo-regolazione-0": {
+      "verdict": "VERO",
+      "key_it": "sempre mantenere il controllo del veicolo",
+      "chapter": "ch8",
+      "why": {
+        "en": "Keeping the vehicle under control at all times means choosing a speed you can always manage, so \"always\" is correct here.",
+        "ru": "Всегда держать машину под контролем значит выбирать скорость, которой вы в любой момент управляете, поэтому «всегда» здесь верно.",
+        "zh": "随时保持对车辆的操控意味着选择任何时刻都能掌控的车速，因此这里的“始终”是正确的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-obbligo-regolazione-1": {
+      "verdict": "VERO",
+      "key_it": "sempre essere in grado di arrestare il veicolo in condizioni di sicurezza",
+      "chapter": "ch8",
+      "why": {
+        "en": "You must be able to stop the vehicle safely at any moment, so your speed can never exceed what your brakes and the road allow.",
+        "ru": "Вы должны в любой момент быть в состоянии безопасно остановить машину, поэтому скорость никогда не должна превышать возможности торможения и дороги.",
+        "zh": "你必须随时能安全停下车，因此车速绝不能超过制动和路面所允许的范围。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-obbligo-regolazione-2": {
+      "verdict": "VERO",
+      "key_it": "arrestare il veicolo nel campo di visibilità",
+      "chapter": "ch8",
+      "why": {
+        "en": "The rule is exact: you must be able to stop inside the field you can see and safely — if you cannot, your speed is already too high.",
+        "ru": "Правило точное: вы должны быть в состоянии остановиться в пределах видимости и безопасно, — если не можете, скорость уже слишком высока.",
+        "zh": "规则很明确：你必须在可见范围内且安全地停下车——若做不到，车速已经过高。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-obbligo-regolazione-25": {
+      "verdict": "FALSO",
+      "key_it": "ridurre la velocità solo in presenza degli agenti del traffico",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the word \"only\" makes it false — you must slow for weather, road surface, visibility and many other reasons, not merely because a traffic agent is there.",
+        "ru": "Неверно: слово «только» делает его ложным — снижать скорость нужно из-за погоды, покрытия, видимости и многих других причин, а не только из-за агента движения.",
+        "zh": "错误：“仅”这个词使其错误——你必须因天气、路面、能见度等许多原因减速，而非只因有交通管理人员在场。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    }
+  }
+}
