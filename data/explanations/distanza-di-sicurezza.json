@@ -1573,6 +1573,188 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-influenza-sicurezza-5": {
+      "verdict": "FALSO",
+      "key_it": "influisce il numero di corsie",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: the number of lanes does not change how far you need to stop safely. The safe distance depends on speed, road and tyre condition and on you, not on how many lanes the road has.",
+        "ru": "Неверно: количество полос не меняет дистанцию, нужную для безопасной остановки. Она зависит от скорости, состояния дороги и шин и от водителя, а не от числа полос.",
+        "zh": "错误：车道数量不会改变安全停车所需的距离。安全距离取决于速度、路面与轮胎状况以及司机，而非车道数。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-influenza-sicurezza-6": {
+      "verdict": "FALSO",
+      "key_it": "influisce la dimensione del veicolo che precede",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: the size of the vehicle ahead does not decide your safe distance. What matters is your own speed, the road and how quickly you can react.",
+        "ru": "Неверно: размер впереди идущего автомобиля не определяет вашу безопасную дистанцию. Важны ваша скорость, дорога и скорость реакции.",
+        "zh": "错误：前方车辆的尺寸不决定你的安全距离。重要的是你自己的车速、路面和反应速度。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-influenza-sicurezza-7": {
+      "verdict": "FALSO",
+      "key_it": "influisce il numero di marce",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: how many gears the gearbox has does not affect the distance you need to stop safely. Speed, road, tyres and your reaction are what matter.",
+        "ru": "Неверно: число передач не влияет на дистанцию для безопасной остановки. Важны скорость, дорога, шины и ваша реакция.",
+        "zh": "错误：变速箱的挡位数量不影响安全停车距离。重要的是车速、路面、轮胎和反应。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-influenza-sicurezza-8": {
+      "verdict": "FALSO",
+      "key_it": "influisce il numero di ruote",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: the number of wheels on the vehicle does not change the safe distance you must keep. It depends on speed, road, tyres and the driver, not on the wheel count.",
+        "ru": "Неверно: число колёс не меняет безопасную дистанцию. Она зависит от скорости, дороги, шин и водителя, а не от количества колёс.",
+        "zh": "错误：车辆车轮数量不改变安全距离。它取决于速度、路面、轮胎和司机，而非车轮数。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-influenza-sicurezza-9": {
+      "verdict": "FALSO",
+      "key_it": "influisce il tipo di servosterzo",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: the type of power steering does not change the distance you need to stop safely. The safe distance is set by speed, road and tyre condition and by the driver's reaction.",
+        "ru": "Неверно: тип рулевого управления не меняет дистанцию для безопасной остановки. Её задают скорость, дорога, шины и реакция водителя.",
+        "zh": "错误：助力转向的类型不改变安全停车距离。它由车速、路面、轮胎状况和司机反应决定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-sicurezza-dipendenza-0": {
+      "verdict": "VERO",
+      "key_it": "non dipende dal tipo di alimentazione",
+      "chapter": "ch9",
+      "why": {
+        "en": "True: petrol, diesel or LPG fuel does not change how the car brakes or how quickly you react, so the safe distance does not depend on the engine's fuel type.",
+        "ru": "Верно: бензин, дизель или газ не меняют то, как тормозит автомобиль и как быстро вы реагируете, поэтому дистанция не зависит от типа топлива.",
+        "zh": "正确：汽油、柴油或液化气都不会改变车辆的制动方式或你的反应速度，所以安全距离与燃料类型无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-sicurezza-dipendenza-1": {
+      "verdict": "VERO",
+      "key_it": "dalle condizioni di salute del conducente",
+      "chapter": "ch9",
+      "why": {
+        "en": "True: fatigue, illness or poor physical condition slow your reaction, so the safe distance depends on the driver's state of health.",
+        "ru": "Верно: усталость, болезнь или плохое самочувствие замедляют реакцию, поэтому дистанция зависит от здоровья водителя.",
+        "zh": "正确：疲劳、疾病或身体状态差都会减慢反应，所以安全距离取决于司机的健康状况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-sicurezza-dipendenza-2": {
+      "verdict": "VERO",
+      "key_it": "dall'attenzione e concentrazione",
+      "chapter": "ch9",
+      "why": {
+        "en": "True: attention and concentration decide how fast you notice danger and react. The more concentrated you are, the shorter the distance you actually need.",
+        "ru": "Верно: внимание и концентрация определяют, как быстро вы замечаете опасность и реагируете. Чем собраннее вы, тем короче фактическая дистанция.",
+        "zh": "正确：注意力和专注度决定你发现危险和作出反应的速度。越专注，实际需要的距离越短。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-sicurezza-dipendenza-3": {
+      "verdict": "VERO",
+      "key_it": "marcia in colonna",
+      "chapter": "ch9",
+      "why": {
+        "en": "True: when driving in a convoy it is safer to keep a larger gap, because a sudden brake can trigger a chain of rear-end collisions with many vehicles.",
+        "ru": "Верно: в колонне безопаснее держать больше дистанции, потому что внезапное торможение может вызвать цепочку наездов сзади.",
+        "zh": "正确：车队行驶时保持更大间距更安全，因为突然刹车可能引发连环追尾。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-sicurezza-dipendenza-4": {
+      "verdict": "FALSO",
+      "key_it": "dalla potenza del veicolo che precede",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: how powerful the vehicle ahead is does not change your own safe distance. You keep the gap based on your speed and reaction, not on the engine of the car in front.",
+        "ru": "Неверно: мощность впереди идущего автомобиля не меняет вашу дистанцию. Дистанция зависит от вашей скорости и реакции, а не от мотора впереди.",
+        "zh": "错误：前方车辆的功率不改变你的安全距离。距离取决于你的车速和反应，而非前车发动机。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-sicurezza-dipendenza-5": {
+      "verdict": "FALSO",
+      "key_it": "dall'efficienza del freno a mano",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: the handbrake is for parking the vehicle, not for slowing it on the road, so its efficiency does not affect the safe distance you keep while driving.",
+        "ru": "Неверно: ручник предназначен для стоянки, а не для торможения на дороге, поэтому его эффективность не влияет на дистанцию в движении.",
+        "zh": "错误：手刹用于驻车而非行车制动，所以它的效率不影响行驶中的安全距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-sicurezza-dipendenza-6": {
+      "verdict": "FALSO",
+      "key_it": "dalla presenza di veicoli che seguono",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: vehicles following you do not change the distance you must keep from the car ahead. Your safe gap is set by your own speed, the road and your reaction.",
+        "ru": "Неверно: следующие за вами автомобили не меняют дистанцию до впереди идущего. Ваш интервал задают ваша скорость, дорога и реакция.",
+        "zh": "错误：跟随你的车辆不会改变你与前车的距离。你的安全间距由自身车速、路面和反应决定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-veicoli-2": {
+      "verdict": "FALSO",
+      "key_it": "può essere diminuita nelle gallerie",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: in a tunnel there is no place to escape sideways and the road is enclosed, so the safe distance must not be reduced there.",
+        "ru": "Неверно: в тоннеле нет места для объезда, дорога замкнута, поэтому безопасную дистанцию там нельзя уменьшать.",
+        "zh": "错误：隧道内没有侧向逃生空间，道路封闭，所以那里的安全距离不能缩短。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-veicoli-3": {
+      "verdict": "FALSO",
+      "key_it": "è possibile diminuire la distanza di sicurezza",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: even on a highway sudden braking happens, so the safe distance must not be reduced there — speed is higher, which means you need more space to stop.",
+        "ru": "Неверно: даже на автостраде бывает резкое торможение, поэтому дистанцию нельзя уменьшать — скорость выше, а значит нужно больше места для остановки.",
+        "zh": "错误：即使在高速公路也可能急刹车，所以安全距离不能缩短——车速更高，需要的停车空间更大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
