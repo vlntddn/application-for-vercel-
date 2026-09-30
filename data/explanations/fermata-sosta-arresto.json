@@ -2041,6 +2041,305 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermate-cartelli-intersezione-6": {
+      "verdict": "FALSO",
+      "key_it": "La fermata è vietata dopo il segnale DIVIETO DI SOSTA",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the no-parking sign (DIVIETO DI SOSTA) forbids parking (sosta); a brief stop with the driver present (fermata) is not covered by that sign alone.",
+        "ru": "Ложь: знак «остановка запрещена» (DIVIETO DI SOSTA) запрещает именно стоянку (sosta); краткую остановку с водителем за рулём (fermata) этот знак сам по себе не запрещает.",
+        "zh": "错误：禁止停车(sosta)标志仅禁止停放(sosta)；驾驶员在位的短暂停车(fermata)不受该标志单独约束。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-5": {
+      "verdict": "FALSO",
+      "key_it": "Brevi soste sono consentite nelle aree pedonali urbane",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: urban pedestrian areas do not allow even brief parking — they stay closed to parking (sosta).",
+        "ru": "Ложь: в городских пешеходных зонах нельзя даже кратковременно останавливаться с оставлением автомобиля — зоны закрыты для стоянки (sosta).",
+        "zh": "错误：城市人行区内即使短暂停车(sosta)也不允许——该区域对停放保持关闭。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-6": {
+      "verdict": "FALSO",
+      "key_it": "negli spazi destinati a servizi di emergenza o di igiene pubblica",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: in the spaces for emergency or public-hygiene services the ban covers only parking (sosta); a brief stop (fermata) is a different case — the statement extends the ban to fermata and is wrong.",
+        "ru": "Ложь: на местах для аварийных и коммунальных санитарных служб запрет касается стоянки (sosta); краткая остановка (fermata) — другое дело, а утверждение расширяет запрет и на fermata — поэтому неверно.",
+        "zh": "错误：应急或公共卫生服务用地的禁令针对停车(sosta)；短暂停车(fermata)是另一情况——该陈述把禁令扩大到fermata，故为错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-cassonetti-rifiuti-urbani-7": {
+      "verdict": "FALSO",
+      "key_it": "La sosta così come la fermata sono vietate davanti ai cassonetti dei rifiuti urbani",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: in front of the urban waste bins parking (sosta) is forbidden, but the ban is not extended to a brief stop (fermata) — the statement mixes the two.",
+        "ru": "Ложь: перед мусорными контейнерами запрещена стоянка (sosta), но запрет не распространяется на краткую остановку (fermata) — утверждение смешивает эти два режима.",
+        "zh": "错误：在城市垃圾箱前禁止停车(sosta)，但禁令并不延伸至短暂停车(fermata)——该陈述把两种情况混为一谈。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-codice-strada-distributori-0": {
+      "verdict": "VERO",
+      "key_it": "in corrispondenza dei distributori di carburante",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking is forbidden at the fuel dispensers, in their proximity up to 5 m before and after, during the hours of operation of the station.",
+        "ru": "Верно: на заправках останавливаться с оставлением автомобиля запрещено вблизи колонок — до 5 м до и после — в часы работы станции.",
+        "zh": "正确：在加油站营业时间内，加油站及其前后5米范围内禁止停车(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-codice-strada-distributori-1": {
+      "verdict": "VERO",
+      "key_it": "non deve lasciare in sosta un rimorchio staccato dalla motrice",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: in built-up areas the driver must not leave a detached trailer parked, unless signs say otherwise.",
+        "ru": "Верно: в населённых пунктах водитель не должен оставлять прицеп, отстёгнутый от тягача, в режиме стоянки (sosta), если знаки не указывают иное.",
+        "zh": "正确：在城镇内，除非标志另有规定，驾驶员不得将已与牵引车分离的半挂车停放(sosta)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-codice-strada-distributori-2": {
+      "verdict": "VERO",
+      "key_it": "l'osservanza di tale divieto non è condizionata dalla presenza di cartelli segnaletici",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: when the road-code itself forbids parking, the ban applies on its own — no sign is needed to make it binding.",
+        "ru": "Верно: если стоянку (sosta) запрещает сама норма дорожного кодекса, запрет действует сам по себе — для его силы знаки не нужны.",
+        "zh": "正确：若道路交通法规本身禁止停车(sosta)，该禁令自行生效——无需标志即具有约束力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-codice-strada-distributori-3": {
+      "verdict": "FALSO",
+      "key_it": "anche quando i distributori sono chiusi",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the ban at the fuel dispensers (5 m before and after) is limited to the hours of operation of the station — a closed station is a different case, so the \"even when closed\" extension is wrong.",
+        "ru": "Ложь: запрет на заправках (5 м до и после) ограничен часами работы станции — закрытая станция это другое, поэтому расширение «даже когда заправки закрыты» неверно.",
+        "zh": "错误：加油站区域(前后5米)的禁令限于营业时间——加油站关闭时情况不同，故“即使加油站关闭”这一扩展是错误的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-codice-strada-distributori-4": {
+      "verdict": "FALSO",
+      "key_it": "l'osservanza di tale divieto è comunque condizionata dalla presenza di cartelli segnaletici",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: a parking ban that comes from a rule of the road code is not conditioned on signs being present — it applies by itself.",
+        "ru": "Ложь: запрет на стоянку (sosta), исходящий из нормы дорожного кодекса, не обусловлен наличием знаков — он действует сам по себе.",
+        "zh": "错误：来自道路交通法规的停车(sosta)禁令并不以标志的存在为前提——其自行生效。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-sottrazione-punti-0": {
+      "verdict": "VERO",
+      "key_it": "la sottrazione di punti dalla patente",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking in the spaces reserved for the standing and stopping of buses, trolleybuses and rail vehicles carries, among other things, the deduction of points from the licence.",
+        "ru": "Верно: стоянка (sosta) на местах для стоянки и остановки автобусов, троллейбусов и рельсового транспорта влечёт, в числе прочего, лишение очков с водительского удостоверения.",
+        "zh": "正确：在公交、无轨电车和有轨电车停靠停放空间停车(sosta)除其他处罚外，还将被扣驾驶证分数。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-sottrazione-punti-1": {
+      "verdict": "VERO",
+      "key_it": "a meno di 15 metri dal segnale di fermata degli autobus",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: within 15 m of the bus stop sign, where the stopping spaces are not marked, parking carries, among other things, the deduction of points from the licence.",
+        "ru": "Верно: в пределах 15 м от знака остановки автобусов при неразмеченных местах остановки стоянка (sosta) влечёт, в числе прочего, лишение очков с водительского удостоверения.",
+        "zh": "正确：在公交停靠标志15米内且停靠空间未划线时，停车(sosta)除其他处罚外，还将被扣驾驶证分数。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-sottrazione-punti-2": {
+      "verdict": "VERO",
+      "key_it": "spazi riservati alla fermata e alla sosta dei veicoli per persone invalide",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking in the spaces reserved for the stopping and parking of vehicles for disabled persons carries, among other things, the deduction of points from the licence.",
+        "ru": "Верно: стоянка (sosta) на местах для остановки и стоянки автомобилей инвалидов влечёт, в числе прочего, лишение очков с водительского удостоверения.",
+        "zh": "正确：在专供残疾人车辆停靠和停放的空间停车(sosta)除其他处罚外，还将被扣驾驶证分数。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-sottrazione-punti-3": {
+      "verdict": "VERO",
+      "key_it": "scivoli o dei raccordi tra i marciapiedi e la carreggiata utilizzati dai veicoli per persone invalide",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking at the ramps or junctions between the sidewalk and the roadway used by vehicles for disabled persons carries, among other things, the deduction of points from the licence.",
+        "ru": "Верно: стоянка (sosta) на пандусах и съездах между тротуаром и проезжей частью для автомобилей инвалидов влечёт, в числе прочего, лишение очков с водительского удостоверения.",
+        "zh": "正确：在残疾人车辆使用的人行道与路面坡道或接驳处停车(sosta)除其他处罚外，还将被扣驾驶证分数。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-sottrazione-punti-4": {
+      "verdict": "VERO",
+      "key_it": "La sosta nelle corsie o carreggiate riservate ai mezzi pubblici",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parking in the lanes or roadways reserved for public transport carries, among other things, the deduction of points from the licence.",
+        "ru": "Верно: стоянка (sosta) на полосах, отведённых под общественный транспорт, влечёт, в числе прочего, лишение очков с водительского удостоверения.",
+        "zh": "正确：在公共交通专用车道或路面上停车(sosta)除其他处罚外，还将被扣驾驶证分数。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-sottrazione-punti-5": {
+      "verdict": "FALSO",
+      "key_it": "è consentita se si utilizza il disco orario",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the time disc does not open the spaces reserved for buses, trolleybuses and rail vehicles — parking there stays forbidden, whatever the disc shows.",
+        "ru": "Ложь: парковочный диск не открывает места для автобусов, троллейбусов и рельсового транспорта — стоянка (sosta) там остаётся запрещена, что бы диск ни показывал.",
+        "zh": "错误：停车盘不能使公交、无轨电车和有轨电车专用空间开放——在这些空间停车(sosta)始终被禁止，无论停车盘显示什么。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-sottrazione-punti-6": {
+      "verdict": "FALSO",
+      "key_it": "azionando la segnalazione luminosa di pericolo (quattro frecce lampeggianti simultaneamente)",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the hazard lights do not open the 15 m zone around the bus stop sign where the spaces are not marked — parking there stays forbidden.",
+        "ru": "Ложь: аварийка не открывает зону 15 м вокруг знака остановки автобусов при неразмеченных местах — стоянка (sosta) там остаётся запрещена.",
+        "zh": "错误：危险警示灯不能开放未划线公交停靠标志周围15米区域——该区域内停车(sosta)始终被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-sottrazione-punti-7": {
+      "verdict": "FALSO",
+      "key_it": "ma non la sottrazione di punti dalla patente del conducente",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: parking in the spaces for vehicles for disabled persons brings not only a fine but also the deduction of points from the driver's licence — the \"no points\" part is wrong.",
+        "ru": "Ложь: стоянка (sosta) на местах для автомобилей инвалидов влечёт не только штраф, но и лишение очков с водительского удостоверения — часть «без лишения очков» неверна.",
+        "zh": "错误：在残疾人车辆用空间停车(sosta)不仅处以罚款，还将被扣驾驶证分数——“不扣分”部分错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-sottrazione-punti-8": {
+      "verdict": "FALSO",
+      "key_it": "comporta la sospensione della patente",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: parking at the ramps or junctions used by vehicles for disabled persons does not carry the suspension of the licence — the statement overstates the consequence.",
+        "ru": "Ложь: стоянка (sosta) на пандусах и съездах для автомобилей инвалидов не влечёт приостановки водительского удостоверения — утверждение завышает следствие.",
+        "zh": "错误：在残疾人车辆使用的坡道或接驳处停车(sosta)并不导致驾驶证被吊销——该陈述夸大了后果。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-sottrazione-punti-9": {
+      "verdict": "FALSO",
+      "key_it": "dalle ore 22.00 alle ore 8.00",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the public-transport lanes and roadways are reserved for public transport; a nighttime opening window for parking there does not exist — the statement invents an exception.",
+        "ru": "Ложь: полосы и части проезжей части, отведённые под общественный транспорт, не имеют ночного окна, открывающего там стоянку (sosta) — утверждение выдумывает исключение.",
+        "zh": "错误：公共交通专用车道和路面不存在开放停车(sosta)的夜间时段——该陈述虚构了一个例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-emergenza-0": {
+      "verdict": "VERO",
+      "key_it": "il veicolo è inutilizzabile per avaria",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: emergency parking is the interruption of the journey when the vehicle is unusable because of a breakdown.",
+        "ru": "Верно: аварийная остановка (sosta di emergenza) — это прекращение движения в случае, когда автомобиль непригоден к движению из-за неисправности.",
+        "zh": "正确：紧急停车(sosta di emergenza)是因故障导致车辆无法使用时的行驶中断。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-emergenza-1": {
+      "verdict": "VERO",
+      "key_it": "arrestarsi per malessere fisico del conducente o di un passeggero",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: emergency parking is also the interruption of the journey when the vehicle must stop because of the driver's or a passenger's physical unwellness.",
+        "ru": "Верно: аварийная остановка (sosta di emergenza) — это и прекращение движения, когда автомобиль вынужден остановиться из-за ухудшения самочувствия водителя или пассажира.",
+        "zh": "正确：因驾驶员或乘客身体不佳导致车辆必须停车时，也属于紧急停车(sosta di emergenza)。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-emergenza-2": {
+      "verdict": "FALSO",
+      "key_it": "l'interruzione della marcia dovuta ad esigenze della circolazione",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: an interruption of the journey caused by the needs of traffic flow is a stop (arresto), not emergency parking — the statement confuses the two.",
+        "ru": "Ложь: прекращение движения из-за требований движения — это остановка (arresto), а не аварийная стоянка (sosta di emergenza) — утверждение путает два режима.",
+        "zh": "错误：因交通需要而中断行驶属于停车(arresto)，而非紧急停车(sosta di emergenza)——该陈述混淆了两种情况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-emergenza-3": {
+      "verdict": "FALSO",
+      "key_it": "per consentire la discesa di persona invalida",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: a temporary stop to let a disabled person out of the vehicle is a brief stop (fermata), not emergency parking — the statement misnames it.",
+        "ru": "Ложь: временная остановка, чтобы помочь инвалиду выйти из автомобиля, — это остановка (fermata), а не аварийная стоянка (sosta di emergenza) — утверждение называет её неверно.",
+        "zh": "错误：为让残疾人下车而临时中断行驶属于短暂停车(fermata)，而非紧急停车(sosta di emergenza)——该陈述命名错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
