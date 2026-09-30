@@ -962,6 +962,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-cause-shock-0": {
+      "verdict": "VERO",
+      "key_it": "essere causato da un forte dolore",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: strong pain can trigger a state of shock.",
+        "ru": "Верно: сильная боль может вызвать состояние шока.",
+        "zh": "正确：剧烈疼痛可引发休克状态。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-cause-shock-1": {
+      "verdict": "VERO",
+      "key_it": "essere causato da una forte emozione",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: a strong emotion (joy, anger) can trigger a state of shock.",
+        "ru": "Верно: сильное чувство (радость, злость) может вызвать состояние шока.",
+        "zh": "正确：强烈的情绪（喜悦、愤怒）可引发休克状态。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-cause-shock-2": {
+      "verdict": "VERO",
+      "key_it": "essere causato da una forte perdita di sangue",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: heavy blood loss is a major cause of shock.",
+        "ru": "Верно: сильная потеря крови — одна из главных причин шока.",
+        "zh": "正确：大量失血是休克的主要原因之一。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-cause-shock-3": {
+      "verdict": "VERO",
+      "key_it": "essere causato da un forte trauma",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: a severe injury (trauma) can cause shock.",
+        "ru": "Верно: сильная травма может вызвать состояние шока.",
+        "zh": "正确：严重外伤可引发休克。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-primo-soccorso-1": {
+      "verdict": "VERO",
+      "key_it": "assistere il ferito, come meglio possibile",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: the aim of first aid is to assist the injured as well as possible until medical help arrives.",
+        "ru": "Верно: цель первой помощи — помочь пострадавшему, насколько это возможно, до приезда медиков.",
+        "zh": "正确：急救的目的是在等待医疗救援期间尽可能救助伤者。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-primo-soccorso-2": {
+      "verdict": "VERO",
+      "key_it": "che il ferito subisca ulteriori danni",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: during first aid you must avoid causing the injured person any further harm.",
+        "ru": "Верно: при оказании первой помощи нужно по возможности не причинять пострадавшему новых повреждений.",
+        "zh": "正确：急救过程中应尽量避免使伤者受到进一步伤害。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-primo-soccorso-3": {
+      "verdict": "VERO",
+      "key_it": "interventi sbagliati o dannosi",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: first aid must avoid applying procedures that are wrong or harmful to the injured.",
+        "ru": "Верно: при первой помощи нужно избегать неверных или вредных действий для пострадавшего.",
+        "zh": "正确：急救时应避免对伤者进行错误或有害的处理。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-primo-soccorso-4": {
+      "verdict": "FALSO",
+      "key_it": "chiedere subito al ferito",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: first aid is not about interviewing the injured about the accident; it is about providing immediate help.",
+        "ru": "Неверно: цель первой помощи — оказать помощь, а не опрашивать пострадавшего об обстоятельствах ДТП.",
+        "zh": "错误：急救的目的是救助伤者，而不是追问事故经过。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-primo-soccorso-5": {
+      "verdict": "FALSO",
+      "key_it": "allontanare in ogni caso il ferito",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: the injured should not always be moved; only move them if there is immediate danger (fire, moving traffic).",
+        "ru": "Неверно: пострадавшего перемещают не «всегда», а только при непосредственной опасности (пожар, движущийся транспорт).",
+        "zh": "错误：并非任何情况下都要移动伤者，只有在直接危险（火灾、车流）时才移动。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-ferita-sanguinante-1": {
+      "verdict": "VERO",
+      "key_it": "sporca di terra, bisogna lavarla quanto prima",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: a bleeding wound dirty with dirt should be washed as soon as possible with clean water.",
+        "ru": "Верно: рану, загрязнённую землёй, нужно как можно скорее промыть чистой водой.",
+        "zh": "正确：沾有泥土的出血伤口应尽快用清洁水清洗。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-ferita-sanguinante-2": {
+      "verdict": "VERO",
+      "key_it": "toglierli dalla ferita",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: foreign objects embedded in a bleeding wound must not be removed by the first aider.",
+        "ru": "Верно: предметы, застрявшие в ране, сам спасатель извлекать не должен.",
+        "zh": "正确：刺入伤口内的异物不能由施救者自行取出。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-ferita-sanguinante-3": {
+      "verdict": "VERO",
+      "key_it": "tamponarla con garze sterili o panni puliti",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: a bleeding wound should be pressed with sterile gauze or clean cloths.",
+        "ru": "Верно: рану нужно прижать стерильным бинтом или чистой тканью.",
+        "zh": "正确：应用无菌纱布或干净布块压迫止血。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-ferita-sanguinante-4": {
+      "verdict": "FALSO",
+      "key_it": "togliere subito gli eventuali corpi estranei",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: embedded objects must not be pulled out by the first aider; only emergency services do that.",
+        "ru": "Неверно: застрявшие в ране предметы спасатель не извлекает — это делают врачи.",
+        "zh": "错误：刺入的异物不能由施救者拔出，需交由急救人员处理。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-ferita-sanguinante-5": {
+      "verdict": "FALSO",
+      "key_it": "bisogna dargli da bere acqua",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: an unconscious injured person must not be given anything to drink.",
+        "ru": "Неверно: беспамястному пострадавшему нельзя давать пить воду или чай.",
+        "zh": "错误：昏迷的伤者不能喂水或茶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-ferita-sanguinante-6": {
+      "verdict": "FALSO",
+      "key_it": "non bisogna coprirla",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: a bleeding wound must be pressed and covered to help stop the bleeding, not left open.",
+        "ru": "Неверно: кровоточащую рану нужно прижать и закрыть, а не оставлять открытой для «самоостановки».",
+        "zh": "错误：出血伤口需加压并覆盖止血，不能敞开等其自行止血。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-emorragia-esterna-0": {
+      "verdict": "VERO",
+      "key_it": "tamponare la ferita e chiamare subito i soccorsi",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: with heavy external bleeding, press the wound and call emergency services immediately.",
+        "ru": "Верно: при обильном наружном кровотечении нужно прижать рану и немедленно вызвать помощь.",
+        "zh": "正确：大量外出血时应压迫伤口并立即呼叫急救。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-emorragia-esterna-2": {
+      "verdict": "VERO",
+      "key_it": "arrestare la fuoriuscita del sangue",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: with heavy external bleeding you should try to stop the blood flow.",
+        "ru": "Верно: при обильном наружном кровотечении нужно постараться остановить выход крови.",
+        "zh": "正确：大量外出血时应尽量止住血液流出。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-emorragia-esterna-3": {
+      "verdict": "VERO",
+      "key_it": "posizione seduta o sdraiata",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: if possible, position the injured sitting or lying down while waiting for help.",
+        "ru": "Верно: по возможности пострадавшего усаживают или укладывают до приезда помощи.",
+        "zh": "正确：如条件允许，等待救援时将伤者扶坐或平放。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-corpo-estraneo-occhio-0": {
+      "verdict": "VERO",
+      "key_it": "bisogna bendarglielo, senza procedere ad altre manovre",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: when a foreign object enters the eye, bandage it without any other manoeuvre.",
+        "ru": "Верно: если в глаз попал инородный предмет, его закрывают повязкой и не делают других действий.",
+        "zh": "正确：异物入眼时应包扎，不做其他操作。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-corpo-estraneo-occhio-1": {
+      "verdict": "VERO",
+      "key_it": "consigliargli di non toccare",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: the injured should be told not to touch the damaged eye, to avoid greater harm.",
+        "ru": "Верно: нужно посоветовать пострадавшему не трогать повреждённый глаз, чтобы не усугубить травму.",
+        "zh": "正确：应提醒伤者不要触碰受伤的眼睛，以免加重损伤。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
