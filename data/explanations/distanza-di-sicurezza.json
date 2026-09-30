@@ -520,6 +520,279 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-26": {
+      "verdict": "FALSO",
+      "key_it": "almeno pari a quello della distanza di visibilità",
+      "chapter": "ch9",
+      "why": {
+        "en": "The safe distance is not set equal to the visibility distance: it depends on speed, reaction, road and vehicle state.",
+        "ru": "Дистанция не приравнивается к дистанции видимости: она зависит от скорости, реакции, дороги и состояния авто.",
+        "zh": "车距并不等于可视距离：它取决于车速、反应、路况和车辆状态。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-28": {
+      "verdict": "FALSO",
+      "key_it": "stabilito anche in base alla marcia innestata",
+      "chapter": "ch9",
+      "why": {
+        "en": "The engaged gear does not determine the safe distance: it depends on speed, reaction, road and vehicle state.",
+        "ru": "Зацепленная передача не определяет дистанцию: она зависит от скорости, реакции, дороги и состояния авто.",
+        "zh": "挂入的挡位不决定车距：车距取决于车速、反应、路况和车辆状态。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-0": {
+      "verdict": "VERO",
+      "key_it": "anche alle condizioni psicofisiche del conducente",
+      "chapter": "ch9",
+      "why": {
+        "en": "If you are tired or distracted, your reaction slows — so the distance must be adapted to your condition.",
+        "ru": "Если вы устали или отвлечены, реакция замедляется — дистанцию подстраивают под своё состояние.",
+        "zh": "疲劳或分心会让反应变慢，所以车距要根据自己的身心状态调整。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-2": {
+      "verdict": "FALSO",
+      "key_it": "alla larghezza del veicolo che precede",
+      "chapter": "ch9",
+      "why": {
+        "en": "The width of the car ahead does not determine the safe distance: it depends on speed, reaction, road and vehicle state.",
+        "ru": "Ширина впереди идущего не определяет дистанцию: она зависит от скорости, реакции, дороги и состояния авто.",
+        "zh": "前车宽度不决定车距：车距取决于车速、反应、路况和车辆状态。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-3": {
+      "verdict": "FALSO",
+      "key_it": "al numero di corsie della strada",
+      "chapter": "ch9",
+      "why": {
+        "en": "The number of lanes does not determine the safe distance: it depends on speed, reaction, road and vehicle state.",
+        "ru": "Количество полос не определяет дистанцию: она зависит от скорости, реакции, дороги и состояния авто.",
+        "zh": "车道数量不决定车距：车距取决于车速、反应、路况和车辆状态。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-4": {
+      "verdict": "FALSO",
+      "key_it": "alla presenza del servosterzo",
+      "chapter": "ch9",
+      "why": {
+        "en": "Whether the car has power steering does not determine the safe distance: it depends on speed, reaction, road and vehicle state.",
+        "ru": "Наличие усилителя руля не определяет дистанцию: она зависит от скорости, реакции, дороги и состояния авто.",
+        "zh": "有无转向助力不决定车距：车距取决于车速、反应、路况和车辆状态。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-5": {
+      "verdict": "FALSO",
+      "key_it": "al tipo di veicolo che segue",
+      "chapter": "ch9",
+      "why": {
+        "en": "The type of the vehicle behind you does not determine your safe distance: you keep the gap to the car in front.",
+        "ru": "Тип идущего позади вас не определяет вашу дистанцию: вы держите зазор до машины впереди.",
+        "zh": "后方车辆的类型不决定你的车距：你要保持的是与前车的距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-6": {
+      "verdict": "FALSO",
+      "key_it": "al limite di velocità riportato sul retro del veicolo che ci precede",
+      "chapter": "ch9",
+      "why": {
+        "en": "The speed limit shown on the back of the car ahead is not what sets the safe distance: it depends on your speed and conditions.",
+        "ru": "Лимит скорости, указанный сзади впереди идущего, не задаёт дистанцию: она зависит от вашей скорости и условий.",
+        "zh": "前车尾部标注的限速并不决定车距：车距取决于你的车速和路况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-situazioni-0": {
+      "verdict": "VERO",
+      "key_it": "anche all'aderenza degli pneumatici",
+      "chapter": "ch9",
+      "why": {
+        "en": "Low tyre grip (wear, cold, wet) lengthens stopping, so the safe distance depends on tyre grip too.",
+        "ru": "Низкое сцепление шин (износ, холод, влага) удлиняет остановку, поэтому дистанция зависит и от сцепления.",
+        "zh": "轮胎抓地力低（磨损、寒冷、潮湿）会拉长停车距离，所以车距也取决于抓地力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-situazioni-2": {
+      "verdict": "FALSO",
+      "key_it": "di almeno 100 metri nelle forti discese",
+      "chapter": "ch9",
+      "why": {
+        "en": "There is no fixed 100 m rule for steep descents: the distance depends on speed, grip and reaction, and must grow as needed.",
+        "ru": "Правила «ровно 100 м на крутых спусах» нет: дистанция зависит от скорости, сцепления и реакции и растёт по необходимости.",
+        "zh": "陡坡没有“正好100米”的规定：车距取决于车速、抓地力和反应，必要时要加大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-situazioni-3": {
+      "verdict": "FALSO",
+      "key_it": "di almeno 100 metri in caso di nevicata in atto",
+      "chapter": "ch9",
+      "why": {
+        "en": "There is no fixed 100 m rule in snow: grip is lower, so the distance must be widened, but no exact figure is set by law.",
+        "ru": "В снегопад нет правила «ровно 100 м»: сцепление ниже, дистанцию увеличивают, но точной цифры в законе нет.",
+        "zh": "下雪时没有“正好100米”的规定：抓地力低，车距要加大，但法律并未规定具体数字。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-situazioni-5": {
+      "verdict": "FALSO",
+      "key_it": "maggiore se si percorre la corsia d'emergenza",
+      "chapter": "ch9",
+      "why": {
+        "en": "You may not drive on the emergency lane (except for real emergencies), so this is a trap: the rule does not apply to it.",
+        "ru": "Двигаться по экстренной полосе нельзя (кроме настоящих аварий), поэтому ситуация ловушка: правило на неё не распространяется.",
+        "zh": "不得在应急车道上行驶（真正的紧急情况除外），所以这是陷阱：规定不适用于该情况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-situazioni-6": {
+      "verdict": "FALSO",
+      "key_it": "uguale allo spazio di frenatura aumentato di 20 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "There is no rule adding 20 m to the braking space: the distance must cover at least the reaction space plus stopping, per conditions.",
+        "ru": "Правила «тормозной путь + 20 м» нет: дистанция должна покрывать хотя бы пространство реакции и остановку, по условиям.",
+        "zh": "没有“制动距离加20米”的规定：车距至少要覆盖反应距离和停车距离，视情况而定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-veicoli-0": {
+      "verdict": "VERO",
+      "key_it": "trasporta un carico sporgente, poco stabile",
+      "chapter": "ch9",
+      "why": {
+        "en": "An unstable or protruding load can make the vehicle ahead brake abruptly, so the safe distance must be increased.",
+        "ru": "Неустойчивый или выступающий груз может заставить впереди идущее резко затормозить, поэтому дистанцию увеличивают.",
+        "zh": "不稳固或超出的货物可能让前车急刹，所以车距要加大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-veicoli-1": {
+      "verdict": "FALSO",
+      "key_it": "di almeno 100 metri, in caso di forte pioggia",
+      "chapter": "ch9",
+      "why": {
+        "en": "There is no fixed 100 m rule in heavy rain: grip and visibility drop, so the distance must be widened, but no exact figure is set by law.",
+        "ru": "В ливень нет правила «ровно 100 м»: сцепление и видимость падают, дистанцию увеличивают, но точной цифры в законе нет.",
+        "zh": "大雨时没有“正好100米”的规定：抓地力和能见度下降，车距要加大，但法律并未规定具体数字。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-veicoli-4": {
+      "verdict": "FALSO",
+      "key_it": "si deve diminuire la distanza di sicurezza, in quanto i veicoli pesanti hanno uno spazio di frenatura molto più lungo",
+      "chapter": "ch9",
+      "why": {
+        "en": "Opposite is true: heavy vehicles brake much longer, so behind a truck the distance must be increased, not decreased.",
+        "ru": "Верно обратное: тяжёлые машины тормозят дольше, поэтому за грузовиком дистанцию увеличивают, а не уменьшают.",
+        "zh": "恰恰相反：重型车制动距离更长，所以在卡车后面要加大车距，而不是缩小。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-0": {
+      "verdict": "VERO",
+      "key_it": "evita la collisione con il veicolo che precede",
+      "chapter": "ch9",
+      "why": {
+        "en": "That is exactly its purpose: enough space to stop before hitting the vehicle in front.",
+        "ru": "Это и есть её цель: достаточно места, чтобы остановиться до наезда на впереди идущее.",
+        "zh": "这正是它的目的：留出足够空间，在撞上前方车辆之前停下来。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-9": {
+      "verdict": "VERO",
+      "key_it": "macchina sgombraneve in azione è di 20 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "While a snow-clearing machine is working, the required distance is 20 metres — keep it.",
+        "ru": "Во время работы машины для очистки снега нужная дистанция — 20 метров, её держат.",
+        "zh": "除雪车作业时，应保持20米的距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-10": {
+      "verdict": "VERO",
+      "key_it": "macchina spanditrice di sale in azione è di 20 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "While a salt-spreading machine is working, the required distance is 20 metres — keep it.",
+        "ru": "Во время работы машины-посыпачи соли нужная дистанция — 20 метров, её держат.",
+        "zh": "撒盐车作业时，应保持20米的距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-21": {
+      "verdict": "FALSO",
+      "key_it": "macchina sgombraneve in azione è di 10 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "The distance to a working snow-clearing machine must be far greater than 10 metres: 10 m is far too little.",
+        "ru": "Дистанция до работающей машины для очистки снега должна быть сильно больше 10 метров: 10 м — слишком мало.",
+        "zh": "除雪车作业时的距离必须远大于10米：10米远远不够。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-22": {
+      "verdict": "FALSO",
+      "key_it": "macchina spanditrice di sale in azione è di 15 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "The distance to a working salt-spreading machine must be far greater than 15 metres: 15 m is far too little.",
+        "ru": "Дистанция до работающей машины-посыпачи соли должна быть сильно больше 15 метров: 15 м — слишком мало.",
+        "zh": "撒盐车作业时的距离必须远大于15米：15米远远不够。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
