@@ -2197,6 +2197,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-pericolo-intralcio-0": {
+      "verdict": "VERO",
+      "key_it": "tenersi sul margine sinistro della carreggiata per svoltare",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: staying on the left edge of the carriageway to turn into a street on the right blocks oncoming traffic and creates danger — to turn right you must pull as close as possible to the right edge.",
+        "ru": "Верно: держаться левого края проезжей части, чтобы повернуть направо, — значит перекрывать встречное движение и создавать опасность: поворачивая направо, надо максимально приблизиться к правому краю.",
+        "zh": "正确：为右转而停在道路左侧边缘会阻断对向车辆并造成危险——右转时必须尽量靠近右侧边缘。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-pericolo-intralcio-1": {
+      "verdict": "VERO",
+      "key_it": "sostare sui binari tramviari",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: parking on tram tracks is forbidden because it blocks the tram's fixed route and creates a hazard for the tram, the traffic around it, and the passengers on board.",
+        "ru": "Верно: стоянка на трамвайных путях запрещена, потому что перекрывает зафиксированный путь трамвая и создаёт опасность для него, окружающего движения и пассажиров.",
+        "zh": "正确：在电车轨道上停车是禁止的，因为它阻挡电车固定的行驶路线，并对电车、周边交通及乘客造成危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-pericolo-intralcio-2": {
+      "verdict": "VERO",
+      "key_it": "effettuare un cambiamento di direzione senza segnalare la manovra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: changing direction without signaling the manoeuvre in advance is forbidden — other road users cannot anticipate your move, so you create danger and obstruction for the flow.",
+        "ru": "Верно: менять направление без заблаговременной сигнализации запрещено — другие участники не могут предвидеть ваш манёвр, и вы создаёте опасность и помехи.",
+        "zh": "正确：在不提前示意变动的情况下改变行驶方向是被禁止的——其他驾驶人无法预判你的操作，从而造成危险与阻碍。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-pericolo-intralcio-3": {
+      "verdict": "VERO",
+      "key_it": "gareggiare in velocità",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: racing or competing in speed on public roads is expressly forbidden — it is a direct source of danger and obstruction for everyone around.",
+        "ru": "Верно: состязания на скорость на дорогах прямо запрещены — это прямой источник опасности и помех для всех окружающих.",
+        "zh": "正确：在公共道路上进行速度竞赛是被明确禁止的——它是对周围所有人直接的威胁与妨碍。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-pericolo-intralcio-4": {
+      "verdict": "VERO",
+      "key_it": "circolare a velocità troppo bassa senza giustificato motivo",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: driving too slowly without a justified reason is forbidden — it slows the whole flow and becomes an obstruction for the vehicles behind.",
+        "ru": "Верно: двигаться слишком медленно без уважительной причины запрещено — это тормозит весь поток и создаёт помехи для следующих сзади.",
+        "zh": "正确：没有正当理由以过慢速度行驶是被禁止的——它会拖慢整个车流，对后方车辆构成妨碍。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-pericolo-intralcio-5": {
+      "verdict": "FALSO",
+      "key_it": "immettersi nel flusso della circolazione provenendo da strade laterali",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: entering the traffic flow coming from side roads is normal driving, not forbidden — you only have to yield to the vehicles already on the main road.",
+        "ru": "Ложь: выезд в поток со второстепенных дорог — обычный манёвр, а не запрет: надо лишь уступить движущимся по главной дороге.",
+        "zh": "错误：从支路汇入车流是正常的驾驶行为，并不被禁止——你只需让行已在主干道上行驶的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-pericolo-intralcio-6": {
+      "verdict": "FALSO",
+      "key_it": "regolare la velocità in relazione alle caratteristiche e condizioni delle strade",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: adapting speed to the characteristics and conditions of the road is an obligation, not a prohibition — the statement turns a duty into a ban.",
+        "ru": "Ложь: подстраивать скорость под характеристики и условия дороги — это обязанность, а не запрет: утверждение превращает долг в запрет.",
+        "zh": "错误：根据道路特征与状况调整速度是义务而非禁止——该陈述把义务说成了禁令。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-pericolo-intralcio-7": {
+      "verdict": "FALSO",
+      "key_it": "fermare momentaneamente un veicolo lungo il margine destro",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: stopping a vehicle momentarily along the right edge of a one-way carriageway is the normal form of «ferma» (a brief stop) — it is not forbidden when done at the edge.",
+        "ru": "Ложь: моментанная остановка у правого края односторонней проезжей части — это обычная «ферма» (краткая остановка), а не запрет, если машина у края.",
+        "zh": "错误：在单行道右边缘短暂停车是常规操作（短暂停留），只要停在路边就不属于禁止行为。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-0": {
+      "verdict": "VERO",
+      "key_it": "il trasporto di animali se custoditi in apposita gabbia",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: transporting animals on a motorcycle is allowed provided they are kept in an appropriate cage that does not impair control or visibility.",
+        "ru": "Верно: перевозка животных на мотоцикле разрешена, если они помещены в специальную клетку, не мешающую управлению и обзору.",
+        "zh": "正确：在摩托车上运输动物是允许的，前提是将其关在专用笼内，不妨碍操控与视线。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-13": {
+      "verdict": "FALSO",
+      "key_it": "in nessun caso è consentito trasportare un carico",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: «in nessun caso» is too absolute — a motorcycle may carry a load that is properly secured and does not hinder driving, the lights, or the required visibility.",
+        "ru": "Ложь: «ни в коем случае» слишком абсолютно — на мотоцикле можно перевозить груз, надёжно закреплённый и не мешающий управлению, огням и обзору.",
+        "zh": "错误：“在任何情况下都不得运输货物”过于绝对——摩托车可以装载固定牢靠、不妨碍驾驶、灯光与必要视线的货物。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-uso-corretto-strada-0": {
+      "verdict": "VERO",
+      "key_it": "velocità adeguata alle condizioni della strada e del traffico",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: correct use of the road means driving at a speed adequate to the conditions of the road and the traffic, not merely below the posted limit.",
+        "ru": "Верно: правильное использование дороги — это скорость, адекватная условиям дороги и движения, а не просто скорость ниже разрешённого лимита.",
+        "zh": "正确：正确使用道路意味着以与道路状况和交通状况相称的速度行驶，而不只是低于限速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-uso-corretto-strada-1": {
+      "verdict": "VERO",
+      "key_it": "siano osservate le norme di comportamento e quelle dettate dalla comune prudenza",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: correct use of the road means observing both the code's conduct rules and those dictated by common prudence — the code is not the only source of safety.",
+        "ru": "Верно: правильное использование дороги означает соблюдение и правил поведения из кода, и тех, что диктует обычная осторожность — кодекс не единственный источник безопасности.",
+        "zh": "正确：正确使用道路既包括遵守法规中的行为规则，也包括遵循日常谨慎所要求的规则——法规并非安全规则的唯一来源。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-uso-corretto-strada-2": {
+      "verdict": "VERO",
+      "key_it": "sgombrare l'incrocio, quando compaia sul semaforo la luce gialla fissa",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if a steady yellow appears and you cannot stop safely before the stop line, the correct move is to proceed and clear the intersection, not stop inside it.",
+        "ru": "Верно: если загорелся постоянный жёлтый и безопасно остановиться до стоп-линии нельзя, правильно — продолжить движение и освободить перекрёсток, а не тормозить внутри него.",
+        "zh": "正确：若黄色常亮灯出现且无法在停止线前安全停车，正确做法是继续行驶并驶离路口，而不是停在路口内。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-uso-corretto-strada-3": {
+      "verdict": "VERO",
+      "key_it": "si dia la precedenza ai pedoni che attraversano sugli attraversamenti pedonali",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: correct road use includes yielding to pedestrians who are crossing on a marked pedestrian crossing — they have priority there.",
+        "ru": "Верно: правильное использование дороги включает уступку пешеходам, переходящим по пешеходному переходу — там они имеют преимущество.",
+        "zh": "正确：正确使用道路包括让行正在人行横道上过街的行人——在那里行人享有优先权。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-uso-corretto-strada-4": {
+      "verdict": "VERO",
+      "key_it": "si usino proiettori anabbaglianti nei centri abitati nelle ore notturne",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: in built-up areas at night you must use the low beam (anabbaglianti) — the high beam blinds other drivers and pedestrians in the dense urban environment.",
+        "ru": "Верно: в населённых пунктах ночью обязательно ближний свет — дальний ослепляет других водителей и пешеходов в плотной городской среде.",
+        "zh": "正确：在城区夜间必须使用近光灯——远光灯会在密集的城市环境中使其他驾驶人和行人目眩。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-uso-corretto-strada-5": {
+      "verdict": "VERO",
+      "key_it": "si guardino gli specchi retrovisori prima di azionare l'indicatore di direzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the correct order is to check the mirrors first, then signal and change lanes — the mirror check is what proves the manoeuvre is actually safe to begin.",
+        "ru": "Верно: правильный порядок — сначала зеркала, затем сигнал и смена полосы: именно взгляд в зеркала доказывает, что манёвр безопасно начинать.",
+        "zh": "正确：正确顺序是先查看后视镜，再打转向灯并变道——后视镜检查才真正证明这个变道此刻可以安全开始。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-uso-corretto-strada-8": {
+      "verdict": "FALSO",
+      "key_it": "si usino in ogni caso i proiettori a luce abbagliante",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: «in ogni caso» (in every case) makes it false — the high beam is forbidden, for example, inside built-up areas and behind other vehicles where it blinds them.",
+        "ru": "Ложь: «в каждом случае» делает утверждение ложным — дальний свет запрещён, например, в населённых пунктах и за другими машинами, где он ослепляет.",
+        "zh": "错误：“在任何情况下都使用远光灯”是错误的——例如在城区内及跟随其他车辆时，远光灯会使他人目眩而不得使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-uso-corretto-strada-10": {
+      "verdict": "FALSO",
+      "key_it": "si proceda a velocità elevata per non creare intralcio",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: driving at a high speed to avoid being an obstruction is exactly the wrong idea — speed must be adequate to conditions; going faster than safe creates the real hazard.",
+        "ru": "Ложь: ехать быстро, «чтобы не создавать помех», — совсем неверная мысль: скорость должна быть адекватной условиям; ехать быстрее, чем безопасно, и создаёт реальную опасность.",
+        "zh": "错误：“为了不造成阻碍就开快车”是错误观念——速度应与路况相称；开得比安全速度更快才是真正的危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-0": {
+      "verdict": "VERO",
+      "key_it": "dobbiamo seguire la direzione consentita",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if near the intersection you notice you are in the wrong preselection lane, you must keep the direction allowed by the horizontal markings — the wrong lane now can be corrected only later.",
+        "ru": "Верно: если у перекрёстка вы поняли, что вы не в той полосе предварительного выбора, нужно следовать разрешённому горизонтальной разметкой направлению — ошибочную полосу поправят позже.",
+        "zh": "正确：若临近路口才发现自己选错了导向车道，必须按地面标线允许的方向行驶——错误的车道只能事后纠正。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-2": {
+      "verdict": "VERO",
+      "key_it": "non ci dobbiamo arrestare bruscamente, per evitare tamponamenti",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: noticing the wrong preselection lane, you must not brake abruptly — a sudden stop causes rear-end collisions and confusion in the traffic that follows.",
+        "ru": "Верно: заметив, что вы не в той полосе, резко тормозить нельзя — внезапная остановка вызывает наезды сзади и путаницу в движении.",
+        "zh": "正确：发现自己选错导向车道时不得急刹车——急刹会导致追尾与交通混乱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
