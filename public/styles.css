@@ -1279,6 +1279,27 @@ main:focus { outline: none; }
 
 .why-fact:last-of-type { border-bottom: none; margin-bottom: 10px; }
 
+/* L9a: AI-drafted explanation, shown in the mistake breakdown from the
+   2nd wrong answer onward. Visually distinct from the chapter facts above. */
+.explanation { margin-top: var(--space-2); }
+.explanation__meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+.explanation__link {
+  font: 700 12px/16px var(--font-sans);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.explanation__key { font-size: 14px; line-height: 1.5; }
+.explanation__why { font-size: 14px; line-height: 1.55; color: var(--ink); margin: 6px 0 0; }
+.ds-feedback .explanation {
+  padding: 10px 12px;
+  border-left: 4px solid var(--warn);
+  background: var(--paper);
+}
+.ds-feedback .explanation .why-fact { padding: 0; }
+
 /* ---------- Design system (S2.11): Card, Tag, Button, Stat, WeekStrip, GoalRing ----------
    Source of truth: docs/design-system/components/bundle.css. The app ships
    its own copy of the rules so the public/ build stays dependency-free;

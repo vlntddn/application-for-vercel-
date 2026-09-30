@@ -12,6 +12,9 @@ export const state = {
   insights: null,
   numbers: null,
   questionsBySlug: new Map(),
+  // Per-category explanation files (L9a); a Map of slug -> {items}. A missing
+  // file caches as an empty object so repeated loads are cheap.
+  explanationsBySlug: new Map(),
 };
 
 export async function boot() {
@@ -49,6 +52,25 @@ export async function loadInsights() {
 export async function loadNumbers() {
   if (!state.numbers) state.numbers = await api.numbers();
   return state.numbers;
+}
+
+/**
+ * Explanations for one category (L9a). Served from /data/explanations/<slug>.json.
+ * The first (or a renamed) category may have no file yet, so a 404 means
+ * "none": we cache an empty object and the practice panel skips the block.
+ * Never throws — explanations are an enhancement, not a load prerequisite.
+ */
+export async function loadExplanations(slug) {
+  if (!state.explanationsBySlug.has(slug)) {
+    let data = { items: {} };
+    try {
+      data = await api.explanations(slug);
+    } catch {
+      /* no explanation file for this category yet */
+    }
+    state.explanationsBySlug.set(slug, data);
+  }
+  return state.explanationsBySlug.get(slug);
 }
 
 export async function loadQuestions(slug) {

@@ -1,0 +1,31 @@
+{
+  "category": "cinture-casco-sicurezza",
+  "items": {
+    "cinture-casco-sicurezza-caratteristiche-airbag-12": {
+      "verdict": "FALSO",
+      "key_it": "meno di 4 porte",
+      "chapter": "ch22",
+      "why": {
+        "en": "An airbag is fitted to nearly every modern car regardless of how many doors it has; the number of doors is not a criterion for installation.",
+        "ru": "Аирбег устанавливается почти на каждый современный автомобиль независимо от числа дверей; количество дверей не является критерием установки.",
+        "zh": "安全气囊几乎安装在每辆现代汽车上，与车门数量无关；门的数量不是安装的判断标准。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-09-30"
+    },
+    "cinture-casco-sicurezza-sistemi-trasporto-bambini-1": {
+      "verdict": "VERO",
+      "key_it": "3 anni",
+      "chapter": "ch22",
+      "why": {
+        "en": "Children under 3 must travel in an approved child restraint system, not just the standard seat belt.",
+        "ru": "Дети младше 3 лет должны ехать в сертифицированном детском удерживающем устройстве, а не только на штатном ремне.",
+        "zh": "3岁以下的儿童必须使用认证的儿童安全座椅，而不是只用普通安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-09-30"
+    }
+  }
+}

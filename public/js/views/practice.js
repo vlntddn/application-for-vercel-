@@ -6,6 +6,7 @@ import {
   loadInsights,
   loadQuestions,
   loadDictionary,
+  loadExplanations,
   slugForQuestionId,
   recordAnswersResilient,
 } from '../state.js';
@@ -310,6 +311,40 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     return el('div.why-block', {}, ...contents);
   }
 
+  /**
+   * L9a: the AI-drafted explanation, shown only in a mistake's breakdown and
+   * only once the learner has gotten this exact question wrong at least
+   * twice (`answers[id].wrong >= 2`). It surfaces the verbatim `key_it`
+   * phrase, the explanation in the learner's language, and a link to the
+   * chapter — always tagged "AI draft — check the lesson". Never on the
+   * exam. Missing file / not yet earned → null.
+   */
+  async function explanationBlock(question) {
+    // Only in a mistake's breakdown; the exam never uses this panel.
+    if (lastCorrect) return null;
+    // `state.progress.answers` hasn't committed THIS wrong answer yet (it is
+    // recorded after draw()), so count it manually: previous wrongs + this one.
+    const rec = state.progress.answers?.[question.id];
+    const wrongTotal = (rec?.wrong || 0) + 1;
+    if (wrongTotal < 2) return null; // show only from the 2nd mistake onward
+    const slug = slugForQuestionId(question.id);
+    if (!slug) return null;
+    const file = await loadExplanations(slug);
+    const item = file.items?.[question.id];
+    if (!item) return null; // no explanation authored for this question yet
+    return el('div.why-block.explanation', {},
+      el('div.explanation__meta', {},
+        el('span.tag.warn', {}, 'AI draft — check the lesson'),
+        el('a.explanation__link', { href: `#/theory/${item.chapter}` },
+          `Chapter ${item.chapter}`),
+      ),
+      el('div.why-fact', {},
+        el('strong.explanation__key', {}, `«${item.key_it}»`),
+      ),
+      el('p.explanation__why', {}, loc(item.why)),
+    );
+  }
+
   function reveal() {
     revealed = true;
     draw();
@@ -390,6 +425,8 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     );
     const whySlot = el('div.why-slot', {});
     panel.append(whySlot);
+    const explanationSlot = el('div.explanation-slot', {});
+    panel.append(explanationSlot);
     const actions = el('div.ds-feedback__actions', {},
       el('button.btn.btn-primary', { onclick: next },
         index + 1 >= questions.length ? 'FINISH' : 'NEXT →'),
@@ -406,6 +443,14 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     whyBlock(q).then((block) => {
       if (index === atIndex && whySlot.isConnected && !whySlot.firstChild) {
         whySlot.replaceChildren(block ?? el('span', { style: 'display:none' }));
+      }
+    });
+    // L9a: AI-drafted explanation, only on a repeated mistake. Independent
+    // slot under the chapter facts; stays empty (nothing rendered) when not
+    // yet earned or when no explanation exists for this question.
+    explanationBlock(q).then((block) => {
+      if (index === atIndex && explanationSlot.isConnected && block) {
+        explanationSlot.replaceChildren(block);
       }
     });
     return panel;

@@ -59,6 +59,7 @@ const staticApi = {
   insights: () => request('/data/insights/signal-words.json'),
   numbers: () => request('/data/insights/numbers.json'),
   questions: (slug) => request(`/data/questions/${slug}.json`),
+  explanations: (slug) => request(`/data/explanations/${slug}.json`),
 };
 
 const serverProgressApi = {

@@ -59,6 +59,27 @@ else
   fail "overlay entries lost vs $BASE (restore them, merge instead of overwrite):"; echo "$LOST"
 fi
 
+# 4b. Explanations: never lose an existing question id (same merge-only rule as the overlay).
+EXPL_LOST="$(BASE="$BASE" node -e '
+const fs = require("fs"), { execSync } = require("child_process");
+const base = process.env.BASE; let lost = [];
+let files = [];
+try { files = execSync(`git ls-tree --name-only ${base} data/explanations/`, { encoding: "utf8" }).split("\n").filter(Boolean); } catch {}
+for (const f of files) {
+  const old = (JSON.parse(execSync(`git show ${base}:${f}`, { encoding: "utf8", maxBuffer: 64e6 })).items) || {};
+  let cur = {};
+  try { cur = JSON.parse(fs.readFileSync(f, "utf8")).items || {}; } catch { lost.push(f + " (missing or invalid JSON)"); continue; }
+  for (const id of Object.keys(old))
+    if (!cur[id]) lost.push(`${f}: ${id}`);
+}
+console.log(lost.slice(0, 20).join("\n") + (lost.length > 20 ? `\n...and ${lost.length - 20} more` : ""));
+')"
+if [ -z "$EXPL_LOST" ]; then
+  pass "explanations: no existing entries lost"
+else
+  fail "explanation entries lost vs $BASE (restore them, merge instead of overwrite):"; echo "$EXPL_LOST"
+fi
+
 # 5. Unit tests.
 if npm test --silent >/tmp/pp-verify-test.log 2>&1; then
   pass "npm test ($(grep -E '^# pass' /tmp/pp-verify-test.log | awk '{print $3}') passed)"
