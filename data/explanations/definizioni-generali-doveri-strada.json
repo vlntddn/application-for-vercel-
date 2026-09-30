@@ -1235,6 +1235,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-0": {
+      "verdict": "VERO",
+      "key_it": "destinata alla normale marcia",
+      "chapter": "ch1",
+      "why": {
+        "en": "A lane is, first and foremost, one file of vehicles moving in the same direction, so a lane dedicated to ordinary forward driving is its most basic use.",
+        "ru": "Полоса — это прежде всего один ряд движущихся в одном направлении транспортных средств, поэтому выделение полосы под обычный проезд — её основное назначение.",
+        "zh": "车道首先是指沿同一方向行驶的一列车辆，因此将车道用于常规行驶是其最基本的用途。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-2": {
+      "verdict": "VERO",
+      "key_it": "di accelerazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "Acceleration lanes exist so vehicles can gain speed and merge safely, for example when entering a higher-speed road or motorway.",
+        "ru": "Полосы ускорения существуют, чтобы транспорт мог набрать скорость и безопасно влиться в поток, например, при въезде на более быструю дорогу или автостраду.",
+        "zh": "加速车道的作用是让车辆提速并安全汇入车流，例如驶入更快速度的道路或高速公路时。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-3": {
+      "verdict": "VERO",
+      "key_it": "di decelerazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "Deceleration lanes let drivers slow down before leaving the main carriageway, so the exit does not disrupt the flow of traffic.",
+        "ru": "Полосы замедления позволяют водителям снизить скорость перед съездом с основного русла, чтобы выезд не мешал движению потока.",
+        "zh": "减速车道让驾驶员在下主车行道前降低车速，从而不影响主车道的车流。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-5": {
+      "verdict": "VERO",
+      "key_it": "riservata alla circolazione di alcune categorie",
+      "chapter": "ch1",
+      "why": {
+        "en": "A lane can be reserved for specific vehicle categories, such as taxis or buses, to give priority to frequent or public transport.",
+        "ru": "Полосу можно выделить под определённые категории транспорта, например, такси или автобусы, чтобы приоритет был у регулярного общественного сообщения.",
+        "zh": "车道可以专门划给某些车型，例如出租车或公交车，以优先保障公共交通的通行。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-6": {
+      "verdict": "VERO",
+      "key_it": "destinata ad effettuare sorpassi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Depending on the layout, a lane may be designated specifically for overtaking other vehicles.",
+        "ru": "В зависимости от схемы организации движения одна из полос может быть отведена специально для обгона других транспортных средств.",
+        "zh": "根据道路布置，某条车道可能被专门指定用于超越其他车辆。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-7": {
+      "verdict": "VERO",
+      "key_it": "velocità minima obbligatoria",
+      "chapter": "ch1",
+      "why": {
+        "en": "The road owner may set not only a maximum but also a mandatory minimum speed on a given lane, typically to keep that lane flowing.",
+        "ru": "Собственник дороги может установить не только максимальную, но и обязательную минимальную скорость на конкретной полосе, обычно чтобы полоса оставалась подвижной.",
+        "zh": "道路所有者可以为某条车道规定不仅最高、而且最低强制车速，通常是为了保持该车道畅通。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-9": {
+      "verdict": "VERO",
+      "key_it": "soste di emergenza",
+      "chapter": "ch1",
+      "why": {
+        "en": "A lane can be set aside for emergency stops in case of a breakdown or when the driver feels unwell.",
+        "ru": "Полосу можно зарезервировать для экстренной остановки в случае поломки или недомогания водителя.",
+        "zh": "车道可以预留用于在车辆故障或驾驶员不适时进行紧急停车。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-10": {
+      "verdict": "VERO",
+      "key_it": "veicoli che intendono svoltare",
+      "chapter": "ch1",
+      "why": {
+        "en": "A specialized lane may be reserved for vehicles that intend to turn, so turning traffic does not block the through lanes.",
+        "ru": "Специализированную полосу можно выделить для транспортных средств, которые собираются поворачивать, чтобы повороты не задерживали прямой поток.",
+        "zh": "专用车道可以划给准备转弯的车辆，以免转弯车辆阻塞直行车道。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-11": {
+      "verdict": "VERO",
+      "key_it": "rallentamento dei veicoli in uscita",
+      "chapter": "ch1",
+      "why": {
+        "en": "A lane may be dedicated to the slowing of vehicles as they leave the motorway.",
+        "ru": "Полосу можно использовать для замедления транспортных средств при съезде с автострады.",
+        "zh": "车道可以用于车辆在驶离高速公路时的减速。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-13": {
+      "verdict": "FALSO",
+      "key_it": "doppio senso di circolazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "A single lane carries traffic in one direction only, so it cannot be two-way; two-way traffic needs at least one lane per direction.",
+        "ru": "Одна полоса рассчитана на движение только в одном направлении, поэтому она не может быть встречной; для двустороннего движения нужна как минимум полоса в каждом направлении.",
+        "zh": "一条车道只承载单一方向的车流，因此不能用于双向行驶；双向通行需要每个方向至少一条车道。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-15": {
+      "verdict": "FALSO",
+      "key_it": "non può mai essere attraversata",
+      "chapter": "ch1",
+      "why": {
+        "en": "The trap is the word “mai” (never): pedestrians may cross a lane where an appropriate crossing is provided, such as a signalised zebra crossing.",
+        "ru": "Подвох в слове «mai» (никогда): переходить полосу можно там, где устроено соответствующее место, например, регулируемый пешеходный переход.",
+        "zh": "陷阱在于「mai」（永远）一词：在有相应通行设施的地方（例如信号灯控制的斑马线），行人是可以横穿车道的。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-accelerazione-4": {
+      "verdict": "FALSO",
+      "key_it": "corsia di accelerazione può essere utilizzata per il sorpasso",
+      "chapter": "ch1",
+      "why": {
+        "en": "An acceleration lane is for gaining speed and merging, not for overtaking; using it to overtake defeats its purpose and is unsafe.",
+        "ru": "Полоса ускорения предназначена для набора скорости и слияния с потоком, а не для обгона; использовать её для обгона бессмысленно и опасно.",
+        "zh": "加速车道用于提速并汇入车流，而非超车；用其超车既不符合用途也不安全。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-decelerazione-3": {
+      "verdict": "FALSO",
+      "key_it": "corsia di decelerazione può essere utilizzata per la sosta",
+      "chapter": "ch1",
+      "why": {
+        "en": "A deceleration lane is for slowing before the exit, not for stopping; stopping there blocks the exit and is forbidden.",
+        "ru": "Полоса замедления служит для снижения скорости перед съездом, а не для остановки; остановка на ней блокирует выезд и запрещена.",
+        "zh": "减速车道用于驶出前减速，而非停车；在该车道停车会阻塞出口，属于禁止行为。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-marciapiede-2": {
+      "verdict": "VERO",
+      "key_it": "sosta dei veicoli solo in presenza di apposite strisce",
+      "chapter": "ch1",
+      "why": {
+        "en": "A sidewalk is pedestrian space; vehicles may use it to park only where dedicated parking markings are painted.",
+        "ru": "Тротуар — пространство пешеходов; транспортные средства могут использовать его для стоянки только там, где нанесена специальная разметка парковки.",
+        "zh": "人行道是行人的空间；车辆只有在施划了专用停车标线的地方才可在此停放。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-marciapiede-5": {
+      "verdict": "FALSO",
+      "key_it": "parte della strada riservata anche alle biciclette",
+      "chapter": "ch1",
+      "why": {
+        "en": "A sidewalk is reserved for pedestrians, not shared with bicycles as a general rule; cycling on it is not its intended function.",
+        "ru": "Тротуар отведён пешеходам, а не велосипедам; по общему правилу это не их совместное пространство, и движение на велосипеде не является его назначением.",
+        "zh": "人行道专供行人使用，并非与自行车共用；一般而言骑行不属于人行道的功能。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-salvagente-0": {
+      "verdict": "VERO",
+      "key_it": "serve anche al riparo o alla sosta dei pedoni",
+      "chapter": "ch1",
+      "why": {
+        "en": "The refuge island at a crossing also gives pedestrians shelter and a place to pause partway across the road.",
+        "ru": "Островок безопасности на переходе также служит пешеходам укрытием и местом, где можно остановиться, перейдя дорогу лишь наполовину.",
+        "zh": "人行横道处的安全岛也为行人提供了遮蔽和在中途暂停的地方。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-salvagente-2": {
+      "verdict": "VERO",
+      "key_it": "colonnine luminose a luce gialla fissa",
+      "chapter": "ch1",
+      "why": {
+        "en": "A refuge may be marked by luminous posts showing a steady yellow light, making it easier to see at night.",
+        "ru": "Островок безопасности может быть обозначен световыми столбиками с непрерывным жёлтым светом, что улучшает его видимость в тёмное время.",
+        "zh": "安全岛可以用发出持续黄光的发光柱来标示，使其在夜间更易被看见。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-passo-carrabile-2": {
+      "verdict": "VERO",
+      "key_it": "corredato da apposito segnale",
+      "chapter": "ch1",
+      "why": {
+        "en": "A vehicular crossing must carry a sign stating the authorising body and the authorisation number, so its origin is traceable.",
+        "ru": "Пешеходный проезд для транспорта обязан иметь знак, указывающий выдавший разрешение орган и номер разрешения, чтобы можно было установить его происхождение.",
+        "zh": "车辆通道必须设有标示授权机构和授权编号的标志，以便追溯其来源。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-7": {
+      "verdict": "FALSO",
+      "key_it": "sostituire il dispositivo di scarico dei quadricicli leggeri",
+      "chapter": "ch1",
+      "why": {
+        "en": "Light quadricycles must not be tampered with to raise top speed; modifying the exhaust or similar parts to exceed the type’s limit is prohibited, not merely a displacement question.",
+        "ru": "Лёгкие квадрициклы нельзя дорабатывать ради повышения максимальной скорости; изменение выхлопа или аналогичных деталей, чтобы превысить допустимый предел типа, запрещено, а вопрос не сводится лишь к объёму двигателя.",
+        "zh": "轻型四轮车不允许改装以提升最高车速；更换排气管等部件以超出该车型允许的速度上限是禁止的，而不仅取决于发动机排量。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-10": {
+      "verdict": "FALSO",
+      "key_it": "aumentare la cilindrata dei quadricicli leggeri",
+      "chapter": "ch1",
+      "why": {
+        "en": "A light quadricycle’s identity is defined by its speed and power limits; increasing engine displacement to push performance beyond those limits is not permitted, regardless of the resulting speed.",
+        "ru": "Характер легкого квадрицикла определяется его допустимыми пределами скорости и мощности; увеличение объёма двигателя, чтобы выйти за эти пределы, запрещено независимо от итоговой скорости.",
+        "zh": "轻型四轮车由其允许的车速和功率上限来界定；增大发动机排量以突破这些限制是不被允许的，与最终车速无关。"
+      },
+      "source": "ai-draft",
+      "model": "claude-sonnet",
+      "at": "2026-09-30"
     }
   }
 }
