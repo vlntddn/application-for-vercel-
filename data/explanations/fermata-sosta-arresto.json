@@ -741,6 +741,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-vietata-4": {
+      "verdict": "VERO",
+      "key_it": "sui dossi",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: stopping on a speed bump is forbidden — it would block the road and damage the vehicle.",
+        "ru": "Верно: останавливаться на трамплине запрещено — это перекроет проезжую часть и повредит автомобиль.",
+        "zh": "正确：在减速带上停车被禁止——会挡住道路并损坏车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-vietata-5": {
+      "verdict": "VERO",
+      "key_it": "in prossimità dei dossi",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: outside built-up areas and on fast urban roads, stopping near a speed bump is forbidden.",
+        "ru": "Верно: вне населённых пунктов и на городских скоростных дорогах останавливаться вблизи трамплина запрещено.",
+        "zh": "正确：在建成区外和城市快速道路上，靠近减速带停车被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-vietata-7": {
+      "verdict": "FALSO",
+      "key_it": "sul margine destro",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the right edge of the roadway is the usual place for a brief stop, so it is not forbidden as a rule.",
+        "ru": "Ложь: правый край проезжей части — обычное место для кратковременной остановки, поэтому по умолчанию оно не запрещено.",
+        "zh": "错误：行车道右缘是临时停靠的常规位置，通常并不被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-vietata-8": {
+      "verdict": "FALSO",
+      "key_it": "lungo il margine sinistro",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: stopping along the left edge of a one-way roadway is not generally forbidden — only where signs say so.",
+        "ru": "Ложь: останавливаться вдоль левого края односторонней проезжей части запрещено не всегда — только там, где указывают знаки.",
+        "zh": "错误：沿单行道路左缘停车并非一律被禁止——仅在标志另行规定时禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-vietata-10": {
+      "verdict": "FALSO",
+      "key_it": "dei passi carrabili",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: at the exit of a private driveway a brief fermata is allowed; what is forbidden there is the prolonged sosta.",
+        "ru": "Ложь: на выезде с подъезда допустима кратковременная «фермата»; запрещённая там — продолжительная «соста».",
+        "zh": "错误：在私家车道出口处允许短暂停靠，被禁止的是较长时间的停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermata-vietata-11": {
+      "verdict": "FALSO",
+      "key_it": "destinate al mercato o al carico e allo scarico",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: in areas for markets or for loading and unloading, a brief fermata is not forbidden by rule — the ban applies to sosta.",
+        "ru": "Ложь: в зонах рынков и погрузо-разгрузки кратковременная «фермата» по умолчанию не запрещена — запрет касается «состы».",
+        "zh": "错误：在市场或装卸区域内，短暂停靠并非按规则被禁止——禁止针对的是较长时间停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermate-cartelli-intersezione-0": {
+      "verdict": "VERO",
+      "key_it": "segnali stradali verticali",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: stopping where it would hide a vertical traffic sign from other drivers is forbidden.",
+        "ru": "Верно: останавливаться там, где это скроет вертикальный дорожный знак от других водителей, запрещено.",
+        "zh": "正确：停车若会遮挡其他驾驶员看到垂直交通标志，则被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermate-cartelli-intersezione-1": {
+      "verdict": "VERO",
+      "key_it": "segnali semaforici",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: stopping where it would hide a traffic light from other drivers is forbidden.",
+        "ru": "Верно: останавливаться там, где это скроет светофор от других водителей, запрещено.",
+        "zh": "正确：停车若会遮挡其他驾驶员看到交通信号灯，则被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermate-cartelli-intersezione-2": {
+      "verdict": "VERO",
+      "key_it": "preselezione",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: stopping over lane-selection road markings and along channelisation lanes is forbidden.",
+        "ru": "Верно: останавливаться на разметке предварительного выбора полосы и вдоль полос, выделенных направляющей линией, запрещено.",
+        "zh": "正确：在车道预选标线和导流车道上停车被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermate-cartelli-intersezione-3": {
+      "verdict": "VERO",
+      "key_it": "aree di intersezione",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: outside built-up areas, stopping at or near an intersection is forbidden.",
+        "ru": "Верно: вне населённых пунктов останавливаться в месте пересечения дорог или вблизи него запрещено.",
+        "zh": "正确：在建成区外，在道路交叉口处或其附近停车被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermate-cartelli-intersezione-5": {
+      "verdict": "FALSO",
+      "key_it": "ore di esercizio",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: stopping at a fuel station is not forbidden for its opening hours as a rule; the ban applies only where a sign says so.",
+        "ru": "Ложь: останавливаться на заправке во время её работы запрещено не всегда; запрет действует только там, где указывают знаки.",
+        "zh": "错误：在加油站工作时间内停车并非一律被禁止；仅在标志规定时禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-fermate-cartelli-intersezione-9": {
+      "verdict": "FALSO",
+      "key_it": "in prossimità delle aree di intersezione",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the ban on stopping near an intersection does not start beyond the usual short distance — that is why the figure in the statement is wrong.",
+        "ru": "Ложь: запрет остановки вблизи пересечения не начинается с большего расстояния, чем обычное короткое — именно поэтому цифра в утверждении неверна.",
+        "zh": "错误：路口附近禁止停车的范围并非从更远距离才开始——这正是该说法中数字错误的原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-divieto-sosta-fermata-1": {
+      "verdict": "VERO",
+      "key_it": "sulle piste ciclabili e agli sbocchi di esse",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: both the sosta and the fermata are always forbidden on cycle paths and at their exits.",
+        "ru": "Верно: и «соста», и «фермата» в любом случае запрещены на велодорожках и на их выходах.",
+        "zh": "正确：停车和临时停靠在自行车道上及其出口处一律被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-divieto-sosta-fermata-3": {
+      "verdict": "VERO",
+      "key_it": "allo sbocco dei passi carrabili",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: a brief fermata is allowed at the exit of a private driveway.",
+        "ru": "Верно: кратковременная «фермата» на выезде с подъезда разрешена.",
+        "zh": "正确：在私家车道出口处允许短暂停靠。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-divieto-sosta-fermata-4": {
+      "verdict": "VERO",
+      "key_it": "davanti ai cassonetti dei rifiuti urbani",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: a brief fermata is allowed in front of urban waste bins.",
+        "ru": "Верно: кратковременная «фермата» перед контейнерами для мусора разрешена.",
+        "zh": "正确：在城市垃圾箱前允许短暂停靠。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-divieto-sosta-fermata-5": {
+      "verdict": "FALSO",
+      "key_it": "sugli attraversamenti pedonali",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: stopping on a pedestrian crossing to drop off a passenger is forbidden — even a fermata is not allowed there.",
+        "ru": "Ложь: останавливаться на пешеходном переходе, чтобы высадить пассажира, запрещено — даже «фермата» там не разрешена.",
+        "zh": "错误：在人行横道上停车让乘客下车是被禁止的——即使是短暂停靠也不允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-divieto-sosta-fermata-6": {
+      "verdict": "FALSO",
+      "key_it": "agli sbocchi di esse",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the ban on a brief fermata covers both the cycle path itself and its exits, not only the path.",
+        "ru": "Ложь: запрет кратковременной «ферматы» касается и самой велодорожки, и её выходов, а не только дорожки.",
+        "zh": "错误：禁止短暂停靠既适用于自行车道本身，也适用于其出口，而不仅是道面。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-divieto-sosta-fermata-7": {
+      "verdict": "FALSO",
+      "key_it": "allo sbocco dei passi carrabili",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: at the exit of a private driveway a brief fermata is allowed, so the statement that it is forbidden is wrong.",
+        "ru": "Ложь: на выезде с подъезда кратковременная «фермата» разрешена, поэтому утверждение о запрете неверно.",
+        "zh": "错误：在私家车道出口处允许短暂停靠，因此“被禁止”的说法是错误的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-divieto-sosta-fermata-9": {
+      "verdict": "FALSO",
+      "key_it": "nelle ore notturne",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: there is no general ban on a brief fermata at night; stopping is limited by the applicable signs, not by the time of day.",
+        "ru": "Ложь: общего запрета кратковременной «ферматы» ночью нет; остановку ограничивают действующие знаки, а не время суток.",
+        "zh": "错误：夜间没有一律禁止短暂停靠的规定；停车受相应标志约束，而非受昼夜时段约束。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-cautele-durante-sosta-0": {
+      "verdict": "VERO",
+      "key_it": "possibilità del conducente di allontanarsi",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: a sosta is precisely a prolonged stop, after which the driver may leave the vehicle.",
+        "ru": "Верно: «соста» — это именно длительная остановка, после которой водитель может покинуть автомобиль.",
+        "zh": "正确：“停车(sosta)”正是较长时间的停止，之后驾驶员可以离开车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
