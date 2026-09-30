@@ -520,6 +520,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "limiti-di-velocita-norme-velocita-8": {
+      "verdict": "VERO",
+      "key_it": "sulle strade extraurbane principali è di 110 km/h",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: absent other signs, the general cap on main extra-urban roads is 110.",
+        "ru": "Верно: при отсутствии иных знаков общий лимит на главных внегородских дорогах — 110.",
+        "zh": "正确：在没有其他标志时，主要城外公路的通用限速为110。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-norme-velocita-13": {
+      "verdict": "FALSO",
+      "key_it": "sulle strade urbane è di 80 km/h",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the general cap in built-up areas is 50, so this figure is simply incorrect.",
+        "ru": "Неверно: общий лимит в населённых пунктах 50, поэтому эта цифра просто ошибочна.",
+        "zh": "错误：建成区的通用限速是50，因此这个数字是错误的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-norme-velocita-14": {
+      "verdict": "FALSO",
+      "key_it": "per i quadricicli non leggeri",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: non-light quadricycles have a lower maximum, set by their own vehicle category — this figure is incorrect.",
+        "ru": "Неверно: у некрупных квадрициклов потолок ниже, задаётся их собственным классом — эта цифра неверна.",
+        "zh": "错误：非轻型四轮机动车的上限较低，由其自身类别设定——这个数字错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-norme-velocita-15": {
+      "verdict": "FALSO",
+      "key_it": "su qualsiasi autostrada è di 150 km/h",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the standard motorway cap is 130 — only specially designed sections, flagged by a dedicated sign, may allow more, not every \"any\" highway.",
+        "ru": "Неверно: стандартный потолок на автомагистрали 130 — повыше только на особых участках со своим знаком, а не на «любой» трассе.",
+        "zh": "错误：高速公路标准上限是130——只有带专用标志的特殊路段才允许更高，而非“任何”公路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-contrassegni-velocita-3": {
+      "verdict": "VERO",
+      "key_it": "diminuita in caso di traffico misto",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: mixed traffic — slow and fast vehicles, animals and pedestrians on the road — requires you to slow down to match the slower elements.",
+        "ru": "Верно: смешанный трафик — медленные и быстрые машины, животные и пешеходы на дороге — требует снизить скорость до уровня медленных.",
+        "zh": "正确：混合车流——慢车、快车、动物和行人占路——要求你减速至慢速元素水平。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-contrassegni-velocita-4": {
+      "verdict": "VERO",
+      "key_it": "in base alle condizioni del fondo stradale",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: speed must follow the road surface — potholes, roughness, wet leaves or loose gravel reduce grip and raise risk, so slow accordingly.",
+        "ru": "Верно: скорость должна следовать состоянию покрытия — ямы, неровности, мокрая листва или гравий снижают сцепление и повышают риск, поэтому снижайте.",
+        "zh": "正确：车速要随路面状况——坑洼、颠簸、湿叶或碎石会减少附着力、加大风险，因此相应降速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-moderazione-velocita-0": {
+      "verdict": "VERO",
+      "key_it": "particolarmente moderata in prossimità di un incrocio",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: near a junction you must be able to stop, so speed is reduced well in advance.",
+        "ru": "Верно: вблизи перекрёстка вы должны успеть остановиться, поэтому скорость снижается заблаговременно.",
+        "zh": "正确：路口附近必须能停下，因此要提前减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-moderazione-velocita-1": {
+      "verdict": "VERO",
+      "key_it": "particolarmente moderata nelle strettoie",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: on narrow stretches there is no room to correct your path, so speed must be reduced.",
+        "ru": "Верно: на узких участках нет места для манёвра, поэтому скорость нужно снизить.",
+        "zh": "正确：狭窄路段没有修正方向的余量，因此必须降速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-moderazione-velocita-2": {
+      "verdict": "VERO",
+      "key_it": "quando risulta difficoltoso l'incrocio con altri veicoli",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: when passing or crossing another vehicle is difficult, you must slow to stay in control of the manoeuvre.",
+        "ru": "Верно: когда пересечение с другим транспортным средством затруднено, нужно снизить скорость, чтобы остаться под контролем.",
+        "zh": "正确：当与另一车辆交会困难时，须降速以保持对动作的控制。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-moderazione-velocita-3": {
+      "verdict": "VERO",
+      "key_it": "nei tratti di strada in cui manca la visibilità (curve, dossi)",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: where visibility is blocked — curves, humps — you cannot react in time at full speed, so it must be moderated.",
+        "ru": "Верно: там, где видимость закрыта — повороты, холмы, — на полной скорости вы не успеете среагировать, поэтому её нужно снизить.",
+        "zh": "正确：在视距受阻处（弯道、路肩），全速下无法及时反应，因此须降速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-moderazione-velocita-4": {
+      "verdict": "VERO",
+      "key_it": "quando, in mancanza di marciapiedi, i pedoni occupano la carreggiata",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: with no sidewalk and pedestrians on the roadway, you must slow to protect them.",
+        "ru": "Верно: если нет тротуара и пешеходы на проезжей части, скорость нужно снизить ради их защиты.",
+        "zh": "正确：没有人行道且行人占据车道时，必须减速以保护他们。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-moderazione-velocita-5": {
+      "verdict": "VERO",
+      "key_it": "diminuire la velocità quando la strada è viscida",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: a slippery road — water, snow, ice, leaves or mud — cuts grip, so braking distance grows and speed must be reduced.",
+        "ru": "Верно: скользкое покрытие — вода, снег, лёд, листва или грязь — снижает сцепление, растит тормозной путь, поэтому скорость нужно снизить.",
+        "zh": "正确：湿滑路面（水、雪、冰、落叶或泥）降低附着力、拉长制动距离，因此须减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-moderazione-velocita-6": {
+      "verdict": "FALSO",
+      "key_it": "particolarmente moderata subito dopo il tramonto del sole",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: dusk itself is not a general rule forcing a fixed \"moderate\" speed — speed is set by visibility and conditions at that moment, and headlight duty, not an absolute cap.",
+        "ru": "Неверно: сумерки сами по себе не правило, диктующее фиксированную «умеренную» скорость — её задают видимость и условия, плюс обязанность фар, а не абсолютный лимит.",
+        "zh": "错误：黄昏本身不是强制固定“温和”车速的规则——它由当时的能见度与状况、以及大灯义务决定，而非绝对限速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-moderazione-velocita-7": {
+      "verdict": "FALSO",
+      "key_it": "particolarmente moderata subito dopo un incrocio",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: you slow before a junction, not \"right after\" it — the dangerous point is the crossing itself, so the timing in the statement is off.",
+        "ru": "Неверно: снижать скорость нужно перед перекрёстком, а не «сразу после» — опасна сама пересекательная зона, поэтому время в утверждении неверно.",
+        "zh": "错误：应在路口前减速，而非“紧接其后”——危险在交叉区本身，因此陈述的时机不对。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-moderazione-velocita-8": {
+      "verdict": "FALSO",
+      "key_it": "regolare la velocità in base alla fretta del conducente",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the road, weather and traffic set your speed — the driver's hurry has no part in it, and running late never justifies speeding.",
+        "ru": "Неверно: скорость задают дорога, погода и трафик — спешка водителя не при чём, и опоздание никогда не оправдывает разгон.",
+        "zh": "错误：车速由道路、天气和车流决定——驾驶员的着急与它无关，赶时间也不构成提速的理由。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-moderazione-velocita-9": {
+      "verdict": "FALSO",
+      "key_it": "una velocità adeguata solo alle nostre condizioni di salute",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the word \"only\" is the trap — speed must fit not just your health but the road, weather and traffic too.",
+        "ru": "Неверно: слово «только» — ловушка: скорость должна подходить не только вашему состоянию, но и дороге, погоде и трафику.",
+        "zh": "错误：“仅”是陷阱——车速不仅要适合你的身体状况，也要适合道路、天气和车流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-moderazione-velocita-10": {
+      "verdict": "FALSO",
+      "key_it": "una velocità sempre superiore a 30 km/h",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: there is no general rule forcing a speed above any figure — you may go as slow as conditions require, so \"always above\" is false.",
+        "ru": "Неверно: нет правила, обязывающего держать скорость выше какой-либо цифры — можно ехать настолько медленно, насколько требуют условия, поэтому «всегда выше» ложно.",
+        "zh": "错误：没有规则要求车速必须高于某个数字——条件需要时可以开得更慢，因此“始终高于”是错的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-moderazione-velocita-11": {
+      "verdict": "FALSO",
+      "key_it": "diminuire la velocità quando si è seguiti da un autobus di linea",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: being followed by a bus does not by itself require you to slow — speed is set by the road, weather and traffic, not by who is behind you.",
+        "ru": "Неверно: если вас догоняет автобус, это само по себе не требует снижать скорость — её задают дорога, погода и трафик, а не то, кто позади.",
+        "zh": "错误：被公交车跟随本身并不要求你减速——车速由道路、天气和车流决定，而非身后是谁。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-diminuzione-velocita-0": {
+      "verdict": "VERO",
+      "key_it": "in base allo stato di manutenzione e pulizia della strada",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: speed must follow how well the road is maintained and kept clear — poor maintenance or debris raises risk, so slow accordingly.",
+        "ru": "Верно: скорость должна следовать состоянию дороги — плохое содержание или мусор повышают риск, поэтому снижайте.",
+        "zh": "正确：车速要随道路养护与清洁状况——养护差或有杂物会加大风险，因此相应降速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-diminuzione-velocita-1": {
+      "verdict": "VERO",
+      "key_it": "La velocità deve essere diminuita in caso di forte vento laterale",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: strong crosswind can push the vehicle off its line, especially tall or wide ones, so speed must be reduced.",
+        "ru": "Верно: сильный боковой ветер может сдвинуть автомобиль с траектории, особенно высокий или широкий, поэтому скорость нужно снизить.",
+        "zh": "正确：强侧风可能将车辆吹偏——尤其高车或宽车——因此须减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
