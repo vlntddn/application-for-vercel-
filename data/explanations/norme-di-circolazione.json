@@ -1,0 +1,265 @@
+{
+  "category": "norme-di-circolazione",
+  "items": {
+    "norme-di-circolazione-guida-veicolo-0": {
+      "verdict": "VERO",
+      "key_it": "non deve, comunque, superare i limiti di velocità",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a car's power never cancels the legal speed limits. Every vehicle must respect the limits set by law, regardless of performance.",
+        "ru": "Верно: мощность автомобиля не отменяет законные ограничения скорости. Любой автомобиль обязан соблюдать установленные законом лимиты, независимо от характеристик.",
+        "zh": "正确：车辆的动力不会取消法定速度限制。无论性能如何，所有车辆都必须遵守法律规定的限速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-guida-veicolo-1": {
+      "verdict": "VERO",
+      "key_it": "dare, di norma, la precedenza nei crocevia a tutti",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: even a high-performance car must, as a rule, give way at uncontrolled crossroads to all vehicles coming from the right.",
+        "ru": "Верно: даже автомобиль повышенной мощности по общему правилу обязан уступать на перекрёстках без регулирования всем встречным справа.",
+        "zh": "正确：即使是高性能汽车，在无信号交叉口通常也必须让行所有右侧来车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-guida-veicolo-2": {
+      "verdict": "VERO",
+      "key_it": "evitare di costituire pericolo per gli altri utenti",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: every driver, even in a high-performance car, must avoid putting other road users in danger while driving.",
+        "ru": "Верно: каждый водитель, даже в машине повышенной мощности, обязан не создавать опасность для других участников движения.",
+        "zh": "正确：每位驾驶员，即使驾驶高性能车辆，也必须避免给其他道路使用者带来危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-guida-veicolo-3": {
+      "verdict": "VERO",
+      "key_it": "guardare nello specchietto retrovisore prima di segnalare",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before changing lane you must look in the rear-view mirror and then signal your intention, so other drivers know what you are going to do.",
+        "ru": "Верно: перед сменой полосы нужно посмотреть в зеркало заднего вида и лишь затем включить указатель, чтобы другие водители знали о вашем намерении.",
+        "zh": "正确：变道前必须先查看后视镜，然后打开转向灯，让其他驾驶员了解你的意图。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-guida-veicolo-4": {
+      "verdict": "VERO",
+      "key_it": "tenersi il più vicino possibile al margine destro",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when turning right you should stay as close as possible to the right edge of the carriageway — this keeps your path short and predictable for other drivers.",
+        "ru": "Верно: при повороте направо нужно держаться как можно ближе к правому краю проезжей части — это делает вашу траекторию короткой и предсказуемой.",
+        "zh": "正确：右转时应尽量靠近车道右缘，这样你的行驶轨迹对其他驾驶员更短更可预测。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-guida-veicolo-5": {
+      "verdict": "FALSO",
+      "key_it": "deve guidare sempre al centro della strada",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not drive in the middle of the road — normal travel keeps you at the right edge of the carriageway, not in the centre.",
+        "ru": "Неверно: по центру дороги не ездят — в нормальном движении держатся правого края проезжей части, а не центра.",
+        "zh": "错误：不能行驶在道路中央——正常行驶时应靠车道右缘，而非道路中间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-guida-veicolo-6": {
+      "verdict": "FALSO",
+      "key_it": "tenere in funzione gli abbaglianti di giorno anche in città",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: daytime driving does not require high beams inside built-up areas. Daytime running lights or dipped beams are the correct daytime setting in town.",
+        "ru": "Неверно: днём в черте города дальний свет включать не нужно — в городе днём пользуются ближним светом.",
+        "zh": "错误：白天在城区行驶不需要开远光灯——城区白天应使用近光灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-guida-veicolo-7": {
+      "verdict": "FALSO",
+      "key_it": "può sorpassare in ogni condizione di traffico",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you may overtake only when the road, visibility and traffic make it safe, not in every traffic condition. A missing no-overtake sign alone is not enough.",
+        "ru": "Неверно: обгонять можно только тогда, когда дорога, видимость и движение позволяют это безопасно — не в любых условиях. Одного отсутствия знака запрета мало.",
+        "zh": "错误：只有在道路、视线和交通状况都允许安全超车时才能超车——并非任何情况下都可以。仅没有禁止超车标志是不够的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-guida-veicolo-8": {
+      "verdict": "FALSO",
+      "key_it": "deve usare il clacson nei centri abitati",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the horn is for warning of danger, not for announcing yourself at every bicycle crossing in town. It must not be used as a routine signal inside built-up areas.",
+        "ru": "Неверно: клаксон нужен для предупреждения об опасности, а не для объявления о себе на каждом вело-переезде в городе. Как обычный сигнал в черте города его использовать нельзя.",
+        "zh": "错误：喇叭用于警示危险，而非在城镇每个自行车过街处示意自己。在城区内不得将其作为常规信号使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-guida-veicolo-9": {
+      "verdict": "FALSO",
+      "key_it": "può montare trombe bitonali",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: a private car may not be fitted with a dual-tone horn just to be more easily heard. Horns must stay the standard ones provided for the vehicle.",
+        "ru": "Неверно: на частном автомобиле нельзя ставить двухтональную трубу только ради лучшей слышимости — на автомобиле остаются штатные звуковые сигналы.",
+        "zh": "错误：私人车辆不得加装双音喇叭来提高可听度——车辆应保留原厂规定的标准喇叭。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-1": {
+      "verdict": "VERO",
+      "key_it": "non sporgere lateralmente di oltre 50 cm",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a motorcycle the load must not stick out sideways by more than 50 cm, because a motorcycle offers very little margin of safety.",
+        "ru": "Верно: на мотоцикле груз не должен выступать вбок более чем на 50 см, потому что у мотоцикла совсем мало запаса безопасности.",
+        "zh": "正确：摩托车上的货物侧面突出不得超过50厘米，因为摩托车的安全余量很小。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-2": {
+      "verdict": "VERO",
+      "key_it": "non diminuire la visibilità del conducente",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a load on a car must be secured so that it does not reduce the driver's visibility of the road and mirrors.",
+        "ru": "Верно: груз на автомобиле крепят так, чтобы он не уменьшал видимость дороги и зеркал для водителя.",
+        "zh": "正确：汽车上的货物必须固定好，不能减少驾驶员对道路和后视镜的视野。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-3": {
+      "verdict": "VERO",
+      "key_it": "non impedire la libertà di movimenti nella guida",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the load must not restrict the driver's freedom of movement at the wheel — it must not block steering, pedals or the seat.",
+        "ru": "Верно: груз не должен ограничивать свободу движений водителя за рулём — он не должен мешать рулю, педалям или сиденью.",
+        "zh": "正确：货物不得限制驾驶员操作车辆的自由度——不能遮挡方向盘、踏板或座椅。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-4": {
+      "verdict": "VERO",
+      "key_it": "sistemato sugli autoveicoli in modo da evitarne la caduta",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a load on a vehicle must be lashed or otherwise fixed so that it cannot fall off during driving.",
+        "ru": "Верно: груз на автомобиле крепят так, чтобы он не мог упасть во время движения.",
+        "zh": "正确：汽车上的货物必须捆扎或固定好，行驶中不得掉落。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-5": {
+      "verdict": "VERO",
+      "key_it": "non sporgere dalla parte posteriore per più dei tre decimi",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a load on a car must not stick out at the rear by more than three-tenths of the vehicle's length.",
+        "ru": "Верно: груз на автомобиле не должен выступать сзади более чем на три десятых длины автомобиля.",
+        "zh": "正确：汽车上的货物后部突出不得超过车辆长度的十分之三。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-6": {
+      "verdict": "VERO",
+      "key_it": "non deve superare la portata indicata nella carta di circolazione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the load must not exceed the rated load capacity shown in the vehicle registration document.",
+        "ru": "Верно: груз не должен превышать допустимую нагрузку, указанную в техпаспорте автомобиля.",
+        "zh": "正确：货物不得超过车辆登记证书上标明的额定载重。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-7": {
+      "verdict": "FALSO",
+      "key_it": "evitare la sporgenza laterale dello stesso per più di tre decimi",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the three-tenths rule applies to the rear overhang, not the side one. Side overhang is limited to a smaller value, not three-tenths of the length.",
+        "ru": "Неверно: правило трёх десятых относится к выступу сзади, а не сбоку. Боковой выступ ограничен другим, меньшим значением, а не тремя десятыми длины.",
+        "zh": "错误：十分之三的规则针对的是后部突出，而非侧面突出。侧面突出受另一个更小的数值限制，而非车长的十分之三。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-8": {
+      "verdict": "FALSO",
+      "key_it": "non superare di oltre il 10% l'altezza massima",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the height of the vehicle with load is limited to the maximum shown in the registration document; the rule does not allow adding a 10% margin above that maximum height.",
+        "ru": "Неверно: высота автомобиля с грузом ограничена максимальной высотой из техпаспорта; правила не допускают прибавки 10% сверх этой максимальной высоты.",
+        "zh": "错误：装载后的车辆高度以登记证书上的最大高度为限；规则不允许在此基础上再加10%的余量。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-9": {
+      "verdict": "FALSO",
+      "key_it": "non superare di oltre il 10% la portata utile",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the load must stay within the rated capacity of the registration document — the rules do not allow exceeding it by 10%.",
+        "ru": "Неверно: груз должен оставаться в пределах допустимой нагрузки из техпаспорта — правила не допускают превышения на 10%.",
+        "zh": "错误：货物不得超过登记证书上标明的额定载重——规则不允许超出10%。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-10": {
+      "verdict": "FALSO",
+      "key_it": "sporgere dalla parte anteriore del veicolo di più dei tre decimi",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: a load must not stick out at the front of the vehicle by more than three-tenths of its length — the limit works in the opposite direction, the overhang must stay within the limit.",
+        "ru": "Неверно: груз не должен выступать спереди более чем на три десятых длины автомобиля — предел работает в обратную сторону: выступ должен оставаться в пределах лимита.",
+        "zh": "错误：货物前端突出不得超过车辆长度的十分之三——该限制是上限，突出量必须控制在限度之内。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    }
+  }
+}
