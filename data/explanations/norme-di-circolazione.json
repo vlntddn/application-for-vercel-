@@ -2977,6 +2977,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incrocio-urbano-5": {
+      "verdict": "FALSO",
+      "key_it": "suonare insistentemente per sollecitare il conducente a rimettersi in moto",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: honking persistently at the car ahead that is slow to move at a green is an abuse of the horn — it does not make the intersection safer, it only adds stress and noise.",
+        "ru": "Ложь: настойчивый клаксон медленно стартующей машине впереди на зелёном — злоупотребление сигналом: перекрёсток от этого не станет безопаснее, только стресс и шум.",
+        "zh": "错误：对绿灯前缓慢起步的车按喇叭属于滥用喇叭——不能提高路口安全性，只会增加压力和噪音。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incrocio-urbano-6": {
+      "verdict": "FALSO",
+      "key_it": "è opportuno richiamare con il clacson l'attenzione degli automobilisti che seguono",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: honking at the cars BEHIND you because the lead car is slow inverts the purpose of the horn — the horn warns of an immediate danger, not traffic frustration.",
+        "ru": "Ложь: сигналить водителям за вами, потому что впереди долго стартуют, — искажение назначения клаксона: он предупреждает об непосредственной опасности, а не о недовольстве потоком.",
+        "zh": "错误：因前车起步慢而向后方车辆鸣喇叭是对喇叭用途的歪曲——喇叭只用于警示直接危险，不表达不满。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incrocio-urbano-7": {
+      "verdict": "FALSO",
+      "key_it": "tirare il freno a mano e scendere per cercare un agente del traffico",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: pulling the handbrake and getting out of a car stopped in the middle of the intersection to find a policeman is dangerous nonsense — you block the flow and become an obstacle and a pedestrian at once.",
+        "ru": "Ложь: поставить ручник в середине перекрёстка и выйти искать регулировщика — опасная ерунда: вы одновременно блокируете поток, создаёте помеху и сами становитесь пешеходом в потоке.",
+        "zh": "错误：在路口中央拉手刹下车寻找交警是危险行为——既阻碍车流，又将自己置于车流中的行人位置。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-1": {
+      "verdict": "VERO",
+      "key_it": "bisogna segnalare in anticipo la manovra da compiere, azionando l'indicatore di direzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a right turn is announced in advance with the turn indicator — the other road users must know your intention before you start the maneuver, not after.",
+        "ru": "Верно: поворот направо заранее объявляется поворотником — другие участники должны узнать о вашем намерении ДО начала манёвра, а не после.",
+        "zh": "正确：右转须提前打开转向灯——其他交通参与者应在操作开始前知晓你的意图，而非之后。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-8": {
+      "verdict": "FALSO",
+      "key_it": "girando attorno alla colonnina luminosa eventualmente posta al centro dell'incrocio",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: turning right around the luminous post in the center of the intersection turns the maneuver into a wide left-like arc — you cross the oncoming lanes and the pedestrian crossings.",
+        "ru": "Ложь: поворот направо «в обход» светового столба в центре перекрёстка превращает манёвр в широкую дугу налево: вы пересекаете встречные полосы и пешеходные переходы.",
+        "zh": "错误：右转绕路口中央的灯柱行驶，会把操作变成类似左转弯的宽弧线——会穿过对向车道和人行横道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-9": {
+      "verdict": "FALSO",
+      "key_it": "è necessario portarsi in vicinanza del centro dell'incrocio",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: getting to the CENTER of the intersection to turn right is the opposite of the rule — a right turn is performed hugging the right edge, close to the corner, without entering the middle.",
+        "ru": "Ложь: для поворота направо «подъезжать к центру перекрёстка» — обратное правилу: направо поворачивают прижатыми к правому краю, короткой дугой, не въезжая в центр.",
+        "zh": "错误：右转靠近路口中心是规则的反面——右转应贴右侧短弧线完成，不进入路口中央。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-impegno-delle-corsie-5": {
+      "verdict": "FALSO",
+      "key_it": "quelle centrali sono riservate al sorpasso",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: on a road with four separated carriageways the central ones are not a reserved overtaking lane — the carriageways are distinct roads, and each is used in its own direction.",
+        "ru": "Ложь: на дороге с четырьмя разделёнными проезжими частями «средние — для обгона» — неверно: это разные дороги, каждая используется по своему направлению.",
+        "zh": "错误：四幅分隔道路上中央车道为专用超车道的说法错误——它们是各自独立的车道，各按其方向使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-cambio-corsia-6": {
+      "verdict": "FALSO",
+      "key_it": "ha l'obbligo di segnalare la manovra con l'uso dell'avvisatore acustico (clacson o trombe)",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: a lane change is announced with the turn indicator, NOT the horn — the horn is reserved for warning of an immediate danger, and using it as a «lane-change signal» is an abuse.",
+        "ru": "Ложь: перестроение объявляется поворотником, а НЕ клаксоном: клаксон только для предупреждения об непосредственной опасности, «перестроение-сигналом» он не служит.",
+        "zh": "错误：变道用转向灯而非喇叭指示——喇叭仅用于警示直接危险，作为变道信号属滥用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-cambio-corsia-7": {
+      "verdict": "FALSO",
+      "key_it": "è necessario accertare che le corsie siano separate da una striscia continua",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: requiring a CONTINUOUS line between lanes before changing is the inverse — a continuous line FORBIDS crossing, so a change is possible only where the line is broken.",
+        "ru": "Ложь: требовать перед перестроением, чтобы полосы были разделены СПЛОШНОЙ, — наоборот: сплошная запрещает пересечение, менять полосу можно только там, где линия прерывистая.",
+        "zh": "错误：变道前要求车道由实线分隔是颠倒的——实线禁止跨越，只有虚线处才允许变道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-carreggiata-doppio-senso-0": {
+      "verdict": "VERO",
+      "key_it": "per svoltare a sinistra bisogna avvicinarsi al centro della carreggiata",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a two-way carriageway a left turn requires getting close to the center of the road — only from there can you make the wide left arc without drifting into oncoming traffic late.",
+        "ru": "Верно: на двусторонней проезжей части для поворота налево нужно подъехать к центру дороги: только от неё можно выполнить широкую дугу налево, не уходя в встречную в последний момент.",
+        "zh": "正确：在双向车道上左转需靠近道路中心——只有这样才不至于在最后时刻冲入对向车流，安全完成大弧线。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-carreggiata-doppio-senso-4": {
+      "verdict": "FALSO",
+      "key_it": "occorre spostarsi il più possibile sul margine sinistro della carreggiata",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: for a left turn getting as far LEFT as possible means driving into the oncoming lane — you approach the center of the road, not the left edge.",
+        "ru": "Ложь: «повернуть налево, отъехав как можно левее», — это выезд в встречную полосу: для поворота налево подъезжают к ЦЕНТРУ дороги, а не к левому краю.",
+        "zh": "错误：左转贴最左侧意味着驶入对向车道——左转应靠近道路中心，而非左侧路缘。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-carreggiata-doppio-senso-5": {
+      "verdict": "FALSO",
+      "key_it": "bisogna effettuare la manovra velocemente",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: doing the left turn «quickly, to get ahead of traffic from left and right» is a gamble — the turn is done at a controlled speed, yielding to oncoming traffic and crossing the intersection calmly.",
+        "ru": "Ложь: поворот налево «быстро, чтобы пересечься раньше, чем с двух сторон», — ставка: манёвр выполняется на контролируемой скорости, с уступкой встречным и спокойным пересечением.",
+        "zh": "错误：左转\"快速通过以避免左右来车\"是冒险行为——应控制车速，让行对向车辆，平稳通过路口。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-carreggiata-doppio-senso-8": {
+      "verdict": "FALSO",
+      "key_it": "occorre suonare il clacson, per attraversare con maggior sicurezza l'incrocio",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: honking «to cross the intersection more safely» is not in the code — the horn does not replace yielding to oncoming traffic; it only warns of an immediate danger.",
+        "ru": "Ложь: «сигналить, чтобы пересечься безопаснее» — не входит в правила: клаксон не заменяет уступки встречным; он лишь предупреждает об непосредственной опасности.",
+        "zh": "错误：鸣喇叭\"更安全通过路口\"并非规则要求——喇叭不能代替让行对向车辆，只用于警示直接危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-0": {
+      "verdict": "VERO",
+      "key_it": "I veicoli devono, di norma, circolare sulla parte destra della carreggiata ed in vicinanza del margine destro",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the baseline of traffic flow is the right side of the carriageway, close to the right edge — overtaking, turning and meeting are only possible because everyone keeps this reference.",
+        "ru": "Верно: базовая линия потока — правая часть проезжей части, у правого края: обгон, поворот и встреча возможны только потому, что все держат этот ориентир.",
+        "zh": "正确：车流基本原则是行驶于路面右侧、贴近右缘——超车、转弯与会车皆因此才可行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-5": {
+      "verdict": "VERO",
+      "key_it": "possono circolare per file parallele in vicinanza di incroci regolati da vigili o da semafori",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: near a signalized or police-controlled intersection motor vehicles may form parallel files — each lane holds its own line, so the queue does not collapse into one narrow stream.",
+        "ru": "Верно: у регулируемого перекрёстка автомобили могут ехать параллельными колоннами: каждая полоса держит свою линию и очередь не сжимается в один узкий поток.",
+        "zh": "正确：在交警或信号灯控制的路口附近，机动车可并行排队——各车道保持各自线位，队伍不会挤成单一窄流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-6": {
+      "verdict": "VERO",
+      "key_it": "I veicoli senza motore devono circolare il più possibile vicino al margine destro della carreggiata",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: non-motorized vehicles (bicycles, horse-drawn carts) must stay as close to the right edge as possible — they are the most vulnerable and must not squeeze the motor flow.",
+        "ru": "Верно: безмоторные средства (велосипеды, повозки) держатся у правого края, насколько возможно: они наиболее уязвимы и не должны сжимать моторный поток.",
+        "zh": "正确：非机动车（自行车、马车等）须尽量靠右缘行驶——它们最易受伤，不应挤压机动车流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-13": {
+      "verdict": "FALSO",
+      "key_it": "Per svoltare a sinistra i veicoli debbono tenersi sul margine destro della carreggiata",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: keeping to the right edge to turn left does not work — from the right edge the left arc crosses the whole carriageway late and cuts oncoming traffic.",
+        "ru": "Ложь: «для поворота налево держаться правого края» — не сработает: с правого края дуга налево пересекает всю проезжую часть в последний момент и режет встречный поток.",
+        "zh": "错误：左转贴右缘的做法行不通——从右缘出发左转弧线会最后时刻横穿整个路面，切断对向车流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-14": {
+      "verdict": "FALSO",
+      "key_it": "E' possibile circolare al centro della carreggiata quando la strada è libera",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: driving in the center of the carriageway «because the road is empty» inverts the rule — the right-side reference holds at all times, even on an empty road.",
+        "ru": "Ложь: «ехать по центру, потому что дорога пуста» — обратное правилу: ориентир на правую сторону действует всегда, даже на пустой дороге.",
+        "zh": "错误：\"道路空闲时可行于路面中央\"违背规则——靠右行驶的基本面在任何情况下都适用，包括空旷道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-16": {
+      "verdict": "FALSO",
+      "key_it": "utilizzando le corsie riservate agli autobus e ai veicoli in servizio pubblico",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: using the bus or public-service reserved lanes to make parallel files in heavy traffic is a violation — reserved lanes are not a relief valve for general congestion.",
+        "ru": "Ложь: в плотном потоке «параллельными колоннами по полосам для автобусов и общественного транспорта» — нарушение: резервные полосы не являются клапаном для общего затора.",
+        "zh": "错误：用公交车道做并行车流来缓解拥堵是违规行为——公交专用道不是通用缓解拥堵的通道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-17": {
+      "verdict": "FALSO",
+      "key_it": "i veicoli che percorrono una curva a sinistra devono tenersi in prossimità del margine sinistro della carreggiata",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: on a one-way road taking a left curve close to the LEFT edge is a trap — you cut the corner and squeeze the cyclists and pedestrians that also ride the left side.",
+        "ru": "Ложь: на односторонней дороге «поворот налево у левого края» — ловушка: вы срежете угол и сожмёте велосипедистов и пешеходов, которые тоже идут по левой стороне.",
+        "zh": "错误：单行道上左转贴左缘是陷阱——会切掉弯道内角并挤压同样靠左侧行驶的自行车与行人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
