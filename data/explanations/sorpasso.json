@@ -1560,6 +1560,253 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-8": {
+      "verdict": "FALSO",
+      "key_it": "velocità almeno doppia di quella del veicolo sorpassato",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: there is no rule requiring a speed at least double that of the overtaken vehicle during overtaking.",
+        "ru": "Неверно: требования «двойной скорости» обгоняемого во время обгона нет.",
+        "zh": "错误：超车时并无要求车速须至少达到被超车辆两倍的规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-9": {
+      "verdict": "FALSO",
+      "key_it": "delineatori normali di margine",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the presence of ordinary edge delineators does not by itself determine the danger of overtaking.",
+        "ru": "Неверно: наличие обычных дорожных столбиков на обочине само по себе не определяет опасность обгона.",
+        "zh": "错误：普通路缘标线的存在本身并不决定超车的危险性。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-11": {
+      "verdict": "FALSO",
+      "key_it": "linea tratteggiata di mezzeria",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: a dashed centre line does not forbid overtaking — it marks a road where overtaking is allowed.",
+        "ru": "Неверно: прерывистая осевая линия не запрещает обгон — она обозначает дорогу, где обгон разрешён.",
+        "zh": "错误：虚线中线并不禁止超车——它标识的是允许超车的路段。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-12": {
+      "verdict": "FALSO",
+      "key_it": "strade di montagna si è preceduti da un autobus di linea",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: on mountain roads being ahead of a scheduled bus does not forbid overtaking.",
+        "ru": "Неверно: на горных дорогах наличие впереди рейсового автобуса обгон не запрещает.",
+        "zh": "错误：在山区道路上，前方有班线公交车并不禁止超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-13": {
+      "verdict": "FALSO",
+      "key_it": "distanziarsi di almeno 100 m dal veicolo sorpassato",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: when merging back after overtaking on a motorway you do not need to keep a fixed 100 m distance from the overtaken vehicle — you return when safe.",
+        "ru": "Неверно: при возврате после обгона на автомагистрали не требуется держать фиксированные 100 м от обгоняемого — возвращаются в полосу, когда это безопасно.",
+        "zh": "错误：在高速上超车后并回时，无需与被超车辆保持固定的 100 米距离——应在安全时并回。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-14": {
+      "verdict": "FALSO",
+      "key_it": "segnalare acusticamente la manovra al veicolo sorpassato",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: when merging back after overtaking you do not need to sound the horn at the overtaken vehicle.",
+        "ru": "Неверно: при возврате после обгона не нужно подавать звуковой сигнал обгоняемому автомобилю.",
+        "zh": "错误：超车后并回时，无需向被超车辆鸣笛示意。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-15": {
+      "verdict": "FALSO",
+      "key_it": "il filobus è fermo per la salita e la discesa dei passeggeri",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: right-hand overtaking of a trolleybus stopped for boarding and alighting is allowed only if it does not change direction and the manoeuvre is safe — \"even without a safety provision\" makes the statement false.",
+        "ru": "Неверно: обгон справа троллейбуса, остановившегося для посадки/высадки, допустим, только если он не меняет направление и манёвр безопасен — оговорка «даже без безопасного условия» делает утверждение неверным.",
+        "zh": "错误：超越停靠上下客的无轨电车仅在电车不改变方向且操作安全时才允许——“即使没有安全条件”使该说法错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-16": {
+      "verdict": "FALSO",
+      "key_it": "strada extraurbana a senso unico",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: right-hand overtaking on an extra-urban one-way road is not allowed — it is permitted mainly in built-up areas and for stopped vehicles under conditions.",
+        "ru": "Неверно: обгон справа на внегородской односторонней дороге не разрешён — он допустим прежде всего в населённых пунктах и для остановившихся при соблюдении условий.",
+        "zh": "错误：在城外单行道上不得从右侧超车——右侧超车主要允许在城镇内及对停靠车辆（需满足条件）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-17": {
+      "verdict": "FALSO",
+      "key_it": "la potenza del motore del proprio veicolo sia maggiore",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: before overtaking you do not need to make sure your engine is more powerful than that of the vehicle you are overtaking.",
+        "ru": "Неверно: перед обгоном не нужно убеждаться, что ваш двигатель мощнее двигателя обгоняемого.",
+        "zh": "错误：超车前，无需确认自己的发动机功率大于被超车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-veicolo-sorpassare-0": {
+      "verdict": "VERO",
+      "key_it": "non gareggiare in velocità con il veicolo sorpassante",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the driver of the vehicle being overtaken must not race in speed with the overtaking vehicle.",
+        "ru": "Верно: водитель обгоняемого обязан не участвовать в скоростном соревновании с обгоняющим.",
+        "zh": "正确：被超车辆的驾驶人不得与超车车辆进行速度竞赛。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-veicolo-sorpassare-1": {
+      "verdict": "VERO",
+      "key_it": "non accelerare la propria andatura",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the driver of the vehicle being overtaken must not accelerate.",
+        "ru": "Верно: водитель обгоняемого обязан не ускоряться.",
+        "zh": "正确：被超车辆的驾驶人不得加速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-veicolo-sorpassare-2": {
+      "verdict": "VERO",
+      "key_it": "fermarsi appena possibile per far defluire il traffico",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the driver of a very slow vehicle must stop as soon as possible to let traffic pass.",
+        "ru": "Верно: водитель очень медленного транспортного средства обязан остановиться как можно скорее, чтобы пропустить поток.",
+        "zh": "正确：驾驶非常缓慢的车辆时，应尽快停车让车辆通行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-veicolo-sorpassare-3": {
+      "verdict": "VERO",
+      "key_it": "vicino al margine destro su strade ad unica corsia",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: on roads with one lane per direction the driver of the vehicle being overtaken must stay as close as possible to the right edge.",
+        "ru": "Верно: на дорогах с одной полосой в направлении водитель обгоняемого обязан держаться как можно ближе к правому краю.",
+        "zh": "正确：在单向单车道上，被超车辆驾驶人应尽可能靠右行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-veicolo-sorpassare-4": {
+      "verdict": "FALSO",
+      "key_it": "portarsi al centro della carreggiata per evitare sorpassi in scia",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the driver of the vehicle being overtaken does not have to move to the centre of the road to avoid following overtaking — the opposite is required (stay right).",
+        "ru": "Неверно: водителю обгоняемого не нужно уходить к центру дороги, чтобы избежать «обгона в хвосте» — требуется противоположное (держать правый край).",
+        "zh": "错误：被超车辆驾驶人无需驶向车道中央以避免“尾随超车”——规则要求的是相反做法（靠右行驶）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-veicolo-sorpassare-5": {
+      "verdict": "FALSO",
+      "key_it": "segnalazione luminosa di pericolo",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the driver of the vehicle being overtaken does not have to use the hazard flashers to signal that the road is clear.",
+        "ru": "Неверно: водитель обгоняемого не обязан включать аварийную сигнализацию, чтобы показать, что дорога свободна.",
+        "zh": "错误：被超车辆驾驶人无需开启危险警示灯来示意道路畅通。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-veicolo-sorpassare-6": {
+      "verdict": "FALSO",
+      "key_it": "ridurre sempre la propria velocità",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the driver of the vehicle being overtaken does not have to reduce speed in every case — accelerating is forbidden, not slowing down always.",
+        "ru": "Неверно: водителю обгоняемого не нужно снижать скорость во всех случаях — запрещено ускоряться, а не снижать всегда.",
+        "zh": "错误：被超车辆驾驶人并非在任何情况下都要减速——规则禁止加速，而非要求始终减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-veicolo-sorpassare-7": {
+      "verdict": "FALSO",
+      "key_it": "inserire le marce più basse per facilitare il sorpasso",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the driver of the vehicle being overtaken does not have to shift to lower gears to make overtaking easier.",
+        "ru": "Неверно: водитель обгоняемого не обязан включать пониженные передачи, чтобы облегчить обгон.",
+        "zh": "错误：被超车辆驾驶人无需挂入低挡位以方便他人超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-veicolo-sorpassare-8": {
+      "verdict": "FALSO",
+      "key_it": "un veicolo trainante un caravan non può mai essere superato",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: a vehicle towing a caravan is not absolutely forbidden to be overtaken on a steep descent — \"never\" is the trap; it is allowed when safe.",
+        "ru": "Неверно: обгон машины с прицепом-караваном на крутом спуске запрещён не «никогда» — «никогда» и есть ловушка: обгон допустим, когда безопасно.",
+        "zh": "错误：在陡坡上超越牵引挂车的车辆并非绝对禁止——“永远”是陷阱；在安全时允许超越。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-norme-generiche-sorpasso-0": {
+      "verdict": "VERO",
+      "key_it": "un'auto della Polizia, se non è in servizio di emergenza",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: you may overtake a police car if it is not on emergency duty and there are no other obstacles.",
+        "ru": "Верно: полицейскую машину можно обогнать, если она не в экстренном режиме и нет других препятствий.",
+        "zh": "正确：若警车未执行紧急任务且无其他障碍，允许超越。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
