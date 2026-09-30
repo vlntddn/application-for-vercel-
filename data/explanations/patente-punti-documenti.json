@@ -1,0 +1,265 @@
+{
+  "category": "patente-punti-documenti",
+  "items": {
+    "patente-punti-documenti-documenti-circolazione-0": {
+      "verdict": "VERO",
+      "key_it": "munito delle targhe identificative",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: identifying plates are compulsory while driving because the whole point is that anyone can trace the vehicle back to its registered owner.",
+        "ru": "Верно: идентифицирующие номерные знаки обязательны в движении — вся суть в том, что по ним всегда можно установить владельца средства.",
+        "zh": "正确：行驶时必须安装识别号牌——其全部意义就在于任何人由此都能追查车辆登记人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-documenti-circolazione-1": {
+      "verdict": "VERO",
+      "key_it": "munito della carta di circolazione",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: the vehicle registration certificate (carta di circolazione) is one of the documents that must travel with the car — no certificate, no driving.",
+        "ru": "Верно: свидетельство о регистрации (carta di circolazione) — один из документов, которые едут с машиной; без него движение запрещено.",
+        "zh": "正确：车辆登记证书（carta di circolazione）是必须随车携带的文件之一，无证书不得行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-documenti-circolazione-2": {
+      "verdict": "VERO",
+      "key_it": "del segnale mobile di pericolo (triangolo)",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: the hazard warning triangle must be carried on board at all times — it is part of the equipment a vehicle needs in order to be allowed to move.",
+        "ru": "Верно: знак аварийной остановки обязан находиться в машине постоянно — он входит в оснащение, без которого автомобиль не имеет права двигаться.",
+        "zh": "正确：危险警告三角牌必须随时随车——它属于车辆上路所需的配备之一。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-documenti-circolazione-3": {
+      "verdict": "FALSO",
+      "key_it": "per poter circolare deve avere la polizza assicurativa",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: «kasko» is a trap. Compulsory cover is civil liability insurance (responsabilità civile verso terzi); full car insurance is optional and never required for driving.",
+        "ru": "Неверно: «kasko» — ловушка. Обязательна страховка гражданской ответственности перед третьими лицами; «каско» — добровольное дополнение, для движения оно не требуется.",
+        "zh": "错误：“全险”是陷阱。法定强制的是对第三方的人身财产责任险，全险属自愿，驾车并不要求。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-targhe-veicoli-1": {
+      "verdict": "VERO",
+      "key_it": "devono essere sempre ben leggibili",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: plates must always be clearly legible — an absolute rule, because identification is the plate’s only function; dirty, covered or unreadable plates are a violation.",
+        "ru": "Верно: номерные знаки должны быть всегда хорошо читаемы — абсолютное правило, поскольку идентификация — единственная функция знака; грязные, закрытые или нечитаемые — нарушение.",
+        "zh": "正确：号牌必须始终清晰可辨——绝对规则，因为识别正是号牌唯一的功能；污损、遮挡或无法辨认即属违规。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Abilitazioni-patente-AM-3": {
+      "verdict": "VERO",
+      "key_it": "si può conseguire a 14 anni di età",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: AM (mopeds, ciclomotori) can be obtained at 14 — the lowest age in the licence table, «AM 14».",
+        "ru": "Верно: AM (мопеды) сдают с 14 лет — самый младший возраст в таблице категорий, «AM 14».",
+        "zh": "正确：AM（轻便摩托车）14岁即可考取——类别表中的最低年龄。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Abilitazioni-patente-AM-6": {
+      "verdict": "FALSO",
+      "key_it": "di condurre i ciclomotori in tutti i paesi dell’Unione Europea",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: the EU does not automatically extend the AM licence to riding mopeds across all member states — «tutti i paesi» overstates what the licence is valid for.",
+        "ru": "Неверно: ЕС не даёт автоматического права вести мопед во всех странах союза — «во всех странах» преувеличивает действительность удостоверения AM.",
+        "zh": "错误：欧盟不会自动赋予在全部成员国骑轻便摩托车的权利——“所有国家”夸大了AM照的效力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Abilitazioni-patente-AM-8": {
+      "verdict": "FALSO",
+      "key_it": "alla guida di motocicli, purché dotati di motore elettrico",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: AM covers ciclomotori (mopeds), not motorcycles — the «even if electric» condition does not turn a moped licence into a motorcycle one.",
+        "ru": "Неверно: AM покрывает мопеды (цикломоторы), а не мотоциклы; условие «даже на электродвигателе» не превращает мопедное удостоверение в мотоциклетное.",
+        "zh": "错误：AM涵盖轻便摩托车而非摩托车——“即便电动”这一条件不能让AM照升级为摩托车照。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Abilitazioni-patente-AM-9": {
+      "verdict": "FALSO",
+      "key_it": "senza dover sostenere gli esami teorici e pratici",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: AM is obtained like every other category — by passing the theoretical and practical exams; being an adult does not waive them.",
+        "ru": "Неверно: AM получают, как и любую другую категорию, — через теоретический и практический экзамены; совершеннолетие их не освобождает.",
+        "zh": "错误：AM与其他类别一样须经理论与实操考试取得；成年并不能豁免考试。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Abilitazioni-patente-AM-10": {
+      "verdict": "FALSO",
+      "key_it": "conseguita da almeno 3 anni abilita alla guida dei motocicli",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: however long you have held AM, it never upgrades you into motorcycle categories — the «at least 3 years» condition is invented, and the power limit stated does not correspond to any real A-category threshold.",
+        "ru": "Неверно: сколько бы лет вы ни держали AM, она никогда не «дорастает» до мотоциклетных категорий — условие «от 3 лет» выдумано, и указанный предел мощности не соответствует ни одному реальному порогу A-категорий.",
+        "zh": "错误：持有AM多久都不会升级为摩托车类别——“至少3年”系捏造，所标功率上限也不对应任何真实A类门槛。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Patente-categoria-a1-3": {
+      "verdict": "VERO",
+      "key_it": "può essere conseguita da chi ha almeno 16 anni di età",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: A1 can be obtained at 16 — that is exactly the «A1 16» cell of the licence table.",
+        "ru": "Верно: A1 можно получить с 16 лет — это ячейка «A1 16» таблицы категорий.",
+        "zh": "正确：A1 16岁可考取——类别表中“A1 16”一格。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Patente-categoria-a1-4": {
+      "verdict": "VERO",
+      "key_it": "abilita anche alla guida dei veicoli che si possono condurre con la patente AM",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: a higher motorcycle category always covers the lower one — A1 authorises everything AM covers, the «higher includes lower» rule.",
+        "ru": "Верно: старшая мотоциклетная категория всегда покрывает младшую — A1 даёт всё, что даёт AM; правило «старшая включает младшую».",
+        "zh": "正确：较高的摩托车类别总是涵盖较低类别——A1包含AM的全部权限，“高类含低类”。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Patente-categoria-a1-5": {
+      "verdict": "FALSO",
+      "key_it": "può essere conseguita solo da chi è già in possesso della patente AM",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: «only if you already have AM» is a fake staircase — A1 is taken directly at 16, and no prior AM licence is required.",
+        "ru": "Неверно: «только имея AM» — фальшивая лестница: A1 сдают напрямую в 16 лет, предварительное удостоверение AM не требуется.",
+        "zh": "错误：“须先持有AM”是假台阶——16岁可直接考A1，无需先取得AM。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Patente-categoria-a1-6": {
+      "verdict": "FALSO",
+      "key_it": "alla guida di tutti i motocicli di cilindrata fino a 125 cm3",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: A1 is not open to every motorcycle up to 125 cc — the category carries power and power-to-weight limits as well, so «all» overstates it.",
+        "ru": "Неверно: A1 — не «все мотоциклы до 125 см³»: у категории есть и ограничения по мощности и удельной мощности, так что «все» преувеличивает.",
+        "zh": "错误：A1并非125cc以下的“所有”摩托车——类别还有功率与功率重量比限制，“所有”言过其实。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Patente-categoria-a1-7": {
+      "verdict": "FALSO",
+      "key_it": "i tricicli di potenza superiore a 15 kW",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: an A1 licence cannot cover three-wheelers of that power class — «over 15 kW» far exceeds what A1 is for, and the «but only adults» clause only hides the invented limit.",
+        "ru": "Неверно: A1 не покрывает трёхколёсные машины такого класса мощности; «свыше 15 кВт» значительно превышает назначение A1, а оговорка «но только взрослые» лишь прикрывает выдуманный предел.",
+        "zh": "错误：A1照不能涵盖该功率级别的三轮车，“超过15千瓦”远超A1的适用范围，“仅限成年人”只是掩盖了捏造的门槛。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Patente-categoria-a1-9": {
+      "verdict": "FALSO",
+      "key_it": "consente al conducente che ha meno di 18 anni di trasportare un passeggero",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: a minor on A1 cannot carry a passenger at all — there is no «but only adults» exception; a second seat only exists for the categories where pax riding is provided for.",
+        "ru": "Неверно: несовершеннолетний на A1 не везёт пассажира вовсе — исключения «но только взрослых» не существует; пассажирское место предусмотрено там, где категория это позволяет.",
+        "zh": "错误：未满18岁的A1驾驶人不得载客——“仅限成人”的例外并不存在；乘客座位只存在于允许载客的类别中。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Patente-categoria-a2-0": {
+      "verdict": "VERO",
+      "key_it": "di potenza fino a 35 kW",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: this is the A2 definition verbatim — medium-power motorcycles up to 35 kW with the 0,2 kW per kg limit and the «not derived from a double-power version» condition.",
+        "ru": "Верно: это определение A2 дословно — мотоциклы средней мощности до 35 кВт, предел 0,2 кВт/кг и условие «не получены из версии вдвое мощнее».",
+        "zh": "正确：此即A2的原文定义——35千瓦以下的中功率摩托车，0.2千瓦/公斤限值，且非由功率翻倍版本衍生。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Patente-categoria-a2-1": {
+      "verdict": "VERO",
+      "key_it": "abilita anche alla guida dei veicoli che si possono condurre con le patenti A1 e AM",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: A2 covers everything A1 and AM cover — again the «higher includes lower» rule, so both categories’ vehicles ride under A2.",
+        "ru": "Верно: A2 покрывает всё, что покрывают A1 и AM — снова правило «старшая включает младшую»: машины обеих категорий ездят по A2.",
+        "zh": "正确：A2涵盖A1与AM的全部权限——又是“高类含低类”规则，两类车辆均可凭A2驾驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Patente-categoria-a2-2": {
+      "verdict": "VERO",
+      "key_it": "può essere conseguita da chi ha almeno 18 anni di età",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: A2 is an 18-year category — together with «AM 14» and «A1 16» it is one of the four ages that hold the chapter.",
+        "ru": "Верно: A2 — категория с 18 лет; вместе с «AM 14» и «A1 16» это один из четырёх возрастов, на которых держится глава.",
+        "zh": "正确：A2属18岁类别——与“AM 14”“A1 16”并列，是本章靠住的四个年龄之一。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Patente-categoria-a2-3": {
+      "verdict": "VERO",
+      "key_it": "solo se il posto del passeggero è previsto sulla carta di circolazione del veicolo",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: a passenger on the motorcycle is only allowed where the registration certificate actually lists a passenger seat — the seat must exist on paper, not just on the bike.",
+        "ru": "Верно: пассажир на мотоцикле допустим только там, где в свидетельстве о регистрации числится пассажирское место; место должно быть в документах, а не только на машине.",
+        "zh": "正确：摩托车载人仅限登记证书中载明乘客座位的情形——座位须见于文书，而非仅装于车上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    }
+  }
+}
