@@ -1,0 +1,265 @@
+{
+  "category": "distanza-di-sicurezza",
+  "items": {
+    "distanza-di-sicurezza-condizioni-sicurezza-1": {
+      "verdict": "VERO",
+      "key_it": "sulla base della velocità del veicolo di cui è alla guida",
+      "chapter": "ch9",
+      "why": {
+        "en": "Safe distance depends on your own speed: the faster you go, the more space you need to react and to stop.",
+        "ru": "Безопасная дистанция зависит от вашей скорости: чем быстрее вы едете, тем больше места нужно для реакции и остановки.",
+        "zh": "安全车距取决于你的车速：开得越快，反应和制动所需的空间越大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-2": {
+      "verdict": "VERO",
+      "key_it": "in base alla propria prontezza di riflessi",
+      "chapter": "ch9",
+      "why": {
+        "en": "Your own reaction speed matters: fatigue or distraction needs more space, because reflexes set how quickly you can respond.",
+        "ru": "Важна и ваша реакция: усталость или отвлечение требуют больше дистанции, ведь от скорости реакции зависит, как быстро вы отреагируете.",
+        "zh": "你的反应速度也重要：疲劳或分心需要更大车距，因为反应快慢决定你能多快应对。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-3": {
+      "verdict": "VERO",
+      "key_it": "in base alle condizioni del traffico",
+      "chapter": "ch9",
+      "why": {
+        "en": "Traffic conditions change how close you can safely follow: dense or irregular traffic demands a larger gap.",
+        "ru": "От условий движения зависит, насколько близко можно ехать: плотный и неравномерный трафик требует большей дистанции.",
+        "zh": "交通状况决定你能跟多近：密集或不均匀的流量需要更大的车距。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-4": {
+      "verdict": "VERO",
+      "key_it": "in base all’andamento planoaltimetrico della strada",
+      "chapter": "ch9",
+      "why": {
+        "en": "The road plan and profile matter: curves and hills limit your visibility, so you must leave extra space.",
+        "ru": "Важны план и профиль дороги: повороты и холмы ограничивают обзор, поэтому нужно держать больший зазор.",
+        "zh": "道路平面与纵断面也重要：弯道和坡道限制视野，因此要留更大间隙。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-5": {
+      "verdict": "VERO",
+      "key_it": "in base alle condizioni atmosferiche",
+      "chapter": "ch9",
+      "why": {
+        "en": "Weather changes grip and visibility: rain, fog or darkness all require a wider safety distance.",
+        "ru": "Погода меняет сцепление и обзор: дождь, туман или темнота требуют большей дистанции.",
+        "zh": "天气改变抓地力与视野：雨、雾或黑夜都需要更大的安全车距。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-6": {
+      "verdict": "VERO",
+      "key_it": "in base al tipo di veicolo di cui si è alla guida",
+      "chapter": "ch9",
+      "why": {
+        "en": "The kind of vehicle you drive sets your stopping behaviour: a heavy or long vehicle needs more room than a small car.",
+        "ru": "Тип автомобиля задаёт торможение: тяжёлая или длинная машина требует больше пространства, чем маленький автомобиль.",
+        "zh": "你驾驶的车辆类型决定制动表现：重型或长车需要比小轿车更大的空间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-7": {
+      "verdict": "VERO",
+      "key_it": "in base allo stato di efficienza del veicolo",
+      "chapter": "ch9",
+      "why": {
+        "en": "A poorly maintained vehicle brakes and handles worse, so a worn condition means you must keep more distance.",
+        "ru": "Плохо обслуженный автомобиль хуже тормозит и манёврирует, поэтому изношенное состояние требует большей дистанции.",
+        "zh": "保养差的车辆制动与操控更差，因此车况磨损要留更大车距。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-8": {
+      "verdict": "VERO",
+      "key_it": "in base all’entità del carico",
+      "chapter": "ch9",
+      "why": {
+        "en": "The load changes the vehicle mass and its braking: the heavier the cargo, the more space you need.",
+        "ru": "Груз меняет массу и торможение: чем тяжелее нагрузка, тем больше дистанции нужно.",
+        "zh": "载重改变车辆质量与制动：货物越重，所需车距越大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-11": {
+      "verdict": "VERO",
+      "key_it": "alla velocità del veicolo che lo precede",
+      "chapter": "ch9",
+      "why": {
+        "en": "Distance also depends on the car in front: matching and anticipating its speed keeps the gap safe.",
+        "ru": "Дистанция зависит и от машины впереди: учёт её скорости и её прогнозирования сохраняет зазор безопасным.",
+        "zh": "车距也取决于前车：预判并匹配前车速度才能保持安全间隙。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-12": {
+      "verdict": "VERO",
+      "key_it": "in base all’efficienza dei freni",
+      "chapter": "ch9",
+      "why": {
+        "en": "Brake condition directly sets how quickly you can stop, so weak or worn brakes demand a larger gap.",
+        "ru": "Состояние тормозов напрямую задаёт скорость остановки, поэтому слабые или изношенные тормоза требуют большей дистанции.",
+        "zh": "刹车状况直接决定停车快慢，因此刹车弱或磨损需要更大车距。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-13": {
+      "verdict": "VERO",
+      "key_it": "in base alla condizione dei pneumatici",
+      "chapter": "ch9",
+      "why": {
+        "en": "Tyre condition affects grip and stopping: worn tyres need you to keep more space.",
+        "ru": "Состояние шин влияет на сцепление и торможение: изношенные шины требуют держать больше дистанции.",
+        "zh": "轮胎状况影响抓地与制动：磨损轮胎需要留更大空间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-14": {
+      "verdict": "VERO",
+      "key_it": "deve essere di almeno 100 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "True: on a one-lane extra-urban road where overtaking is banned, goods vehicles over 3.5 tons must keep at least 100 metres apart.",
+        "ru": "Верно: на однополосной загородной дороге с запретом обгона грузовые автомобили свыше 3,5 тонны должны держать не менее 100 метров.",
+        "zh": "正确：在禁止超车的单行乡村公路上，总质量超3.5吨的货车之间须保持至少100米。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-15": {
+      "verdict": "FALSO",
+      "key_it": "in base al tipo di alimentazione del motore",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: the fuel type of the engine (petrol, diesel, gas) does not affect the distance needed to stop.",
+        "ru": "Неверно: вид топлива двигателя (бензин, дизель, газ) не влияет на необходимую дистанцию.",
+        "zh": "错误：发动机的燃料类型（汽油、柴油、燃气）不影响制动所需距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-16": {
+      "verdict": "FALSO",
+      "key_it": "in base alla cilindrata del veicolo",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: engine displacement is not one of the factors for setting the safety distance.",
+        "ru": "Неверно: рабочий объём двигателя не входит в факторы выбора безопасной дистанции.",
+        "zh": "错误：发动机排量不属于确定安全车距的因素。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-17": {
+      "verdict": "FALSO",
+      "key_it": "in base alla potenza del motore",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: engine power is irrelevant to the stopping distance that the safety gap must cover.",
+        "ru": "Неверно: мощность двигателя не имеет отношения к тормозному пути, который должна покрывать дистанция.",
+        "zh": "错误：发动机功率与安全车距需覆盖的制动距离无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-18": {
+      "verdict": "FALSO",
+      "key_it": "in base all’ampiezza della carreggiata",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: the width of the carriageway does not determine how much longitudinal distance you keep behind another vehicle.",
+        "ru": "Неверно: ширина проезжей части не определяет, какую продольную дистанцию держать позади.",
+        "zh": "错误：路面宽度不决定你应保持的纵向车距。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-19": {
+      "verdict": "FALSO",
+      "key_it": "in base alla larghezza del veicolo di cui è alla guida",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: the width of your own vehicle is not a criterion for the safety distance; braking and reaction set it.",
+        "ru": "Неверно: ширина собственного автомобиля не является критерием дистанции — ею управляют торможение и реакция.",
+        "zh": "错误：自身车辆的宽度不是车距标准，制动与反应才是。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-23": {
+      "verdict": "FALSO",
+      "key_it": "deve essere pari ad almeno 10 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: 10 metres between heavy articulated trucks under an overtaking ban is far too short — the regulation demands a much larger gap.",
+        "ru": "Неверно: 10 метров между тяжелыми автопоездами при запрете обгона — слишком мало; норма требует гораздо большего зазора.",
+        "zh": "错误：禁超时重型铰接车之间10米太短——法规要求大得多的间隙。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-24": {
+      "verdict": "FALSO",
+      "key_it": "è sempre pari a 70 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: there is no fixed value like 70 metres; the safety distance is not a constant and is set for each situation.",
+        "ru": "Неверно: не существует фиксированного значения вроде 70 метров; дистанция не постоянна и определяется под каждую ситуацию.",
+        "zh": "错误：不存在70米这样的固定值；安全车距不是常数，须按每种情况确定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-25": {
+      "verdict": "FALSO",
+      "key_it": "almeno pari a quello della distanza di frenatura",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: the safety distance must exceed the braking distance alone, because reaction time adds extra space before you brake.",
+        "ru": "Неверно: дистанция должна быть больше самого тормозного пути, ведь на реакцию уходит дополнительное пространство до нажатия на тормоз.",
+        "zh": "错误：车距须大于制动距离本身，因为反应时间会额外增加制动前的空间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    }
+  }
+}
