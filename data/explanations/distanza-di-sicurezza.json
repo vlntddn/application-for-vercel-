@@ -260,6 +260,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-27": {
+      "verdict": "FALSO",
+      "key_it": "non deve essere rispettata a velocità di marcia inferiori ai 50 km/h",
+      "chapter": "ch9",
+      "why": {
+        "en": "Safe distance must be kept at every speed, not only above 50 km/h: below it, sudden braking of the car ahead still risks a rear-end collision.",
+        "ru": "Безопасная дистанция держится при любой скорости, а не только выше 50 км/ч: и ниже неё резкое торможение впереди грозит наездом.",
+        "zh": "安全车距在任何车速下都要保持，而不只是50公里/小时以上：车速再低，前车急刹仍可能造成追尾。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-8": {
+      "verdict": "FALSO",
+      "key_it": "si deve rispettare al di sopra di una certa velocità",
+      "chapter": "ch9",
+      "why": {
+        "en": "There is no speed threshold: safe distance is required at every speed, because a collision can happen even at low speed.",
+        "ru": "Порога скорости нет: дистанция нужна при любой скорости — столкновение возможно даже на малой.",
+        "zh": "没有速度门槛：任何车速下都要保持车距，即使低速也可能发生碰撞。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-reazione-1": {
+      "verdict": "VERO",
+      "key_it": "per evitare il tamponamento",
+      "chapter": "ch9",
+      "why": {
+        "en": "That is exactly its purpose: enough space to stop before hitting the vehicle in front.",
+        "ru": "Это и есть её цель: достаточно места, чтобы остановиться до наезда на впереди идущее.",
+        "zh": "这正是它的目的：留出足够空间，在撞上前方车辆之前停下来。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-reazione-3": {
+      "verdict": "FALSO",
+      "key_it": "per evitare lo scontro frontale",
+      "chapter": "ch9",
+      "why": {
+        "en": "Safe distance protects against a rear-end collision with the car ahead, not against a frontal impact.",
+        "ru": "Дистанция защищает от наезда в хвост впереди идущему, а не от лобового столкновения.",
+        "zh": "车距防的是追尾前车，而不是正面碰撞。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-reazione-4": {
+      "verdict": "FALSO",
+      "key_it": "per evitare lo scontro laterale",
+      "chapter": "ch9",
+      "why": {
+        "en": "Safe distance protects from the rear-end collision, not from a side impact.",
+        "ru": "Дистанция защищает от наезда в хвост, а не от бокового столкновения.",
+        "zh": "车距防追尾，不防侧面碰撞。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-minima-1": {
+      "verdict": "VERO",
+      "key_it": "deve essere di circa 14 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "Rule of thumb: at 50 km/h the minimum safe distance is about 14 m (speed/10 times 3).",
+        "ru": "Правило: при 50 км/ч минимальная безопасная дистанция — около 14 м (скорость/10 × 3).",
+        "zh": "口诀：车速50公里/小时时，最小安全车距约14米（车速÷10×3）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-minima-2": {
+      "verdict": "VERO",
+      "key_it": "deve essere di circa 28 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 100 km/h the minimum safe distance is about 28 m (speed/10 times 3).",
+        "ru": "При 100 км/ч минимальная дистанция — около 28 м (скорость/10 × 3).",
+        "zh": "车速100公里/小时时，最小安全车距约28米（车速÷10×3）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-minima-3": {
+      "verdict": "VERO",
+      "key_it": "deve essere di circa 42 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 150 km/h the minimum safe distance is about 42 m (speed/10 times 3).",
+        "ru": "При 150 км/ч минимальная дистанция — около 42 м (скорость/10 × 3).",
+        "zh": "车速150公里/小时时，最小安全车距约42米（车速÷10×3）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-minima-4": {
+      "verdict": "VERO",
+      "key_it": "deve essere di circa 36 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 130 km/h the minimum safe distance is about 36 m (speed/10 times 3).",
+        "ru": "При 130 км/ч минимальная дистанция — около 36 м (скорость/10 × 3).",
+        "zh": "车速130公里/小时时，最小安全车距约36米（车速÷10×3）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-minima-5": {
+      "verdict": "FALSO",
+      "key_it": "deve essere di circa 2 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 30 km/h a minimum of only 2 m is far too little: the required value grows with speed (speed/10 × 3).",
+        "ru": "При 30 км/ч минимум в 2 м — слишком мало: нужное значение растёт со скоростью (скорость/10 × 3).",
+        "zh": "车速30公里/小时时最小值只有2米远远不够：所需车距随速度增大（车速÷10×3）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-minima-6": {
+      "verdict": "FALSO",
+      "key_it": "deve essere di circa 5 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 50 km/h the proposed 5 m is far too little: the required value grows with speed (speed/10 × 3).",
+        "ru": "При 50 км/ч предложенные 5 м — слишком мало: нужное значение растёт со скоростью (скорость/10 × 3).",
+        "zh": "车速50公里/小时时建议的5米远远不够：所需车距随速度增大（车速÷10×3）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-minima-7": {
+      "verdict": "FALSO",
+      "key_it": "deve essere di circa 15 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 100 km/h the proposed 15 m is far too little: the required value grows with speed (speed/10 × 3).",
+        "ru": "При 100 км/ч предложенные 15 м — слишком мало: нужное значение растёт со скоростью (скорость/10 × 3).",
+        "zh": "车速100公里/小时时建议的15米远远不够：所需车距随速度增大（车速÷10×3）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-minima-8": {
+      "verdict": "FALSO",
+      "key_it": "deve essere di circa 20 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 130 km/h the proposed 20 m is far too little: the required value grows with speed (speed/10 × 3).",
+        "ru": "При 130 км/ч предложенные 20 м — слишком мало: нужное значение растёт со скоростью (скорость/10 × 3).",
+        "zh": "车速130公里/小时时建议的20米远远不够：所需车距随速度增大（车速÷10×3）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-minima-9": {
+      "verdict": "FALSO",
+      "key_it": "deve essere di circa 25 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 150 km/h the proposed 25 m is far too little: the required value grows with speed (speed/10 × 3).",
+        "ru": "При 150 км/ч предложенные 25 м — слишком мало: нужное значение растёт со скоростью (скорость/10 × 3).",
+        "zh": "车速150公里/小时时建议的25米远远不够：所需车距随速度增大（车速÷10×3）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-sicurezza-dipendenza-7": {
+      "verdict": "FALSO",
+      "key_it": "solo dai quadricicli a motore",
+      "chapter": "ch9",
+      "why": {
+        "en": "Safe distance is kept by every vehicle; it is not a rule for quadricycles only.",
+        "ru": "Дистанцию держит каждый автомобиль, а не только квадроциклы.",
+        "zh": "车距由每辆车保持，并不只针对四轮摩托车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-metri-distanza-sicurezza-0": {
+      "verdict": "VERO",
+      "key_it": "anche prima di iniziare un sorpasso",
+      "chapter": "ch9",
+      "why": {
+        "en": "Safe distance is kept at all times, also before starting an overtake.",
+        "ru": "Дистанция держится всегда, в том числе перед началом обгона.",
+        "zh": "车距任何时候都要保持，包括开始超车之前。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-metri-distanza-sicurezza-1": {
+      "verdict": "VERO",
+      "key_it": "difficile valutare il comportamento del conducente che precede",
+      "chapter": "ch9",
+      "why": {
+        "en": "If it is hard to read the driver ahead, widen the gap: you need more time to react to unexpected braking.",
+        "ru": "Если поведение водителя впереди трудно предсказать — увеличьте зазор: на неожиданное торможение нужно больше времени.",
+        "zh": "如果难以判断前车驾驶员行为，要拉大车距：应对突发制动需要更多时间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-metri-distanza-sicurezza-2": {
+      "verdict": "VERO",
+      "key_it": "da riuscire a fermare in tempo il veicolo, in caso di pericolo",
+      "chapter": "ch9",
+      "why": {
+        "en": "The distance must let you stop the vehicle in time if danger appears.",
+        "ru": "Дистанция должна позволять вовремя остановить автомобиль, если возникла опасность.",
+        "zh": "出现危险时，车距必须能让你及时停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-metri-distanza-sicurezza-3": {
+      "verdict": "VERO",
+      "key_it": "almeno uguale ai metri che il veicolo percorre durante il tempo di reazione",
+      "chapter": "ch9",
+      "why": {
+        "en": "The distance must cover at least the metres your vehicle travels during your reaction time, before braking even starts.",
+        "ru": "Дистанция должна покрывать как минимум метры, которые машина проходит за время реакции, до начала торможения.",
+        "zh": "车距至少要覆盖反应时间内行驶的距离——那时还没开始刹车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-metri-distanza-sicurezza-4": {
+      "verdict": "FALSO",
+      "key_it": "sempre uguale allo spazio di frenatura del veicolo",
+      "chapter": "ch9",
+      "why": {
+        "en": "Safe distance is not equal to the braking space: it must also cover the reaction space, so it is larger.",
+        "ru": "Дистанция не равна пространству торможения: она должна покрывать и пространство реакции, поэтому больше.",
+        "zh": "车距不等于制动距离：还要加上反应距离，所以更大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
