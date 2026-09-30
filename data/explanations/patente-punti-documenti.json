@@ -1040,6 +1040,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "patente-punti-documenti-revoca-patente-guida-1": {
+      "verdict": "VERO",
+      "key_it": "inverte il senso di marcia o percorre la carreggiata contro mano",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: driving against traffic or reversing on the highway is a listed ground for revoking the licence, not merely a fine.",
+        "ru": "Верно: движение против потока или разворот на автодороге — основание для лишения прав, а не просто штраф.",
+        "zh": "正确：在高速公路上逆行或掉头属于吊销驾照的法定事由，而非仅罚款。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-revoca-patente-guida-7": {
+      "verdict": "FALSO",
+      "key_it": "guida senza averla con sè",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: not carrying the licence on you is a minor infraction — it is not a ground for revocation.",
+        "ru": "Ложь: отсутствие прав при себе — мелкое нарушение, а не основание для лишения.",
+        "zh": "错误：身上未随身携带驾照只是轻微违章，不构成吊销事由。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-revoca-patente-guida-9": {
+      "verdict": "FALSO",
+      "key_it": "guida senza lenti correttive quando prescritte",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: driving without the prescribed corrective lenses is not a revocation ground.",
+        "ru": "Ложь: езда без назначенных корректирующих очков не является основанием для лишения прав.",
+        "zh": "错误：未按处方佩戴矫正镜片驾驶并非吊销驾照的事由。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-revoca-patente-guida-10": {
+      "verdict": "FALSO",
+      "key_it": "può essere disposta dagli organi di polizia",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: revocation is a measure taken by the competent authority; the police report the fact, they do not dispose the revocation themselves.",
+        "ru": "Ложь: лишение прав — мера, которую выносит компетентный орган; полиция лишь фиксирует нарушение, а сама не решает о лишении.",
+        "zh": "错误：吊销由主管机关作出；警察只是记录违法行为，并不自行作出吊销决定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-revoca-patente-guida-11": {
+      "verdict": "FALSO",
+      "key_it": "guida un veicolo intestato ad altra persona senza avere apposita dichiarazione scritta",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: driving a vehicle registered to someone else without a written declaration is not a revocation ground.",
+        "ru": "Ложь: езда на автомобиле, зарегистрированном на другого, без письменного заявления — не основание для лишения.",
+        "zh": "错误：驾驶登记在他人名下的车辆而无书面声明，不构成吊销事由。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-sospensione-patente-guida-3": {
+      "verdict": "VERO",
+      "key_it": "si circola, in autostrada, sulla corsia di emergenza in casi non previsti dal codice della strada",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: using the highway emergency lane where the code does not allow it is a listed suspension ground.",
+        "ru": "Верно: движение по полосе экстренной остановки на автодороге вне предусмотренных случаев — основание для приостановления прав.",
+        "zh": "正确：在交通法规不允许的情况下占用高速公路应急车道，属于暂停驾照的事由。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-sospensione-patente-guida-9": {
+      "verdict": "VERO",
+      "key_it": "chi abbia falsificato o contraffatto i documenti relativi all’assicurazione del veicolo",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: forging or counterfeiting the vehicle insurance documents is a listed suspension ground.",
+        "ru": "Верно: подделка или фальсификация документов по страховке автомобиля — основание для приостановления прав.",
+        "zh": "正确：伪造或变造车辆保险文件属于暂停驾照的事由。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-sospensione-patente-guida-14": {
+      "verdict": "FALSO",
+      "key_it": "si superano di 20 km/h i limiti massimi di velocità",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: speeding over the limit by a moderate margin is not by itself a suspension ground.",
+        "ru": "Ложь: умеренное превышение лимита скорости само по себе не основание для приостановления прав.",
+        "zh": "错误：中度超速本身并非暂停驾照的事由。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-sospensione-patente-guida-15": {
+      "verdict": "FALSO",
+      "key_it": "si circola senza avere con sè la patente di guida",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: driving without the licence on you is a minor infraction, not a suspension ground.",
+        "ru": "Ложь: езда без прав при себе — мелкое нарушение, а не основание для приостановления.",
+        "zh": "错误：身上未带驾照驾驶是轻微违章，不构成暂停事由。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-violazioni-decurtazione-punti-patente-2": {
+      "verdict": "VERO",
+      "key_it": "ha esaurito la sua dotazione di punti sulla patente deve sottoporsi a revisione",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: once the point allocation is used up, the driver must submit the licence to revision.",
+        "ru": "Верно: когда лимит баллов исчерпан, водитель обязан предъявить права на пересмотр.",
+        "zh": "正确：当驾照积分用尽后，驾驶人必须接受驾照复审。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-violazioni-decurtazione-punti-patente-5": {
+      "verdict": "VERO",
+      "key_it": "possono essere decurtati al massimo 15 punti, salvo che si tratti di infrazioni che comportano la sospensione",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: for several simultaneous point-losing violations the cap is fifteen points, except for offences that carry suspension.",
+        "ru": "Верно: при нескольких одновременных нарушениях с потерей баллов вычет не превышает пятнадцати, кроме случаев, влекущих приостановление.",
+        "zh": "正确：同时发生多起扣分类违法时，扣分上限为十五分，但可致暂停驾照的违法除外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-violazioni-decurtazione-punti-patente-6": {
+      "verdict": "VERO",
+      "key_it": "per due anni non commette infrazioni che comportano perdita di punti",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: a driver who loses points recovers the full allocation after two clean years.",
+        "ru": "Верно: водитель, потерявший баллы, восстанавливает полный лимит после двух лет без нарушений.",
+        "zh": "正确：失去积分的驾驶人在连续两年无违法后恢复全部积分。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-violazioni-decurtazione-punti-patente-12": {
+      "verdict": "FALSO",
+      "key_it": "possono essere decurtati al massimo 10 punti, salvo che si tratti di infrazioni che comportano la revoca",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: the cap for simultaneous point-losing violations is not ten, and the exception is suspension, not revocation.",
+        "ru": "Ложь: лимит при нескольких одновременных нарушениях — не десять, а пятнадцать, и исключение — приостановление, а не лишение.",
+        "zh": "错误：同时多起扣分类违法的扣分上限并非十分，且例外情形是暂停而非吊销。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Validita-delle-patenti-guida-3": {
+      "verdict": "VERO",
+      "key_it": "ha validità di dieci anni se rilasciata o confermata a chi non ha superato i 50 anni di età",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: a category B licence issued to someone under fifty is valid for ten years, absent limits or birthday alignment on the document.",
+        "ru": "Верно: права категории B, выданные лицу до пятидесяти лет, действуют десять лет, если в документе нет ограничений или привязки к дате рождения.",
+        "zh": "正确：发给未满五十岁者的B类驾照有效期为十年，除非文件上有其他限制或按出生日期对齐。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Validita-delle-patenti-guida-4": {
+      "verdict": "VERO",
+      "key_it": "ha validità di cinque anni se rilasciata o confermata a chi ha una età compresa fra i 50 e i 70 anni",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: a category B licence for someone between fifty and seventy is valid for five years.",
+        "ru": "Верно: права категории B для лица от пятидесяти до семидесяти лет действуют пять лет.",
+        "zh": "正确：五十至七十岁者所持B类驾照有效期为五年。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Validita-delle-patenti-guida-5": {
+      "verdict": "VERO",
+      "key_it": "ha validità di tre anni se rilasciata o confermata a chi ha una età compresa fra i 70 e gli 80 anni",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: a category B licence for someone between seventy and eighty is valid for three years.",
+        "ru": "Верно: права категории B для лица от семидесяти до восьмидесяти лет действуют три года.",
+        "zh": "正确：七十至八十岁者所持B类驾照有效期为三年。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Validita-delle-patenti-guida-6": {
+      "verdict": "VERO",
+      "key_it": "ha validità di due anni se rilasciata o confermata a chi ha superato gli 80 anni di età",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: a category B licence for someone over eighty is valid for two years.",
+        "ru": "Верно: права категории B для лица старше восьмидесяти лет действуют два года.",
+        "zh": "正确：八十岁以上者所持B类驾照有效期为两年。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Validita-delle-patenti-guida-7": {
+      "verdict": "VERO",
+      "key_it": "categoria BE, salvo diversa limitazione riportata sul documento stesso o salvo allineamento alla data del compleanno del titolare, ha validità di dieci anni",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: a category BE licence for someone under fifty is valid for ten years, absent limits or birthday alignment.",
+        "ru": "Верно: права категории BE для лица до пятидесяти лет действуют десять лет, если нет ограничений или привязки к дате рождения.",
+        "zh": "正确：未满五十岁者所持BE类驾照有效期为十年，除非有相关限制或按出生日期对齐。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Validita-delle-patenti-guida-8": {
+      "verdict": "VERO",
+      "key_it": "categoria A, salvo diversa limitazione riportata sul documento stesso o salvo allineamento alla data del compleanno del titolare, ha validità di dieci anni",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: a category A licence for someone under fifty is valid for ten years, absent limits or birthday alignment.",
+        "ru": "Верно: права категории A для лица до пятидесяти лет действуют десять лет, если нет ограничений или привязки к дате рождения.",
+        "zh": "正确：未满五十岁者所持A类驾照有效期为十年，除非有相关限制或按出生日期对齐。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Validita-delle-patenti-guida-9": {
+      "verdict": "VERO",
+      "key_it": "categoria B SPECIALE (BS), salvo diversa limitazione riportata sul documento stesso o salvo allineamento alla data del compleanno del titolare, ha validità di cinque anni",
+      "chapter": "ch16",
+      "why": {
+        "en": "True: a special category BS licence for someone under seventy is valid for five years, absent limits or birthday alignment.",
+        "ru": "Верно: права категории B SPECIALE (BS) для лица до семидесяти лет действуют пять лет, если нет ограничений или привязки к дате рождения.",
+        "zh": "正确：未满七十岁者所持B特种类(BS)驾照有效期为五年，除非有相关限制或按出生日期对齐。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
