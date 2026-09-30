@@ -1300,6 +1300,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-1": {
+      "verdict": "VERO",
+      "key_it": "carreggiate a senso unico",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking near a speed hump is allowed on one-way carriageways.",
+        "ru": "Верно: на односторонних полосах движения обгон вблизи лежачего полицейского разрешён.",
+        "zh": "正确：单行道上，减速带附近允许超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-2": {
+      "verdict": "VERO",
+      "key_it": "strade a due corsie per senso di marcia",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking near a speed hump is allowed on roads with two lanes in each direction.",
+        "ru": "Верно: на дорогах с двумя полосами в каждом направлении обгон вблизи лежачего полицейского разрешён.",
+        "zh": "正确：每个方向有两条车道的道路上，减速带附近允许超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-3": {
+      "verdict": "VERO",
+      "key_it": "due carreggiate separate",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking near a speed hump is allowed on roads with two separate carriageways.",
+        "ru": "Верно: на дорогах с двумя разделёнными полосами обгон вблизи лежачего полицейского разрешён.",
+        "zh": "正确：有两条分离车道的道路上，减速带附近允许超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-4": {
+      "verdict": "VERO",
+      "key_it": "accodandosi ad un'ambulanza in servizio di emergenza",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: it is forbidden to queue behind an ambulance on emergency duty to overtake.",
+        "ru": "Верно: запрещено вставать в затор за скорой, работающей в аварийном режиме, для обгона.",
+        "zh": "正确：禁止跟随执行紧急任务的救护车排队以实施超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-5": {
+      "verdict": "FALSO",
+      "key_it": "sorpassare veicoli a trazione animale",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: on two-lane two-way roads near a hump you may not overtake animal-drawn vehicles by crossing into the oncoming lane.",
+        "ru": "Неверно: на двухполосных двусторонних дорогах вблизи лежачего полицейского нельзя обгонять гужевые повозки, пересекая встречную полосу.",
+        "zh": "错误：在双向两车道、靠近减速带处，不得借道对向来车道超越畜力车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-6": {
+      "verdict": "FALSO",
+      "key_it": "sorpassare nella scia del veicolo che precede",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: near a speed hump you may not overtake in the wake of the vehicle ahead.",
+        "ru": "Неверно: вблизи лежачего полицейского нельзя обгонять «в хвосте» впереди идущего автомобиля.",
+        "zh": "错误：在减速带附近，不得跟随前车轨迹实施超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-7": {
+      "verdict": "FALSO",
+      "key_it": "sorpassare autobus di linea fermi per la salita e discesa",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: near a hump you may not enter the opposite carriageway to overtake a bus stopped for boarding and alighting.",
+        "ru": "Неверно: вблизи лежачего полицейского нельзя выезжать на встречную полосу, чтобы обогнать остановившийся для посадки/высадки рейсовый автобус.",
+        "zh": "错误：在减速带附近，不得驶入对向车道以超越停靠上下客的公交车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-8": {
+      "verdict": "FALSO",
+      "key_it": "Non si può sorpassare in corrispondenza dei dossi",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the statement is the reverse of the rule — on a one-way road with two lanes you may overtake at a speed hump.",
+        "ru": "Неверно: утверждение обратное правилу — на односторонней дороге с двумя полосами обгон вблизи лежачего полицейского разрешён.",
+        "zh": "错误：该说法与规则相反——在两条车道的单行道上，减速带处允许超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-9": {
+      "verdict": "FALSO",
+      "key_it": "l'intenzione di accostarsi al margine destro",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the statement is reversed — overtaking a vehicle that has indicated it is pulling over to the right is not forbidden.",
+        "ru": "Неверно: утверждение перевёрнуто — обгон автомобиля, подавшего знак об остановке у правого края, не запрещён.",
+        "zh": "错误：该说法颠倒了——超越已打灯示意靠右停放的车辆并不禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-10": {
+      "verdict": "FALSO",
+      "key_it": "l'uscita di un pubblico parcheggio",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: overtaking at the exit of a public parking is not forbidden.",
+        "ru": "Неверно: обгон у выезда с публичной парковки не запрещён.",
+        "zh": "错误：在公共停车场出口处超车并非禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-11": {
+      "verdict": "FALSO",
+      "key_it": "linea bianca discontinua affiancata da una continua",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: a white dashed line next to a continuous one does not forbid overtaking — the ban applies only when the continuous line is on your side.",
+        "ru": "Неверно: белая прерывистая линия рядом со сплошной не запрещает обгон — запрет действует, только когда сплошная на вашей стороне.",
+        "zh": "错误：白色虚线紧邻实线并不禁止超车——只有当实线在你这一侧时才禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-12": {
+      "verdict": "FALSO",
+      "key_it": "il tram che marcia al centro della carreggiata",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the statement is reversed — you may overtake on the right a tram running in the middle of the carriageway.",
+        "ru": "Неверно: утверждение перевёрнуто — обгон справа трамвая, идущего по центру полосы, допустим.",
+        "zh": "错误：该说法颠倒了——允许从右侧超越行驶在道路中央的有轨电车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-0": {
+      "verdict": "VERO",
+      "key_it": "evitare di stringere o di tagliare la strada al veicolo sorpassato",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: during overtaking you must avoid squeezing or cutting off the overtaken vehicle.",
+        "ru": "Верно: во время обгона нельзя сужать или «резать» дорогу обгоняемому.",
+        "zh": "正确：超车时，驾驶人不得挤压或切占被超车辆的行驶路线。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-1": {
+      "verdict": "VERO",
+      "key_it": "l'intenzione di compiere la stessa manovra",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the danger of overtaking is determined by the risk of colliding with other vehicles showing the intention to make the same manoeuvre.",
+        "ru": "Верно: опасность обгона определяется риском столкновения с другими автомобилями, которые проявили намерение совершить тот же манёвр.",
+        "zh": "正确：超车的危险性由与其他同样意图实施超车的车辆发生碰撞的风险决定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-2": {
+      "verdict": "VERO",
+      "key_it": "in fase di avvicinamento",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the danger of overtaking is determined by the risk of collision during approach to the vehicle being overtaken.",
+        "ru": "Верно: опасность обгона определяется риском столкновения при сближении с обгоняемым.",
+        "zh": "正确：超车的危险性由接近被超车辆阶段的碰撞风险决定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-3": {
+      "verdict": "VERO",
+      "key_it": "in fase di rientro in corsia",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the danger of overtaking is determined by the risk of collision when merging back into the lane with the overtaken vehicle.",
+        "ru": "Верно: опасность обгона определяется риском столкновения при возврате в полосу с обгоняемым.",
+        "zh": "正确：超车的危险性由并回车道时与被超车辆碰撞的风险决定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-4": {
+      "verdict": "VERO",
+      "key_it": "urto frontale con un veicolo che provenga dal senso contrario",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the danger of overtaking is determined by the risk of a head-on collision with a vehicle coming from the opposite direction.",
+        "ru": "Верно: опасность обгона определяется риском лобового столкновения с автомобилем из встречного направления.",
+        "zh": "正确：超车的危险性由与对向来车正面相撞的风险决定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-5": {
+      "verdict": "VERO",
+      "key_it": "dalla ridotta larghezza della carreggiata",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the danger of overtaking is determined by the reduced width of the carriageway.",
+        "ru": "Верно: опасность обгона определяется суженной шириной полосы движения.",
+        "zh": "正确：超车的危险性由车行道宽度不足决定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-6": {
+      "verdict": "FALSO",
+      "key_it": "mantenersi il più a lungo possibile nella corsia di sorpasso",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the statement is reversed — during overtaking you must not stay as long as possible in the overtaking lane.",
+        "ru": "Неверно: утверждение перевёрнуто — во время обгона нельзя как можно дольше оставаться в полосе обгона.",
+        "zh": "错误：该说法颠倒了——超车时不得尽量长时间停留在超车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-pericolosita-sorpasso-7": {
+      "verdict": "FALSO",
+      "key_it": "segnalare continuamente con l'avvisatore acustico",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: during overtaking you do not need to sound the horn continuously to signal the manoeuvre.",
+        "ru": "Неверно: при обгоне не нужно непрерывно сигнализировать клаксоном о выполнении манёвра.",
+        "zh": "错误：超车时，不得持续鸣笛来示意该操作。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
