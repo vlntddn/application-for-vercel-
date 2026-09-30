@@ -260,6 +260,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autoveicoli-0": {
+      "verdict": "VERO",
+      "key_it": "almeno quattro ruote, esclusi i quadricicli",
+      "chapter": "ch1",
+      "why": {
+        "en": "This is the textbook definition of a motor vehicle: engine plus at least four wheels, quadricycles excluded — they form a separate class.",
+        "ru": "Это учебное определение авто: двигатель и минимум четыре колеса, квадрициклы исключены — они отдельный класс.",
+        "zh": "这是机动车的标准定义：有发动机且至少四个车轮，四轮机动车除外——它们属于单独类别。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autoveicoli-1": {
+      "verdict": "VERO",
+      "key_it": "non meno di quattro ruote, eccetto i quadricicli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Same definition as the other one: a motor vehicle has four or more wheels, with quadricycles excluded from the category.",
+        "ru": "То же определение: у авто четыре и более колёс, квадрициклы к этой категории не относятся.",
+        "zh": "与另一题相同的定义：机动车有四个或更多车轮，四轮机动车被排除在该类别之外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autoveicoli-5": {
+      "verdict": "FALSO",
+      "key_it": "compresi i quadricicli",
+      "chapter": "ch1",
+      "why": {
+        "en": "The rest is right, but quadricycles are expressly excluded from motor vehicles — \"compresi\" breaks the definition.",
+        "ru": "В остальном верно, но квадрициклы прямо исключены из класса авто — слово «включая» ломает определение.",
+        "zh": "其余部分正确，但四轮机动车被明确排除在机动车之外——「包括」一词使定义不成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autoveicoli-6": {
+      "verdict": "FALSO",
+      "key_it": "tutti i veicoli con almeno due ruote",
+      "chapter": "ch1",
+      "why": {
+        "en": "Two-wheeled vehicles are motorcycles, not motor vehicles: the \"at least two wheels\" criterion is far too wide.",
+        "ru": "Двухколёсные — это мотоциклы, не авто: критерий «от двух колёс» слишком широк.",
+        "zh": "两轮车是摩托车，不是机动车：「至少两个车轮」的标准过于宽泛。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autoveicoli-7": {
+      "verdict": "FALSO",
+      "key_it": "compresi quelli senza motore",
+      "chapter": "ch1",
+      "why": {
+        "en": "A motor vehicle needs an engine by definition: including vehicles without a motor is wrong, regardless of the wheel count.",
+        "ru": "По определению авто — двигатель; включать транспорт без мотора неверно, сколько бы ни было колёс.",
+        "zh": "按定义，机动车必须有发动机：把无动力的车辆也算进去是错的，与车轮数无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autovetture-2": {
+      "verdict": "VERO",
+      "key_it": "non può avere più di nove posti, compreso il conducente",
+      "chapter": "ch1",
+      "why": {
+        "en": "That is the course rule: a car carries up to eight passengers plus the driver — more seats and it stops being an \"autovettura\".",
+        "ru": "Правило курса: в легковом — до восьми пассажиров плюс водитель, и если мест больше, это уже не «autovettura».",
+        "zh": "这是课程规则：小客车最多载八名乘客加一名司机——座位更多就不再是「小客车」。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autovetture-6": {
+      "verdict": "FALSO",
+      "key_it": "che hanno la trazione posteriore",
+      "chapter": "ch1",
+      "why": {
+        "en": "The category is about engine and seat count, not the drivetrain: rear-wheel-drive and front-wheel-drive cars are both \"autovetture\".",
+        "ru": "Категория определяется мотором и числом мест, а не типом привода: и задне-, и переднеприводные — «autovetture».",
+        "zh": "类别由发动机和座位数决定，而不是驱动形式：后驱和前驱车都是「小客车」。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autovetture-8": {
+      "verdict": "FALSO",
+      "key_it": "tutti i veicoli con motore anteriore",
+      "chapter": "ch1",
+      "why": {
+        "en": "Engine position defines nothing about the category: cars with any drivetrain arrangement are \"autovetture\", and so are vans with up to the seat limit.",
+        "ru": "Расположение мотора ничего не говорит о категории: «autovetture» — машины любой компоновки (и фургончики до предела мест).",
+        "zh": "发动机位置与类别无关：任何布局的汽车都是「小客车」（直到座位上限的厢式车也是）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-autovetture-12": {
+      "verdict": "FALSO",
+      "key_it": "al massimo, cinque posti",
+      "chapter": "ch1",
+      "why": {
+        "en": "Five seats is just one common body type, not the limit: the course rule allows up to eight seats plus the driver.",
+        "ru": "Пять мест — лишь распространённая компоновка, а не предел: по курсу допустимы восемь мест плюс водитель.",
+        "zh": "五个座位只是一种常见布局，并非上限：按课程规则，最多可容纳八座加司机。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-bambini-semaforo-1": {
+      "verdict": "VERO",
+      "key_it": "potrebbero attraversare velocemente la strada anche con il rosso",
+      "chapter": "ch1",
+      "why": {
+        "en": "Children under pressure or in a hurry can step out on a red light, convinced it will change: that unpredictability is exactly why extra caution is needed.",
+        "ru": "Ребёнок, которому скучно или торопят, может выйти на красный, решив, что он скоро сменится: эта непредсказуемость и требует особой осторожности.",
+        "zh": "在催促下或不耐烦的孩子可能在红灯时横穿马路，以为马上会变灯：这种不可预测性正需要格外小心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-bambini-semaforo-2": {
+      "verdict": "VERO",
+      "key_it": "si spingano a vicenda, finendo sulla carreggiata",
+      "chapter": "ch1",
+      "why": {
+        "en": "Pushing and shoving while standing at a crossing can put a child on the carriageway — so approaching drivers must watch and be ready to stop.",
+        "ru": "Потасовки у перехода могут вытолкнуть ребёнка на полотно — поэтому подъезжающие водители обязаны следить и быть готовыми остановиться.",
+        "zh": "在路口推搡可能把孩子推到路面上——因此接近的司机必须注意并随时准备停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-bambini-semaforo-4": {
+      "verdict": "VERO",
+      "key_it": "deve attendere che i pedoni abbiano finito di attraversare",
+      "chapter": "ch1",
+      "why": {
+        "en": "Yes: even after the green light, the driver yields to pedestrians who are still in the road — entering earlier would put them at risk.",
+        "ru": "Да: даже после зелёного водитель уступает пешеходам, ещё находящимся на дороге, — въехать раньше было бы опасно для них.",
+        "zh": "对：即使绿灯亮起，司机也必须让还在路上的人走完全程——提前驶入会威胁他们。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-bambini-semaforo-5": {
+      "verdict": "FALSO",
+      "key_it": "possono attraversare la strada solo se accompagnati da un adulto",
+      "chapter": "ch1",
+      "why": {
+        "en": "Crossing rights do not depend on an adult: children cross on the pedestrian signal like anyone else — and a driver must be prepared for a child to appear alone.",
+        "ru": "Право переходить не зависит от взрослого: дети переходят по пешеходному сигналу, как все, — и водитель должен быть готов к одинокому ребёнку.",
+        "zh": "过马路的权利与有无大人无关：孩子和所有人一样按行人信号通行——司机须随时警惕单独出现的孩子。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-bambini-semaforo-6": {
+      "verdict": "FALSO",
+      "key_it": "solo dopo aver ricevuto un gesto di consenso da parte degli automobilisti",
+      "chapter": "ch1",
+      "why": {
+        "en": "A driver's nod is never a crossing signal: children cross according to the pedestrian light, and no vehicle gesture can permit or forbid it.",
+        "ru": "Кивок водителя — не сигнал перехода: дети переходят по пешеходному сигналу, ни какой жест из машины переход не разрешает.",
+        "zh": "司机的点头从来不是通行信号：孩子按行人灯过马路，车辆的任何手势都不能许可或禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-bambini-semaforo-7": {
+      "verdict": "FALSO",
+      "key_it": "si può essere certi che attraversino la strada solo quando il semaforo pedonale abbia la luce verde accesa",
+      "chapter": "ch1",
+      "why": {
+        "en": "The green pedestrian light tells children when to go — but a driver can never be \"sure\" of their behavior: that is precisely why caution is required at every light.",
+        "ru": "Зелёный для пешеходов говорит детям, когда идти, — но «быть уверенным» в их поведении водитель не может: поэтому осторожность нужна у каждого светофора.",
+        "zh": "行人绿灯告诉孩子何时走——但司机永远无法「确定」孩子的行为：这正是每个路口都需要小心的原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-bambini-semaforo-8": {
+      "verdict": "FALSO",
+      "key_it": "si può essere certi che non attraverseranno la strada se il semaforo è a luce gialla lampeggiante",
+      "chapter": "ch1",
+      "why": {
+        "en": "No certainty exists: even with a yellow flashing light, children may still start to cross — the driver must be ready to yield and stop.",
+        "ru": "Уверенности не существует: даже при жёлтой мигалке дети могут начать переходить — водитель обязан быть готов уступить и остановиться.",
+        "zh": "不存在任何确定：即使黄灯闪烁，孩子仍可能开始过马路——司机必须准备让行并停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-caravan-1": {
+      "verdict": "VERO",
+      "key_it": "utilizzabili come alloggio solo con veicolo fermo",
+      "chapter": "ch1",
+      "why": {
+        "en": "A caravan can be used as living space only when the vehicle is stationary — moving while inside it is not allowed.",
+        "ru": "Фургон можно использовать как жильё только когда транспорт стоит — находиться внутри в движении нельзя.",
+        "zh": "拖挂房车只能停车时作为住宿使用——车辆移动时不得在车内活动。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-caravan-5": {
+      "verdict": "FALSO",
+      "key_it": "destinati esclusivamente al trasporto di attrezzature turistiche e sportive",
+      "chapter": "ch1",
+      "why": {
+        "en": "Caravans are designed to be lived in during the stop, not just to haul gear: \"exclusively equipment transport\" inverts their purpose.",
+        "ru": "Фургоны рассчитаны на проживание во время стоянки, а не только на перевозку снаряжения: «исключительно груз» переворачивает их назначение.",
+        "zh": "拖挂房车的设计用途是停留时居住，而不仅是运输装备：「专用于运输器材」颠倒了它的用途。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-carreggiata-0": {
+      "verdict": "VERO",
+      "key_it": "può essere a senso unico di circolazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "Yes: depending on the road, the carriageway can be one-way or two-way; this variant is one of the standard configurations.",
+        "ru": "Да: в зависимости от дороги полотно может быть односторонним или двусторонним — одностороннее движение допустимо.",
+        "zh": "对：根据道路不同，路面可以是单向或双向的——单向通行是标准配置之一。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-carreggiata-1": {
+      "verdict": "VERO",
+      "key_it": "può essere a doppio senso di circolazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "Yes: the carriageway is often two-way, with a lane for each direction separated by markings — the classic layout of ordinary roads.",
+        "ru": "Да: полотно часто двустороннее — по полосе в каждом направлении, разделённой разметкой, классическая схема обычных дорог.",
+        "zh": "对：路面通常是双向的——每个方向一条车道，用标线分隔——这是普通道路的经典布局。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
