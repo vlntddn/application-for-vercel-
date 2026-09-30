@@ -1300,6 +1300,279 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-conducente-autovettura-autoveicolo-0": {
+      "verdict": "VERO",
+      "key_it": "dotati di limitata esperienza di guida a causa della giovane età",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a car driver must constantly keep in mind moped riders whose limited driving experience comes from their young age — limited experience means less predictable reactions, which the more experienced driver must allow for.",
+        "ru": "Верно: водитель авто постоянно учитывает скутеров, чей ограниченный опыт обусловлен молодостью — меньше опыта, меньше предсказуемость, и закладывать это обязан опытный.",
+        "zh": "正确：汽车驾驶员须时刻牢记驾驶经验因年幼而有限的两轮摩托车人——经验有限意味着行为难以预测，须由更熟练的一方预留余量。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-conducente-autovettura-autoveicolo-1": {
+      "verdict": "VERO",
+      "key_it": "deve interferire con la traiettoria di una o più colonne di veicoli più veloci",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: turning left is especially dangerous for a moped whose path must cut across one or more columns of faster vehicles coming from behind in the same direction — the small vehicle intersects the stream of the heavy, fast ones.",
+        "ru": "Верно: поворот налево особо опасен для скутера, чья траектория должна пересечь одну или несколько колонн более быстрых машин, идущих в том же направлении.",
+        "zh": "正确：对需要横穿一条或多条同向而来的更快车流的两轮摩托车而言，左转特别危险——弱势车辆与更快、更重的车流交叉。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-conducente-autovettura-autoveicolo-2": {
+      "verdict": "VERO",
+      "key_it": "valutare con prudenza, in relazione alla propria velocità, la distanza che lo separa da un ciclomotorista che si accinge a svoltare",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a driver must prudently judge, in relation to his own speed, the distance to a moped rider about to turn — the faster you go, the wider the safety margin needed for someone who is about to change course.",
+        "ru": "Верно: водитель осмотрительно оценивает со своей скоростью дистанцию до скутера, который готовится к повороту; чем выше скорость, тем шире запас.",
+        "zh": "正确：驾驶员须根据自己的车速审慎评估与即将转弯的两轮摩托车人之间的距离——车速越高，所需安全余量越大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-conducente-autovettura-autoveicolo-3": {
+      "verdict": "VERO",
+      "key_it": "deve prevedere manovre improvvise altrui, come il procedere a zig-zag di un ciclomotore",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a driver must anticipate the sudden manoeuvres of others, such as a moped weaving in a zig-zag — unpredictable weaving is a standard risk on the road, and anticipating it is the driver’s duty.",
+        "ru": "Верно: водитель должен закладывать резкие манёвры других, например «зигзаг» скутера; непредсказуемый зигзаг — обычный дорожный риск, и предвидеть его — обязанность.",
+        "zh": "正确：驾驶员须预见他人的突然动作，例如两轮摩托车蛇形行驶——蛇形行驶是常见道路风险，预见它是驾驶员的义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-conducente-autovettura-autoveicolo-4": {
+      "verdict": "VERO",
+      "key_it": "rispettare la distanza di sicurezza laterale da ciclisti o ciclomotoristi per evitare di metterne a repentaglio l'equilibrio",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a car or motorcycle driver must keep a lateral safety distance from cyclists and moped riders so as not to put their balance in danger — the two-wheeled rider balances on a narrow track, and proximity destabilises.",
+        "ru": "Верно: авто и мотоцикл обязаны держать боковую дистанцию от велосипедистов и скутеров, чтобы не угрожать их равновесию; двухколёсный держится на узкой траектории, и близость его раскачивает.",
+        "zh": "正确：汽车或摩托车驾驶员须与自行车、两轮摩托车人保持侧向安全距离，以免危及他们平衡——两轮车辆轨迹窄，靠得太近会使其失稳。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-conducente-autovettura-autoveicolo-5": {
+      "verdict": "VERO",
+      "key_it": "evitare deviazioni trasversali, anche modeste, del proprio veicolo soprattutto in presenza di ciclomotoristi o ciclisti",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a driver must avoid even modest sideways deviations of his own vehicle, especially near moped riders or cyclists — a small lateral wobble is enough to upset a two-wheeled rider’s balance.",
+        "ru": "Верно: водитель избегает даже небольших поперечных уклонений машины, особенно рядом со скутерами и велосипедами; малейший увод вбок способен сбить двухколёсного.",
+        "zh": "正确：驾驶员应避免车辆哪怕轻微的横向偏移，尤其在有摩托车或自行车人时——轻微侧偏就足以使两轮车辆失去平衡。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-conducente-autovettura-autoveicolo-6": {
+      "verdict": "FALSO",
+      "key_it": "non è tenuto a prevedere le possibili imprudenze del ciclomotorista che lo affianca sulla strada",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'non è tenuto a prevedere' (is not required to foresee) is backwards — a driver who respects the rules is also required to anticipate the possible carelessness of a moped rider riding alongside him.",
+        "ru": "Ложно: «не обязан предвидеть» — наоборот: водитель, соблюдающий правила, обязан ещё и предвидеть возможные небрежности скутера, идущего рядом.",
+        "zh": "错误：“无需预见”说反了——遵守规则的驾驶员同样有义务预见与其并行骑行的两轮摩托车人可能的疏忽。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-conducente-autovettura-autoveicolo-8": {
+      "verdict": "FALSO",
+      "key_it": "può superare a velocità sostenuta, pur rispettando i limiti, un ciclomotorista nonostante la scarsa distanza di sicurezza laterale",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'nonostante la scarsa distanza di sicurezza laterale' (despite the small lateral safety distance) is the trap — overtaking a moped rider with an inadequate lateral gap is not permitted, even within the speed limit.",
+        "ru": "Ложно: «несмотря на малую боковую дистанцию» — подвох: обгон скутера при недостаточном боковом зазоре не допускается, даже в пределах лимита скорости.",
+        "zh": "错误：“尽管侧向安全距离不足”是陷阱——即使未超限速，侧向间隙不足时也不得超越两轮摩托车人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-rischi-strade-extraurbane-0": {
+      "verdict": "VERO",
+      "key_it": "i rischi derivanti dalla presenza, soprattutto su strade extraurbane, di mezzi particolarmente lenti",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a car driver must know the risks that come from especially slow vehicles — such as three-wheeled mopeds — which are found in particular on extra-urban roads.",
+        "ru": "Верно: водитель авто знает риски, которые приносят особенно медленные машины — например трёхколёсные скутеры — особенно на загородных дорогах.",
+        "zh": "正确：汽车驾驶员须了解由特别缓慢车辆（如三轮摩托车）带来的风险，尤其在城外公路上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-rischi-strade-extraurbane-2": {
+      "verdict": "VERO",
+      "key_it": "può risultare difficoltosa la valutazione della velocità di una macchina agricola che, in genere, procede lentamente",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: for a car driver going at a regular speed on an extra-urban road, judging the speed of an agricultural machine, which usually moves slowly, can be difficult — the speed difference makes the relative movement hard to read.",
+        "ru": "Верно: для авто на загородной дороге оценка скорости сельскохозяйственной машины, обычно идущей медленно, затруднена — разность скоростей искажает суждение.",
+        "zh": "正确：在城外公路上以正常速度行驶的汽车驾驶员，判断通常缓慢行驶农用机械的速度可能困难——速度差使相对运动难以判读。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-massa-veicoli-2": {
+      "verdict": "FALSO",
+      "key_it": "costituisce, nella circolazione, una garanzia di sicurezza anche per gli altri veicoli di dimensioni e di massa inferiori",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'garanzia di sicurezza anche per gli altri veicoli' (a guarantee of safety even for smaller vehicles) is the invented claim — a heavy car does not guarantee the safety of smaller, lighter vehicles; in a collision its mass works against them.",
+        "ru": "Ложно: «гарантия безопасности и для других, меньших машин» — выдуманное утверждение; тяжелая машина не гарантирует безопасность лёгких, в столкновении её масса работает против них.",
+        "zh": "错误：“对更小、更轻的车辆也是安全保证”是虚构说法——重型轿车并不保证小型车辆的安全，碰撞中它的质量反而对它们不利。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-conducente-fuoristrada-0": {
+      "verdict": "VERO",
+      "key_it": "consapevole che l'altezza e la massa del proprio veicolo costituiscono un potenziale pericolo per pedoni, ciclisti e autovetture di modeste dimensioni",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: an SUV driver must drive with the utmost caution, aware that the height and mass of his vehicle are a potential danger for pedestrians, cyclists, and small cars — a higher, heavier car endangers the smaller, more exposed users.",
+        "ru": "Верно: водитель внедорожника ведёт машину максимально осмотрительно, зная, что высота и масса его машины — потенциальная опасность для пешеходов, велосипедистов и малых авто.",
+        "zh": "正确：越野车驾驶员须格外谨慎，须意识到本车高度与质量对行人、自行车人及小型汽车构成潜在危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-conducente-fuoristrada-2": {
+      "verdict": "VERO",
+      "key_it": "la guida di tale veicolo è particolarmente impegnativa in città e che richiede particolari cautele soprattutto nelle manovre di emergenza",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: an SUV driver must remember that driving such a vehicle is especially demanding in the city and calls for particular caution above all in emergency manoeuvres — mass and size show up hardest in sudden reactions in town.",
+        "ru": "Верно: водитель внедорожника помнит, что за его машиной в городе особенно тяжело, и особая осторожность нужна прежде всего в манёврах ЧП.",
+        "zh": "正确：越野车驾驶员须记住，在城市驾驶这种车辆特别吃力，尤其是在紧急动作中须格外小心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-valutazioni-pericolo-1": {
+      "verdict": "VERO",
+      "key_it": "saper valutare nella guida gli alti rischi derivanti da autocarri, autotreni o autoarticolati che non rispettano i limiti di velocità",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a motorcycle or car driver must be able to judge, while driving, the high risks that come from trucks, articulated lorries, or semi-trailers that do not respect speed limits — a heavy vehicle in excess is the most dangerous obstacle.",
+        "ru": "Верно: мотоцикл и авто обязаны уметь оценивать высокие риски от грузовиков, автопоездов и седельных, не соблюдающих лимиты скорости.",
+        "zh": "正确：摩托车或汽车驾驶员须在驾驶中能够评估超速行驶的大型货车、列车式货车或半挂货车所带来的高风险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-valutazioni-pericolo-2": {
+      "verdict": "FALSO",
+      "key_it": "non costituiscono, per un'autovettura o per un motociclo, rischi potenziali maggiori rispetto a qualsiasi altro veicolo",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'rischi potenziali maggiori rispetto a qualsiasi altro veicolo' — the 'non' is the trap: trucks, articulated lorries and semi-trailers, by their notable mass, DO pose higher potential risks for a car or motorcycle than many other vehicles.",
+        "ru": "Ложно: «не представляют больших рисков по сравнению с любой другой машиной» — «не» и есть подвох: грузовики и автопоезда из-за массы представляют для авто и мотоцикла большие потенциальные риски.",
+        "zh": "错误：“相对于任何其他车辆都不构成更大潜在风险”——“不”字正是陷阱：货车、列车式货车和半挂货车由于质量大，对汽车或摩托车构成的潜在风险确实更大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-campo-visibilita-0": {
+      "verdict": "VERO",
+      "key_it": "il conducente deve attentamente visualizzare l'area antistante e limitrofa",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: even when the vehicle’s design allows an adequate field of vision, the driver must attentively scan the area ahead and around — a built-in field of view does not replace active, careful looking.",
+        "ru": "Верно: даже при заводском поле обзора водитель обязан внимательно осматривать зону впереди и рядом; штатная обзорность не заменяет активного взгляда.",
+        "zh": "正确：即使车辆构造保证了足够视野，驾驶员仍须仔细观察前方及邻近区域——出厂视野不能替代主动、认真的观察。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-campo-visibilita-1": {
+      "verdict": "VERO",
+      "key_it": "può essere ridotto sia da uno dei poggiatesta sia da elementi della carrozzeria della propria autovettura",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a driver’s field of vision can be narrowed by one of the headrests or by body elements of his own car that may accidentally block the view of other road users — part of the car itself can hide the road.",
+        "ru": "Верно: поле обзора водителя может сузиться от подголовника или элементов кузова собственной машины, случайно закрывающих других участников.",
+        "zh": "正确：驾驶员的视野可能因某个头枕或本车车身部件而变窄——车身自身可能意外遮住其他道路使用者。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-campo-visibilita-4": {
+      "verdict": "FALSO",
+      "key_it": "può limitarsi ad un controllo visivo affrettato dell'area immediatamente antistante il veicolo",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'limitarsi ad un controllo visivo affrettato' (settling for a hasty visual check) is the trap — even with a design-built adequate field of vision, the driver must watch carefully, not glance quickly.",
+        "ru": "Ложно: «обойтись беглым зрительным контролем» — подвох: даже при достаточном заводском поле обзора водитель должен смотреть внимательно, а не бегло.",
+        "zh": "错误：“满足于仓促的目视检查”是陷阱——即使车辆构造视野足够，驾驶员仍须仔细观察，而非匆匆一瞥。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-campo-visibilita-6": {
+      "verdict": "FALSO",
+      "key_it": "una adeguata visibilità di tutti i possibili ostacoli in basso",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'visibilità di tutti i possibili ostacoli in basso' (visibility of all possible low obstacles) is the invented reassurance — an SUV's height does not guarantee a clear view of every low obstacle, such as children.",
+        "ru": "Ложно: «надлежащий обзор всех низких препятствий» — выдуманное успокоение; высота внедорожника не гарантирует вид всех низких препятствий, включая детей.",
+        "zh": "错误：“对下方所有可能障碍物都有足够视野”是虚构安慰——越野车的高度并不保证能看清每一处低矮障碍物（例如儿童）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-circolazione-autocarri-0": {
+      "verdict": "VERO",
+      "key_it": "deve prestare particolare attenzione alla possibile presenza di un pedone o di un ciclista nella zona immediatamente antistante",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: before resuming movement, a truck driver must pay special attention to the possible presence of a pedestrian or a cyclist right in front of his stopped vehicle — the truck’s own bulk hides them.",
+        "ru": "Верно: перед возобновлением движения водитель грузовика уделяет особое внимание возможному пешеходу или велосипедисту прямо впереди; объём машины сам их закрывает.",
+        "zh": "正确：重新起步前，货车驾驶员须特别注意车辆正前方可能有行人或自行车人——车体本身会遮挡他们。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-circolazione-autocarri-1": {
+      "verdict": "VERO",
+      "key_it": "deve prevedere la presenza di pedoni e ciclisti il cui avvistamento è precluso dalla sagoma del proprio veicolo",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a truck driver stopped at a traffic light must anticipate pedestrians and cyclists whose visibility is blocked by the silhouette of his own vehicle — he must assume they are there, even unseen.",
+        "ru": "Верно: грузовик, остановленный на светофоре, обязан закладывать пешеходов и велосипедистов, которых скрывает силуэт его же машины.",
+        "zh": "正确：在信号灯前停住的货车驾驶员须预判被本车车体遮挡、无法看到的行人和自行车人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
