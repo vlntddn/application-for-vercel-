@@ -1,5 +1,20 @@
 # DEVLOG — Passo (последнее сверху)
 
+## 2026-09-30 — L9b: пояснения, порция 1 (ch1, слова-сигналы)
+
+Что сделано (коммит feat: L9b на self-improve):
+- **data/explanations/definizioni-generali-doveri-strada.json** (новый файл) — 20 записей,
+  все ch1: первые 20 вопросов со словами-сигналами в порядке PATH_ORDER (aree-pedonali,
+  attenzion-conducente, autocaravan-camper, autostrada). Добавлено 20 / пропущено 0.
+- Способ: node-скрипт в /tmp (не в репозитории) — читает существующий файл →
+  дописывает id → пишет; key_it/verdict/chapter/длина why asserted перед записью.
+- Одна правка по гейту: autostrada-9 — в why было «150 cm3», цифры только из
+  text_it/mustKnow главы → перефразировал без числа.
+
+Проверка: checkAll(data/explanations) — 0 ошибок; verify.sh → VERIFY OK
+(184 unit, 8 endpoint 200). Прогресс в строке L9b роадмапа: сигналы 20/1993.
+
+
 ## 2026-09-30 — L9a: Пояснения к ошибкам (офлайн-гейт, формат, показ)
 
 Что сделано (коммит feat: L9a на self-improve):
