@@ -780,6 +780,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-23": {
+      "verdict": "VERO",
+      "key_it": "poca differenza di velocità",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the smaller the speed difference between the vehicles, the longer the space needed to complete the overtaking.",
+        "ru": "Верно: чем меньше разница в скорости между автомобилями, тем больше расстояние нужно для обгона.",
+        "zh": "正确：两车速度差越小，完成超车所需的距离越长。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-24": {
+      "verdict": "VERO",
+      "key_it": "distanza di sicurezza va rispettata anche",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the safe distance must be maintained even at the start of the overtaking manoeuvre.",
+        "ru": "Верно: безопасную дистанцию соблюдать нужно и в момент начала манёвра обгона.",
+        "zh": "正确：开始超车时也必须保持安全距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-25": {
+      "verdict": "VERO",
+      "key_it": "tratto discendente di un dosso",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: on a two-way, two-lane road overtaking is allowed on the descending part of a speed hump (the rise itself hides visibility).",
+        "ru": "Верно: на двухполосной дороге с двусторонним движением обгон допустим на спуске лежачего полицейского (подъём закрывает видимость).",
+        "zh": "正确：双向双车道道路上，减速带的下坡段允许超车（上坡段会遮挡视线）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-26": {
+      "verdict": "VERO",
+      "key_it": "segnali che lo vietino",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: before overtaking you are obliged to check that no sign forbids it.",
+        "ru": "Верно: перед обгоном обязательно убедиться, что обгон не запрещён знаками.",
+        "zh": "正确：超车前必须确认没有禁止超车的标志。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-27": {
+      "verdict": "VERO",
+      "key_it": "urtare altri veicoli che, davanti o dietro",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the danger of overtaking comes from the possibility of colliding with vehicles ahead or behind trying to make the same manoeuvre.",
+        "ru": "Верно: опасность обгона — в возможном столкновении с автомобилями спереди или сзади, которые тоже начинают обгон.",
+        "zh": "正确：超车的危险在于可能与前后同样准备超车的车辆相撞。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-28": {
+      "verdict": "VERO",
+      "key_it": "anche fuori dagli attraversamenti pedonali",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking a vehicle that stopped to give way to pedestrians is forbidden even outside marked crossings.",
+        "ru": "Верно: обгон остановившегося для пропуска пешеходов запрещён даже вне пешеходных переходов.",
+        "zh": "正确：超越停车让行给行人的车辆，即便不在人行横道处也禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-29": {
+      "verdict": "VERO",
+      "key_it": "frenare bruscamente",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: returning to the right after overtaking is dangerous if it forces the passed vehicles to brake hard.",
+        "ru": "Верно: возврат на правую после обгона опасен, если заставляет обгоняемых резко тормозить.",
+        "zh": "正确：若超车后并回右侧迫使被超车辆急刹，该操作即危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-30": {
+      "verdict": "VERO",
+      "key_it": "specchietti retrovisori",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: before merging back into the right lane after overtaking, you must check the position of the passed vehicle in the mirrors.",
+        "ru": "Верно: перед возвратом на правую после обгона нужно проверить в зеркалах положение обгоняемого автомобиля.",
+        "zh": "正确：超车后并回右侧车道前，须通过后视镜确认被超车辆的位置。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-31": {
+      "verdict": "FALSO",
+      "key_it": "purché si lampeggi durante la manovra",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: flashing the indicators does not lift the ban on overtaking in poor visibility.",
+        "ru": "Неверно: мигалка не отменяет запрет на обгон при плохой видимости.",
+        "zh": "错误：打转向灯并不能解除低能见度时禁止超车的规定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-32": {
+      "verdict": "FALSO",
+      "key_it": "anche se la strada è a due carreggiate separate",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: overtaking in a curve is not banned in every case — it is allowed on roads with two separate carriageways.",
+        "ru": "Неверно: обгон в повороте запрещён не всегда — на дороге с двумя раздельными проезжими частями он допустим.",
+        "zh": "错误：弯道超车并非一律禁止——双幅分离的道路上允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-33": {
+      "verdict": "FALSO",
+      "key_it": "anche se la strada è ad almeno due corsie per senso",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: overtaking in a curve is allowed when the road has at least two lanes per direction on separate carriageways.",
+        "ru": "Неверно: при минимум двух полосах в каждую сторону (раздельные проезжие части) обгон в повороте допустим.",
+        "zh": "错误：若每方向至少两条车道，弯道超车是允许的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-34": {
+      "verdict": "FALSO",
+      "key_it": "se il treno è distante",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: distance of the train does not matter — overtaking vehicles stopped at a level crossing is forbidden when it requires the opposite carriageway.",
+        "ru": "Неверно: расстояние до поезда не имеет значения — обгон остановившихся на переезде при выезде на встречную запрещён.",
+        "zh": "错误：列车远近无关——需驶入对向车道时，禁止超越在道口停车的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-35": {
+      "verdict": "FALSO",
+      "key_it": "in lento movimento ai passaggi a livello",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the same rule applies to slowly moving vehicles at a level crossing — overtaking is banned when it requires the opposite carriageway.",
+        "ru": "Неверно: то же правило для медленно движущихся на переезде — обгон при выезде на встречную запрещён.",
+        "zh": "错误：对道口缓慢行驶的车辆适用同一规则——需驶入对向车道时禁止超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-36": {
+      "verdict": "FALSO",
+      "key_it": "purché non provenga nessuno dalla destra",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: on an unregulated intersection the lack of traffic from the right does not make overtaking allowed — the general ban remains.",
+        "ru": "Неверно: на нерегулируемом перекрёстке отсутствие машин справа не разрешает обгон — действует общий запрет.",
+        "zh": "错误：无信号路口没有车辆从右侧驶来，并不能使超车合法——一般禁令仍然有效。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-37": {
+      "verdict": "FALSO",
+      "key_it": "corsie d'accelerazione purché",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: overtaking on acceleration lanes is forbidden regardless of how carefully it is done.",
+        "ru": "Неверно: обгон на полосе разгона запрещён вне зависимости от аккуратности.",
+        "zh": "错误：无论操作多么谨慎，加速车道上超车均被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-38": {
+      "verdict": "FALSO",
+      "key_it": "superare un veicolo a due ruote",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: 'always' is the trap — overtaking a two-wheeler is allowed subject to the general overtaking conditions.",
+        "ru": "Неверно: «всегда» — ловушка: обгон двухколёсного разрешён с соблюдением общих условий обгона.",
+        "zh": "错误：“总是”是陷阱——超越两轮车须符合一般超车条件。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-39": {
+      "verdict": "FALSO",
+      "key_it": "strade a senso unico",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: one-way streets do not ban overtaking — the general rules apply.",
+        "ru": "Неверно: обгон на односторонних улицах не запрещён — действуют общие правила.",
+        "zh": "错误：单行道上并不禁止超车——适用一般规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-40": {
+      "verdict": "FALSO",
+      "key_it": "veicoli della polizia",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: overtaking police vehicles is not forbidden — the general rules apply.",
+        "ru": "Неверно: обгон полицейских автомобилей не запрещён — действуют общие правила.",
+        "zh": "错误：超越警车并非禁止——适用一般规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-41": {
+      "verdict": "FALSO",
+      "key_it": "indifferentemente a destra e a sinistra",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: on the motorway overtaking is done on the left as a rule, not on either side.",
+        "ru": "Неверно: на автодороге обгон по общему правилу выполняется слева, а не с любой стороны.",
+        "zh": "错误：高速公路上超车通常应在左侧，而非任一侧均可。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-42": {
+      "verdict": "FALSO",
+      "key_it": "sia a destra che a sinistra",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: overtaking between motorcycles is not allowed on either side — the general overtaking rules apply.",
+        "ru": "Неверно: обгон между мотоциклами с любой стороны не разрешён — действуют общие правила.",
+        "zh": "错误：摩托车之间超车并非任一侧皆可——适用一般规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
