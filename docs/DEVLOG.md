@@ -1,3 +1,11 @@
+## 2026-09-30 — L9b: пояснения, порция 75 — ch18 (alcool-droga-primo-soccorso) +20, 949→969/2030
+
+Что сделано (коммит feat: L9b пояснения порция 75 на self-improve):
+- data/explanations/alcool-droga-primo-soccorso.json: 14→34.
+- assunzione-droghe-1 (VERO: героин/кокаин нарушают), guida-alimentazione 0–1 (VERO: тяжёлая/трудноперевариваемая пища снижает внимание, удлиняет реакцию), guida-stato-ebbrezza-0 (VERO: алкоголь → эйфория → недооценка опасности), soccorso-ferito 0–7 (0–2 VERO: помощь обязательна по закону, может спасти жизнь, избежать новых травм; 3–7 FALSO: это правовая обязанность, а не только моральная; нужна при любой аварии; действует даже при риске/помехах движению; обязательна для всех, а не только медиков), infortunato-ferita-sanguinante 0 (VERO: стерильный/чистый материал) + 7 (FALSO: горячая вода — неверно), emorragia-esterna 1 (VERO: сразу прижать) + 4 (FALSO: не только перевязать) + 5 (FALSO: не заставлять ходить) + 6 (FALSO: вода не абсолютно запрещена), corpo-estraneo-occhio-3 (FALSO: не «всегда» вытаскивать), stato-shock-4 (VERO: бессмысленные фразы).
+- key_it — дословные подстроки из text_it; chapter ch18; why на en/ru/zh; без цифр.
+- Как проверено: node --test tests/explanations.test.js — 0 fail; scripts/verify.sh — VERIFY OK.
+
 ## 2026-09-30 — L9b: пояснения, порция 74 — ch17 (закрытие) + ch18 (alcool-droga-primo-soccorso) +20, 929→949/2030
 
 Что сделано (коммит feat: L9b пояснения порция 74 на self-improve):
