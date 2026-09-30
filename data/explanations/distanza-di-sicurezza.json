@@ -793,6 +793,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-sicurezza-20": {
+      "verdict": "FALSO",
+      "key_it": "controllare che il veicolo che lo segue rispetti",
+      "chapter": "ch9",
+      "why": {
+        "en": "The driver does not control the car behind: keeping the safe distance is always the responsibility of the following vehicle.",
+        "ru": "Водитель не контролирует машину позади: держать дистанцию — обязанность того, кто едет сзади.",
+        "zh": "驾驶员不负责控制后方车辆：保持车距是后车驾驶员的责任。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-1": {
+      "verdict": "VERO",
+      "key_it": "per non tamponare il veicolo che ci precede",
+      "chapter": "ch9",
+      "why": {
+        "en": "Keeping the safe distance protects you from rear-ending the vehicle ahead if it suddenly brakes.",
+        "ru": "Дистанция защищает от наезда на впереди идущее, если оно резко затормозит.",
+        "zh": "保持车距可在前车突然刹车时避免追尾。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-sicurezza-7": {
+      "verdict": "FALSO",
+      "key_it": "una distanza fissa",
+      "chapter": "ch9",
+      "why": {
+        "en": "The safe distance is not fixed: it grows with speed and must adapt to road, weather and vehicle state.",
+        "ru": "Дистанция не фиксирована: она растёт со скоростью и подстраивается под дорогу, погоду и состояние авто.",
+        "zh": "车距不是固定的：它随车速增大，并要适应路况、天气和车辆状态。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-situazioni-1": {
+      "verdict": "VERO",
+      "key_it": "dipende dallo spazio percorso nel tempo di reazione",
+      "chapter": "ch9",
+      "why": {
+        "en": "Yes: part of the safe distance is the space covered during your reaction time, which grows with speed.",
+        "ru": "Да: часть дистанции — это путь за время реакции, он растёт со скоростью.",
+        "zh": "是的：车距包含反应时间内行驶的距离，它随速度增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-situazioni-4": {
+      "verdict": "FALSO",
+      "key_it": "freno di stazionamento",
+      "chapter": "ch9",
+      "why": {
+        "en": "The safe distance does not depend on the handbrake: the handbrake is for parking, not for slowing on the move.",
+        "ru": "Дистанция не зависит от стояночного тормоза: он для стоянки, а не для замедления в движении.",
+        "zh": "车距与手刹无关：手刹用于停车，不用于行驶中减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-reazione-0": {
+      "verdict": "VERO",
+      "key_it": "dal momento della percezione di una situazione di pericolo",
+      "chapter": "ch9",
+      "why": {
+        "en": "Correct: reaction space is the distance travelled from perceiving the danger to the moment braking actually begins.",
+        "ru": "Верно: путь реакции — это расстояние от момента, когда опасность замечена, до начала торможения.",
+        "zh": "正确：反应路程是从察觉危险到真正开始刹车之间行驶的距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-reazione-2": {
+      "verdict": "VERO",
+      "key_it": "può essere maggiore dello spazio percorso nel tempo di reazione",
+      "chapter": "ch9",
+      "why": {
+        "en": "Yes, it can be greater: the distance also has to cover braking space, so it normally exceeds the reaction space.",
+        "ru": "Да, может быть больше: дистанция должна покрывать ещё и путь торможения, поэтому обычно она больше пути реакции.",
+        "zh": "是的，可以更大：车距还要覆盖制动距离，所以通常大于反应路程。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-reazione-5": {
+      "verdict": "FALSO",
+      "key_it": "può essere inferiore allo spazio percorso nel tempo di reazione",
+      "chapter": "ch9",
+      "why": {
+        "en": "No: if the distance is shorter than the reaction space alone, you reach the car ahead before you even start braking.",
+        "ru": "Нет: если дистанция меньше одного лишь пути реакции, вы доберётесь до машины раньше, чем начнёте тормозить.",
+        "zh": "不可以：若车距小于反应路程本身，你会在开始刹车前就追上前方车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distanza-minima-0": {
+      "verdict": "VERO",
+      "key_it": "se si viaggia a 30 km/h è di circa 9 metri",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 30 km/h the minimum safe distance is about 9 metres, a useful reference for slow urban driving.",
+        "ru": "При 30 км/ч минимальная дистанция — около 9 метров, хороший ориентир для спокойной езды в городе.",
+        "zh": "以30公里/小时行驶时，最小车距约为9米——是低速城市驾驶的良好参考。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distrazione-conducente-0": {
+      "verdict": "VERO",
+      "key_it": "può essere causa di incidenti",
+      "chapter": "ch9",
+      "why": {
+        "en": "Yes: a distracted driver reacts slower and controls the car less precisely, which can cause accidents.",
+        "ru": "Да: отвлечённый водитель реагирует медленнее и хуже управляет авто, что может привести к аварии.",
+        "zh": "是的：分心的驾驶员反应变慢、控制变差，可能引发事故。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distrazione-conducente-1": {
+      "verdict": "VERO",
+      "key_it": "accensione del cellulare",
+      "chapter": "ch9",
+      "why": {
+        "en": "Turning on or handling a phone pulls your attention and hands away from the wheel, so it causes distraction.",
+        "ru": "Включение или использование телефона оттягивает внимание и руки от руля, поэтому вызывает отвлечение.",
+        "zh": "开启或操作手机会把注意力和手从方向盘移开，所以会造成分心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distrazione-conducente-2": {
+      "verdict": "VERO",
+      "key_it": "dalla accensione di una sigaretta",
+      "chapter": "ch9",
+      "why": {
+        "en": "Lighting a cigarette requires looking away and using a hand while driving, which distracts the driver.",
+        "ru": "Зажигание сигареты требует отвести взгляд и снять руку с руля, что отвлекает водителя.",
+        "zh": "点烟需要移开视线并腾出一只手，这会分散驾驶员注意力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distrazione-conducente-3": {
+      "verdict": "VERO",
+      "key_it": "dalla ricerca dei comandi della radio o di altri apparecchi elettronici",
+      "chapter": "ch9",
+      "why": {
+        "en": "Fumbling for the radio or other device controls takes your eyes and hands off the road, causing distraction.",
+        "ru": "Поиск поворотов радио или других приборов отвлекает глаза и руки от дороги.",
+        "zh": "翻找收音机或其他设备的旋钮会移开视线和双手，造成分心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distrazione-conducente-4": {
+      "verdict": "FALSO",
+      "key_it": "non è determinata",
+      "chapter": "ch9",
+      "why": {
+        "en": "The statement is false: using the phone is exactly one of the main causes of driver distraction.",
+        "ru": "Утверждение неверно: использование телефона — как раз одна из главных причин отвлечения водителя.",
+        "zh": "该说法错误：使用手机恰恰是驾驶员分心的主要原因之一。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-distrazione-conducente-5": {
+      "verdict": "FALSO",
+      "key_it": "non rappresenta un pericolo se si limita a pochi secondi",
+      "chapter": "ch9",
+      "why": {
+        "en": "Even a few seconds off the road is dangerous: at highway speed that is a long distance travelled without control.",
+        "ru": "Даже несколько секунд без внимания к дороге опасно: на трассе это большой необнаруженный путь.",
+        "zh": "即使只有几秒不看路也危险：高速下这意味着很长一段失控行驶的距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-secondo-0": {
+      "verdict": "VERO",
+      "key_it": "si percorrono circa m 14 se si viaggia a 50 km/h",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 50 km/h you cover about 14 metres in one second, a useful mental gauge for judging distance.",
+        "ru": "При 50 км/ч за секунду вы проезжаете около 14 метров — полезно для оценки дистанции.",
+        "zh": "以50公里/小时行驶时，一秒约行驶14米——有助于判断车距。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-secondo-1": {
+      "verdict": "VERO",
+      "key_it": "si percorrono circa m 28 se si viaggia a 100 km/h",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 100 km/h you cover about 28 metres in one second: the faster you go, the more space you need.",
+        "ru": "При 100 км/ч за секунду вы проезжаете около 28 метров: чем быстрее, тем больше нужно места.",
+        "zh": "以100公里/小时行驶时，一秒约行驶28米：车速越快，需要的空间越大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-secondo-2": {
+      "verdict": "VERO",
+      "key_it": "si percorrono circa m 36 se si viaggia a 130 km/h",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 130 km/h you cover about 36 metres in one second: on the highway that is a lot of ground while you react.",
+        "ru": "При 130 км/ч за секунду вы проезжаете около 36 метров: на трассе за время реакции это много.",
+        "zh": "以130公里/小时行驶时，一秒约行驶36米：在高速上，反应时间内行驶的距离很大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-secondo-3": {
+      "verdict": "VERO",
+      "key_it": "si percorrono circa m 42 se si viaggia a 150 km/h",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 150 km/h you cover about 42 metres in one second, roughly a bus-length of road in an instant.",
+        "ru": "При 150 км/ч за секунду вы проезжаете около 42 метров: это длина автобуса за одно мгновение.",
+        "zh": "以150公里/小时行驶时，一秒约行驶42米：约等于一眨眼驶过一辆公交车的长度。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-secondo-4": {
+      "verdict": "FALSO",
+      "key_it": "si percorrono circa m 20 se si viaggia a 150 km/h",
+      "chapter": "ch9",
+      "why": {
+        "en": "That figure is far too low: at 150 km/h you cover much more ground in one second, so the estimate is wrong.",
+        "ru": "Эта цифра слишком мала: на 150 км/ч за секунду вы проезжаете заметно больше, так оценка неверна.",
+        "zh": "这个数字太小了：在150公里/小时时，一秒行驶的距离远大于此，所以该估算错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
