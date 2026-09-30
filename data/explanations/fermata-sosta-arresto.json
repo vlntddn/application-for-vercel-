@@ -2340,6 +2340,149 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-sosta-emergenza-4": {
+      "verdict": "FALSO",
+      "key_it": "per consentire ad una persona invalida di salire sul veicolo",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: a temporary stop to let a disabled person into the vehicle is a brief stop (fermata), not emergency parking — the statement misnames it.",
+        "ru": "Ложь: временная остановка, чтобы помочь инвалиду сесть в автомобиль, — это остановка (fermata), а не аварийная стоянка (sosta di emergenza) — утверждение называет её неверно.",
+        "zh": "错误：为让残疾人上车而临时中断行驶属于短暂停车(fermata)，而非紧急停车(sosta di emergenza)——该陈述命名错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-discesa-veicolo-0": {
+      "verdict": "VERO",
+      "key_it": "non costituisca pericolo o intralcio per gli altri utenti della strada",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: when opening the doors of a vehicle, you must make sure it is not a danger or an obstacle to the other road users.",
+        "ru": "Верно: при открытии дверей автомобиля нужно убедиться, что это не создаёт опасность и не мешает другим участникам движения.",
+        "zh": "正确：打开车辆车门时，必须确认不会对其他道路使用者构成危险或妨碍。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-discesa-veicolo-1": {
+      "verdict": "VERO",
+      "key_it": "dal lato rivolto verso il centro della strada",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: before opening a door on the side facing the centre of the road, you must make sure no other vehicles are approaching.",
+        "ru": "Верно: прежде чем открыть дверь со стороны, обращённой к центру проезжей части, нужно убедиться, что не приближаются другие автомобили.",
+        "zh": "正确：打开面向道路中央一侧的车门前，必须确认没有车辆接近。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-discesa-veicolo-2": {
+      "verdict": "VERO",
+      "key_it": "dal lato rivolto verso il marciapiede",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: before opening a door on the side facing the sidewalk, you must make sure no pedestrians are approaching.",
+        "ru": "Верно: прежде чем открыть дверь со стороны, обращённой к тротуару, нужно убедиться, что не приближаются пешеходы.",
+        "zh": "正确：打开面向人行道一侧的车门前，必须确认没有行人接近。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-discesa-veicolo-3": {
+      "verdict": "VERO",
+      "key_it": "Quando si scende da un veicolo bisogna assicurarsi",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: when getting out of a vehicle you must make sure it is not a danger or an obstacle to the other road users.",
+        "ru": "Верно: при выходе из автомобиля нужно убедиться, что это не создаёт опасность и не мешает другим участникам движения.",
+        "zh": "正确：下车时必须确认不会对其他道路使用者构成危险或妨碍。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-discesa-veicolo-4": {
+      "verdict": "VERO",
+      "key_it": "anche mediante lo specchietto retrovisore",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: before getting out of the vehicle the driver must make sure no other vehicles are approaching, also using the rear-view mirror.",
+        "ru": "Верно: перед выходом из автомобиля водитель должен убедиться, что не приближаются другие автомобили, в том числе пользуясь зеркалом заднего вида.",
+        "zh": "正确：下车前，驾驶员必须确认没有车辆接近，也可通过后视镜查看。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-discesa-veicolo-5": {
+      "verdict": "VERO",
+      "key_it": "il conducente deve assicurarsi di avere spento il motore",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: before getting out of a parked vehicle the driver must make sure the engine is switched off.",
+        "ru": "Верно: перед выходом из припаркованного автомобиля водитель должен убедиться, что двигатель заглушён.",
+        "zh": "正确：从停放的车辆下车前，驾驶员必须确认发动机已熄火。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-discesa-veicolo-6": {
+      "verdict": "FALSO",
+      "key_it": "l'obbligo di attivare l'indicatore di direzione da quel lato",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: opening a door on the sidewalk side does not create an obligation to activate the turn indicator on that side — the obligation is about checking the surroundings, not about signalling in that case.",
+        "ru": "Ложь: открытие двери со стороны тротуара не создаёт обязанности включать указатель поворота с этой стороны — обязанность в этой ситуации состоит в осмотре окружения, а не в сигнале.",
+        "zh": "错误：打开人行道一侧的车门并不产生在该侧开启转向灯的义务——该情形下义务是观察周围情况，而非开启信号。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-discesa-veicolo-7": {
+      "verdict": "FALSO",
+      "key_it": "L'apertura degli sportelli del veicolo dal lato rivolto verso il centro della strada è vietato",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: opening doors on the side facing the centre of the road is not forbidden as such — the rule is to check that no vehicles are approaching before doing it.",
+        "ru": "Ложь: открытие дверей со стороны, обращённой к центру проезжей части, само по себе не запрещено — правило требует проверить, что не приближаются другие автомобили.",
+        "zh": "错误：打开面向道路中央一侧的车门本身并不被禁止——规则要求先确认没有车辆接近。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-discesa-veicolo-8": {
+      "verdict": "FALSO",
+      "key_it": "con il motore acceso per consentire il funzionamento dell'aria condizionata",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: a parked vehicle must not be left with the engine running for the air conditioning — the engine must be switched off when the driver leaves a parked vehicle.",
+        "ru": "Ложь: нельзя оставлять припаркованный автомобиль с работающим двигателем ради кондиционера — при выходе из припаркованного автомобиля двигатель должен быть заглушён.",
+        "zh": "错误：不得为运行空调而让停放车辆保持发动机运转——驾驶员离开停放车辆时发动机必须熄火。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-discesa-veicolo-9": {
+      "verdict": "FALSO",
+      "key_it": "su tutte le strade in discesa ma non in quelle in salita",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the hand brake is not \"downhill roads but not uphill\" — the driver must apply it whenever leaving a parked vehicle, in every case, so the \"but not uphill\" part is wrong.",
+        "ru": "Ложь: ручник не ставится «на всех спусках, но не на подъёмах» — водитель обязан затянуть стояночный тормоз при любом выходе из припаркованного автомобиля, так что часть «но не на подъёмах» неверна.",
+        "zh": "错误：驻车制动并非“所有下坡道路要拉、上坡不要”——驾驶员离开停放车辆时在任何情况下都必须拉手刹，故“上坡不拉”部分错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
