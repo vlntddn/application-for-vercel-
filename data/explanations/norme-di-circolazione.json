@@ -4537,6 +4537,19 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-15": {
+      "verdict": "FALSO",
+      "key_it": "non sono muniti di specchio retrovisore centrale perché inutilizzabile",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the presence of rear headrests does not prevent the use of the central mirror: it remains fully usable and is still mandatory equipment for the driver.",
+        "ru": "Неверно: наличие задних подголовников не мешает пользоваться центральным зеркалом: оно остаётся вполне пригодным и по-прежнему обязательно для водителя.",
+        "zh": "错误：有后排头枕并不妨碍使用中央后视镜：它仍然完全可用，并且对驾驶员来说依旧属于必备装备。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
