@@ -1807,6 +1807,214 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "sorpasso-norme-generiche-sorpasso-1": {
+      "verdict": "VERO",
+      "key_it": "è consigliabile ridurre la velocità",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: when you are being overtaken and a vehicle is coming from the opposite side, you should reduce speed to shorten the window in which the overtaking vehicle cannot return to its lane; the code even requires slowing down when the vehicle ahead needs more space.",
+        "ru": "Верно: если вас обгоняют, а навстречу едет автомобиль, следует сбросить скорость, чтобы сократить время, пока обгоняющий не может вернуться в свою полосу; Кодекс и вовсе требует замедления, когда впереди идущему нужно больше места.",
+        "zh": "正确：被超车且有对向来车时，应减速，缩短超车车辆无法返回本车道的时间窗；当前方车辆需要更多空间时，法规甚至要求减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-norme-generiche-sorpasso-2": {
+      "verdict": "VERO",
+      "key_it": "il più vicino possibile al margine destro della carreggiata",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: if the road is wide enough, you must move as close as possible to the right edge of the roadway to give the overtaking vehicle maximum room to complete the manoeuvre.",
+        "ru": "Верно: если ширина дороги позволяет, нужно отъехать как можно ближе к правому краю проезжей части, чтобы дать обгоняющему максимум места для манёвра.",
+        "zh": "正确：若路面足够宽，必须尽量靠右行驶，给超车车辆留出完成操作的最大空间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-norme-generiche-sorpasso-3": {
+      "verdict": "VERO",
+      "key_it": "si può avere una parte di responsabilità",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the driver being overtaken is obliged to facilitate the manoeuvre; if they make it harder (for example by accelerating) and an accident follows, they can bear part of the responsibility.",
+        "ru": "Верно: обгоняемый обязан облегчить манёвр; если он его усложнил (например, ускорился) и произошло ДТП, он несёт часть ответственности.",
+        "zh": "正确：被超车辆有义务配合超车；若其制造困难（如加速）并导致事故，须承担部分责任。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-norme-generiche-sorpasso-4": {
+      "verdict": "FALSO",
+      "key_it": "non in servizio di emergenza",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: a police car not on emergency duty is just an ordinary vehicle; it can be overtaken like any other, respecting the normal overtaking rules.",
+        "ru": "Ложь: патрульная машина вне экстренного задания — обычный автомобиль; её можно обгонять как любой другой, соблюдая общие правила обгона.",
+        "zh": "错误：非执行紧急任务的警车就是普通车辆，可按一般超车规则正常超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-norme-generiche-sorpasso-5": {
+      "verdict": "FALSO",
+      "key_it": "anche se in servizio di emergenza",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: a vehicle with blue flashing lights on emergency duty must not be overtaken or interrupted; the number of lanes on the motorway changes nothing.",
+        "ru": "Ложь: транспортное средство с сине-мигающим маячком на экстренном задании обгонять и перерывать нельзя — количество полос на автобане ничего не меняет.",
+        "zh": "错误：执行紧急任务、开启蓝闪灯的警车不得被超车或打断，高速公路几条车道都一样。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-norme-generiche-sorpasso-6": {
+      "verdict": "FALSO",
+      "key_it": "tenere accesi i proiettori abbaglianti",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: high beams would blind both the oncoming driver and the overtaking vehicle; the right reaction is to slow down and, if the road is wide, move to the right edge.",
+        "ru": "Ложь: дальний свет ослепит и встречного, и обгоняющего; правильная реакция — сбросить скорость и, если дорога широка, отъехать к правому краю.",
+        "zh": "错误：远光灯会致盲对向和超车车辆；正确做法是减速，若路面宽则靠右。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-norme-generiche-sorpasso-7": {
+      "verdict": "FALSO",
+      "key_it": "l'obbligo di mantenere la stessa velocità",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: there is no obligation to keep the same speed; on the contrary, if the vehicle ahead needs more space you should reduce speed and, if possible, move right.",
+        "ru": "Ложь: обязанности держать прежнюю скорость нет; наоборот, если впереди идущему нужно больше места, следует сбросить скорость и по возможности отъехать вправо.",
+        "zh": "错误：没有保持原速的义务；相反，若前方车辆需要更多空间，应减速并尽量靠右。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-norme-generiche-sorpasso-8": {
+      "verdict": "FALSO",
+      "key_it": "l'indicatore di direzione destro",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the turn indicator means a direction change and would confuse other drivers; it must not be used as a danger signal — slow down and move to the right edge instead.",
+        "ru": "Ложь: поворотник означает смену направления и дезориентирует других; использовать его как сигнал опасности нельзя — нужно сбросить скорость и отъехать к правому краю.",
+        "zh": "错误：转向灯表示转向，会误导他人；不应把它当危险信号，而应减速靠右。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-autostrada-0": {
+      "verdict": "VERO",
+      "key_it": "scarsa attenzione posta ai veicoli che seguono",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: on the motorway speeds are high, so before and during the manoeuvre you must keep checking the mirrors and the vehicles behind; inattention to them can cause a collision.",
+        "ru": "Верно: на автобане скорости высокие — до и во время манёвра нужно следить в зеркала за приближающимися сзади; невнимательность к ним может привести к столкновению.",
+        "zh": "正确：高速公路上车速快，操作前后必须看后视镜关注后方车辆；疏于注意可能造成碰撞。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-autostrada-1": {
+      "verdict": "VERO",
+      "key_it": "l'insufficiente distanza di sicurezza",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking needs a free gap ahead and behind; if the safety distance is not enough, the manoeuvre may have to be abandoned mid-way and a collision can follow.",
+        "ru": "Верно: для обгона нужен свободный интервал спереди и сзади; если дистанция безопасности недостаточна, манёвр придётся прервать на полпути — возможен наезд.",
+        "zh": "正确：超车需要前后空档；若安全车距不足，操作可能被迫中断，导致追尾。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-autostrada-2": {
+      "verdict": "VERO",
+      "key_it": "l'improvviso spostamento sulla corsia di sorpasso",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: if a vehicle ahead suddenly moves onto the overtaking lane, it cuts the manoeuvre off mid-way; on the motorway every lane change must be signalled and anticipated.",
+        "ru": "Верно: если впереди идущий внезапно перестраивается в обгонную полосу, он перережет манёвр; на автобане любое перестроение должно быть сигнализировано и предвидено.",
+        "zh": "正确：前方车辆突然并入超车道会截断超车操作；高速上每次变道必须打灯并可预见。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-autostrada-3": {
+      "verdict": "VERO",
+      "key_it": "mantenersi troppo a lungo sulla corsia di sorpasso",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the overtaking lane is for the manoeuvre only; you must return to the driving lane as soon as it is done, otherwise you obstruct everyone who wants to overtake.",
+        "ru": "Верно: обгонная полоса только для самого манёвра; закончив обгон, нужно как можно скорее вернуться в попутную, иначе вы задерживаете всех, кто хочет обогнать.",
+        "zh": "正确：超车道只供超车时使用；完成后应尽快回到行车道，否则会妨碍其他超车车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-autostrada-4": {
+      "verdict": "VERO",
+      "key_it": "accodandosi ad un veicolo che sta sorpassando",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: queueing behind a vehicle that is itself overtaking is forbidden — you must wait until the first manoeuvre is finished, otherwise you risk a collision while both change lanes.",
+        "ru": "Верно: встать в хвост обгоняющего запрещено — нужно дождаться окончания его манёвра, иначе при двойном перестроении возможен наезд.",
+        "zh": "正确：跟随正在超车的车辆排队超车是禁止的，须等其完成操作，否则有碰撞风险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-autostrada-5": {
+      "verdict": "VERO",
+      "key_it": "il forte vento laterale compromette la stabilità",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: on the motorway (bridges, open stretches) strong crosswind can push a vehicle sideways during the manoeuvre and make it hard to keep the lane.",
+        "ru": "Верно: на автобане (мосты, открытые участки) сильный боковой ветер может сдвинуть автомобиль в сторону прямо во время манёвра и сорвать с полосы.",
+        "zh": "正确：高速公路上（桥梁、空旷路段）强侧风可能在操作中把车推偏，难以保持车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-autostrada-6": {
+      "verdict": "FALSO",
+      "key_it": "vicinanza di una piazzola di sosta",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: proximity to a rest area is not itself a cause of accidents; what matters is how the manoeuvre is carried out — distance, mirrors, returning to the driving lane.",
+        "ru": "Ложь: близость площадки отдыха сама по себе не причина ДТП; важно, как выполнен манёвр — дистанция, зеркала, возврат в попутную полосу.",
+        "zh": "错误：靠近休息区本身不是事故原因；关键在于操作是否规范——车距、后视镜、及时并回行车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-autostrada-7": {
+      "verdict": "FALSO",
+      "key_it": "le luci anabbaglianti sempre accese",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: low beams must stay on at all times on the motorway — a trap; having them on is a duty, not a cause of accidents.",
+        "ru": "Ложь: на автобане ближний свет обязаны держать включённым постоянно — ловушка: это обязанность, а не причина ДТП.",
+        "zh": "错误：在高速公路上必须始终开启近光灯——这是义务，不是事故原因（题目是陷阱）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
