@@ -1040,6 +1040,123 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "limiti-di-velocita-Comportamenti-passaggio-livello-1": {
+      "verdict": "VERO",
+      "key_it": "occorre sgomberare in qualunque modo la sede ferroviaria, se necessario anche sfondando le barriere",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: if the barriers start closing while you are on the tracks, clear the rail line by any means necessary, even breaking through the barriers.",
+        "ru": "Верно: если барьеры начали опускаться, а вы на путях, расчистите железнодорожное полотно любыми средствами, при необходимости даже пробивая барьеры.",
+        "zh": "正确：若栏木开始落下而车已在轨道上，须用任何方式驶离轨道，必要时甚至冲开栏木。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-Comportamenti-passaggio-livello-6": {
+      "verdict": "VERO",
+      "key_it": "di molte persone che viaggino su un treno in transito",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: crossing a level crossing while ignoring the rules can put the lives of many passengers on a passing train at risk.",
+        "ru": "Верно: пересечение переезда в обход правил может поставить под угрозу жизни многих пассажиров идущего поезда.",
+        "zh": "正确：无视规则通过铁路道口可能危及行驶中火车上众多乘客的生命。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-Comportamenti-passaggio-livello-7": {
+      "verdict": "VERO",
+      "key_it": "con manovra azzardata per guadagnare tempo, può essere un pericolo per molti individui",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: racing the barriers to save time is dangerous not only for the driver but for everyone on the train.",
+        "ru": "Верно: попытка «обогнать» опускание барьеров ради экономии времени опасна не только для водителя, но и для всех в поезде.",
+        "zh": "正确：为抢时间而冒险冲栏木不仅危及司机，也危及火车上所有人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-Comportamenti-passaggio-livello-9": {
+      "verdict": "FALSO",
+      "key_it": "occorre scendere e abbandonare rapidamente il veicolo per mettersi in salvo",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the rule is to clear the tracks with the vehicle by any means, not to jump out and abandon it — leaving the car on the rails is the danger, not the solution.",
+        "ru": "Неверно: правило — любой ценой увести автомобиль с путей, а не выпрыгнуть и покинуть его — оставленный на путях автомобиль и есть опасность, а не решение.",
+        "zh": "错误：规则是设法把车驶离轨道，而非跳车弃车——留在轨道上的车才是危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-Comportamenti-passaggio-livello-10": {
+      "verdict": "FALSO",
+      "key_it": "occorre sganciarlo rapidamente e abbandonarlo sui binari per salvare almeno la motrice",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: you must not uncouple and abandon a trailer on the tracks — it would block the line and endanger the train; the correct action is to clear the rails.",
+        "ru": "Неверно: нельзя отцепить прицеп и бросить его на путях — он перекроет полотно и навредит поезду; верное действие — убрать автомобиль с путей.",
+        "zh": "错误：不能快速解挂并把挂车弃在轨道上——那会阻塞线路危及火车；正确做法是驶离轨道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-Comportamenti-passaggio-livello-11": {
+      "verdict": "FALSO",
+      "key_it": "occorre scaricare rapidamente il veicolo per salvare almeno il carico",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: if a breakdown blocks you on the rail line you must get the vehicle off the tracks, not unload cargo to save it — the load is never worth a blocked crossing.",
+        "ru": "Неверно: если поломка оставила вас на путях, нужно увести автомобиль с полотна, а не разгружаться ради груза — груз никогда не стоит перекрытого переезда.",
+        "zh": "错误：若故障致车停在轨道上，须把车驶离而非卸货保货——货物不值一个被封锁的道口。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-Comportamenti-passaggio-livello-15": {
+      "verdict": "FALSO",
+      "key_it": "comporta esclusivamente una lieve sanzione amministrativa in quanto non comporta reali pericoli",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: ignoring the level-crossing rules is far from a minor fine — it puts the train and its passengers in real danger, so \"only a light sanction, no real risk\" is false.",
+        "ru": "Неверно: нарушение правил переезда — далеко не мелкий штраф: это реальная опасность для поезда и пассажиров, поэтому «лишь лёгкая санкция, реального риска нет» — ложно.",
+        "zh": "错误：无视道口规则绝非轻罚小事——它真实危及火车和乘客，因此“仅轻微处罚、无实际危险”是错的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-Comportamenti-passaggio-livello-16": {
+      "verdict": "FALSO",
+      "key_it": "può essere pericoloso solo nelle ore notturne",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the word \"only\" is the trap — a risky move at a level crossing is dangerous at any time of day, not just at night.",
+        "ru": "Неверно: слово «только» — ловушка: опасный манёвр на переезде опасен в любое время суток, а не только ночью.",
+        "zh": "错误：“仅”是陷阱——道口危险动作在任何时间都危险，而非仅夜间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-Comportamenti-passaggio-livello-18": {
+      "verdict": "FALSO",
+      "key_it": "occorre allontanarsi di almeno cento metri il prima possibile",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: if you are trapped between closed barriers the priority is to stay in the protected vehicle and alert traffic, not to flee a fixed distance on foot — walking away on the tracks is far from the correct first response.",
+        "ru": "Неверно: если вы заперты между закрытыми барьерами, приоритет — остаться в защищённом автомобиле и предупредить остальных, а не убегать пешком на фиксированное расстояние — бегство по путям отнюдь не верная первая реакция.",
+        "zh": "错误：若被困在闭合栏木之间，首要的是留在车内并警示其他交通，而非步行逃离固定距离——沿轨道跑开绝非正确的第一反应。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
