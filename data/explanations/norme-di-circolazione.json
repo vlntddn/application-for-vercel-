@@ -3497,6 +3497,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-15": {
+      "verdict": "FALSO",
+      "key_it": "passando tra i veicoli affiancati",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: weaving between side-by-side vehicles while traffic moves in parallel files is exactly what the parallel-file discipline is meant to prevent — every lane keeps its own line and a motorcycle is no exception.",
+        "ru": "Ложь: перестроение между едущими бок о бок автомобилями при параллельных колоннах — как раз то, чего дисциплина параллельных колонн должна предотвратить: каждая полоса держит свою линию, мотоцикл — не исключение.",
+        "zh": "错误：并行车流中在并排车辆之间穿行，正是并行车队纪律要避免的行为——每条车道保持各自线位，摩托车也不例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-obbligo-precedenza-1": {
+      "verdict": "VERO",
+      "key_it": "dare la precedenza a destra e a sinistra quando, da fermi, ci si immette nella circolazione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when you merge from a standstill you join the flow without a priority mark of your own, so you must check and yield to traffic in both directions — the flow already in the road comes first.",
+        "ru": "Верно: въезжая в поток из состояния остановки, вы вливаетесь без собственной отметки приоритета — значит, обязаны посмотреть и уступить обоим направлениям: поток, уже в дороге, имеет преимущество.",
+        "zh": "正确：从静止状态驶入车流时，你没有自己的优先标志，因此必须观察并向双向车辆让行——路上已有的车流优先。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-obbligo-precedenza-4": {
+      "verdict": "VERO",
+      "key_it": "dare la precedenza a destra e a sinistra quando si esce da un passo carrabile",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: leaving a private driveway or garage is a merge from outside the road — you have no priority, so you must give way to vehicles coming from both sides before you cross the carriageway.",
+        "ru": "Верно: выезд с частного проезда — это имметте извне дороги: у вас нет приоритета, поэтому перед пересечением проезжей части вы обязаны уступить обеим сторонам.",
+        "zh": "正确：驶出私人通道属于从路外汇入——你没有优先权，因此横穿路面前必须向两侧来车让行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-obbligo-precedenza-7": {
+      "verdict": "FALSO",
+      "key_it": "E' obbligatorio dare la precedenza a destra e a sinistra in presenza del segnale ROTATORIA",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: at a roundabout the rule is not to yield to both sides — you yield to traffic already inside the roundabout, which approaches from your left. The roundabout mark gives entry priority to the circulating flow.",
+        "ru": "Ложь: на кольце правило не в «уступить с обеих сторон» — вы уступаете потоку, уже внутри кольца, а он подходит слева. Знак ROTATORIA даёт преимущество в движении тем, кто уже в кругу.",
+        "zh": "错误：环岛规则并非“向两侧让行”——你须让行已在环岛内的车流，它从你的左侧驶来。环岛标志赋予环内行驶车辆优先权。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-vicinanza-incrocio-0": {
+      "verdict": "VERO",
+      "key_it": "predisporsi ad osservare le norme di precedenza",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: approaching an intersection you must set yourself up to apply the priority rules — lower speed, watch the approaching traffic, and be ready to yield the moment a rule asks you to.",
+        "ru": "Верно: подъезжая к перекрёстку, вы должны подготовить себя к применению правил уступки: снизить скорость, следить за приближающимися и быть готовым уступить, как только правило того потребует.",
+        "zh": "正确：接近路口时应做好准备执行让行规则——降低车速、观察来车，规则一旦要求便立即让行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-vicinanza-incrocio-3": {
+      "verdict": "VERO",
+      "key_it": "bisogna incolonnarsi dietro gli altri veicoli in attesa",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a two-wheel vehicle near an intersection you join the queue of waiting vehicles instead of squeezing through — a motorcycle that cuts in front becomes invisible in the drivers blind spot.",
+        "ru": "Верно: на двухколёсном у перекрёстка вы встаёте в очередь за ожидающими, а не проскальзываете: мотоцикл, заезжающий впереди, попадает в слепую зону водителей.",
+        "zh": "正确：骑摩托车接近路口时应排入等待车辆的队列，而不是钻行——钻到前面的摩托车会落入驾驶员盲点。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-vicinanza-incrocio-7": {
+      "verdict": "FALSO",
+      "key_it": "sorpassare velocemente a sinistra se si vuole svoltare a destra",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: overtaking fast on the left just before a right turn mixes two conflicting maneuvers — you cross the flow you just passed and the drivers behind expect you to keep the lane.",
+        "ru": "Ложь: «быстро обогнать слева, чтобы повернуть направо» — два конфликтующих манёвра в одном: вы пересекаете поток, который только что обогнали, а водители позади ждут, что вы держите полосу.",
+        "zh": "错误：右转前快速向左超车是两种冲突操作混在一起——你刚超过的车流会被再次横切，而后方司机以为你会保持车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-vicinanza-incrocio-8": {
+      "verdict": "FALSO",
+      "key_it": "occorre suonare il clacson",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: honking near an intersection inside a built-up area is an abuse — the horn is reserved for warning of an immediate danger, and routine intersection traffic is not such a danger.",
+        "ru": "Ложь: клаксон у перекрёстка в населённом пункте — злоупотребление: сигнал предназначен для предупреждения об непосредственной опасности, а обычный перекрёстный трафик такой опасностью не является.",
+        "zh": "错误：在居民区路口按喇叭属于滥用——喇叭仅用于警示直接危险，而常规路口车流并不构成这种危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corrispondenza-incroci-1": {
+      "verdict": "VERO",
+      "key_it": "non è consentito cambiare improvvisamente la direzione di marcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: near or at an intersection an abrupt change of direction is forbidden — drivers position themselves in advance for the intersection, and a sudden swerve breaks that shared expectation.",
+        "ru": "Верно: вблизи перекрёстка и на нём запрещена резкая смена направления: водители заранее выстраиваются под перекрёсток, а внезапный рывок ломает это общее ожидание.",
+        "zh": "正确：路口附近及路口上禁止突然改变行驶方向——驾驶员已提前为路口定位，突然变向会打破这一共同预期。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corrispondenza-incroci-2": {
+      "verdict": "VERO",
+      "key_it": "non è consentito effettuare l'inversione di marcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a U-turn near or at an intersection is forbidden — the intersection is already a dense crossing of flows, and flipping direction inside it multiplies the conflicts.",
+        "ru": "Верно: разворот вблизи перекрёстка и на нём запрещён: перекрёсток и так плотное пересечение потоков, а разворот внутри него только умножает конфликты.",
+        "zh": "正确：路口附近及路口上禁止掉头——路口本就是密集的车流交汇处，在其中掉头只会增加冲突。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corrispondenza-incroci-3": {
+      "verdict": "VERO",
+      "key_it": "non è consentito effettuare la sosta",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: stopping (parking) at an extra-urban intersection is forbidden — you block the view of the intersection for everyone else and force them to brake around a car that blocks the crossing.",
+        "ru": "Верно: остановка (стоянка) на внегородском перекрёстке запрещена: вы перекрываете обзор перекрёстка всем остальным и заставляет их тормозить, объезжая стоящий автомобиль.",
+        "zh": "正确：在城外路口停车是禁止的——你会遮挡所有人的路口视野，并迫使他人绕开停在交叉口的车辆而制动。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corrispondenza-incroci-4": {
+      "verdict": "VERO",
+      "key_it": "non è consentito effettuare la fermata",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: even a short stop (fermata) at an extra-urban intersection is forbidden — a vehicle pulled out of the flow can hide pedestrians or cyclists that step out from its side into the crossing.",
+        "ru": "Верно: даже краткая остановка (fermata) на внегородском перекрёстке запрещена: вышедший из потока автомобиль может скрыть пешехода или велосипедиста, выходящего с его стороны на пересечение.",
+        "zh": "正确：即使在城外路口短暂停车也是被禁止的——驶出车流的车辆可能遮挡从其旁边走向交叉口的行人或骑行者。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corrispondenza-incroci-6": {
+      "verdict": "FALSO",
+      "key_it": "non è consentito usare i fari anabbaglianti",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the statement is inverted — the low beams are not forbidden at intersections, they are mandatory outside built-up areas, and at a junction the light that shows your vehicle to others is exactly what you need.",
+        "ru": "Ложь: утверждение перевёрнуто — ближний свет на перекрёстке не запрещён, напротив: вне населённых пунктов он обязателен, а на перекрёстке свет, по которому вас видят, — как раз то, что нужно.",
+        "zh": "错误：说法颠倒——近光灯在路口并不被禁止，相反：在居民区外近光灯是强制的，路口上让他人看到你的灯光恰恰是需要的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corrispondenza-incroci-7": {
+      "verdict": "FALSO",
+      "key_it": "non è consentito superare la velocità di 60 km/h",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: there is no automatic sixty-kilometer speed cap at extra-urban intersections — the applicable limit is the one set by the road class and signs, and inventing a lower figure here inverts the rule.",
+        "ru": "Ложь: автоматического предела в шестидесяти километрах на внегородских перекрёстах не существует — действует ограничение, установленное классом дороги и знаками, а выдуманный пониженный лимит здесь искажает правило.",
+        "zh": "错误：城外路口没有自动六十公里的限速——适用的是由道路等级和标志规定的限值，此处虚构一个更低的数字反而歪曲了规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corrispondenza-incroci-8": {
+      "verdict": "FALSO",
+      "key_it": "è consentito non azionare l'indicatore di direzione per svoltare a destra",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: skipping the turn indicator for a right turn at a city intersection is a violation — the indicator announces your intent to everyone around, and without it the turn is an ambush for the adjacent lane.",
+        "ru": "Ложь: «не включать поворотник на поворот направо у городского перекрёстка» — нарушение: указатель объявляет намерение всем вокруг, а без него поворот — засада для соседней полосы.",
+        "zh": "错误：城市路口右转不打转向灯是违规行为——转向灯向周围所有人宣告你的意图，缺少它右转对相邻车道就是伏击。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corrispondenza-incroci-9": {
+      "verdict": "FALSO",
+      "key_it": "non è consentito il sorpasso",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the overtaking ban at intersections covers UNCONTROLLED ones — at a signalized junction the flows are separated by phases, so the rule does not forbid overtaking there.",
+        "ru": "Ложь: запрет обгона на перекрёстах распространяется на нерегулируемые: на регулируемом светофором перекрёстке потоки разделены фазами, и правило обгон там не запрещает.",
+        "zh": "错误：路口禁止超车针对的是无信号灯路口——在信号灯控制的路口各车流由相位分隔，因此规则并不禁止在此超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corrispondenza-incroci-11": {
+      "verdict": "FALSO",
+      "key_it": "non è consentito azionare i dispositivi di segnalazione acustica (clacson o trombe)",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the horn is not outright forbidden at extra-urban intersections — it stays usable to warn of an immediate danger, what is banned is its routine or attention-grabbing use.",
+        "ru": "Ложь: клаксон на внегородских перекрёстах не запрещён полностью — он остаётся пригодным для предупреждения об непосредственной опасности; запрещены лишь бытовое или привлекающее внимание применение.",
+        "zh": "错误：城外路口并不完全禁止使用喇叭——它仍可用于警示直接危险；被禁止的只是将其用于日常或吸引注意的用途。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-proprieta-privata-0": {
+      "verdict": "VERO",
+      "key_it": "l'obbligo di dare la precedenza spetta, di norma, al conducente del veicolo che arriva da sinistra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when two vehicles reach an intersection at the same time and no sign says otherwise, the one coming from the left yields — the right-hand rule is the default when no mark decides the priority.",
+        "ru": "Верно: если два автомобиля одновременно прибывают на перекрёсток и знаки не решают иначе, уступает тот, кто справа — правило правой руки действует, пока нет знака, определяющего приоритет.",
+        "zh": "正确：当两辆车同时到达路口且标志未作规定时，来自右侧的车辆须让行——在没有标志确定优先权时，右方规则即为默认。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-proprieta-privata-1": {
+      "verdict": "VERO",
+      "key_it": "entrambi hanno l'obbligo di moderare la velocità, per evitare incidenti",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: at the same time both approaching drivers must reduce speed — priority settles who goes first, but the one with priority still expects the other to be ready to brake.",
+        "ru": "Верно: одновременно оба приближающихся водителя обязаны снизить скорость: приоритет решает, кто едет первым, но у того, кто имеет преимущество, всё равно должен быть готов остановиться другой.",
+        "zh": "正确：同时，两位接近路口的驾驶员都有义务减速——优先权决定谁先通过，但优先方仍期待对方已准备好制动。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-proprieta-privata-2": {
+      "verdict": "VERO",
+      "key_it": "bisogna essere prudenti e tolleranti nei confronti di chi, pur non avendo la precedenza, passa ugualmente per primo",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if the driver without priority passes first, you stay calm and do not retaliate — arguing in the intersection costs more than the few seconds of letting the other through.",
+        "ru": "Верно: если тот, кто не имеет приоритета, проезжает первым, вы сохраняете спокойствие и не отвечаете тем же: преследование в перекрёстке дороже, чем несколько секунд уступки.",
+        "zh": "正确：若无优先权的一方先行通过，应保持冷静而不报复——在路口争抢比让对方先走几秒钟的代价更大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
