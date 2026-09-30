@@ -1,3 +1,11 @@
+## 2026-09-30 — L9b: пояснения, порция 72 — ch16 (patente-punti-documenti) +20, 889→909/2030
+
+Что сделано (коммит feat: L9b пояснения порция 72 на self-improve):
+- Добавлено 20 пояснений ch16 (patente-punti-documenti): revoca (1,7,9,10,11), sospensione (3,9,14,15), violazioni-decurtazione-punti-patente (2,5,6,12), Validita-delle-patenti-guida (3,4,5,6,7,8,9). Всего в ch16 — 100 из 110 не-карт. сигнальных (осталось 8: revisione-patente-guida-15 и validità 13,14,15,16,17,18,19 — уверенность низкая, по протоколу L9b пропускать лучше, чем неверное).
+- Общий сигнал-счётчик: 909/2030; не-карт. сигнал-счётчик: 884/1253.
+- key_it — дословные подстроки из text_it (проверено node-скриптом перед записью), chapter=ch16, why на en/ru/zh, цифры только из text_it.
+- Как проверено: node --test tests/explanations.test.js — 13/13 ok (checkAll пуст); scripts/verify.sh — VERIFY OK (184 passed, smoke 8×200).
+
 ## 2026-09-30 — L9b: пояснения, порция 71 — ch16 (patente-punti-documenti) +20, 869→889/2030
 
 Что сделано (коммит feat: L9b пояснения порция 71 на self-improve):
