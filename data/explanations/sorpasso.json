@@ -260,6 +260,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-7": {
+      "verdict": "VERO",
+      "key_it": "la carreggiata non è sufficientemente larga",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: if the carriageway is not wide enough to pass with a safe lateral distance, the overtaking manoeuvre must not be attempted.",
+        "ru": "Верно: если проезжая часть недостаточно широка для обгона с безопасным боковым зазором, манёвр выполнять нельзя.",
+        "zh": "正确：路面不够宽、无法保持安全横向距离时，不得超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-8": {
+      "verdict": "FALSO",
+      "key_it": "azionare il segnale acustico",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: honking the horn before overtaking is not obligatory — the mandatory signal is the direction indicator, plus the safety checks.",
+        "ru": "Неверно: подача звукового сигнала перед обгоном не обязательна — обязателен указатель поворота и проверка условий.",
+        "zh": "错误：超车前按喇叭并非义务——必须的是转向灯和安全检查。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-9": {
+      "verdict": "FALSO",
+      "key_it": "non ha l'obbligo di azionare l'indicatore di direzione",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: signalling the overtaking with the direction indicator is mandatory before starting the manoeuvre.",
+        "ru": "Неверно: обозначить манёвр обгона указателем поворота обязательно до начала движения.",
+        "zh": "错误：开始超车前必须开启转向信号。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-10": {
+      "verdict": "FALSO",
+      "key_it": "taglia la strada a quello sorpassato",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: after overtaking you may not swing right across the path of the car you passed — you must return to the right only when it is safe.",
+        "ru": "Неверно: после обгона нельзя резко перестраиваться вправо через траекторию обгоняемого — возврат на правую только когда это безопасно.",
+        "zh": "错误：超车后不得从被超车辆前方切回——只能在安全时回到右侧。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-11": {
+      "verdict": "FALSO",
+      "key_it": "gareggiare in velocità",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the driver being overtaken must not race in speed — they have to facilitate the manoeuvre and not speed up.",
+        "ru": "Неверно: обгоняемому нельзя соревноваться в скорости — он обязан содействовать обгону, а не ускоряться.",
+        "zh": "错误：被超车辆不得加速竞赛——应配合超车，不提速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-12": {
+      "verdict": "FALSO",
+      "key_it": "anche se lo spazio visibile risulta insufficiente",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: overtaking is exactly what must NOT be done when the visible road is insufficient to finish the manoeuvre safely.",
+        "ru": "Неверно: как раз при недостаточном видимом участке дороги обгон делать нельзя.",
+        "zh": "错误：可见路段不足以安全完成超车时，恰恰不得超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-tram-sorpassi-0": {
+      "verdict": "VERO",
+      "key_it": "senza rientrare a destra",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: on roads with at least two lanes per direction a second overtaking can follow without returning right, as long as no obstruction is created.",
+        "ru": "Верно: на дороге с минимум двумя полосами в каждую сторону допустим повторный обгон без возврата на правую, если не создаётся помех.",
+        "zh": "正确：每方向至少两条车道的道路上，不造成妨碍时可不回右侧连续超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-tram-sorpassi-1": {
+      "verdict": "VERO",
+      "key_it": "segnalato l'intenzione di voler svoltare a sinistra",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: if the driver you are about to overtake signals a left turn, the manoeuvre is carried out on the right.",
+        "ru": "Верно: если обгоняемый подал сигнал поворота налево, обгон выполняется справа.",
+        "zh": "正确：被超车辆打左转向灯时，应从右侧超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-tram-sorpassi-2": {
+      "verdict": "VERO",
+      "key_it": "accostare a sinistra",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: on a one-way street, if the driver ahead signals to pull over to the left, the overtaking is done on the right.",
+        "ru": "Верно: на односторонней улице, если впереди подаёт сигнал на обочину слева, обгон выполняется справа.",
+        "zh": "正确：单行线上前方车辆打左灯靠边时，从右侧超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-tram-sorpassi-3": {
+      "verdict": "VERO",
+      "key_it": "può effettuarsi su ambo i lati",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: a tram may be overtaken on either side if the street is one-way and the carriageway is wide enough.",
+        "ru": "Верно: трамвай можно обгонять с любой стороны, если улица односторонняя и ширина проезжей части позволяет.",
+        "zh": "正确：单行线且路面够宽时，电车可从任一侧超越。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-tram-sorpassi-4": {
+      "verdict": "VERO",
+      "key_it": "può effettuarsi a destra se esiste il salvagente",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: a stopped tram or trolleybus can be passed on the right when a paved safety strip (salvagente) exists.",
+        "ru": "Верно: остановившийся трамвай или троллейбус можно обогнать справа, если есть тротуар-отбойник (salvagente).",
+        "zh": "正确：电车或无轨电车停靠时，若有侧向安全道，可从右侧超越。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-tram-sorpassi-5": {
+      "verdict": "VERO",
+      "key_it": "non può effettuarsi a destra se manca il salvagente",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: without the safety strip a stopped tram or trolleybus must not be passed on the right — pedestrians may be there.",
+        "ru": "Верно: без тротуара-отбойника остановившийся трамвай или троллейбус справа обгонять нельзя — там могут быть пешеходы.",
+        "zh": "正确：无侧向安全道时，停靠的电车/无轨电车不得从右侧超越——可能有行人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-tram-sorpassi-6": {
+      "verdict": "FALSO",
+      "key_it": "la manovra di sorpasso può sempre effettuarsi a destra",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: 'always' is the trap — passing a stopped tram on the right is allowed only with the safety strip in place.",
+        "ru": "Неверно: «всегда» — ловушка: обгон справа у остановившегося трамвая допустим только при наличии тротуара-отбойника.",
+        "zh": "错误：“总是”是陷阱——电车停靠时从右侧超车仅在存在安全道时允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-tram-sorpassi-7": {
+      "verdict": "FALSO",
+      "key_it": "E' sempre vietato effettuare la manovra di sorpasso a destra",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: right-hand overtaking is not banned in every case — it is allowed in specific situations (left turn signalled, one-way with pull-over, tram with safety strip).",
+        "ru": "Неверно: обгон справа запрещён не всегда — он допустим в определённых ситуациях (поворот налево, односторонняя с съездом слева, трамвай с отбойником).",
+        "zh": "错误：右侧超车并非一律禁止——特定情形下允许（左转信号、单行线靠左停靠、电车带安全道等）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-tram-sorpassi-8": {
+      "verdict": "FALSO",
+      "key_it": "di norma, effettuarsi a destra sulle autostrade",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: even on the motorway overtaking is done on the left as a rule — the right lane is for normal driving, not for passing.",
+        "ru": "Неверно: даже на автодороге обгон по общему правилу выполняется слева — правая полоса для естественного движения, а не для обгона.",
+        "zh": "错误：即使在高速公路，超车通常也在左侧——右侧车道用于正常行驶而非超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-tram-sorpassi-9": {
+      "verdict": "FALSO",
+      "key_it": "a sinistra soltanto se il veicolo da sorpassare sta svoltando a destra",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: left-hand overtaking is the rule, not a special case — it is not restricted to vehicles turning right.",
+        "ru": "Неверно: обгон слева — это правило, а не исключение; он не ограничен случаем, когда впереди поворачивает направо.",
+        "zh": "错误：左侧超车是常规规则，而非仅限前方车辆右转时的特殊情形。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-tram-sorpassi-10": {
+      "verdict": "FALSO",
+      "key_it": "senza prima essersi riportati a destra",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: returning right before a second overtaking is not a universal rule — on multi-lane roads a second pass may follow if no obstruction is created.",
+        "ru": "Неверно: возврат на правую перед вторым обгоном — не общее правило: на многополосной дороге допустим повторный обгон, если нет помех.",
+        "zh": "错误：第二次超车前必须回到右侧并非普遍规则——多车道道路无妨碍时可连续超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-0": {
+      "verdict": "VERO",
+      "key_it": "in prossimità delle curve",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking is banned near curves on two-way, two-lane roads — visibility drops exactly where it matters.",
+        "ru": "Верно: на двухполосной дороге с двусторонним движением обгон запрещён у поворотов — видимость падает именно там, где она важна.",
+        "zh": "正确：双车道双向道路上弯道附近禁止超车——恰在那里能见度下降。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-1": {
+      "verdict": "VERO",
+      "key_it": "in prossimità dei dossi",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking is banned near raised bumps (speed humps) on two-way, two-lane roads — they hide the oncoming lane.",
+        "ru": "Верно: на двухполосной дороге с двусторонним движением обгон запрещён у лежачих полицейских — они закрывают встречную полосу.",
+        "zh": "正确：双车道双向道路上减速带附近禁止超车——其会遮挡对向车道视线。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-2": {
+      "verdict": "VERO",
+      "key_it": "in caso di scarsa visibilità",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: with poor visibility (rain, fog, darkness) overtaking is forbidden — the driver cannot see far enough ahead.",
+        "ru": "Верно: при плохой видимости (дождь, туман, темнота) обгон запрещён — водителю не видно достаточно далеко.",
+        "zh": "正确：能见度差（雨、雾、夜间）时禁止超车——驾驶员无法看清足够远的前方。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
