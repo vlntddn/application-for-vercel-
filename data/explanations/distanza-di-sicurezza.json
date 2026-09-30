@@ -1313,6 +1313,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-arresto-1": {
+      "verdict": "VERO",
+      "key_it": "spazio totale di arresto dipende",
+      "chapter": "ch9",
+      "why": {
+        "en": "Total stopping distance depends on speed: both the reaction space and the braking distance grow as you go faster, so a faster vehicle needs more space to stop safely.",
+        "ru": "Тормозной путь зависит от скорости: и путь реакции, и путь торможения растут вместе со скоростью, поэтому на быстром автомобиле нужно больше места для остановки.",
+        "zh": "停车总距离取决于速度：反应距离和制动距离都随车速增加而增大，因此车速越快，需要的停车空间越大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-arresto-2": {
+      "verdict": "VERO",
+      "key_it": "spazio totale di arresto dipende",
+      "chapter": "ch9",
+      "why": {
+        "en": "Worn tyres grip less, so braking is less effective and the distance needed to stop grows. Tyre condition is one of the factors behind the total stopping distance.",
+        "ru": "Изношенные шины хуже цепляются, торможение работает слабее, и дистанция для остановки растёт. Состояние шин — один из факторов тормозного пути.",
+        "zh": "磨损的轮胎抓地力下降，制动效果变差，停车所需距离变长。轮胎状况是停车距离的因素之一。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-arresto-3": {
+      "verdict": "VERO",
+      "key_it": "spazio totale di arresto dipende",
+      "chapter": "ch9",
+      "why": {
+        "en": "A poor road surface gives the tyres less grip, so braking takes longer and the total distance to stop increases. The condition of the asphalt matters.",
+        "ru": "Плохая поверхность дороги уменьшает сцепление шин, торможение длится дольше и тормозной путь растёт. Состояние асфальта имеет значение.",
+        "zh": "路面状况差时轮胎抓地力降低，制动时间变长，停车距离增加。沥青状况很重要。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-arresto-4": {
+      "verdict": "FALSO",
+      "key_it": "è indipendente dall'usura",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: tyre wear changes grip, so the total stopping distance is not independent of the tyres. The more worn the tyres, the longer the distance to stop.",
+        "ru": "Неверно: износ шин меняет сцепление, поэтому тормозной путь НЕ независим от шин. Чем сильнее износ, тем длиннее путь до остановки.",
+        "zh": "错误：轮胎磨损会改变抓地力，所以停车距离并非独立于轮胎。轮胎越磨损，停车距离越长。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-arresto-5": {
+      "verdict": "FALSO",
+      "key_it": "è indipendente dalle condizioni",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: the road surface changes grip, so the total stopping distance is not independent of the asphalt. On a bad surface braking takes longer.",
+        "ru": "Неверно: поверхность дороги меняет сцепление, поэтому тормозной путь НЕ независим от асфальта. На плохой поверхности торможение дольше.",
+        "zh": "错误：路面改变抓地力，所以停车距离并非独立于沥青。路面差时制动更久。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-arresto-6": {
+      "verdict": "FALSO",
+      "key_it": "è pari allo spazio percorso nel tempo di reazione",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: total stopping distance is the reaction space plus the braking distance, not only the distance covered while the driver is still reacting.",
+        "ru": "Неверно: тормозной путь — это путь реакции плюс путь торможения, а не только пройденный во время реакции водителя.",
+        "zh": "错误：停车总距离等于反应距离加制动距离，而不是仅反应时间内行驶的距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-arresto-7": {
+      "verdict": "FALSO",
+      "key_it": "è pari allo spazio percorso durante la frenata",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: total stopping distance is the reaction space plus the braking distance, not only the distance covered while the brakes are being applied.",
+        "ru": "Неверно: тормозной путь — это путь реакции плюс путь торможения, а не только путь под тормозом.",
+        "zh": "错误：停车总距离等于反应距离加制动距离，而不是仅制动中行驶的距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-arresto-8": {
+      "verdict": "FALSO",
+      "key_it": "non dipende dalla velocità",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: stopping distance is not a fixed number — it grows with speed, because both the reaction space and the braking distance increase.",
+        "ru": "Неверно: тормозной путь не фиксирован — он растёт со скоростью, потому что увеличиваются и путь реакции, и путь торможения.",
+        "zh": "错误：停车距离不是固定值——它随速度增长，因为反应距离和制动距离都在增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-aumento-spazio-arresto-0": {
+      "verdict": "VERO",
+      "key_it": "aumenta se aumenta la velocità",
+      "chapter": "ch9",
+      "why": {
+        "en": "Higher speed means more space covered while reacting and a longer braking distance, so the total distance to stop grows with speed.",
+        "ru": "Большая скорость — больше места на реакцию и длиннее путь торможения, поэтому тормозной путь растёт со скоростью.",
+        "zh": "速度越高，反应时行驶的距离越长，制动距离也越长，所以停车距离随速度增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-aumento-spazio-arresto-1": {
+      "verdict": "VERO",
+      "key_it": "aumenta se la strada è innevata",
+      "chapter": "ch9",
+      "why": {
+        "en": "Snow covers the road and the tyres grip less, so braking takes longer and the total stopping distance increases.",
+        "ru": "Снег на дороге уменьшает сцепление шин, торможение дольше, и тормозной путь растёт.",
+        "zh": "路面积雪降低轮胎抓地力，制动变长，停车距离增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-aumento-spazio-arresto-2": {
+      "verdict": "VERO",
+      "key_it": "aumenta se la strada è coperta di fango",
+      "chapter": "ch9",
+      "why": {
+        "en": "Mud on the road reduces grip, so the vehicle brakes less effectively and the total stopping distance increases.",
+        "ru": "Грязь на дороге снижает сцепление, автомобиль тормозит хуже, и тормозной путь растёт.",
+        "zh": "路面泥泞降低抓地力，制动效果变差，停车距离增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-aumento-spazio-arresto-3": {
+      "verdict": "VERO",
+      "key_it": "aumenta se i pneumatici sono usurati",
+      "chapter": "ch9",
+      "why": {
+        "en": "Worn tyres grip less, so the braking distance grows and the total distance to stop increases.",
+        "ru": "Изношенные шины хуже цепляются, путь торможения растёт, и тормозной путь увеличивается.",
+        "zh": "磨损轮胎抓地力差，制动距离变长，停车距离增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-aumento-spazio-arresto-4": {
+      "verdict": "FALSO",
+      "key_it": "aumenta se i pneumatici non sono usurati",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: new, well-gripping tyres are the opposite case — better grip means a shorter braking distance, not a longer one.",
+        "ru": "Неверно: новые шины — противоположный случай: лучшее сцепление даёт короче путь торможения, а не длиннее.",
+        "zh": "错误：新轮胎是相反的情况——抓地力好，制动距离更短而非更长。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-aumento-spazio-arresto-5": {
+      "verdict": "FALSO",
+      "key_it": "aumenta se diminuisce la velocità",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: when you slow down both the reaction space and the braking distance get shorter, so the total stopping distance decreases.",
+        "ru": "Неверно: при снижении скорости укорачиваются и путь реакции, и путь торможения, поэтому тормозной путь уменьшается.",
+        "zh": "错误：减速时反应距离和制动距离都变短，停车距离减小。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-aumento-spazio-arresto-6": {
+      "verdict": "FALSO",
+      "key_it": "aumenta se l'asfalto è ruvido",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wrong: a rough surface gives the tyres good grip, so braking is shorter, not longer — the total stopping distance does not grow.",
+        "ru": "Неверно: шершавая поверхность даёт шинам хорошее сцепление, торможение короче, а не длиннее — тормозной путь не растёт.",
+        "zh": "错误：粗糙路面让轮胎抓地力好，制动更短而非更长——停车距离不增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-influenza-sicurezza-0": {
+      "verdict": "VERO",
+      "key_it": "influisce la concentrazione",
+      "chapter": "ch9",
+      "why": {
+        "en": "Driver concentration matters: the more distracted you are, the longer your reaction time and the more distance you need to stop safely.",
+        "ru": "Концентрация водителя важна: чем больше вы отвлечены, тем дольше реакция и тем больше дистанции нужно для остановки.",
+        "zh": "司机注意力很重要：分心越多，反应越慢，需要的安全停车距离越大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-influenza-sicurezza-1": {
+      "verdict": "VERO",
+      "key_it": "influisce la velocità",
+      "chapter": "ch9",
+      "why": {
+        "en": "Speed matters for safe distance: the faster the vehicle, the more ground it covers while the driver reacts, so the distance must grow with speed.",
+        "ru": "Скорость влияет на безопасную дистанцию: чем быстрее автомобиль, тем больше он проезжает за время реакции, поэтому дистанция должна расти.",
+        "zh": "速度影响安全距离：车越快，反应时间内行驶的距离越长，所以安全距离必须随速度增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-influenza-sicurezza-2": {
+      "verdict": "VERO",
+      "key_it": "influisce il carico",
+      "chapter": "ch9",
+      "why": {
+        "en": "A heavy load makes the vehicle harder to stop and lengthens the braking distance, so the safe distance to keep grows with the cargo carried.",
+        "ru": "Тяжёлая нагрузка делает остановку труднее и удлиняет тормозной путь, поэтому безопасная дистанция растёт с грузом.",
+        "zh": "重载使车辆更难停下，制动距离变长，所以安全距离随货物增加。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-influenza-sicurezza-3": {
+      "verdict": "VERO",
+      "key_it": "l'aderenza e le condizioni dei pneumatici",
+      "chapter": "ch9",
+      "why": {
+        "en": "Grip and tyre condition decide how short braking can be: good grip means a shorter braking distance, poor grip a longer one — and the safe distance follows.",
+        "ru": "Сцепление и состояние шин определяют, насколько коротким будет торможение: хорошее сцепление — короче путь, плохое — длиннее, и безопасная дистанция следует за этим.",
+        "zh": "抓地力和轮胎状况决定制动能多短：抓地好制动短，抓地差制动长——安全距离随之变化。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-condizioni-influenza-sicurezza-4": {
+      "verdict": "VERO",
+      "key_it": "l'efficienza del freno di servizio",
+      "chapter": "ch9",
+      "why": {
+        "en": "Brake efficiency decides the braking distance: weak brakes stop the vehicle later, so the safe distance to keep behind it must be larger.",
+        "ru": "Эффективность тормозов определяет путь торможения: слабые тормоза останавливают автомобиль позже, поэтому безопасная дистанция должна быть больше.",
+        "zh": "制动效率决定制动距离：制动弱，停车更晚，所以安全距离必须更大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
