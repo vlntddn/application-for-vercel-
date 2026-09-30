@@ -1820,6 +1820,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-inversione-marcia-conducente-0": {
+      "verdict": "VERO",
+      "key_it": "deve dare la precedenza ai veicoli che sopraggiungono",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: to turn around on a two-way road you must give way to oncoming vehicles.",
+        "ru": "Верно: при развороте на двусторонней дороге уступают приближающимся машинам.",
+        "zh": "正确：在双向道路上掉头须让驶来的车辆先行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-inversione-marcia-conducente-1": {
+      "verdict": "VERO",
+      "key_it": "deve rinunciare a compiere la manovra, qualora vi sia traffico intenso e continuo",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if traffic is heavy and continuous you must abandon the U-turn.",
+        "ru": "Верно: при плотном и непрерывном потоке разворот придётся отложить.",
+        "zh": "正确：交通密集且连续时应放弃掉头。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-inversione-marcia-conducente-2": {
+      "verdict": "VERO",
+      "key_it": "deve rinunciare ad eseguire la manovra, se vi è scarsa visibilità",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: you must not U-turn when visibility is poor.",
+        "ru": "Верно: при плохой видимости разворот запрещён — манёвр отменяется.",
+        "zh": "正确：能见度差时不得掉头。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-inversione-marcia-conducente-3": {
+      "verdict": "VERO",
+      "key_it": "deve azionare l'indicatore di direzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the direction indicator must be used for the U-turn.",
+        "ru": "Верно: для разворота включают указатель поворота.",
+        "zh": "正确：掉头时须开启转向灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-inversione-marcia-conducente-4": {
+      "verdict": "VERO",
+      "key_it": "non deve creare pericolo o intralcio agli altri utenti della strada",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the U-turn must not create danger or obstruction for the other road users.",
+        "ru": "Верно: разворот не должен создавать опасность и помехи другим участникам.",
+        "zh": "正确：掉头不得给其他道路使用者带来危险或阻碍。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-inversione-marcia-conducente-5": {
+      "verdict": "FALSO",
+      "key_it": "deve azionare la segnalazione luminosa di pericolo",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the U-turn is signalled with the direction indicator, not the warning flashers.",
+        "ru": "Неверно: разворот объявляют указателем поворота, а не аварийной сигнализацией.",
+        "zh": "错误：掉头用转向灯示意，而不是双闪。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-inversione-marcia-conducente-6": {
+      "verdict": "FALSO",
+      "key_it": "può compiere la manovra anche in curva",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: a U-turn in a curve is not allowed even if you give way to all vehicles.",
+        "ru": "Неверно: разворот в повороте нельзя делать — даже при уступке всем.",
+        "zh": "错误：即使在弯道且让行所有车辆，也不得掉头。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-inversione-marcia-conducente-7": {
+      "verdict": "FALSO",
+      "key_it": "deve accertarsi se la linea di mezzeria è continua",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the condition for a U-turn is not the centre line type (continuous or broken).",
+        "ru": "Неверно: условием разворота не является тип осевой линии (сплошная или прерывистая).",
+        "zh": "错误：掉头的条件与中线是实线还是虚线无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-inversione-marcia-conducente-8": {
+      "verdict": "FALSO",
+      "key_it": "può compiere la manovra anche con scarsa visibilità",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: poor visibility makes the U-turn forbidden, even with a broken centre line.",
+        "ru": "Неверно: при плохой видимости разворот запрещён — даже если осевая прерывистая.",
+        "zh": "错误：能见度差时不得掉头——即使中线是虚线。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-inversione-marcia-conducente-9": {
+      "verdict": "FALSO",
+      "key_it": "può effettuarla solo sulle strade larghe",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the U-turn is not restricted to wide roads where it can be done in a single move.",
+        "ru": "Неверно: разворот разрешён не только на широких дорогах с одной операцией.",
+        "zh": "错误：掉头并非仅限于能一次完成的宽阔道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incroci-circolazione-rotatoria-0": {
+      "verdict": "VERO",
+      "key_it": "bisogna dare la precedenza ai veicoli provenienti da sinistra, solo se vi è il segnale DARE PRECEDENZA",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: at an intersection regulated by a roundabout you give way to vehicles from the left only where there is a give-way sign.",
+        "ru": "Верно: на перекрёстке с кольцом уступают слева только при наличии знака «Уступи дорогу».",
+        "zh": "正确：在有环岛信号管理的路口，只有在设有让行标志时才让左侧来车先行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-1": {
+      "verdict": "VERO",
+      "key_it": "deve essere regolato in modo da garantire una buona visione posteriore",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the central rear-view mirror must be adjusted for a good rear view.",
+        "ru": "Верно: центральное зеркало настраивают для хорошего обзора сзади.",
+        "zh": "正确：中央后视镜须调节到能良好观察后方。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-4": {
+      "verdict": "VERO",
+      "key_it": "deve essere posizionato in modo da rientrare nel campo visivo del conducente",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the central rear-view mirror must be positioned inside the driver's field of vision.",
+        "ru": "Верно: центральное зеркало должно находиться в поле зрения водителя.",
+        "zh": "正确：中央后视镜应位于驾驶员视野之内。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-12": {
+      "verdict": "FALSO",
+      "key_it": "La posizione antiriflesso dello specchio retrovisore centrale di un autoveicolo non deve essere utilizzata di notte",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the anti-glare position of the central rear-view mirror is exactly what you should use at night to avoid being dazzled by following headlights.",
+        "ru": "Неверно: антибликовое положение центрального зеркала как раз нужно включать ночью, чтобы не ослепляться фарами сзади.",
+        "zh": "错误：夜间恰恰应该使用中央后视镜的防眩光位置，以免被后方车灯眩目。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-0": {
+      "verdict": "VERO",
+      "key_it": "deve essere regolato in modo da scorgere, nel suo terzo di destra, la coda del veicolo",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the left side mirror must be adjusted so that the rear of your own vehicle is visible in its right third.",
+        "ru": "Верно: левое боковое зеркало настраивают так, чтобы в его правой трети была видна задняя часть своей машины.",
+        "zh": "正确：左侧后视镜应调节到其右三分之一能看到自己车尾。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-1": {
+      "verdict": "VERO",
+      "key_it": "deve essere regolato in modo da poter osservare, prevalentemente, la porzione di strada a fianco del veicolo",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the left side mirror should mainly show the stretch of road beside the vehicle.",
+        "ru": "Верно: левое боковое зеркало должно в основном показывать дорогу вдоль машины.",
+        "zh": "正确：左侧后视镜应主要显示车身侧旁的路面。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-3": {
+      "verdict": "VERO",
+      "key_it": "deve essere utilizzato prima di iniziare una manovra di cambio corsia verso sinistra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the left side mirror must be used before starting a lane change to the left.",
+        "ru": "Верно: перед перестроением влево смотрят в левое боковое зеркало.",
+        "zh": "正确：向左变道前应查看左侧后视镜。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-4": {
+      "verdict": "VERO",
+      "key_it": "deve essere utilizzato prima di iniziare una manovra di sorpasso",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the left side mirror must be used before starting an overtaking manoeuvre.",
+        "ru": "Верно: перед опережением смотрят в левое боковое зеркало.",
+        "zh": "正确：超车前应查看左侧后视镜。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-5": {
+      "verdict": "VERO",
+      "key_it": "deve essere utilizzato prima di iniziare una manovra di svolta a sinistra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the left side mirror must be used before starting a left turn.",
+        "ru": "Верно: перед поворотом влево смотрят в левое боковое зеркало.",
+        "zh": "正确：左转前应查看左侧后视镜。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-3": {
+      "verdict": "VERO",
+      "key_it": "deve essere regolato in modo da garantire la visione dell’intero lunotto posteriore",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the central rear-view mirror must be adjusted to show the entire rear window.",
+        "ru": "Верно: центральное зеркало должно показывать всё заднее стекло.",
+        "zh": "正确：中央后视镜应调节到能看到整个后窗。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
