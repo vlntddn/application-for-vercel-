@@ -520,6 +520,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-evitare-pericolo-1": {
+      "verdict": "VERO",
+      "key_it": "è necessario osservare non solo le norme sulla circolazione, ma anche le cautele dettate dal buonsenso",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: not to put others in danger you must follow not only the traffic rules but also the precautions dictated by common sense.",
+        "ru": "Верно: чтобы не создавать опасность, нужно соблюдать не только правила движения, но и предосторожности, которые продиктованы здравым смыслом.",
+        "zh": "正确：为避免给他人带来危险，不仅应遵守交通规则，还应遵循常识所要求的谨慎措施。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-evitare-pericolo-4": {
+      "verdict": "FALSO",
+      "key_it": "è necessario procedere sempre a velocità costante",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not always drive at a constant speed to avoid danger. You adapt your speed to traffic, the road and visibility — speed varies with conditions.",
+        "ru": "Неверно: чтобы не создавать опасность, не нужно всегда ехать с постоянной скоростью. Скорость подстраивается под движение, дорогу и видимость — она меняется вместе с условиями.",
+        "zh": "错误：为避免危险，并非始终需保持恒定速度。速度应随交通、道路和能见度条件调整。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-evitare-pericolo-5": {
+      "verdict": "FALSO",
+      "key_it": "è necessario dare, comunque, la precedenza a tutti i veicoli negli incroci",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not give way to every vehicle at every junction no matter what. Priority follows the rules and the signs: right holder first at uncontrolled crossroads, otherwise as the signals dictate.",
+        "ru": "Неверно: на каждом перекрёстке уступать всем без исключения нельзя. Приоритет определяется правилами и знаками: справа — первым на нерегулируемых, иначе — по сигналам.",
+        "zh": "错误：不能在任何路口都无条件让行所有车辆。优先权由规则和标志决定：无信号路口右侧先行，否则按指示信号。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-condizioni-traffico-intenso-0": {
+      "verdict": "VERO",
+      "key_it": "deve regolare la propria velocità uniformandola il più possibile a quella della corrente di traffico",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: in heavy traffic you should match your speed as closely as possible to the flow of the lane you are in.",
+        "ru": "Верно: в плотном потоке нужно согласовать свою скорость со скоростью потока в своей полосе насколько это возможно.",
+        "zh": "正确：在交通拥堵时，应使车速与所在车道的车流速度尽可能一致。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-condizioni-traffico-intenso-1": {
+      "verdict": "VERO",
+      "key_it": "deve mantenere sempre la distanza di sicurezza dal veicolo che lo precede",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: in heavy traffic you must always keep a safe distance from the vehicle ahead.",
+        "ru": "Верно: в плотном потоке нужно всегда держать безопасную дистанцию до впереди идущего автомобиля.",
+        "zh": "正确：在交通拥堵时必须始终保持与前车的安全距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-condizioni-traffico-intenso-2": {
+      "verdict": "VERO",
+      "key_it": "deve evitare di suonare il clacson per invitare i veicoli che lo precedono ad accelerare",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: in heavy traffic you must not honk to urge the vehicles ahead to speed up.",
+        "ru": "Верно: в плотном потоке нельзя сигналить, чтобы побудить впереди идущие автомобили ускориться.",
+        "zh": "正确：在交通拥堵时不得鸣笛催促前车加速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-condizioni-traffico-intenso-3": {
+      "verdict": "FALSO",
+      "key_it": "deve cambiare ripetutamente corsia di marcia in modo da impegnare sempre quella più libera",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: in heavy traffic you do not keep changing lanes to always be in the freest one. That weaving makes traffic worse and is dangerous; you stay in your lane.",
+        "ru": "Неверно: в плотном потоке нельзя постоянно менять полосу, чтобы всегда быть в самой свободной. Это перестроение ухудшает движение и опасно; держись своей полосы.",
+        "zh": "错误：在交通拥堵时不得频繁变道以始终处于最空闲车道。这种穿插行驶恶化交通且危险，应保持本车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-condizioni-traffico-intenso-4": {
+      "verdict": "FALSO",
+      "key_it": "deve occupare le corsie riservate alla marcia dei veicoli in servizio pubblico",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you may not take the lanes reserved for public service vehicles even if they are free. Reserved lanes are not for ordinary traffic.",
+        "ru": "Неверно: даже свободные полосы, зарезервированные для общественного транспорта, занимать нельзя. Резервные полосы не для обычного движения.",
+        "zh": "错误：即使公共车道空闲，普通车辆也不得占用。预留车道供公共服务车辆使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-condizioni-traffico-intenso-5": {
+      "verdict": "FALSO",
+      "key_it": "deve fare uso del lampeggio simultaneo di tutti gli indicatori di direzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not use the simultaneous flashing of all indicators as a normal driving habit in heavy traffic. That is the hazard warning, used only to signal an actual danger or obstacle.",
+        "ru": "Неверно: в плотном потоке нельзя постоянно мигать всеми указателями разом. Это аварийная сигнализация — она включается только для обозначения реальной опасности или помехи.",
+        "zh": "错误：在交通拥堵时不得常规性地同时闪烁所有转向灯。那是危险报警灯，仅在标示实际危险或障碍时使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-impegno-delle-corsie-2": {
+      "verdict": "VERO",
+      "key_it": "la sosta è consentita solo nelle apposite aree",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on major extra-urban roads you may park only in the specially designated areas, never on the carriageway itself.",
+        "ru": "Верно: на основных внегородских дорогах останавливаться можно только на специально отведённых площадках, никогда — на проезжей части.",
+        "zh": "正确：在主要城市外道路上，只能停在专用区域，绝不可停在车行道上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-cambio-corsia-0": {
+      "verdict": "VERO",
+      "key_it": "deve controllare che la corsia che vuole occupare sia libera davanti per un tratto sufficiente",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before changing lane you must check that the lane you want to enter is clear ahead for a sufficient distance.",
+        "ru": "Верно: перед сменой полосы нужно убедиться, что полоса, которую ты занимаешь, свободна впереди на достаточном отрезке.",
+        "zh": "正确：变道前必须确认要进入的车道前方有足够的空余距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-cambio-corsia-1": {
+      "verdict": "VERO",
+      "key_it": "deve controllare che la corsia che vuole occupare sia libera dietro per un tratto sufficiente",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before changing lane you must check that the lane you want to enter is clear behind for a sufficient distance, using your mirrors.",
+        "ru": "Верно: перед сменой полосы нужно по зеркалам убедиться, что полоса, которую ты занимаешь, свободна сзади на достаточном отрезке.",
+        "zh": "正确：变道前必须通过后视镜确认要进入的车道后方有足够的空余距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-cambio-corsia-2": {
+      "verdict": "VERO",
+      "key_it": "per effettuare un sorpasso, deve controllare che il veicolo che sta davanti non abbia segnalato l'inizio della stessa manovra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if you want to overtake by changing lane, check that the vehicle in front has not already signalled the start of the same manoeuvre.",
+        "ru": "Верно: если собираешься обогнать сменой полосы, убедись, что впереди идущий не включил указатель той же манёвра.",
+        "zh": "正确：若计划变道超车，须确认前方车辆未已打相同的转向信号。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-cambio-corsia-3": {
+      "verdict": "VERO",
+      "key_it": "deve segnalare la manovra in anticipo, tramite l'indicatore di direzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: changing lane must be signalled in advance with the direction indicator.",
+        "ru": "Верно: смену полосы нужно заранее объявить указателем поворота.",
+        "zh": "正确：变道必须提前用转向灯示意。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-cambio-corsia-4": {
+      "verdict": "VERO",
+      "key_it": "non deve creare intralcio o pericolo per chi percorre la corsia che vuole impegnare",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: you must not create an obstruction or danger for those driving in the lane you intend to enter.",
+        "ru": "Верно: нельзя создавать помеху или опасность для тех, кто едет в полосе, которую ты собираешься занять.",
+        "zh": "正确：变道时不得对所要进入车道的车辆造成阻碍或危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-cambio-corsia-5": {
+      "verdict": "FALSO",
+      "key_it": "non deve azionare l'indicatore di direzione se la strada è libera",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you must still use the direction indicator even if the road is free. The signal informs other road users; it is not optional when the way is clear.",
+        "ru": "Неверно: указатель включается даже если дорога свободна. Сигнал информирует других участников движения — он не опционален при чистой дороге.",
+        "zh": "错误：即使道路空闲也必须打转向灯。转向灯用于告知其他道路使用者，不能因路空而省略。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-carreggiata-doppio-senso-3": {
+      "verdict": "VERO",
+      "key_it": "per svoltare a sinistra bisogna dare la precedenza ai veicoli provenienti da destra, salvo diversa segnalazione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a two-way road, when turning left you give way to vehicles coming from the right, unless the signals say otherwise.",
+        "ru": "Верно: на двусторонней дороге при повороте налево уступают пришедшим справа, если сигналы не говорят иного.",
+        "zh": "正确：在双向道路上，左转时需让行右侧来车，另有指示除外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-carreggiata-doppio-senso-7": {
+      "verdict": "FALSO",
+      "key_it": "per svoltare a sinistra bisogna dare la precedenza ai veicoli che arrivano da sinistra",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: when turning left on a two-way road you do not give way to vehicles from the left. The rule is the opposite: you yield to traffic coming from the right, unless the signals say otherwise.",
+        "ru": "Неверно: при повороте налево на двусторонней дороге не уступают пришедшим слева. Правило обратное: уступают трафику справа, если сигналы не говорят иного.",
+        "zh": "错误：在双向道路左转时，不让行左侧来车。规则相反：让行右侧车流，另有指示除外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-7": {
+      "verdict": "VERO",
+      "key_it": "li deve tenere il più possibile vicino al margine destro della carreggiata",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if you drive animals on the road you must keep them as close as possible to the right edge of the carriageway.",
+        "ru": "Верно: ведя животных по дороге, нужно держать их как можно ближе к правому краю проезжей части.",
+        "zh": "正确：在道路上驱赶牲畜时，应尽量使其靠近车行道右缘。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-attenzione-cambio-corsia-0": {
+      "verdict": "VERO",
+      "key_it": "non si deve creare intralcio o pericolo a chi si trova sulla corsia da impegnare",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when changing lane you must not create an obstruction or danger to those already in the lane you want to enter.",
+        "ru": "Верно: при смене полосы нельзя создавать помеху или опасность тем, кто уже в полосе, которую ты занимаешь.",
+        "zh": "正确：变道时不得对已进入目标车道的车辆造成阻碍或危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
