@@ -1,0 +1,226 @@
+{
+  "category": "fermata-sosta-arresto",
+  "items": {
+    "fermata-sosta-arresto-disco-orario-parchimetro-0": {
+      "verdict": "VERO",
+      "key_it": "sia ben visibile",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: in a regulated zone with a parking meter you must display the ticket so that it is clearly visible — usually under the windscreen.",
+        "ru": "Верно: в регулируемой зоне с паркиметром купленный талон нужно разместить так, чтобы он был хорошо виден — обычно под лобовым стеклом.",
+        "zh": "正确：在有停车计时器的收费区，停车票必须放置清楚可见的位置（通常放在挡风玻璃下）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-disco-orario-parchimetro-1": {
+      "verdict": "VERO",
+      "key_it": "l'orario di arrivo",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: when parking with a time disc you must set and clearly show the time of arrival — not the time of departure.",
+        "ru": "Верно: при парковке с парковочным диском нужно установить и хорошо показать время прибытия — а не отъезда.",
+        "zh": "正确：使用停车圆盘时，必须设定并清晰展示到达时间，而不是离开时间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-disco-orario-parchimetro-2": {
+      "verdict": "VERO",
+      "key_it": "far salire o scendere un passeggero",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: stopping only to let a passenger in or out is not a \"sosta\", so in a metered zone the meter does not need to be used for that.",
+        "ru": "Верно: остановка только для посадки или высадки пассажира — это не «соста», поэтому паркиметр для неё использовать не нужно.",
+        "zh": "正确：仅为乘客上下车而停车不属于\"停车(sosta)\"，无需使用计时器。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-disco-orario-parchimetro-3": {
+      "verdict": "VERO",
+      "key_it": "persone diversamente abili",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: vehicles at the service of disabled persons are exempt from the time limit in limited-parking areas, by law.",
+        "ru": "Верно: транспортные средства на обслуживании людей с ограниченными возможностями по закону освобождены от лимита времени в зонах ограниченной парковки.",
+        "zh": "正确：为残障人士服务的车辆依法不受限时停车区时间限制。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-disco-orario-parchimetro-4": {
+      "verdict": "FALSO",
+      "key_it": "l'orario di fine della sosta",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: the disc must show the time of arrival; writing the time on a piece of paper is not a substitute for the disc.",
+        "ru": "Ложь: на диске указывается время прибытия; запись времени на листке бумаги диск не заменяет.",
+        "zh": "错误：圆盘上必须显示到达时间，写在纸片上不能替代停车圆盘。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-disco-orario-parchimetro-5": {
+      "verdict": "FALSO",
+      "key_it": "senza che il veicolo venga spostato",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: you cannot renew the disc time without moving the vehicle; the clock keeps running from the original arrival — to extend the stay you must move away and come back.",
+        "ru": "Ложь: обновить время на диске без перемещения автомобиля нельзя; счёт идёт от первоначального прибытия — чтобы продлить, нужно уехать и вернуться.",
+        "zh": "错误：不移动车辆不能刷新圆盘时间；计时从最初到达起算，想延长须驶离后再回来。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-disco-orario-parchimetro-6": {
+      "verdict": "FALSO",
+      "key_it": "se si effettua una breve sosta",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: any sosta in a metered zone requires the meter, however short; only a fermata (loading/unloading, passengers) is exempt.",
+        "ru": "Ложь: любая «соста» в зоне с паркиметром требует паркиметр, как бы коротка ни была; освобождаются только «ферматы» (погрузка, посадка-высадка).",
+        "zh": "错误：计时区的任何停车都必须使用计时器，多短都不行；只有\"临时停靠(fermata)\"（装卸、上下客）才豁免。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-disco-orario-parchimetro-7": {
+      "verdict": "FALSO",
+      "key_it": "senza indicare i minuti",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: on the time disc you must show the exact arrival time, minutes included — and on the disc, not on a piece of paper.",
+        "ru": "Ложь: на парковочном диске указывается точное время прибытия, с минутами — и именно на диске, а не на листке бумаги.",
+        "zh": "错误：停车圆盘必须显示精确的到达时间（含分钟），且写在圆盘上而不是纸片上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-conducente-autoveicolo-sosta-0": {
+      "verdict": "VERO",
+      "key_it": "prima di aprire la portiera",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: with the car parked on the right side of a street, before opening the door you must check for vehicles coming up behind — cyclists especially — to avoid a collision.",
+        "ru": "Верно: при парковке у правого края дороги перед открыванием двери нужно проверить приближающиеся сзади (особенно велосипедистов), чтобы избежать наезда.",
+        "zh": "正确：车停在道路右侧时，开门前必须查看后方来车（尤其是自行车），避免碰撞。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-conducente-autoveicolo-sosta-1": {
+      "verdict": "VERO",
+      "key_it": "non sopraggiungano veicoli",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: on a narrow road, before getting out you must check both directions for approaching vehicles — the door or your body may end up in their path.",
+        "ru": "Верно: на узкой дороге перед выходом из машины нужно проверить, не приближаются ли автомобили с обеих сторон — дверь или ваше тело могут оказаться у них на пути.",
+        "zh": "正确：在狭窄道路上下车前，必须查看两个方向是否有来车——车门或身体可能挡住来车路径。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-conducente-autoveicolo-sosta-2": {
+      "verdict": "VERO",
+      "key_it": "ricordi al passeggero",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parked on the left of a one-way street the door opens towards oncoming traffic, so the driver should warn the passenger to check before opening.",
+        "ru": "Верно: при парковке у левого края односторонней улицы дверь открывается навстречу движению, поэтому водитель должен предупредить пассажира проверить дорогу перед открыванием.",
+        "zh": "正确：在单行道左侧停车时车门朝来车方向开启，驾驶员应提醒乘客开门前先观察。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-conducente-autoveicolo-sosta-3": {
+      "verdict": "VERO",
+      "key_it": "fare attenzione ai pedoni in transito",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: parked on the right in a built-up area, the door opens towards the pavement — the driver should remind the passenger to watch for pedestrians.",
+        "ru": "Верно: при парковке у правого края в населённом пункте дверь открывается на тротуар — водитель должен напомнить пассажиру следить за пешеходами.",
+        "zh": "正确：在建成区右侧停车时车门朝人行道一侧，应提醒开门的乘客注意行人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-conducente-autoveicolo-sosta-4": {
+      "verdict": "FALSO",
+      "key_it": "se sosta per poco tempo",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: while the vehicle is parked (sosta) the engine must be switched off — the length of the stop does not matter.",
+        "ru": "Ложь: на стоянке («соста») двигатель нужно заглушить — продолжительность остановки значения не имеет.",
+        "zh": "错误：停车(sosta)时必须熄火，与停多久无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-conducente-autoveicolo-sosta-5": {
+      "verdict": "FALSO",
+      "key_it": "ma non di quelli di fronte",
+      "chapter": "ch13",
+      "why": {
+        "en": "False: on a narrow road you must check for approaching vehicles in both directions before getting out, not only from behind.",
+        "ru": "Ложь: на узкой дороге перед выходом нужно проверить приближающиеся автомобили в обоих направлениях, а не только сзади.",
+        "zh": "错误：在狭窄道路上下车前必须查看两个方向的来车，而不只是后方。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-0": {
+      "verdict": "VERO",
+      "key_it": "regolare il sedile e il poggiatesta",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: before driving it is advisable to adjust the seat and the headrest to your height — the headrest must protect the head in a rear-end collision.",
+        "ru": "Верно: перед поездкой следует отрегулировать сиденье и подголовник под свой рост — подголовник должен защищать голову при ударе сзади.",
+        "zh": "正确：开车前应调整座椅和头枕以适应身高——头枕要在追尾碰撞中保护头部。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-1": {
+      "verdict": "VERO",
+      "key_it": "regolare gli specchi retrovisori interni ed esterni",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: before driving you should check the internal and external mirrors so you can see all traffic around you.",
+        "ru": "Верно: перед поездкой следует отрегулировать внутреннее и внешние зеркала, чтобы видеть весь окружающий трафик.",
+        "zh": "正确：开车前应调整车内和车外后视镜，以便看清周围所有交通情况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "fermata-sosta-arresto-prima-iniziare-guidare-2": {
+      "verdict": "VERO",
+      "key_it": "regolare gli specchi secondo la propria statura",
+      "chapter": "ch13",
+      "why": {
+        "en": "True: the same applies to a motorcycle — mirrors adjusted to your body give the correct view of the road behind.",
+        "ru": "Верно: то же относится и к мотоциклу — зеркала, настроенные под ваш рост, дают правильный обзор дороги позади.",
+        "zh": "正确：摩托车同理——按自己身高调整后视镜才能获得正确的后方视野。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    }
+  }
+}
