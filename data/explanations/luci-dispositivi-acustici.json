@@ -1,0 +1,265 @@
+{
+  "category": "luci-dispositivi-acustici",
+  "items": {
+    "luci-dispositivi-acustici-luci-anabbaglianti-0": {
+      "verdict": "VERO",
+      "key_it": "è obbligatorio accendere i fari anabbaglianti anche di giorno",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: on motorways and extra-urban roads the dipped headlights must be on even by day, or the daytime running lights as an alternative.",
+        "ru": "Верно: на автомагистралях и загородных дорогах ближний свет фар включается даже днём — либо, как альтернатива, дневные ходовые огни.",
+        "zh": "正确：高速公路及城外道路上即使白天也必须开启近光灯，或改用日间行车灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-luci-anabbaglianti-1": {
+      "verdict": "VERO",
+      "key_it": "L’errata impostazione dell’orientamento dei proiettori",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: if the headlamps are aimed wrong, the driver sees less, or other road users get dazzled. The setting must be correct.",
+        "ru": "Верно: неверно направленные фары ухудшают видимость водителю или слепят других участников движения — настройка должна быть правильной.",
+        "zh": "正确：车灯照射方向不正确会减弱驾驶人自身视线，或使其他道路使用者眩目，角度必须校准。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-luci-anabbaglianti-6": {
+      "verdict": "FALSO",
+      "key_it": "è obbligatorio tenere accesi i proiettori abbaglianti durante le ore diurne",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: on extra-urban roads it is the dipped headlights that must be on by day, or the daytime running lights. The high beam by day is not required.",
+        "ru": "Неверно: днём на загородной дороге обязательны ближний свет или дневные ходовые огни, а не дальний — он включается в темноте без встречных.",
+        "zh": "错误：白天在城外道路上必须开的是近光灯或日间行车灯，而不是远光灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-luci-anabbaglianti-7": {
+      "verdict": "FALSO",
+      "key_it": "le luci di posizione è obbligatorio di notte durante la sosta",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: while stopped outside the roadway at night the dipped headlights must stay on. The position lights alone are not the rule here.",
+        "ru": "Неверно: при остановке вне проезжей части ночью остаются включенными ближние фары, а не только габариты — ближний свет обязателен.",
+        "zh": "错误：夜间停在路外时，必须保持近光灯开启，而非仅示宽灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-luci-anabbaglianti-8": {
+      "verdict": "FALSO",
+      "key_it": "lampade di qualsiasi colore",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: position lights must use the prescribed colour (white/amber). Lamps of any colour are not allowed.",
+        "ru": "Неверно: у габаритных огней цвет ламп регламентирован — не допускается «любой цвет», используются предписанные цвета.",
+        "zh": "错误：示宽灯须按规定颜色使用，不得任意配色。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-dispositivi-utilizzare-durante-marcia-0": {
+      "verdict": "VERO",
+      "key_it": "obbligatorio tenere accese le luci anabbaglianti da mezz'ora dopo il tramonto",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: in towns the dipped headlights are required from half an hour after sunset until half an hour before sunrise.",
+        "ru": "Верно: в населённых пунктах ближний свет обязателен с полчаса после заката до полчаса перед рассветом.",
+        "zh": "正确：在城镇内，自日落半小时后至日出半小时前须开启近光灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-dispositivi-utilizzare-durante-marcia-1": {
+      "verdict": "VERO",
+      "key_it": "in caso di scarsa visibilità per condizioni atmosferiche",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: in poor visibility from weather (snow, rain, fog) the position lights and the dipped headlights must stay on while driving.",
+        "ru": "Верно: при плохой видимости из-за погоды (снег, дождь, туман) при движении включаются габаритные огни и ближний свет.",
+        "zh": "正确：因雪、雨、雾等天气导致能见度低时，行驶中须开启示宽灯与近光灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-dispositivi-utilizzare-durante-marcia-3": {
+      "verdict": "VERO",
+      "key_it": "il veicolo in sosta al margine della carreggiata, può essere segnalato con le luci di sosta",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: at night a vehicle stopped at the edge of the roadway can be signalled with its stop lights (parking lights).",
+        "ru": "Верно: ночью автомобиль, остановившийся у края проезжей части, может быть обозначен огнями остановки.",
+        "zh": "正确：夜间停在行车道边缘的车辆，可用停车灯予以标示。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-dispositivi-utilizzare-durante-marcia-4": {
+      "verdict": "FALSO",
+      "key_it": "è obbligatorio tenere accese le luci abbaglianti, a partire dal tramonto",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: from sunset to sunrise it is the dipped headlights that are mandatory, not the high beam. The high beam has its own rules.",
+        "ru": "Неверно: от заката до рассвета обязателен ближний свет, а не дальний — у дальнего свои правила применения.",
+        "zh": "错误：日落至日出之间必须使用的是近光灯，而非远光灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-dispositivi-utilizzare-durante-marcia-5": {
+      "verdict": "FALSO",
+      "key_it": "in caso di sosta fuori dalla carreggiata, è obbligatorio tenere accese le luci anabbaglianti",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: when stopped outside the roadway at night the dipped headlights are switched off and the stop (parking) lights are used instead.",
+        "ru": "Неверно: при остановке вне проезжей части ночью ближний свет выключают и включают огни остановки.",
+        "zh": "错误：夜间停于行车道外时，应关闭近光灯，改用停车灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-dispositivi-utilizzare-durante-marcia-6": {
+      "verdict": "FALSO",
+      "key_it": "in un parcheggio autorizzato, è obbligatorio tenere accese per tutto il tempo le luci di sosta",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: in an authorized car park there is no duty to keep the stop lights on the whole time.",
+        "ru": "Неверно: на разрешённой парковке нет обязанности держать огни остановки включенными всё время.",
+        "zh": "错误：在合法停车场内，无需全程保持停车灯开启。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-obbligo-anabbaglianti-0": {
+      "verdict": "VERO",
+      "key_it": "obbligatorio accendere i proiettori anabbaglianti, anche di giorno, quando si transita in galleria",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: dipped headlights are required even by day when passing through a road tunnel.",
+        "ru": "Верно: при проезде через тоннель ближний свет обязателен даже днём.",
+        "zh": "正确：通过道路隧道时，即使白天也必须开启近光灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-obbligo-anabbaglianti-2": {
+      "verdict": "FALSO",
+      "key_it": "nelle gallerie stradali, solo se scarsamente illuminate",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: in road tunnels the dipped headlights are always required, not only when the tunnel is dimly lit.",
+        "ru": "Неверно: в тоннелях ближний свет обязателен всегда, а не только в плохо освещённых.",
+        "zh": "错误：在道路隧道中近光灯始终必开，并非仅在照明较差时。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-uso-luci-anabbaglianti-1": {
+      "verdict": "VERO",
+      "key_it": "Durante la marcia fuori dai centri abitati, è obbligatorio fare uso delle luci anabbaglianti, sia di giorno che di notte",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: outside towns the dipped headlights must be used both by day and by night while driving.",
+        "ru": "Верно: вне населённых пунктов ближний свет используется и днём, и ночью во время движения.",
+        "zh": "正确：在城镇外行驶时，昼夜均须使用近光灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-uso-luci-anabbaglianti-2": {
+      "verdict": "VERO",
+      "key_it": "l'uso delle luci anabbaglianti è obbligatorio anche se l'illuminazione pubblica è sufficiente",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: at night the dipped headlights are mandatory even when the street lighting is already sufficient.",
+        "ru": "Верно: ночью ближний свет обязателен даже при достаточном уличном освещении.",
+        "zh": "正确：夜间即使路灯照明充足，近光灯仍为必开。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-uso-luci-anabbaglianti-6": {
+      "verdict": "FALSO",
+      "key_it": "le luci di posizione è sempre consentito in alternativa a quelle anabbaglianti",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: position lights alone are not an allowed alternative to the dipped headlights on every trip. Where dipped are required, they must be used.",
+        "ru": "Неверно: одни габаритные огни не заменяют ближний свет всегда — там, где он обязателен, используют именно ближний.",
+        "zh": "错误：示宽灯并非在任何情况下都可替代近光灯，近光灯必开处须开近光灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-uso-luci-anabbaglianti-7": {
+      "verdict": "FALSO",
+      "key_it": "L'uso delle luci anabbaglianti è obbligatorio quando si sorpassa un'auto della polizia",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: overtaking a police car does not impose a dipped-headlight duty. The rule about the high beam applies to any overtaking, not the dipped.",
+        "ru": "Неверно: при обгоне полицейского автомобиля никакого отдельного обязательства по ближнему свету нет.",
+        "zh": "错误：超越警车时并无单独的开启近光灯义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-catadiottri-3": {
+      "verdict": "VERO",
+      "key_it": "I catadiottri vengono applicati anche sui rimorchi e sui carrelli-appendice",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: reflectors are fitted not only on vehicles but also on trailers and on appendage carts.",
+        "ru": "Верно: светоотражатели ставятся не только на автомобили, но и на прицепы и подвесные тележки.",
+        "zh": "正确：反光板不仅装于车辆，也装于拖车及后挂小车上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-targa-posteriore-veicolo-1": {
+      "verdict": "VERO",
+      "key_it": "La targa posteriore di un autoveicolo deve essere illuminata con una luce bianca",
+      "chapter": "ch15",
+      "why": {
+        "en": "True: the rear number plate of a car must be illuminated with a white light.",
+        "ru": "Верно: задний номерной знак автомобиля освещается белым светом.",
+        "zh": "正确：汽车后号牌须以白光照明。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "luci-dispositivi-acustici-targa-posteriore-veicolo-2": {
+      "verdict": "FALSO",
+      "key_it": "La luce della targa di un autoveicolo si deve accendere solo di notte",
+      "chapter": "ch15",
+      "why": {
+        "en": "False: the plate light is not a night-only device. It works with the other front and rear lights, including the position lights.",
+        "ru": "Неверно: подсветка номера не только на ночь — она включается вместе с остальными габаритными огнями, а не только ночью.",
+        "zh": "错误：号牌照明并非只在夜间才需开启，它随其他前后灯一同使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    }
+  }
+}
