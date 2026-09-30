@@ -4277,6 +4277,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-2": {
+      "verdict": "VERO",
+      "key_it": "devono essere regolati dopo che è stata regolata la posizione del sedile di guida",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: mirrors are adjusted relative to the driver's position, so the seat must be set first; if you change the seat, the mirrors must be rechecked.",
+        "ru": "Верно: зеркала настраиваются относительно позиции водителя, поэтому сначала регулируют сиденье; при смене посадки зеркала нужно проверить заново.",
+        "zh": "正确：后视镜是相对于驾驶员位置调节的，因此应先调好座椅；改变坐姿后需要重新检查后视镜。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-5": {
+      "verdict": "VERO",
+      "key_it": "ridurre al minimo la distorsione della distanza dei veicoli che seguono",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the central mirror is designed to give the most faithful image of the road behind, minimizing distortion of the distance of following vehicles.",
+        "ru": "Верно: центральное зеркало устроено так, чтобы давать наиболее точную картину дороги позади, по возможности минимизируя искажение дистанции до следующих машин.",
+        "zh": "正确：中央后视镜的设计尽量减小对后方车辆距离的失真，给出更接近真实的后方道路图像。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-6": {
+      "verdict": "VERO",
+      "key_it": "per controllare, prima di svoltare, che non sopraggiungano veicoli da dietro",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before turning, the driver must check the mirrors to make sure no vehicle is approaching from behind, and turn only when it is safe.",
+        "ru": "Верно: перед поворотом водитель обязан проверить по зеркалам, не приближаются ли сзади машины, и поворачивать только когда это безопасно.",
+        "zh": "正确：转弯前驾驶员必须通过后视镜确认后方没有来车，确认安全后再转弯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-7": {
+      "verdict": "VERO",
+      "key_it": "ha una posizione antiriflesso da utilizzare nelle ore notturne",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the central mirror has an anti-glare night setting that reduces the dazzling reflection of the lights of vehicles behind during the night.",
+        "ru": "Верно: у центрального зеркала есть ночное антибликовое положение, ослабляющее ослепляющее отражение света фар следующих сзади машин.",
+        "zh": "正确：中央后视镜有夜间的防眩目位置，能减弱后方车辆灯光造成的刺眼反射。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-8": {
+      "verdict": "VERO",
+      "key_it": "serve a ridurre il fastidio agli occhi causato dai proiettori accesi dei veicoli che seguono",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the anti-glare position weakens the reflection so the bright headlights of following vehicles no longer strain the driver's eyes at night.",
+        "ru": "Верно: антибликовое положение ослабляет отражение, чтобы яркий свет фар следующих машин не утомлял и не слепил глаза водителя ночью.",
+        "zh": "正确：防眩目位置会减弱反射，使夜间后方车辆的明亮前照灯不再刺眼、减轻驾驶员眼睛的疲劳。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-9": {
+      "verdict": "VERO",
+      "key_it": "prima di iniziare una manovra di parcheggio in retromarcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before starting to reverse into a parking space, the driver must check the road behind through the mirrors to avoid hitting obstacles or vehicles.",
+        "ru": "Верно: перед началом парковки задним ходом водитель обязан осмотреть по зеркалам дорогу позади, чтобы не задеть препятствия или машины.",
+        "zh": "正确：开始倒车入库前，驾驶员必须通过后视镜观察后方道路，避免碰撞障碍物或车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-10": {
+      "verdict": "VERO",
+      "key_it": "prima di iniziare una manovra di sorpasso",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before starting to overtake, the driver checks the mirrors to see whether there are vehicles behind that would make the manoeuvre unsafe.",
+        "ru": "Верно: перед началом обгона водитель осматривает зеркала, чтобы увидеть, нет ли позади машин, делающих манёвр небезопасным.",
+        "zh": "正确：开始超车前，驾驶员要观察后视镜，确认后方车辆不会使该操作变得不安全。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-11": {
+      "verdict": "VERO",
+      "key_it": "permette di completare in sicurezza la manovra di sorpasso",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: after overtaking, the driver looks into the mirrors: the overtaken vehicle must be visible in the central mirror before returning to his own lane.",
+        "ru": "Верно: после обгона водитель смотрит в зеркала: обгоняемая машина должна быть видна в центральном зеркале перед возвратом на свою полосу.",
+        "zh": "正确：完成超越后，驾驶员通过后视镜确认被超车辆出现在中央后视镜中，再返回原车道，从而安全完成超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-14": {
+      "verdict": "FALSO",
+      "key_it": "ogni volta che a un incrocio si intende proseguire diritto",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: a check of the road behind through the mirrors is needed for turning or lane changes, but not every time you intend to go straight through a crossing.",
+        "ru": "Неверно: осмотр дороги позади по зеркалам нужен при повороте или смене полосы, но не каждый раз, когда вы на перекрёстке намерены ехать прямо.",
+        "zh": "错误：只有转弯或变道时才需要观察后方道路，并非每次打算直行通过路口都必须查看后视镜。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-15": {
+      "verdict": "FALSO",
+      "key_it": "si accende con l’accensione delle luci di posizione",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the illumination of the central mirror is not switched on together with the position lights; it works on its own switching logic of the vehicle.",
+        "ru": "Неверно: подсветка центрального зеркала не включается вместе с габаритными огнями — она работает по собственной логике освещения автомобиля.",
+        "zh": "错误：中央后视镜的照明并不随位置灯一起点亮，它按车辆自身的照明逻辑工作。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-16": {
+      "verdict": "FALSO",
+      "key_it": "sono proporzionali alla cilindrata del veicolo",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: mirror size depends on the dimensions of the vehicle and the required field of view, not on the engine displacement, which has nothing to do with vision.",
+        "ru": "Неверно: размер зеркал зависит от габаритов автомобиля и нужного обзора, а не от рабочего объёма двигателя — к обзору он отношения не имеет.",
+        "zh": "错误：后视镜尺寸取决于车身尺寸和所需视野，与发动机排量无关，排量跟视野没有任何关系。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-18": {
+      "verdict": "FALSO",
+      "key_it": "non è necessario utilizzare gli specchi retrovisori se il veicolo è dotato di sensori di parcheggio",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: parking sensors only complement the mirrors; they give no image of the surroundings, so the mirrors must be used during any reversing manoeuvre.",
+        "ru": "Неверно: парктроники лишь дополняют зеркала, они не дают картины окружения, поэтому при любом движении задним ходом зеркала обязательны.",
+        "zh": "错误：倒车雷达只能作为后视镜的补充，它不能呈现周围环境，因此任何倒车操作都必须使用后视镜。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-19": {
+      "verdict": "FALSO",
+      "key_it": "consentono al conducente di vedere",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: taken together the mirrors cannot show the whole area behind and around the vehicle: blind spots always remain and must be checked by looking directly.",
+        "ru": "Неверно: вместе зеркала не покрывают всю зону позади и вокруг автомобиля: слепые зоны всегда остаются, и их проверяют прямым взглядом.",
+        "zh": "错误：所有后视镜合在一起也无法覆盖车辆后方和侧面的全部区域：盲点始终存在，必须直接转头观察。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-specchi-retrovisori-20": {
+      "verdict": "FALSO",
+      "key_it": "possono non essere dotati di specchi retrovisori se li rendono troppo ingombranti in larghezza",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: rear-view mirrors are mandatory equipment; a vehicle may not drive without them even if they make it wider — width limits are compensated differently.",
+        "ru": "Неверно: зеркала заднего вида — обязательное оборудование; управлять без них запрещено даже если они увеличивают ширину — пределы ширины компенсируются иначе.",
+        "zh": "错误：后视镜是强制装备；即使后视镜使车身过宽，车辆也不得没有它们上路，宽度限制通过其他方式处理。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-2": {
+      "verdict": "VERO",
+      "key_it": "falsa la percezione della distanza e della velocità dei veicoli sopraggiungenti",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the left mirror is angled outwards, so it distorts the perception of distance and speed: approaching vehicles look farther and slower than they really are.",
+        "ru": "Верно: левое зеркало наклонено наружу, поэтому искажает восприятие дистанции и скорости: приближающиеся машины кажутся дальше и медленнее, чем есть на самом деле.",
+        "zh": "正确：左侧后视镜向外倾斜，会扭曲对距离和速度的判断：来车看起来比实际更远、更慢。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-6": {
+      "verdict": "VERO",
+      "key_it": "ha un angolo cieco molto ampio",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: because the left mirror is set at an outward angle to cover the lane beside the vehicle, it leaves a wide blind area next to the driver.",
+        "ru": "Верно: левое зеркало повернуто наружу, чтобы видеть полосу рядом с автомобилем, поэтому рядом с водителем остаётся широкая слепая зона.",
+        "zh": "正确：左侧后视镜向外偏转以观察旁边的车道，因此驾驶员身旁存在较宽的盲区。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-8": {
+      "verdict": "VERO",
+      "key_it": "verificare con un controllo visivo diretto che la strada sia sufficientemente libera",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before joining traffic the driver checks the left mirror and also looks directly over his shoulder, because mirrors alone cannot rule out a vehicle in the blind spot.",
+        "ru": "Верно: перед выездом в поток водитель смотрит в левое зеркало и дополнительно оглядывается, ведь только зеркало не исключает машину в слепой зоне.",
+        "zh": "正确：驶入车流前，驾驶员既要看左侧后视镜，也要直接回头观察，因为单靠后视镜无法排除盲点里的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-11": {
+      "verdict": "FALSO",
+      "key_it": "Nei centri abitati non è necessario utilizzare gli specchi retrovisori",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the mirrors must be used everywhere, including in built-up areas: urban traffic is more unpredictable, so a check of the road behind is still essential.",
+        "ru": "Неверно: зеркала используются везде, в том числе в населённых пунктах: городское движение непредсказуемее, поэтому контроль дороги позади тем более важен.",
+        "zh": "错误：后视镜在任何地方都必须使用，包括居民区：城市交通更难预测，观察后方道路反而更加重要。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-13": {
+      "verdict": "FALSO",
+      "key_it": "sono fissi e senza possibilità di regolazione a causa delle vibrazioni",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: motorcycle rear-view mirrors are adjustable; the claim that vibrations make them fixed is wrong — the driver must adjust them to his position.",
+        "ru": "Неверно: зеркала у двухколёсных регулируются; утверждение, что из-за вибраций они неподвижны, ложно — водитель сам выставляет их под свою посадку.",
+        "zh": "错误：二轮车的后视镜是可以调节的；所谓因振动而无法调节的说法不成立——驾驶员应根据自己的坐姿自行调节。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-Posizione-degli-specchi-retrovisori-14": {
+      "verdict": "FALSO",
+      "key_it": "va effettuata, di media, ogni mille chilometri circa",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: mirrors are not adjusted by distance travelled; they are set when the driver adjusts his seat or finds the position uncomfortable or distorted.",
+        "ru": "Неверно: зеркала не регулируют по пробегу; их выставляют при настройке сиденья или когда положение стало неудобным и картинка искажается.",
+        "zh": "错误：后视镜不是按行驶里程来调节的；而是在调整座椅或发现位置不合适、影像失真时才进行调节。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
