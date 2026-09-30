@@ -975,6 +975,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-attraversamento-pedonale-0": {
+      "verdict": "VERO",
+      "key_it": "segnalato con strisce bianche parallele",
+      "chapter": "ch1",
+      "why": {
+        "en": "A crosswalk (zebra) is marked by parallel white stripes laid across the road at the pedestrian crossing.",
+        "ru": "Пешеходный переход (зебра) обозначается параллельными белыми полосами, нанесёнными поперёк проезжей части.",
+        "zh": "人行横道（斑马线）用横跨路面的平行白色条纹标出。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-4": {
+      "verdict": "VERO",
+      "key_it": "possono circolare solo alcune categorie di veicoli a motore",
+      "chapter": "ch1",
+      "why": {
+        "en": "On main rural roads only certain vehicle categories may circulate; motorcycles, caravans and some trucks are limited or excluded.",
+        "ru": "По основным загородным дорогам могут двигаться лишь отдельные категории транспортных средств; мотоциклы, караваны и некоторые грузовики ограничены или исключены.",
+        "zh": "在主要乡村公路上只有部分机动车类别可以通行；摩托车、挂车及部分货车受到限制或被排除。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-1": {
+      "verdict": "VERO",
+      "key_it": "è delimitata da strisce bianche continue",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is a refuge in the carriageway bounded by continuous (solid) white lines, which must not be crossed or stopped on.",
+        "ru": "Трафик-остров — защитная зона на проезжей части, ограниченная сплошными белыми линиями, пересечение и остановка на которых запрещены.",
+        "zh": "交通岛是车行道中的安全区，由连续的白色实线划定，禁止跨越或停驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-2": {
+      "verdict": "VERO",
+      "key_it": "può essere a raso o in rilievo (rialzata)",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island can be flush with the road surface or raised (hump-like); in both cases vehicles may not drive over it.",
+        "ru": "Трафик-остров может быть вровень с дорожным полотном или возвышаться (в горке); в обоих случаях по нему нельзя ехать.",
+        "zh": "交通岛可与路面齐平，也可抬高（如驼峰式）；两种情况下车辆均不得从其上驶过。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-11": {
+      "verdict": "FALSO",
+      "key_it": "può essere percorsa solo dai taxi e dagli autobus urbani",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: a traffic island is not for any vehicle — crossing or driving over it is forbidden for everyone, taxis and buses included.",
+        "ru": "Неверно: трафик-остров не предназначен ни для каких автомобилей — пересекать или переезжать его запрещено всем, включая такси и автобусы.",
+        "zh": "错误：交通岛不对任何车辆开放——禁止任何车辆（含出租车和公交车）跨越或驶过。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-intersezione-raso-1": {
+      "verdict": "VERO",
+      "key_it": "può essere regolata da semaforo",
+      "chapter": "ch1",
+      "why": {
+        "en": "An at-grade intersection is where two roads cross at the same level; it may be controlled by traffic lights.",
+        "ru": "Пересечение в одной плоскости — место, где две дороги пересекаются на одной высоте; им может управлять светофор.",
+        "zh": "平面交叉口是两条道路在同一高度相交之处；可由交通信号灯控制。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-zona-traffico-limitato-0": {
+      "verdict": "VERO",
+      "key_it": "può essere limitata la circolazione dei veicoli solo in alcune ore",
+      "chapter": "ch1",
+      "why": {
+        "en": "A ZTL (limited-traffic zone) may restrict vehicle circulation during set hours — the local authority defines those hours.",
+        "ru": "В зоне ограниченного движения (ZTL) может быть ограничено движение транспорта в определённые часы — часы устанавливает местный орган.",
+        "zh": "在限制交通区（ZTL）中，可在特定时段限制车辆通行——时段由地方当局设定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-zona-traffico-limitato-1": {
+      "verdict": "VERO",
+      "key_it": "può essere limitata la circolazione solo di particolari categorie di veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "In a ZTL the restriction may target only particular vehicle categories rather than all traffic.",
+        "ru": "В ZTL ограничение может касаться только отдельных категорий транспортных средств, а не всего трафика.",
+        "zh": "在 ZTL 内，限制可仅针对某些特定类别的车辆，而非全部交通。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-zona-traffico-limitato-2": {
+      "verdict": "VERO",
+      "key_it": "possono circolare solo i veicoli autorizzati",
+      "chapter": "ch1",
+      "why": {
+        "en": "In a ZTL only authorised vehicles (residents, services, etc.) are allowed to circulate.",
+        "ru": "В ZTL могут двигаться только разрешённые транспортные средства (жители, службы и т.п.).",
+        "zh": "在 ZTL 内只有获授权的车辆（居民、公共服务等）可以通行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-zona-traffico-limitato-3": {
+      "verdict": "VERO",
+      "key_it": "può essere limitata la circolazione solo a particolari categorie di utenti",
+      "chapter": "ch1",
+      "why": {
+        "en": "In a ZTL the restriction may apply to specific user categories, not to every road user.",
+        "ru": "В ZTL ограничение может распространяться на отдельные категории участников движения, а не на всех.",
+        "zh": "在 ZTL 内，限制可仅适用于特定类别的道路使用者，而非所有人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-zona-traffico-limitato-6": {
+      "verdict": "FALSO",
+      "key_it": "è consentito solo il transito di ciclomotori e biciclette",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: a ZTL is not a bike lane — it is an area where only authorised vehicles may circulate, not a zone for mopeds and bicycles.",
+        "ru": "Неверно: ZTL — не велодорожка, а зона, в которой могут двигаться только разрешённые транспортные средства, а не территория для мопедов и велосипедов.",
+        "zh": "错误：ZTL 并非自行车道，而是只有授权车辆可通行的区域，不是供机动脚踏车与自行车通行的地方。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-zona-traffico-limitato-7": {
+      "verdict": "FALSO",
+      "key_it": "è un'area sempre vietata al transito dei veicoli a motore",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: a ZTL is not permanently closed to motor vehicles — entry is allowed for authorised vehicles (and during allowed hours).",
+        "ru": "Неверно: ZTL не закрыта для автомобилей постоянно — въезд разрешён разрешённым транспортным средствам (и в разрешённые часы).",
+        "zh": "错误：ZTL 并非永久禁止机动车通行——授权车辆在（许可时段）可进入。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-passaggio-livello-4": {
+      "verdict": "VERO",
+      "key_it": "si può trovare la croce di S. Andrea",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing may be marked by the St. Andrew cross (two diagonal bars forming a saltire).",
+        "ru": "На железнодорожном переезде может стоять знак «крест св. Андрея» — две перекрещенные диагональные планки.",
+        "zh": "铁路平交道口可设有「圣安德烈十字」标志（两条交叉的对角横条）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-passaggio-livello-5": {
+      "verdict": "VERO",
+      "key_it": "si può trovare un dispositivo di segnalazione acustica",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing can be equipped with an acoustic signal (buzzer/horn) that warns of the approaching train.",
+        "ru": "На переезде может быть установлено звуковое сигнальное устройство, предупреждающее о приближении поезда.",
+        "zh": "平交道口可设有声学信号装置（喇叭/蜂鸣器），用于警告火车接近。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-strada-definizione-0": {
+      "verdict": "VERO",
+      "key_it": "La strada può essere suddivisa in carreggiate",
+      "chapter": "ch1",
+      "why": {
+        "en": "A road can be divided into carriageways (one per direction); that is exactly what a two-carriageway (dual) road is.",
+        "ru": "Дорогу можно разделить на проезжие части (каждую — под одно направление); это как раз то, что такое двухпутная дорога с разделением.",
+        "zh": "道路可划分为多个行车道面（各朝一个方向）；双幅道路正是如此构成。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-strada-definizione-1": {
+      "verdict": "VERO",
+      "key_it": "La strada può comprendere le piste ciclabili",
+      "chapter": "ch1",
+      "why": {
+        "en": "A road may include cycle tracks as part of its structure.",
+        "ru": "Дорога может включать велосипедные дорожки как часть своей структуры.",
+        "zh": "道路可包含自行车道，作为其结构的一部分。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-strada-definizione-2": {
+      "verdict": "VERO",
+      "key_it": "La strada può essere a senso unico di circolazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "A road can be one-way (single direction of traffic).",
+        "ru": "Дорога может быть односторонней (однонаправленной).",
+        "zh": "道路可以是单向通行的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-strada-definizione-3": {
+      "verdict": "VERO",
+      "key_it": "La strada può essere a doppio senso di circolazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "A road can be two-way (traffic flows in both directions).",
+        "ru": "Дорога может быть двусторонней (движение в обоих направлениях).",
+        "zh": "道路可以是双向通行的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-strada-definizione-9": {
+      "verdict": "FALSO",
+      "key_it": "La strada è qualsiasi area asfaltata, limitata lateralmente dagli attraversamenti pedonali",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: a road is the public area open to traffic, delimited by its edges (banchine, etc.) — not merely any asphalted patch bounded by crosswalks.",
+        "ru": "Неверно: дорога — это общественная территория, открытая движению и ограниченная своими краями (обочинами и т.п.), а не просто любой асфальтированный участок, ограниченный переходами.",
+        "zh": "错误：道路是面向公众开放、由其两侧（如路肩）界定的通行区域，而不仅仅是以人行横道为界、铺了沥青的任何一块地面。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-corsia-12": {
+      "verdict": "FALSO",
+      "key_it": "La corsia è destinata solo al transito dei pedoni",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: a lane (corsia) is for vehicle movement — the sidewalk (marciapiede) is for pedestrians; they are not the same.",
+        "ru": "Неверно: полоса (corsia) предназначена для движения автомобилей — для пешеходов есть тротуар (marciapiede); это не одно и то же.",
+        "zh": "错误：行车道（corsia）供车辆行驶——行人走的是人行道（marciapiede），二者并不相同。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
