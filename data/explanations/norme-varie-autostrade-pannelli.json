@@ -1040,6 +1040,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-sporgenza-carico-0": {
+      "verdict": "VERO",
+      "key_it": "il limite di sagoma stabilito per ogni tipo di veicolo",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a load must not exceed the dimensional envelope (sagoma) set for each vehicle type — every vehicle class has its own approved overall dimensions.",
+        "ru": "Верно: груз не должен выходить за установленный габарит (сильуэт) своего типа машины — у каждого класса машины свои утверждённые внешние размеры.",
+        "zh": "正确：货物不得超过为该车型规定的尺寸轮廓（外廓）——每个车辆类别都有自己经批准的整体尺寸。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-sporgenza-carico-1": {
+      "verdict": "VERO",
+      "key_it": "il carico non può sporgere longitudinalmente dalla parte anteriore",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: on motor vehicles a load may never stick out ahead — the front overhang is forbidden, because the driver cannot see it and it hides the road.",
+        "ru": "Верно: на автомобилях груз нельзя выпускать вперёд — передний вынос запрещён, потому что водитель его не видит, а он ещё и закрывает дорогу.",
+        "zh": "正确：在机动车辆上，货物绝不能向前伸出——前部外伸是被禁止的，因为驾驶员看不到它，而且它会遮挡前方道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-sporgenza-carico-2": {
+      "verdict": "VERO",
+      "key_it": "sporgere longitudinalmente dalla parte posteriore, se costituito da cose indivisibili, fino ai 3/10 della lunghezza",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: behind the vehicle a load made of indivisible items may stick out, up to 3/10 of the vehicle's length — this is the only longitudinal overhang the rules allow, and only from the back.",
+        "ru": "Верно: сзади груз из неделимых предметов может выступать, но не более 3/10 длины автомобиля; это единственный допустимый продольный вынос — только сзади.",
+        "zh": "正确：在车辆后部，由不可分割物品组成的货物可以伸出，但不得超过车辆长度的3/10——这是规则允许的唯一纵向外伸，而且只能朝后。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-sporgenza-carico-4": {
+      "verdict": "VERO",
+      "key_it": "E' vietato trasportare o trainare cose che strisciano sul terreno, anche se in parte sostenute da ruote",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: dragging objects along the ground is banned, even when they are partly on wheels — 'anche se sostenute da ruote' is the trap: wheels do not legalize a trailing load.",
+        "ru": "Верно: волочение предметов по земле запрещено даже тогда, когда они частично на колёсах; «хотя бы частично на колёсах» — подвох: колёса не легализуют волочимый груз.",
+        "zh": "正确：拖拽物品贴地行驶是被禁止的，即使物品部分装在轮子上——“即使部分由轮子支撑”是陷阱：轮子并不能让拖行货物合法化。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-sporgenza-carico-5": {
+      "verdict": "VERO",
+      "key_it": "il conducente deve adottare tutte le cautele idonee ad evitare pericolo agli altri utenti",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: if a load sticks out beyond the vehicle’s shape, the driver must take every fitting precaution to keep it from endangering other road users — the duty follows the risk, not the vehicle type.",
+        "ru": "Верно: если груз выступает за силуэт машины, водитель обязан принять все подходящие меры, чтобы не создавать опасности другим участникам; обязанность следует за риском, а не за типом машины.",
+        "zh": "正确：如果货物超出车辆外廓，驾驶员必须采取一切适当措施，避免给其他道路使用者带来危险——义务随风险而来，而不是随车辆类型而来。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-sporgenza-carico-7": {
+      "verdict": "FALSO",
+      "key_it": "Il carico può sporgere lateralmente, se costituito da cose indivisibili, fino ai 3/10 della larghezza",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: the 3/10 figure belongs to the longitudinal (rear) overhang — for the lateral direction the rule does not allow '3/10 of the width'; the number has been moved to the wrong axis.",
+        "ru": "Ложно: 3/10 — это доля для продольного (заднего) выноса; для бокового направления «3/10 ширины» правило не допускает; цифра перенесена на другую ось.",
+        "zh": "错误：3/10这个比例属于纵向（后部）外伸——对于横向，规则并不允许“宽度的3/10”；数字被挪到了错误的轴上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-regole-traino-veicoli-0": {
+      "verdict": "VERO",
+      "key_it": "trainare o essere trainato da più di un veicolo",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: one vehicle may neither tow nor be towed by more than one vehicle — the only exception is exceptional transport, which may require a push-back vehicle. 'Più di uno' is the key: two tuggers at once is a ban.",
+        "ru": "Верно: одна машина не может буксировать или быть буксируемой более чем одной машиной; единственное исключение — внегабаритная перевозка, где может потребоваться вспомогательный автомобиль. Ключ — «более чем одной»: два буксира сразу — запрещено.",
+        "zh": "正确：一辆车既不能同时拖带多辆车，也不能同时被多辆车拖带——唯一例外是特殊运输，可能需要辅助车辆。关键是“多于一辆”：同时两台牵引车是禁止的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-regole-traino-veicoli-1": {
+      "verdict": "VERO",
+      "key_it": "Un autoveicolo può trainare un veicolo che non sia un rimorchio se questo non può più circolare per avaria o per mancanza di organi essenziali",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a motor vehicle may tow a non-trailer vehicle only when that vehicle can no longer move because of a breakdown or missing essential parts — the ground must be a real inability to drive.",
+        "ru": "Верно: автомобиль может буксировать не-прицепную машину только если та не может ехать из-за поломки или отсутствия важнейших узлов; основание — реальная неспособность ехать.",
+        "zh": "正确：机动车可以拖带非拖车车辆，但仅当该车辆因故障或缺少关键部件而无法行驶时——理由必须是确实无法行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-regole-traino-veicoli-2": {
+      "verdict": "VERO",
+      "key_it": "deve avvenire attraverso un solido collegamento, come fune, catena, cavo, barra rigida, purché idoneamente segnalati",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: emergency towing is done through a solid connection — rope, chain, cable, rigid bar — provided the arrangement is properly signalled. 'Purché idoneamente segnalati' is the second half of the rule and must not be dropped.",
+        "ru": "Верно: аварийный буксир — через прочное сцепление: трос, цепь, трос, жёсткая тяга; при этом связка должна быть должным образом обозначена. «При условии надлежащего обозначения» — вторая половина правила, её нельзя опустить.",
+        "zh": "正确：紧急拖带须通过牢固的连接装置——绳索、链条、钢缆、刚性横杆——前提是整套装置经过适当标示。“须适当标示”是规则的第二半句，不可省略。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-regole-traino-veicoli-3": {
+      "verdict": "VERO",
+      "key_it": "deve avvenire attraverso un solido collegamento, purché idoneamente segnalato per rendere i veicoli chiaramente avvistabili",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: in an imminent emergency the towing connection must be solid AND properly signalled, so that both vehicles are clearly visible to other users — solidity alone is not enough.",
+        "ru": "Верно: при нависающей ЧП сцепление при буксире должно быть прочным И должным образом обозначенным, чтобы обе машины были ясно видны другим; одной прочности мало.",
+        "zh": "正确：在迫在眉睫的紧急情况下，拖带连接必须既牢固又经过适当标示，使两辆车都能被其他使用者清楚看到——单有牢固是不够的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-regole-traino-veicoli-5": {
+      "verdict": "FALSO",
+      "key_it": "un autoveicolo può trainare un veicolo che non sia un rimorchio, se questo non può più circolare per qualsiasi grave motivo",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'per qualsiasi grave motivo' (for any serious reason) is too broad — on a motorway towing a non-trailer is limited to a breakdown or missing essential parts, not to any grave reason.",
+        "ru": "Ложно: «по любой серьёзной причине» — слишком широко; на автомагистрали буксир не-прицепной ограничен поломкой или отсутствием важнейших узлов, а не любой серьёзной причиной.",
+        "zh": "错误：“任何严重原因”范围过宽——在高速公路上拖带非拖车车辆仅限于故障或缺少关键部件，而不是任何严重原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-regole-traino-veicoli-6": {
+      "verdict": "FALSO",
+      "key_it": "anche se non è possibile segnalarlo",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'even if it cannot be signalled' is exactly backwards — the emergency towing connection must be properly signalled; an un-signalled tow is not permitted, the signalling requirement has no such escape hatch.",
+        "ru": "Ложно: «даже если его невозможно обозначить» — наоборот: сцепление при аварийном буксире обязано быть должным образом обозначено; необозначенный буксир не допускается, такого лазейки в требовании нет.",
+        "zh": "错误：“即使无法标示”恰好说反了——紧急拖带的连接装置必须经过适当标示；没有标示的拖带是不允许的，标示要求没有这样的豁免。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-regole-traino-veicoli-7": {
+      "verdict": "FALSO",
+      "key_it": "il veicolo trainato deve mantenere accese le luci posteriori in mancanza di altra idonea segnalazione",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'rear lights on' is not the stated requirement here — the rule is about a solid, properly signalled towing connection that makes the vehicles clearly visible, not merely keeping tail lights lit.",
+        "ru": "Ложно: «задние фары горят» — не то требование, что здесь описано; правило говорит о прочном и должным обозначенном сцеплении, делающем машины ясно видимыми, а не просто о включённых габаритах.",
+        "zh": "错误：“保持后灯点亮”并不是本题所述的规则——该规则讲的是牢固且适当标示的拖带连接，使两车清晰可见，而不仅仅是尾灯亮着。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ciclisti-velocipedi-0": {
+      "verdict": "VERO",
+      "key_it": "deve considerare i rischi che, sulla strada, sono legati alla presenza di velocipedi",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a car driver must account for the risks that bicycles bring to the road — modest mass, low speed, possible sideways swaying. 'Mezzi dotati di massa modesta e caratterizzati da basse velocità' is the exact profile of the risk.",
+        "ru": "Верно: водитель авто обязан учитывать риски, которые велосипеды приносят на дорогу: скромная масса, низкая скорость, возможное боковое раскачивание; «масса скромна, скорость низка» — точный профиль риска.",
+        "zh": "正确：汽车驾驶员必须考虑自行车给道路带来的风险——质量轻、速度慢、可能左右晃动。“质量小、速度慢”正是这一风险的准确画像。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ciclisti-velocipedi-1": {
+      "verdict": "VERO",
+      "key_it": "deve adattare la propria guida anche ai rischi legati alla presenza di velocipedi nel traffico",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the adaptation duty is not limited to cars — a motorcycle driver must also adjust his driving to the risks posed by bicycles in traffic.",
+        "ru": "Верно: обязанность адаптироваться езды не только для авто; и водитель мотоцикла должен подстраиваться под риски, которые создают велосипеды в потоке.",
+        "zh": "正确：适应义务并非只针对汽车——摩托车驾驶员也必须调整自己的驾驶，以应对交通中自行车带来的风险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ciclisti-velocipedi-2": {
+      "verdict": "VERO",
+      "key_it": "particolare attenzione per la presenza nel traffico di velocipedi utilizzati da conducenti giovanissimi e inesperti o da anziani",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a car driver must give special attention to bicycles ridden by very young and inexperienced riders or by the elderly — these groups are the least stable and the hardest to predict.",
+        "ru": "Верно: водитель авто уделяет особое внимание велосипедам, за рулём которых совсем юные и неопытные, либо пожилые; эти группы наименее устойчивы и самые непредсказуемые.",
+        "zh": "正确：汽车驾驶员须特别留意由年幼、不熟练的骑行者或老年人骑行的自行车——这些群体最不稳定、最难预测。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ciclisti-velocipedi-4": {
+      "verdict": "VERO",
+      "key_it": "difficoltà di valutazione della velocità del proprio veicolo da parte di un ciclista",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a car driver must expect that a cyclist in the same lane, about to turn left, finds it hard to judge the speed of the car — the driver is the one who knows his own speed, the cyclist does not.",
+        "ru": "Верно: водитель авто должен закладывать, что велосипедисту в той же полосе, который собирается свернуть налево, трудно оценить скорость машины; скорость знает сам водитель, а не велосипедист.",
+        "zh": "正确：汽车驾驶员须预判，同一车道内即将左转的自行车手很难判断汽车的速度——速度只有驾驶员自己清楚，骑车人并不掌握。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ciclisti-velocipedi-5": {
+      "verdict": "VERO",
+      "key_it": "esegue con difficoltà e lentezza la torsione del busto a causa dell'età avanzata",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: driving near an elderly cyclist who turns his torso with difficulty and slowness to check behind requires special care — the check itself is slowed by age, so the driver must give extra room and patience.",
+        "ru": "Верно: езда рядом со старым велосипедистом, которому трудно и медленно поворачивать корпус назад, требует особой осторожности; сам осмотр замедлен возрастом, поэтому водитель даёт больше пространства и терпения.",
+        "zh": "正确：在老年自行车手旁边行驶，需要格外小心——他们因年迈而难以、缓慢地扭转身体查看后方，因此驾驶员应多留空间、多给耐心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ciclisti-velocipedi-6": {
+      "verdict": "FALSO",
+      "key_it": "bambini in bicicletta, anche se affiancati, non rappresenta un rischio per chi guida",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'data la loro modesta velocità' (because of their modest speed) is the invented reassurance — children on bicycles on extra-urban roads are a real risk regardless of speed; the argument is a trap.",
+        "ru": "Ложно: «в силу их скромной скорости» — выдуманное успокоение; дети на велосипедах на загородных дорогах — реальный риск вне зависимости от скорости; аргумент-ловушка.",
+        "zh": "错误：“因为他们速度慢”是编造的安慰——在城外公路上骑自行车的儿童无论速度多慢都是真实风险；这个论证是陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-ciclisti-velocipedi-7": {
+      "verdict": "FALSO",
+      "key_it": "i conducenti dei veicoli a motore sono sempre capaci di prevedere eventuali loro cadute o pericolosi sbandamenti",
+      "chapter": "ch14",
+      "why": {
+        "en": "FALSO: 'sempre capaci di prevedere' (always able to foresee) is absolute and wrong — a driver can never be sure of predicting a fall or a sudden swerve caused by road irregularities, which is exactly why extra care is required.",
+        "ru": "Ложно: «всегда способны предвидеть» — абсолютное и неверное утверждение; водитель не может гарантированно предвидеть падение или резкий увод от неровности дороги, и именно поэтому требуется повышенная осторожность.",
+        "zh": "错误：“总能预判”是绝对化且错误的说法——驾驶员无法保证能预测到因路面不平导致的摔车或突然摆尾，这正是需要格外谨慎的原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
