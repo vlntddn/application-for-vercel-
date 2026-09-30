@@ -1053,6 +1053,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-secondo-5": {
+      "verdict": "FALSO",
+      "key_it": "circa m 4 se si viaggia a 50 km/h",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 50 km/h the distance covered in one second is several times greater than 4 m: the space-per-second grows with speed.",
+        "ru": "На 50 км/ч за одну секунду проходит в несколько раз больше, чем 4 м: пространство за секунду растёт с скоростью.",
+        "zh": "在50 km/h时，一秒行驶的距离远大于4米：每秒通过的距离随速度增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-secondo-6": {
+      "verdict": "FALSO",
+      "key_it": "circa m 10 se si viaggia a 100 km/h",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 100 km/h the distance covered in one second is several times greater than 10 m: the space-per-second grows with speed.",
+        "ru": "На 100 км/ч за одну секунду проходит в несколько раз больше, чем 10 м: пространство за секунду растёт с скоростью.",
+        "zh": "在100 km/h时，一秒行驶的距离远大于10米：每秒通过的距离随速度增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-secondo-7": {
+      "verdict": "FALSO",
+      "key_it": "circa m 15 se si viaggia a 130 km/h",
+      "chapter": "ch9",
+      "why": {
+        "en": "At 130 km/h the distance covered in one second is several times greater than 15 m: the space-per-second grows with speed.",
+        "ru": "На 130 км/ч за одну секунду проходит в несколько раз больше, чем 15 м: пространство за секунду растёт с скоростью.",
+        "zh": "在130 km/h时，一秒行驶的距离远大于15米：每秒通过的距离随速度增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-frenatura-0": {
+      "verdict": "VERO",
+      "key_it": "dall'inizio della frenata all'arresto del veicolo",
+      "chapter": "ch9",
+      "why": {
+        "en": "Braking distance is exactly the path covered from the moment braking starts until the vehicle comes to a full stop.",
+        "ru": "Тормозной путь — это именно путь от момента начала торможения до полной остановки.",
+        "zh": "制动距离就是从开始刹车到车辆完全停止所经过的路程。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-frenatura-1": {
+      "verdict": "VERO",
+      "key_it": "si quadruplica se la velocità si raddoppia",
+      "chapter": "ch9",
+      "why": {
+        "en": "Braking distance grows with the square of speed: double the speed means four times the braking distance.",
+        "ru": "Тормозной путь растёт со скоростью в квадрате: скорость ×2 = тормозной путь ×4.",
+        "zh": "制动距离随速度的平方增长：速度×2＝制动距离×4。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-frenatura-2": {
+      "verdict": "VERO",
+      "key_it": "diventa nove volte maggiore se la velocità si triplica",
+      "chapter": "ch9",
+      "why": {
+        "en": "Because braking distance is proportional to speed squared, tripling the speed makes it nine times longer.",
+        "ru": "Тормозной путь пропорционален квадрату скорости: скорость ×3 даёт девятикратный путь.",
+        "zh": "制动距离与速度的平方成正比：速度变为原来的三倍时，制动距离变为原来的九倍。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-frenatura-3": {
+      "verdict": "VERO",
+      "key_it": "diventa sedici volte maggiore se la velocità si quadruplica",
+      "chapter": "ch9",
+      "why": {
+        "en": "Because braking distance is proportional to speed squared, quadrupling the speed makes it sixteen times longer.",
+        "ru": "Тормозной путь пропорционален квадрату скорости: скорость ×4 даёт шестнадцатикратный путь.",
+        "zh": "制动距离与速度的平方成正比：速度变为原来的四倍时，制动距离变为原来的十六倍。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-frenatura-4": {
+      "verdict": "FALSO",
+      "key_it": "è indipendente dalla velocità",
+      "chapter": "ch9",
+      "why": {
+        "en": "Braking distance strongly depends on speed: it grows with the square of speed, so it is far from constant.",
+        "ru": "Тормозной путь сильно зависит от скорости: он растёт в квадрате, поэтому никак не постоянен.",
+        "zh": "制动距离强烈依赖速度：它随速度平方增长，远非常数。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-frenatura-5": {
+      "verdict": "FALSO",
+      "key_it": "si raddoppia se la velocità si raddoppia",
+      "chapter": "ch9",
+      "why": {
+        "en": "It does not only double: because of the square law, double speed means four times the braking distance.",
+        "ru": "Не просто вдвое: из-за квадратичного закона скорость ×2 даёт тормозной путь ×4.",
+        "zh": "不只翻倍：由于平方定律，速度×2时制动距离变为4倍。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-diminuzione-aumento-frenatura-0": {
+      "verdict": "VERO",
+      "key_it": "aderenza tra pneumatico e asfalto è bassa",
+      "chapter": "ch9",
+      "why": {
+        "en": "Low tyre–asphalt grip means less force for braking, so the braking distance increases.",
+        "ru": "Низкое сцепление шины и асфальта даёт меньше тормозного усилия — путь торможения растёт.",
+        "zh": "轮胎与路面附着力低时制动力不足，制动距离变长。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-diminuzione-aumento-frenatura-1": {
+      "verdict": "VERO",
+      "key_it": "la strada è innevata",
+      "chapter": "ch9",
+      "why": {
+        "en": "Snow lowers grip between tyre and road, so braking becomes less effective and braking distance increases.",
+        "ru": "Снег снижает сцепление и эффективность торможения — тормозной путь увеличивается.",
+        "zh": "积雪降低轮胎与路面附着力，制动距离变长。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-diminuzione-aumento-frenatura-2": {
+      "verdict": "VERO",
+      "key_it": "la strada è bagnata",
+      "chapter": "ch9",
+      "why": {
+        "en": "Wet asphalt reduces grip between tyre and road, so braking becomes less effective and braking distance increases.",
+        "ru": "Мокрый асфальт снижает сцепление шин с дорогой — торможение слабее, путь торможения больше.",
+        "zh": "湿滑路面降低轮胎附着力，制动距离变长。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-diminuzione-aumento-frenatura-3": {
+      "verdict": "VERO",
+      "key_it": "la strada è in discesa",
+      "chapter": "ch9",
+      "why": {
+        "en": "On a downhill gradient gravity pulls the vehicle forward, adding to its motion and lengthening the braking distance.",
+        "ru": "В спуске гравитация тянет автомобиль вперёд и удлиняет тормозной путь.",
+        "zh": "下坡时重力向前拉动车辆，制动距离变长。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-diminuzione-aumento-frenatura-4": {
+      "verdict": "VERO",
+      "key_it": "la strada è in salita",
+      "chapter": "ch9",
+      "why": {
+        "en": "On an uphill gradient gravity works against the motion, helping the brakes shorten the braking distance.",
+        "ru": "В подъём гравитация мешает движению и помогает тормозам — тормозной путь короче.",
+        "zh": "上坡时重力阻碍车辆前行，制动距离缩短。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-diminuzione-aumento-frenatura-5": {
+      "verdict": "FALSO",
+      "key_it": "il conducente ha i riflessi pronti",
+      "chapter": "ch9",
+      "why": {
+        "en": "Reflexes act before braking starts, while the braking distance is covered after braking begins, so quick reflexes do not shorten it.",
+        "ru": "Реакция влияет на путь до начала торможения, а тормозной путь проходит уже после него — ловкость не сокращает его.",
+        "zh": "反应影响的是刹车前的反应距离，而非开始刹车后的制动距离，所以反应快并不缩短它。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-diminuzione-aumento-frenatura-6": {
+      "verdict": "FALSO",
+      "key_it": "le ruote si bloccano",
+      "chapter": "ch9",
+      "why": {
+        "en": "Locked wheels slide instead of rolling, which reduces grip; braking distance increases, not decreases.",
+        "ru": "Заблокированные колёса скользят вместо качения, сцепление падает — тормозной путь увеличивается.",
+        "zh": "车轮锁死后会滑动而非滚动，附着力下降，制动距离变长。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-diminuzione-aumento-frenatura-7": {
+      "verdict": "FALSO",
+      "key_it": "sul tratto in discesa di un dosso",
+      "chapter": "ch9",
+      "why": {
+        "en": "Any downhill section adds gravity to the forward motion, so the braking distance increases there, not decreases.",
+        "ru": "Любой участок спуска добавляет тягу гравитации — там тормозной путь больше, а не меньше.",
+        "zh": "任何下坡段都会让重力推向前方，制动距离变长而非变短。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-diminuzione-aumento-frenatura-8": {
+      "verdict": "FALSO",
+      "key_it": "aumenta se la strada è in salita",
+      "chapter": "ch9",
+      "why": {
+        "en": "On an uphill gradient gravity works against the motion, helping the brakes, so braking distance decreases.",
+        "ru": "В подъём гравитация работает против движения и помогает тормозам — путь торможения уменьшается.",
+        "zh": "上坡时重力阻碍车辆前行、帮助制动，制动距离缩短而非增长。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-diminuzione-aumento-frenatura-9": {
+      "verdict": "FALSO",
+      "key_it": "diminuisce se la strada è in discesa",
+      "chapter": "ch9",
+      "why": {
+        "en": "On a downhill gradient gravity pulls the vehicle forward, so the braking distance increases, not decreases.",
+        "ru": "В спуске гравитация тянет автомобиль вперёд — тормозной путь увеличивается, а не уменьшается.",
+        "zh": "下坡时重力向前拉动车辆，制动距离变长而非变短。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "distanza-di-sicurezza-spazio-arresto-0": {
+      "verdict": "VERO",
+      "key_it": "più quello percorso durante la frenata",
+      "chapter": "ch9",
+      "why": {
+        "en": "Total stopping distance is the sum of the distance covered during reaction time and the distance covered while braking.",
+        "ru": "Общий путь остановки — сумма пути за время реакции и пути торможения.",
+        "zh": "总停车距离＝反应时间内行驶的距离＋制动过程中行驶的距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
