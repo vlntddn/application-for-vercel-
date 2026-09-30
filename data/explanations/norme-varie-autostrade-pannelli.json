@@ -1573,6 +1573,279 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-circolazione-autocarri-4": {
+      "verdict": "FALSO",
+      "key_it": "sicuramente avvistabile dal conducente",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: a pedestrian close to the front of a lorry about to move is NOT 'surely seen': the high front and cab hide the area right in front (blind spot), so the person can stay invisible as the lorry starts. Never pass near the front of a heavy vehicle that is about to move.",
+        "ru": "Неверно: пешеход у передка стоящего в колонне грузовика, который трогается, НЕ «наверняка заметен»: высокий передок и кабина закрывают зону прямо перед ним (слепая зона), поэтому он может остаться невидимым. Не ходите вблизи передка тяжёлого ТС, которое трогается.",
+        "zh": "错误：站在将要起步的货车前方近处的行人并非“肯定会被看到”——高车头与驾驶室遮住了正前方盲区，行人可能看不见，切勿靠近正在起步的重型车辆前端。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-giubbotto-retroriflettente-1": {
+      "verdict": "FALSO",
+      "key_it": "solo di colore giallo",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the law does not impose 'only yellow': the requirement for high-visibility garments (jacket or vest) is high visibility / retro-reflectivity that makes the driver visible, not a single yellow shade. The key is being seen, e.g. when working roadside at night.",
+        "ru": "Неверно: норма не требует «только жёлтый»: требование к одежде высокой видимости — ретроотражаемость/высокая заметность водителя, а не один жёлтый оттенок. Главное — быть заметным, например при работе у дороги ночью.",
+        "zh": "错误：法规并非要求“仅限黄色”——高可见度服装的要求是反光/高可视性，使驾驶人显眼，而非单一黄色；关键是夜间路侧作业时可见。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-giubbotto-retroriflettente-2": {
+      "verdict": "FALSO",
+      "key_it": "anche da rischi chimici, calore, fuoco ed elettricità",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: a high-visibility jacket exists to make the driver VISIBLE to others when outside the vehicle. It is not protective clothing against chemical agents, heat, fire or electric shock: it protects from not being seen, not from those hazards.",
+        "ru": "Неверно: жилет высокой видимости нужен, чтобы водитель был ЗАМЕТЕН для других, находясь вне автомобиля. Это не защитная одежда от химических агентов, жара, огня или удара током: он оберегает от того, чтобы вас не заметили.",
+        "zh": "错误：高可见度反光服的作用是让车外的人对他人“可见”，并非防护化学、高温、火焰或电击的防护服——它防的是不被看见。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-giubbotto-retroriflettente-6": {
+      "verdict": "FALSO",
+      "key_it": "solo quando si deve sostituire una ruota forata",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: it is not useful 'only when changing a flat tyre'. The high-visibility jacket is worn every time you move on foot beside the carriageway, especially at night or in poor visibility — breakdown, roadside stop, any roadside work, not just a tyre change.",
+        "ru": "Неверно: жилет полезен не «только при смене колёс». Жилет высокой видимости надевают каждый раз, когда пешком идёте вдоль проезжей части — особенно ночью или при плохой видимости: поломка, остановка у обочины, любая работа у дороги.",
+        "zh": "错误：并非“只在换爆胎时有用”——每次在路侧步行（尤其夜间或能见度差时）都应穿着高可见度反光服：故障、路肩停车、路侧作业皆可。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-circolazione-dietro-veicolo-5": {
+      "verdict": "VERO",
+      "key_it": "gli indicatori di direzione sono nascosti dalla merce penzolante",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: behind a vehicle with an overhanging load, noticing its intended turn can be difficult, because the rear direction indicators are hidden by the hanging cargo. Widen the safety gap: if the indicators are not visible, the risk of being caught out by its turn is high.",
+        "ru": "Верно: позади ТС с выступающим грузом заметить намёк на поворот трудно, если задние указатели поворота скрыты висящим грузом. Увеличьте дистанцию: невидимые указатели повышают риск застать манёвр врасплох.",
+        "zh": "正确：跟随载有突出货物且尾灯被垂挂物遮挡的车辆时，难以察觉其转弯意图——应加大安全距离，以免转弯时措手不及。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-circolazione-dietro-veicolo-8": {
+      "verdict": "FALSO",
+      "key_it": "conviene sorpassarlo subito, anche se in curva",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: overtaking a vehicle with a load about to fall 'at once, even in a curve' is dangerous: the cargo can land on your overtaking path, and a curve limits visibility. The safe choice: stop behind it with a gap until the situation is clear.",
+        "ru": "Неверно: обгонять ТС с грузом, вот-вот упадет, «сразу, даже в повороте», опасно: груз может упасть прямо на вашу траекторию, а в повороте видимость ограничена. Безопасный выбор — остановиться позади с дистанцией, пока ситуация не прояснится.",
+        "zh": "错误：货物将落时“立即超车，即便在弯道”危险——货物可能落在超车路径上，弯道视野受限；应停在后方保持距离，待情况明朗。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-circolazione-dietro-veicolo-9": {
+      "verdict": "FALSO",
+      "key_it": "conviene arrestarsi bruscamente",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: 'stop abruptly' is wrong: an abrupt stop startles the traffic behind and can cause a rear-end collision. The correct reaction is to slow early and progressively, keeping visibility and distance and signalling the others. The abrupt stop is the false part.",
+        "ru": "Неверно: «резко остановиться» — ошибка: внезапная остановка пугает идущих сзади и может вызвать наезд. Верная реакция — заранее и плавно замедлиться, сохраняя видимость и дистанцию, подавая сигнал. Резкий стоп и есть подвох.",
+        "zh": "错误：“猛地刹停”错误——急停令后方受惊、易致追尾；正确做法是提前渐进减速、保持可视与距离，并示意后方。急刹即陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-traino-rimorchio-5": {
+      "verdict": "VERO",
+      "key_it": "può risultare faticoso manovrare lo sterzo",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a broken vehicle with power steering, when towed, makes steering hard to manoeuvre: the assist works with the engine running, and with the engine off (breakdown) the assist is gone, so turning the wheel is heavy. That is why a driver on board helps steer the towed vehicle.",
+        "ru": "Верно: неисправное ТС с усилителем руля при буксировке рулится тяжело: усилитель работает с работающим двигателем, а с загашенным его нет — поворот тяжёлый. Поэтому тот, кто в буксируемом, помогает рулить.",
+        "zh": "正确：带助力转向的故障车被拖行时转向费力——助力依赖发动机运转，熄火后助力消失，故车内人员需协助转动方向盘。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-traino-rimorchio-8": {
+      "verdict": "VERO",
+      "key_it": "vale anche per il rischio statico (da fermo)",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a trailer detached from its towing vehicle must have insurance cover that also applies to the static risk: standing still on the road or shoulder it can still be hit by other vehicles, so the cover must work while stationary, not only in motion.",
+        "ru": "Верно: отцепленный прицеп должен иметь страховое покрытие, действующее и на статический риск: стоящий на проезжей части или обочине прицеп может быть сбит, поэтому покрытие должно действовать и при стоянке, а не только в движении.",
+        "zh": "正确：脱开的挂车须有涵盖静态风险（静止状态）的保险——停在路面或路肩仍可能被撞击，保险在静止时同样有效。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-traino-rimorchio-14": {
+      "verdict": "FALSO",
+      "key_it": "può essere privo di patente di guida",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the driver on board a broken vehicle being towed may not lack a licence: he sits at the wheel of the towed vehicle and must be able to steer it. He must hold a licence; you don't put an unqualified person at the wheel.",
+        "ru": "Неверно: водитель в буксируемом неисправном ТС «может не иметь прав» — ложь: он сидит за рулём и должен уметь им управлять (руль поворачивает тот, кто в машине). Права у него должны быть: за руль буксируемого не сажают не имеющего допуска.",
+        "zh": "错误：被拖故障车上的驾驶人不能无证——他坐在驾驶位需转动方向盘控制方向，故必须持有驾照，不可由无资质者操控。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-traino-rimorchio-17": {
+      "verdict": "FALSO",
+      "key_it": "purché vengano trainati rimorchi di massa inferiore a 750 chilogrammi",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: towing devices may not be 'unhomologated if the trailer is under 750 kg': towing equipment must be homologated and suitable for the towed mass, whatever that mass is. There is no automatic exemption below 750 kg; the 'provided under 750 kg' part is the bait.",
+        "ru": "Неверно: буксирные органы «могут быть не сертифицированы, если прицеп легче 750 кг» — ложь: оборудование должно быть сертифицировано и пригодным для массы прицепа, какая бы она ни была. Освобождения ниже 750 кг нет — вот приманка.",
+        "zh": "错误：牵引装置并非“拖挂质量低于750公斤就可不认证”——牵引设备必须认证且与被拖质量匹配，无低于750公斤的豁免；该条件即陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-traino-rimorchio-18": {
+      "verdict": "FALSO",
+      "key_it": "lo sterzo risulterà sempre bloccato",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: the steering of a towed vehicle with power steering is not 'always locked': with the engine off the assist is missing and the wheel is heavy, but it is not locked — the driver on board can still turn it, with extra effort. A truly locked steering would make towing unsafe.",
+        "ru": "Неверно: руль буксируемого ТС с усилителем «всегда заблокирован» — преувеличение: с загашенным двигателем руль тяжёлый, но не заблокирован — водитель в машине всё ещё поворачивает его, с усилием. По-настоящему заблокированный руль сделал бы буксировку небезопасной.",
+        "zh": "错误：带助力转向的被拖车方向盘并非“始终锁死”——熄火后变重但可转动，车内驾驶人需加力；若真锁死则拖行不安全。“始终锁死”为夸大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-traino-rimorchio-21": {
+      "verdict": "FALSO",
+      "key_it": "di almeno 3 metri",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: a 'minimum distance of at least 3 metres' is not the correct rule for towing a broken vehicle: the gap must allow the driver on the towed vehicle to see the road and steer safely, an adequate towing length — not a fixed 3 m minimum.",
+        "ru": "Неверно: «минимум 3 метра» — не верное правило для буксировки неисправного ТС: зазор должен позволять водителю в буксируемом видеть дорогу и безопасно рулить, подходящая длина буксира, а не фиксированный минимум 3 м.",
+        "zh": "错误：拖带故障车并非“至少3米”的固定距离——间距须让被拖车驾驶人能看见路面并安全操控方向，而非固定的3米下限。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-numero-persone-trasportabili-2": {
+      "verdict": "VERO",
+      "key_it": "può essere al massimo di nove, compreso il conducente",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: a passenger car may carry a maximum of nine people, driver included — up to eight passengers plus the driver. It is a category ceiling: each car must have homologated seats, and you don't exceed the number of seats its approval allows.",
+        "ru": "Верно: на легковом автомобиле может находиться максимум девять человек, включая водителя — до восьми пассажиров плюс водитель. Это предел категории: машина должна иметь сертифицированные места, и превышать их число нельзя.",
+        "zh": "正确：乘用车最多载九人（含驾驶人）——至多八名乘客加驾驶人，为类别上限；车辆须有认证座位数且不得超出。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-numero-persone-trasportabili-4": {
+      "verdict": "FALSO",
+      "key_it": "sempre di due, oltre il conducente",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: motorcycles do not always carry 'two in addition to the driver' (that would be three people). In practice a motorcycle carries the driver plus one passenger, with the required equipment; the passenger count is not a fixed 'two besides the driver'.",
+        "ru": "Неверно: на мотоцикле «всегда двое, помимо водителя» (тогда трое) — ложь: на практике мотоцикл везёт водителя и одного пассажира с предусмотренным оснащением. Число пассажиров не фиксированное «двое помимо водителя».",
+        "zh": "错误：摩托车并非“总在驾驶人之外交二人”（那就三人）——通常为驾驶人加一名乘客，乘客数并非固定的“驾驶人之外交二”。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-numero-persone-trasportabili-6": {
+      "verdict": "FALSO",
+      "key_it": "sempre di cinque, compreso il conducente",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: lorries do not 'always carry five, driver included': trucks are not designed to carry people, and there is no fixed number 'always five'. Carrying people on a lorry is only with the provided seats; 'always' plus a fixed number are the baits.",
+        "ru": "Неверно: на грузовике «всегда пять, включая водителя» — ложь: фуры не предназначены для перевозки людей, и фиксированного «всегда пять» нет. Перевозка людей на грузовике — только с предусмотренными местами.",
+        "zh": "错误：货车并非“总是五人（含驾驶人）”——货车非载人设计，无“永远五人”之数；载人须有设定位，此为陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Comportamenti-guida-caravan-2": {
+      "verdict": "FALSO",
+      "key_it": "perché può essere adibito ad alloggio",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: a caravan is a trailer: a vehicle without its own engine that is towed falls in the trailer category, regardless of 'can serve as living space'. Its residential use does not change its nature as a trailer — towing, insurance, mass limits apply as for a trailer.",
+        "ru": "Неверно: караван — это прицеп: являясь ТС без собственного двигателя, которое буксируется, он входит в категорию прицепов, независимо от того, служит ли он жильём. Назначение «жильё» не меняет его природы прицепа: для буксировки, страхования, пределов массы он — прицеп.",
+        "zh": "错误：房车（拖挂）属挂车——无自备动力、被牵引的车辆归入挂车类别，与能否作住所以及无关；拖行、保险、质量限值均按挂车对待。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Comportamenti-guida-caravan-3": {
+      "verdict": "FALSO",
+      "key_it": "purché tutti i passeggeri allaccino le cinture di sicurezza",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: you cannot 'live' inside a moving caravan even if everyone fastens belts: in motion, passengers stay seated on homologated seats with belts on, not standing or moving freely. Belts alone do not make it safe — the risk of being thrown stays; 'provided belts' is not enough.",
+        "ru": "Неверно: «проживать в караване в движении, если все пристегнуты» — ложь: в движении пассажиры должны сидеть на сертифицированных местах с ремнями, а не стоять/перемещаться. Одних ремней недостаточно — риск упасть/быть выброшенным остаётся.",
+        "zh": "错误：行驶中不能“住在”房车里，哪怕全员系带——乘客须坐于认证座位并系带，不得站立走动；仅系带并不足够，跌倒/被甩出风险仍在。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Dotazione-rimorchio-3": {
+      "verdict": "VERO",
+      "key_it": "l'azionamento si ha solo dopo che il rimorchio ha esercitato una spinta sulla motrice",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the inertia brake on a trailer does not apply simultaneously with the towing vehicle's brake: it triggers only after the trailer pushes against the towing vehicle under braking (inertia), so it kicks in with a slight delay. Push-then-brake is the correct sequence.",
+        "ru": "Верно: инерционный тормоз прицепа срабатывает не одновременно с торможением тягача: он включается только после того, как прицеп толкнул тягач при торможении (инерция), то есть с небольшой задержкой. Последовательность «толчок → тормоз» здесь верна.",
+        "zh": "正确：惯性制动挂车不与牵引车同时制动——惯性制动仅在挂车于制动时顶推牵引车后启动，故有轻微延迟；“先推后刹”顺序正确。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-0": {
+      "verdict": "VERO",
+      "key_it": "salvo diversa segnalazione",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: in built-up areas a driver must not leave a trailer detached from its towing vehicle parked, 'unless otherwise signalled': a detached trailer in town is an obstacle and a hazard, so it is normally not left standing, except where signalled/allowed (e.g. designated spots).",
+        "ru": "Верно: в населённых пунктах водитель не должен оставлять на стоянке прицеп, отцепленный от тягача, «если иное не указано»: отцепленный прицеп в городе — препятствие и опасность, его по правилу не оставляют, за исключением мест с иным обозначением.",
+        "zh": "正确：居民区内不得将脱开的挂车停放于路，除非另有标志——脱开挂车在城镇是障碍与隐患，一般不得停放，标志允许除外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-4": {
+      "verdict": "VERO",
+      "key_it": "sprovvisto di qualsiasi dispositivo di frenatura è di 0,5",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the maximum towing ratio for a trailer without any braking device is 0.5 — the trailer may weigh at most half the mass of the towing vehicle. Without a service brake the ratio is lowered because the trailer does not contribute to braking; 0.5 is the correct limit.",
+        "ru": "Верно: максимальное отношение буксирования для прицепа без какого-либо тормозного устройства — 0,5: прицеп может весить не более половины массы тянущего. Без рабочего тормоза отношение снижено именно потому, что прицеп не участвует в торможении.",
+        "zh": "正确：无任何制动装置的挂车最大牵引比为0.5——挂车至多等于牵引车质量的一半；因挂车不参与制动，故比值降低，0.5为正确限值。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
