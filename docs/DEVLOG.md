@@ -1,3 +1,11 @@
+## 2026-09-30 — L9b: пояснения, порция 74 — ch17 (закрытие) + ch18 (alcool-droga-primo-soccorso) +20, 929→949/2030
+
+Что сделано (коммит feat: L9b пояснения порция 74 на self-improve):
+- ch17 incidenti-stradali-comportamenti — ЗАКРЫТ (26/26 не-карт. сигнальных): +6 к 20 из порции 73 — obblighi-dopo-incidente-stradale-8 (FALSO: мобильный знак НЕ ставят в населённом пункте), salita-discesa-passeggero 1–4 (1/2/3 VERO: открыть дверцу только без опасности, дождаться полной остановки, ребёнок — под контролем взрослого; 4 FALSO: правая дверца — самая опасная), pannello-galleria-6 (FALSO: при пожаре в тоннеле подчиняются указаниям пожарных, а не знакам).
+- Создан data/explanations/alcool-droga-primo-soccorso.json (ch18, файла не было): 14 — segni-stanchezza 0–1 (0 VERO: доехать до ближайшей площадки и отдохнуть; 1 FALSO: подбираться к впереди идущему не нужно), eccesso-bevande-alcoliche 1–3 (1 VERO: пригодность не восстанавливается быстро, особенно с лекарствами; 2/3 FALSO: солёная еда и горький кофе не восстанавливают), idoneita-alla-guida 0–7 (0–3 VERO: седативные, антидепрессанты, галлюциногены, алкоголь нарушают; 4–7 FALSO: кофе, газировка, минеральные соли, добавки — не нарушают), assunzione-droghe-0 (VERO: гашиш/марихуана нарушают).
+- key_it — дословные подстроки из text_it; chapter ch17/ch18; why на en/ru/zh; без цифр.
+- Как проверено: node --test tests/explanations.test.js — 13/13 ok; scripts/verify.sh — VERIFY OK (184 passed, smoke 8×200).
+
 ## 2026-09-30 — L9b: пояснения, порция 73 — ch17 (incidenti-stradali-comportamenti) +20, 909→929/2030
 
 Что сделано (коммит feat: L9b пояснения порция 73 на self-improve):
