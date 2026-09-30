@@ -1,6 +1,18 @@
 # DEVLOG — Passo (последнее сверху)
 
 
+## 2026-09-30 — L8: Слово по тапу (тап по слову text_it → перевод)
+
+Что сделано (коммит feat: L8 на self-improve):
+- public/js/domain/learning.js — чистая функция поиска: buildDictionaryTapIndex(sections) строит индекс лемм (нормализация: нижний регистр, без диакритики, срез по статье); dictionaryTapTerms(text, index) находит ВСЕ совпадения по границам слова (accent-insensitive) и возвращает [{start,end,term}].
+- public/js/views/practice.js — тапабельные <mark ds-term> в question-text; тап открывает .ds-term-callout с переводом на языке ученика (ru/en/zh); next() сбрасывает подсветку.
+- public/styles.css — .ds-term (бирюзовый) и .ds-term-callout.
+- public/sw.js: v72 → v73.
+- tests/dictionary-tap.test.js — 10 тестов (базовое, accent, апостроф, многословное, граница слова, плюральное, несколько совпадений).
+
+Проверка: verify.sh → VERIFY OK (171 unit, 8 endpoint, qa-new-user 42 PASS).
+Сэмпл: 32/141 вопроса получают тапабельные слова.
+
 ## 2026-09-30 — L7: Готовность к экзамену (оценка шанса пройти по ответам)
 
 Что сделано (коммит `feat: готовность к экзамену — оценка шанса пройти по ответам, weakest-topic gain (L7)` на self-improve):
