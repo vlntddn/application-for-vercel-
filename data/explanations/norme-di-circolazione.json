@@ -780,6 +780,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-attenzione-cambio-corsia-1": {
+      "verdict": "VERO",
+      "key_it": "si deve segnalare in anticipo la manovra da compiere",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when you want to change lane you must signal the manoeuvre in advance, before starting it.",
+        "ru": "Верно: при смене полосы нужно заранее, до начала манёвра, объявить его.",
+        "zh": "正确：变道前必须提前示意将要进行的动作。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-attenzione-cambio-corsia-3": {
+      "verdict": "VERO",
+      "key_it": "si deve controllare che la striscia che divide le corsie sia tratteggiata",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before changing lane you must check that the line dividing the lanes is broken — a broken line means changing lane is allowed there.",
+        "ru": "Верно: перед сменой полосы нужно убедиться, что линия между полосами прерывистая — только тогда в этом месте смена полосы разрешена.",
+        "zh": "正确：变道前须确认车道分隔线为虚线——只有虚线才表示该处允许变道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-attenzione-cambio-corsia-4": {
+      "verdict": "VERO",
+      "key_it": "si deve segnalare la manovra, facendo uso dell'indicatore di direzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: changing lane is signalled with the direction indicator.",
+        "ru": "Верно: смена полосы объявляется указателем поворота.",
+        "zh": "正确：变道用转向灯示意。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-attenzione-cambio-corsia-10": {
+      "verdict": "FALSO",
+      "key_it": "cambiare corsia per un sorpasso è obbligatorio ridurre la velocità",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: to overtake by changing lane you do not have to reduce your speed. Overtaking is done by matching the speed of the vehicles and passing safely, not by slowing down.",
+        "ru": "Неверно: для обгона сменой полосы не нужно снижать скорость. Обгон выполняется согласованием скорости с обгоняемыми и безопасным прохождением, а не замедлением.",
+        "zh": "错误：为变道超车不必减速。超车是通过与目标车辆车速匹配并安全通过完成的，而非降速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolte-cambi-direzioni-0": {
+      "verdict": "VERO",
+      "key_it": "si vuole cambiare direzione si deve azionare in anticipo l'indicatore di direzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: changing direction must be signalled in advance with the direction indicator.",
+        "ru": "Верно: смену направления нужно заранее объявить указателем поворота.",
+        "zh": "正确：改变行驶方向必须提前用转向灯示意。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolte-cambi-direzioni-3": {
+      "verdict": "VERO",
+      "key_it": "l'indicatore di direzione deve rimanere in funzione per l'intera durata della manovra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: during a turn-around the direction indicator must stay on for the whole duration of the manoeuvre.",
+        "ru": "Верно: при перестроении указатель поворота должен гореть всё время манёвра.",
+        "zh": "正确：掉头过程中转向灯必须全程保持开启。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolte-cambi-direzioni-6": {
+      "verdict": "FALSO",
+      "key_it": "è obbligatorio fare uso delle segnalazioni acustiche (clacson o trombe)",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: changing direction does not require using the horn or other acoustic signals. The direction indicator is what informs other road users.",
+        "ru": "Неверно: смена направления не требует звуковых сигналов — клаксона или труб. Других участников движения информирует указатель поворота.",
+        "zh": "错误：改变方向不需要使用喇叭或号角等声音信号。转向灯才是告知其他道路使用者的方式。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-doppio-senso-marcia-0": {
+      "verdict": "VERO",
+      "key_it": "per svoltare a sinistra non si deve prendere contromano la strada in cui si svolta",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when turning left on a two-way road you must not enter the opposite side of the road you are turning into — that would be driving against traffic.",
+        "ru": "Верно: при повороте налево на двустороннюю дорогу нельзя заехать на её встречную сторону — это движение против хода.",
+        "zh": "正确：在双向道路上左转时，不得驶入所进入道路的对向一侧——那是逆行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-doppio-senso-marcia-4": {
+      "verdict": "FALSO",
+      "key_it": "per svoltare a sinistra ci si deve tenere lungo il margine destro della carreggiata",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: when turning left on a two-way road you do not hug the right edge of the carriageway. You position to the left so as to make the turn safely, giving way to oncoming traffic.",
+        "ru": "Неверно: при повороте налево на двусторонней дороге не держатся правого края проезжей части. Нужно сместиться влево, чтобы безопасно завершить поворот, уступив встречным.",
+        "zh": "错误：在双向道路左转时，不应紧贴车道右缘。应向左偏移以便安全完成转弯，同时让行对向车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-doppio-senso-marcia-5": {
+      "verdict": "FALSO",
+      "key_it": "è necessario arrestarsi prima di completare la manovra, anche se non sopraggiungono veicoli",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not have to stop before completing a left turn even when no vehicles are approaching. You yield to oncoming traffic; if none comes, you complete the turn.",
+        "ru": "Неверно: останавливаться перед завершением поворота налево, если встречные не приближаются, не нужно. Уступают встречным; если их нет — поворот завершается.",
+        "zh": "错误：即使没有来车，也不需在完成左转前停车。应让行对向车辆；若没有来车，则完成转弯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-7": {
+      "verdict": "FALSO",
+      "key_it": "la svolta a sinistra si effettua immettendosi in una corsia qualsiasi",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: on a one-way carriageway with parallel lanes you do not turn left into just any lane. The turn is done using the appropriate lane, not a random one.",
+        "ru": "Неверно: на односторонней проезжей части с параллельными полосами поворот налево не делают в любую попавшуюся полосу. Поворот выполняется по соответствующей полосе, а не по случайной.",
+        "zh": "错误：在单向多车道上左转时，不能驶入任意车道。转弯应按对应车道进行，而非随意选择。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-obbligo-precedenza-0": {
+      "verdict": "VERO",
+      "key_it": "è obbligatorio dare la precedenza ai veicoli circolanti su rotaie (tram e treni), salvo diversa segnalazione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: at junctions you must give way to rail vehicles — trams and trains — unless the signals say otherwise.",
+        "ru": "Верно: на перекрёстках уступают рельсовым транспортным средствам — трамваям и поездам, — если сигналы не говорят иного.",
+        "zh": "正确：在路口必须让行有轨车辆——电车和火车——另有指示除外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-obbligo-precedenza-2": {
+      "verdict": "VERO",
+      "key_it": "E' obbligatorio dare la precedenza a tutti i veicoli circolanti sulle strade quando si effettua l'inversione del senso di marcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when reversing your direction you must give way to all vehicles on the road.",
+        "ru": "Верно: при перестроении (смене направления) уступают всем движущимся по дороге автомобилям.",
+        "zh": "正确：掉头时必须让行道路上所有行驶的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-obbligo-precedenza-3": {
+      "verdict": "VERO",
+      "key_it": "E' obbligatorio dare la precedenza a tutti i veicoli quando si effettua la retromarcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when moving in reverse you must give way to all other vehicles.",
+        "ru": "Верно: при движении задним ходом уступают всем остальным автомобилям.",
+        "zh": "正确：倒车行驶时须让行所有其他车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-obbligo-precedenza-8": {
+      "verdict": "FALSO",
+      "key_it": "E' obbligatorio dare la precedenza a tutti i veicoli circolanti negli incroci regolati da semaforo a luce gialla lampeggiante",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: at a junction with a flashing amber light there is no obligation to give way to all vehicles. A flashing amber light is a warning, and priority follows the usual junction rules.",
+        "ru": "Неверно: на перекрёстке с мигающим жёлтым сигналом нет обязанности уступать всем. Мигающий жёлтый — это предупреждение, а приоритет определяется обычными правилами перекрёстка.",
+        "zh": "错误：在闪黄灯的路口，没有义务让行所有车辆。闪黄灯是警示，优先权仍按常规路口规则确定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-obbligo-precedenza-9": {
+      "verdict": "FALSO",
+      "key_it": "E' obbligatorio dare la precedenza a tutti i veicoli circolanti quando si svolta a sinistra",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: turning left does not make you yield to all vehicles. You give way to the oncoming traffic from the opposite direction; the rest of the traffic keeps its normal priority.",
+        "ru": "Неверно: при повороте налево не уступают всем автомобилям. Уступают встречным со встречного направления, остальное движение сохраняет обычный приоритет.",
+        "zh": "错误：左转时并非让行所有车辆。只需让行对向车道的来车，其余交通流保持正常优先权。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-vicinanza-incrocio-1": {
+      "verdict": "VERO",
+      "key_it": "ci si deve spostare per tempo sulla corsia destinata alla direzione che si intende prendere",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: approaching an intersection you should move in good time into the lane intended for the direction you are going to take.",
+        "ru": "Верно: приближаясь к перекрёстку, нужно заблаговременно перестроиться в полосу, предназначенную для выбранного направления.",
+        "zh": "正确：接近路口时应提前驶入所选方向对应的车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-vicinanza-incrocio-2": {
+      "verdict": "VERO",
+      "key_it": "si deve segnalare per tempo l'intenzione di svoltare",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: approaching an intersection you must signal your intention to turn in good time.",
+        "ru": "Верно: приближаясь к перекрёстку, нужно заблаговременно объявить намерение повернуть.",
+        "zh": "正确：接近路口时应提前示意转弯意图。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-vicinanza-incrocio-4": {
+      "verdict": "VERO",
+      "key_it": "è consentito impegnarlo solo se si ha la possibilità di proseguire e liberarlo",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: you may enter an intersection only if you can go through and clear it — do not enter a jammed junction from which you cannot exit.",
+        "ru": "Верно: на перекрёсток въезжают только если есть возможность проехать его и освободить — не въезжай на затор, откуда не сможешь выбраться.",
+        "zh": "正确：只有能够驶过并驶离路口时才可进入——不要驶入无法驶出的拥堵路口。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-vicinanza-incrocio-5": {
+      "verdict": "VERO",
+      "key_it": "si deve usare la massima prudenza per evitare incidenti",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: approaching an intersection you must use the greatest caution to avoid accidents.",
+        "ru": "Верно: приближаясь к перекрёстку, нужно проявлять максимальную осторожность, чтобы избежать ДТП.",
+        "zh": "正确：接近路口时必须格外谨慎以避免事故。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
