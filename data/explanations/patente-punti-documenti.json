@@ -520,6 +520,266 @@
    "source": "ai-draft",
    "model": "offline-ai-draft",
    "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-A-13": {
+   "verdict": "FALSO",
+   "key_it": "in ogni caso necessario aver compiuto almeno 24 anni di età",
+   "chapter": "ch16",
+   "why": {
+    "en": "False: 24 is not the age \"in every case\" for A — below 24 the A license is already reachable through graduated access, having held A2 for 2 years.",
+    "ru": "Неверно: 24 — не «в любом случае» возраст для A: и ниже 24 путь к A уже открыт через постепенный доступ, когда A2 в руках 2 года.",
+    "zh": "错误：24 岁并非“任何情况下”考 A 的年龄——24 岁之下，持有 A2 满 2 年即可通过渐进通道取得 A。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B1-0": {
+   "verdict": "VERO",
+   "key_it": "può essere conseguita a 16 anni di età",
+   "chapter": "ch16",
+   "why": {
+    "en": "True: B1 is one of the categories reachable from 16 — like A1, its minimum age is lower than the 18 of category B.",
+    "ru": "Верно: B1 — одна из категорий, доступных с 16 лет, как и A1, её минимальный возраст ниже, чем 18 у категории B.",
+    "zh": "正确：B1 是可以从 16 岁起取得的类别之一——与 A1 一样，其最低年龄低于 B 类的 18 岁。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B1-4": {
+   "verdict": "FALSO",
+   "key_it": "tutti i tricicli a motore",
+   "chapter": "ch16",
+   "why": {
+    "en": "False: B1 is not the key to \"all motor tricycles\" — B1 opens the low-power tier; more powerful tricycles sit with category B, on national territory only and with a higher age.",
+    "ru": "Неверно: B1 — не ключ к «всем мотоциклам с коляской»: B1 открывает класс малой мощности, тогда как более мощные — за категорией B, только по Италии и с более старшим возрастом.",
+    "zh": "错误：B1 并非“所有三轮摩托车”的通行证——B1 对应低功率档位，更强大的三轮摩托车归 B 类管（仅限意大利，且年龄更高）。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B1-5": {
+   "verdict": "FALSO",
+   "key_it": "le autovetture monoposto, o con un massimo di tre posti",
+   "chapter": "ch16",
+   "why": {
+    "en": "False: B1 does not open \"single-seater cars or cars with up to 3 seats, even without passengers\" — that is not what B1 covers.",
+    "ru": "Неверно: B1 не даёт право на «одноместные или до трёх мест, даже без пассажиров» — это не то, на что открывается B1.",
+    "zh": "错误：B1 并不授权“单人座或最多三座的轿车，即使不载乘客”——这不是 B1 覆盖的范围。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B1-6": {
+   "verdict": "FALSO",
+   "key_it": "abilita anche alla guida dei veicoli che si possono condurre con la patente A1",
+   "chapter": "ch16",
+   "why": {
+    "en": "False: B1 is a separate low-power tier — it does not include the A1 tier; A1 is a different category.",
+    "ru": "Неверно: B1 — самостоятельный класс малой мощности, и он не включает класс A1: A1 — отдельная категория.",
+    "zh": "错误：B1 是独立的低功率档位，并不包含 A1 档位——A1 是另一类别。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B1-7": {
+   "verdict": "FALSO",
+   "key_it": "dovrà sostenere solo un esame teorico integrativo",
+   "chapter": "ch16",
+   "why": {
+    "en": "False: moving from B1 to B is not \"only a supplementary theory exam\" — B is a separate category that must be passed in full, B1 does not shorten it.",
+    "ru": "Неверно: переход с B1 на B — это не «только дополнительный теоретический экзамен»: B — отдельная категория, сдаётся в полном объёме, B1 его не сокращает.",
+    "zh": "错误：从 B1 换到 B 并非“只补考一门理论”——B 是独立类别，须完整通过考试，B1 不会缩短流程。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B-1": {
+   "verdict": "VERO",
+   "key_it": "anche se trainanti un rimorchio leggero (massa fino a 750 chilogrammi)",
+   "chapter": "ch16",
+   "why": {
+    "en": "True: B covers cars even when they tow a light trailer — up to 750 kg; the light trailer rides along under the same category.",
+    "ru": "Верно: B покрывает легковые автомобили даже с прицепом — лёгким, до 750 кг; такой прицеп идёт по той же категории.",
+    "zh": "正确：B 类涵盖牵引轻挂车的轿车——挂车至 750 公斤，轻挂车在同一类别内。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B-4": {
+   "verdict": "VERO",
+   "key_it": "purché la massa massima autorizzata del complesso non superi 3,5 tonnellate",
+   "chapter": "ch16",
+   "why": {
+    "en": "True: B also opens a heavy trailer (over 750 kg) with a car — as long as the whole combination stays at or under 3,5 tonnes.",
+    "ru": "Верно: B открывает и тяжёлый прицеп (свыше 750 кг) к легковому авто — при условии, что весь состав не превышает 3,5 тонны.",
+    "zh": "正确：B 类还可牵引重挂车（超过 750 公斤）——只要整个组合不超过 3.5 吨。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B-5": {
+   "verdict": "VERO",
+   "key_it": "ma solo sul territorio nazionale (Italia)",
+   "chapter": "ch16",
+   "why": {
+    "en": "True: B opens the A1-tier vehicles, but only on Italian soil — that national-only limit is exactly what the statement says.",
+    "ru": "Верно: B открывает класс A1, но только по итальянской территории — ограничение «только по стране» здесь и есть суть утверждения.",
+    "zh": "正确：B 类可驾驶 A1 档位的车辆，但仅限意大利境内——“仅限本国”正是该陈述的要点。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B-6": {
+   "verdict": "VERO",
+   "key_it": "abilita anche alla guida dei veicoli che si possono condurre con le patenti AM e B1",
+   "chapter": "ch16",
+   "why": {
+    "en": "True: the higher category includes the lower — B covers the vehicles of AM and B1.",
+    "ru": "Верно: старшая категория включает младшие — B покрывает классы AM и B1.",
+    "zh": "正确：高等级涵盖低等级——B 类覆盖 AM 与 B1 的车辆。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B-7": {
+   "verdict": "VERO",
+   "key_it": "solo sul territorio nazionale (Italia) e se il conducente ha almeno 21 anni",
+   "chapter": "ch16",
+   "why": {
+    "en": "True: with B, the motor tricycles over 15 kW are open — but only in Italy and only from 21, which is exactly what the statement limits it to.",
+    "ru": "Верно: с B открываются мотоциклы с коляской свыше 15 кВт — но только по Италии и только с 21 года, что и есть это ограничение.",
+    "zh": "正确：持有 B 类可驾驶功率超过 15 千瓦的三轮摩托车——但仅限意大利境内且须年满 21 岁，这正是该陈述的限定。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B-8": {
+   "verdict": "VERO",
+   "key_it": "autocarri di massa massima autorizzata non superiore a 3.500 chilogrammi",
+   "chapter": "ch16",
+   "why": {
+    "en": "True: B is not just for cars — it also covers trucks up to 3,500 kg, even with a light trailer.",
+    "ru": "Верно: B — не только легковые: покрывает и грузовики до 3.500 кг, даже с лёгким прицепом.",
+    "zh": "正确：B 类不只针对轿车——还涵盖总质量至 3.500 公斤的卡车，即使牵引轻挂车。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B-9": {
+   "verdict": "VERO",
+   "key_it": "tutti i tipi di quadricicli a motore",
+   "chapter": "ch16",
+   "why": {
+    "en": "True: B opens motor quadricycles of all types — no extra restriction is hiding here.",
+    "ru": "Верно: B открывает все типы моторных квадрициклов — дополнительных ограничений здесь нет.",
+    "zh": "正确：B 类可驾驶所有类型的动力四轮车——此处无附加限制。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B-10": {
+   "verdict": "FALSO",
+   "key_it": "abilita anche alla guida dei veicoli che si possono condurre con le patenti A2 e A",
+   "chapter": "ch16",
+   "why": {
+    "en": "False: inclusion works one way — B does not open the A2 and A tiers; those are separate higher motorcycle categories.",
+    "ru": "Неверно: включение работает в одну сторону — B не открывает классы A2 и A: это отдельные старшие категории мотоциклов.",
+    "zh": "错误：包含关系是单向的——B 并不涵盖 A2 与 A 档位，它们是独立的高级摩托车类别。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B-15": {
+   "verdict": "FALSO",
+   "key_it": "abilita a condurre solo autovetture con al massimo 9 posti",
+   "chapter": "ch16",
+   "why": {
+    "en": "False: \"only cars with at most 9 seats\" is not the B limit — B is defined by vehicle mass, not by a seat-count ceiling; the trap is the word \"only\".",
+    "ru": "Неверно: «только легковые до 9 мест» — это не предел B: предел B задаётся массой транспортного средства, а не числом мест; ловушка — слово «только».",
+    "zh": "错误：“仅限最多 9 座的轿车”并非 B 类的界限——B 按车辆质量定义，而非座位数上限；陷阱就在“仅”字。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B-16": {
+   "verdict": "FALSO",
+   "key_it": "rimorchi aventi massa superiore a 3.500 chilogrammi",
+   "chapter": "ch16",
+   "why": {
+    "en": "False: B does not open trailers over 3.500 kg — the category B ceiling stops at that mass for the combination; heavier sets need a higher category.",
+    "ru": "Неверно: B не открывает прицепы свыше 3.500 кг — потолок B для состава именно там; более тяжёлые составы требуют старшей категории.",
+    "zh": "错误：B 类并不涵盖质量超过 3.500 公斤的挂车——B 类的上限就在那里；更重的组合需更高级别。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B-18": {
+   "verdict": "FALSO",
+   "key_it": "conseguita dopo i 24 anni di età, abilita alla guida di tutti i motocicli",
+   "chapter": "ch16",
+   "why": {
+    "en": "False: holding B from 24 does not turn it into \"all motorcycles\" — B is a car/low-power tier, motorcycles (A2, A) stay separate categories.",
+    "ru": "Неверно: B, полученная после 24, не превращается в «все мотоциклы»: B — легковой класс, мотоциклы (A2, A) остаются отдельными категориями.",
+    "zh": "错误：24 岁后取得 B 并不会让它变成“所有摩托车”——B 是轿车/低功率档位，摩托车（A2、A）仍是独立类别。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Patente-categoria-B-19": {
+   "verdict": "FALSO",
+   "key_it": "consente di guidare tutti gli autocaravan (camper)",
+   "chapter": "ch16",
+   "why": {
+    "en": "False: B does not open \"all campers\" — the campers sit under the same mass rules as any other B vehicle; \"all\" is the trap.",
+    "ru": "Неверно: B не открывает «все кемперы» — кемперы подчиняются тем же правилам по массе, что и любой другой B-класс; «все» здесь — ловушка.",
+    "zh": "错误：B 类并不涵盖“所有房车”——房车与其他 B 类车辆一样受质量规则约束；“所有”是陷阱。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Codice-armonizzato-96-0": {
+   "verdict": "VERO",
+   "key_it": "purché la massa massima autorizzata del complesso non sia superiore a 4.250 chilogrammi",
+   "chapter": "ch16",
+   "why": {
+    "en": "True: the harmonized code 96 extends B to heavier combinations — a car with a heavy trailer (over 750 kg) is open as long as the combination stays at or under 4.250 kg.",
+    "ru": "Верно: код 96 расширяет B на более тяжёлые составы: легковой автомобиль с тяжёлым прицепом (свыше 750 кг) открыт, пока весь состав не превышает 4.250 кг.",
+    "zh": "正确：协调代码 96 将 B 类扩展至更重的组合——牵引重挂车（超过 750 公斤）的轿车，只要组合不超过 4.250 公斤即可。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
+  },
+  "patente-punti-documenti-Codice-armonizzato-96-1": {
+   "verdict": "VERO",
+   "key_it": "può essere conseguita anche successivamente al conseguimento della patente di categoria B",
+   "chapter": "ch16",
+   "why": {
+    "en": "True: code 96 is not bound to the first B exam — it can be taken later, after B is already held, by passing a driving test on the specific vehicle.",
+    "ru": "Верно: код 96 не привязан к первому экзамену B: его можно получить и позже, когда B уже есть, сдав практическую проверку на конкретном составе.",
+    "zh": "正确：代码 96 不绑定于首次 B 考试——可在已取得 B 之后，通过特定车辆的驾驶测试再取得。"
+   },
+   "source": "ai-draft",
+   "model": "offline-ai-draft",
+   "at": "2026-09-30"
   }
  }
 }
