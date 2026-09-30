@@ -2457,6 +2457,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-3": {
+      "verdict": "VERO",
+      "key_it": "non ci dobbiamo fermare a chiedere informazioni, per non ostacolare il flusso",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: stopping to ask someone for directions near the intersection would block the flow — the correct move is to keep the lane and correct the mistake later.",
+        "ru": "Верно: останавливаться, чтобы спросить дорогу у перекрёстка, — значит перекрывать поток: правильно ехать в своей полосе и поправить ошибку позже.",
+        "zh": "正确：临近路口停下来问路会阻碍车流——正确做法是保持车道，事后纠正错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-4": {
+      "verdict": "VERO",
+      "key_it": "dobbiamo procedere nel senso voluto dalla segnaletica, dando le dovute precedenze",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if you are in the wrong preselection lane you must follow the direction the markings order, giving the due priority — changing lanes over a solid line is not an option.",
+        "ru": "Верно: оказавшись не в той полосе, нужно двигаться в направлении, которое требует разметка, уступая по правилам — перестраиваться через сплошную нельзя.",
+        "zh": "正确：若选错导向车道，必须按标线指示方向行驶并按规定让行——不得越过实线变道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-5": {
+      "verdict": "VERO",
+      "key_it": "bisogna procedere con prudenza e accortezza",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if you cannot immediately tell who has priority at an intersection, proceed with care and alertness — reducing speed lets you yield if needed.",
+        "ru": "Верно: если сразу непонятно, кто имеет преимущество на перекрёстке, ехать надо осторожно и внимательнее — сниженная скорость позволяет уступить при необходимости.",
+        "zh": "正确：若无法立即判断路口谁有优先权，应谨慎小心地通过——低速行驶便于需要时让行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-8": {
+      "verdict": "FALSO",
+      "key_it": "dobbiamo chiedere consiglio agli agenti del traffico",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: you do not stop to ask a traffic officer for advice at the intersection — the right move is to follow the allowed direction and keep traffic flowing.",
+        "ru": "Ложь: у перекрёстка не останавливаются ради консультации инспектора: правильно следовать разрешённому направлению и не мешать движению.",
+        "zh": "错误：到路口不应当停下来向交警征求意见——正确做法是按允许方向行驶，不阻碍交通。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-10": {
+      "verdict": "FALSO",
+      "key_it": "dobbiamo accostarci sulla destra e fermarci finché non sia passata la colonna",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: pulling over to the right and waiting for the whole queue to pass would itself create an obstruction — you must keep moving in the allowed direction.",
+        "ru": "Ложь: прижиматься к правому краю и ждать, пока проедет вся колонна, — это сама по себе помеха: надо продолжать движение в разрешённом направлении.",
+        "zh": "错误：靠右停车等整个车队通过本身就会造成阻碍——必须按允许方向继续行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-11": {
+      "verdict": "FALSO",
+      "key_it": "cerchiamo di retrocedere, con prudenza, fino al punto in cui cessano le strisce continue",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: reversing back along the road to change the lane is dangerous and forbidden — the mistake is corrected later, not by backing up in the flow.",
+        "ru": "Ложь: отступать назад до начала сплошных линий, чтобы сменить полосу, — опасно и запрещено: ошибку исправляют позже, а не задним ходом в потоке.",
+        "zh": "错误：倒车退回实线起点以更换车道既危险又被禁止——错误应事后纠正，不得在车流中倒车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-12": {
+      "verdict": "FALSO",
+      "key_it": "dobbiamo arrivare al semaforo e attendere che la luce ci consenta di effettuare il cambio di corsia",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: you cannot wait at the light to change into the right lane — once the markings fix your lane, the direction is set; you follow it and choose another route later.",
+        "ru": "Ложь: ждать у светофора, когда можно перестроиться, — нельзя: разметка уже зафиксировала направление, вам надо её выполнить, а маршрут выбрать позже.",
+        "zh": "错误：在信号灯处等待以便变道是不允许的——标线已确定方向，你须按标线行驶，之后再另选路线。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-centro-abitato-pedone-0": {
+      "verdict": "VERO",
+      "key_it": "è necessario ridurre la velocità e, occorrendo, fermarsi per non investirlo",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a pedestrian not yielding outside a crossing still has the driver's duty in the balance — you must slow down and stop if needed so as not to run him over.",
+        "ru": "Верно: даже пешеход вне перехода требует, чтобы водитель пересмотрел свои действия: надо снизить скорость и, при необходимости, остановиться, чтобы не сбить.",
+        "zh": "正确：即使行人不在人行横道上，驾驶员也必须减速、必要时停车，以免撞伤行人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-centro-abitato-pedone-1": {
+      "verdict": "VERO",
+      "key_it": "è opportuno rallentare e avvisarlo con un breve colpo di clacson, in caso di pericolo immediato",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: slowing down is always required, and in a built-up area a short horn tap is allowed specifically to warn of an immediate danger.",
+        "ru": "Верно: снижать скорость нужно всегда, а в населённом пункте короткий сигнал клаксона допустим именно для предупреждения об непосредственной опасности.",
+        "zh": "正确：必须减速，且在城区允许以短促鸣笛警示行人直接危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-centro-abitato-pedone-2": {
+      "verdict": "VERO",
+      "key_it": "è necessario ridurre la velocità fino a fermarsi tempestivamente, se occorre",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the driver must be ready to stop in time — in the urban environment the pedestrian is the weak road user, so the car, not the person, must yield in the end.",
+        "ru": "Верно: водитель должен быть готов остановиться вовремя — в городской среде пешеход уязвимый участник, в итоге уступить должна машина, а не человек.",
+        "zh": "正确：驾驶员必须随时准备及时停车——城市环境中行人属于弱势群体，最终必须避让的是车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-centro-abitato-pedone-3": {
+      "verdict": "FALSO",
+      "key_it": "è opportuno nelle ore notturne, procedere con gli abbaglianti accesi così che possa accorgersi di noi",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the high beam is forbidden inside built-up areas — driving with it at night in town would blind the pedestrian exactly when you need to see him.",
+        "ru": "Ложь: в населённых пунктах дальний свет запрещён — ехать по городу ночью с дальним и ослепить пешехода, которого надо видеть, — наоборот.",
+        "zh": "错误：城区内禁止使用远光灯——夜间在城区开远光灯会正好致盲本应看见的行人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-centro-abitato-pedone-5": {
+      "verdict": "FALSO",
+      "key_it": "è necessario proseguire, senza curarci di lui, perché abbiamo la precedenza",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: «we have priority, so we ignore him» is the wrong logic — near a pedestrian in the urban area you must always be ready to yield and stop.",
+        "ru": "Ложь: «у нас преимущество, значит ему не мешаем» — неверная логика: рядом с пешеходом в городе всегда нужно быть готовым уступить и остановиться.",
+        "zh": "错误：“我们有优先权所以不理会他”是错误逻辑——在城区靠近行人时必须随时准备让行和停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corteo-centro-abitato-4": {
+      "verdict": "VERO",
+      "key_it": "eviti di retrocedere se ciò ostacola il flusso della circolazione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when meeting a procession in town you should not back up if it would obstruct the flow — reversing in dense traffic creates real danger.",
+        "ru": "Верно: встретив шествие в городе, нельзя отступать назад, если это перекроет поток — задний ход в плотном движении создаёт реальную опасность.",
+        "zh": "正确：在城区遇到游行队伍时，若倒车会阻碍车流则不应倒车——密集车流中倒车会造成实际危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corteo-centro-abitato-5": {
+      "verdict": "VERO",
+      "key_it": "non faccia inversione di marcia, qualora ciò costituisca intralcio alla circolazione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: turning around against the flow because a procession blocks your way is an obstruction in itself — patience, not a U-turn, is the right response.",
+        "ru": "Верно: разворачиваться в противоход из-за шествия — это уже сама помеха: правильный ответ — терпение, а не разворот.",
+        "zh": "正确：因游行队伍挡路而逆行掉头本身就是阻碍——正确应对是耐心等待而非掉头。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corteo-centro-abitato-8": {
+      "verdict": "FALSO",
+      "key_it": "accenda le luci di profondità per vedere meglio ed evitare incidenti",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: «luce di profondità» (high beam) is forbidden inside built-up areas — the procession is met at reduced speed and normal low-beam lighting, not with the high beam.",
+        "ru": "Ложь: «глубинный свет» (дальний) запрещён в населённых пунктах — шествие обходят на сниженной скорости с обычным ближним светом, а не с дальним.",
+        "zh": "错误：“远光灯”在城区内被禁止——应对游行队伍应降低速度、使用普通近光灯，而非远光。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corteo-centro-abitato-9": {
+      "verdict": "FALSO",
+      "key_it": "se proprio ha molta fretta, passi rapidamente usando il clacson in maniera continua",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: «in a hurry, pass quickly with continuous horn» inverts the rule — near a procession you must slow down, and the continuous horn is an abuse of the signal.",
+        "ru": "Ложь: «срочно, промчаться с непрерывным клаксоном» — наоборот: рядом с шествием надо замедлиться, а непрерывный клаксон — злоупотребление сигналом.",
+        "zh": "错误：“赶时间就按着喇叭快速通过”恰好反了——遇到游行队伍必须减速，持续鸣笛属于滥用信号。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incrocio-urbano-0": {
+      "verdict": "VERO",
+      "key_it": "è opportuno attendere pazientemente la ripresa della marcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if the car ahead is slow to move at the green, patience is the right response — rushing in or blocking the intersection creates danger, not speed.",
+        "ru": "Верно: если машина впереди медленно трогается на зелёном, правильный ответ — терпение: резкие манёвры и блокировка перекрёстка создают опасность, а не скорость.",
+        "zh": "正确：前车在绿灯时迟迟不启动，正确应对是耐心等待——抢行或堵死路口只会制造危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incrocio-urbano-1": {
+      "verdict": "VERO",
+      "key_it": "è opportuno evitare di suonare il clacson con insistenza e di provocare una situazione di intolleranza",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the horn in a built-up area is allowed only for immediate danger — an insistent honk at a slow driver provokes road rage and is a wrong use of the signal.",
+        "ru": "Верно: клаксон в населённом пункте допустим только при непосредственной опасности — настойчивое сигнализирование медленному водителю провоцирует дорожную агрессию.",
+        "zh": "正确：城区内鸣笛仅限直接危险时使用——对慢速车辆持续鸣笛会激化路怒，属于滥用信号。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incrocio-urbano-2": {
+      "verdict": "VERO",
+      "key_it": "prestare aiuto all'automobilista rimasto fermo",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: helping a driver stranded at the light is a duty — the code obliges you to assist a fellow road user in difficulty, when you can do it without danger.",
+        "ru": "Верно: помогать водителю, застрявшему у светофора, — обязанность: код обязывает оказывать помощь попавшим в затруднение, когда это можно сделать без опасности.",
+        "zh": "正确：帮助在信号灯前抛锚的驾驶员是义务——在不妨碍自身安全的前提下，法规要求帮助陷入困境的交通参与者。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incrocio-urbano-3": {
+      "verdict": "VERO",
+      "key_it": "è vietato l'uso del segnalatore acustico per sollecitare il conducente",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: in a built-up area the horn may only be used to warn of an immediate danger — urging the car ahead to move at the green is not such a danger, so it is forbidden.",
+        "ru": "Верно: в населённом пункте клаксон можно использовать только для предупреждения об непосредственной опасности — подгонять впереди идущую на зелёном она не является, значит запрещено.",
+        "zh": "正确：城区内鸣笛仅可用于警示直接危险——催促前车在绿灯时启动不属于此范围，因此被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
