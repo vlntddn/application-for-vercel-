@@ -3237,6 +3237,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-20": {
+      "verdict": "FALSO",
+      "key_it": "I veicoli che vogliono effettuare una svolta a sinistra devono tenersi il più possibile vicino al margine destro",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: keeping close to the RIGHT edge for a left turn is a trap — the turn then starts too late from the wrong side, cutting the oncoming flow; the left turn approaches the center.",
+        "ru": "Ложь: «для поворота налево держаться у правого края» — ловушка: манёвр начнётся слишком поздно с неверной стороны и перережет встречный поток; налево подъезжают к центру.",
+        "zh": "错误：左转贴近右缘是陷阱——操作会从错误一侧过晚开始，切断对向车流；左转应靠近中心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-21": {
+      "verdict": "FALSO",
+      "key_it": "I filobus devono, di norma, circolare il più possibile vicino al margine sinistro",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: trams do not ride the LEFT edge as a rule — the same right-side logic applies: they stay on the right of the carriageway, and the left is only for overtaking or turning.",
+        "ru": "Ложь: трамваи не едут «у левого края»: действует та же правосторонняя логика — держатся правой части проезжей части, левая только для обгона или поворота.",
+        "zh": "错误：电车原则上并不贴左侧行驶——同样适用靠右逻辑，贴右侧行驶，左侧仅用于超车或转弯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-utilizzo-corsie-file-parallele-24": {
+      "verdict": "FALSO",
+      "key_it": "i motocicli possono circolare sulle corsie di emergenza",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: motorcycles in heavy traffic are not allowed to use the emergency lane — it is reserved for vehicles in trouble, emergencies and authorized services, not for beating the queue.",
+        "ru": "Ложь: мотоциклам в плотном потоке нельзя по экстренной полосе: она для неисправных, ЧП и разрешённых служб, а не для объезда очереди.",
+        "zh": "错误：摩托车在交通繁忙时不得走应急车道——该车道留给故障车辆、紧急情况及许可服务，不能用来超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-attenzione-cambio-corsia-2": {
+      "verdict": "VERO",
+      "key_it": "bisogna controllare che la corsia da impegnare sia libera davanti per un tratto sufficiente",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before merging you must check that the lane you are entering is free ahead for a sufficient stretch — you need a gap to settle in, not just «nothing right behind».",
+        "ru": "Верно: перед перестроением проверяйте, что впереди в целевой полосе свободно достаточный участок: нужен зазор для заезда, а не только «сразу за спиной пусто».",
+        "zh": "正确：变道前须确认目标车道前方有足够长度的空档——需要能顺利驶入的间隙，而不是只看正后方无车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-attenzione-cambio-corsia-5": {
+      "verdict": "VERO",
+      "key_it": "bisogna controllare che sulla corsia che si vuole occupare non stiano arrivando altri veicoli",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a merge is only safe when no vehicle is currently closing the gap you plan to use — checking for approaching cars in the target lane is the essence of the maneuver.",
+        "ru": "Верно: перестроение безопасно, только когда в зазоре, который вы выбираете, никто не успевает: проверка на приближающихся в целевой полосе — суть манёвра.",
+        "zh": "正确：变道只有在目标车道没有车辆正在接近你所选空档时才安全——检查来车正是操作核心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-attenzione-cambio-corsia-6": {
+      "verdict": "FALSO",
+      "key_it": "circolare a cavallo delle strisce di corsia",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: straddling the lane lines to turn is not allowed in cities — a turn is executed from the lane that allows it, after a proper merge and signal, not «straddling».",
+        "ru": "Ложь: поворачивать «на седле» полосовой разметки в городе нельзя: поворот выполняется из полосы, где он разрешён, после нормального перестроения и сигнала.",
+        "zh": "错误：城市路口压线行驶转弯不可行——转弯应在允许该操作的导向车道内，完成正规变道并打转向灯后进行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-attenzione-cambio-corsia-7": {
+      "verdict": "FALSO",
+      "key_it": "l'uso dell'indicatore di direzione è facoltativo se ci sono le strisce discontinue",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the turn indicator is never «optional because the line is broken» — a broken line only allows crossing, it does not waive the signal; you must always indicate.",
+        "ru": "Ложь: поворотник «не обязателен, потому что линия прерывистая» — неверно: прерывистая разрешает пересечение, но не освобождает от сигнала; указатель обязателен всегда.",
+        "zh": "错误：转向灯并非\"因为虚线就可省略\"——虚线只允许跨越，不豁免转向灯；任何情况下都必须打灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-attenzione-cambio-corsia-8": {
+      "verdict": "FALSO",
+      "key_it": "per immettersi nella corsia di destra, non occorre alcuna particolare attenzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: «merging into the right lane needs no special attention» is exactly how right-lane incidents happen — the same check applies: mirrors, blind spot, gap, signal.",
+        "ru": "Ложь: «въезд в правую полосу без особого внимания» — так как раз и происходят инциденты справа: та же проверка — зеркала, слепая зона, зазор, сигнал.",
+        "zh": "错误：\"并入右侧车道无需特别留意\"正是右侧事故根源——同样的检查：后视镜、盲区、空档、转向灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolte-cambi-direzioni-2": {
+      "verdict": "VERO",
+      "key_it": "Su strada a senso unico per svoltare a sinistra bisogna tenersi sul margine sinistro",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a one-way road there is no oncoming traffic, so a left turn is executed from the left edge — the position that matches the direction of the turn.",
+        "ru": "Верно: на односторонней дороге встречного потока нет, поэтому поворот налево выполняется от левого края — той позиции, что соответствует направлению манёвра.",
+        "zh": "正确：单行道没有对向车流，因此左转从左侧路缘出发——该位置与转弯方向一致。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-doppio-senso-marcia-2": {
+      "verdict": "VERO",
+      "key_it": "per svoltare a sinistra occorre inserirsi nelle corsie che consentono di proseguire in tale direzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a two-way road a left turn is planned in advance — you merge into the lane(s) designated for that direction, signal, and then turn from the correct position.",
+        "ru": "Верно: на двусторонней дороге поворот налево планируется заранее: перестраиваетесь в полосу(ы), разрешённые для этого направления, включаете указатель и лишь затем поворачиваете.",
+        "zh": "正确：双向道路左转需提前规划——并入允许该方向的导向车道、打转向灯后从正确位置转弯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-doppio-senso-marcia-3": {
+      "verdict": "FALSO",
+      "key_it": "è necessario spostarsi a sinistra della linea continua di mezzeria",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: moving to the LEFT of the continuous center line for a left turn is the most dangerous option — you end up driving in the oncoming lane before the turn.",
+        "ru": "Ложь: «пересечься левее сплошной оси, чтобы повернуть налево», — самый опасный вариант: вы окажетесь на встречной полосе ещё до начала поворота.",
+        "zh": "错误：左转前越过连续中线驶入对向一侧是最危险选项——在转弯开始前即驶入对向车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-0": {
+      "verdict": "VERO",
+      "key_it": "la svolta a sinistra si effettua segnalando in anticipo la manovra da compiere",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: even on a one-way road a left turn is announced in advance with the indicator — the cars behind and the cyclists beside you must see your intention before it starts.",
+        "ru": "Верно: даже на односторонней дороге поворот налево заранее объявляется поворотником: едущие сзади и идущие рядом велосипедисты должны увидеть ваше намерение до начала манёвра.",
+        "zh": "正确：即使在单行道上，左转也须提前打转向灯——后方车辆和旁边骑行者须在操作开始前知晓你的意图。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-1": {
+      "verdict": "VERO",
+      "key_it": "Durante la marcia per file parallele è consentito cambiare corsia per effettuare manovre di svolta",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: while forming parallel files you may change lanes to perform a turn — the lane change for the intended maneuver is exactly what the parallel queue is made for.",
+        "ru": "Верно: в параллельных колоннах можно менять полосу для выполнения поворота: перестроение под заданный манёвр — и есть смысл параллельной очереди.",
+        "zh": "正确：在并行排队时允许变道以完成转弯——为指定操作而变道，正是并行排队的目的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-2": {
+      "verdict": "VERO",
+      "key_it": "La marcia per file parallele è ammessa quando viene autorizzata dagli agenti del traffico",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: parallel files are allowed when a traffic officer authorizes them — his order is precisely what makes the maneuver legal and organized.",
+        "ru": "Верно: параллельные колонны допускаются, если это разрешил регулировщик: его распоряжение и делает манёвр законным и организованным.",
+        "zh": "正确：交通指挥员授权时，并行行驶才被允许——其指令使该操作合法且有序。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-3": {
+      "verdict": "VERO",
+      "key_it": "su strade a due corsie per senso di marcia ad un incrocio regolato da semaforo",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: on a road with two lanes per direction, parallel files at a signalized intersection are allowed — each lane keeps its own direction and the signal organizes the flow.",
+        "ru": "Верно: на дороге с двумя полосами на направление параллельные колонны у светофорного перекрёстка допустимы: каждая полоса держит своё направление, а сигнал организует поток.",
+        "zh": "正确：双向各有两车道的道路上，在信号灯路口并行行驶是允许的——各车道保持自己的方向，信号灯组织车流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-5": {
+      "verdict": "VERO",
+      "key_it": "lungo il tratto di strada che porta ad un incrocio regolato da agenti del traffico",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: you may form parallel files on the approach to a police-controlled intersection — the queue spreads across the available lanes toward the controlled junction.",
+        "ru": "Верно: к регулируемому перекрёстку можно подъезжать параллельными колоннами: очередь распределяется по доступным полосам к контролируемому узлу.",
+        "zh": "正确：在驶向交警指挥的路口路段上，可以形成并行车队——队伍在到达受控路口前分布到可用车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-8": {
+      "verdict": "FALSO",
+      "key_it": "lungo il tratto di strada che porta ad un incrocio non regolato da semaforo o da agenti del traffico",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: parallel files toward an UNcontrolled intersection are not allowed — without a signal or a policeman there is no organizer, and multiple files would collapse into a conflict zone.",
+        "ru": "Ложь: «к нерегулируемому перекрёстку — параллельными колоннами» — нельзя: без света или регулировщика нет организатора, и несколько колонн скатятся в зону конфликта.",
+        "zh": "错误：驶向无信号灯或无交警的路口路段不允许并行——没有指挥者，多车道队伍将变成冲突区。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-11": {
+      "verdict": "FALSO",
+      "key_it": "Nei centri urbani è consentito marciare per file parallele in qualunque condizione di traffico",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: «parallel files in the city, in any traffic condition» is too broad — parallel driving is allowed only where the road geometry and the intersection control make it safe.",
+        "ru": "Ложь: «в городе параллельно — при любом потоке» — слишком широко: параллельная колонна допустима только там, где геометрия дороги и регулировка делают её безопасной.",
+        "zh": "错误：\"城市内任何交通状况下均可并行\"过于宽泛——只有道路几何与路口管制使其安全时才允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-13": {
+      "verdict": "FALSO",
+      "key_it": "percorrendo la corsia di sinistra, bisogna mantenere in funzione l'indicatore di direzione sinistro",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: keeping the left indicator ON while riding the left lane in parallel files is a misuse of the signal — the indicator announces a maneuver, not a lane position.",
+        "ru": "Ложь: «в левой полосе параллельной колонны держать левый поворотник включённым» — неправильное применение: указатель объявляет манёвр, а не позицию в полосе.",
+        "zh": "错误：在并行排队时于左侧车道持续开启左转向灯是对转向灯的误用——转向灯用于预告操作，而非车道位置。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-durante-marcia-14": {
+      "verdict": "FALSO",
+      "key_it": "La marcia per file parallele non è ammessa se la strada è a una sola carreggiata",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the restriction is inverted — parallel files are exactly what a single carriageway with several lanes is for: the queue spreads across the lanes toward a controlled junction.",
+        "ru": "Ложь: ограничение перевёрнуто — параллельные колонны и есть то, для чего служат несколько полос одной проезжей части: очередь распределяется по полосам к контролируемому узлу.",
+        "zh": "错误：限制被颠倒了——并行车队正适用于一条具有多条车道的路面：队伍可向受控路口方向在各车道上铺开。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
