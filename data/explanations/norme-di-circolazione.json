@@ -2717,6 +2717,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-extraurbana-notte-0": {
+      "verdict": "VERO",
+      "key_it": "procedere con prudenza, usando le luci anabbaglianti",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: meeting a car with high beam on a rural road at night, the safe move is to keep your low beam and proceed cautiously — answering with high beam only blurs both drivers.",
+        "ru": "Верно: при встрече ночью за городом с машиной на дальнем свете правильно ехать аккуратно на ближнем — отвечать дальним лишь ослепит обоих водителей.",
+        "zh": "正确：夜间乡道会车时对方开远光灯，应保持近光灯谨慎行驶——以远光对射只会使双方都看不清。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-extraurbana-notte-1": {
+      "verdict": "VERO",
+      "key_it": "distogliere lo sguardo dal fascio luminoso",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if the oncoming car does not dip its beam, look away from the light toward the right edge — your eyes recover faster than if you stared into the beam.",
+        "ru": "Верно: если встречная не переключает свет, отводите взгляд от луча к правому краю дороги — глаза привыкают быстрее, чем при взгляде прямо в фары.",
+        "zh": "正确：对方未切换近光时，应将视线移开光束、看向右侧——比直视大灯更快恢复视力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-extraurbana-notte-2": {
+      "verdict": "VERO",
+      "key_it": "rallentare adeguatamente ed eventualmente fermarsi",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: reduced visibility from glare is a real risk factor, so slowing down proportionally — and stopping if you no longer see the road — is the correct defensive reaction.",
+        "ru": "Верно: ослепление снижает видимость, поэтому снижение скорости соразмерно риску, а при необходимости остановка — правильная оборонительная реакция.",
+        "zh": "正确：眩光降低能见度，按比例减速、必要时停车，是正确的防御性驾驶反应。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-extraurbana-notte-3": {
+      "verdict": "VERO",
+      "key_it": "tener conto della ridotta visibilità nel nostro comportamento di guida",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when the oncoming high beam cuts your vision, your driving must be adjusted to the conditions — speed, following distance and attention all go down a notch.",
+        "ru": "Верно: если встречный дальний свет режет зрение, манера вождения должна подстроиться под условия — скорость, дистанция и внимательность ужесточаются.",
+        "zh": "正确：远光灯影响视线时，驾驶行为必须适应路况——降低车速、加大距离、提高注意。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-extraurbana-notte-4": {
+      "verdict": "VERO",
+      "key_it": "evitare brusche manovre e cambi di corsia",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: while your vision is impaired by the glare, any sudden move or lane change is a gamble — holding the course calmly is the only safe option.",
+        "ru": "Верно: пока обзор испорчен ослеплением, любая резкая манёвренность или перестроение — риск: спокойно держать курс — единственный безопасный вариант.",
+        "zh": "正确：视线被眩光干扰时，任何突然变道都是冒险——保持车道冷静行驶最安全。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-extraurbana-notte-5": {
+      "verdict": "FALSO",
+      "key_it": "disporre il retrovisore interno in posizione antiabbagliante",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the anti-glare position of the inside mirror protects against the high beam of the car BEHIND you, not from the oncoming car — here it does nothing.",
+        "ru": "Ложь: антибликовое положение зеркала заднего вида защищает от дальнего света машины, едущей СЗАДИ, а не от встречной — тут оно бесполезно.",
+        "zh": "错误：车内后视镜的防眩位置是防后方车辆远光，对会车无效。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-extraurbana-notte-6": {
+      "verdict": "FALSO",
+      "key_it": "a nostra volta con i fari abbaglianti",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: answering high beam with high beam is a classic mistake — it blinds the other driver and yours as well; you keep the low beam and adjust your speed.",
+        "ru": "Ложь: отвечать дальним на дальний — классическая ошибка: ослепляет и второго водителя, и вас; правильный ответ — ближний свет и подстроенная скорость.",
+        "zh": "错误：以远光回应远光会致双方驾驶员眩目，应保持近光灯并调整车速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-extraurbana-notte-7": {
+      "verdict": "FALSO",
+      "key_it": "occorre fermarsi immediatamente",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: the oncoming car with high beam is not an obstacle requiring an immediate stop on the carriageway — the right response is caution, reduced speed, and low beam.",
+        "ru": "Ложь: встречная машина с дальним светом — не препятствие, требующее немедленной остановки на проезжей части: верные действия — осторожность, снижение скорости и ближний свет.",
+        "zh": "错误：对方开远光灯并非障碍物，不需要立即停在行车道上，正确做法是谨慎驾驶、减速并保持近光灯。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-extraurbana-notte-8": {
+      "verdict": "FALSO",
+      "key_it": "azionare le trombe bitonali per richiamare l'attenzione del veicolo incrociante",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: honking at the oncoming driver to make him dip his beam is an abuse of the horn — the horn is reserved for warning of an immediate danger, and it solves nothing here.",
+        "ru": "Ложь: клаксон встречному, чтобы тот переключил свет, — злоупотребление сигналом: клаксон только для предупреждения об непосредственной опасности, тут он ничего не решает.",
+        "zh": "错误：用喇叭催促对方切换近光灯属于滥用喇叭——喇叭仅用于警示直接危险，此处无济于事。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-strada-extraurbana-notte-9": {
+      "verdict": "FALSO",
+      "key_it": "cercare di ripararsi gli occhi con le mani",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: shielding the eyes with your hands while driving is dangerous — one hand off the wheel during glare is a recipe for an accident; the correct reaction is slowing down and looking to the right.",
+        "ru": "Ложь: прикрывать глаза руками за рулём — опасно: одна рука с руля при ослеплении — прямой путь к аварии; правильно — снизить скорость и смотреть на правый край.",
+        "zh": "错误：驾驶时用手遮挡眼睛很危险——眩光时单手离方向盘极易酿祸，正确做法是减速并注视右路边线。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-evitare-pericolo-0": {
+      "verdict": "VERO",
+      "key_it": "guidare in modo adeguato alle caratteristiche del veicolo, della strada e del traffico",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: not being a danger or an obstruction is not just rules on paper — it is driving matched to your vehicle, the road and the traffic around you.",
+        "ru": "Верно: не создавать опасность и помехи — значит водить соразмерно своему автомобилю, дороге и потоку, а не только формально соблюдать правила.",
+        "zh": "正确：不危及或妨碍交通，就是按车辆、道路和车流特点相匹配地驾驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-evitare-pericolo-2": {
+      "verdict": "VERO",
+      "key_it": "unire all'applicazione delle fondamentali norme sulla circolazione un forte senso civico",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the code alone is not enough — to stay safe you add to the rules a strong civic sense: anticipation, courtesy and responsibility for the other road users.",
+        "ru": "Верно: одних правил недостаточно — к ним нужен сильный гражданский смысл: предвидение, вежливость и ответственность за остальных участников движения.",
+        "zh": "正确：仅靠法规不够，还需强烈的公民意识——预见、礼让和对其他交通参与者的责任。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-evitare-pericolo-3": {
+      "verdict": "FALSO",
+      "key_it": "limitarsi ad osservare i limiti massimi di velocità",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: «merely staying under the maximum limit» is not a recipe for safety — you must also match your speed to the road, the weather and the traffic, even well below the limit.",
+        "ru": "Ложь: «просто не превышать максимальную скорость» — не рецепт безопасности: скорость нужно подстраивать и под дорогу, и под погоду, и под поток — даже заметно ниже лимита.",
+        "zh": "错误：仅不超过最高限速并非安全之道，还必须根据路况、天气和车流调整车速，即使远低于限速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-evitare-pericolo-6": {
+      "verdict": "FALSO",
+      "key_it": "limitarsi ad osservare i limiti minimi di velocità",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: «only respecting the minimum speed» inverts the logic — the minimum is there so you do not block the flow, not a substitute for the whole safe-driving set of rules.",
+        "ru": "Ложь: «только соблюдать минимальную скорость» — логика вверх ногами: минимум нужен, чтобы не мешать потоку, а не вместо всего набора правил безопасного вождения.",
+        "zh": "错误：仅遵守最低限速是把逻辑颠倒——最低限速是为了不阻碍车流，不能替代整套安全驾驶规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-0": {
+      "verdict": "VERO",
+      "key_it": "tenersi il più vicino possibile al margine destro della carreggiata",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: a right turn is executed hugging the right edge of the carriageway — this shortens the trajectory and keeps you away from oncoming and overtaking traffic.",
+        "ru": "Верно: направо поворачивают, прижавшись к правому краю проезжей части: траектория короче, и вы дальше от встречного и опережающего движения.",
+        "zh": "正确：右转应尽可能贴近路面右缘——缩短轨迹，远离对向和超车车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-2": {
+      "verdict": "VERO",
+      "key_it": "immettendosi nella corsia che consente di eseguire tale manovra",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the right turn starts in advance — you merge into the lane that allows the maneuver, signal, and only then turn, without last-minute lane jumps.",
+        "ru": "Верно: поворот направо начинается заранее: перестраиваетесь в полосу, из которой манёвр разрешён, включаете указатель и лишь затем поворачиваете — без экстренных перестроений.",
+        "zh": "正确：右转须提前变入允许该操作的导向车道、打转向灯后再转弯，不得临时抢道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-3": {
+      "verdict": "VERO",
+      "key_it": "moderando la velocità man mano che ci si avvicina al punto di svolta",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: as you approach the turning point you must ease off the speed — a controlled turn, not a high-speed swing across the lanes.",
+        "ru": "Верно: приближаясь к точке поворота, скорость плавно снижают: поворот выполняется под контролем, а не на скорости через несколько полос.",
+        "zh": "正确：接近转弯点时应逐步减速，以受控方式转弯，而非高速横切车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-4": {
+      "verdict": "VERO",
+      "key_it": "senza creare pericolo o intralcio agli altri",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: the right turn is performed so that it does not create danger or an obstruction for the others — pedestrians, cyclists and traffic on the main road all keep their rights.",
+        "ru": "Верно: поворот направо выполняют так, чтобы не создавать опасность и помех: пешеходы, велосипедисты и движение на главной сохраняют свои права.",
+        "zh": "正确：右转不得给他人造成危险或妨碍——行人、自行车和主路车辆的权利均须保留。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-5": {
+      "verdict": "FALSO",
+      "key_it": "il più vicino possibile al margine sinistro della carreggiata",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: hugging the LEFT edge to turn right is the mirror image of the rule — that would force you to cross the whole carriageway and is exactly how collisions with oncoming traffic happen.",
+        "ru": "Ложь: держаться ЛЕВОГО края, чтобы повернуть направо, — зеркальное искажение правила: придётся пересечь всю проезжую часть, и так как раз и случаются столкновения со встречными.",
+        "zh": "错误：贴近左路边缘再右转是对规则的镜像错误——需横穿整个路面，极易与对向车辆碰撞。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-svolta-destra-6": {
+      "verdict": "FALSO",
+      "key_it": "bisogna tenersi sulla corsia di sinistra",
+      "chapter": "ch10",
+      "why": {
+        "en": "False: starting a right turn from the left lane is forbidden — you block the traffic that continues straight and cut across the lanes at the last moment.",
+        "ru": "Ложь: поворачивать направо из левой полосы нельзя: вы блокируете едущих прямо и в последний момент пересекаете полосы.",
+        "zh": "错误：从左侧车道右转是禁止的——会阻挡直行车辆并最后时刻横切车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
