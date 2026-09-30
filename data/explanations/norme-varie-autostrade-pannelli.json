@@ -1846,6 +1846,227 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-3": {
+      "verdict": "VERO",
+      "key_it": "entro i limiti di quello tecnicamente ammesso per il veicolo",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the mass ratio of trailer to towing vehicle must not exceed 1, within the technically allowed limits for the vehicle, for trailers with a service brake of mass up to 3,5 tonnes. A service brake means the trailer contributes to braking, so the ratio can go up to 1.",
+        "ru": "Верно: массовое отношение прицеп/тягач не должно превышать 1 в пределах, технически допустимых для ТС, для прицепов с рабочим тормозом массой до 3,5 т. Рабочий тормоз — прицеп участвует в торможении, поэтому отношение допустимо до 1.",
+        "zh": "正确：在车辆技术允许范围内，带服务制动且质量至多3.5吨的挂车，质量比（挂车/牵引车）不得超过1——挂车参与制动，比值可放宽到1。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-5": {
+      "verdict": "VERO",
+      "key_it": "deve essere sfilata, smontata o ripiegata",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: when the tow ball is not in use (no trailer being towed), its part protruding beyond the vehicle's rear silhouette must be withdrawn, dismounted or folded away. A sticking-out ball is a hazard for vehicles behind — you may not leave it protruding.",
+        "ru": "Верно: когда шаровая опора не используется (прицеп не буксируется), её часть, выступающая за задний силуэт ТС, должна быть выдвинута, снята или сложена. Выступающий шар — опасность для идущих сзади, оставлять его нельзя.",
+        "zh": "正确：球头未使用时（未拖挂），其超出车辆后部轮廓的部分必须缩回、拆除或折叠——突出的球头是后方车辆的隐患，不得外露。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-6": {
+      "verdict": "VERO",
+      "key_it": "non devono costituire oggetto di commercio",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: T.A.T.S. trailers are intended for transporting equipment that must not be an object of trade: the equipment is employed only for leisure, not for commercial activity. That non-commercial, leisure purpose is exactly what defines the T.A.T.S. category.",
+        "ru": "Верно: прицепы T.A.T.S. предназначены для перевозки оборудования, которое не должно быть объектом торговли: оборудование используется только для досуга, а не для коммерции. Некоммерческое рекреационное назначение и определяет категорию T.A.T.S.",
+        "zh": "正确：T.A.T.S.拖挂车用于运输不得作为商品买卖的装备——装备仅供休闲娱乐而非商业用途，这一非商业休闲用途正是其类别定义。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-12": {
+      "verdict": "FALSO",
+      "key_it": "La larghezza del rimorchio non deve superare quella del veicolo trainante",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: it is not true that the trailer's width must not exceed the towing vehicle's at all: the regulation allows a limited exceedance of the trailer over the towing vehicle width, within the overall width limit. The 'must not exceed at all' statement is the bait.",
+        "ru": "Неверно: «ширина прицепа не должна вообще превышать ширину тянущего» — преувеличение: допускается ограниченное превышение ширины прицепа над шириной тянущего в пределах общей допустимой ширины. «Не должна превышать вовсе» — приманка.",
+        "zh": "错误：并非“挂车宽度绝不许超过牵引车”——法规允许挂车宽度在一定范围内略超出牵引车宽度（总体宽度限制内），“一律不得超出”即陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-13": {
+      "verdict": "FALSO",
+      "key_it": "non può essere agganciato a un altro veicolo",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: a trailer is not 'an integral part that cannot be hitched to another vehicle': it can be hitched to a different towing vehicle, provided the combination is technically suitable (tow mass within limits, homologated coupling). It is an autonomous vehicle, not a fixed part.",
+        "ru": "Неверно: прицеп — не «неотъемлемая часть, которую нельзя присоединить к другому ТС»: его можно присоединить к другому тянущему, если комбинация технически пригодна (масса в пределах допустимой, сертифицированная сцепка). Это самостоятельное ТС, а не фиксированная часть.",
+        "zh": "错误：挂车并非“固定不可更换的一部分”——只要组合技术可行（拖挂质量在限值内、牵引装置认证），可挂接另一牵引车；挂车是独立车辆，非固定部件。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-14": {
+      "verdict": "FALSO",
+      "key_it": "non è obbligatorio che il veicolo trainante sia munito di specchietto retrovisore destro",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: when towing caravans and T.A.T.S. trailers, the towing vehicle must be equipped with a right-side rear-view mirror: the trailer covers the view to the right, so the extra mirror is required to see the trailer's right side. 'Not mandatory' is the bait.",
+        "ru": "Неверно: при буксировке караванов и прицепов T.A.T.S. тянущее ТС обязано иметь правое боковое зеркало: прицеп перекрывает обзор справа, поэтому дополнительное зеркало необходимо, чтобы видеть правую сторону прицепа. «Не обязательно» — приманка.",
+        "zh": "错误：拖挂房车/T.A.T.S.挂车时，牵引车必须装有右侧后视镜——挂车遮挡右侧视线，需额外后视镜观察挂车右侧；“非强制”即陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-17": {
+      "verdict": "FALSO",
+      "key_it": "consegue la patente della categoria C, può guidare anche veicoli della categoria CE",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: holding category BE and later obtaining category C does not let the driver drive CE vehicles: CE is its own authorisation (towing combinations), not a combination of BE + C. Licences do not simply add up; you need the CE authorisation itself.",
+        "ru": "Неверно: наличие категории BE и последующее получение категории C не дают права вести ТС категории CE: CE — собственная квалификация (тяжелые автопоезда), а не сумма BE + C. Категории так не складываются — нужна сама квалификация CE.",
+        "zh": "错误：持有BE后又取得C类驾照并不能驾驶CE类车辆——CE是独立的资质（重型车组），不是BE+C的叠加；资质不能简单相加，须单独取得CE。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-21": {
+      "verdict": "FALSO",
+      "key_it": "è atto al traino di rimorchi di qualsiasi massa",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: a missing towable-mass value on the registration card does not mean the vehicle can tow any mass. The opposite: if the card lacks the towable mass, the vehicle is not approved for towing. Missing data is not a blank cheque for any mass.",
+        "ru": "Неверно: отсутствие значения допустимой массы прицепа в техническом паспорте НЕ означает, что ТС годно к буксировке прицепов любой массы. Наоборот: нет значения — ТС не допущено к буксировке. Пусто ≠ чистый чек.",
+        "zh": "错误：行驶证缺少可牵引质量值，并不表示该车可牵引任意质量挂车——恰恰相反：该值缺失意味着车辆未获准牵引。缺失不等于“可牵引一切”。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-23": {
+      "verdict": "FALSO",
+      "key_it": "può sporgere dalla parte anteriore fino ai 3/10",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: on a trailer the carried load may not protrude forward up to 3/10 of the combined vehicle length — that is not the correct front-protrusion rule for a trailer. The 'up to 3/10 of the combined length' part is the bait; front overhang is limited differently.",
+        "ru": "Неверно: на прицепе груз не может выступать спереди «до 3/10 длины комплекса ТС» — это не верное правило для переднего выступа прицепа. «До 3/10 длины комплекса» — приманка; выступ спереди ограничен иначе.",
+        "zh": "错误：挂车上货物不得向前突出“至车组长度3/10”——这不是挂车前伸的正确规则，“至3/10”即陷阱，前部突出另有单独限制。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Conduzione-veicoli-rimorchio-24": {
+      "verdict": "FALSO",
+      "key_it": "senza obbligo di specifiche segnalazioni",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: on light trailers the load may not protrude rearward 'without obligation of specific signals': a rearward-protruding load must be signalled with specific markings/signage so following drivers can see it. 'No specific signals required' is the bait.",
+        "ru": "Неверно: на лёгких прицепах груз не может выступать сзади «без обязанности специальных обозначений»: выступающий сзади груз обязан быть обозначён специальными отметками/знаками, чтобы идущие сзади его видели. «Без обозначений» — приманка.",
+        "zh": "错误：轻型挂车上货物不得向后“无需特别标示”地突出——后部突出货物须用专门标识/标记，让后方驾驶员可见；“无需标示”即陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Guida-veicoli-rimorchio-4": {
+      "verdict": "VERO",
+      "key_it": "accertarsi che non vi siano cose e/o persone nel raggio di manovra",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: before any manoeuvre with a hitched trailer, you should make sure there are no objects and/or people within the complex's manoeuvring radius. A combination swings wider than a single vehicle, so clearing the radius is the safe first step.",
+        "ru": "Верно: перед любым манёвром с присоединённым прицепом следует убедиться, что в радиусе манёвра комплекса нет предметов и/или людей. Комбинация разворачивается шире одиночного ТС, поэтому очистка радиуса — безопасный первый шаг.",
+        "zh": "正确：进行任何挂车挂接状态下的操作前，应确认组合转弯半径内无物品/行人——挂车组合摆动范围大于单车，清空半径是安全前提。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Guida-veicoli-rimorchio-8": {
+      "verdict": "FALSO",
+      "key_it": "il rimorchio compie sempre lo stesso percorso fatto dalla motrice",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: in a curve the trailer does not always follow the same path as the towing vehicle: because of its pivot point and the coupling, it cuts across the curve (runs wide inside), tracing a different trajectory than the towing vehicle. 'Always the same path' is the bait.",
+        "ru": "Неверно: в повороте прицеп «всегда прокладывает тот же путь, что и тянущее» — ложь: из-за оси поворота и сцепки он срезает поворот (внутри заходит шире), прокладывая иную траекторию. «Всегда тот же путь» — приманка.",
+        "zh": "错误：弯道中挂车并非“始终与牵引车走同一路线”——因枢轴与牵引装置，挂车在弯道内切（内侧摆动更大），轨迹与牵引车不同；“始终同一路线”即陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Guida-veicoli-rimorchio-9": {
+      "verdict": "FALSO",
+      "key_it": "il ruotino pivottante di manovra abbassato (poggiato al suolo)",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: while driving, the trailer's pivoting jockey wheel must not be lowered and resting on the ground: it must be raised off the ground during motion, otherwise it drags and damages the pavement and the wheel. 'Lowered to the ground' is the bait.",
+        "ru": "Неверно: в движении маневренный опорный колёсик прицепа «должно быть опущено (стоять на земле)» — ложь: в движении его поднимают, иначе оно перетаскивается и повреждает и полотно, и само колёсико. «Опущено на землю» — приманка.",
+        "zh": "错误：行驶中挂车转向助轮不得“放下（着地）”——行驶时应将其抬起，否则会拖行并损伤路面与轮子；“放下着地”即陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Carichi-organi-traino-4": {
+      "verdict": "VERO",
+      "key_it": "è indicato in un’ apposita targhetta applicata sul gancio di traino",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the maximum vertical load that may rest on the towing vehicle's hitch ball is indicated on a specific plate applied to the tow ball itself. You read the limit directly at the coupling — that plate is the authoritative source for the vertical load on the ball.",
+        "ru": "Верно: максимальная вертикальная нагрузка, допустимая на шаровую опору тянущего ТС, указана на специальной табличке, установленной на самой шаровой опоре. Предельное значение читается прямо у сцепки — табличка у шара — авторитетный источник.",
+        "zh": "正确：可作用于牵引车球头的最大垂直载荷标示在球头上的专用铭牌——限值直接在读于球头处，该铭牌即球头垂直载荷的权威依据。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-Carichi-organi-traino-6": {
+      "verdict": "FALSO",
+      "key_it": "se destinati solo al traino di rimorchi leggeri",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: towing devices may not be non-homologated just because they are 'used only for light trailers': the equipment must be homologated and technically suitable regardless of the trailer type. There is no exemption for light trailers; 'only light trailers' is the bait.",
+        "ru": "Неверно: органы буксировки «могут не быть сертифицированными, если они только для лёгких прицепов» — ложь: оборудование должно быть сертифицировано и технически пригодным независимо от типа прицепа. Освобождения для лёгких прицепов нет.",
+        "zh": "错误：牵引装置并非“只拖轻型挂车就可不认证”——无论挂车类型，设备都必须认证且技术适配；轻型挂车无豁免，“仅轻型”即陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-utilizzo-rimorchio-0": {
+      "verdict": "VERO",
+      "key_it": "non si verifichino spostamenti, rovesciamenti, cadute o sfregamenti",
+      "chapter": "ch14",
+      "why": {
+        "en": "True: the driver of a vehicle with a trailer must stow the carried cargo so that, during motion, no shifting, overturning, falling or rubbing occurs. Proper lashing and distribution prevent the load from moving while driving — that is the correct requirement.",
+        "ru": "Верно: водитель ТС с прицепом обязан уложить груз так, чтобы в движении не было смещений, опрокидываний, падений или трения. Правильное крепление и распределение предотвращают перемещение груза в пути — это верное требование.",
+        "zh": "正确：牵引挂车车辆的驾驶人须固定货物，使行驶中不发生移位、翻倒、掉落或摩擦——正确系固与配重可防止行驶中货物移动，此为正确要求。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-varie-autostrade-pannelli-utilizzo-rimorchio-3": {
+      "verdict": "FALSO",
+      "key_it": "la pressione di gonfiaggio degli pneumatici del veicolo trainante deve essere la stessa degli pneumatici del rimorchio",
+      "chapter": "ch14",
+      "why": {
+        "en": "False: when towing, the towing vehicle's tyres must not 'have the same inflation pressure as the trailer's': each vehicle's tyres are inflated per their own load — the towing vehicle carries extra tongue load, so its pressures are set by that load, not by matching the trailer.",
+        "ru": "Неверно: при буксировке давление в шинах тянущего «должно быть таким же, как в шинах прицепа» — ложь: шины каждого ТС накачиваются по своей нагрузке; тянущий несёт дополнительную осадку на сцепке, поэтому его давление задаётся этой нагрузкой, а не «под прицеп».",
+        "zh": "错误：拖挂时牵引车轮胎气压并非“须与挂车轮胎相同”——各车轮胎按自身载荷充气；牵引车承担额外的球头载荷，其气压由该载荷决定，而非照抄挂车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
