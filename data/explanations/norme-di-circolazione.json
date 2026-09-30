@@ -260,6 +260,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-11": {
+      "verdict": "FALSO",
+      "key_it": "segnalato, di giorno, con un panno rosso",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: a load overhanging at the rear is not signalled with a red cloth. Rear overhang must be marked with a red rear-reflecting plate, day and night, not with any fabric.",
+        "ru": "Неверно: выступ груза сзади помечают не красной тряпкой — нужен красный задний светоотражающий знак, днём и ночью, а не какая-либо ткань.",
+        "zh": "错误：后部突出不得用红布标示——应使用红色后部反光板，昼夜均须，而非任何织物。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-12": {
+      "verdict": "FALSO",
+      "key_it": "segnalata con un pannello retroriflettente a strisce gialle e rosse",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: the rear overhang is not marked with yellow-and-red stripes. It must be signalled with a red rear-reflecting plate, which is the prescribed device.",
+        "ru": "Неверно: выступ сзади не помечают жёлто-красными полосами — предписывается именно красная задняя светоотражающая пластина.",
+        "zh": "错误：后部突出不以黄红条纹标示——规定使用红色后部反光板。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-carico-veicoli-14": {
+      "verdict": "FALSO",
+      "key_it": "consentito trasportare sacchetti con la spesa anche se non saldamente assicurati",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: shopping bags must be securely fastened on a motorcycle. Carrying unsecured loads is not allowed, because they can fall and cause danger.",
+        "ru": "Неверно: сумки с покупками на мотоцикле обязаны быть надёжно закреплены. Везти незакреплённый груз нельзя — он может упасть и создать опасность.",
+        "zh": "错误：摩托车上的购物袋必须牢固固定。不得运输未固定的货物，因为可能掉落造成危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-uso-corretto-strada-6": {
+      "verdict": "FALSO",
+      "key_it": "i veicoli impegnino sempre la carreggiata il più rapidamente possibile",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: correct road use does not mean taking the whole carriageway as fast as possible. You drive in your lane, keep the right edge and use the road proportionally to traffic.",
+        "ru": "Неверно: правильное использование дороги не означает как можно быстрее занять всю проезжую часть. Ездишь в своей полосе, держишь правый край и используешь дорогу соразмерно движению.",
+        "zh": "错误：正确使用道路并不意味着尽快占满整个车行道。应行驶在自己的车道内，靠右行驶，并根据交通状况合理用车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-uso-corretto-strada-7": {
+      "verdict": "FALSO",
+      "key_it": "ci si arresti sempre ai passaggi pedonali",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not stop at every pedestrian crossing even when no pedestrians are approaching. You stop only when a pedestrian is about to cross or is crossing.",
+        "ru": "Неверно: на каждом пешеходном переходе останавливаться не нужно, даже если пешеходов нет. Останавливаются, когда пешеход пересекает или собирается пересечь дорогу.",
+        "zh": "错误：即使没有行人，也不需要在每个斑马线都停车。只有当行人正在或准备过街时才停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-1": {
+      "verdict": "VERO",
+      "key_it": "ci accorgiamo di aver sbagliato la corsia di preselezione non dobbiamo effettuare cambiamenti di corsia",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: near an intersection, if you are in the wrong pre-selection lane you should not make sudden lane changes, because that would block the vehicles following you.",
+        "ru": "Верно: у перекрёстка, если вы в неверной полосе предварительного выбора, резкую смену полосы делать не нужно — это помешает следующим за вами автомобилям.",
+        "zh": "正确：接近交叉口时，若处于错误的预选车道，不应突然变道，因为会阻碍后方车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-6": {
+      "verdict": "FALSO",
+      "key_it": "se non si è in grado di capire subito chi ha la precedenza, si può proseguire senza rallentare",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: if you cannot tell who has priority at a junction, you must not keep going at full speed. Slow down and, if needed, stop to let the right holder through.",
+        "ru": "Неверно: если на перекрёстке сразу неясно, у кого приоритет, продолжать на прежней скорости нельзя. Нужно притормозить и при необходимости остановиться, чтобы пропустить.",
+        "zh": "错误：若在路口无法立即判断谁有优先权，不能保持原速直行。应减速，必要时停车让行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-7": {
+      "verdict": "FALSO",
+      "key_it": "ci accorgiamo di aver sbagliato la corsia di preselezione dobbiamo effettuare la manovra di svolta",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: if you notice too late that you are in the wrong lane, you do not force the turn you had planned. You continue straight and look for another route, rather than cutting across lanes.",
+        "ru": "Неверно: если поздно заметили, что вы в неверной полосе, не навязываете задуманный поворот. Едете прямо и ищете другой путь, а не режете поперёк полос.",
+        "zh": "错误：若过晚发现处于错误车道，不应强行完成原定转弯。应继续直行并寻找其他路线，而非斜穿车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-prossimita-incrocio-9": {
+      "verdict": "FALSO",
+      "key_it": "dobbiamo azionare l'accensione simultanea di tutti gli indicatori di direzione",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not turn on all the direction indicators at once as a danger signal when you are in the wrong lane. Simultaneous indicators are the hazard warning, not a lane-change signal.",
+        "ru": "Неверно: находясь в неверной полосе, нельзя одновременно включить все указатели как «знак опасности» для смены полосы. Одновременная подача — это аварийная сигнализация, а не сигнал смены полосы.",
+        "zh": "错误：处于错误车道时，不能同时打开所有转向灯作为危险信号。同时开启是危险报警灯，而非变道信号。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-centro-abitato-pedone-4": {
+      "verdict": "FALSO",
+      "key_it": "è opportuno cercare di richiamare la sua attenzione con qualsiasi mezzo",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you may not try to force a pedestrian outside the crossing to give way by any means. The vehicle must yield the right of way and not rush the pedestrian with horn or other signals.",
+        "ru": "Неверно: нельзя пытаться заставить пешехода вне перехода уступить любой ценой. Автомобиль обязан уступить дорогу и не торопить пешехода клаксоном и прочими сигналами.",
+        "zh": "错误：不得用任何方式迫使不在斑马线上的行人让路。车辆必须让行，不能用喇叭或其他信号催促行人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corteo-centro-abitato-0": {
+      "verdict": "VERO",
+      "key_it": "deve fermarsi sulla destra e attendere che la carreggiata si liberi",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if you meet a procession in town, you stop on the right and wait until the carriageway is clear again.",
+        "ru": "Верно: встретив процессию в городе, нужно остановиться справа и ждать, пока дорога не освободится.",
+        "zh": "正确：在城区遇到队伍时，应在右侧停车，等待道路再次清空。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corteo-centro-abitato-1": {
+      "verdict": "VERO",
+      "key_it": "si imbatte in un corteo, deve evitare di suonare il clacson",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: when meeting a procession in town you should avoid honking the horn.",
+        "ru": "Верно: встретив в городе процессию, нужно воздержаться от клаксона.",
+        "zh": "正确：在城区遇到队伍时应避免按喇叭。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corteo-centro-abitato-2": {
+      "verdict": "VERO",
+      "key_it": "imbocchi, se possibile, una strada laterale, purché la manovra possa essere fatta in maniera corretta",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: if possible it is sensible to turn into a side street to avoid the procession, as long as the manoeuvre can be done safely and correctly.",
+        "ru": "Верно: по возможности разумно свернуть в боковую улицу, чтобы обойти процессию, при условии что манёвр можно выполнить безопасно и правильно.",
+        "zh": "正确：若可行，可转入侧街以避开队伍，前提是能够安全正确地操作。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corteo-centro-abitato-3": {
+      "verdict": "VERO",
+      "key_it": "deve accertarsi, prima di passare, che esso sia transitato completamente",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: before moving past a procession you must make sure it has fully cleared the road.",
+        "ru": "Верно: перед тем как проехать мимо процессии, нужно убедиться, что она полностью освободила дорогу.",
+        "zh": "正确：从队伍旁驶过之前，必须确认其已完全通过。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corteo-centro-abitato-6": {
+      "verdict": "FALSO",
+      "key_it": "deve suonare discretamente onde avvertire il corteo",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not honk, even discreetly, to hurry a procession along. The vehicle waits for the procession to clear, it does not urge it with the horn.",
+        "ru": "Неверно: нельзя сигналить, даже приглушённо, чтобы поторопить процессию. Автомобиль ждёт, пока процессия пройдёт, а не торопит её клаксоном.",
+        "zh": "错误：不得鸣笛催促队伍，即使很轻也不行。车辆应等待队伍通过，而非用喇叭催促。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corteo-centro-abitato-7": {
+      "verdict": "FALSO",
+      "key_it": "deve cercare di farsi strada interrompendo il corteo",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not try to force your way through a procession, even with great care. The vehicle stops and waits for the road to clear.",
+        "ru": "Неверно: нельзя проталкиваться сквозь процессию, даже с большой осторожностью. Автомобиль останавливается и ждёт, пока дорога не освободится.",
+        "zh": "错误：即使非常小心，也不得强行穿过队伍。车辆应停车等待道路清空。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corteo-centro-abitato-10": {
+      "verdict": "FALSO",
+      "key_it": "deve regolarsi in base alla sua densità, oltrepassandolo o interrompendolo",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not judge a procession by its density and then pass or break through it. The vehicle stops and waits regardless of how dense the procession is.",
+        "ru": "Неверно: нельзя ориентироваться на плотность процессии и затем её обгонять или прорываться сквозь неё. Автомобиль останавливается и ждёт вне зависимости от плотности.",
+        "zh": "错误：不能根据队伍的密度来决定绕行或强行穿过。无论队伍多密集，车辆都应停车等待。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-corteo-centro-abitato-11": {
+      "verdict": "FALSO",
+      "key_it": "deve retrocedere rapidamente fino al primo incrocio",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not reverse quickly back to the first intersection when you meet a procession. Reversing on the road is dangerous; the vehicle simply stops on the right and waits.",
+        "ru": "Неверно: встретив процессию, нельзя быстро назад до первого перекрёстка. Разворот задним ходом на дороге опасен; автомобиль просто останавливается справа и ждёт.",
+        "zh": "错误：遇到队伍时，不得快速倒车至第一个路口。倒车行驶危险，车辆应直接停在右侧等待。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incrocio-urbano-4": {
+      "verdict": "VERO",
+      "key_it": "il veicolo che precede tarda a riprendere la marcia, non si deve superarlo con manovre pericolose",
+      "chapter": "ch10",
+      "why": {
+        "en": "True: at an urban junction, if the car ahead is slow to move after the go signal, you must not overtake it with dangerous manoeuvres.",
+        "ru": "Верно: на городском перекрёстке, если впереди идущий долго не трогается после сигнала, нельзя обгонять его опасными манёврами.",
+        "zh": "正确：在城市路口，若前车在通行信号后迟迟不动，不得用危险动作超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "norme-di-circolazione-incrocio-urbano-8": {
+      "verdict": "FALSO",
+      "key_it": "è opportuno cercare di sgombrare al più presto la carreggiata, anche invertendo il senso di marcia",
+      "chapter": "ch10",
+      "why": {
+        "en": "Wrong: you do not try to clear the junction quickly by reversing or changing direction to escape. Forcing a reverse or a wrong-way move at an intersection is dangerous, not a proper way to clear the road.",
+        "ru": "Неверно: нельзя пытаться как можно быстрее освободить перекрёсток, разворачиваясь или меняя направление. Вынужденный задний ход или движение против хода на перекрёстке — опасно, а не правильный способ освободить дорогу.",
+        "zh": "错误：不得为尽快离开路口而倒车或改变方向。在路口强行倒车或逆行危险，不是正确的让路方式。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
