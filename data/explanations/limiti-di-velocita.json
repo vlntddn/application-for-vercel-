@@ -780,6 +780,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "limiti-di-velocita-diminuzione-velocita-4": {
+      "verdict": "FALSO",
+      "key_it": "sulle strade extraurbane principali è di 100 km/h",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: absent other signs the general cap on main extra-urban roads is 110, not 100 — this figure is incorrect.",
+        "ru": "Неверно: при отсутствии иных знаков общий лимит на главных внегородских дорогах 110, а не 100 — цифра неверна.",
+        "zh": "错误：在没有其他标志时，主要城外公路的通用限速是110而非100——数字错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-diminuzione-velocita-5": {
+      "verdict": "FALSO",
+      "key_it": "nei centri abitati è di 60 km/h",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the general cap in built-up areas is 50, not 60 — the figure is incorrect.",
+        "ru": "Неверно: общий лимит в населённых пунктах 50, а не 60 — цифра неверна.",
+        "zh": "错误：建成区通用限速是50而非60——数字错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-diminuzione-velocita-6": {
+      "verdict": "FALSO",
+      "key_it": "diminuire la velocità ogni qualvolta si incontra un segnale stradale di indicazione",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: every indication sign is not a reason to slow — speed is reduced where conditions, visibility or hazard require it, not at any mere information sign.",
+        "ru": "Неверно: не любой указательный знак — повод снижать скорость — её снижают там, где требуют условия, видимость или опасность, а не при любом информационном знаке.",
+        "zh": "错误：并非每个指示标志都是减速理由——应在状况、视线或危险要求处减速，而非任何信息标志前。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-limiti-particolari-2": {
+      "verdict": "VERO",
+      "key_it": "regolare la velocità in presenza di lavori in corso",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: roadworks narrow the carriageway and workers are on site, so speed must be reduced.",
+        "ru": "Верно: дорожные работы сужают полосу, а на месте рабочие, поэтому скорость нужно снизить.",
+        "zh": "正确：道路施工缩窄车道、现场有工人，因此必须降速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-limiti-particolari-3": {
+      "verdict": "VERO",
+      "key_it": "regolare la velocità se si incontra sulla strada il segnale di veicolo fermo",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: a stopped-vehicle triangle ahead signals a hazard or breakdown, so you must slow and stay ready to stop.",
+        "ru": "Верно: треугольник стоящего транспорта впереди — сигнал опасности или поломки, поэтому нужно снижать скорость и быть готовым остановиться.",
+        "zh": "正确：前方停车三角牌提示危险或故障，因此须减速并随时准备停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-limiti-particolari-8": {
+      "verdict": "FALSO",
+      "key_it": "superare, nelle ore notturne, la velocità di 130 km/h",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the night-time standard cap is 130 — you may not exceed it just because it is dark, and full-beam lights do not grant a higher speed.",
+        "ru": "Неверно: ночной стандартный потолок 130 — тьма сама по себе не даёт права его превышать, а дальний свет не даёт права на более высокую скорость.",
+        "zh": "错误：夜间标准上限是130——夜间本身不赋予超速权，远光灯也不允许更高车速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-limiti-particolari-12": {
+      "verdict": "FALSO",
+      "key_it": "superare la velocità di 110 km/h, ma solo nei tratti di strada in discesa",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: on downhills you do not get to exceed the cap — in fact you slow and use the engine to control speed, so \"only on descents\" is the trap.",
+        "ru": "Неверно: на спусках вы не имеете права превышать лимит — наоборот, нужно снижать и работать двигателем для контроля скорости, поэтому «только на спусках» — ловушка.",
+        "zh": "错误：下坡不能超限——反而要减速并用发动机制动控制车速，因此“仅在下坡”是陷阱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-velocita-incroci-0": {
+      "verdict": "VERO",
+      "key_it": "avendo diritto di precedenza, in caso di incidente, non può escludersi un concorso di colpa",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: even with priority, crossing a junction at high speed can mean you share some fault if an accident happens, because you could have slowed.",
+        "ru": "Верно: даже при приоритете прохождение перекрёстка на высокой скорости может означать частичную вину в аварии, поскольку можно было бы снизить скорость.",
+        "zh": "正确：即便有优先权，高速通过路口若发生事故，你可能承担部分过错，因为本可以减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-velocita-incroci-1": {
+      "verdict": "VERO",
+      "key_it": "non sono identici in tutti gli stati d'Europa",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: motorway and extra-urban caps vary from country to country, so they are not the same across all of Europe.",
+        "ru": "Верно: потолки на автомагистрали и внегородских дорогах различаются от страны к стране, поэтому они не одинаковы по всей Европе.",
+        "zh": "正确：高速公路和城外公路的限速各国不同，因此全欧并不统一。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-velocita-incroci-3": {
+      "verdict": "FALSO",
+      "key_it": "la responsabilità sarà solo del conducente del veicolo proveniente dalla strada senza diritto di precedenza",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the word \"only\" is the trap — the driver who crossed at high speed, even with priority, can share the fault.",
+        "ru": "Неверно: слово «только» — ловушка: проехавший на высокой скорости, даже при приоритете, может нести частичную вину.",
+        "zh": "错误：“仅”是陷阱——即使有优先权，高速通过者也可能承担部分过错。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-pericolo-velocita-8": {
+      "verdict": "VERO",
+      "key_it": "se si percorre una lunga discesa con il cambio in folle e a motore spento, diventa sempre più difficoltoso arrestare il veicolo",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: coasting in neutral with the engine off on a long descent loses engine braking, so it gets harder and harder to slow the vehicle.",
+        "ru": "Верно: движение на нейтральной передаче с выключенным двигателем на длинном спуске лишает вас торможения двигателем, поэтому остановить машину всё труднее.",
+        "zh": "正确：长下坡空挡熄火行驶失去发动机制动，因此越来越难减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-pericolo-velocita-10": {
+      "verdict": "FALSO",
+      "key_it": "si può avere un'anomalia al differenziale",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: coasting in neutral with the engine off does not by itself cause a differential fault — that is not the real hazard here.",
+        "ru": "Неверно: движение на нейтральной с выключенным двигателем само по себе не вызывает поломку дифференциала — это не реальный риск здесь.",
+        "zh": "错误：空挡熄火行驶本身不会导致差速器故障——这并非此处的真正风险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-pericolo-velocita-11": {
+      "verdict": "FALSO",
+      "key_it": "conveniente percorrere le lunghe discese con il cambio in folle e a motore spento",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: for safety you should never coast a long descent in neutral with the engine off — you lose engine braking and control, and fuel saving is irrelevant to the danger.",
+        "ru": "Неверно: ради безопасности на длинном спуске нельзя ехать на нейтральной с выключенным двигателем — теряется торможение двигателем и контроль, а экономия топлива неважна перед риском.",
+        "zh": "错误：出于安全，长下坡切勿空挡熄火——会失去发动机制动与控制，省燃料在风险面前无关紧要。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-pallone-carreggiata-2": {
+      "verdict": "VERO",
+      "key_it": "bisogna prevedere anche il possibile attraversamento della strada da parte di un bambino",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: a rolling ball often means a child is right behind it, so you must be ready to stop for a sudden crossing.",
+        "ru": "Верно: катящийся мяч часто значит, что за ним ребёнок, поэтому нужно быть готовым остановиться при внезапном выходе на дорогу.",
+        "zh": "正确：滚动的球往往意味着后面有孩子，因此要为突然横穿做好停车准备。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-pallone-carreggiata-5": {
+      "verdict": "FALSO",
+      "key_it": "bisogna scansarlo, anche invadendo la corsia opposta",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: you should not swerve into the oncoming lane just to dodge a ball — brake in control instead, to avoid a head-on collision.",
+        "ru": "Неверно: нельзя сворачивать в встречную полосу только чтобы уйти от мяча — лучше под контролем тормозить, чтобы избежать лобового.",
+        "zh": "错误：不应为躲避球而冲入对向车道——应受控制动以避免正面碰撞。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-macchine-parcheggiate-0": {
+      "verdict": "VERO",
+      "key_it": "può essere pericoloso, per la possibile apertura imprudente delle portiere",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: passing too close to a parked car with people still inside is risky, since a door may be opened carelessly into your path.",
+        "ru": "Верно: проезд слишком близко к припаркованной машине, где ещё сидят люди, рискован — дверь могут распахнуть прямо под вас.",
+        "zh": "正确：离仍有人的停靠车过近行驶有风险——车门可能被随手打开挡在你路线上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-macchine-parcheggiate-1": {
+      "verdict": "VERO",
+      "key_it": "impedire la vista di un disabile in carrozzella o di un pedone che spinge un passeggino",
+      "chapter": "ch8",
+      "why": {
+        "en": "True: parked cars can hide a wheelchair user or a stroller about to cross, so driving too close or too fast is dangerous.",
+        "ru": "Верно: припаркованные машины могут скрывать коляску-инвалида или пешехода с коляской, готовых перейти дорогу, поэтому ездить слишком близко и быстро опасно.",
+        "zh": "正确：停靠车辆可能遮挡轮椅使用者或推婴儿车的行人，因此贴得太近、太快行驶很危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-macchine-parcheggiate-3": {
+      "verdict": "FALSO",
+      "key_it": "pericoloso solo se una delle portiere risulta già aperta",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the word \"only\" is the trap — it is dangerous even with all doors closed, because one may be opened without warning.",
+        "ru": "Неверно: слово «только» — ловушка — опасно и при закрытых дверях, потому что одну могут открыть без предупреждения.",
+        "zh": "错误：“仅”是陷阱——即使车门都关着也危险，因为可能突然被打开。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-macchine-parcheggiate-4": {
+      "verdict": "FALSO",
+      "key_it": "pericoloso solo se il conducente ed alcuni passeggeri sono già scesi",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the word \"only\" is the trap — the danger exists whether people are still inside or have just gotten out.",
+        "ru": "Неверно: слово «только» — ловушка — опасность есть и когда люди ещё в машине, и когда только вышли.",
+        "zh": "错误：“仅”是陷阱——无论人还在车内还是刚下车，危险都存在。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "limiti-di-velocita-macchine-parcheggiate-5": {
+      "verdict": "FALSO",
+      "key_it": "può essere pericoloso, solo se si viaggia ad alta velocità",
+      "chapter": "ch8",
+      "why": {
+        "en": "Wrong: the word \"only\" is the trap — passing too close is risky at any speed, not just at high speed.",
+        "ru": "Неверно: слово «только» — ловушка — проезд слишком близко рискован на любой скорости, а не только на высокой.",
+        "zh": "错误：“仅”是陷阱——贴得太近在任何速度下都有风险，而非仅高速行驶时。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
