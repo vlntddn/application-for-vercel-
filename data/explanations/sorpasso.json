@@ -1,0 +1,265 @@
+{
+  "category": "sorpasso",
+  "items": {
+    "sorpasso-conducente-intende-sorpassare-0": {
+      "verdict": "VERO",
+      "key_it": "la visibilità sia tale da consentire la manovra",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: before overtaking, the driver must check that visibility is good enough to let the manoeuvre be carried out safely.",
+        "ru": "Верно: перед обгоном водитель обязан убедиться, что видимость достаточна для безопасного выполнения манёвра.",
+        "zh": "正确：超车前必须确认能见度足以安全完成该操作。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-intende-sorpassare-1": {
+      "verdict": "VERO",
+      "key_it": "senza costituire intralcio",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: before overtaking you must be sure the manoeuvre can be completed without becoming an obstruction to other road users.",
+        "ru": "Верно: перед обгоном нужно убедиться, что манёвр можно выполнить, не создавая помех другим участникам движения.",
+        "zh": "正确：超车前必须确认能完成该操作且不会妨碍其他交通参与者。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-intende-sorpassare-2": {
+      "verdict": "VERO",
+      "key_it": "non abbia segnalato di voler compiere analoga manovra",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: you must check that the driver ahead in your lane has not signalled an intention to overtake — two overtakings would clash.",
+        "ru": "Верно: нужно убедиться, что впереди идущий в своей полосе не включил указатель поворота — иначе два обгона пересеклись бы.",
+        "zh": "正确：须确认同车道前方车辆未打转向信号，否则两次超车会互相冲突。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-intende-sorpassare-3": {
+      "verdict": "VERO",
+      "key_it": "non abbia iniziato il sorpasso",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: you must check that the car behind you on the same carriageway has not already started to overtake you.",
+        "ru": "Верно: нужно убедиться, что идущий сзади на той же стороне дороги ещё не начал обгонять вас.",
+        "zh": "正确：须确认同侧后方车辆尚未开始超车，否则会造成冲突。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-intende-sorpassare-4": {
+      "verdict": "VERO",
+      "key_it": "la strada sia libera per consentire la completa esecuzione",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the road ahead must be clear far enough to allow the overtaking manoeuvre to be completed fully.",
+        "ru": "Верно: дорога впереди должна быть свободна настолько, чтобы обгон можно было полностью завершить.",
+        "zh": "正确：前方道路必须足够空旷，能完整完成超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-intende-sorpassare-5": {
+      "verdict": "VERO",
+      "key_it": "differenza di velocità",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the space needed depends on the speed difference between your vehicle and the one you overtake.",
+        "ru": "Верно: требуемый запас расстояния зависит от разницы скоростей с обгоняемым автомобилем.",
+        "zh": "正确：所需距离取决于本车与被超车辆的速度差。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-intende-sorpassare-6": {
+      "verdict": "VERO",
+      "key_it": "veicoli che provengono dalla direzione opposta",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: before overtaking you must take into account any vehicles coming from the opposite direction.",
+        "ru": "Верно: перед обгоном нужно учитывать возможные встречные транспортные средства.",
+        "zh": "正确：超车前必须考虑对面来车的可能性。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-intende-sorpassare-7": {
+      "verdict": "VERO",
+      "key_it": "lunghezza del proprio veicolo e di quello da sorpassare",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the space needed also depends on the length of your own vehicle and of the one being overtaken.",
+        "ru": "Верно: на запас расстояния влияет длина как собственного автомобиля, так и обгоняемого.",
+        "zh": "正确：所需距离还取决于本车与被超车辆的长度。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-intende-sorpassare-8": {
+      "verdict": "VERO",
+      "key_it": "larghezza della carreggiata consenta la manovra",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: you must check that the carriageway is wide enough to pass with a safe lateral distance.",
+        "ru": "Верно: нужно убедиться, что ширина проезжей части позволяет выполнить манёвр с безопасным боковым зазором.",
+        "zh": "正确：须确认路面宽度足以保持安全横向距离完成超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-intende-sorpassare-9": {
+      "verdict": "VERO",
+      "key_it": "nessun segnale verticale vieti la manovra",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: before overtaking you must make sure no vertical sign forbids the manoeuvre at that spot.",
+        "ru": "Верно: перед обгоном нужно убедиться, что в этом месте нет знака, запрещающего манёвр.",
+        "zh": "正确：超车前须确认该处没有禁止该操作的标志。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-intende-sorpassare-10": {
+      "verdict": "FALSO",
+      "key_it": "semplicemente che nessun veicolo provenga dalla direzione opposta",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: checking only for oncoming vehicles is not enough — visibility, the road ahead, signs and the driver ahead must all be verified.",
+        "ru": "Неверно: просто проверить встречное направление недостаточно — нужно оценить видимость, дорогу впереди, знаки и идущего впереди.",
+        "zh": "错误：仅确认无对向来车不够——还需评估能见度、前方路况、标志以及前方车辆动向。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-intende-sorpassare-11": {
+      "verdict": "FALSO",
+      "key_it": "l'indicatore di direzione (frecce)",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the indicator is mandatory, but far from the only obligation — visibility, clearance and road conditions must also be checked.",
+        "ru": "Неверно: указатель поворота обязателен, но это далеко не единственная обязанность — нужно оценить видимость, запас и состояние дороги.",
+        "zh": "错误：打转向信号是必须的，但远非唯一义务——还需确认能见度、空间与路况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-conducente-intende-sorpassare-12": {
+      "verdict": "FALSO",
+      "key_it": "unicamente accertarsi che non vi sia nessun segnale di divieto",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: a missing ban sign is not the only thing to check — visibility, oncoming traffic and the driver ahead must also be assessed.",
+        "ru": "Неверно: отсутствие запрещающего знака — не единственный критерий: перед обгоном оценивают видимость, встречный поток и идущего впереди.",
+        "zh": "错误：没有禁止标志并非唯一条件——超车前还须评估能见度、对向车流和前方车辆动向。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-0": {
+      "verdict": "VERO",
+      "key_it": "occorre azionare l'indicatore di direzione",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: the overtaking manoeuvre must be signalled with the direction indicator before it starts.",
+        "ru": "Верно: манёвр обгона нужно заранее обозначить указателем поворота.",
+        "zh": "正确：超车前必须提前开启转向信号。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-1": {
+      "verdict": "VERO",
+      "key_it": "si effettua, di norma, a sinistra",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking is, as a rule, done on the left — in Italy you keep right and pass on the left side.",
+        "ru": "Верно: по общему правилу обгон выполняют слева — в Италии держат правую сторону, поэтому обгоняют слева.",
+        "zh": "正确：按通行规则超车通常从左侧进行——意大利靠右行驶，超车走左侧。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-2": {
+      "verdict": "VERO",
+      "key_it": "tenendo una adeguata distanza laterale",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: while overtaking you must keep an adequate lateral distance from the vehicle you are passing.",
+        "ru": "Верно: при обгоне нужно выдерживать достаточный боковой зазор до обгоняемого автомобиля.",
+        "zh": "正确：超车时须与被超车辆保持足够横向距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-3": {
+      "verdict": "VERO",
+      "key_it": "riportarsi a destra appena possibile",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: after overtaking you return to the right as soon as possible, without creating danger or obstruction.",
+        "ru": "Верно: после обгона нужно как можно скорее вернуться на правую сторону, не создавая опасности и помех.",
+        "zh": "正确：超车完成后应尽快回到右侧行驶，不得危及或妨碍他人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-4": {
+      "verdict": "VERO",
+      "key_it": "deve agevolare la manovra di sorpasso e non accelerare",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: a driver being overtaken must facilitate the manoeuvre and must not speed up.",
+        "ru": "Верно: обгоняемый водитель обязан содействовать манёвру и не должен ускоряться.",
+        "zh": "正确：被超车辆驾驶员应配合超车，不得加速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-5": {
+      "verdict": "VERO",
+      "key_it": "il più vicino possibile al margine destro",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: on roads with one lane per direction, a driver being overtaken must stay as close as possible to the right edge.",
+        "ru": "Верно: на дороге с одной полосой в каждую сторону обгоняемый должен держаться как можно ближе к правому краю.",
+        "zh": "正确：在每方向一条车道的道路上，被超车辆应尽可能贴近道路右缘行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-manovra-sorpasso-6": {
+      "verdict": "VERO",
+      "key_it": "spazio visibile risulta insufficiente",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: do not start overtaking if the visible stretch of road is not enough to complete the manoeuvre safely.",
+        "ru": "Верно: если видимый участок дороги недостаточен для безопасного завершения обгона, манёвр начинать нельзя.",
+        "zh": "正确：可见路段不足以安全完成超车时，不得开始超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    }
+  }
+}
