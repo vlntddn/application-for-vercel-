@@ -1040,6 +1040,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-43": {
+      "verdict": "FALSO",
+      "key_it": "il veicolo da sorpassare rallenta",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: if the car being overtaken slows down, the space needed to overtake actually decreases, not increases.",
+        "ru": "Неверно: если обгоняемый замедляется, нужное для обгона расстояние уменьшается, а не растёт.",
+        "zh": "错误：被超车辆减速时，完成超车所需距离反而减小，而非增大。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-44": {
+      "verdict": "FALSO",
+      "key_it": "indipendente dalla lunghezza dei veicoli",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: the space needed to overtake depends on the length of the vehicles.",
+        "ru": "Неверно: нужное для обгона расстояние зависит от длины автомобилей.",
+        "zh": "错误：超车所需距离取决于车辆的长度。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-45": {
+      "verdict": "FALSO",
+      "key_it": "un autobus fermo per la salita e la discesa",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: overtaking a bus stopped for boarding and alighting is not categorically forbidden.",
+        "ru": "Неверно: обгон остановившегося для посадки/высадки автобуса не запрещён — он допустим с соблюдением правил.",
+        "zh": "错误：超越停靠上下客的公交车并非绝对禁止——在遵守规则前提下允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-46": {
+      "verdict": "FALSO",
+      "key_it": "curve e sui dossi delle strade a senso unico",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: on one-way streets overtaking at curves and over speed humps is not forbidden.",
+        "ru": "Неверно: на односторонних улицах обгон на поворотах и лежачих полицейских не запрещён.",
+        "zh": "错误：单行线上弯道及减速带处超车并非禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-47": {
+      "verdict": "FALSO",
+      "key_it": "superare la linea longitudinale tratteggiata",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: crossing a dashed longitudinal line is allowed — the ban applies to continuous lines, not dashed ones.",
+        "ru": "Неверно: пересечение прерывистой продольной линии разрешено — запрет касается сплошных линий, а не прерывистых.",
+        "zh": "错误：跨越纵向虚线是允许的——禁令针对实线，而非虚线。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-48": {
+      "verdict": "FALSO",
+      "key_it": "sorpasso a destra dei motocicli",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: right-hand overtaking of motorcycles is not allowed even with enough space — overtaking is on the left.",
+        "ru": "Неверно: обгон мотоциклов справа не разрешён даже при достаточном пространстве — обгон выполняется слева.",
+        "zh": "错误：即使空间充足，也不得从右侧超越摩托车——超车应在左侧。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-spazio-necessario-sorpasso-49": {
+      "verdict": "FALSO",
+      "key_it": "utilizzare per il sorpasso le corsie riservate",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: in heavy traffic motorcycles may not use reserved lanes for overtaking.",
+        "ru": "Неверно: при плотном трафике мотоциклисты не могут использовать выделенные полосы для обгона.",
+        "zh": "错误：在密集交通中，摩托车手不得借用专用车道超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-vietato-0": {
+      "verdict": "VERO",
+      "key_it": "lampeggiando con i proiettori abbaglianti",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: when starting to overtake you may signal the manoeuvre to vehicles ahead by flashing the high beams.",
+        "ru": "Верно: при начале обгона допустимо подать сигнал впереди идущим, мигнув дальним светом.",
+        "zh": "正确：开始超车时，可通过闪远光灯向前方车辆示意该操作。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-vietato-1": {
+      "verdict": "VERO",
+      "key_it": "regolare la velocità in relazione a quella del veicolo da sorpassare",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: while overtaking you must adapt your speed to that of the vehicle being overtaken.",
+        "ru": "Верно: во время обгона нужно согласовать скорость со скоростью обгоняемого автомобиля.",
+        "zh": "正确：超车时应根据被超车辆的速度调整自身车速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-vietato-2": {
+      "verdict": "FALSO",
+      "key_it": "momentaneamente superare i limiti di velocità",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: inside built-up areas speed limits may not be exceeded even briefly to overtake.",
+        "ru": "Неверно: в населённых пунктах обгон не даёт права даже кратковременно превысить лимит скорости.",
+        "zh": "错误：在城镇内，超车也不得短暂超过速度限制。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-vietato-3": {
+      "verdict": "FALSO",
+      "key_it": "mantenere strettamente la destra",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: during overtaking you do not strictly hold the right — the manoeuvre necessarily involves moving left.",
+        "ru": "Неверно: во время обгона не удерживают строго правую сторону — манёвр предполагает выезд влево.",
+        "zh": "错误：超车时并非严格贴右侧行驶——该操作必然涉及向左驶出。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-vietato-4": {
+      "verdict": "FALSO",
+      "key_it": "non bisogna accelerare",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: during overtaking you do need to accelerate — accelerating is part of the manoeuvre.",
+        "ru": "Неверно: при обгоне как раз нужно ускоряться — разгон является частью манёвра.",
+        "zh": "错误：超车时正需要加速——提速是该操作的一部分。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-vietato-5": {
+      "verdict": "FALSO",
+      "key_it": "rientrare immediatamente a destra, rallentando",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: after overtaking you do not immediately merge right while slowing — you return only when safe.",
+        "ru": "Неверно: после обгона не перестраиваются вправо немедленно с замедлением — возврат только при безопасности.",
+        "zh": "错误：超车后不应立即减速并靠右——应在安全时才并回。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-vietato-6": {
+      "verdict": "FALSO",
+      "key_it": "autobus in servizio pubblico di linea",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: overtaking scheduled public buses is not forbidden.",
+        "ru": "Неверно: обгон рейсовых пассажирских автобусов не запрещён.",
+        "zh": "错误：超越班线公交车并非禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-vietato-7": {
+      "verdict": "FALSO",
+      "key_it": "l'indicatore di direzione destro",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: a right-turn indicator from the car ahead does not forbid overtaking — in that case you pass on the right.",
+        "ru": "Неверно: правый указатель впереди идущего не запрещает обгон — в этом случае обгоняют справа.",
+        "zh": "错误：前车打右转灯并不禁止超车——此时应从右侧超越。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-vietato-8": {
+      "verdict": "FALSO",
+      "key_it": "se nevica",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: snowfall does not categorically forbid overtaking — it is allowed under normal visibility conditions.",
+        "ru": "Неверно: снегопад не запрещает обгон — при обычной видимости он допустим.",
+        "zh": "错误：下雪本身并不绝对禁止超车——在正常能见度下仍可进行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-vietato-9": {
+      "verdict": "FALSO",
+      "key_it": "passi carrabili",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: overtaking at private driveways (passi carrabili) is not forbidden.",
+        "ru": "Неверно: обгон у въездов во дворы (passi carrabili) не запрещён.",
+        "zh": "错误：在私人车道入口（passi carrabili）处超车并非禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-vietato-10": {
+      "verdict": "FALSO",
+      "key_it": "prossimità degli ospedali",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: overtaking near hospitals is not forbidden.",
+        "ru": "Неверно: обгон вблизи больниц не запрещён.",
+        "zh": "错误：在医院附近超车并非禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-vietato-11": {
+      "verdict": "FALSO",
+      "key_it": "stazioni di servizio",
+      "chapter": "ch12",
+      "why": {
+        "en": "False: overtaking near service stations is not forbidden.",
+        "ru": "Неверно: обгон вблизи АЗС не запрещён.",
+        "zh": "错误：在加油站附近超车并非禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "sorpasso-sorpasso-prossimita-dosso-0": {
+      "verdict": "VERO",
+      "key_it": "strade a senso unico",
+      "chapter": "ch12",
+      "why": {
+        "en": "True: overtaking near a speed hump is allowed on one-way roads.",
+        "ru": "Верно: на односторонних дорогах обгон вблизи лежачего полицейского разрешён.",
+        "zh": "正确：单行线上，减速带附近允许超车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
