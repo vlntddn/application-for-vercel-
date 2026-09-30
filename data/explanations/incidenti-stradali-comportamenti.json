@@ -1,0 +1,265 @@
+{
+  "category": "incidenti-stradali-comportamenti",
+  "items": {
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-0": {
+      "verdict": "VERO",
+      "key_it": "ristrettezza della strada",
+      "chapter": "ch17",
+      "why": {
+        "en": "True: a narrow road is a structural road defect that can be a probable cause of an accident.",
+        "ru": "Верно: узость дороги — структурный дефект дороги, который может быть вероятной причиной ДТП.",
+        "zh": "正确：道路狭窄属于道路结构缺陷，可能是事故的潜在原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-1": {
+      "verdict": "VERO",
+      "key_it": "mancata segnalazione degli incroci",
+      "chapter": "ch17",
+      "why": {
+        "en": "True: a crossroad that is not properly signalled is a structural road defect and a probable cause of accidents.",
+        "ru": "Верно: перекрёсток без надлежащего обозначения — структурный дефект дороги и вероятная причина ДТП.",
+        "zh": "正确：交叉口缺少相应标志属于道路结构缺陷，是事故的潜在原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-2": {
+      "verdict": "VERO",
+      "key_it": "mancanza di segnaletica orizzontale",
+      "chapter": "ch17",
+      "why": {
+        "en": "True: the absence of road markings is a structural road defect that can cause accidents.",
+        "ru": "Верно: отсутствие дорожной разметки — структурный дефект дороги, способный вызвать ДТП.",
+        "zh": "正确：缺少道路标线属于道路结构缺陷，可能导致事故。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-3": {
+      "verdict": "VERO",
+      "key_it": "fondo stradale deformato",
+      "chapter": "ch17",
+      "why": {
+        "en": "True: a deformed road surface is a structural road defect and a probable cause of accidents.",
+        "ru": "Верно: деформированное дорожное полотно — структурный дефект дороги и вероятная причина ДТП.",
+        "zh": "正确：路面变形属于道路结构缺陷，是事故的潜在原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-4": {
+      "verdict": "VERO",
+      "key_it": "fondo stradale scivoloso",
+      "chapter": "ch17",
+      "why": {
+        "en": "True: a slippery road surface is a structural road defect that can cause accidents.",
+        "ru": "Верно: скользкое дорожное полотно — структурный дефект дороги, способный вызвать ДТП.",
+        "zh": "正确：路面湿滑属于道路结构缺陷，可能导致事故。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-5": {
+      "verdict": "VERO",
+      "key_it": "strettoie non segnalate",
+      "chapter": "ch17",
+      "why": {
+        "en": "True: an un-signalled bottleneck is a structural road defect and a probable cause of accidents.",
+        "ru": "Верно: несигнализируемое сужение — структурный дефект дороги и вероятная причина ДТП.",
+        "zh": "正确：未设标志的收窄路段属于道路结构缺陷，是事故的潜在原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-6": {
+      "verdict": "FALSO",
+      "key_it": "strada suddivisa in carreggiate",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: a road separated into carriageways is a safety measure that reduces accidents, not a probable cause of them.",
+        "ru": "Неверно: разделённое на стороны движение — мера безопасности, снижающая число ДТП, а не его вероятная причина.",
+        "zh": "错误：道路中央分隔是减少事故的安全措施，而不是事故的可能原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-7": {
+      "verdict": "FALSO",
+      "key_it": "strada suddivisa in corsie",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: dividing the road into lanes organizes traffic and is a safety measure, not a probable cause of accidents.",
+        "ru": "Неверно: разбивка дороги на полосы упорядочивает движение и является мерой безопасности, а не причиной ДТП.",
+        "zh": "错误：道路划分车道是为了规范交通的安全措施，而不是事故的可能原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-8": {
+      "verdict": "FALSO",
+      "key_it": "carreggiata a senso unico di circolazione",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: a one-way carriageway organizes traffic and is a safety measure, not a probable cause of accidents.",
+        "ru": "Неверно: однонаправленная сторона движения упорядочивает трафик и является мерой безопасности, а не причиной ДТП.",
+        "zh": "错误：单行道路组织交通、属于安全措施，而不是事故的可能原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-9": {
+      "verdict": "FALSO",
+      "key_it": "strada a percorso pianeggiante",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: a flat road profile is a favourable condition, not a probable cause of accidents.",
+        "ru": "Неверно: ровный рельеф дороги — благоприятное условие, а не вероятная причина ДТП.",
+        "zh": "错误：平坦的路面条件是有利条件，而不是事故的可能原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-10": {
+      "verdict": "FALSO",
+      "key_it": "barriere laterali ad assorbimento d'urto (guardrails)",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: impact-absorbing side barriers (guardrails) are a safety device that reduces the consequences of accidents, not a probable cause.",
+        "ru": "Неверно: боковые отбойники с поглощением удара — средство безопасности, снижающее последствия ДТП, а не их вероятная причина.",
+        "zh": "错误：吸能式路侧护栏（防撞栏）是减轻事故后果的安全设施，而不是事故的可能原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-11": {
+      "verdict": "FALSO",
+      "key_it": "regolamentazione semaforica",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: traffic-light regulation of intersections is a safety measure, not a probable cause of accidents.",
+        "ru": "Неверно: регулировка перекрёстков светофорами — мера безопасности, а не вероятная причина ДТП.",
+        "zh": "错误：信号灯控制交通是安全措施，而不是事故的可能原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-causa-probabile-incidenti-12": {
+      "verdict": "FALSO",
+      "key_it": "mancanza di curve pericolose",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: the ABSENCE of dangerous curves is a favourable condition; it is the presence of dangerous curves that is a probable cause of accidents.",
+        "ru": "Неверно: ОТСУТСТВИЕ опасных поворотов — благоприятное условие; вероятной причиной ДТП является НАЛИЧИЕ опасных поворотов.",
+        "zh": "错误：没有危险弯道是有利条件；危险弯道的存在才是事故的可能原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-1": {
+      "verdict": "VERO",
+      "key_it": "generalità e gli estremi della patente",
+      "chapter": "ch17",
+      "why": {
+        "en": "True: the driver involved in an accident must give the persons damaged his identity and the details of the licence, plate and insurance.",
+        "ru": "Верно: участник ДТП обязан выдать пострадавшим свои данные и реквизиты водительского удостоверения, номера и страховки.",
+        "zh": "正确：事故驾驶人须向受损人提供本人身份信息及驾驶证、车牌和保险信息。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-2": {
+      "verdict": "VERO",
+      "key_it": "evitare che vengano modificate le tracce",
+      "chapter": "ch17",
+      "why": {
+        "en": "True: the driver must not let the traces of the accident be altered, if the dynamics of the incident still have to be reconstructed.",
+        "ru": "Верно: водитель не должен допустить изменения следов ДТП, если динамику аварии ещё предстоит установить.",
+        "zh": "正确：若事故经过仍需重建，驾驶人不得让事故痕迹被改动。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-3": {
+      "verdict": "VERO",
+      "key_it": "moduli prestampati forniti dalla propria assicurazione",
+      "chapter": "ch17",
+      "why": {
+        "en": "True: for the notification to the insurance company the driver may use the pre-printed forms supplied by his own insurer.",
+        "ru": "Верно: для заявления страховому обществу водитель вправе использовать готовую форму, выданную его страховщиком.",
+        "zh": "正确：向保险公司报案时，驾驶人可使用自家保险公司提供的现成表格。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-4": {
+      "verdict": "FALSO",
+      "key_it": "sul lunotto posteriore del veicolo",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: the mobile warning device is placed on the road behind the vehicle, never on the rear window of the car.",
+        "ru": "Неверно: мобильный знак опасности ставится на дорогу позади автомобиля, а не на заднее стекло машины.",
+        "zh": "错误：临时警告标志应放在车辆后方的路面上，绝不能放在汽车后挡风玻璃上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-5": {
+      "verdict": "FALSO",
+      "key_it": "coprire il veicolo con un telo di plastica",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: covering the vehicle with a plastic sheet is not among the driver obligations after an accident.",
+        "ru": "Неверно: накрывать автомобиль полиэтиленовой плёнкой не входит в обязанности водителя после ДТП.",
+        "zh": "错误：用塑料布覆盖车辆不属于事故后驾驶人的义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-6": {
+      "verdict": "FALSO",
+      "key_it": "solo di notte, apporre il segnale mobile di pericolo",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: placing the mobile warning device near the vehicle is not limited to night — it is not \"only at night\" that it is required.",
+        "ru": "Неверно: установка мобильного знака опасности возле автомобиля не ограничена ночью — это не «только ночью» требуется.",
+        "zh": "错误：在车辆旁放置临时警告标志并非仅限于夜间——并不是“只在夜间”才需要。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "incidenti-stradali-comportamenti-obblighi-dopo-incidente-stradale-7": {
+      "verdict": "FALSO",
+      "key_it": "collocare subito il veicolo sul marciapiede",
+      "chapter": "ch17",
+      "why": {
+        "en": "False: there is no obligation to move the vehicle onto the sidewalk right after an accident; traces may need to be preserved.",
+        "ru": "Неверно: обязанности сразу поставить автомобиль на тротуар нет — следы ДТП могут нуждаться в сохранении.",
+        "zh": "错误：事故后并无立即把车停上人行道的义务，事故痕迹可能还需要保留。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    }
+  }
+}
