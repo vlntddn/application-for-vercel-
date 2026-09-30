@@ -1495,6 +1495,266 @@
       "source": "ai-draft",
       "model": "claude-sonnet",
       "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-3": {
+      "verdict": "VERO",
+      "key_it": "inferiore o uguale a 15 kW",
+      "chapter": "ch1",
+      "why": {
+        "en": "A \"non-light\" quadricycle is capped at the statutory maximum power, so its engine is always at or below that limit - the statement is true.",
+        "ru": "„Нелёгкий\" квадрицикл ограничен установленным максимальным двигателем, поэтому его мощность всегда не выше этого лимита - утверждение верно.",
+        "zh": "非轻型四轮机动车的功率有法定上限，因此其发动机始终不超过该限值，说法成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-strisce-pannelli-retroriflettenti-11": {
+      "verdict": "FALSO",
+      "key_it": "indica la velocità minima consentita",
+      "chapter": "ch1",
+      "why": {
+        "en": "No vehicle has to display a sign stating its minimum allowed speed; rear fittings concern reflectors and the registration, so the claim is false.",
+        "ru": "Ни один транспорт не обязан показывать знак с минимально допустимой скоростью; на задней части ставят отражатели и номер, а не скорость - неверно.",
+        "zh": "没有任何车辆需要标示最低允许速度的标志；车后装的是反光板和车牌，而非速度，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-strisce-pannelli-retroriflettenti-12": {
+      "verdict": "FALSO",
+      "key_it": "indica la velocità massima consentita",
+      "chapter": "ch1",
+      "why": {
+        "en": "Cars are not required to display a maximum-speed sign on the rear; the mandatory rear fittings are reflectors and the licence plate, so this is false.",
+        "ru": "Легковые машины не обязаны показывать на корме знак максимальной скорости; обязательны только отражатели и номерной знак - неверно.",
+        "zh": "小汽车车后无需标示最高速度标志；强制的只是反光板和车牌，因此错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-motocicli-5": {
+      "verdict": "FALSO",
+      "key_it": "Tutti i veicoli a motore con tre ruote sono dei motocicli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Not every three-wheeled motor vehicle is a \"motociclo\": three-wheelers are classified by power, so some belong to other classes - the statement is false.",
+        "ru": "Не каждый трёхколёсный моторный транспорт - „мотоцикл\": трёхколёсные делятся по мощности, часть относится к другим классам - неверно.",
+        "zh": "并非所有三轮机动车都是\"摩托车\"：三轮车按功率划分，部分属于其它类别，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-motocicli-8": {
+      "verdict": "FALSO",
+      "key_it": "solo i veicoli a due ruote di cilindrata fino a 125 cm3",
+      "chapter": "ch1",
+      "why": {
+        "en": "A motociclo is not limited to two-wheelers up to 125 cm3: motorcycles cover a wider engine range, so defining them \"only up to 125 cm3\" is false.",
+        "ru": "„Мотоцикл\" не ограничивается 125 куб. см: мотоциклы покрывают больший диапазон объёма, поэтому определение „только до 125 см3\" неверно.",
+        "zh": "\"摩托车\"并非仅限125cc两辆车：摩托车涵盖更宽排量范围，因此\"仅到125cc\"的定义错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-traffico-intenso-1": {
+      "verdict": "VERO",
+      "key_it": "lasciare liberi i passaggi a livello e i binari del tram",
+      "chapter": "ch1",
+      "why": {
+        "en": "Level crossings and tram rails must never be blocked, even in a queue: stopping there can trap vehicles on the tracks, so keeping them clear is always right.",
+        "ru": "Переезды и трамвайные рельсы нельзя занимать даже в пробке: остановка на них может загнать транспорт на путях, поэтому держать их свободными всегда правильно.",
+        "zh": "即使拥堵也不得占用平交道口和有轨电车轨道：停在上面可能把车辆困在轨道上，因此始终保持清空是正确的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-traffico-intenso-3": {
+      "verdict": "VERO",
+      "key_it": "lasciare libere le immissioni stradali",
+      "chapter": "ch1",
+      "why": {
+        "en": "Intersections, merge points and parking entries must stay clear even in heavy traffic: blocking them blocks cross traffic and worsens the jam.",
+        "ru": "Перекрёстки, места слияния и входы на парковки должны оставаться свободными даже при плотном трафике: заняв их, вы блокируете встречный поток и усугубляете пробку.",
+        "zh": "即使交通拥堵，路口、汇入点和停车场入口也应保持清空：占住它们会阻断横向车流，加重拥堵。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-traffico-intenso-4": {
+      "verdict": "FALSO",
+      "key_it": "lasciare liberi solo gli incroci regolati da semaforo",
+      "chapter": "ch1",
+      "why": {
+        "en": "The \"only signalized intersections\" limit is false: you must keep all junctions and merges clear, not just those controlled by traffic lights.",
+        "ru": "Ограничение „только регулируемые перекрёстки\" неверно: держать свободными нужно все перекрёстки и места слияния, а не только со светофорами.",
+        "zh": "\"仅限信号灯路口\"的说法错误：需要保持清空的是所有路口和汇入点，而非仅有信号灯的路口。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-file-veicoli-0": {
+      "verdict": "VERO",
+      "key_it": "occorre porre attenzione anche in lontananza",
+      "chapter": "ch1",
+      "why": {
+        "en": "In a file you must not watch only the vehicle in front: you also have to look far ahead to read the whole traffic situation early.",
+        "ru": "Двигаясь колонной, нельзя смотреть только на машину впереди: нужно поглядывать и вдаль, чтобы вовремя считывать всю обстановку.",
+        "zh": "车队行驶时不能只盯前方车辆：还要放眼远处，提前看清整体交通状况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-file-veicoli-4": {
+      "verdict": "FALSO",
+      "key_it": "è opportuno tenere sempre accese le luci di emergenza",
+      "chapter": "ch1",
+      "why": {
+        "en": "Hazard lights are not meant to be kept on while driving normally in a queue: that is not the right safety measure, so the statement is false.",
+        "ru": "Аварийную сигнализацию не держат включённой при обычной езде в пробке: это неверная мера безопасности - утверждение ложно.",
+        "zh": "在车队中正常行驶并不要求常开双闪灯：这不是正确的安全措施，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-file-veicoli-8": {
+      "verdict": "FALSO",
+      "key_it": "conviene sorpassarlo subito",
+      "chapter": "ch1",
+      "why": {
+        "en": "Overtaking immediately behind a dust-raising vehicle in poor visibility is unsafe: better to hold back until visibility improves, so the advice is wrong.",
+        "ru": "Сразу обгонять пылящий впереди транспорт в плохой видимости опасно: лучше дождаться, пока видимость улучшится, - совет неверен.",
+        "zh": "在能见度差、前车扬尘时立即超车并不安全：应等能见度改善再超车，故该建议错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-gare-velocita-5": {
+      "verdict": "FALSO",
+      "key_it": "sono consentite le gare di velocità, anche se non autorizzate",
+      "chapter": "ch1",
+      "why": {
+        "en": "Speed contests on public roads are forbidden outright, unauthorized or not: no time window makes them legal, so this is false.",
+        "ru": "Гонки на скорость по общественным дорогам запрещены полностью, санкционированы они или нет: ни один временной интервал не делает их законными - ложь.",
+        "zh": "在公共道路上举办速度比赛一律禁止，无论是否获批：任何时间段都不使其合法，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-gare-velocita-6": {
+      "verdict": "FALSO",
+      "key_it": "Sono consentite le gare di velocità, anche se non autorizzate",
+      "chapter": "ch1",
+      "why": {
+        "en": "Allowing only two cars does not legalize a street race: unauthorized speed contests are forbidden regardless of how many cars take part.",
+        "ru": "Допуск лишь двух машин не делает уличную гонку законной: несанкционированные заезды запрещены независимо от числа участников.",
+        "zh": "只让两辆车参加也不会让街头比赛合法：未经授权的速度比赛一律禁止，与参赛车辆数无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-gare-velocita-7": {
+      "verdict": "FALSO",
+      "key_it": "tra motocicli e non tra autoveicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "There is no such distinction: unauthorized speed races are forbidden for every kind of vehicle, not just cars, so this is false.",
+        "ru": "Такого различия нет: несанкционированные гонки запрещены для любого вида транспорта, а не только для машин - ложь.",
+        "zh": "并不存在这种区别：未经授权的速度比赛对各类车辆一律禁止，而非仅小汽车，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-4": {
+      "verdict": "VERO",
+      "key_it": "deve compiere tutte le azioni necessarie per evitare pericoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "If your vehicle is leaking oil you must take every step to prevent a hazard to other road users, so the statement is true.",
+        "ru": "Если из вашего транспорта течёт масло, нужно предпринять всё необходимое, чтобы не создать опасность другим участникам - верно.",
+        "zh": "若车辆漏油，司机须采取一切措施避免给其他道路使用者带来危险，说法成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-5": {
+      "verdict": "VERO",
+      "key_it": "deve immediatamente avvisare",
+      "chapter": "ch1",
+      "why": {
+        "en": "A serious oil or fuel leak must be reported at once to the road authority or police, so the statement is true.",
+        "ru": "Сильную утечку масла или топлива нужно сразу сообщить владельцу дороги или полиции - верно.",
+        "zh": "发现严重漏油或漏燃料应立即通知道路管理方或警方，说法成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-7": {
+      "verdict": "VERO",
+      "key_it": "deve procedere a bassa velocità sopra le pozzanghere",
+      "chapter": "ch1",
+      "why": {
+        "en": "You should cross puddles at low speed: going slowly avoids throwing water on other users and preserves control of the vehicle.",
+        "ru": "По лужам следует ехать медленно: это не разбрызгивает воду на других участников и сохраняет контроль над транспорт.",
+        "zh": "过水坑时应低速行驶：慢行可避免溅水到他人并保住对车辆的控制。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-persone-anziane-11": {
+      "verdict": "FALSO",
+      "key_it": "bisogna dare la precedenza solo a coloro che attraversano da sinistra a destra",
+      "chapter": "ch1",
+      "why": {
+        "en": "Elderly pedestrians get priority regardless of the direction they cross in; \"only from left to right\" is a false restriction.",
+        "ru": "Пожилым пешеходам уступают независимо от направления перехода; „только слева направо\" - ложное ограничение.",
+        "zh": "老年行人过街时无论方向都须让行；\"仅从左到右\"是错误限制。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-conducente-precedenze-9": {
+      "verdict": "FALSO",
+      "key_it": "solo se munito di bastone bianco-rosso",
+      "chapter": "ch1",
+      "why": {
+        "en": "A blind pedestrian crossing outside a crosswalk deserves priority whether or not they carry a white-red cane; the \"only if\" makes this false.",
+        "ru": "Слепому пешеходу вне зебры уступают независимо от того, есть ли у него красно-белая трость; „только если\" делает утверждение ложным.",
+        "zh": "盲人在斑马线外过街无论是否持红白手杖都应让行；\"仅在\"使其错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-conducente-precedenze-10": {
+      "verdict": "FALSO",
+      "key_it": "camminerà rapidamente e senza incertezza",
+      "chapter": "ch1",
+      "why": {
+        "en": "A blind pedestrian may cross slowly and hesitantly, so you must not assume they will move quickly and confidently - the statement is false.",
+        "ru": "Слепой пешеход может идти медленно и с остановками, поэтому нельзя счесть, что он пойдёт быстро и уверенно - утверждение ложно.",
+        "zh": "盲人可能缓慢且犹豫地过街，不能假定他们会快速自信地走，故错误。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-09-30"
     }
   }
 }
