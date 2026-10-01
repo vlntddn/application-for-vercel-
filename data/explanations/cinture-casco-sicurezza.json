@@ -1586,6 +1586,175 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-3": {
+      "verdict": "VERO",
+      "key_it": "garantiscono la giusta",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: motorcycle gloves guarantee the right feel while riding and a safer grip on the controls.",
+        "ru": "Верно: мотоциклетные перчатки обеспечивают правильное ощущение при езде и более уверенное сцепление с органами управления.",
+        "zh": "正确：摩托车手套能保持骑行时的恰当手感，并更稳妥地抓握操控部件。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-4": {
+      "verdict": "VERO",
+      "key_it": "imbottiture diverse",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: motorcycle gloves can have different padding depending on the season.",
+        "ru": "Верно: мотоциклетные перчатки могут иметь разную набивку в зависимости от сезона.",
+        "zh": "正确：摩托车手套可以根据季节配备不同的内衬缓冲。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-6": {
+      "verdict": "VERO",
+      "key_it": "speciali sistemi di aggancio",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: motorcycle gloves have special locking systems to prevent them slipping off in a fall.",
+        "ru": "Верно: у мотоциклетных перчаток есть специальные фиксирующие системы, не дающие им соскользнуть при падении.",
+        "zh": "正确：摩托车手套配有专门的固定装置，防止摔倒时脱落。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-7": {
+      "verdict": "FALSO",
+      "key_it": "Non esistono guanti ad uso motociclistico",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: approved (homologated) motorcycle gloves do exist — approved versions are available and lawful.",
+        "ru": "Ложно: сертифицированные (омологированные) мотоциклетные перчатки существуют — их сертифицированные версии выпускаются и законны.",
+        "zh": "错误：经认证的摩托车手套是存在的——有认证版本且合法。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-10": {
+      "verdict": "FALSO",
+      "key_it": "di colore nero e con una sagoma di moto",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: motorcycle gloves are not identified by being black with a motorcycle silhouette printed on the wrist — that is an invented marker.",
+        "ru": "Ложно: мотоциклетные перчатки не определяются по чёрному цвету и силуэту мотоцикла, напечатанному на запястье — это выдуманный признак.",
+        "zh": "错误：摩托车手套并非以黑色加手腕上的摩托车轮廓来识别——那是编造的标志。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-12": {
+      "verdict": "FALSO",
+      "key_it": "non sono idonei alla guida di ciclomotori",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: motorcycle gloves are suitable for riding two-wheel mopeds too — they are not limited to motorcycles.",
+        "ru": "Ложно: мотоциклетные перчатки подходят и для езды на двухколёсных мопедах — они не только для мотоциклов.",
+        "zh": "错误：摩托车手套同样适合骑两轮轻便摩托车——它们并不只限于摩托车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-13": {
+      "verdict": "FALSO",
+      "key_it": "proteggere dal freddo",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: the main purpose of motorcycle gloves is not merely to protect from the cold, so they are not useless in summer — they protect the hands in any season.",
+        "ru": "Ложно: главная цель мотоциклетных перчаток — не только защита от холода, поэтому летом они не бесполезны — перчатки защищают руки в любой сезон.",
+        "zh": "错误：摩托车手套的主要目的并非仅为御寒，所以夏天并非无用——它们任何季节都保护手部。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-giacche-indumenti-motociclistico-0": {
+      "verdict": "VERO",
+      "key_it": "garantiscono un",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: motorcycle jackets give adequate protection against abrasion in the event of sliding on the asphalt.",
+        "ru": "Верно: мотоциклетные куртки обеспечивают надлежащую защиту от трения при скольжении об асфальт.",
+        "zh": "正确：摩托车夹克在柏油路面上滑倒时能提供足够的防磨保护。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-giacche-indumenti-motociclistico-1": {
+      "verdict": "VERO",
+      "key_it": "inserti rigidi protettivi",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: motorcycle jackets have rigid protective inserts at the joints.",
+        "ru": "Верно: у мотоциклетных курток есть жёсткие защитные вставки в области суставов.",
+        "zh": "正确：摩托车夹克在关节部位设有硬质防护内衬。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-giacche-indumenti-motociclistico-2": {
+      "verdict": "VERO",
+      "key_it": "prove di resistenza al taglio",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: approved motorcycle clothing is subjected to tests of resistance to cutting and to abrasion from impact.",
+        "ru": "Верно: сертифицированная мотоциклетная одежда проходит испытания на стойкость к разрезанию и к трению от удара.",
+        "zh": "正确：经认证的摩托车服装需通过抗切割和抗撞击磨擦的测试。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-giacche-indumenti-motociclistico-3": {
+      "verdict": "FALSO",
+      "key_it": "prove di resistenza al lavaggio",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: approved motorcycle clothing is not tested for wash resistance — the tests concern cutting and abrasion, not washing.",
+        "ru": "Ложно: сертифицированная мотоциклетная одежда не испытывается на стойкость к стирке — испытания касаются разрезания и трения, а не стирки.",
+        "zh": "错误：经认证的摩托车服装并不做耐洗测试——测试针对的是抗切割与抗磨擦，而非洗涤。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-giacche-indumenti-motociclistico-4": {
+      "verdict": "FALSO",
+      "key_it": "non sono previste per utilizzo estivo",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: motorcycle jackets are also intended for summer use — they are not excluded in summer.",
+        "ru": "Ложно: мотоциклетные куртки рассчитаны и на летнее использование — они не исключаются летом.",
+        "zh": "错误：摩托车夹克也适用于夏季——并非夏季不可使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-giacche-indumenti-motociclistico-5": {
+      "verdict": "FALSO",
+      "key_it": "unicamente di colore nero",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: motorcycle jackets do not have to be black only to be homologated — colour is not the requirement.",
+        "ru": "Ложно: мотоциклетные куртки не обязаны быть только чёрными, чтобы быть сертифицированными — цвет не является требованием.",
+        "zh": "错误：摩托车夹克获得认证并不要求必须是黑色——颜色并非要求。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
