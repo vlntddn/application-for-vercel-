@@ -624,6 +624,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-7": {
+      "verdict": "VERO",
+      "key_it": "si blocchino soltanto le ruote di un lato",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: with unbalanced brakes it can happen that, when braking, only the wheels on one side lock up.",
+        "ru": "Верно: при несбалансированных тормозах при торможении может случиться, что блокируются только колёса одной стороны.",
+        "zh": "正确：制动器不平衡时，制动中可能只有一侧的车轮抱死。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-8": {
+      "verdict": "VERO",
+      "key_it": "il veicolo sbandi, dirigendosi verso il lato della ruota che si blocca per prima",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: with unbalanced brakes, when braking the vehicle may swerve towards the side of the wheel that locks up first.",
+        "ru": "Верно: при несбалансированных тормозах при торможении транспортное средство может уйти в сторону, направляясь к тому боку, где колесо блокируется первым.",
+        "zh": "正确：制动器不平衡时，制动中车辆可能向最先抱死的车轮那一侧偏摆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-10": {
+      "verdict": "FALSO",
+      "key_it": "causata dal consumo eccessivo dei meccanismi del freno di stazionamento",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: the parking brake (handbrake) is a separate system; excessive wear of its mechanisms does not cause weak or unbalanced service braking.",
+        "ru": "Ложно: стояночный тормоз — отдельная система; чрезмерный износ его механизмов не вызывает слабого или несбалансированного рабочего торможения.",
+        "zh": "错误：驻车制动是独立系统，其机构过度磨损不会导致工作制动效能不足或不平衡。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-11": {
+      "verdict": "FALSO",
+      "key_it": "causata dall’insufficiente lubrificazione dei tamburi o dei dischi",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: brake discs and drums do not need lubrication; poor braking is not caused by their insufficient lubrication.",
+        "ru": "Ложно: тормозным дискам и барабанам не нужна смазка; плохое торможение не вызывается их недостаточной смазкой.",
+        "zh": "错误：制动盘和制动鼓不需要润滑，制动不良并非由它们润滑不足引起。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-12": {
+      "verdict": "FALSO",
+      "key_it": "causata dall’eccessivo gioco del pedale della frizione",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: the clutch pedal is part of the gearbox, not of the brakes; its excess free play does not affect braking.",
+        "ru": "Ложно: педаль сцепления относится к коробке передач, а не к тормозам; её чрезмерный люфт не влияет на торможение.",
+        "zh": "错误：离合踏板属于变速箱而非制动系统，其过度间隙不影响制动。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-13": {
+      "verdict": "FALSO",
+      "key_it": "causata dalla presenza del servosterzo su veicoli di piccola cilindrata",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: power steering is part of the steering system, not of the brakes; its presence does not cause weak or unbalanced braking.",
+        "ru": "Ложно: рулевой усилитель относится к рулевому управлению, а не к тормозам; его наличие не вызывает слабого или несбалансированного торможения.",
+        "zh": "错误：动力转向属于转向系统而非制动系统，其存在不会导致制动效能不足或不平衡。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-14": {
+      "verdict": "FALSO",
+      "key_it": "causata dalla presenza di freni a disco sull’asse posteriore",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: having disc brakes on the rear axle is a design choice, not a cause of weak or unbalanced braking.",
+        "ru": "Ложно: наличие дисковых тормозов на задней оси — это конструктивное решение, а не причина слабого или несбалансированного торможения.",
+        "zh": "错误：后轴装有盘式制动是设计选择，并非制动效能不足或不平衡的原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-15": {
+      "verdict": "FALSO",
+      "key_it": "causata da pneumatici invernali montati su tutte e quattro le ruote",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: fitting winter tyres on all four wheels is the correct, balanced practice; it does not cause weak or unbalanced braking.",
+        "ru": "Ложно: установка зимних шин на все четыре колеса — правильный, сбалансированный подход; он не вызывает слабого или несбалансированного торможения.",
+        "zh": "错误：在全部四个车轮上安装冬季轮胎是正确的均衡做法，不会导致制动效能不足或不平衡。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-16": {
+      "verdict": "FALSO",
+      "key_it": "causata da pneumatici invernali utilizzati su strade non innevate",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: using winter tyres on roads without snow is not a cause of weak or unbalanced braking.",
+        "ru": "Ложно: использование зимних шин на дорогах без снега не является причиной слабого или несбалансированного торможения.",
+        "zh": "错误：在无雪路面上使用冬季轮胎并非制动效能不足或不平衡的原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-17": {
+      "verdict": "FALSO",
+      "key_it": "causata dall’utilizzo di veicoli con alimentazione a metano su strade di montagna",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: driving a methane-fuelled vehicle on mountain roads is unrelated to the braking system and does not cause weak or unbalanced braking.",
+        "ru": "Ложно: поездка на метановом автомобиле по горным дорогам не связана с тормозной системой и не вызывает слабого или несбалансированного торможения.",
+        "zh": "错误：在山路驾驶天然气燃料车辆与制动系统无关，不会导致制动效能不足或不平衡。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-20": {
+      "verdict": "FALSO",
+      "key_it": "un’operazione di manutenzione ordinaria che può essere svolta da qualunque conducente",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: replacing brake pads is not routine work that any driver may do; it must be performed by qualified personnel.",
+        "ru": "Ложно: замена тормозных колодок — не обычное обслуживание, которое может выполнить любой водитель; её делают квалифицированные специалисты.",
+        "zh": "错误：更换制动块不是任何驾驶员都能做的日常保养，须由合格人员完成。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-sospensioni-veicolo-motore-5": {
+      "verdict": "FALSO",
+      "key_it": "servono a mantenere il veicolo fermo anche su strada in pendenza",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: keeping a vehicle parked on a slope is the job of the parking brake, not of the suspension.",
+        "ru": "Ложно: удерживать транспортное средство на уклоне — задача стояночного тормоза, а не подвески.",
+        "zh": "错误：让车辆在坡道上保持静止是驻车制动的作用，而非悬挂的作用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-sospensioni-veicolo-motore-7": {
+      "verdict": "FALSO",
+      "key_it": "servono a irrigidire il veicolo, in modo che il conducente percepisca chiaramente tutti i saltellamenti",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: the suspension damps road irregularities, making the ride smoother, rather than stiffening the vehicle so the driver feels every bump.",
+        "ru": "Ложно: подвеска гасит неровности дороги и делает ход мягче, а не делает кузов жёстче, чтобы водитель ощущал каждое подскакивание.",
+        "zh": "错误：悬挂的作用是缓冲路面不平、使行驶更平稳，而非让车身变硬以便驾驶员明显感受每一次颠簸。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-cause-sospensioni-inefficienti-2": {
+      "verdict": "VERO",
+      "key_it": "Il sovraccarico del veicolo può comportare la rottura delle sospensioni",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: overloading the vehicle can lead to the suspension breaking.",
+        "ru": "Верно: перегрузка транспортного средства может привести к разрушению подвески.",
+        "zh": "正确：车辆超载可能导致悬挂损坏断裂。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-cause-sospensioni-inefficienti-3": {
+      "verdict": "VERO",
+      "key_it": "Il sovraccarico del veicolo può comportare la temporanea inefficienza delle sospensioni",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: overloading the vehicle can cause the suspension to become temporarily inefficient.",
+        "ru": "Верно: перегрузка транспортного средства может вызвать временную неэффективность подвески.",
+        "zh": "正确：车辆超载可能导致悬挂暂时失效。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-cause-sospensioni-inefficienti-4": {
+      "verdict": "VERO",
+      "key_it": "Il sovraccarico ripetuto del veicolo può comportare la rapida usura delle sospensioni",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: repeated overloading of the vehicle can lead to rapid wear of the suspension.",
+        "ru": "Верно: повторная перегрузка транспортного средства может привести к быстрому износу подвески.",
+        "zh": "正确：车辆反复超载可能导致悬挂快速磨损。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-cause-sospensioni-inefficienti-7": {
+      "verdict": "VERO",
+      "key_it": "l’anomalo orientamento dei proiettori anabbaglianti",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: a vehicle with inefficient suspension may develop an abnormal orientation of the low-beam headlights.",
+        "ru": "Верно: у транспортного средства с неэффективной подвеской может возникнуть неверное наклонение фар ближнего света.",
+        "zh": "正确：悬挂失效的车辆可能出现近光灯照射方向异常。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-ammortizzatori-sovraccarico-3": {
+      "verdict": "VERO",
+      "key_it": "Il sovraccarico del veicolo può rendere inefficienti gli ammortizzatori",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: overloading the vehicle can make the shock absorbers inefficient.",
+        "ru": "Верно: перегрузка транспортного средства может сделать амортизаторы неэффективными.",
+        "zh": "正确：车辆超载可能导致减震器失效。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-ammortizzatori-sovraccarico-4": {
+      "verdict": "VERO",
+      "key_it": "Il sovraccarico del veicolo può comportare un’usura precoce degli ammortizzatori",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: overloading the vehicle can cause premature wear of the shock absorbers.",
+        "ru": "Верно: перегрузка транспортного средства может привести к преждевременному износу амортизаторов.",
+        "zh": "正确：车辆超载可能导致减震器过早磨损。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-ammortizzatori-sovraccarico-8": {
+      "verdict": "FALSO",
+      "key_it": "Il conducente può in ogni caso regolare la rigidità degli ammortizzatori",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: the driver cannot adjust the firmness of the shock absorbers; that is not a driver-controlled setting.",
+        "ru": "Ложно: водитель не может регулировать жёсткость амортизаторов — это не параметр, которым управляет водитель.",
+        "zh": "错误：驾驶员无法调节减震器的硬度，这不是由驾驶员控制的设置。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
