@@ -1482,6 +1482,266 @@
         "ru": "Верно: прилипшую к обожжённой коже одежду не снимают — отрывая её, можно задеть и здоровые ткани, усугубив травму.",
         "zh": "正确：粘在烧伤皮肤上的衣物不要撕下，否则可能连健康皮肤一起被撕掉，加重损伤。"
       }
+    },
+    "alcool-droga-primo-soccorso-stato-shock-0": {
+      "verdict": "VERO",
+      "key_it": "pelle molto pallida e fredda",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: in shock blood drains away from the skin, so the victim looks very pale and their skin turns cold and clammy — a classic sign of shock.",
+        "ru": "Верно: при шоке кровь отливает от кожи — пострадавший бледнеет, а кожа становится холодной и влажной; это классический признак шока.",
+        "zh": "正确：休克时血液远离体表，面色苍白、皮肤湿冷，是休克的典型体征。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-stato-shock-1": {
+      "verdict": "VERO",
+      "key_it": "sudore freddo alla fronte",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: cold sweat on the forehead is a typical sign of shock, which can set in after a serious injury.",
+        "ru": "Верно: холодный пот на лбу — типичный признак шока, который может наступить после серьёзной травмы.",
+        "zh": "正确：额头出冷汗是休克的典型表现，严重创伤后即可出现。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-stato-shock-2": {
+      "verdict": "VERO",
+      "key_it": "brividi, pelle molto pallida e sudorazione fredda",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: chills, very pale skin and cold sweating on the forehead are all classic signs of a state of shock.",
+        "ru": "Верно: озноб, сильная бледность и холодный пот на лбу — все это классические признаки шока.",
+        "zh": "正确：发冷、面色苍白、额头冷汗，都是休克的典型体征。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-stato-shock-3": {
+      "verdict": "VERO",
+      "key_it": "pelle molto pallida, sudorazione fredda, frequenti battiti del cuore",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: pale skin, cold sweat and a rapid, frequent heartbeat together form the classic picture of shock.",
+        "ru": "Верно: бледность кожи, холодный пот и частые сердцебиения — это классическая картина шока.",
+        "zh": "正确：皮肤苍白、冷汗、心跳频繁，共同构成休克的典型表现。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-stato-shock-6": {
+      "verdict": "FALSO",
+      "key_it": "ampie macchie scure sulla pelle",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: large dark patches on the skin are not a sign of shock. Shock shows as pale, cold and clammy skin.",
+        "ru": "Неверно: обширные тёмные пятна на коже — не признак шока. Для шока характерна бледная, холодная, влажная кожа.",
+        "zh": "错误：皮肤上大片深色斑块不是休克的体征。休克的表现为皮肤苍白、湿冷。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-stato-shock-7": {
+      "verdict": "FALSO",
+      "key_it": "colorito rosso della pelle e forti vampate di calore",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: red skin with strong heat flushes is not a sign of shock — shock makes the skin pale, cold and sweaty.",
+        "ru": "Неверно: покраснение кожи и сильные жары — не признаки шока; шок делает кожу бледной, холодной и влажной.",
+        "zh": "错误：皮肤发红、发热潮红不是休克的体征——休克时皮肤苍白、湿冷、出汗。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-della-strada-0": {
+      "verdict": "VERO",
+      "key_it": "facilitargli la respirazione mettendolo semi-seduto",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: with chest trauma and an aware victim, a semi-sitting position eases breathing — do not lay them flat.",
+        "ru": "Верно: при травме грудной клетки у сознания — полусидячее положение облегчает дыхание; укладывать горизонтально не нужно.",
+        "zh": "正确：胸廓受伤且伤者清醒时，半坐位可帮助呼吸，不要平放。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-della-strada-1": {
+      "verdict": "VERO",
+      "key_it": "ferita visibile e profonda, bisogna comprimere subito con un panno pulito",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: a visible, deep chest wound must be compressed at once with a clean cloth to stop bleeding and protect the wound.",
+        "ru": "Верно: видимую глубокую рану грудной клетки нужно сразу прижать чистой тканью, чтобы остановить кровотечение и защитить рану.",
+        "zh": "正确：胸廓上可见的深部伤口应立即用干净布巾按压止血并保护伤口。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-della-strada-2": {
+      "verdict": "VERO",
+      "key_it": "bisogna assisterlo fino all'arrivo del soccorso medico",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: a victim of chest trauma must be monitored and assisted until the medical team arrives.",
+        "ru": "Верно: пострадавшего с травмой грудной клетки нужно сопровождать и помогать ему до прибытия медиков.",
+        "zh": "正确：胸廓受伤者应持续照护，直至救护人员到达。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-della-strada-3": {
+      "verdict": "FALSO",
+      "key_it": "fargli fare profondi respiri",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: making a victim with chest trauma take deep breaths risks worsening the injury — keep them calm and limit movement.",
+        "ru": "Неверно: заставлять пострадавшего с травмой грудной клетки делать глубокие вдохи может усугубить повреждение — нужно покой и меньше движений.",
+        "zh": "错误：让胸廓受伤者做深呼吸可能加重伤情，应保持安静、减少活动。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-della-strada-4": {
+      "verdict": "FALSO",
+      "key_it": "posizione distesa, con le gambe sollevate",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: lying flat with legs raised is the anti-shock position — for chest trauma the victim is kept semi-sitting so they can breathe better.",
+        "ru": "Неверно: лёжа с приподнятыми ногами — это поза при шоке; при травме грудной клетки пострадавшего держат полусидя, чтобы помочь дыханию.",
+        "zh": "错误：平躺抬腿是抗休克体位；胸廓受伤时让伤者半坐，以利呼吸。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-della-strada-5": {
+      "verdict": "FALSO",
+      "key_it": "farlo stare alzato, per diminuire la fuoriuscita di sangue",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: standing with chest trauma hinders breathing; a semi-sitting position eases it — the goal is easier breathing, not stopping blood loss.",
+        "ru": "Неверно: при травме грудной клетки стоять опасно — это мешает дыханию; облегчает дыхание полусидячее положение.",
+        "zh": "错误：胸廓受伤者不宜站立，会影响呼吸；半坐位才能帮助呼吸。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-fratture-agli-arti-0": {
+      "verdict": "VERO",
+      "key_it": "non bisogna muovere gli arti fratturati",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: broken limbs must not be moved, to avoid shifting the bone fragments and wounding vessels and nerves.",
+        "ru": "Верно: сломанные конечности нельзя двигать — это может сдвинуть отломки костей и повредить сосуды и нервы.",
+        "zh": "正确：骨折的肢体不能移动，以免骨碎片移位伤及血管和神经。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-fratture-agli-arti-1": {
+      "verdict": "VERO",
+      "key_it": "bisogna bloccarglieli, senza procedere ad altre manovre",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: the right move with a fracture is to immobilize the limb and do nothing else — no massage, no realigning.",
+        "ru": "Верно: при переломе нужно иммобилизовать конечность и ничего больше не делать — не массировать, не вправлять.",
+        "zh": "正确：骨折时应固定肢体，不要再做其他处理——不按摩、不复位。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-fratture-agli-arti-2": {
+      "verdict": "VERO",
+      "key_it": "coprire le eventuali ferite con materiale pulito",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: any wounds next to a fracture should be covered with clean material to protect them from infection.",
+        "ru": "Верно: раны рядом с переломом нужно прикрыть чистым материалом, чтобы защитить от инфекции.",
+        "zh": "正确：骨折处的伤口应用清洁敷料覆盖，防止感染。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-fratture-agli-arti-3": {
+      "verdict": "VERO",
+      "key_it": "bloccarglieli e subito dopo, se necessario, attuare le normali misure anti-shock",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: first immobilize the broken limbs, then apply the usual anti-shock measures if needed.",
+        "ru": "Верно: сначала иммобилизуют сломанные конечности, а затем при необходимости принимают обычные меры против шока.",
+        "zh": "正确：先固定骨折肢体，必要时再采取常规抗休克措施。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-fratture-agli-arti-4": {
+      "verdict": "FALSO",
+      "key_it": "cercare di farlo camminare, per diminuire il dolore",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: walking with a fracture worsens the injury and the pain — the limb is immobilized, not put to use.",
+        "ru": "Неверно: ходьба при переломе ухудшает повреждение и усиливает боль — конечность фиксируют, а не нагружают.",
+        "zh": "错误：骨折时行走会加重损伤和疼痛——应固定肢体，而不是让其活动。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-fratture-agli-arti-5": {
+      "verdict": "FALSO",
+      "key_it": "chiedergli di muoverli, per valutare il tipo di lesione",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: asking a victim to move a broken limb risks shifting bone fragments — the limb is immobilized as it lies.",
+        "ru": "Неверно: заставлять пострадавшего двигать сломанную конечность опасно — отломки могут сдвинуться; конечность фиксируют в том положении, в каком лежит.",
+        "zh": "错误：让伤者活动骨折肢体会使骨碎片移位——应在原位固定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-fratture-agli-arti-6": {
+      "verdict": "FALSO",
+      "key_it": "cercare di riposizionarlo nei tessuti",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: a protruding bone from an open fracture must not be pushed back into the wound — cover it with a clean cloth and immobilize.",
+        "ru": "Неверно: вышедшую при открытом переломе кость в ткани вправлять нельзя — рану прикрывают чистой тканью, конечность фиксируют.",
+        "zh": "错误：开放性骨折露出的骨头不可推回组织，应盖清洁敷料并固定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-infortunato-fratture-agli-arti-7": {
+      "verdict": "FALSO",
+      "key_it": "dargli da bere una bevanda superalcolica",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: strong alcohol is never given to an injured person — it does not relieve pain and can push a victim into shock.",
+        "ru": "Неверно: крепкий алкоголь пострадавшему не дают — он не снимает боль и может спровоцировать шок.",
+        "zh": "错误：不能给伤者喝烈酒——不能止痛，还可能诱发休克。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
