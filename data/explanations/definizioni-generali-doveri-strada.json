@@ -4290,6 +4290,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-tricicli-motore-2": {
+      "verdict": "VERO",
+      "key_it": "velocità massima per costruzione superiore a 45 km/h",
+      "chapter": "ch1",
+      "why": {
+        "en": "A motor tricycle is defined by its top speed: construction max above 45 km/h makes it a motor tricycle, not a moped-class vehicle.",
+        "ru": "Моторный трицикл определяется максимальной скоростью: при конструкторской максимальной выше 45 км/ч он относится к моторным трициклам, а не к классу мопедов.",
+        "zh": "机动三轮车由最高速度界定：结构最高速度超过 45 公里/小时即属机动三轮车，而非轻便摩托类车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-tricicli-motore-3": {
+      "verdict": "VERO",
+      "key_it": "revisione dopo quattro anni dalla prima immatricolazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motor tricycles must undergo periodic technical inspection after the first registration and then on a recurring cycle.",
+        "ru": "Моторные трициклы подлежат периодическому техосмотру после первой регистрации, затем по регулярному циклу.",
+        "zh": "机动三轮车须在首次登记后接受定期技术检验，此后按固定周期复检。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-tricicli-motore-4": {
+      "verdict": "FALSO",
+      "key_it": "possono essere condotti senza patente",
+      "chapter": "ch1",
+      "why": {
+        "en": "Driving a motor tricycle is not licence-free: it is a motor vehicle that requires the appropriate driving licence.",
+        "ru": "Управлять моторным трициклом без прав нельзя: это моторный транспорт, требующий соответствующей категории прав.",
+        "zh": "驾驶机动三轮车不能免驾照：它属于机动车，须持有相应类别的驾驶证。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-tricicli-motore-5": {
+      "verdict": "FALSO",
+      "key_it": "costituiti da un motociclo e un sidecar",
+      "chapter": "ch1",
+      "why": {
+        "en": "A motor tricycle is not a motorcycle with a sidecar: its three wheels form a single vehicle, not a bicycle plus a sidecar.",
+        "ru": "Моторный трицикл — не мотоцикл с боковым прицепом: его три колеса образуют единый транспорт, а не мотоцикл плюс коляска.",
+        "zh": "机动三轮车并非带边车的摩托车：它的三个轮子构成单一车辆，而非摩托车加边车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-tricicli-motore-6": {
+      "verdict": "FALSO",
+      "key_it": "cilindrata inferiore a 50 cm3",
+      "chapter": "ch1",
+      "why": {
+        "en": "Small engine (under 50 cm3) with a top speed up to 45 km/h describes a moped-class vehicle, not a motor tricycle.",
+        "ru": "Малый мотор (до 50 см³) со скоростью до 45 км/ч — характеристика мопедного класса, а не моторного трицикла.",
+        "zh": "排量小于 50 立方厘米、最高速度至 45 公里/小时的描述属于轻便摩托类车辆，而非机动三轮车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-tricicli-motore-7": {
+      "verdict": "FALSO",
+      "key_it": "non sono soggetti a revisione periodica",
+      "chapter": "ch1",
+      "why": {
+        "en": "This is wrong: motor tricycles are subject to periodic inspection, not exempt from it.",
+        "ru": "Это неверно: моторные трициклы подлежат периодическому техосмотру, а не освобождены от него.",
+        "zh": "这是错误的：机动三轮车须接受定期检验，而非免于检验。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-0": {
+      "verdict": "VERO",
+      "key_it": "cilindrata del motore inferiore o pari a 50 cm3",
+      "chapter": "ch1",
+      "why": {
+        "en": "A light petrol quadricycle is defined by its engine: petrol models have a displacement of 50 cm3 or less.",
+        "ru": "Лёгкий бензиновый квадрицикл определяется мотором: бензиновые версии имеют объём двигателя не более 50 см³.",
+        "zh": "轻便汽油四轮车按发动机界定：汽油车型排量不超过 50 立方厘米。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-1": {
+      "verdict": "VERO",
+      "key_it": "veicoli a motore a quattro ruote",
+      "chapter": "ch1",
+      "why": {
+        "en": "A quadricycle is simply a motor vehicle with four wheels; that is its basic definition.",
+        "ru": "Квадрицикл — просто четырёхколёсное моторное транспортное средство; в этом его базовое определение.",
+        "zh": "四轮机动车即四轮机动车；这就是它的基本定义。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-2": {
+      "verdict": "VERO",
+      "key_it": "assimilati ai ciclomotori",
+      "chapter": "ch1",
+      "why": {
+        "en": "For circulation purposes light quadricycles are treated like mopeds (ciclomotori).",
+        "ru": "В целях допущения к движению лёгкие квадрициклы приравниваются к мопедам.",
+        "zh": "就道路通行而言，轻便四轮车按轻便摩托车对待。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-4": {
+      "verdict": "VERO",
+      "key_it": "soggetti a revisione periodica",
+      "chapter": "ch1",
+      "why": {
+        "en": "Quadricycles are subject to periodic technical inspection; they cannot skip it.",
+        "ru": "Квадрициклы подлежат периодическому техосмотру; пропускать его нельзя.",
+        "zh": "四轮车须接受定期技术检验；不得免于检验。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-5": {
+      "verdict": "FALSO",
+      "key_it": "possono essere guidati senza patente",
+      "chapter": "ch1",
+      "why": {
+        "en": "Non-light quadricycles cannot be driven without a licence: the no-licence rule covers only the light class.",
+        "ru": "Нелёгкие квадрициклы без прав вести нельзя: правило о безлицензионном вождении касается только лёгкого класса.",
+        "zh": "非轻便四轮车不能免驾照驾驶：免驾照规定只适用于轻便级别。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-6": {
+      "verdict": "FALSO",
+      "key_it": "equiparati ai ciclomotori",
+      "chapter": "ch1",
+      "why": {
+        "en": "Only light quadricycles are treated as mopeds; non-light ones are not equated to ciclomotori.",
+        "ru": "Только лёгкие квадрициклы приравниваются к мопедам; нелёгкие — к мопедам не приравниваются.",
+        "zh": "只有轻便四轮车按轻便摩托车对待；非轻便四轮车并不与轻便摩托车等同。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-8": {
+      "verdict": "FALSO",
+      "key_it": "quattordicesimo anno di età",
+      "chapter": "ch1",
+      "why": {
+        "en": "Driving non-light quadricycles is not allowed at such an early age; that early limit applies to a different, lighter class.",
+        "ru": "Вождение нелёгких квадрициклов не разрешено в столь раннем возрасте; столь ранний предел относится к другому, более лёгкому классу.",
+        "zh": "驾驶非轻便四轮车并不在如此早的年龄获准；如此早的年龄限制适用于另一更轻便的类别。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-9": {
+      "verdict": "FALSO",
+      "key_it": "carrozzeria aperta possono essere condotti senza casco",
+      "chapter": "ch1",
+      "why": {
+        "en": "Handlebar, open-body non-light quadricycles still require a helmet; an open body does not remove that duty.",
+        "ru": "Нелёгкие квадрициклы с рулем и открытой кабиной всё равно требуют шлема; открытая кабина не снимает этой обязанности.",
+        "zh": "把手式、敞篷的非轻便四轮车仍须戴头盔；敞篷结构并不能免除这一义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-11": {
+      "verdict": "FALSO",
+      "key_it": "oltre i 45 km/h",
+      "chapter": "ch1",
+      "why": {
+        "en": "Swapping the engine of a light quadricycle to push its top speed above 45 km/h is not permitted.",
+        "ru": "Замена мотора лёгкого квадрицикла, чтобы поднять максимальную скорость выше 45 км/ч, не разрешена.",
+        "zh": "更换轻便四轮车的发动机，使其最高速度超过 45 公里/小时，是不被允许的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-quadricicli-12": {
+      "verdict": "FALSO",
+      "key_it": "non sono soggetti a revisione periodica",
+      "chapter": "ch1",
+      "why": {
+        "en": "This is wrong: quadricycles are subject to periodic inspection, not exempt from it.",
+        "ru": "Это неверно: квадрициклы подлежат периодическому техосмотру, а не освобождены от него.",
+        "zh": "这是错误的：四轮车须接受定期检验，而非免于检验。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-0": {
+      "verdict": "VERO",
+      "key_it": "circolare su strada per il proprio trasferimento",
+      "chapter": "ch1",
+      "why": {
+        "en": "Agricultural machines may drive on the road for their own transfer, provided they are registered.",
+        "ru": "Сельскохозяйственные машины могут ездить по дороге для собственного перемещения, при условии регистрации.",
+        "zh": "农业机械在已登记的前提下，可以上路行驶以进行自身转场。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-1": {
+      "verdict": "VERO",
+      "key_it": "possono essere a ruote o a cingoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Agricultural machines may be wheeled or tracked; both configurations are allowed.",
+        "ru": "Сельскохозяйственные машины могут быть колёсные или гусеничные; допустимы обе конструкции.",
+        "zh": "农业机械可以是轮式或履带式；两种结构均被允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-2": {
+      "verdict": "VERO",
+      "key_it": "trasporto di prodotti agricoli per conto delle aziende agricole",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wheeled or tracked agricultural machines may drive on the road to transport agricultural products for farm and forestry businesses.",
+        "ru": "Колёсные или гусеничные сельхозмашины могут ездить по дороге для перевозки сельскохозяйственной продукции на заказ фермерских и лесных хозяйств.",
+        "zh": "轮式或履带式农业机械可上路行驶，为农业和林业企业运输农产品。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-3": {
+      "verdict": "VERO",
+      "key_it": "possono essere semoventi o trainate",
+      "chapter": "ch1",
+      "why": {
+        "en": "Agricultural machines may be self-propelled or towed; both forms exist.",
+        "ru": "Сельскохозяйственные машины могут быть самоходные или прицепные; существуют обе формы.",
+        "zh": "农业机械可以是自走式或牵引式；两种形式都存在。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
