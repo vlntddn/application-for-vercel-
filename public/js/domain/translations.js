@@ -77,9 +77,13 @@ export function applyTranslationsOverlay(questions, overlay) {
  * @param {object[]} questions - the category's bank questions.
  * @param {(url: string) => Promise<Response>} fetchLike - the fetch used to
  *   read /data/translations/<slug>.json; 404 (no overlay yet) yields [].
+ * @param {boolean} [shouldLoad=true] - request the overlay file at all. When
+ *   false (the slug is not listed in index.json, Q2) no network request is
+ *   made and the plain bank questions are returned untouched.
  * @returns {Promise<object[]>} the questions with the overlay applied.
  */
-export async function loadOverlays(slug, questions, fetchLike) {
+export async function loadOverlays(slug, questions, fetchLike, shouldLoad = true) {
+  if (!shouldLoad) return questions;
   let overlay = null;
   try {
     const res = await fetchLike(`/data/translations/${slug}.json`);

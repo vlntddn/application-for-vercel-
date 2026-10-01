@@ -149,6 +149,7 @@ test('state.loadQuestions serves the bank with the overlay applied', async () =>
 
   const routes = {
     [`/data/questions/${slug}.json`]: bank,
+    [`/data/translations/index.json`]: [`${slug}.json`],
     [`/data/translations/${slug}.json`]: overlay,
   };
   globalThis.fetch = fetchStub(routes);

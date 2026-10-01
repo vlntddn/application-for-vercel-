@@ -15,6 +15,10 @@ export const state = {
   // Per-category explanation files (L9a); a Map of slug -> {items}. A missing
   // file caches as an empty object so repeated loads are cheap.
   explanationsBySlug: new Map(),
+  // Overlay indexes (Q2): Set of "<slug>.json" per kind, from index.json.
+  // null = not fetched yet; an empty Set = fetched, nothing to request.
+  translationSlugs: null,
+  explanationSlugs: null,
 };
 
 export async function boot() {
@@ -55,18 +59,47 @@ export async function loadNumbers() {
 }
 
 /**
+ * Fetches an overlay index (Q2): the JSON array of "<slug>.json" basenames
+ * that actually exist under the given data directory. Used to skip per-category
+ * overlay requests for slugs with no file, killing the 404 storm on start.
+ *
+ * Caches the result as a Set; a 404 (no index.json yet — e.g. a very old
+ * deploy) caches an EMPTY set, which means "request nothing" and the plain
+ * bank content is used. Never throws.
+ *
+ * @param {'translationSlugs'|'explanationSlugs'} key - state slot for the cache.
+ * @param {string} url - e.g. /data/translations/index.json.
+ * @returns {Promise<Set<string>>}
+ */
+async function loadOverlayIndex(key, url) {
+  if (state[key] !== null) return state[key];
+  let names = [];
+  try {
+    const res = await fetch(url, { mode: 'same-origin' });
+    if (res.ok) names = (await res.json()) || [];
+  } catch {
+    names = []; // no index / offline → request nothing
+  }
+  state[key] = new Set(Array.isArray(names) ? names : []);
+  return state[key];
+}
+
+/**
  * Explanations for one category (L9a). Served from /data/explanations/<slug>.json.
  * The first (or a renamed) category may have no file yet, so a 404 means
  * "none": we cache an empty object and the practice panel skips the block.
  * Never throws — explanations are an enhancement, not a load prerequisite.
+ * The slug is requested only if listed in the explanations index (Q2).
  */
 export async function loadExplanations(slug) {
   if (!state.explanationsBySlug.has(slug)) {
     let data = { items: {} };
-    try {
-      data = await api.explanations(slug);
-    } catch {
-      /* no explanation file for this category yet */
+    if ((await loadOverlayIndex('explanationSlugs', '/data/explanations/index.json')).has(`${slug}.json`)) {
+      try {
+        data = await api.explanations(slug);
+      } catch {
+        /* listed but still missing → treat as none */
+      }
     }
     state.explanationsBySlug.set(slug, data);
   }
@@ -76,10 +109,13 @@ export async function loadExplanations(slug) {
 export async function loadQuestions(slug) {
   if (!state.questionsBySlug.has(slug)) {
     // Phase 2.1: bank questions get the per-category translation overlay
-    // (data/translations/<slug>.json) merged on top; missing overlay → bank.
+    // (data/translations/<slug>.json) merged on top; a slug absent from the
+    // translations index (Q2) is requested without the overlay file.
+    const fetchLike = (url) => fetch(url, { mode: 'same-origin' });
+    const listed = (await loadOverlayIndex('translationSlugs', '/data/translations/index.json')).has(`${slug}.json`);
     state.questionsBySlug.set(
       slug,
-      await loadOverlays(slug, await api.questions(slug), (url) => fetch(url, { mode: 'same-origin' })),
+      await loadOverlays(slug, await api.questions(slug), fetchLike, listed),
     );
   }
   return state.questionsBySlug.get(slug);

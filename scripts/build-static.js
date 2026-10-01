@@ -17,6 +17,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { regenerateIndexes } from './gen-data-index.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'dist');
@@ -49,6 +50,12 @@ copyDir(path.join(ROOT, 'public'), OUT);
 //    separately and left out of /data to avoid shipping them twice.
 copyDir(path.join(ROOT, 'data'), path.join(OUT, 'data'), (name) => name === 'images');
 copyDir(path.join(ROOT, 'data', 'images'), path.join(OUT, 'images'));
+
+// 2b. Overlay indexes (Q2): the standalone build has no server start, so
+//     regenerate index.json into dist/ — it is served as a static file there.
+//     Regenerating from the freshly-copied dir keeps the index in sync with
+//     exactly the overlay files shipped in this build.
+regenerateIndexes(OUT);
 
 // 3. Stamp the standalone marker so the frontend keeps progress in the
 //    browser instead of calling an API that does not exist here.

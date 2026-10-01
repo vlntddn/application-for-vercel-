@@ -49,6 +49,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const log = (s) => console.log(`[qa] ${s}`);
 
 const jsErrors = []; // Runtime.exceptionThrown за весь прогон
+const http404s = []; // Network.responseReceived с status 404 (Q2: 404-шторм)
 let passes = 0;
 let failures = 0;
 function check(cond, name) {
@@ -117,10 +118,14 @@ async function connectTab() {
     } else if (m.method === 'Runtime.exceptionThrown') {
       const d = m.params.exceptionDetails;
       jsErrors.push(d.exception?.description?.split('\n')[0] || d.text);
+    } else if (m.method === 'Network.responseReceived') {
+      const s = m.params.response?.status;
+      if (s === 404) http404s.push(m.params.request?.url || '?');
     }
   };
   await send('Page.enable');
   await send('Runtime.enable');
+  await send('Network.enable');
 }
 
 /** Клик по кнопке/ссылке, чей text совпадает (или содержит) label. */
@@ -500,6 +505,11 @@ async function main() {
     check(errs.length === 0 && len > 40, `экран ${r} открывается без JS-ошибок${errs.length ? ': ' + errs.join('; ') : ''}`);
   }
   check(jsErrors.length === 0, `за весь прогон ни одной JS-ошибки${jsErrors.length ? ': ' + jsErrors.join('; ') : ''}`);
+  // Q2: 404-шторм. Раньше при каждой загрузке клиент просил 25
+  // /data/translations/<slug>.json (и аналогично explanations), хотя файлов
+  // всего 3 → ~22 404 на старте. Теперь index.json фильтрует запросы, и 404
+  // нет вовсе. Замеряем по CDP Network за весь прогон (включая full reload).
+  check(http404s.length === 0, `за весь прогон ни одного 404${http404s.length ? ': ' + [...new Set(http404s)].slice(0, 8).join(', ') : ''}`);
   const answerCount = Object.keys(after.answers || {}).length;
   check(answerCount >= 5, `persist: ответы сохранены (${answerCount})`);
   check((after.theoryRead || []).includes('ch1'), 'persist: ч1 помечена прочитанной');

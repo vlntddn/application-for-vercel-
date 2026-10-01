@@ -7,6 +7,7 @@ import { JsonStore } from './store.js';
 import { ProgressService, ValidationError, EMPTY_PROGRESS } from './progress.js';
 import { sendJson, sendError, readJsonBody } from './http-helpers.js';
 import { serveFile } from './static.js';
+import { regenerateIndexes } from '../scripts/gen-data-index.mjs';
 
 const store = new JsonStore(path.join(config.storageDir, 'progress.json'), EMPTY_PROGRESS).load();
 const progress = new ProgressService(store);
@@ -149,6 +150,11 @@ const server = http.createServer(async (req, res) => {
     }
   }
 });
+
+// Keep the overlay indexes current before any request can read them (Q2):
+// the frontend fetches index.json and only requests the overlays it lists,
+// so a stale index would silently drop newly-added overlay files.
+regenerateIndexes();
 
 server.listen(config.port, config.host, () => {
   const { address, port } = server.address();
