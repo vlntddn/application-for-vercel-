@@ -1,3 +1,59 @@
+## 2026-10-02 — Q4.2, срез 3: Экзамен + результат на 3 языках
+
+Ветка self-improve. Третий срез Q4.2 — **экзамен / экран результата**
+(views/exam.js): предстарт (правила + честная рамка «это тренировка»),
+сессия (таймер, прогресс, теги), экран результата (вердикт, счёт ошибок,
+офлайн-заметка, разбор ошибок). Остальные экраны (путь, ошибки, настройки,
+прочее) — в следующих запусках.
+
+**Что.** Все видимые строки exam переведены через `t('ex.…')` на en/ru/zh:
+заголовок «MOCK EXAM» + lede «это практика, не официальный экзамен», блок
+«как проходит реальный экзамен» (30 вопросов / 20 минут / ≤3 ошибок /
+навигация / перевод), кнопки BEGIN EXAM / NOT YET, loading + «n/total»,
+шапка сессии (QUESTION i/total, aria таймера, «N ANSWERED», NAVIGATE/TRANSLATE
+в kbd-подсказке), alt картинок, SUBMIT EXAM + confirm-диалог, сохранение,
+офлайн-заметка, вердикт и счёт (n errors / out of M / TRY AGAIN / REVIEW
+MISTAKES / DASHBOARD), «WHAT WENT WRONG» + тег «ANSWER: VERO/FALSO».
+
+**Двойные вердикты (правило Q4.2).** `ex.verdictPassed`/`ex.verdictFailed`:
+EN сохраняет исторический «PROMOSSO!»/«BOCCIATO» (byte-в-byte); RU —
+«PROMOSSO! — сдал» / «BOCCIATO — не сдал»; ZH — «PROMOSSO! — 通过» /
+«BOCCIATO — 未通过». Итальянский вердикт остаётся, язык ученика объясняет.
+
+**Литералы, оставлены по прецеденту (как в срезе 2 / security.test.js):**
+- `VERO` / `FALSO` — язык экзамена, не переводятся.
+- `Correct` / `Wrong` / `Right answer` — слова состояний AnswerButton, как в
+  practice.js: security.test.js матчит их в source, AnswerButton не
+  переводится (единый паттерн двух сессий).
+
+**Технически.** `ex.howTranslate` содержит кbd-клавишу «T» посреди строки —
+реализовано через `t('ex.howTranslate').split('{k}')` (маркер `{k}` в каждом
+словаре: EN «…Italian; {k} or the…», RU «…итальянском; {k} кнопка…», ZH
+«…意大利语；{k}点翻译…»). split даёт 2 части, между ними вставляется
+`el('kbd', {}, 'T')` — кbd-элемент не засоряет словарь.
+
+**Как.**
+- `public/js/i18n.js`: +31 ключ `ex.*` в каждый из трёх словарей; `{…}`-
+  плейсхолдеры идентичны. EN = байт-в-байт прежний хардкод (перевод не
+  меняет EN-вывод).
+- `public/js/views/exam.js`: `import { t }`, все литеральные строки →
+  `t('ex.…')`. Структура/class-имена не тронуты.
+- `tests/security.test.js`: тест «exam pre-start screen explains the format»
+  адаптирован под Q4.2-паттерн локализованного copy (как S2.8a3/a4):
+  placement-ассерты (`t('ex.…')` до `async function start`) читают срез
+  exam.js, copy-ассерты (THIS IS PRACTICE / 30 RANDOM / 20 MINUTES / AT MOST 3
+  ERRORS / MOVE BACK AND FORTH / TRANSLATE) читают объединённый view+i18n
+  source.
+- `public/sw.js`: VERSION v81 → v82.
+
+**Как проверено.** `scripts/verify.sh` → VERIFY OK: zero deps, protected
+paths, sw bump, overlay/explanations intact, **npm test 202 passed**, smoke
+8×200 на :3917, **qa-new-user: 73 PASS, 0 FAIL** (EN-сценарий — byte-identity
+подтверждена). Node-проверка: 31 `ex.*` ключ во всех 3 словарях, паритет 1:1,
+`split('{k}')` даёт ровно 2 части.
+
+**Следующий срез Q4.2:** путь (path/roadmap).
+
 ## 2026-10-02 — Q4.2, срез 2: Практика + панель ответа на 3 языках
 
 Ветка self-improve, коммит 587af1a. Второй срез Q4.2 — **практика / панель
