@@ -1326,6 +1326,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-26": {
+      "verdict": "FALSO",
+      "key_it": "casco integrale è inutile",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: a full-face helmet is not useless on a two-wheel moped — it is the most protective type, and the helmet duty applies to two-wheel vehicles too.",
+        "ru": "Ложно: шлем интегральный не бесполезен на двухколёсном мопеде — это самый защищающий тип, и обязанность по шлему распространяется и на двухколёсные транспортные средства.",
+        "zh": "错误：全盔在两轮轻便摩托车上绝非无用——它是防护最好的类型，头盔义务同样适用于两轮车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-27": {
+      "verdict": "FALSO",
+      "key_it": "non riguarda i maggiorenni",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: the helmet duty has no exemption by age or driving experience — it applies to everyone, young or adult, beginner or seasoned rider.",
+        "ru": "Ложно: шлемная обязанность не имеет исключения по возрасту или стажу вождения — она распространяется на всех: на молодых и взрослых, на новичков и опытных.",
+        "zh": "错误：头盔义务没有按年龄或驾驶经验的豁免——它适用于所有人，无论年轻或成年、新手或老手。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-28": {
+      "verdict": "FALSO",
+      "key_it": "diventa facoltativo quando la temperatura",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: wearing the helmet while riding never becomes optional because the air is hot — the helmet is compulsory regardless of temperature or weather.",
+        "ru": "Ложно: шлем при движении никогда не становится добровольным из-за жары — он обязателен независимо от температуры и погоды.",
+        "zh": "错误：骑行时佩戴头盔绝不会因天热而变为可选——无论温度或天气如何，头盔都是强制的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-29": {
+      "verdict": "FALSO",
+      "key_it": "peggiora notevolmente la visibilità",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: the visor does not notably worsen visibility — it protects the face and eyes and, when clean, keeps the view clear, so it should be used, not avoided.",
+        "ru": "Ложно: визор не заметно ухудшает обзор — он защищает лицо и глаза и, будучи чистым, держит поле зрения ясным, поэтому им следует пользоваться, а не избегать.",
+        "zh": "错误：面罩并不会明显恶化视野——它保护面部和眼睛，且保持干净时视线清晰，因此应当使用而非回避。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-32": {
+      "verdict": "FALSO",
+      "key_it": "non necessitano di omologazione",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: helmets used when riding mopeds do need homologation — only approved (omologated) helmets are lawful, exactly like for motorcycles.",
+        "ru": "Ложно: шлемы, используемые при езде на мопедах, требуют омологации — законны только сертифицированные (омологированные) шлемы, как и для мотоциклов.",
+        "zh": "错误：骑轻便摩托车使用的头盔同样需要认证——只有经认证（omologato）的头盔才合法，与摩托车相同。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-stivali-uso-motociclistico-0": {
+      "verdict": "VERO",
+      "key_it": "giusta protezione di piedi e caviglie",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: motorcycle boots give proper protection for the feet and ankles when riding a two-wheel vehicle.",
+        "ru": "Верно: мотоциклетные сапоги обеспечивают надлежащую защиту ног и щиколоток при езде на двухколёсном транспортном средстве.",
+        "zh": "正确：摩托车靴在骑两轮车时能为脚和脚踝提供适当的保护。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-stivali-uso-motociclistico-1": {
+      "verdict": "VERO",
+      "key_it": "proteggono le articolazioni della caviglia dal freddo",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: motorcycle boots reduce the effects of sprains from imprecise foot placement and protect the ankle joints from the cold.",
+        "ru": "Верно: мотоциклетные сапоги смягчают последствия растяжений при неточной постановке ног и защищают суставы голеностопа от холода.",
+        "zh": "正确：摩托车靴能减轻脚放置不当时扭伤的影响，并保护脚踝关节免受寒冷侵袭。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-stivali-uso-motociclistico-2": {
+      "verdict": "VERO",
+      "key_it": "privi di nastri liberi o stringhe",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: motorcycle boots have no loose straps or laces, so nothing can catch on the motorcycle pedals.",
+        "ru": "Верно: на мотоциклетных сапогах нет свободных лент или шнурков, так что ничто не может зацепиться за педали мотоцикла.",
+        "zh": "正确：摩托车靴没有松散的带子或鞋带，因此不会有任何东西挂住摩托车踏板。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-stivali-uso-motociclistico-3": {
+      "verdict": "VERO",
+      "key_it": "i piedi da abrasioni",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: motorcycle boots protect the feet from abrasions on the asphalt in the event of a fall.",
+        "ru": "Верно: мотоциклетные сапоги защищают ноги от трений об асфальт при падении.",
+        "zh": "正确：摩托车靴在摔倒时能保护双脚免受柏油路面的磨擦伤。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-stivali-uso-motociclistico-4": {
+      "verdict": "VERO",
+      "key_it": "omologati secondo norme internazionali",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: motorcycle boots are homologated according to international standards.",
+        "ru": "Верно: мотоциклетные сапоги сертифицированы (омологированы) в соответствии с международными стандартами.",
+        "zh": "正确：摩托车靴按照国际标准进行认证。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-stivali-uso-motociclistico-5": {
+      "verdict": "VERO",
+      "key_it": "progettate per non scalzarsi in caso di caduta",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: footwear approved for motorcycle use is designed not to come off in a fall, so it stays on the foot when it is needed most.",
+        "ru": "Верно: сертифицированная для мотоциклетной эксплуатации обувь рассчитана так, чтобы не слететь с ноги при падении — она остаётся на месте, когда нужнее всего.",
+        "zh": "正确：经认证用于摩托车骑行的鞋被设计成摔倒时不会脱落，因此在最需要时仍留在脚上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-stivali-uso-motociclistico-6": {
+      "verdict": "FALSO",
+      "key_it": "scarpe da trekking in alta montagna",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: high-mountain trekking shoes are not an equivalent substitute for motorcycle boots — they are not approved motorcycle footwear and lack the required protection.",
+        "ru": "Ложно: высокие горные треккинговые ботинки не являются равноценной заменой мотоциклетных сапог — они не сертифицированная мотоциклетная обувь и лишены необходимой защиты.",
+        "zh": "错误：高山徒步鞋并非摩托车靴的等效替代品——它们不是认证的骑行鞋，且缺乏所需的防护。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-stivali-uso-motociclistico-7": {
+      "verdict": "FALSO",
+      "key_it": "doppie stringhe",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: motorcycle boots are not fitted with double laces to prevent coming off — they have no loose laces at all, so nothing can catch on the pedals.",
+        "ru": "Ложно: на мотоциклетных сапогах нет двойных шнурков для предотвращения сползания — на них нет вообще свободных шнурков, чтобы ничто не зацепило педали.",
+        "zh": "错误：摩托车靴并非配有双鞋带以防脱落——它们根本没有松散的鞋带，这样就不会挂住踏板。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-stivali-uso-motociclistico-8": {
+      "verdict": "FALSO",
+      "key_it": "suola in acciaio",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: motorcycle boots do not have a steel sole; that is not a feature of approved motorcycle footwear.",
+        "ru": "Ложно: на мотоциклетных сапогах нет стальной подошвы — это не свойство сертифицированной мотоциклетной обуви.",
+        "zh": "错误：摩托车靴的鞋底并非钢材；这不是认证骑行鞋的特征。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-stivali-uso-motociclistico-9": {
+      "verdict": "FALSO",
+      "key_it": "coprono la gamba fin sopra il ginocchio",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: motorcycle boots do not extend up over the knee to better protect the rider in a fall; they cover the foot and ankle, not the whole leg.",
+        "ru": "Ложно: мотоциклетные сапоги не поднимаются выше колена, чтобы лучше защитить водителя при падении — они покрывают стопу и голеностоп, а не всю ногу.",
+        "zh": "错误：摩托车靴并不延伸到膝盖以上以在摔倒时更好地保护驾驶人——它们覆盖的是脚和脚踝，而非整条腿。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-stivali-uso-motociclistico-10": {
+      "verdict": "FALSO",
+      "key_it": "interamente realizzati in gomma ignifuga",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: motorcycle boots are not required to be made entirely of fireproof rubber; they use various protective materials.",
+        "ru": "Ложно: мотоциклетные сапоги не обязаны быть целиком из огнестойкой резины — они сделаны из разных защитных материалов.",
+        "zh": "错误：摩托车靴并非必须全部由防火橡胶制成；它们采用各种防护材料。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-stivali-uso-motociclistico-11": {
+      "verdict": "FALSO",
+      "key_it": "Non esistono specifici stivali ad uso motociclistico",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: specific motorcycle boots do exist; it is not acceptable to ride in robust hunting, fishing or climbing footwear in their place.",
+        "ru": "Ложно: специализированные мотоциклетные сапоги существуют; ездить в них вместо них, надев прочную охотничью, рыболовную или альпинистскую обувь, нельзя.",
+        "zh": "错误：确实存在专用的摩托车靴；不能用坚固的狩猎、钓鱼或登山鞋替代骑行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-0": {
+      "verdict": "VERO",
+      "key_it": "consigliabile utilizzare guanti protettivi",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: when riding mopeds or motorcycles it is advisable to use protective gloves for the hands.",
+        "ru": "Верно: при езде на мопедах или мотоциклах рекомендуется использовать защитные перчатки для рук.",
+        "zh": "正确：骑轻便摩托车或摩托车时，建议佩戴保护手部的手套。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-1": {
+      "verdict": "VERO",
+      "key_it": "proteggono in particolar modo il dorso della mano",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: approved motorcycle gloves protect the back of the hand in particular on impact with hard objects.",
+        "ru": "Верно: сертифицированные мотоциклетные перчатки, в первую очередь защищают тыльную сторону кисти при ударе о твёрдые предметы.",
+        "zh": "正确：经认证的摩托车手套在撞击硬物时尤其保护手背。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-2": {
+      "verdict": "VERO",
+      "key_it": "proteggono il palmo della mano",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: motorcycle gloves protect the palm of the hand in a fall involving sliding on the asphalt.",
+        "ru": "Верно: мотоциклетные перчатки защищают ладонь при падении с трением об асфальт.",
+        "zh": "正确：摩托车手套在摔倒擦地时保护手掌。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
