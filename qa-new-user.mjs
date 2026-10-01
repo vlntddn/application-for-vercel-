@@ -137,6 +137,60 @@ const answer = (value) => evaluate(`document.querySelector(${JSON.stringify(valu
 /** Прочитать текущий вопрос: {id, is_true} из text (id не в DOM). */
 const currentQuestion = () => evaluate(`document.querySelector('#view .question-text')?.textContent || ''`);
 
+/** Non-throwing waitFor: true if pred became true within ms, else false. */
+const tryWait = async (pred, ms = 6000) => {
+  const dl = Date.now() + ms;
+  for (;;) {
+    if ((await evaluate(pred)) === true) return true;
+    if (Date.now() > dl) return false;
+    await sleep(200);
+  }
+};
+
+/**
+ * Ответить один вопрос drill (drill.js / numbers.js) и нажать NEXT/FINISH.
+ * Проверяем реальное состояние DOM, а НЕ возвращаемое значение click():
+ *  (1) после ответа появляется .ds-feedback;
+ *  (2) после NEXT/FINISH .ds-feedback исчезает (новый вопрос / финал).
+ * Возвращает true, если оба перехода случились (сессия не зависла).
+ * Кнопка NEXT/FINISH находится прямо в .ds-feedback — текст не гадается.
+ */
+async function drillAnswer(value) {
+  const btn = value ? '#view .btn-true' : '#view .btn-false';
+  await evaluate(`document.querySelector(${JSON.stringify(btn)})?.click()`);
+  if (!(await tryWait(`!!document.querySelector('#view .ds-feedback')`))) return false;
+  await evaluate(`document.querySelector('#view .ds-feedback .btn')?.click()`);
+  return await tryWait(`!document.querySelector('#view .ds-feedback')`);
+}
+
+/**
+ * (a) Список маршрутов, взят из регулярок роутера в public/js/main.js —
+ * не хардкод. Если добавят новый pattern в роутере, свип ниже сам его
+ * проверит. Параметры `([\w-]+)` заменяются реальными sample-значениями,
+ * валидными для статического датасета (ch1 / strada / первая категория).
+ */
+function routeHashes(mainSrc) {
+  const samples = {
+    theory: 'ch1',
+    dictionary: 'strada',
+    practice: 'definizioni-generali-doveri-strada',
+  };
+  const out = [];
+  for (const m of mainSrc.matchAll(/pattern:\s*\/\^?#(.*?)\$\/[,}\]]/g)) {
+    let h = '#' + m[1];
+    const sample = h.includes('theory') ? samples.theory
+      : h.includes('dictionary') ? samples.dictionary
+      : h.includes('practice') ? samples.practice
+      : 'x';
+    h = h.split('([\\w-]+)').join(sample);
+    h = h.replace(/\\\//g, '/');
+    h = h.split('#?').join('#');
+    h = h.split('/?').join('/');
+    out.push(h);
+  }
+  return out;
+}
+
 async function main() {
   // 0. чистый профиль + sanity-чек сервера
   const health = await (await fetch(`${APP}/api/health`)).json();
@@ -272,12 +326,39 @@ async function main() {
   log(`профиль после: ${JSON.stringify(s)}`);
   check(after.profile && after.profile.name === 'QA' && after.profile.onboarded === true, 'persist: имя и onboarded сохранились');
 
-  /* ---- 7. Каждый экран открывается без JS-ошибок ----
+  /* ---- 7. Тренажёр «Язык экзамена»: открыть + ответить 3 вопроса ----
+   * Спринт L (L1c): drill.js. Проверяем, что экран реально запускается
+   * (20 вопросов, есть .question-card) и цикл «ответ → feedback → NEXT»
+   * идёт без зависания на 3 шагах. */
+  await evaluate(`location.hash = '#/drill/signals'`);
+  await waitFor(`!!document.querySelector('#view .question-card')`, 'signal drill question', 30000);
+  check(/Signals — 1\/20/i.test(await viewText()), 'drill: счётчик «Signals — 1/20» (20 вопросов Спринта L)');
+  const sigOk = await drillAnswer(true) && await drillAnswer(false) && await drillAnswer(true);
+  check(sigOk, 'drill: 3 вопроса отвечены (VERO/FALSO → feedback → NEXT)');
+  check(!!(await evaluate(`!!document.querySelector('#view .question-card')`)), 'drill: после 3 ответов сессия продолжает');
+  await shot('11-drill-signals.png');
+
+  /* ---- 8. Тренажёр «Числа»: таблица → START THE DRILL → 3 вопроса ----
+   * Спринт L (L4): numbers.js. Два состояния на одном экране. */
+  await evaluate(`location.hash = '#/numbers'`);
+  await waitFor(`!!document.querySelector('#view .numbers-fact')`, 'numbers table', 30000);
+  check(/THE NUMBERS YOU MUST KNOW/i.test(await viewText()), 'numbers: заголовок таблицы');
+  check(await click('START THE DRILL'), 'numbers: кнопка START THE DRILL открывает тренажёр');
+  await waitFor(`!!document.querySelector('#view .question-card')`, 'numbers drill question', 30000);
+  check(/NUMBERS — 1\/\d+/i.test(await viewText()), 'numbers: счётчик «Numbers — 1/N» в заголовке');
+  const numOk = await drillAnswer(false) && await drillAnswer(true) && await drillAnswer(true);
+  check(numOk, 'numbers: 3 вопроса отвечены (FALSO-ловушки + VERO → feedback → NEXT)');
+  check(!!(await evaluate(`!!document.querySelector('#view .question-card')`)), 'numbers: после 3 ответов сессия продолжает');
+  await shot('12-numbers-drill.png');
+
+  /* ---- 9. Каждый экран открывается без JS-ошибок ----
    * Ловит потерянные при рефакторинге импорты/константы (S1.3 потерял
-   * DAILY_GOAL_CHOICES — Settings не открывался, а тесты молчали). */
-  const ROUTES = ['#/', '#/theory', '#/practice', '#/exam', '#/mistakes', '#/review',
-    '#/search', '#/dictionary', '#/path', '#/stats', '#/settings', '#/exam-italian',
-    '#/numbers', '#/drill/signals'];
+   * DAILY_GOAL_CHOICES — Settings не открывался, а тесты молчали).
+   * (a) Список маршрутов берётся из регулярок роутера в main.js, а не
+   * хардкодится: добавят новый pattern — свип сам его проверит. */
+  const mainSrc = fs.readFileSync(path.join(path.dirname(new URL(import.meta.url).pathname), 'public', 'js', 'main.js'), 'utf8');
+  const ROUTES = routeHashes(mainSrc);
+  check(ROUTES.length >= 14, `роутер main.js даёт маршруты для свипа (${ROUTES.length})`);
   for (const r of ROUTES) {
     const before = jsErrors.length;
     await evaluate(`location.hash = ${JSON.stringify(r)}`);
