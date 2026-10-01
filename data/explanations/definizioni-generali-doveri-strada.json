@@ -3770,6 +3770,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-decelerazione-5": {
+      "verdict": "FALSO",
+      "key_it": "serve ad entrare in autostrada",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: to enter the motorway you use the acceleration lane; the deceleration lane is for leaving.",
+        "ru": "Неверно: чтобы въехать на автомагистраль, используют разгонную полосу; тормозная — для съезда.",
+        "zh": "错误：驶入高速公路用的是加速车道；减速车道用于驶离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-banchina-0": {
+      "verdict": "VERO",
+      "key_it": "non consente, di norma, il transito ai veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: as a rule the shoulder does not allow vehicles to travel on it.",
+        "ru": "Верно: как правило, по обочине транспортное движение не разрешается.",
+        "zh": "正确：原则上车辆不得在路肩上行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-banchina-1": {
+      "verdict": "VERO",
+      "key_it": "è parte della strada, posta al di fuori della carreggiata",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the shoulder is part of the road, located outside the carriageway.",
+        "ru": "Верно: обочина — часть дороги, расположенная за пределами проезжей части.",
+        "zh": "正确：路肩是道路的一部分，位于行车道之外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-banchina-2": {
+      "verdict": "VERO",
+      "key_it": "situata oltre la linea bianca continua",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the shoulder lies beyond the continuous white edge line of the carriageway.",
+        "ru": "Верно: обочина находится за сплошной белой краевой линией проезжей части.",
+        "zh": "正确：路肩位于行车道实线白边线之外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-banchina-3": {
+      "verdict": "FALSO",
+      "key_it": "riservata ai veicoli lenti",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the shoulder is not reserved for slow vehicles on uphill roads.",
+        "ru": "Неверно: обочина не отведена для медленных транспортных средств на подъёмах.",
+        "zh": "错误：路肩并非为爬坡路上的慢速车辆预留的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-banchina-4": {
+      "verdict": "FALSO",
+      "key_it": "la sosta dei veicoli è consentita",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: there is no such rule allowing vehicles to stop on the shoulder for up to five hours.",
+        "ru": "Неверно: такого правила о стоянке на обочине до пяти часов не существует.",
+        "zh": "错误：不存在允许车辆在路肩停车最长五小时的规定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-banchina-5": {
+      "verdict": "FALSO",
+      "key_it": "divide la carreggiata in due corsie",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the shoulder does not divide the carriageway into two lanes.",
+        "ru": "Неверно: обочина не делит проезжую часть на две полосы.",
+        "zh": "错误：路肩并不把行车道分成两条车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-banchina-6": {
+      "verdict": "FALSO",
+      "key_it": "è parte della carreggiata, destinata alla sosta",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the shoulder is outside the carriageway and is not a designated stopping area.",
+        "ru": "Неверно: обочина находится за пределами проезжей части и не является местом стоянки.",
+        "zh": "错误：路肩在行车道之外，并不是专门的停车区域。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-marciapiede-0": {
+      "verdict": "VERO",
+      "key_it": "rialzata o delimitata in altro modo, riservata ai pedoni",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the sidewalk is a raised or otherwise delimited part of the road reserved for pedestrians.",
+        "ru": "Верно: тротуар — приподнятая или иначе выделенная часть дороги, предназначенная для пешеходов.",
+        "zh": "正确：人行道是地势较高或以其他方式划定的道路部分，专供行人使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-marciapiede-1": {
+      "verdict": "VERO",
+      "key_it": "riservata, di norma, ai pedoni",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the sidewalk is, as a rule, reserved for pedestrians.",
+        "ru": "Верно: тротуар как правило предназначен для пешеходов.",
+        "zh": "正确：人行道原则上专供行人使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-marciapiede-3": {
+      "verdict": "VERO",
+      "key_it": "al di fuori della carreggiata, destinata alla circolazione dei pedoni",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the sidewalk is outside the carriageway and is meant for pedestrian movement.",
+        "ru": "Верно: тротуар находится за пределами проезжей части и предназначен для движения пешеходов.",
+        "zh": "正确：人行道在行车道之外，用于行人通行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-marciapiede-4": {
+      "verdict": "FALSO",
+      "key_it": "è una parte della carreggiata",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the sidewalk is not part of the carriageway; it lies outside it.",
+        "ru": "Неверно: тротуар не является частью проезжей части; он за её пределами.",
+        "zh": "错误：人行道不是行车道的一部分，它位于行车道之外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-marciapiede-6": {
+      "verdict": "FALSO",
+      "key_it": "riservato ai pedoni e ai veicoli in sosta",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the sidewalk is for pedestrians; parked vehicles are not part of its purpose.",
+        "ru": "Неверно: тротуар предназначен для пешеходов; стоящие транспортные средства не входят в его назначение.",
+        "zh": "错误：人行道供行人使用；停放车辆不属于其功能。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-marciapiede-7": {
+      "verdict": "FALSO",
+      "key_it": "è consentita la sosta dei ciclomotori",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the sidewalk is not an area where mopeds may park.",
+        "ru": "Неверно: тротуар не является местом, где разрешена стоянка мопедов.",
+        "zh": "错误：人行道不是允许轻便摩托车停放的地方。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-salvagente-1": {
+      "verdict": "VERO",
+      "key_it": "facilita la salita e la discesa dei passeggeri",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: a handrail helps passengers get on and off trams, trolleybuses or buses.",
+        "ru": "Верно: поручень помогает пассажирам подниматься и спускаться в трамвае, троллейбусе или автобусе.",
+        "zh": "正确：扶手帮助乘客上下电车、无轨电车或公共汽车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-salvagente-3": {
+      "verdict": "FALSO",
+      "key_it": "dividere i sensi di marcia",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a handrail does not separate the directions of traffic on a two-way road.",
+        "ru": "Неверно: поручень не разделяет направления движения на двусторонней дороге.",
+        "zh": "错误：扶手并不分隔双向道路的两个行驶方向。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-salvagente-4": {
+      "verdict": "FALSO",
+      "key_it": "serve a incanalare i veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a handrail does not channel vehicles into different directions.",
+        "ru": "Неверно: поручень не направляет транспорт в разные направления.",
+        "zh": "错误：扶手并不把车辆导向不同方向。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-salvagente-5": {
+      "verdict": "FALSO",
+      "key_it": "è una persona preposta al primo soccorso",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a handrail is a fixture, not a first-aid person.",
+        "ru": "Неверно: поручень — это приспособление, а не лицо, оказывающее первую помощь.",
+        "zh": "错误：扶手是固定装置，不是负责急救的人员。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-salvagente-6": {
+      "verdict": "FALSO",
+      "key_it": "è un itinerario ciclopedonale",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a handrail is not a cycling-and-pedestrian path.",
+        "ru": "Неверно: поручень — не вело-пешеходная дорожка.",
+        "zh": "错误：扶手不是自行车与人行道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passo-carrabile-0": {
+      "verdict": "VERO",
+      "key_it": "consente ai veicoli di accedere alle proprietà private",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: a vehicle access lets vehicles reach private properties beside the road (garages, courtyards).",
+        "ru": "Верно: выезд позволяет транспортным средствам подъехать к частным владениям у дороги.",
+        "zh": "正确：车辆通道使车辆能够进入道路旁的私人场所（车库、庭院等）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
