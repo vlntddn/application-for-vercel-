@@ -8,6 +8,7 @@
  */
 import { state, loadLessons } from '../state.js';
 import { el, clear, svgIcon } from '../ui.js';
+import { t } from '../i18n.js';
 import { errorBanner, loc } from './common.js';
 import { learningPath, nextStepAction, PATH_MINI_PASS } from '../domain/learning.js';
 
@@ -32,9 +33,9 @@ export function pathContinueTarget(step) {
 function pipeline(step) {
   const practiceDone = step.done && !step.read && step.check < PATH_MINI_PASS;
   return [
-    { key: 'read', label: 'Read', done: !!step.read },
-    { key: 'check', label: 'Check', done: step.check >= PATH_MINI_PASS },
-    { key: 'practice', label: 'Practice', done: practiceDone },
+    { key: 'read', label: t('pth.partRead'), done: !!step.read },
+    { key: 'check', label: t('pth.partCheck'), done: step.check >= PATH_MINI_PASS },
+    { key: 'practice', label: t('pth.partPractice'), done: practiceDone },
   ];
 }
 
@@ -52,10 +53,10 @@ function stepCard(step, index, total) {
   const isDone = step.status === 'done';
   return el('div.ds-card', { className: 'path-card', id: `path-step-${step.id}` },
     el('div.ds-card__top', {},
-      el('span.ds-card__eyebrow', {}, `Step ${index + 1} of ${total}`),
-      isDone ? el('span.ds-tag', { className: 'ds-tag--ok' }, svgIcon('check'), 'Done')
-        : isNew ? el('span.ds-tag', { className: 'ds-tag--accent' }, 'Up next')
-          : el('span.ds-tag', {}, 'Not started'),
+      el('span.ds-card__eyebrow', {}, t('pth.stepOf', { n: index + 1, total })),
+      isDone ? el('span.ds-tag', { className: 'ds-tag--ok' }, svgIcon('check'), t('pth.done'))
+        : isNew ? el('span.ds-tag', { className: 'ds-tag--accent' }, t('pth.upNext'))
+          : el('span.ds-tag', {}, t('pth.notStarted')),
     ),
     el('h3.ds-card__title', {}, step.name),
     el('div.path-pipeline', {},
@@ -68,7 +69,8 @@ function stepCard(step, index, total) {
     isDone
       ? null
       : el('a.ds-btn.ds-btn--primary.ds-btn--lg', { href: target },
-          action === 'practice' ? 'Practice the topic' : `Continue — ${action}`),
+          action === 'practice' ? t('pth.btnPractice')
+            : t('pth.btnContinuePart', { part: { read: t('pth.partRead'), check: t('pth.partCheck') }[action] })),
   );
 }
 
@@ -84,12 +86,12 @@ export function pathLinkCard() {
   if (path.ready) {
     return el('div.ds-card', { id: 'dashboard-learning-path' },
       el('div.ds-card__top', {},
-        el('span.ds-card__eyebrow', {}, 'Learning path'),
-        el('span.ds-tag', { className: 'ds-tag--ok' }, svgIcon('check'), 'Complete'),
+        el('span.ds-card__eyebrow', {}, t('pth.cardEyebrow')),
+        el('span.ds-tag', { className: 'ds-tag--ok' }, svgIcon('check'), t('pth.cardComplete')),
       ),
-      el('h3.ds-card__title', {}, 'All steps done'),
-      el('p.ds-card__sub', {}, `You finished the whole ${total}-step path. Go take a mock exam.`),
-      el('a.ds-btn.ds-btn--primary.ds-btn--lg', { href: '#/exam' }, 'Start a mock exam'),
+      el('h3.ds-card__title', {}, t('pth.cardAllDone')),
+      el('p.ds-card__sub', {}, t('pth.cardAllDoneSub', { total })),
+      el('a.ds-btn.ds-btn--primary.ds-btn--lg', { href: '#/exam' }, t('pth.cardExamBtn')),
     );
   }
   const idx = path.currentIndex;
@@ -97,13 +99,13 @@ export function pathLinkCard() {
   const doneCount = path.steps.filter((s) => s.status === 'done').length;
   return el('div.ds-card', { id: 'dashboard-learning-path' },
     el('div.ds-card__top', {},
-      el('span.ds-card__eyebrow', {}, 'Learning path'),
-      el('span.ds-tag', {}, `${doneCount} of ${total} done`),
+      el('span.ds-card__eyebrow', {}, t('pth.cardEyebrow')),
+      el('span.ds-tag', {}, t('pth.cardProgress', { done: doneCount, total })),
     ),
-    el('h3.ds-card__title', {}, `Step ${idx + 1} of ${total} — ${step.name}`),
-    el('p.ds-card__sub', {}, 'Read → Check → Practice, one chapter at a time.'),
+    el('h3.ds-card__title', {}, t('pth.cardTitle', { n: idx + 1, total, name: step.name })),
+    el('p.ds-card__sub', {}, t('pth.cardSub')),
     el('a.ds-btn.ds-btn--primary.ds-btn--lg', { href: pathContinueTarget(step) },
-      nextStepAction(step) === 'practice' ? 'Continue — Practice' : 'Continue'),
+      nextStepAction(step) === 'practice' ? t('pth.cardContinuePractice') : t('pth.cardContinue')),
   );
 }
 
@@ -118,11 +120,11 @@ export async function renderPath(root) {
   const total = path.steps.length;
   const doneCount = path.steps.filter((s) => s.status === 'done').length;
   clear(root,
-    el('h1', {}, 'THE LEARNING PATH'),
-    el('p.lede', {}, `Study one chapter at a time: read it, pass a 5-question check, then practice the topic. ${total} steps to the exam.`),
+    el('h1', {}, t('pth.title')),
+    el('p.lede', {}, t('pth.lede', { total })),
     el('div.panel', { style: 'margin-bottom:24px' },
       el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${total ? Math.round((doneCount / total) * 100) : 0}%` })),
-      el('p.stat-sub', {}, `${doneCount} of ${total} steps done`),
+      el('p.stat-sub', {}, t('pth.progress', { done: doneCount, total })),
     ),
     el('div.path-list', {},
       ...path.steps.map((step, i) => stepCard(step, i, total)),

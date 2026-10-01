@@ -330,6 +330,22 @@ test('the dashboard shows the next step, not raw zeros', () => {
     'at least one exam -> "until the exam" panel');
 });
 
+test('the learning path screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2: path copy lives in i18n.js under pth.* keys; the view only
+  // references keys, so ru/zh switch in without touching path.js.
+  const views = readViewsSource();
+  const pathView = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'path.js'), 'utf8');
+  assert.match(pathView, /t\('pth\.title'\)/, 'page title must come from i18n');
+  assert.match(pathView, /t\('pth\.cardTitle'/, 'dashboard card title must come from i18n');
+  // No hardcoded English UI strings left in the view.
+  assert.ok(!pathView.includes("'THE LEARNING PATH'"), 'no hardcoded page title');
+  assert.ok(!pathView.includes('steps done`'), 'no hardcoded progress line');
+  assert.ok(!pathView.includes("'Continue — Practice'"), 'no hardcoded continue button');
+  // English copy exists in the dictionary (the strings QA checks).
+  assert.match(views, /THE LEARNING PATH/);
+  assert.match(views, /one chapter at a time/);
+});
+
 test('settings offers an install path on phones', () => {
   const views = readViewsSource();
   assert.match(views, /renderInstallPanel/);
