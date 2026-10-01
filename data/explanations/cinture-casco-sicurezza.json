@@ -546,6 +546,266 @@
       "source": "ai-draft",
       "model": "offline-human-draft",
       "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-8": {
+      "verdict": "VERO",
+      "key_it": "deve essere di taglia corretta",
+      "chapter": "ch22",
+      "why": {
+        "en": "A helmet only works if it fits the head size correctly; a wrong size shifts on impact and loses its protective function.",
+        "ru": "Шлем работает только при правильном размере: не по размеру он смещается при ударе и теряет защитную функцию.",
+        "zh": "头盔只有尺寸合适才有效；尺寸不对时碰撞中会移位，失去保护作用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-9": {
+      "verdict": "VERO",
+      "key_it": "sostituito dopo che abbia subito un forte urto",
+      "chapter": "ch22",
+      "why": {
+        "en": "After a strong impact the internal structure may be weakened even if the outer shell looks intact; the helmet must be replaced.",
+        "ru": "После сильного удара внутренняя структура может быть ослаблена даже при целой внешней оболочке; шлем подлежит замене.",
+        "zh": "强烈冲击后，即使外壳完好，内部结构也可能受损；头盔必须更换。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-11": {
+      "verdict": "VERO",
+      "key_it": "deve essere sempre correttamente allacciato",
+      "chapter": "ch22",
+      "why": {
+        "en": "During riding the helmet must always be properly fastened; an unfastened helmet can fly off and offer no protection.",
+        "ru": "Во время движения шлем всегда должен быть правильно застёгнут; незастёгнутый шлем может слететь и не защитит.",
+        "zh": "骑行时头盔必须始终正确系好；未系好的头盔可能飞脱，无法提供保护。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-12": {
+      "verdict": "VERO",
+      "key_it": "può comportare gravi rischi alla salute",
+      "chapter": "ch22",
+      "why": {
+        "en": "Wearing a helmet incorrectly or without fastening it properly creates a real risk of severe injury in a fall or crash.",
+        "ru": "Неправильное ношение шлема или незастёгнутый ремешок создают реальный риск тяжёлых травм при падении или ДТП.",
+        "zh": "佩戴方式不正确或未正确系好头盔，在摔倒或事故中会造成严重伤害的风险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-13": {
+      "verdict": "VERO",
+      "key_it": "anche per spostamenti brevi e a bassa velocità",
+      "chapter": "ch22",
+      "why": {
+        "en": "The helmet is required on every ride, including short and slow trips; accident risk does not disappear at low speed.",
+        "ru": "Шлем обязателен при каждой поездке, включая короткие и медленные; риск ДТП не исчезает на низкой скорости.",
+        "zh": "无论行程多短、车速多慢，头盔都是必须的；低速时事故风险依然存在。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-14": {
+      "verdict": "VERO",
+      "key_it": "anche a bordo dei quadricicli a motore privi di carrozzeria",
+      "chapter": "ch22",
+      "why": {
+        "en": "On open-body quads (Quad) there is no cabin, so the helmet is mandatory for the rider and any passenger.",
+        "ru": "На открытых квадроциклах (Quad) нет кабины, поэтому шлем обязателен для водителя и любого пассажира.",
+        "zh": "开放式车身的全地形车（Quad）没有驾驶舱，因此驾驶员和乘客都必须佩戴头盔。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-15": {
+      "verdict": "VERO",
+      "key_it": "sostituita se rigata o danneggiata",
+      "chapter": "ch22",
+      "why": {
+        "en": "A scratched or damaged visor reduces transparency and distorts vision; it must be replaced to keep the field of view clear.",
+        "ru": "Посколотый или повреждённый визор снижает прозрачность и искажает обзор; его нужно заменить, чтобы обзор оставался чётким.",
+        "zh": "刮花或损坏的面罩会降低透明度和扭曲视野；必须更换以保持清晰视野。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-16": {
+      "verdict": "VERO",
+      "key_it": "garantire la perfetta visione con qualunque condizione",
+      "chapter": "ch22",
+      "why": {
+        "en": "The visor must ensure clear vision in every lighting condition — sun, rain, fog, night — without distortion.",
+        "ru": "Визор должен обеспечивать чёткий обзор при любых условиях — солнце, дождь, туман, ночь — без искажений.",
+        "zh": "面罩必须在任何光照条件下——晴天、雨天、雾天、夜间——都保证清晰视野，无扭曲。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-19": {
+      "verdict": "FALSO",
+      "key_it": "adesivi di qualunque tipo",
+      "chapter": "ch22",
+      "why": {
+        "en": "Only authorized reflective stickers are allowed; arbitrary stickers can reduce helmet visibility and are not permitted.",
+        "ru": "Допустимы только разрешённые светоотражающие наклейки; произвольные наклейки снижают видимость шлема и запрещены.",
+        "zh": "只允许使用经批准的反光贴纸；随意粘贴的贴纸会降低头盔能见度，不被允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-20": {
+      "verdict": "FALSO",
+      "key_it": "pulito con benzina o acquaragia",
+      "chapter": "ch22",
+      "why": {
+        "en": "Petrol and thinner are aggressive solvents that damage the shell, adhesives, and visor; they must never be used for cleaning.",
+        "ru": "Бензин и ацетон — агрессивные растворители, повреждающие оболочку, клей и визор; их нельзя использовать для чистки.",
+        "zh": "汽油和天那水属于强溶剂，会损坏外壳、粘合剂和面罩；绝不能用来清洁。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-21": {
+      "verdict": "FALSO",
+      "key_it": "solo sui percorsi extraurbani",
+      "chapter": "ch22",
+      "why": {
+        "en": "The helmet must be fastened on every road, including urban streets; there is no exception for built-up areas.",
+        "ru": "Шлем должен быть застёгнут на любой дороге, включая городские; исключений для населённых пунктов нет.",
+        "zh": "头盔在任何道路上都必须系好，包括城市街道；城镇区域没有豁免。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-22": {
+      "verdict": "FALSO",
+      "key_it": "non è obbligatorio l’uso del casco",
+      "chapter": "ch22",
+      "why": {
+        "en": "The helmet is mandatory at all speeds and in all zones; there is no speed threshold below which it becomes optional.",
+        "ru": "Шлем обязателен при любой скорости и во всех зонах; порога, ниже которого он необязателен, не существует.",
+        "zh": "头盔在所有速度和所有区域都是强制的；不存在可以免除头盔的速度阈值。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-23": {
+      "verdict": "FALSO",
+      "key_it": "obbligatorio su qualunque quadriciclo a motore",
+      "chapter": "ch22",
+      "why": {
+        "en": "The helmet is mandatory only on quads without bodywork; enclosed-body quads have seat belts instead.",
+        "ru": "Шлем обязателен только на квадроциклах без кузова; в квадроциклах с кабиной вместо него используются ремни.",
+        "zh": "头盔只在全地形车无车身时强制；有封闭式车身的车辆用安全带代替。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-25": {
+      "verdict": "FALSO",
+      "key_it": "non può essere utilizzato quando si circola nei centri urbani",
+      "chapter": "ch22",
+      "why": {
+        "en": "A full-face helmet is not banned in urban areas; it offers the same protection regardless of the environment.",
+        "ru": "Полный шлем не запрещён в городских районах; он обеспечивает защиту в любых условиях.",
+        "zh": "全盔在城镇区域内并不被禁止；无论环境如何，它都能提供同等保护。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-30": {
+      "verdict": "FALSO",
+      "key_it": "riparata con nastro adesivo",
+      "chapter": "ch22",
+      "why": {
+        "en": "Any crack in the shell compromises its structure; tape repair is ineffective and the helmet must be replaced.",
+        "ru": "Любая трещина в оболочке нарушает её структуру; ремонт скотчем неэффективен — шлем подлежит замене.",
+        "zh": "外壳上任何裂纹都会损害其结构；用胶带修复无效——头盔必须更换。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-31": {
+      "verdict": "FALSO",
+      "key_it": "visiera del casco può essere riparata con nastro adesivo",
+      "chapter": "ch22",
+      "why": {
+        "en": "A damaged visor must be replaced, not taped; tape does not restore transparency and can worsen the distortion.",
+        "ru": "Повреждённый визор нужно заменить, а не клеить скотчем; скотч не восстанавливает прозрачность и ухудшает обзор.",
+        "zh": "损坏的面罩必须更换，不能用胶带粘贴；胶带无法恢复透明度，还会加重视线扭曲。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-5": {
+      "verdict": "VERO",
+      "key_it": "è opportuno indossare gli specifici guanti anche d’estate",
+      "chapter": "ch22",
+      "why": {
+        "en": "Motorcycle gloves protect against abrasion, vibration, and heat in every season, including summer; there is no seasonal exemption.",
+        "ru": "Мотоциклетные перчатки защищают от трения, вибрации и жары в любое время года, включая лето; сезонных исключений нет.",
+        "zh": "摩托车手套在四季都防磨损、振动和高温，包括夏天；没有季节性豁免。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-8": {
+      "verdict": "FALSO",
+      "key_it": "sostituiti dai guanti da sci",
+      "chapter": "ch22",
+      "why": {
+        "en": "Ski gloves do not meet motorcycle safety standards; only certified motorcycle gloves provide the required grip and abrasion protection.",
+        "ru": "Лыжные перчатки не отвечают стандартам безопасности для мотоцикла; только сертифицированные мотоциклетные перчатки обеспечивают нужный захват и защиту от трения.",
+        "zh": "滑雪手套不符合摩托车安全标准；只有认证的摩托车手套才能提供所需的抓握力和耐磨保护。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-9": {
+      "verdict": "FALSO",
+      "key_it": "si può intervenire più rapidamente sui comandi",
+      "chapter": "ch22",
+      "why": {
+        "en": "Proper gloves improve grip on the handlebar and brake lever, making control more precise, not slower.",
+        "ru": "Правильные перчатки улучшают хват на руле и тормозной ручке, делая управление точнее, а не медленнее.",
+        "zh": "合适的摩托车手套能增强对车把和刹车杆的抓握，使操控更精准，而非更慢。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-guanti-uso-motociclistico-11": {
+      "verdict": "FALSO",
+      "key_it": "coprono anche il gomito",
+      "chapter": "ch22",
+      "why": {
+        "en": "Standard motorcycle gloves cover only the hand and wrist; elbow protection is a separate piece of gear (elbow guards).",
+        "ru": "Стандартные мотоциклетные перчатки покрывают только кисть и запястье; защита локтя — отдельный элемент экипировки.",
+        "zh": "标准摩托车手套只覆盖手掌和手腕；肘部保护是单独的装备（护肘）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
     }
   }
 }
