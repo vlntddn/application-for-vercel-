@@ -3510,6 +3510,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-parti-carreggiata-5": {
+      "verdict": "FALSO",
+      "key_it": "Fanno parte della carreggiata le banchine",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the shoulders are not part of the carriageway; they flank it and are used to stop off the traffic path.",
+        "ru": "Неверно: обочины не входят в проезжую часть; они прилегают к ней и служат для остановки вне пути движения.",
+        "zh": "错误：路肩不属于行车道；它们位于行车道两侧，用于在行车路径之外停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-parti-carreggiata-6": {
+      "verdict": "FALSO",
+      "key_it": "Fanno parte della carreggiata i marciapiedi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: sidewalks are not part of the carriageway; they are raised and set apart for pedestrians.",
+        "ru": "Неверно: тротуары не входят в проезжую часть; они приподняты и выделены для пешеходов.",
+        "zh": "错误：人行道不属于行车道；人行道地势较高，专供行人使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-1": {
+      "verdict": "VERO",
+      "key_it": "limitata da strisce continue o discontinue",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: a lane is a strip of the carriageway bounded by continuous or broken lines.",
+        "ru": "Верно: полоса — это участок проезжей части, ограниченный сплошными или прерывистыми линиями.",
+        "zh": "正确：车道是行车道上由实线或虚线界定的条带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-4": {
+      "verdict": "VERO",
+      "key_it": "possono essere vietate a taluni tipi di veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: certain lanes may be banned to specific vehicle types, so they are not open to everyone.",
+        "ru": "Верно: отдельные полосы могут быть закрыты для определённых типов транспорта и не открыты всем.",
+        "zh": "正确：某些车道可禁止特定类型车辆使用，并非对所有车辆开放。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-8": {
+      "verdict": "VERO",
+      "key_it": "consente la circolazione di una sola fila di veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: a lane is a strip of the carriageway that lets vehicles move in a single line.",
+        "ru": "Верно: полоса — это участок проезжей части, позволяющий движению транспорта в один ряд.",
+        "zh": "正确：车道是行车道上使车辆排成一行行驶的条带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-14": {
+      "verdict": "FALSO",
+      "key_it": "una pista riservata alle vetture da corsa",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a lane is not a racetrack; it is a strip of the ordinary carriageway.",
+        "ru": "Неверно: полоса — не гоночная трасса, а участок обычной проезжей части.",
+        "zh": "错误：车道不是赛车跑道，而是普通行车道上的一条带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-16": {
+      "verdict": "FALSO",
+      "key_it": "è formata da due carreggiate",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a lane is formed within one carriageway, not out of two separate carriageways.",
+        "ru": "Неверно: полоса выделяется в пределах одной проезжей части, а не из двух раздельных.",
+        "zh": "错误：车道是在一条行车道内划出的，而非由两条独立行车道构成。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-17": {
+      "verdict": "FALSO",
+      "key_it": "è una strada a scorrimento veloce",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a lane is a part of the carriageway, not a separate high-speed road.",
+        "ru": "Неверно: полоса — часть проезжей части, а не отдельная дорога повышенной проходимости.",
+        "zh": "错误：车道是行车道的一部分，而非独立的快速道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-18": {
+      "verdict": "FALSO",
+      "key_it": "possono circolare affiancati due motocicli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: two motorcycles may not ride side by side in the same lane, even in a built-up area.",
+        "ru": "Неверно: два мотоцикла не могут ехать рядом в одной полосе, даже в населённом пункте.",
+        "zh": "错误：即使在城镇内，两辆摩托车也不能在同一车道并排行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-19": {
+      "verdict": "FALSO",
+      "key_it": "possono circolare affiancati due ciclomotori",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: two mopeds may not ride side by side in the same lane, even outside built-up areas.",
+        "ru": "Неверно: два мопеда не могут ехать рядом в одной полосе, даже вне населённых пунктов.",
+        "zh": "错误：即使在城外，两辆轻便摩托车也不能在同一车道并排行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-accelerazione-0": {
+      "verdict": "VERO",
+      "key_it": "facilita l'ingresso dei veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the acceleration lane lets vehicles merge onto the motorway or main extra-urban road.",
+        "ru": "Верно: разгонная полоса помогает въехать на автомагистраль или главную внегородскую дорогу.",
+        "zh": "正确：加速车道帮助车辆驶入高速公路或主要城郊公路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-accelerazione-1": {
+      "verdict": "VERO",
+      "key_it": "serve ad entrare correttamente in autostrada",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the acceleration lane is there so you can join the motorway flow safely and smoothly.",
+        "ru": "Верно: разгонная полоса нужна, чтобы безопасно и плавно въехать на автомагистраль.",
+        "zh": "正确：加速车道用于安全平顺地驶入高速公路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-accelerazione-2": {
+      "verdict": "VERO",
+      "key_it": "viene utilizzata per aumentare la velocità",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: on the acceleration lane you increase speed to match the flow before merging.",
+        "ru": "Верно: на разгонной полосе вы набираете скорость, чтобы сравняться с потоком перед вливанием.",
+        "zh": "正确：在加速车道上你需提速以匹配车流，然后汇入。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-accelerazione-3": {
+      "verdict": "VERO",
+      "key_it": "rientrare sulla carreggiata dell’autostrada",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: after leaving a service area, the acceleration lane helps you rejoin the motorway carriageway.",
+        "ru": "Верно: после выезда из зоны отдыха разгонная полоса помогает снова вернуться на проезжую часть автомагистрали.",
+        "zh": "正确：驶出服务区后，加速车道帮助你重新回到高速公路的行车道。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-accelerazione-5": {
+      "verdict": "FALSO",
+      "key_it": "serve per uscire da una piazzola di sosta",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the acceleration lane is for entering, not for leaving a parking bay.",
+        "ru": "Неверно: разгонная полоса служит для въезда, а не для выезда с площадки стоянки.",
+        "zh": "错误：加速车道用于驶入，而非驶离停车区。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-accelerazione-6": {
+      "verdict": "FALSO",
+      "key_it": "serve per abbandonare la carreggiata",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the acceleration lane is for joining the carriageway, not for leaving it toward a rest area.",
+        "ru": "Неверно: разгонная полоса служит для въезда на проезжую часть, а не для съезда с неё в зону отдыха.",
+        "zh": "错误：加速车道用于驶入行车道，而非驶离行车道进入休息区。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-decelerazione-0": {
+      "verdict": "VERO",
+      "key_it": "facilita l'uscita dei veicoli dall'autostrada",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the deceleration lane lets vehicles leave the motorway, slowing down safely.",
+        "ru": "Верно: тормозная полоса позволяет съехать с автомагистрали, безопасно снижая скорость.",
+        "zh": "正确：减速车道让车辆驶离高速公路，同时安全减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-decelerazione-1": {
+      "verdict": "VERO",
+      "key_it": "serve per uscire correttamente da una strada extraurbana principale",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the deceleration lane helps you leave a main extra-urban road properly.",
+        "ru": "Верно: тормозная полоса помогает корректно съехать с главной внегородской дороги.",
+        "zh": "正确：减速车道帮助正确驶离主要城郊公路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-decelerazione-2": {
+      "verdict": "VERO",
+      "key_it": "uscire dalla carreggiata dell’autostrada",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: on the deceleration lane you leave the motorway carriageway and enter the service area.",
+        "ru": "Верно: по тормозной полосе вы съезжаете с проезжей части автомагистрали в зону обслуживания.",
+        "zh": "正确：在减速车道上你驶离高速公路的行车道并进入服务区。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-corsia-decelerazione-4": {
+      "verdict": "FALSO",
+      "key_it": "serve per entrare in una piazzola di sosta",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the deceleration lane is not for entering a parking bay; that is a separate matter.",
+        "ru": "Неверно: тормозная полоса не служит для въезда на площадку стоянки — это отдельное дело.",
+        "zh": "错误：减速车道不用于驶入停车区——那是另一回事。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
