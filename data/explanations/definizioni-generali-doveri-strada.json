@@ -2210,6 +2210,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attraversamento-pedonale-1": {
+      "verdict": "VERO",
+      "key_it": "è vietata la fermata dei veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "A pedestrian crossing is part of the carriageway, and stopping on it is forbidden, so vehicles must not stop there even for a short time.",
+        "ru": "Пешеходный переход — часть проезжей части, и остановка на нём запрещена, поэтому даже кратковременная остановка на переходе не допускается.",
+        "zh": "人行横道属于车道的一部分，禁止车辆停靠，因此即使在很短的时间内也不允许在人行横道上停车。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attraversamento-pedonale-2": {
+      "verdict": "VERO",
+      "key_it": "dare la precedenza ai pedoni",
+      "chapter": "ch1",
+      "why": {
+        "en": "On a pedestrian crossing vehicles must give way to pedestrians who are crossing on the special stripes, so this is part of the carriageway.",
+        "ru": "На пешеходном переходе водители обязаны уступить дорогу пешеходам, переходящим по специально размеченным полосам; переход — часть проезжей части.",
+        "zh": "在人行横道上，机动车必须让行正在专用斑马线上过街的行人，因此它属于车道的一部分。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attraversamento-pedonale-3": {
+      "verdict": "VERO",
+      "key_it": "destinata al transito dei pedoni",
+      "chapter": "ch1",
+      "why": {
+        "en": "A pedestrian crossing is a part of the carriageway dedicated to the transit of pedestrians who are crossing the road.",
+        "ru": "Пешеходный переход — это часть проезжей части, предназначенная для перемещения пешеходов, пересекающих дорогу.",
+        "zh": "人行横道是专为过街行人而设置的车道部分。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attraversamento-pedonale-4": {
+      "verdict": "VERO",
+      "key_it": "è vietata la sosta dei veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Parking is forbidden on a pedestrian crossing: it is a part of the carriageway and vehicles must not remain there.",
+        "ru": "На пешеходном переходе запрещена стоянка: это часть проезжей части, и транспортное средство не должно на ней находиться.",
+        "zh": "人行横道上禁止停车：它属于车道的一部分，车辆不得停在那里。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attraversamento-pedonale-5": {
+      "verdict": "FALSO",
+      "key_it": "separata dalla carreggiata mediante una striscia gialla",
+      "chapter": "ch1",
+      "why": {
+        "en": "A pedestrian crossing is on the carriageway, not separated from it by a yellow line; the stripe marking it belongs to the road surface.",
+        "ru": "Пешеходный переход находится на проезжей части, а не отделён от неё жёлтой полосой; его разметка находится на самой поверхности дороги.",
+        "zh": "人行横道位于车道上，而不是用黄线与车道分隔开；它的标线就在路面之上。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attraversamento-pedonale-6": {
+      "verdict": "FALSO",
+      "key_it": "vietata al transito dei veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Transit is not forbidden on a crossing: vehicles may drive over it but must yield to pedestrians, so the statement is wrong.",
+        "ru": "Движение по переходу не запрещено: транспортные средства могут по нему проезжать, но обязаны уступать пешеходам, поэтому утверждение неверно.",
+        "zh": "人行横道并非禁止车辆通行：车辆可以驶过它，但必须给行人让路，所以该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attraversamento-pedonale-7": {
+      "verdict": "FALSO",
+      "key_it": "non fa parte della carreggiata",
+      "chapter": "ch1",
+      "why": {
+        "en": "The crossing is part of the carriageway, not an extra element outside it, so the statement is false.",
+        "ru": "Переход является частью проезжей части, а не дополнительным элементом вне её, поэтому утверждение ложно.",
+        "zh": "人行横道是车道的一部分，而不是车道之外的附加部分，因此该说法是错误的。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attraversamento-pedonale-8": {
+      "verdict": "FALSO",
+      "key_it": "al di fuori della carreggiata",
+      "chapter": "ch1",
+      "why": {
+        "en": "The crossing is on the carriageway, not outside it; being destined for pedestrians does not move it off the road surface.",
+        "ru": "Переход размещён на проезжей части, а не вне её; то, что он предназначен для пешеходов, не переносит его за пределы дороги.",
+        "zh": "人行横道设置在车道上，而不是车道之外；它专为行人服务，但并不意味着它被移到路外。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attraversamento-pedonale-9": {
+      "verdict": "FALSO",
+      "key_it": "è consentita la fermata ma non la sosta",
+      "chapter": "ch1",
+      "why": {
+        "en": "Neither stopping nor parking is allowed on a crossing, so the half-permission in the statement is wrong.",
+        "ru": "На переходе запрещены и остановка, и стоянка, поэтому частичное «разрешение» в утверждении неверно.",
+        "zh": "人行横道上既不允许停车，也不允许停放，所以该说法中的部分许可是错误的。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-0": {
+      "verdict": "VERO",
+      "key_it": "a carreggiate separate",
+      "chapter": "ch1",
+      "why": {
+        "en": "Main extra-urban roads have separate carriageways for the two directions, so the statement is correct.",
+        "ru": "Главные загородные дороги имеют разделённые проезжие части для противоположных направлений, поэтому утверждение верно.",
+        "zh": "主要城郊公路设有双向分离的车道，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-1": {
+      "verdict": "VERO",
+      "key_it": "dotate di apposite aree di sosta",
+      "chapter": "ch1",
+      "why": {
+        "en": "These roads have special parking areas for drivers to rest, which is one of their defining features.",
+        "ru": "На таких дорогах предусмотрены специальные площадки для отдыха водителей — это одно из их отличительных признаков.",
+        "zh": "这类道路上设有供司机休息的专用停车区，这是它们的显著特征之一。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-2": {
+      "verdict": "VERO",
+      "key_it": "non ha incroci a raso che l",
+      "chapter": "ch1",
+      "why": {
+        "en": "A main extra-urban road has no level intersections crossing it; junctions are made at different levels.",
+        "ru": "Главные загородные дороги не имеют пересечений в одном уровне; пересечения выполняются на разных уровнях.",
+        "zh": "主要城郊公路没有与其在同一平面的交叉路口；交叉均以立体方式实现。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-3": {
+      "verdict": "VERO",
+      "key_it": "di inizio e fine",
+      "chapter": "ch1",
+      "why": {
+        "en": "These roads are marked by road signs at their beginning and at their end, so drivers know where the rules apply.",
+        "ru": "Такие дороги обозначаются дорожными знаками в начале и в конце, поэтому водители знают, где действуют их правила.",
+        "zh": "这类道路在起点和终点均设有交通标志，因此驾驶员清楚其规则适用区段。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-5": {
+      "verdict": "VERO",
+      "key_it": "a livelli sfalsati",
+      "chapter": "ch1",
+      "why": {
+        "en": "Intersections on these roads exist, but at different levels (overpasses or underpasses), so the statement is correct.",
+        "ru": "Пересечения на таких дорогах существуют, но на разных уровнях — эстакады или тоннели, поэтому утверждение верно.",
+        "zh": "这类道路确实存在交叉，但位于不同层级（高架或地下通道），因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-6": {
+      "verdict": "VERO",
+      "key_it": "corsie di accelerazione per l",
+      "chapter": "ch1",
+      "why": {
+        "en": "Entrances on these roads are equipped with acceleration lanes, allowing vehicles to reach the traffic speed before merging.",
+        "ru": "Въезды на такие дороги оснащены разгонными полосами, позволяющими выйти на скорость потока перед вклиниванием.",
+        "zh": "这类道路的入口设有加速车道，车辆可在汇入前达到车流速度。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-7": {
+      "verdict": "FALSO",
+      "key_it": "130 km/h",
+      "chapter": "ch1",
+      "why": {
+        "en": "The 130 km/h limit belongs to motorways; main extra-urban roads have a lower maximum speed for cars and motorcycles.",
+        "ru": "Ограничение 130 км/ч действует на автомагистралях; на главных загородных дорогах максимум для легкового автомобиля и мотоцикла ниже.",
+        "zh": "130 公里/小时的限速适用于高速公路；主要城郊公路上汽车和摩托车的最高速度更低。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-8": {
+      "verdict": "FALSO",
+      "key_it": "contraddistinte da segnaletica verde",
+      "chapter": "ch1",
+      "why": {
+        "en": "Green signs are used on motorways, while main extra-urban roads use blue signs; so the statement is false.",
+        "ru": "Зелёные таблички применяются на автомагистралях, а на главных загородных дорогах — синие, поэтому утверждение неверно.",
+        "zh": "绿色标志用于高速公路，而主要城郊公路使用蓝色标志，因此该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-9": {
+      "verdict": "FALSO",
+      "key_it": "possono essere ad un",
+      "chapter": "ch1",
+      "why": {
+        "en": "These roads always have separate carriageways, so they cannot be a single carriageway in both directions.",
+        "ru": "Такие дороги всегда имеют разделённые проезжие части, поэтому они не могут быть с единой проезжей частью для обоих направлений.",
+        "zh": "这类道路始终设有双向分离车道，因此不可能只有一条共用双向的车道。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-10": {
+      "verdict": "FALSO",
+      "key_it": "alla stessa velocità massima prevista per le autostrade",
+      "chapter": "ch1",
+      "why": {
+        "en": "Main extra-urban roads do not share the motorway maximum: the speed limit for cars is lower than on motorways.",
+        "ru": "Главные загородные дороги не имеют того же лимита, что и автомагистрали: ограничение для легкового автомобиля ниже, чем на автомагистрали.",
+        "zh": "主要城郊公路并不共享高速公路的最高限速：汽车的速度限制低于高速公路。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-11": {
+      "verdict": "FALSO",
+      "key_it": "i quadricicli leggeri possono transitare",
+      "chapter": "ch1",
+      "why": {
+        "en": "Light quadricycles are not allowed on main extra-urban roads because their maximum construction speed is too low.",
+        "ru": "Лёгкие квадроциклы не допускаются на главных загородных дорогах, поскольку их максимальная конструктивная скорость слишком низка.",
+        "zh": "轻型四轮机动车不允许在主要城郊公路上行驶，因为其最高设计速度过低。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
     }
   }
 }
