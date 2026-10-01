@@ -1,0 +1,369 @@
+{
+  "category": "consumi-ambiente-inquinamento",
+  "items": {
+    "consumi-ambiente-inquinamento-rumori-fastidiosi-2": {
+      "verdict": "VERO",
+      "key_it": "Per evitare rumori fastidiosi durante la guida non si deve frenare bruscamente, se non è strettamente necessario",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: to avoid annoying noise while driving, one should not brake harshly unless it is strictly necessary.",
+        "ru": "Верно: чтобы избежать раздражающего шума при вождении, не нужно резко тормозить, если это не строго необходимо.",
+        "zh": "正确：为避免驾驶中的恼人噪音，若非严格必要，不应急刹车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-rumori-fastidiosi-4": {
+      "verdict": "VERO",
+      "key_it": "si deve usare il clacson solamente per motivi di sicurezza stradale (trasporto feriti o ammalati, pericolo immediato)",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: the horn must be used only for road-safety reasons, such as transporting injured or sick people or an immediate danger.",
+        "ru": "Верно: клаксон нужно применять только по соображениям безопасности (перевозка пострадавших или больных, непосредственная опасность).",
+        "zh": "正确：喇叭只能用于道路安全原因，例如运送伤员或病人、直接危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-rumore-veicoli-motore-1": {
+      "verdict": "VERO",
+      "key_it": "Il rumore prodotto dai veicoli a motore si può diminuire con una guida corretta, che eviti brusche frenate o forti accelerazioni",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: the noise produced by motor vehicles can be reduced by correct driving that avoids harsh braking or hard acceleration.",
+        "ru": "Верно: шум двигательных транспортных средств можно снизить правильным вождением, исключающим резкие торможения и сильные ускорения.",
+        "zh": "正确：通过避免急刹和猛踩油门的正确驾驶，可以降低动力车辆产生的噪音。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-rumore-veicoli-motore-2": {
+      "verdict": "FALSO",
+      "key_it": "Il rumore prodotto dai veicoli a motore è causato solo dal motore",
+      "chapter": "ch20",
+      "why": {
+        "en": "False: motor-vehicle noise is not caused only by the engine; the tyres and the exhaust system also produce noise.",
+        "ru": "Ложно: шум двигательных ТС не вызывается только двигателем; шумят также шины и выхлопная система.",
+        "zh": "错误：动力车辆的噪音并非只由发动机产生；轮胎和排气系统同样会产生噪音。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-diminuire-rumore-2": {
+      "verdict": "VERO",
+      "key_it": "Per diminuire il rumore non si deve accelerare quando il veicolo è fermo",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: to reduce noise one should not accelerate while the vehicle is standing still.",
+        "ru": "Верно: чтобы снизить шум, не нужно ускоряться, когда автомобиль стоит на месте.",
+        "zh": "正确：为降低噪音，车辆静止时不应加速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-diminuire-rumore-4": {
+      "verdict": "VERO",
+      "key_it": "Il controllo dei freni che producono rumore, oltre ad aumentare la sicurezza può ridurre la rumorosità del veicolo",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: checking the noisy brakes, besides increasing safety, can reduce the vehicle's noise.",
+        "ru": "Верно: проверка шумящих тормозов, помимо повышения безопасности, может снизить шум автомобиля.",
+        "zh": "正确：检查发出异响的刹车，除了提升安全性，还能降低车辆噪音。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-diminuire-rumore-5": {
+      "verdict": "VERO",
+      "key_it": "Per diminuire il rumore emesso dai veicoli a motore si deve suonare il clacson il meno possibile",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: to reduce the noise emitted by motor vehicles, one should use the horn as little as possible.",
+        "ru": "Верно: чтобы снизить шум двигательных ТС, нужно по возможности реже пользоваться клаксоном.",
+        "zh": "正确：为减少动力车辆发出的噪音，应尽量减少按喇叭。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-diminuire-rumore-7": {
+      "verdict": "FALSO",
+      "key_it": "si deve sostituire il tubo di scarico, usandone uno di diametro più piccolo",
+      "chapter": "ch20",
+      "why": {
+        "en": "False: reducing noise does not mean replacing the exhaust pipe with a smaller one; a smaller pipe actually raises noise.",
+        "ru": "Ложно: снижение шума не означает замену выхлопной трубы на более узкую; более узкая труба наоборот повышает шум.",
+        "zh": "错误：降低噪音并不意味着把排气管换成更细的；更细的排气管反而会加大噪音。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-inquinamento-atmosferico-0": {
+      "verdict": "VERO",
+      "key_it": "L'inquinamento dell'aria prodotto dai veicoli può dipendere da un funzionamento irregolare del motore",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: the air pollution produced by vehicles can depend on irregular engine operation.",
+        "ru": "Верно: загрязнение воздуха от транспортных средств может зависеть от неравномерной работы двигателя.",
+        "zh": "正确：车辆造成的空气污染可能取决于发动机工作不规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-inquinamento-atmosferico-1": {
+      "verdict": "VERO",
+      "key_it": "L'inquinamento dell'aria può essere ridotto, controllando che il veicolo sia sempre nelle condizioni ottimali di consumo e rendimento",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: air pollution can be reduced by making sure the vehicle is always in optimal consumption and efficiency condition.",
+        "ru": "Верно: загрязнение воздуха можно снизить, поддерживая автомобиль всегда в оптимальном состоянии по расходу и отдаче.",
+        "zh": "正确：通过让车辆始终处于油耗与功率的最佳状态，可以减少空气污染。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-inquinamento-atmosferico-3": {
+      "verdict": "VERO",
+      "key_it": "L'inquinamento atmosferico prodotto dai veicoli può essere ridotto, controllando che il filtro dell'aria non sia sporco o intasato",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: air pollution from vehicles can be reduced by checking that the air filter is not dirty or clogged.",
+        "ru": "Верно: загрязнение воздуха от ТС можно снизить, следя, чтобы воздушный фильтр не был грязным или забитым.",
+        "zh": "正确：通过检查空气滤清器不脏不堵，可以减少车辆造成的空气污染。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-iniettori-fumi-scarico-3": {
+      "verdict": "VERO",
+      "key_it": "L'inquinamento dell'aria prodotto dai veicoli può causare danni alle vie respiratorie e irritazione agli occhi",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: air pollution produced by vehicles can damage the respiratory tract and irritate the eyes.",
+        "ru": "Верно: загрязнение воздуха от ТС может повреждать дыхательные пути и раздражать глаза.",
+        "zh": "正确：车辆造成的空气污染会损害呼吸道并刺激眼睛。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-accorgimenti-ridurre-inquinamento-0": {
+      "verdict": "VERO",
+      "key_it": "L'inquinamento dell'aria prodotto dai veicoli a motore può diminuire se si alleggerisce il peso del veicolo",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: air pollution from motor vehicles can be reduced if the vehicle is made lighter.",
+        "ru": "Верно: загрязнение воздуха от двигательных ТС может снизиться, если облегчить автомобиль.",
+        "zh": "正确：若减轻车辆重量，可减少动力车辆的空气污染。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-accorgimenti-ridurre-inquinamento-1": {
+      "verdict": "VERO",
+      "key_it": "L'inquinamento dell'aria prodotto dai veicoli a motore può essere ridotto, scegliendo veicoli con alimentazione elettrica, a metano o GPL",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: air pollution from motor vehicles can be reduced by choosing vehicles powered by electricity, methane or LPG.",
+        "ru": "Верно: загрязнение воздуха от двигательных ТС можно снизить, выбирая электромобили и машины на метане или GPL.",
+        "zh": "正确：选择电动或天然气/液化石油气车辆，可减少动力车辆的空气污染。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-accorgimenti-ridurre-inquinamento-2": {
+      "verdict": "VERO",
+      "key_it": "L'inquinamento dell'aria prodotto dai veicoli a motore può diminuire se si spegne il motore, in caso di arresto prolungato",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: air pollution from motor vehicles can be reduced by switching off the engine during prolonged stops.",
+        "ru": "Верно: загрязнение воздуха от двигательных ТС можно снизить, глуша двигатель на долгих стоянках.",
+        "zh": "正确：长时间停车时熄火，可减少动力车辆的空气污染。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-accorgimenti-ridurre-inquinamento-3": {
+      "verdict": "VERO",
+      "key_it": "L'inquinamento dell'aria prodotto dai veicoli a motore può essere ridotto, evitando di usare il veicolo per brevi percorsi",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: air pollution from motor vehicles can be reduced by avoiding using the vehicle for short trips.",
+        "ru": "Верно: загрязнение воздуха от двигательных ТС можно снизить, избегая использования автомобиля на коротких дистанциях.",
+        "zh": "正确：避免用车辆行驶短途，可减少动力车辆的空气污染。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-accorgimenti-ridurre-inquinamento-4": {
+      "verdict": "VERO",
+      "key_it": "Guidando un veicolo che emette troppi gas di scarico inquinanti si può essere puniti con una sanzione amministrativa e il ritiro della carta di circolazione",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: driving a vehicle that emits too many polluting exhaust gases can lead to an administrative fine and the withdrawal of the vehicle registration card.",
+        "ru": "Верно: ездить на автомобиле, выпускающем слишком много загрязняющих выхлопных газов, — повод для административного штрафа и изъятия свидетельства о регистрации.",
+        "zh": "正确：驾驶排放过多污染废气的车辆，可能被处以行政罚款并吊销车辆登记证。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-accorgimenti-ridurre-inquinamento-5": {
+      "verdict": "FALSO",
+      "key_it": "L'inquinamento dell'aria prodotto dai veicoli a motore può diminuire se si sistemano i bagagli sul tetto dell'autovettura",
+      "chapter": "ch20",
+      "why": {
+        "en": "False: putting luggage on the roof does not reduce air pollution; the added drag increases consumption and emissions.",
+        "ru": "Ложно: багаж на крыше не снижает загрязнение воздуха; дополнительное сопротивление увеличивает расход и выбросы.",
+        "zh": "错误：把行李放在车顶上不会减少空气污染；增加的阻力反而加大油耗与排放。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-accorgimenti-ridurre-inquinamento-6": {
+      "verdict": "FALSO",
+      "key_it": "L'inquinamento dell'aria prodotto dai veicoli a motore può diminuire se si circola sempre con marce basse",
+      "chapter": "ch20",
+      "why": {
+        "en": "False: driving all the time in low gears does not reduce air pollution; it raises revs, consumption and emissions.",
+        "ru": "Ложно: постоянная езда на низких передачах не снижает загрязнение воздуха; это повышает обороты, расход и выбросы.",
+        "zh": "错误：一直用低挡位行驶不会减少空气污染；它会提高转速、油耗与排放。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-accorgimenti-ridurre-inquinamento-7": {
+      "verdict": "FALSO",
+      "key_it": "L'inquinamento dell'aria prodotto dai veicoli a motore può diminuire se si accelera tenendo premuto il pedale della frizione",
+      "chapter": "ch20",
+      "why": {
+        "en": "False: accelerating while keeping the clutch depressed does not reduce air pollution; it wastes fuel and harms the clutch.",
+        "ru": "Ложно: ускоряться, удерживая нажатой педаль сцепления, не снижает загрязнение воздуха; это зря расходует топливо и вредит сцеплению.",
+        "zh": "错误：踩着离合器加速不会减少空气污染；它白白耗油并损害离合器。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-accorgimenti-ridurre-inquinamento-8": {
+      "verdict": "FALSO",
+      "key_it": "L'inquinamento dell'aria prodotto dai veicoli a motore può diminuire se si accelera con il cambio in folle",
+      "chapter": "ch20",
+      "why": {
+        "en": "False: accelerating with the gearbox in neutral does not reduce air pollution and is an unsafe driving practice.",
+        "ru": "Ложно: ускоряться на нейтрали не снижает загрязнение воздуха, к тому же это небезопасная манера вождения.",
+        "zh": "错误：空挡加速不会减少空气污染，而且是不安全的驾驶行为。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-salvaguardare-ambiente-0": {
+      "verdict": "VERO",
+      "key_it": "Per risparmiare carburante e salvaguardare l'ambiente dall'inquinamento atmosferico, è consigliabile azionare il climatizzatore il meno possibile e soltanto quando serve effettivamente",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: to save fuel and protect the environment from air pollution, the air-conditioning should be used as little as possible and only when really needed.",
+        "ru": "Верно: чтобы экономить топливо и беречь среду от загрязнения, климат-контроль стоит включать по возможности реже и только когда действительно нужно.",
+        "zh": "正确：为省油并保护环境，空调应尽可能少开，只在确实需要时使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-veicoli-modificati-0": {
+      "verdict": "VERO",
+      "key_it": "Guidando un veicolo a cui sono stati modificati il motore e la marmitta, si può incorrere in pesanti sanzioni amministrative",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: driving a vehicle whose engine and exhaust have been modified can lead to heavy administrative penalties.",
+        "ru": "Верно: ездить на автомобиле с изменёнными двигателем и выхлопом — повод для серьёзных административных санкций.",
+        "zh": "正确：驾驶发动机和排气被改装过的车辆，可能招致严厉的行政处罚。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-scarico-smaltimento-1": {
+      "verdict": "VERO",
+      "key_it": "L'abbandono di una batteria per auto, sulla strada o sul terreno, può arrecare gravi danni all'ambiente e alle falde acquifere sottostanti",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: abandoning a car battery on the road or ground can cause serious damage to the environment and to the underlying water tables.",
+        "ru": "Верно: выбрасывание автомобильного аккумулятора на дорогу или землю может нанести серьёзный вред окружающей среде и водоносным слоям под ней.",
+        "zh": "正确：把汽车电池丢弃在路面或地面上，会对环境和地下水层造成严重损害。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-scarico-smaltimento-2": {
+      "verdict": "VERO",
+      "key_it": "Se si acquista una batteria per auto si può consegnare quella esausta (usata) al rivenditore, che provvederà a ritirarla, senza ulteriori costi aggiuntivi",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: when buying a car battery, the used one can be handed to the dealer, who will collect it at no extra cost.",
+        "ru": "Верно: при покупке автомобильного аккумулятора отработанный можно сдать продавцу, который заберёт его без доплат.",
+        "zh": "正确：购买汽车电池时，可用电池交给经销商，由其免费回收。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-scarico-smaltimento-3": {
+      "verdict": "VERO",
+      "key_it": "Il proprietario di un veicolo che intende demolirlo o rottamarlo, deve consegnarlo ad un centro di raccolta per la messa in sicurezza (autodemolitore autorizzato)",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: the owner of a vehicle to be dismantled or scrapped must hand it over to a collection centre for safe disposal (an authorised dismantler).",
+        "ru": "Верно: владелец, демонтирующий или сдающий автомобиль на утилизацию, обязан сдать его в сборочный центр для безопасной утилизации (авторизованную разборку).",
+        "zh": "正确：打算拆解或报废车辆的车主，必须将其交到回收处理中心进行安全处置（持牌拆车厂）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-scarico-smaltimento-5": {
+      "verdict": "VERO",
+      "key_it": "Lo scarico dei residui organici e delle acque sporche delle autocaravan deve avvenire negli appositi impianti di smaltimento igienico-sanitari",
+      "chapter": "ch20",
+      "why": {
+        "en": "True: the discharge of organic residues and dirty water from motorhomes must be done at dedicated hygienic disposal facilities.",
+        "ru": "Верно: слив органических отходов и грязной воды из автофургонов должен выполняться в специальных сангигиенических очистных установках.",
+        "zh": "正确：房车排放有机废物和脏水，必须在专门的卫生处理设施进行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "consumi-ambiente-inquinamento-scarico-smaltimento-7": {
+      "verdict": "FALSO",
+      "key_it": "Per demolire o rottamare un veicolo, lo si deve consegnare esclusivamente al concessionario della casa costruttrice",
+      "chapter": "ch20",
+      "why": {
+        "en": "False: to dismantle or scrap a vehicle it is not required to hand it over only to the manufacturer's dealer; an authorised dismantling centre is enough.",
+        "ru": "Ложно: для демонтажа или утилизации не обязательно сдавать автомобиль только дилеру производителя; достаточно авторизованной разборочной станции.",
+        "zh": "错误：拆解或报废车辆不必只交给原厂经销商；交给持牌拆车厂即可。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    }
+  }
+}
