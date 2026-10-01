@@ -2730,6 +2730,266 @@
       "source": "ai-draft",
       "model": "agent",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-19": {
+      "verdict": "FALSO",
+      "key_it": "area pedonale urbana",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is a small road element for separating traffic flows, not a large urban pedestrian area.",
+        "ru": "Трафик-остров — небольшой элемент дороги для разделения потоков, а не большая городская пешеходная зона.",
+        "zh": "交通岛是分隔车流的道路小型设施，而非大型城市步行区。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-20": {
+      "verdict": "FALSO",
+      "key_it": "consentito il transito dei ciclomotori",
+      "chapter": "ch1",
+      "why": {
+        "en": "Transit of mopeds over a traffic island is forbidden, not allowed, so the statement is wrong.",
+        "ru": "Движение мопедов по трафик-острову запрещено, а не разрешено, поэтому утверждение неверно.",
+        "zh": "轻便摩托车驶过交通岛是被禁止的，而非允许的，因此该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-livelli-sfalsati-0": {
+      "verdict": "VERO",
+      "key_it": "strade situate ad altezze diverse",
+      "chapter": "ch1",
+      "why": {
+        "en": "A grade-separated intersection involves roads at different elevations, so the statement is correct.",
+        "ru": "Разнесённый по уровням перекрёсток включает дороги на разных отметках, поэтому утверждение верно.",
+        "zh": "立体交叉路口涉及不同标高的道路，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-livelli-sfalsati-1": {
+      "verdict": "VERO",
+      "key_it": "esclude l",
+      "chapter": "ch1",
+      "why": {
+        "en": "A grade-separated intersection improves flow because it removes direct crossing between vehicle streams.",
+        "ru": "Разнесённый по уровням перекрёсток улучшает движение, поскольку устраняет прямой перекрёсток потоков.",
+        "zh": "立体交叉路口消除了车流之间的直接交叉，从而改善通行，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-livelli-sfalsati-2": {
+      "verdict": "VERO",
+      "key_it": "rampe, sovrappassi o sottopassi",
+      "chapter": "ch1",
+      "why": {
+        "en": "A grade-separated intersection uses ramps, overpasses or underpasses, so the statement is correct.",
+        "ru": "Разнесённый по уровням перекрёсток использует съезды, эстакады или путепроводы, поэтому утверждение верно.",
+        "zh": "立体交叉路口使用匝道、高架桥或下穿通道，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-livelli-sfalsati-3": {
+      "verdict": "VERO",
+      "key_it": "infrastrutture (rampe, sovrappassi, sottopassi) per il collegamento",
+      "chapter": "ch1",
+      "why": {
+        "en": "A grade-separated intersection has infrastructure (ramps, overpasses, underpasses) to link roads at different levels, so the statement is correct.",
+        "ru": "Разнесённый по уровням перекрёсток оснащён инфраструктурой (съезды, эстакады, путепроводы) для соединения дорог на разных уровнях, поэтому утверждение верно.",
+        "zh": "立体交叉路口设有连接不同标高道路的基础设施（匝道、高架、下穿通道），因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-livelli-sfalsati-4": {
+      "verdict": "FALSO",
+      "key_it": "incrocio a raso fra una strada e i binari del treno",
+      "chapter": "ch1",
+      "why": {
+        "en": "A grade-separated intersection is not a level crossing between a road and railway tracks; those are on the same level.",
+        "ru": "Разнесённый по уровням перекрёсток — это не переезд на одном уровне между дорогой и железнодорожным полотном; те находятся на одном уровне.",
+        "zh": "立体交叉路口不是道路与铁路轨道之间的平交道口；平交道口处于同一标高。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-livelli-sfalsati-5": {
+      "verdict": "FALSO",
+      "key_it": "non valgono i limiti massimi generali di velocit",
+      "chapter": "ch1",
+      "why": {
+        "en": "General speed limits do apply at grade-separated intersections; they are not excluded, so the statement is wrong.",
+        "ru": "Общие ограничения скорости действуют и на разнесённых по уровням перекрёстках; они не отменяются, поэтому утверждение неверно.",
+        "zh": "一般速度限制在立体交叉路口同样适用，不会被取消，因此该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-livelli-sfalsati-6": {
+      "verdict": "FALSO",
+      "key_it": "regolata da semafori",
+      "chapter": "ch1",
+      "why": {
+        "en": "Grade-separated intersections are not regulated by traffic lights as a rule, because the streams do not cross directly.",
+        "ru": "Разнесённые по уровням перекрёстки, как правило, не регулируются светофорами, поскольку потоки не пересекаются напрямую.",
+        "zh": "立体交叉路口通常不由红绿灯控制，因为车流不直接交叉。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-raso-0": {
+      "verdict": "VERO",
+      "key_it": "due o pi",
+      "chapter": "ch1",
+      "why": {
+        "en": "At a level crossing, two or more roads cross at the same level, so the statement is correct.",
+        "ru": "На перекрёстке на одном уровне две или более дороги пересекаются на одной отметке, поэтому утверждение верно.",
+        "zh": "在平面交叉路口，两条或更多道路在同一标高处相交，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-raso-2": {
+      "verdict": "VERO",
+      "key_it": "due o pi",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing is where two or more roads meet at the same level, so the statement is correct.",
+        "ru": "Перекрёсток на одном уровне — это место, где две или более дороги пересекаются на одной отметке, поэтому утверждение верно.",
+        "zh": "平面交叉路口是两条或更多道路在同一标高处相交之处，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-raso-3": {
+      "verdict": "VERO",
+      "key_it": "veicoli provenienti dalle strade che si incrociano",
+      "chapter": "ch1",
+      "why": {
+        "en": "At a level crossing you must watch for vehicles coming from the crossing roads, so the statement is correct.",
+        "ru": "На перекрёстке на одном уровне нужно внимательнее к автомобилям с пересекающихся дорог, поэтому утверждение верно.",
+        "zh": "在平面交叉路口需注意从相交道路驶来的车辆，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-raso-4": {
+      "verdict": "FALSO",
+      "key_it": "incrocio fra una strada statale e i binari del tram",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing between a road and tram tracks is a different structure, not a generic level road intersection.",
+        "ru": "Перекрёсток между дорогой и трамвайными путями — отдельная конструкция, а не обычный перекрёсток на одном уровне.",
+        "zh": "道路与有轨电车轨道的交叉口是另一类结构，而非普通的平面道路交叉口。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-raso-5": {
+      "verdict": "FALSO",
+      "key_it": "passaggio a livello dotato di barriere o semibarriere",
+      "chapter": "ch1",
+      "why": {
+        "en": "A road intersection at level is not a railway level crossing with barriers; those are different things.",
+        "ru": "Перекрёсток на одном уровне — это не железнодорожный переезд с барьерами; это разные объекты.",
+        "zh": "平面道路交叉口不是带栏杆的铁路道口；这是两种不同的设施。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-raso-6": {
+      "verdict": "FALSO",
+      "key_it": "intersezione a livelli sfalsati",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing is at the same level, not grade-separated; the statement is false.",
+        "ru": "Перекрёсток на одном уровне находится на одной отметке, а не разнесён по уровням; утверждение ложно.",
+        "zh": "平面交叉口处于同一标高，而非立体分离；该说法是错误的。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-raso-7": {
+      "verdict": "FALSO",
+      "key_it": "insieme di sovrappassi, sottopassi e rampe",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing is not a set of overpasses, underpasses and ramps; those belong to grade-separated intersections.",
+        "ru": "Перекрёсток на одном уровне — это не набор эстакад, путепроводов и съездов; они относятся к разнесённым по уровням перекрёсткам.",
+        "zh": "平面交叉口不是一组高架、下穿通道和匝道；那些属于立体交叉路口。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-intersezione-raso-8": {
+      "verdict": "FALSO",
+      "key_it": "incrocio fra una strada statale e un passo carrabile",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing between a road and a driveway is not the definition of a level road intersection.",
+        "ru": "Перекрёсток между дорогой и частным въездом — это не определение перекрёстка на одном уровне.",
+        "zh": "道路与私人车道的交叉口并非平面道路交叉口的定义。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-zona-traffico-limitato-4": {
+      "verdict": "VERO",
+      "key_it": "delimitata da appositi segnali stradali di inizio e di fine",
+      "chapter": "ch1",
+      "why": {
+        "en": "A limited traffic zone is delimited by specific start and end road signs, so the statement is correct.",
+        "ru": "Зона с ограниченным движением обозначается специальными дорожными знаками начала и конца, поэтому утверждение верно.",
+        "zh": "交通限制区由专用的开始和结束道路标志划定，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-zona-traffico-limitato-5": {
+      "verdict": "FALSO",
+      "key_it": "non possono entrare pi",
+      "chapter": "ch1",
+      "why": {
+        "en": "A limited traffic zone is not about a number of vehicles; it restricts certain vehicles or traffic categories, so the statement is wrong.",
+        "ru": "Зона с ограниченным движением не связана с количеством автомобилей; она ограничивает определённые категории транспорта, поэтому утверждение неверно.",
+        "zh": "交通限制区与车辆数量无关，它限制的是特定交通类别，因此该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-zona-traffico-limitato-8": {
+      "verdict": "FALSO",
+      "key_it": "area vietata al transito dei pedoni durante le ore notturne",
+      "chapter": "ch1",
+      "why": {
+        "en": "A limited traffic zone restricts vehicles, not pedestrians; it is not a nighttime pedestrian-forbidden area.",
+        "ru": "Зона с ограниченным движением ограничивает автомобили, а не пешеходов; это не ночная зона, запрещённая для пешеходов.",
+        "zh": "交通限制区限制的是机动车，而非行人；它不是夜间禁止行人通行的区域。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
     }
   }
 }
