@@ -2990,6 +2990,266 @@
       "source": "ai-draft",
       "model": "agent",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passaggio-livello-0": {
+      "verdict": "VERO",
+      "key_it": "si possono trovare le barriere",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing can have full barriers that lower to block the road when a train approaches, so the statement is correct.",
+        "ru": "На железнодорожном переезде могут быть полные барьеры, опускающиеся, чтобы перекрыть дорогу при приближении поезда, поэтому утверждение верно.",
+        "zh": "铁路道口可能设有在列车接近时放下的全封闭栏杆以阻断道路，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passaggio-livello-1": {
+      "verdict": "VERO",
+      "key_it": "si possono trovare le semibarriere",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing can have half-barriers that block only one lane, so the statement is correct.",
+        "ru": "На переезде могут быть полу-барьеры, перекрывающие лишь одну полосу, поэтому утверждение верно.",
+        "zh": "铁路道口可能设有只封闭一条车道的半栏杆，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passaggio-livello-2": {
+      "verdict": "VERO",
+      "key_it": "si possono trovare le luci rosse",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing can have red lights that flash when a train is approaching, so the statement is correct.",
+        "ru": "На переезде могут быть красные огни, зажигающиеся при приближении поезда, поэтому утверждение верно.",
+        "zh": "铁路道口可能设有在列车接近时闪烁的红灯，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passaggio-livello-3": {
+      "verdict": "VERO",
+      "key_it": "pannelli distanziometrici",
+      "chapter": "ch1",
+      "why": {
+        "en": "Distance-measuring panels are placed near a level crossing to warn of the approaching crossing, so the statement is correct.",
+        "ru": "Вблизи переезда размещаются дистанционные знаки, предупреждающие о приближении к переезду, поэтому утверждение верно.",
+        "zh": "道口附近设有测距标志牌，用以提醒前方接近道口，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passaggio-livello-6": {
+      "verdict": "FALSO",
+      "key_it": "è un cavalcavia ferroviario o tranviario",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing is at ground level, not a railway overpass; the two are different structures.",
+        "ru": "Переезд находится на уровне земли, а не надземный железнодорожный мост; это разные конструкции.",
+        "zh": "平交道口位于地面高度，而非铁路高架桥；两者是不同的结构。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passaggio-livello-7": {
+      "verdict": "FALSO",
+      "key_it": "luci gialle lampeggianti",
+      "chapter": "ch1",
+      "why": {
+        "en": "At a level crossing the warning lights are red, not yellow; yellow flashing lights are used in other contexts, so the statement is wrong.",
+        "ru": "На переезде предупреждающие огни красные, а не жёлтые; жёлтые мигающие огни используются в других ситуациях, поэтому утверждение неверно.",
+        "zh": "道口处的警示灯为红色，而非黄色；黄色闪烁灯用于其他情形，因此该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passaggio-livello-8": {
+      "verdict": "FALSO",
+      "key_it": "attraversamento autostradale",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing is where a road meets a railway at ground level, not a highway overpass crossing; the statement is wrong.",
+        "ru": "Переезд — это место, где дорога пересекает железную дорогу на уровне земли, а не мост-пересечение над автомагистралью; утверждение неверно.",
+        "zh": "平交道口是道路在地面与铁路交汇之处，而非高速公路立交；该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passaggio-livello-9": {
+      "verdict": "FALSO",
+      "key_it": "corsie di accelerazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "Acceleration lanes are a highway feature for merging, not something found at a level crossing; the statement is wrong.",
+        "ru": "Разгонные полосы — элемент автомагистрали для слияния, а не то, что встречается на переезде; утверждение неверно.",
+        "zh": "加速车道是高速公路用于汇入的设施，而非道口所见；该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passaggio-livello-10": {
+      "verdict": "FALSO",
+      "key_it": "è un passo carrabile",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing is a railway crossing point, not a private driveway or car crossing; the statement is wrong.",
+        "ru": "Переезд — это пункт пересечения с железной дорогой, а не частный проезд или въезд; утверждение неверно.",
+        "zh": "平交道口是与铁路的交汇点，而非私人车道或汽车入口；该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passaggio-livello-11": {
+      "verdict": "FALSO",
+      "key_it": "presenza di un sottopassaggio",
+      "chapter": "ch1",
+      "why": {
+        "en": "A level crossing is at ground level, not defined by an underpass; the two are different, so the statement is wrong.",
+        "ru": "Переезд находится на уровне земли и не определяется подземным переходом; это разные объекты, поэтому утверждение неверно.",
+        "zh": "平交道口位于地面，其定义不包含地下通道；两者不同，因此该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-aree-pedonali-0": {
+      "verdict": "VERO",
+      "key_it": "veicoli ad emissione zero (elettrici)",
+      "chapter": "ch1",
+      "why": {
+        "en": "Zero-emission (electric) vehicles may enter a pedestrian area when expressly allowed, so the statement is correct.",
+        "ru": "Нулевого выброса (электрические) транспортные средства могут въезжать в пешеходную зону, если это прямо разрешено, поэтому утверждение верно.",
+        "zh": "零排放（电动）车辆在被明确允许时可以驶入步行区，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-aree-pedonali-1": {
+      "verdict": "VERO",
+      "key_it": "possono transitare i pedoni",
+      "chapter": "ch1",
+      "why": {
+        "en": "Pedestrians are of course allowed to move through a pedestrian area, so the statement is correct.",
+        "ru": "Пешеходам, конечно, разрешено передвигаться по пешеходной зоне, поэтому утверждение верно.",
+        "zh": "行人当然可以在步行区内通行，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-aree-pedonali-2": {
+      "verdict": "VERO",
+      "key_it": "possono transitare le biciclette",
+      "chapter": "ch1",
+      "why": {
+        "en": "Bicycles may move through a pedestrian area, so the statement is correct.",
+        "ru": "Велосипедам разрешено передвигаться по пешеходной зоне, поэтому утверждение верно.",
+        "zh": "自行车可以在步行区内通行，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-aree-pedonali-3": {
+      "verdict": "VERO",
+      "key_it": "persone diversamente abili",
+      "chapter": "ch1",
+      "why": {
+        "en": "Vehicles serving people with disabilities may enter a pedestrian area, so the statement is correct.",
+        "ru": "Транспортные средства, обслуживающие людей с ограниченными возможностями, могут въезжать в пешеходную зону, поэтому утверждение верно.",
+        "zh": "为残障人士服务的车辆可以驶入步行区，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-aree-pedonali-4": {
+      "verdict": "VERO",
+      "key_it": "veicoli della polizia",
+      "chapter": "ch1",
+      "why": {
+        "en": "Police vehicles with the siren and blue light on may enter a pedestrian area, so the statement is correct.",
+        "ru": "Полицейские автомобили с включённой сиреной и синей световой сигнализацией могут въезжать в пешеходную зону, поэтому утверждение верно.",
+        "zh": "开启警笛和蓝色警灯的警车可以驶入步行区，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-aree-pedonali-5": {
+      "verdict": "VERO",
+      "key_it": "vigili del fuoco",
+      "chapter": "ch1",
+      "why": {
+        "en": "Fire-brigade vehicles with the blue light and siren on may enter a pedestrian area, so the statement is correct.",
+        "ru": "Пожарные автомобили с включённой синей световой сигнализацией и сиреной могут въезжать в пешеходную зону, поэтому утверждение верно.",
+        "zh": "开启蓝色警灯和警笛的消防车可以驶入步行区，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-aree-pedonali-7": {
+      "verdict": "FALSO",
+      "key_it": "trattori stradali",
+      "chapter": "ch1",
+      "why": {
+        "en": "Road tractors are not allowed in a pedestrian area regardless of speed; the statement is wrong.",
+        "ru": "Дорожные тракторы в пешеходной зоне не разрешены вне зависимости от скорости; утверждение неверно.",
+        "zh": "无论速度如何，公路拖拉机在步行区内均不被允许；该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strada-definizione-4": {
+      "verdict": "VERO",
+      "key_it": "aperta alla circolazione dei pedoni, degli animali e dei veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "The road is open to pedestrians, animals and vehicles, so the statement is correct.",
+        "ru": "Дорога открыта для пешеходов, животных и транспортных средств, поэтому утверждение верно.",
+        "zh": "道路对行人、动物和车辆开放，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strada-definizione-5": {
+      "verdict": "FALSO",
+      "key_it": "non comprende le banchine",
+      "chapter": "ch1",
+      "why": {
+        "en": "The road does include the shoulders; saying it does not is wrong.",
+        "ru": "Дорога включает обочины; утверждение об их исключении неверно.",
+        "zh": "道路是包括路肩在内的；声称其不包括路肩的说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strada-definizione-6": {
+      "verdict": "FALSO",
+      "key_it": "riservata alla circolazione dei soli autoveicoli e motocicli",
+      "chapter": "ch1",
+      "why": {
+        "en": "The road is open to all traffic, not reserved only for cars and motorcycles; the statement is wrong.",
+        "ru": "Дорога открыта для всех видов движения, а не только для автомобилей и мотоциклов; утверждение неверно.",
+        "zh": "道路对所有交通开放，而非仅限汽车和摩托车；该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
     }
   }
 }
