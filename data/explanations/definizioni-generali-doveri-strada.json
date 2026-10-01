@@ -2470,6 +2470,266 @@
       "source": "ai-draft",
       "model": "agent",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-12": {
+      "verdict": "FALSO",
+      "key_it": "una sola corsia per ogni senso di marcia",
+      "chapter": "ch1",
+      "why": {
+        "en": "These roads have multiple lanes in each direction, not just one, so the statement is false.",
+        "ru": "На таких дорогах несколько полос в каждом направлении, а не одна, поэтому утверждение неверно.",
+        "zh": "这类道路每个方向有多条车道，而非只有一条，因此该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-13": {
+      "verdict": "FALSO",
+      "key_it": "i ciclomotori possono transitare",
+      "chapter": "ch1",
+      "why": {
+        "en": "Mopeds are not allowed on main extra-urban roads because their maximum construction speed is too low for these roads.",
+        "ru": "Мопеды не допускаются на главных загородных дорогах, поскольку их максимальная конструктивная скорость слишком мала для этих дорог.",
+        "zh": "轻便摩托车不允许在主要城郊公路上行驶，因为其最高设计速度过低。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-14": {
+      "verdict": "FALSO",
+      "key_it": "non vi sono curve n",
+      "chapter": "ch1",
+      "why": {
+        "en": "Main extra-urban roads do have curves and speed bumps, so the statement that they have neither is wrong.",
+        "ru": "На главных загородных дорогах есть повороты и лежачие полицейские, поэтому утверждение об их отсутствии неверно.",
+        "zh": "主要城郊公路上确实有弯道和减速带，因此声称它们没有的说法是错误的。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strade-extraurbane-principali-15": {
+      "verdict": "FALSO",
+      "key_it": "pannelli a messaggio variabile",
+      "chapter": "ch1",
+      "why": {
+        "en": "Variable message signs are not a mandatory feature of these roads; they are optional and not always installed.",
+        "ru": "Переменные дорожные знаки не являются обязательным элементом таких дорог; они опциональны и не всегда установлены.",
+        "zh": "可变信息标志并非这类道路的必备要素，它们是可选的，并不总是安装。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-0": {
+      "verdict": "VERO",
+      "key_it": "facilitare l",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island helps to channel vehicles in different directions, so this statement is correct.",
+        "ru": "Трамвайная островная платформа помогает направить транспортные потоки в разные направления, поэтому утверждение верно.",
+        "zh": "交通岛有助于将车辆引向不同方向，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-3": {
+      "verdict": "VERO",
+      "key_it": "zebrature di colore bianco",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is marked with white diagonal stripes (zebrature), so the statement is correct.",
+        "ru": "Трафик-остров обозначается белыми диагональными полосами, поэтому утверждение верно.",
+        "zh": "交通岛以白色斜纹标线标识，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-4": {
+      "verdict": "VERO",
+      "key_it": "vietato il transito dei motocicli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Driving over a traffic island is forbidden, including for motorcycles, so the statement is correct.",
+        "ru": "Движение по трафик-острову запрещено, в том числе для мотоциклов, поэтому утверждение верно.",
+        "zh": "禁止车辆驶过交通岛，包括摩托车，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-5": {
+      "verdict": "VERO",
+      "key_it": "a raso è costituita da zebrature",
+      "chapter": "ch1",
+      "why": {
+        "en": "A flush-level traffic island is made of white diagonal stripes, so the statement is correct.",
+        "ru": "Выравнивающий трафик-остров состоит из белых диагональных полос, поэтому утверждение верно.",
+        "zh": "齐平式交通岛由白色斜纹标线构成，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-6": {
+      "verdict": "VERO",
+      "key_it": "rialzata, è preceduta da zebrature",
+      "chapter": "ch1",
+      "why": {
+        "en": "A raised traffic island is preceded by white diagonal stripes marking its approach, so the statement is correct.",
+        "ru": "Повышенный трафик-остров предваряется белыми диагональными полосами, отмечающими подъезд, поэтому утверждение верно.",
+        "zh": "抬升式交通岛前设有白色斜纹标线标示入口，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-7": {
+      "verdict": "VERO",
+      "key_it": "vietato il transito dei veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is a part of the road where vehicle transit is forbidden, so the statement is correct.",
+        "ru": "Трафик-остров — часть дороги, где движение транспортных средств запрещено, поэтому утверждение верно.",
+        "zh": "交通岛是道路的一部分，禁止车辆通行，因此该说法正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-8": {
+      "verdict": "FALSO",
+      "key_it": "separare la carreggiata dalla banchina",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island separates traffic flows, not the carriageway from the shoulder; that is the function of the road edge.",
+        "ru": "Трафик-остров разделяет транспортные потоки, а не проезжую часть от обочины; это функция края дороги.",
+        "zh": "交通岛用于分隔交通流，而非将车道与路肩分开；那是道路边缘的功能。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-9": {
+      "verdict": "FALSO",
+      "key_it": "per il transito dei pedoni",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is for vehicles to stop on, not for pedestrians to walk on; the statement confuses the purpose.",
+        "ru": "Трафик-остров предназначен для остановки транспортных средств, а не для пешеходного перехода; утверждение путает назначение.",
+        "zh": "交通岛是供车辆停靠的，而非供行人通行的；该说法混淆了其用途。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-10": {
+      "verdict": "FALSO",
+      "key_it": "piazzola di sosta per i veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is not a parking bay; vehicles may not stop on it, so the statement is wrong.",
+        "ru": "Трафик-остров не является парковочной площадкой; на нём запрещено останавливаться, поэтому утверждение неверно.",
+        "zh": "交通岛不是停车区；车辆不得在上面停靠，因此该说法不正确。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-12": {
+      "verdict": "FALSO",
+      "key_it": "parte della città con maggiore traffico",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is a road element, not a zone of the city with the highest traffic density.",
+        "ru": "Трафик-остров — элемент дороги, а не зона города с наибольшей плотностью трафика.",
+        "zh": "交通岛是道路设施，而非城市中交通密度最高的区域。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-13": {
+      "verdict": "FALSO",
+      "key_it": "centro storico della città",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is a small road marking, not the historic center of a city.",
+        "ru": "Трафик-остров — дорожная разметка, а не исторический центр города.",
+        "zh": "交通岛是道路标线，而非城市的历史中心。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-14": {
+      "verdict": "FALSO",
+      "key_it": "effettuare l",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is not a U-turn bay; it is a marked area for separating traffic flows.",
+        "ru": "Трафик-остров не является площадкой для разворота; это размеченная зона для разделения потоков.",
+        "zh": "交通岛不是掉头区；它是用于分隔车流的标线区域。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-15": {
+      "verdict": "FALSO",
+      "key_it": "al di fuori della strada",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is on the road, not outside it; the statement is false.",
+        "ru": "Трафик-остров находится на дороге, а не за её пределами; утверждение ложно.",
+        "zh": "交通岛位于道路上，而非道路之外；该说法是错误的。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-16": {
+      "verdict": "FALSO",
+      "key_it": "fermata dei veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is not for stopping vehicles; it separates traffic flows and is off-limits for vehicles.",
+        "ru": "Трафик-остров не предназначен для остановки; он разделяет потоки и недоступен для транспортных средств.",
+        "zh": "交通岛不是供车辆停靠的；它用于分隔车流，车辆不得驶入。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-17": {
+      "verdict": "FALSO",
+      "key_it": "salita e la discesa di passeggeri",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is not a bus or tram stop; it does not serve for boarding or alighting passengers.",
+        "ru": "Трафик-остров не является остановкой троллейбуса или автобуса; он не предназначен для посадки и высадки пассажиров.",
+        "zh": "交通岛不是有轨电车或公交车站；它不用于乘客上下车。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-isola-traffico-18": {
+      "verdict": "FALSO",
+      "key_it": "parcheggio dei veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "A traffic island is not a parking zone; parking on it is forbidden.",
+        "ru": "Трафик-остров не является парковочной зоной; парковка на нём запрещена.",
+        "zh": "交通岛不是停车区；在上面停车是被禁止的。"
+      },
+      "source": "ai-draft",
+      "model": "agent",
+      "at": "2026-10-01"
     }
   }
 }
