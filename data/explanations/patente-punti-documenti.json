@@ -1300,6 +1300,71 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "patente-punti-documenti-Validita-delle-patenti-guida-14": {
+      "verdict": "FALSO",
+      "key_it": "La patente di guida di categoria B",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: a category B licence issued to someone between fifty and seventy is valid for five years, not eight — the eight-year figure here is the trap.",
+        "ru": "Ложно: удостоверение категории B, выданное лицу от пятидесяти до семидесяти лет, действует пять лет, а не восемь — «восемь» здесь и есть подвох.",
+        "zh": "错误：五十至七十岁人员所持B类驾照有效期为五年，而非八年——此处「八年」正是干扰项。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "patente-punti-documenti-Validita-delle-patenti-guida-15": {
+      "verdict": "FALSO",
+      "key_it": "La patente di guida di categoria BE",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: a category BE licence issued to someone under fifty is valid for ten years, not five — the five-year figure here is the trap.",
+        "ru": "Ложно: удостоверение категории BE, выданное лицу до пятидесяти лет, действует десять лет, а не пять — «пять» здесь и есть подвох.",
+        "zh": "错误：五十岁以下人员所持BE类驾照有效期为十年，而非五年——此处「五年」正是干扰项。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "patente-punti-documenti-Validita-delle-patenti-guida-17": {
+      "verdict": "FALSO",
+      "key_it": "La patente di guida di categoria B",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: a category B licence issued to someone under fifty is valid for ten years, not five — the five-year figure here is the trap.",
+        "ru": "Ложно: удостоверение категории B, выданное лицу до пятидесяти лет, действует десять лет, а не пять — «пять» здесь и есть подвох.",
+        "zh": "错误：五十岁以下人员所持B类驾照有效期为十年，而非五年——此处「五年」正是干扰项。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "patente-punti-documenti-Validita-delle-patenti-guida-18": {
+      "verdict": "FALSO",
+      "key_it": "La patente di guida di categoria B",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: a category B licence is never valid for ten years in every case of issue or confirmation — the term depends on the holder's age band: fifty to seventy, seventy to eighty, or over eighty.",
+        "ru": "Ложно: удостоверение категории B никогда не действует «десять лет при любом выдаче или подтверждении» — срок зависит от возрастной группы: от пятидесяти до семидесяти, от семидесяти до восьмидесяти, старше восьмидесяти.",
+        "zh": "错误：B类驾照绝非「无论签发或确认一律有效十年」——有效期取决于持有者年龄段：五十至七十、七十至八十、八十岁以上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "patente-punti-documenti-Validita-delle-patenti-guida-19": {
+      "verdict": "FALSO",
+      "key_it": "non ha scadenza di validità fino al compimento dei 50 anni",
+      "chapter": "ch16",
+      "why": {
+        "en": "False: a category B licence does have a fixed expiry — the no-expiry \"until fifty\" statement is wrong; under fifty it is valid for ten years, so it is re-confirmed, not open-ended.",
+        "ru": "Ложно: удостоверение категории B имеет фиксированный срок годности — утверждение «без срока до пятидесяти лет» неверно: до пятидесяти оно действует десять лет, т.е. подтверждается, а не бессрочно.",
+        "zh": "错误：B类驾照有固定有效期——「直到五十岁前不过期」的说法不成立；五十岁以下有效期十年，须到期续换而非无期限。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
