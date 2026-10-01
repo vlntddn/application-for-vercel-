@@ -1,3 +1,36 @@
+## 2026-10-01 — Q2 закрыта: 404-шторм устранён (index.json оверлеев)
+
+Ветка self-improve, коммит 7a18a4c.
+
+**Что.** При каждой загрузке клиент запрашивал `/data/translations/<slug>.json` для
+всех 25 тем, хотя файлов только 3 (→ 22 404 на старт; аналогично explanations:
+запрашивало 25, есть 17 → 8 404). Шум в консоли, лишний трафик, мусор в SW-кэше.
+
+**Решение (index-based overlay loading).**
+- `scripts/gen-data-index.mjs` — единый idempotent-генератор `index.json`
+  (отсортированный список `.json`-базимён в каталоге). Экспорты `writeOverlayIndex(dir)`
+  и `regenerateIndexes(root?)`.
+- `data/translations/index.json` (3 slugs) и `data/explanations/index.json` (17)
+  закоммичены, чтобы статика/демо работали без запуска сервера.
+- `server/index.js` — `regenerateIndexes()` до `server.listen`: при добавлении файла
+  оверлея в dev индекс актуализируется автоматически (не требует ручного `npm run data:index`).
+- `scripts/build-static.js` — `regenerateIndexes(OUT)` после копирования `data/` в dist.
+- `public/js/state.js` — `fetchOverlayIndex(dir)` + кэш `translationIndex`/`explanationIndex`;
+  `loadTranslations`/`loadExplanations` просят файл оверлея только если его slug есть в индексе.
+  Нет index.json (404/ошибка) → не просим ничего (fallback к базе).
+- `public/js/domain/translations.js` — `loadOverlays(slug, qs, shouldLoad?)`: gate, что
+  фильтрует по индексу; без gate — поведение как раньше (назад-совместимо).
+- SW `v77`.
+
+**Как проверено.**
+- `node --test` — 190 PASS (новые 6 в `tests/data-index.test.js`: сортировка/только .json,
+  idempotency, новый файл появляется при повторной генерации; + поправка мока в
+  `tests/translations.test.js` — добавлен роут `/data/translations/index.json`).
+- `scripts/verify.sh` → VERIFY OK.
+- `qa-new-user.mjs`: добавлен CDP `Network.responseReceived` → коллектор 404 за весь прогон
+  (включая full reload). Новая проверка «за весь прогон ни одного 404» — PASS, суммарно 73 PASS / 0 FAIL.
+- `node scripts/build-static.js` — в `dist/data/*` появляются правильные index.json.
+
 ## 2026-10-01 — Q1 закрыта полностью: E2E на (d) AI-draft и (f) signal-hints callout
 
 Ветка self-improve, коммит 32514f2 (test: E2E — AI-draft после 2-й ошибки + signal-hints callout (Q1 (d)/(f))).
