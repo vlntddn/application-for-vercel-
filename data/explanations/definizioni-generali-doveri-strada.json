@@ -6110,6 +6110,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-persone-anziane-6": {
+      "verdict": "VERO",
+      "key_it": "valutare male la velocità dei veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Older pedestrians may misjudge the speed of oncoming vehicles, which makes the crossing more dangerous; the driver must slow down and be ready to stop.",
+        "ru": "Пожилые пешеходы могут неверно оценить скорость приближающихся машин, из-за чего переход опаснее; водитель должен сбавить скорость и быть готовым остановиться.",
+        "zh": "老年行人可能误判来车速度，使过马路更加危险；驾驶员应减速并随时准备停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-persone-anziane-7": {
+      "verdict": "FALSO",
+      "key_it": "hanno i riflessi più rapidi",
+      "chapter": "ch1",
+      "why": {
+        "en": "The statement is false: older people have slower, not faster, reflexes, so they cross with less care; the driver must not rely on their quick reaction.",
+        "ru": "Утверждение ложно: у пожилых людей реакции медленнее, а не быстрее, поэтому они переходят менее внимательно; водитель не должен полагаться на их быструю реакцию.",
+        "zh": "该说法错误：老年人反应更慢而非更快，因此过马路时不够谨慎；驾驶员不应指望他们反应迅速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-persone-anziane-8": {
+      "verdict": "FALSO",
+      "key_it": "attraversano rapidamente e con prudenza",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: older pedestrians usually cross slowly rather than quickly and carefully, taking longer to reach the other side, so the driver must give them extra time and space.",
+        "ru": "Ложно: пожилые пешеходы обычно переходят медленно, а не быстро и аккуратно, дольше находясь на проезжей части, поэтому водитель должен дать им больше времени и дистанции.",
+        "zh": "错误：老年行人通常过马路缓慢，而非快速谨慎，会在车道上停留更久，因此驾驶员应给他们更多时间和空间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-persone-anziane-9": {
+      "verdict": "FALSO",
+      "key_it": "campo visivo maggiore",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: older people have a narrower, not wider, field of view and less sharp senses, so they may not notice a vehicle; the driver must slow down near them.",
+        "ru": "Ложно: у пожилых людей поле зрения уже, а не шире, и ощущения слабее, поэтому они могут не заметить автомобиль; водитель должен сбавить скорость рядом с ними.",
+        "zh": "错误：老年人视野更窄而非更宽，感官更弱，可能没注意到车辆；驾驶员在靠近他们时应减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-persone-anziane-10": {
+      "verdict": "FALSO",
+      "key_it": "bisogna lampeggiare e suonare il clacson",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: honking and flashing to rush older pedestrians is dangerous and wrong; the driver must stay calm, slow down and let them cross at their own pace.",
+        "ru": "Ложно: сигналить и мигать, чтобы торопить пожилых пешеходов, опасно и неправильно; водитель должен спокойно сбавить скорость и дать им перейти в своём темпе.",
+        "zh": "错误：鸣笛和闪灯催促老年行人过马路既危险又不正确；驾驶员应保持冷静、减速，让他们按自己的节奏通过。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-conducente-precedenze-11": {
+      "verdict": "FALSO",
+      "key_it": "suonare il clacson per sollecitarlo ad attraversare rapidamente",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: a pedestrian with a white cane is visually impaired and may cross outside the markings; honking to hurry them is wrong and dangerous — the driver must yield calmly.",
+        "ru": "Ложно: пешеход с белой тростью имеет нарушение зрения и может переходить вне разметки; сигналить, чтобы торопить его, — неправильно и опасно, водитель должен спокойно уступить.",
+        "zh": "错误：持白色盲杖的行人视力受损，可能在划线外过马路；鸣笛催促他既错误又危险，驾驶员应冷静让行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-vicinanza-pedonale-8": {
+      "verdict": "FALSO",
+      "key_it": "i pedoni devono fare un cenno con la mano",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: pedestrians are not required to signal with their hand before crossing; the law gives them priority at the crossing, so the driver must slow down and be ready to yield.",
+        "ru": "Ложно: пешеходы не обязаны сигнализировать рукой перед переходом; на переходе закон даёт им приоритет, поэтому водитель должен сбавить скорость и быть готовым уступить.",
+        "zh": "错误：行人在过马路前没有义务用手示意；在人行横道上行人的有优先权，因此驾驶员应减速并随时准备让行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-bambini-semaforo-0": {
+      "verdict": "VERO",
+      "key_it": "potrebbero attraversare improvvisamente la strada",
+      "chapter": "ch1",
+      "why": {
+        "en": "The statement is correct: children waiting at the signal can cross the road suddenly just as the vehicle light goes from green to yellow, so the driver must use caution and be ready to brake.",
+        "ru": "Утверждение верно: дети, стоящие у светофора, могут внезапно перейти дорогу, едва световой сигнал для машин перейдёт с зелёного на жёлтый, поэтому водитель должен быть внимателен и готов тормозить.",
+        "zh": "该说法正确：在信号灯前等候的孩子可能在车辆信号灯由绿变黄的瞬间突然横穿马路，因此驾驶员须谨慎并随时准备刹车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-bambini-semaforo-3": {
+      "verdict": "VERO",
+      "key_it": "potrebbero scendere dal marciapiede, invadendo la carreggiata",
+      "chapter": "ch1",
+      "why": {
+        "en": "The statement is correct: children may step down from the sidewalk and invade the road while, for them, the signal is still at red, so the driver must use caution and be ready to brake.",
+        "ru": "Утверждение верно: дети могут сойти с тротуара и выскочить на проезжую часть, пока для них светофор ещё показывает красный, поэтому водитель должен быть внимателен и готов тормозить.",
+        "zh": "该说法正确：孩子可能在他们的信号灯仍显示红灯时就从人行道步入车道，因此驾驶员须谨慎并随时准备刹车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-piazzole-0": {
+      "verdict": "VERO",
+      "key_it": "nascosti dall'autobus",
+      "chapter": "ch1",
+      "why": {
+        "en": "Children getting off a school bus may already be crossing the road out of sight behind the vehicle, so the driver must slow down and be ready to stop near a school-bus stop.",
+        "ru": "Дети, выходящие из школьного автобуса, уже могут быть на проезжей части, скрытые за машиной, поэтому водитель должен сбавить скорость и быть готовым остановиться у остановки школьного автобуса.",
+        "zh": "下校车的孩子可能已藏在车辆后方的视线盲区开始过马路，因此驾驶员应在校车停靠处减速并随时准备停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-piazzole-1": {
+      "verdict": "VERO",
+      "key_it": "attraversare di corsa la strada per salire sullo scuolabus",
+      "chapter": "ch1",
+      "why": {
+        "en": "Near a school-bus stop children may run across the road to get on the bus, so the driver must slow down and be ready to stop for them.",
+        "ru": "У остановки школьного автобуса дети могут перебегать дорогу, чтобы успеть на автобус, поэтому водитель должен сбавить скорость и быть готовым остановиться.",
+        "zh": "在校车停靠处，孩子可能为了赶校车而横穿马路，因此驾驶员应减速并随时准备停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-piazzole-2": {
+      "verdict": "VERO",
+      "key_it": "prepararsi a frenare, nel caso in cui dei bambini attraversino improvvisamente la strada",
+      "chapter": "ch1",
+      "why": {
+        "en": "At a school-bus stop the driver must be ready to brake because children can cross the road suddenly and unpredictably.",
+        "ru": "У остановки школьного автобуса водитель должен быть готов тормозить, потому что дети могут внезапно и непредсказуемо перейти дорогу.",
+        "zh": "在校车停靠处，驾驶员应随时准备刹车，因为孩子可能突然且难以预料地横穿马路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-piazzole-3": {
+      "verdict": "VERO",
+      "key_it": "comportamenti imprevedibili dei bambini",
+      "chapter": "ch1",
+      "why": {
+        "en": "Near a school-bus stop the driver must be prudent, since children's behavior is unpredictable and they may do something unexpected at any moment.",
+        "ru": "У остановки школьного автобуса водитель должен быть осмотрителен, так как поведение детей непредсказуемо и они в любой момент могут поступить неожиданно.",
+        "zh": "在校车停靠处，驾驶员须谨慎，因为孩子的行为难以预料，随时可能做出意想不到的举动。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-piazzole-5": {
+      "verdict": "VERO",
+      "key_it": "bisogna rallentare particolarmente se vi è lo scuolabus",
+      "chapter": "ch1",
+      "why": {
+        "en": "If a school bus is stopped at its bay the driver must slow down especially, because children may be getting off and moving near the road.",
+        "ru": "Если школьный автобус стоит на остановке, водитель должен особенно сбавить скорость, поскольку дети могут выходить и находиться рядом с дорогой.",
+        "zh": "如果有校车停在站点，驾驶员应特别减速，因为孩子可能正在下车并靠近道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-piazzole-8": {
+      "verdict": "FALSO",
+      "key_it": "suonare per invitare i bambini che attraversano sulle strisce a dare la precedenza",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: at the crossing children have priority, so honking to make them give way is wrong; the driver must slow down and yield to them.",
+        "ru": "Ложно: на переходе у детей приоритет, поэтому сигналить, чтобы они уступили, — неправильно; водитель должен сбавить скорость и уступить им дорогу.",
+        "zh": "错误：在人行横道上孩子有优先权，因此鸣笛让他们让行是错误的；驾驶员应减速并让他们先行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-piazzole-10": {
+      "verdict": "FALSO",
+      "key_it": "dopo la fermata farà sicuramente retromarcia",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: a school bus does not necessarily reverse after stopping; the real risk is children moving near it, so the driver must slow down for the crossing, not expect a reverse maneuver.",
+        "ru": "Ложно: школьный автобус после остановки не обязательно будет сдавать назад; реальная опасность — дети рядом с ним, поэтому водитель должен сбавить скорость из-за перехода, а не ждать реверса.",
+        "zh": "错误：校车停靠后不一定会倒车；真正的危险是附近移动的孩子，因此驾驶员应因过马路而减速，而非预期倒车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-piazzole-12": {
+      "verdict": "FALSO",
+      "key_it": "non è necessario rallentare se lo scuolabus è fermo",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: even if the school bus is stopped, the driver must slow down, because children may be getting off or crossing near it.",
+        "ru": "Ложно: даже если школьный автобус стоит, водитель должен сбавить скорость, потому что дети могут выходить или переходить рядом с ним.",
+        "zh": "错误：即使校车停着，驾驶员也必须减速，因为孩子可能正在下车或在附近过马路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclisti-pedoni-0": {
+      "verdict": "VERO",
+      "key_it": "per sorpassarli è prudente mantenere un'adeguata distanza di sicurezza laterale",
+      "chapter": "ch1",
+      "why": {
+        "en": "When overtaking cyclists or pedestrians on the road, it is prudent to keep an adequate lateral safety distance so as not to endanger them.",
+        "ru": "При обгоне велосипедистов или пешеходов на дороге разумно держать достаточный боковой интервал безопасности, чтобы не подвергать их опасности.",
+        "zh": "在道路上超越骑行者或行人时，保持足够的侧向安全距离是谨慎的做法，以免危及他们。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclisti-pedoni-2": {
+      "verdict": "VERO",
+      "key_it": "è consigliabile suonare il clacson prima di sorpassarli",
+      "chapter": "ch1",
+      "why": {
+        "en": "On a non-urban road, a short horn signal before overtaking cyclists or pedestrians is recommended, to make sure they are aware of the approaching vehicle.",
+        "ru": "На внегородской дороге перед обгоном велосипедистов или пешеходов рекомендуется подать короткий звуковой сигнал, чтобы убедиться, что они заметили приближающийся автомобиль.",
+        "zh": "在非城市道路上，超越骑行者或行人前建议鸣笛示意，以确认他们注意到接近的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclisti-pedoni-6": {
+      "verdict": "FALSO",
+      "key_it": "E' vietato sorpassare ciclisti o pedoni che occupano la carreggiata",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: overtaking cyclists or pedestrians on the road is not forbidden; it is allowed, but only keeping an adequate lateral safety distance and being careful.",
+        "ru": "Ложно: обгон велосипедистов или пешеходов на дороге не запрещён; он разрешён, но только с достаточным боковым интервалом безопасности и осторожностью.",
+        "zh": "错误：道路上超越骑行者或行人并不被禁止；允许超越，但须保持足够的侧向安全距离并小心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
