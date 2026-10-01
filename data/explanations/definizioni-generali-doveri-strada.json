@@ -4550,6 +4550,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-5": {
+      "verdict": "VERO",
+      "key_it": "Le macchine operatrici possono essere semoventi o trainate",
+      "chapter": "ch1",
+      "why": {
+        "en": "Operator-type machines may be self-propelled or towed; both forms exist.",
+        "ru": "Сельхозмашины-операторы могут быть самоходные или прицепные; существуют обе формы.",
+        "zh": "作业类农业机械可以是自走式或牵引式；两种形式都存在。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-6": {
+      "verdict": "VERO",
+      "key_it": "possono essere veicoli sgombraneve",
+      "chapter": "ch1",
+      "why": {
+        "en": "Operator-type machines may also be snowplough vehicles.",
+        "ru": "Сельхозмашины-операторы могут быть и снегоочистительными транспортными средствами.",
+        "zh": "作业类农业机械也可以是除雪车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-7": {
+      "verdict": "FALSO",
+      "key_it": "velocità superiore a 50 km/h",
+      "chapter": "ch1",
+      "why": {
+        "en": "Operator-type machines may not drive faster than the limit; a speed above 50 km/h is not allowed.",
+        "ru": "Сельхозмашины-операторы не могут ехать быстрее установленного предела; скорость выше 50 км/ч не допускается.",
+        "zh": "作业类农业机械不得超过规定速度；超过 50 公里/小时不被允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-8": {
+      "verdict": "FALSO",
+      "key_it": "a cingoli possono circolare ad una velocità superiore a 45 km/h",
+      "chapter": "ch1",
+      "why": {
+        "en": "Tracked operator-type machines may not drive above 45 km/h.",
+        "ru": "Гусеничные сельхозмашины-операторы не могут ехать быстрее 45 км/ч.",
+        "zh": "履带式作业类农业机械不得以超过 45 公里/小时的速度行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-9": {
+      "verdict": "FALSO",
+      "key_it": "possono trasportare fino a quattro passeggeri",
+      "chapter": "ch1",
+      "why": {
+        "en": "Self-propelled operator-type machines are not for carrying passengers like this; that is not their purpose.",
+        "ru": "Самоходные сельхозмашины-операторы не предназначены для перевозки пассажиров подобным образом; это не их назначение.",
+        "zh": "自走式作业类农业机械并非以此方式载客；这不是它的用途。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-10": {
+      "verdict": "FALSO",
+      "key_it": "titolari della patente di guida della categoria A",
+      "chapter": "ch1",
+      "why": {
+        "en": "Driving operator-type machines does not require holding a category A motorcycle licence specifically.",
+        "ru": "Для управления сельхозмашинами-операторами не требуется именно права категории A (мотоциклы).",
+        "zh": "驾驶作业类农业机械并不特别要求持 A 类（摩托车）驾驶证。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-11": {
+      "verdict": "FALSO",
+      "key_it": "possono trasportare fino a quattro passeggeri",
+      "chapter": "ch1",
+      "why": {
+        "en": "Agricultural machines are not meant to carry passengers this way; their load is cargo or equipment, not a set of seated passengers.",
+        "ru": "Сельскохозяйственные машины не рассчитаны на перевозку пассажиров подобным образом; их груз — продукция или оборудование, а не группа сидящих пассажиров.",
+        "zh": "农业机械并非以此方式载客；它们载运的是农产品或设备，而非一组就座的乘客。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-12": {
+      "verdict": "FALSO",
+      "key_it": "trasporto di persone in piedi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Carrying standing people on agricultural machines and their trailers is not permitted.",
+        "ru": "Перевозка стоящих людей на сельхозмашинах и их прицепах не допускается.",
+        "zh": "在农业机械及其拖车上运送站立的人是不被允许的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-13": {
+      "verdict": "FALSO",
+      "key_it": "si possono guidare tutte le macchine agricole",
+      "chapter": "ch1",
+      "why": {
+        "en": "A category A licence does not cover all agricultural machines; that scope is not what A grants.",
+        "ru": "Права категории A не покрывают все сельхозмашины; такой охват не входит в права категории A.",
+        "zh": "A 类驾驶证并不涵盖所有农业机械；这种范围不属于 A 类所授予的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-14": {
+      "verdict": "FALSO",
+      "key_it": "patente di categoria B si possono guidare le macchine operatrici eccezionali",
+      "chapter": "ch1",
+      "why": {
+        "en": "A category B licence does not let you drive exceptional operator-type machines; those need a different basis.",
+        "ru": "Права категории B не дают права вести исключительные сельхозмашины-операторы; для них нужно другое основание.",
+        "zh": "B 类驾驶证并不允许驾驶特殊作业类农业机械；那需要别的依据。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-caravan-0": {
+      "verdict": "VERO",
+      "key_it": "rimorchi attrezzati per essere adibiti ad alloggio",
+      "chapter": "ch1",
+      "why": {
+        "en": "A caravan (roulotte) is a trailer fitted out to be used as living quarters.",
+        "ru": "Караван (roulotte) — прицеп, оборудованный для использования в качестве жилого помещения.",
+        "zh": "房车挂车（caravan/roulotte）是装备成可用于居住用途的挂车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-caravan-2": {
+      "verdict": "VERO",
+      "key_it": "sono muniti di targa",
+      "chapter": "ch1",
+      "why": {
+        "en": "Caravans (roulottes) carry a number plate; they are registered road units.",
+        "ru": "Караваны (roulottes) имеют государственный номер; это зарегистрированные дорожные единицы.",
+        "zh": "房车挂车（caravan/roulotte）装有号牌；它们是已登记的道路单元。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-caravan-3": {
+      "verdict": "FALSO",
+      "key_it": "alloggiare nei caravan (roulottes) durante la circolazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "You may not live in a caravan (roulotte) while it is being driven; accommodation use is off-road, not in motion.",
+        "ru": "Нельзя жить в караване (roulotte) во время движения; использование как жилья — вне движения, а не в пути.",
+        "zh": "在房车挂车（caravan/roulotte）行驶途中不得在其中居住；居住用途是在静止状态，而非行驶中。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-caravan-4": {
+      "verdict": "FALSO",
+      "key_it": "rimorchi destinati ai lavori agricoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Caravans (roulottes) are for living quarters, not trailers built for agricultural work.",
+        "ru": "Караваны (roulottes) — для жилья, а не прицепы, предназначенные для сельскохозяйственных работ.",
+        "zh": "房车挂车（caravan/roulotte）用于居住，而非为农业作业建造的挂车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autocaravan-camper-3": {
+      "verdict": "VERO",
+      "key_it": "soggette a revisione periodica",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorhomes are subject to periodic technical inspection; they cannot skip it.",
+        "ru": "Автодома подлежат периодическому техосмотру; пропускать его нельзя.",
+        "zh": "房车须接受定期技术检验；不得免于检验。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autocaravan-camper-4": {
+      "verdict": "FALSO",
+      "key_it": "sono rimorchi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorhomes (campers) are not trailers; they are self-propelled vehicles with their own drive.",
+        "ru": "Автодома (camper) — не прицепы; это самоходные транспортные средства со своим приводом.",
+        "zh": "房车（autocaravan/camper）并非挂车；它们是自带驱动力的自走式机动车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-macchine-agricole-4": {
+      "verdict": "VERO",
+      "key_it": "dotate di speciali attrezzature per l'esecuzione di operazioni agricole",
+      "chapter": "ch1",
+      "why": {
+        "en": "Operator-type agricultural machines may be fitted with special equipment for carrying out agricultural work.",
+        "ru": "Сельхозмашины-операторы могут оснащаться специальными приспособлениями для выполнения сельскохозяйственных работ.",
+        "zh": "作业类农业机械可以配备专用装置，以执行农业作业。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autocaravan-camper-0": {
+      "verdict": "VERO",
+      "key_it": "speciale carrozzeria per essere adibiti al trasporto ed all'alloggio di persone",
+      "chapter": "ch1",
+      "why": {
+        "en": "A motorhome (camper) is a vehicle with a special body built for carrying and housing people.",
+        "ru": "Автодом (camper) — транспортное средство со специальной кабиной, построенной для перевозки и размещения людей.",
+        "zh": "房车（autocaravan/camper）是配有专门车身、用于载人并供人居住的机动车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autocaravan-camper-1": {
+      "verdict": "VERO",
+      "key_it": "all'alloggio al massimo del numero di persone indicato nella carta di circolazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "A motorhome (camper) is a special-bodied vehicle for carrying and housing people, up to the maximum number shown on the vehicle registration document.",
+        "ru": "Автодом (camper) — транспортное средство со специальной кабиной для перевозки и размещения людей, не более максимального числа, указанного в свидетельстве о регистрации.",
+        "zh": "房车（autocaravan/camper）是配有专门车身的机动车，用于载人并供人居住，人数不超过车辆登记文件所列的最大值。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autocaravan-camper-2": {
+      "verdict": "VERO",
+      "key_it": "attrezzati permanentemente per essere adibiti al trasporto ed all'alloggio di persone",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorhomes (campers) are vehicles permanently fitted for carrying and housing people.",
+        "ru": "Автодома (camper) — транспортные средства, постоянно оборудованные для перевозки и размещения людей.",
+        "zh": "房车（autocaravan/camper）是永久改装用于载人并供人居住的机动车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
