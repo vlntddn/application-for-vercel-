@@ -1,0 +1,265 @@
+{
+  "category": "responsabilita-civile-penale-e-assicurazione",
+  "items": {
+    "responsabilita-civile-penale-e-assicurazione-risarcimento-danni-1": {
+      "verdict": "VERO",
+      "key_it": "può accordarsi con il danneggiato circa il valore del risarcimento",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: the person civilly liable may agree with the injured party on the amount of the compensation; nothing forces the exact value.",
+        "ru": "Верно: лицо, граждански обязанное возместить ущерб, может договориться с пострадавшим о размере компенсации — конкретную сумму не навязывают.",
+        "zh": "正确：民事赔偿义务方可与受损方就赔偿金额自行协商，无需强制确定具体数额。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-risarcimento-danni-2": {
+      "verdict": "VERO",
+      "key_it": "può far riparare il proprio autoveicolo",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: the civilly liable party may have the vehicle repaired; the obligation is to compensate for the damage, not to follow a fixed procedure.",
+        "ru": "Верно: обязанное возместить ущерб лицо может сдать автомобиль в ремонт; обязанность — компенсировать ущерб, а не следовать фиксированной процедуре.",
+        "zh": "正确：赔偿义务方可自行将车辆送修；其义务是补偿损失，而非遵循固定程序。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-risarcimento-danni-3": {
+      "verdict": "VERO",
+      "key_it": "può farsi assistere da un consulente d'infortunistica stradale",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: the civilly liable party may hire a traffic-accident consultant to help assess and settle the damage.",
+        "ru": "Верно: обязанное возместить ущерб лицо может прибегнуть к помощи эксперта по дорожно-транспортным происшествиям для оценки и урегулирования ущерба.",
+        "zh": "正确：赔偿义务方可聘请交通事故评估专家协助评估与处理损失。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-risarcimento-danni-4": {
+      "verdict": "FALSO",
+      "key_it": "chiedere che la propria patente di guida sia revocata",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: a driver who caused damage cannot demand the revocation of their own licence in place of compensation; civil liability means covering the damage.",
+        "ru": "Ложно: причинивший ущерб водитель не может взамен компенсации потребовать аннуляции собственного водительского удостоверения; гражданская ответственность — это возмещение ущерба.",
+        "zh": "错误：造成损失的驾驶员不能以吊销自己的驾照来替代赔偿；民事责任意味着弥补损失。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-responsabile-sinistro-stradale-2": {
+      "verdict": "VERO",
+      "key_it": "è anche soggetto alle relative sanzioni",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: a person who violated the Highway Code while causing an accident is also subject to the penalties connected with those violations, on top of compensation.",
+        "ru": "Верно: нарушивший нормы ПДД и причинивший ДТП человек несёт и соответствующие санкции за эти нарушения, помимо возмещения.",
+        "zh": "正确：因违反道路法造成事故的人，除赔偿外还要承担这些违规相应的处罚。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-responsabile-sinistro-stradale-3": {
+      "verdict": "VERO",
+      "key_it": "può incorrere nella sospensione della patente di guida",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: a person who violated the Highway Code and caused an accident may face a suspension of their driving licence, in addition to the other consequences.",
+        "ru": "Верно: виновный в ДТП при нарушении ПДД может получить и приостановление действия водительских прав, помимо прочих последствий.",
+        "zh": "正确：因违反道路法造成事故的人，除其他后果外，还可能被暂停驾照。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-responsabile-sinistro-stradale-4": {
+      "verdict": "VERO",
+      "key_it": "può incorrere nella revoca della patente di guida",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: a person criminally and civilly responsible for an accident may have their driving licence revoked, in more serious cases.",
+        "ru": "Верно: в более серьёзных случаях человек, виновный в ДТП по уголовной и гражданской ответственности, может быть лишён водительских прав.",
+        "zh": "正确：在较严重的情况下，对事故负有刑民责任的人可能被吊销驾照。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-responsabile-sinistro-stradale-5": {
+      "verdict": "VERO",
+      "key_it": "può incorrere nella revisione della patente di guida",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: a person responsible for an accident may be subject to a re-examination (revisione) of their driving licence.",
+        "ru": "Верно: виновный в ДТП человек может быть подвергнут перепроверке (ревизии) водительских прав.",
+        "zh": "正确：对事故负有责任的人可能接受驾照的复核。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-responsabile-sinistro-stradale-6": {
+      "verdict": "FALSO",
+      "key_it": "è sempre soggetto all'arresto preventivo",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: responsibility for an accident does not always mean preventive arrest; that measure is exceptional and never automatic.",
+        "ru": "Ложно: ответственность за ДТП не означает всегда превентивное задержание; такая мера исключительная и никогда не автоматическая.",
+        "zh": "错误：事故责任并非总是导致预防性拘留；该措施属例外情形，绝非自动执行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-responsabile-sinistro-stradale-7": {
+      "verdict": "FALSO",
+      "key_it": "non può continuare a guidare veicoli della stessa categoria, ma solo di categoria inferiore",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: after an accident a driver is not forced to move down to a lower vehicle category; the licence consequences depend on the actual violation.",
+        "ru": "Ложно: после ДТП водителя не заставляют пересаживаться на категорию ниже; последствия для прав зависят от конкретного нарушения.",
+        "zh": "错误：事故后并不强制驾驶员降级换开更低类别的车辆；驾照后果取决于具体的违规行为。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-casi-responsabilita-penale-1": {
+      "verdict": "VERO",
+      "key_it": "sorge anche in caso di omicidio colposo",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: criminal responsibility arising from an accident also exists in the case of negligent homicide, when a death occurs through fault.",
+        "ru": "Верно: уголовная ответственность, связанная с ДТП, возникает и при неумышленном убийстве, если смерть наступила по вине.",
+        "zh": "正确：事故引发的刑事责任在非故意过失致人死亡的情形下同样成立。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-casi-responsabilita-penale-5": {
+      "verdict": "FALSO",
+      "key_it": "sorge in tutti i casi di danni alle persone o alle cose",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: criminal responsibility does not arise in every case of damage to people or things; it depends on the fault and on the gravity of the facts.",
+        "ru": "Ложно: уголовная ответственность не возникает при каждом повреждении людей или вещей; она зависит от вины и тяжести деяния.",
+        "zh": "错误：刑事责任并非在任何人身或财物受损的情形下都成立，它取决于过错与行为严重程度。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-responsabilita-civile-4": {
+      "verdict": "VERO",
+      "key_it": "ogni danno causato deve essere risarcito",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: civil liability is based on the principle that every damage caused must be compensated.",
+        "ru": "Верно: гражданская ответственность строится на принципе, что любой причинённый ущерб подлежит возмещению.",
+        "zh": "正确：民事责任以“任何造成的损害都必须赔偿”为原则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-responsabilita-civile-9": {
+      "verdict": "FALSO",
+      "key_it": "grava sull'impresa assicuratrice anche per danni superiori ai massimali",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: the insurer only pays up to the policy limit (massimale); damage above it is not covered by the compulsory policy.",
+        "ru": "Ложно: страховщик платит только в пределах франшизы (максимальной суммы полиса); ущерб сверх лимита не покрывается обязательным полисом.",
+        "zh": "错误：保险公司仅在保单限额内赔付；超出限额的损失不属于强制保险的赔付范围。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-assicurazione-5": {
+      "verdict": "FALSO",
+      "key_it": "deve essere obbligatoriamente corredata di fotografie",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: a direct-compensation claim is not required to be accompanied by photographs; the claim is supported by the documents needed for the procedure.",
+        "ru": "Ложно: к заявлению о прямом возмещении ущерба не обязательно прилагать фотографии; оно оформляется необходимыми для процедуры документами.",
+        "zh": "错误：直接赔偿申请无需强制附上照片；该申请以办理手续所需文件为依据。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-assicurazione-6": {
+      "verdict": "FALSO",
+      "key_it": "copre i danni subiti solo da terzi trasportati sui taxi",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: compulsory insurance covers damage the vehicle causes to third parties, not the injury or belongings of the passengers it carries; it is not limited to taxis.",
+        "ru": "Ложно: обязательное страхование покрывает ущерб, который транспорт причиняет третьим лицам, а не повреждения пассажиров; дело не только в такси.",
+        "zh": "错误：强制保险赔付的是车辆对第三方造成的损失，而非所载客自身的伤害或财物；且不限于出租车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-responsabilita-danni-4": {
+      "verdict": "FALSO",
+      "key_it": "è a carico solo del conducente del veicolo se ci sono stati danni alle cose",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: liability for damage connected with the circulation of vehicles is not borne only by the driver; the owner is civilly responsible too.",
+        "ru": "Ложно: ответственность за ущерб, связанный с движением транспортных средств, лежит не только на водителе; граждански отвечает и владелец.",
+        "zh": "错误：与车辆行驶相关的损害责任并非仅由驾驶员承担；车主同样承担民事责任。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-assicurazione-scaduta-2": {
+      "verdict": "VERO",
+      "key_it": "si può incorrere nella confisca del veicolo",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: if civil liability insurance is expired, one may face the seizure/confiscation of the vehicle; driving without valid insurance is punished.",
+        "ru": "Верно: при просроченном полисе гражданской ответственности возможны изъятие/конфискация транспортного средства; поездка без действующего страхового полиса наказуема.",
+        "zh": "正确：民事责任保险过期时，车辆可能被扣押或没收；在无有效保险的情况下行驶会受到处罚。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-assicurazione-scaduta-3": {
+      "verdict": "FALSO",
+      "key_it": "si può continuare a usare il veicolo solo per brevi tragitti",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: with expired liability insurance the vehicle must not be used at all, not even for short trips; valid insurance is required for circulation.",
+        "ru": "Ложно: при просроченном страховании ответственности транспортным средством нельзя пользоваться вовсе, даже на коротких перегонах; для движения нужен действующий полис.",
+        "zh": "错误：责任险保险过期后根本不能使用该车辆，哪怕只是短途行驶；上路必须持有有效保单。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-furto-incendio-1": {
+      "verdict": "VERO",
+      "key_it": "non può essere superiore al valore che il veicolo aveva al momento in cui è stato rubato o ha preso fuoco",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: in a theft/fire policy the compensation cannot exceed the value the vehicle had at the moment it was stolen or caught fire.",
+        "ru": "Верно: по полису от угона и пожара выплата не может превышать стоимость, которой автомобиль обладал в момент угона или возгорания.",
+        "zh": "正确：在盗窃/火灾保险中，赔付额不得超过车辆在失窃或起火那一刻的价值。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    }
+  }
+}
