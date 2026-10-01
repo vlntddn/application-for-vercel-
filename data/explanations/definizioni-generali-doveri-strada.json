@@ -5850,6 +5850,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attenzion-conducente-3": {
+      "verdict": "VERO",
+      "key_it": "I montanti interni degli autoveicoli condizionano la visibilità",
+      "chapter": "ch1",
+      "why": {
+        "en": "The internal pillars of a car create blind spots and distort the driver view, so the driver must take this reduced field of vision into account when distributing attention.",
+        "ru": "Внутренние стойки кузова автомобиля создают слепые зоны и искажают обзор, поэтому водителю приходится учитывать этот суженный круг видимости при распределении внимания.",
+        "zh": "汽车的内柱会形成盲区并扭曲视野，因此驾驶员在分配注意力时必须考虑到这一收窄的可视范围。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attenzion-conducente-4": {
+      "verdict": "VERO",
+      "key_it": "riducono la possibilità di vedere un ciclista o un motociclista",
+      "chapter": "ch1",
+      "why": {
+        "en": "The car internal pillars block part of the view, making a cyclist or motorcyclist harder to spot: they are also lower and less visible, so extra vigilance is required.",
+        "ru": "Внутренние стойки автомобиля перекрывают часть обзора, что затрудняет замечание велосипедиста или мотоциклиста: они ещё ниже и менее заметны, поэтому нужна повышенная бдительность.",
+        "zh": "汽车内柱遮挡了部分视线，使发现自行车或摩托车骑手更加困难：他们本就位置低、不易被看见，因此需要格外警惕。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attenzion-conducente-5": {
+      "verdict": "FALSO",
+      "key_it": "Un incidente a bassa velocità non crea problemi di incolumità",
+      "chapter": "ch1",
+      "why": {
+        "en": "Even a low-speed collision can injure the drivers involved: whiplash and internal trauma occur well below speeds that look harmless.",
+        "ru": "Даже столкновение на низкой скорости может травмировать участников: хлыстовая травма шеи и внутренние повреждения возникают при скоростях, которые кажутся безобидными.",
+        "zh": "即使是低速碰撞也可能伤害当事人：挥鞭样颈部损伤和内伤在看似无害的速度下就可能出现。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-prudenza-conducente-0": {
+      "verdict": "VERO",
+      "key_it": "persone diversamente abili",
+      "chapter": "ch1",
+      "why": {
+        "en": "People with disabilities may move more slowly, react differently or have reduced senses, so they deserve extra caution and more space when crossing.",
+        "ru": "Люди с ограниченными возможностями могут двигаться медленнее, по-разному реагировать или иметь ослабленные чувства, поэтому им нужно больше внимания и свободного места при пересечении.",
+        "zh": "残障人士可能行动更慢、反应不同或感官减弱，因此他们在过马路时需要更多耐心和空间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-prudenza-conducente-1": {
+      "verdict": "VERO",
+      "key_it": "persone anziane",
+      "chapter": "ch1",
+      "why": {
+        "en": "Older pedestrians often cross more slowly and may stop or hesitate, so approaching them requires extra patience and a wider margin.",
+        "ru": "Пожилые пешеходы часто переходят медленнее и могут останавливаться или замирать, поэтому к ним нужно подходить терпеливее и с большим запасом.",
+        "zh": "老年行人往往过马路更慢，可能停下或迟疑，因此靠近他们时要更有耐心、留更大余地。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-prudenza-conducente-2": {
+      "verdict": "VERO",
+      "key_it": "bambini che attraversano la strada",
+      "chapter": "ch1",
+      "why": {
+        "en": "Children are unpredictable and impulsive: they may dash into the street without looking, so a driver must be especially careful around them.",
+        "ru": "Дети непредсказуемы и импульсивны: они могут выбежать на дорогу, не посмотрев, поэтому рядом с ними водитель должен быть особенно внимателен.",
+        "zh": "儿童行为难以预测且冲动：可能不看就跑上马路，因此司机在靠近他们时必须格外小心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-prudenza-conducente-3": {
+      "verdict": "VERO",
+      "key_it": "conducenti che dimostrano una guida incerta",
+      "chapter": "ch1",
+      "why": {
+        "en": "A driver showing uncertain, hesitant or erratic steering may be tired, unwell or inattentive, so it is safer to keep more distance and anticipate sudden moves.",
+        "ru": "Водитель с неуверенной или рывковой траекторией может быть усталым, нездоровым или рассеянным, поэтому безопаснее держаться дальше и предвосхищать резкие манёвры.",
+        "zh": "表现出犹豫或不稳定驾驶的车手可能疲劳、不适或分心，因此保持更大车距并预判突然动作更安全。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-prudenza-conducente-4": {
+      "verdict": "VERO",
+      "key_it": "conducenti di veicoli adattati per persone diversamente abili",
+      "chapter": "ch1",
+      "why": {
+        "en": "Vehicles adapted for disabled people, with hand controls or a lift, may accelerate and brake more slowly, so the driver around them should allow extra space.",
+        "ru": "Адаптированные для инвалидов автомобили, с подрулевыми рычагами или подъёмником, могут медленнее разгоняться и тормозить, поэтому рядом с ними нужно оставлять больше места.",
+        "zh": "为残障人士改装的车辆（带手控装置或升降板）可能加速和刹车更慢，因此周围司机应留出更多空间。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-prudenza-conducente-5": {
+      "verdict": "VERO",
+      "key_it": "persone in bicicletta e di quelle con scarsa capacità di movimento",
+      "chapter": "ch1",
+      "why": {
+        "en": "Cyclists are vulnerable road users and people with reduced mobility move slowly; both deserve extra caution, distance and predictability.",
+        "ru": "Велосипедисты — уязвимые участники движения, а люди с ограниченной подвижностью двигаются медленно; обоим нужны дополнительная осторожность, дистанция и предсказуемость.",
+        "zh": "自行车骑手是易受伤的参与者，行动不便的人移动缓慢；两者都需要同样的小心、距离和可预测性。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-prudenza-conducente-6": {
+      "verdict": "FALSO",
+      "key_it": "patente di guida in uno Stato estero",
+      "chapter": "ch1",
+      "why": {
+        "en": "Holding a licence issued by another country is not a danger: an exchanged or recognised foreign licence carries the same rights, so no extra caution is due on that basis alone.",
+        "ru": "Удостоверение, выданное другой страной, не является опасностью: обменянное или признанное иностранное удостоверение даёт те же права, поэтому только по этому основанию особой осторожности не требуется.",
+        "zh": "持有他国签发的驾照并不危险：换发或被承认的外国驾照享有同样权利，因此仅凭这一点不需要格外小心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-prudenza-conducente-7": {
+      "verdict": "FALSO",
+      "key_it": "conducenti di autoveicoli elettrici",
+      "chapter": "ch1",
+      "why": {
+        "en": "An electric car accelerates, brakes and occupies the road just like any other vehicle; its powertrain is silent, but that does not make it more dangerous, so no special caution is due.",
+        "ru": "Электрокар, как и любой другой автомобиль, разгоняется, тормозит и занимает полосу; его силовая установка бесшумна, но это не делает его опаснее, поэтому особой осторожности не требуется.",
+        "zh": "电动汽车与普通车辆一样加速、刹车和占用道路；其动力总成虽安静，但并不因此更危险，所以无需特别警惕。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-prudenza-conducente-8": {
+      "verdict": "FALSO",
+      "key_it": "conducenti di taxi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Taxi drivers are among the most experienced road users; the fact that a car is a taxi is no reason to expect risky behaviour from its driver.",
+        "ru": "Водители такси — одни из самых опытных участников движения; то, что машина — такси, не основание ожидать от её водителя рискованного поведения.",
+        "zh": "出租车司机是最资深的驾驶者之一；车辆是出租车这一事实并非预期其驾驶员会冒险的理由。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-prudenza-conducente-9": {
+      "verdict": "FALSO",
+      "key_it": "conducenti di tricicli a motore",
+      "chapter": "ch1",
+      "why": {
+        "en": "A motor tricycle must obey the same road rules as any other vehicle, so its driver is no less predictable or careful than the driver of a car.",
+        "ru": "Моторный трицикл обязан подчиняться тем же правилам дороги, что и любой другой транспорт, поэтому его водитель не менее предсказуем и внимателен, чем водитель автомобиля.",
+        "zh": "三轮机动车必须遵守与其他车辆相同的道路规则，因此其驾驶员并不比汽车驾驶员更不可预测或更不谨慎。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-prudenza-conducente-10": {
+      "verdict": "FALSO",
+      "key_it": "bastone bianco, ma non di quelli con bastone bianco-rosso",
+      "chapter": "ch1",
+      "why": {
+        "en": "Both the white cane and the white-red cane mark a blind pedestrian, so both deserve the same full caution; the distinction in the statement is wrong.",
+        "ru": "И белая, и бело-красная палка указывают на слепого пешехода, поэтому обоим нужен одинаково полный учёт; разграничение в утверждении неверно.",
+        "zh": "白色盲杖和红白盲杖都标示盲人，因此两者都需要同样的充分注意；说法中的区分是错误的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-persone-anziane-0": {
+      "verdict": "VERO",
+      "key_it": "non fare adeguata attenzione ai veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "An elderly pedestrian may not pay sufficient attention to oncoming traffic, so the driver must cross slowly and be ready to stop.",
+        "ru": "Пожилый пешеход может не обратить достаточного внимания на приближающийся транспорт, поэтому водитель должен подходить медленно и быть готовым остановиться.",
+        "zh": "老年行人可能未对来车给予足够注意，因此驾驶员应慢行并随时准备停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-persone-anziane-1": {
+      "verdict": "VERO",
+      "key_it": "fermarsi improvvisamente al centro della strada",
+      "chapter": "ch1",
+      "why": {
+        "en": "An elderly pedestrian can stop or turn back in the middle of the carriageway without warning, so the driver must be able to brake in time.",
+        "ru": "Пожилый пешеход может остановиться или развернуться посреди проезжей части без предупреждения, поэтому водитель должен иметь возможность вовремя затормозить.",
+        "zh": "老年行人可能在车道中间毫无预警地停下或折返，因此驾驶员必须能够及时刹车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-persone-anziane-2": {
+      "verdict": "VERO",
+      "key_it": "non guardare né a destra, né a sinistra",
+      "chapter": "ch1",
+      "why": {
+        "en": "An elderly person may cross without looking left or right, so the driver cannot count on them noticing the car and must act early.",
+        "ru": "Пожилый человек может перейти дорогу, не посмотрев ни налево, ни направо, поэтому водитель не может рассчитывать, что тот заметит машину, и должен действовать заранее.",
+        "zh": "老年人可能不看左右就过马路，因此驾驶员不能指望他们注意到汽车，须提前采取措施。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-persone-anziane-3": {
+      "verdict": "VERO",
+      "key_it": "non reagiscono prontamente alle situazioni di pericolo",
+      "chapter": "ch1",
+      "why": {
+        "en": "Because of their age, elderly pedestrians react more slowly to dangerous situations, so the driver must anticipate the risk and leave a larger margin.",
+        "ru": "Из-за возраста пожилые пешеходы медленнее реагируют на опасные ситуации, поэтому водитель должен предвосхищать опасность и оставлять больший запас.",
+        "zh": "由于年龄，老年行人对危险情况的反应较慢，因此驾驶员必须预判危险并留更大余地。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-persone-anziane-4": {
+      "verdict": "VERO",
+      "key_it": "non bisogna avvicinarsi troppo con il veicolo",
+      "chapter": "ch1",
+      "why": {
+        "en": "Approaching an elderly pedestrian too closely can frighten them and provoke a dangerous, unpredictable reaction, so the driver should keep a calm distance.",
+        "ru": "Слишком близкое приближение к пожилому пешеходу может напугать его и спровоцировать опасную, непредсказуемую реакцию, поэтому водитель должен сохранять спокойную дистанцию.",
+        "zh": "过于靠近老年行人可能吓到他们并引发危险、不可预测的反应，因此驾驶员应保持稳妥的距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-persone-anziane-5": {
+      "verdict": "VERO",
+      "key_it": "capacità visive e uditive non sono più eccellenti",
+      "chapter": "ch1",
+      "why": {
+        "en": "Older pedestrians vision and hearing have declined, so they may miss an approaching car and are exposed to greater danger; the driver must compensate with extra care.",
+        "ru": "Зрение и слух пожилых пешеходов ослабли, поэтому они могут не услышать приближающуюся машину и оказались в большей опасности; водитель должен компенсировать это дополнительной осторожностью.",
+        "zh": "老年行人的视力和听力已衰退，可能没注意到接近的汽车而处于更大危险中；驾驶员必须以额外小心来补偿。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
