@@ -182,6 +182,22 @@ export const MESSAGES = {
     'pth.title': 'THE LEARNING PATH',
     'pth.lede': 'Study one chapter at a time: read it, pass a 5-question check, then practice the topic. {total} steps to the exam.',
     'pth.progress': '{done} of {total} steps done',
+
+    // Mistakes review (Q4.2, screen 4/7)
+    'ms.title': 'MISTAKES REVIEW',
+    'ms.loading': 'Loading...',
+    'ms.empty': 'No mistakes to review. Nice work.',
+    'ms.goPractice': 'GO PRACTICE',
+    'ms.lede': '{n} QUESTIONS YOU LAST ANSWERED WRONG. ANSWER CORRECTLY TO CLEAR THEM.',
+    'ms.causes.signal': 'absolute words',
+    'ms.causes.sign': 'sign questions',
+    'ms.causes.number': 'numbers',
+    'ms.causes.rule': 'road rules',
+    'ms.causeTitle': 'Most of your mistakes: {part}{extra} ({n} of {total})',
+    'ms.practiceThis': 'PRACTICE THIS',
+    'ms.sessionTitle': 'MISTAKES',
+    'ms.practiceAll': 'PRACTICE ALL MISTAKES',
+    'ms.more': '+ {n} MORE',
   },
   ru: {
     'ob.title1': 'Добро пожаловать!',
@@ -359,6 +375,22 @@ export const MESSAGES = {
     'pth.title': 'ПУТЬ ОБУЧЕНИЯ',
     'pth.lede': 'Учитесь по одной главе за раз: прочитайте, сдайте проверку из 5 вопросов, затем отработайте тему. {total} шагов до экзамена.',
     'pth.progress': 'Пройдено {done} из {total} шагов',
+
+    // Разбор ошибок (Q4.2, экран 4/7)
+    'ms.title': 'РАЗБОР ОШИБОК',
+    'ms.loading': 'Загрузка...',
+    'ms.empty': 'Ошибок для разбора нет. Так держать!',
+    'ms.goPractice': 'К ПРАКТИКЕ',
+    'ms.lede': '{n} ВОПРОСОВ, КОТОРЫЕ ВЫ В ПОСЛЕДНИЙ РАЗ ОТВЕТИЛИ НЕВЕРНО. ОТВЕТИТЕ ВЕРНО, ЧТОБЫ ИСЧЕЛИ.',
+    'ms.causes.signal': 'абсолютные слова',
+    'ms.causes.sign': 'вопросы по знакам',
+    'ms.causes.number': 'цифры',
+    'ms.causes.rule': 'правила дороги',
+    'ms.causeTitle': 'Больше всего ошибок: {part}{extra} ({n} из {total})',
+    'ms.practiceThis': 'ОТРАБОТАТЬ',
+    'ms.sessionTitle': 'ОШИБКИ',
+    'ms.practiceAll': 'ОТРАБОТАТЬ ВСЕ ОШИБКИ',
+    'ms.more': 'ещё {n}',
   },
   zh: {
     'ob.title1': '欢迎！',
@@ -536,6 +568,22 @@ export const MESSAGES = {
     'pth.title': '学习路径',
     'pth.lede': '每次学一章：先阅读，通过 5 题检查，再练习该主题。距考试还有 {total} 步。',
     'pth.progress': '已完成 {done} / {total} 步',
+
+    // 错题回顾（Q4.2，第 4/7 屏）
+    'ms.title': '错题回顾',
+    'ms.loading': '加载中…',
+    'ms.empty': '没有需要回顾的错题，干得漂亮。',
+    'ms.goPractice': '去练习',
+    'ms.lede': '你有 {n} 道题上次答错了。答对即可移除。',
+    'ms.causes.signal': '绝对用词',
+    'ms.causes.sign': '标志题',
+    'ms.causes.number': '数字',
+    'ms.causes.rule': '道路规则',
+    'ms.causeTitle': '你的多数错误在：{part}{extra}（{n}/{total}）',
+    'ms.practiceThis': '练习这类',
+    'ms.sessionTitle': '错题',
+    'ms.practiceAll': '练习全部错题',
+    'ms.more': '还有 {n} 道',
   },
 };
 

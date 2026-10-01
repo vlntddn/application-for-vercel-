@@ -10,6 +10,7 @@ import {
 import { el, clear } from '../ui.js';
 import { errorBanner, pickQueue, categoryStats } from './common.js';
 import { renderQuizSession } from './practice.js';
+import { t } from '../i18n.js';
 import { mistakeCauses } from '../domain/learning.js';
 import { dueReview } from '../domain/progress.js';
 import { topicLabel } from '../topics.js';
@@ -18,14 +19,14 @@ import { topicLabel } from '../topics.js';
 
 export async function renderMistakes(root) {
   const ids = state.progress.mistakes;
-  clear(root, el('h1', {}, 'MISTAKES REVIEW'), el('p.lede', {}, 'Loading...'));
+  clear(root, el('h1', {}, t('ms.title')), el('p.lede', {}, t('ms.loading')));
 
   if (ids.length === 0) {
     return clear(root,
-      el('h1', {}, 'MISTAKES REVIEW'),
+      el('h1', {}, t('ms.title')),
       el('div.panel', {},
-        el('p.empty-note', {}, 'No mistakes to review. Nice work.'),
-        el('div.actions', {}, el('a.btn.btn-primary', { href: '#/practice' }, 'GO PRACTICE')),
+        el('p.empty-note', {}, t('ms.empty')),
+        el('div.actions', {}, el('a.btn.btn-primary', { href: '#/practice' }, t('ms.goPractice'))),
       ),
     );
   }
@@ -52,7 +53,6 @@ export async function renderMistakes(root) {
       .sort((a, b) => b[1] - a[1] || order.indexOf(a[0]) - order.indexOf(b[0]))[0];
     if (top) {
       const [cause, n] = top;
-      const LABEL = { signal: 'absolute words', sign: 'sign questions', number: 'numbers', rule: 'road rules' };
       // signal → the L1c drill; number → L4 (not built yet) → practice;
       // sign → practice (sign-heavy questions come first there);
       // rule → the chapter with the most rule mistakes.
@@ -75,8 +75,8 @@ export async function renderMistakes(root) {
         }
       }
       causePanel = el('div.panel', { style: 'margin-bottom:24px' },
-        el('h2', {}, `Most of your mistakes: ${LABEL[cause]}${extra} (${n} of ${questions.length})`),
-        el('div.actions', {}, el('a.btn.btn-primary', { href }, 'PRACTICE THIS')),
+        el('h2', {}, t('ms.causeTitle', { part: t(`ms.causes.${cause}`), extra, n, total: questions.length })),
+        el('div.actions', {}, el('a.btn.btn-primary', { href }, t('ms.practiceThis'))),
       );
     }
   } catch {
@@ -84,18 +84,18 @@ export async function renderMistakes(root) {
   }
 
   clear(root,
-    el('h1', {}, 'MISTAKES REVIEW'),
-    el('p.lede', {}, `${questions.length} QUESTIONS YOU LAST ANSWERED WRONG. ANSWER CORRECTLY TO CLEAR THEM.`),
+    el('h1', {}, t('ms.title')),
+    el('p.lede', {}, t('ms.lede', { n: questions.length })),
     causePanel,
     el('div.actions', { style: 'margin-bottom:24px' },
       el('button.btn.btn-primary.btn-big', {
         onclick: () =>
           renderQuizSession(root, shuffle(questions), {
-            title: 'MISTAKES',
+            title: t('ms.sessionTitle'),
             backHash: '#/mistakes',
             onFinish: () => renderMistakes(root),
           }),
-      }, 'PRACTICE ALL MISTAKES'),
+      }, t('ms.practiceAll')),
     ),
     el('div.panel', {},
       ...questions.slice(0, 50).map((q) =>
@@ -104,7 +104,7 @@ export async function renderMistakes(root) {
           el('span.tag.bad', {}, q.is_true ? 'VERO' : 'FALSO'),
         ),
       ),
-      questions.length > 50 ? el('p.empty-note', {}, `+ ${questions.length - 50} MORE`) : null,
+      questions.length > 50 ? el('p.empty-note', {}, t('ms.more', { n: questions.length - 50 })) : null,
     ),
   );
 }

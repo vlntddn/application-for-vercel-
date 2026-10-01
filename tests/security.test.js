@@ -346,6 +346,24 @@ test('the learning path screen is localized: no hardcoded UI copy (Q4.2)', () =>
   assert.match(views, /one chapter at a time/);
 });
 
+test('the mistakes review screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2: mistakes copy lives in i18n.js under ms.* keys; the view only
+  // references keys, so ru/zh switch in without touching review.js.
+  const views = readViewsSource();
+  const reviewView = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'review.js'), 'utf8');
+  assert.match(reviewView, /t\('ms\.title'\)/, 'page title must come from i18n');
+  assert.match(reviewView, /t\('ms\.practiceAll'\)/, 'practice button must come from i18n');
+  assert.match(reviewView, /t\('ms\.lede'/, 'lede line must come from i18n');
+  // No hardcoded English UI strings left in the view.
+  assert.ok(!reviewView.includes("'MISTAKES REVIEW'"), 'no hardcoded page title');
+  assert.ok(!reviewView.includes("'PRACTICE ALL MISTAKES'"), 'no hardcoded practice button');
+  assert.ok(!reviewView.includes('QUESTIONS YOU LAST ANSWERED WRONG'), 'no hardcoded lede');
+  assert.ok(!reviewView.includes('absolute words'), 'no hardcoded cause labels');
+  // English copy exists in the dictionary (the strings QA checks).
+  assert.match(views, /MISTAKES REVIEW/);
+  assert.match(views, /PRACTICE ALL MISTAKES/);
+});
+
 test('settings offers an install path on phones', () => {
   const views = readViewsSource();
   assert.match(views, /renderInstallPanel/);
