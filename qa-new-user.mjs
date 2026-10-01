@@ -164,6 +164,39 @@ async function drillAnswer(value) {
 }
 
 /**
+ * (d)/(f) Подготовить целевой вопрос как «первый в очереди» практики темы
+ * `slug`: через /api/progress/import делаем ВСЕ остальные вопросы темы
+ * уже отвеченными верно (seen, correct), а `targetId` — ответленным НЕверно
+ * один раз (wrong:1). Тогда queueOrder() ставит targetId в начало сессии
+ * (unseen пусто, wrong = [target]), а beginner-ветка (introQueue) не
+ * срабатывает, т.к. ответов > 0. Профиль передаём явно (onboarded+name),
+ * потому что importProgress() сбрасывает всё неприведённое на дефолты.
+ * Возвращает true, если импорт прошёл и targetId попал в wrong.
+ */
+async function seedTargetQuestion(slug, targetId, opts = {}) {
+  const qs = (await (await fetch(`${APP}/api/questions/${slug}`)).json());
+  const list = Array.isArray(qs) ? qs : (qs.questions || []);
+  const answers = {};
+  for (const q of list) {
+    if (q.id === targetId) {
+      answers[q.id] = { correct: 0, wrong: 1, lastCorrect: false, streak: 0 };
+    } else {
+      answers[q.id] = { correct: 1, wrong: 0, lastCorrect: true, streak: 1 };
+    }
+  }
+  // importProgress() ПОЛНОСТЬЮ заменяет прогресс чистым снапшотом: всё, чего
+  // нет в body.profile, сбрасывается на дефолты (onboarded: false!). Поэтому
+  // передаём onboarded+name, иначе после reload будет онбординг, а не практика.
+  const profile = { name: 'QA', onboarded: true, signalHints: opts.signalHints };
+  const res = await (await fetch(`${APP}/api/progress/import`, {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ answers, profile }),
+  })).json();
+  const rec = res.answers?.[targetId];
+  return !!(rec && rec.wrong >= 1 && rec.lastCorrect === false);
+}
+
+/**
  * (a) Список маршрутов, взят из регулярок роутера в public/js/main.js —
  * не хардкод. Если добавят новый pattern в роутере, свип ниже сам его
  * проверит. Параметры `([\w-]+)` заменяются реальными sample-значениями,
@@ -396,6 +429,59 @@ async function main() {
   check(numOk, 'numbers: 3 вопроса отвечены (FALSO-ловушки + VERO → feedback → NEXT)');
   check(!!(await evaluate(`!!document.querySelector('#view .question-card')`)), 'numbers: после 3 ответов сессия продолжает');
   await shot('12-numbers-drill.png');
+
+  /* ---- 8b. (d) AI-draft объяснение + (f) signal-hints callout ----
+   * Оба фичи проявляются на ОДНОМ вопросе (target): ошибка №2 (AI-draft)
+   * требует, чтобы target уже был ответлен неверно (wrong:1); signal-hints
+   * — чтобы сигнал-слово было подсвечено. Целевой вопрос известен из
+   * датасета: false, с AI-draft объяснением и signal-словом «sempre». */
+  const TARGET = 'distanza-di-sicurezza-condizioni-sicurezza-24';
+  const seeded = await seedTargetQuestion('distanza-di-sicurezza', TARGET, { signalHints: 'on' });
+  check(seeded, '(d)/(f): seed — target в wrong, остальные темы seen (через /api/progress/import)');
+
+  // state.progress в памяти — состояние экзамена, а не нашего импорта.
+  // Page.navigate на тот же документ (сменился только hash) НЕ перезагружает
+  // документ — срабатывает лишь hashchange со старым in-memory состоянием.
+  // Поэтому сначала about:blank (убивает документ), затем URL практики:
+  // это настоящий full reload, boot() подхватит наш импорт от сервера, и
+  // queueOrder() поставит target (wrong) в начало сессии.
+  await send('Page.navigate', { url: 'about:blank' });
+  await sleep(300);
+  await send('Page.navigate', { url: `${APP}/#/practice/distanza-di-sicurezza` });
+  await waitFor(`!!document.querySelector('#view .question-card')`, 'seeded practice question (reload)', 40000);
+  await sleep(1200); // даём догрузиться insights (signal-подсветка) и explanations
+
+  const qtext = await currentQuestion();
+  check(qtext.includes('sempre') && qtext.includes('70 metri'), '(d)/(f): первый вопрос сессии — целевой (queueOrder: wrong в начало)');
+  // (f) signal-hints callout: слово подсвечено как <mark.ds-signal> и по
+  // тапу открывается .ds-signal-callout.
+  const markEl = await evaluate(`document.querySelector('#view .question-card mark.ds-signal')`);
+  check(!!markEl, '(f) signal-hints: сигнал-слово подсвечено <mark.ds-signal> в тексте вопроса');
+  await evaluate(`document.querySelector('#view .question-card mark.ds-signal')?.click()`);
+  const calloutVisible = await tryWait(`!!document.querySelector('#view .ds-signal-callout')`);
+  check(calloutVisible, '(f) signal-hints: тап по слову открывает .ds-signal-callout');
+  const calloutTxt = await evaluate(`document.querySelector('#view .ds-signal-callout')?.innerText || ''`);
+  check(/sempre/i.test(calloutTxt) && /FALSO IN/i.test(calloutTxt), '(f) signal-hints: в callout слово + доля FALSO (FALSO IN N%)');
+  await shot('13b-signal-callout.png');
+
+  // (d) AI-draft объяснение: target уже wrong:1 → ошибка №2 раскрывает блок
+  // «AI draft — check the lesson» с дословной ключевой фразой «…70 metri».
+  // Ответ НЕверно (target is_true=false → VERO — это ошибка).
+  await evaluate(`document.querySelector('#view .btn-true')?.click()`);
+  await waitFor(`!!document.querySelector('#view .ds-feedback')`, '(d) feedback after 2nd error');
+  // explanationBlock рендерится асинхронно (loadExplanations → .then) — ждём.
+  const explReady = await tryWait(`!!document.querySelector('#view .ds-feedback .why-block.explanation')`);
+  const expl = await evaluate(`(() => { const b = document.querySelector('#view .ds-feedback .why-block.explanation'); return b ? b.innerText : null; })()`);
+  check(explReady, '(d) AI-draft: после 2-й ошибки появляется блок .explanation');
+  check(!!expl && /AI draft/i.test(expl), '(d) AI-draft: блок помечен «AI draft — check the lesson»');
+  check(!!expl && /70 metri/.test(expl), '(d) AI-draft: в блоке дословная ключевая фраза «…70 metri»');
+  await shot('13b-ai-draft.png');
+
+  // (e) «экзамен до результата» уже покрыт шагом 5b выше (30 ответов → SUBMIT).
+
+  // Вернуться на дашборд до финальной сверки (экраны практики — рабочие).
+  await evaluate(`location.hash = '#/'`);
+  await waitFor(`(document.getElementById('view')?.innerText||'').includes('CIAO, QA')`, 'back to dashboard after seeded practice', 30000);
 
   /* ---- 9. Каждый экран открывается без JS-ошибок ----
    * Ловит потерянные при рефакторинге импорты/константы (S1.3 потерял
