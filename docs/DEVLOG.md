@@ -1,3 +1,28 @@
+## 2026-10-01 — Q1 закрыта полностью: E2E на (d) AI-draft и (f) signal-hints callout
+
+Ветка self-improve, коммит 32514f2 (test: E2E — AI-draft после 2-й ошибки + signal-hints callout (Q1 (d)/(f))).
+Закрываю последний недоделанный кусок Q1: подпункты (a)(b)(c)(e) уже были
+готовы в 5c196b6 и 195e617 (свип маршрутов, drill, numbers, экзамен до результата).
+Добавил в qa-new-user.mjs (d) и (f):
+- хелпер `seedTargetQuestion(slug, targetId, opts)` через `/api/progress/import`:
+  все вопросы темы кроме target помечены seen/correct, target — wrong:1.
+  ВАЖНО: `importProgress()` ПОЛНОСТЬЮ заменяет прогресс, всё неприведённое в
+  `profile` сбрасывается на дефолты (onboarded: false!) — поэтому в body передаём
+  `profile: { onboarded: true, name, signalHints }`, иначе после reload был бы
+  онбординг вместо практики.
+- (d) после seed + reload queueOrder() ставит target (wrong) в начало; вторая
+  ошибка раскрывает блок `.why-block.explanation` с пометкой «AI draft — check
+  the lesson» и дословной фразой «…70 metri».
+- (f) сигнал-слово «sempre» подсвечено `<mark.ds-signal>`, тап открывает
+  `.ds-signal-callout` со словом и долей FALSO.
+- reload через CDP `Page.navigate` на `about:blank`, затем на URL практики:
+  hash-переход по тому же документу НЕ перезагружает страницу (осталось бы
+  in-memory состояние экзамена, а не наш импорт).
+Проверка: `node qa-new-user.mjs` → 72 PASS / 0 FAIL; намеренно сломан импорт в
+drill.js (loadInsights → loadInsightsX) красит весь QA (views.js re-export'ит
+drill.js → весь граф импортов падает на старте) — ровно тот прод-баг, ради
+которого и писали Q1. `scripts/verify.sh` → VERIFY OK.
+
 ## 2026-10-01 — Q1(e): E2E QA — экзамен до конца (30 ответов → SUBMIT → результат)
 
 Ветка self-improve, коммит 195e617 (test: E2E QA — экзамен до конца … (Q1e)).
