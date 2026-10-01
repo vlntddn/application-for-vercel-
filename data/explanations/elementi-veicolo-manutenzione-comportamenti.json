@@ -884,6 +884,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-Sterzo-servosterzo-11": {
+      "verdict": "FALSO",
+      "key_it": "Se lo sterzo vibra si deve far controllare la bilanciatura delle ruote posteriori",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: if the steering wheel vibrates, balancing should be checked on the front wheels, not the rear ones.",
+        "ru": "Ложно: при вибрации руля следует проверить балансировку передних колёс, а не задних.",
+        "zh": "错误：转向抖动时应检查前轮动平衡，而非后轮。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-Sterzo-servosterzo-13": {
+      "verdict": "FALSO",
+      "key_it": "Il volante deve essere impugnato nella sua parte bassa",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: the steering wheel should be held on the spokes (around ten and two), not gripped at the bottom.",
+        "ru": "Ложно: руль держат на спицах (примерно на «девяти» и «трёх»), а не за нижнюю часть.",
+        "zh": "错误：应握住方向盘辐条处（约十点和两点方向），而非手握下缘。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-Sterzo-servosterzo-14": {
+      "verdict": "FALSO",
+      "key_it": "Il volante non può essere regolato in altezza",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: the steering wheel height can be adjusted.",
+        "ru": "Ложно: высоту руля можно регулировать.",
+        "zh": "错误：方向盘高度是可以调节的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-Sterzo-servosterzo-3": {
+      "verdict": "VERO",
+      "key_it": "può essere indice di insufficiente pressione dei pneumatici",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: a hard, stiff steering feel can indicate that the tyres are under-inflated.",
+        "ru": "Верно: «жесткость» руля может указывать на недостаточное давление в шинах.",
+        "zh": "正确：转向生硬可能表明轮胎气压不足。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-ammortizzatori-sovraccarico-9": {
+      "verdict": "FALSO",
+      "key_it": "può essere controllata dal proprietario del veicolo, senza ricorrere ad un’officina specializzata",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: shock-absorber condition must be checked by a qualified workshop, not by the owner.",
+        "ru": "Ложно: состояние амортизаторов проверяет специализированная мастерская, а не владелец.",
+        "zh": "错误：减震器状况须由专业维修店检查，车主无法自行完成。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-ammortizzatori-veicoli-motore-10": {
+      "verdict": "FALSO",
+      "key_it": "Un veicolo a motore è dotato di sospensioni oppure di ammortizzatori",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: a motor vehicle has both a suspension and shock absorbers working together.",
+        "ru": "Ложно: у автомобиля есть и подвеска, и амортизаторы — оба элемента.",
+        "zh": "错误：机动车同时配有悬架和减震器，二者兼有。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-impianto-scarico-1": {
+      "verdict": "VERO",
+      "key_it": "La marmitta deteriorata deve essere sostituita",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: a worn-out muffler must be replaced with one approved for that type of vehicle.",
+        "ru": "Верно: изношенный глушитель надо заменить на одобренный для этого типа ТС.",
+        "zh": "正确：损坏的消声器须更换为适用于该车型的批准型号。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-impianto-scarico-10": {
+      "verdict": "FALSO",
+      "key_it": "lo si può riparare avvolgendolo con lana di vetro e nastro isolante",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: a perforated exhaust pipe cannot be fixed by wrapping it in glass wool and insulating tape; it needs proper repair.",
+        "ru": "Ложно: проколотую выхлопную трубу нельзя «чинить» стекловатой и изолентой — только правильным ремонтом.",
+        "zh": "错误：排气管穿孔不能用玻璃棉和绝缘胶带缠绕修补，须正规修复。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-impianto-scarico-11": {
+      "verdict": "FALSO",
+      "key_it": "La sostituzione del tubo di scarico può essere fatta anche personalmente",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: the exhaust pipe must be replaced by a qualified workshop, not by the owner personally.",
+        "ru": "Ложно: выхлопную трубу заменяет авторизованная мастерская, а не сам владелец.",
+        "zh": "错误：排气管须由授权维修店更换，不能由车主自行处理。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-impianto-scarico-12": {
+      "verdict": "FALSO",
+      "key_it": "E’ possibile modificare l’impianto di scarico",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: the exhaust system may not be modified even with a self-declaration about fuel consumption.",
+        "ru": "Ложно: выхлопную систему нельзя модифицировать, даже при самоподтверждении по расходу топлива.",
+        "zh": "错误：不得改装排气系统，即使自证不增加油耗也不行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-impianto-scarico-13": {
+      "verdict": "FALSO",
+      "key_it": "La manomissione dell’impianto di scarico non comporta alcuna sanzione",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: tampering with the exhaust system is sanctioned regardless of where you drive.",
+        "ru": "Ложно: вмешательство в выхлопную систему наказуемо вне зависимости от места езды.",
+        "zh": "错误：擅自改动排气系统会受到处罚，与行驶地点无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-impianto-scarico-7": {
+      "verdict": "FALSO",
+      "key_it": "L’impianto di scarico deve essere integralmente sostituito a ogni cambio di lubrificante",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: the exhaust system is not replaced every time the oil is changed.",
+        "ru": "Ложно: выхлопную систему не заменяют при каждой смене масла.",
+        "zh": "错误：排气系统并非每次换机油时都需整体更换。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-impianto-scarico-9": {
+      "verdict": "FALSO",
+      "key_it": "i veicoli possono circolare anche senza silenziatore",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: vehicles must not be driven without a silencer, even outside built-up areas.",
+        "ru": "Ложно: без глушителя ездить нельзя, даже за пределами населённых пунктов.",
+        "zh": "错误：即便在居民区外，也不能无消声器行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-interruttore-emergenza-0": {
+      "verdict": "VERO",
+      "key_it": "è possibile spegnere il motore anche tramite l'interruttore di emergenza posto sul manubrio",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: on a two-wheeled motor vehicle the engine can also be switched off with the emergency switch on the handlebar.",
+        "ru": "Верно: на мотоцикле двигатель можно заглушить и аварийным выключателем на руле.",
+        "zh": "正确：两轮机动车可用车把上的紧急开关熄火。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-interruttore-emergenza-4": {
+      "verdict": "VERO",
+      "key_it": "se guasto, deve essere riparato al più presto",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: if the emergency switch on a two-wheeler is faulty, it must be repaired as soon as possible.",
+        "ru": "Верно: неисправный аварийный выключатель на мотоцикле надо отремонтировать как можно скорее.",
+        "zh": "正确：两轮机动车的紧急开关若故障，应尽快修复。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-catena-trasmissione-1": {
+      "verdict": "VERO",
+      "key_it": "se non lubrificata, può essere soggetta a rottura",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: if the drive chain of a two-wheeler is not lubricated, it can break.",
+        "ru": "Верно: не смазанная цепь передачи на мотоцикле может порваться.",
+        "zh": "正确：未润滑的传动链可能断裂。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-catena-trasmissione-10": {
+      "verdict": "FALSO",
+      "key_it": "non è mai necessario sostituire anche il pignone motore e la corona della ruota",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: when replacing a worn drive chain, the front sprocket and rear cog must often be replaced too.",
+        "ru": "Ложно: при замене изношенной цепи нередко меняют и переднюю звёздочку, и заднюю.",
+        "zh": "错误：更换磨损传动链时通常还需同时更换前齿盘和后链轮。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-catena-trasmissione-12": {
+      "verdict": "FALSO",
+      "key_it": "ma assolutamente non lubrificata per non far slittare il cambio",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: the drive chain must be cleaned AND lubricated — the opposite of never oiling it.",
+        "ru": "Ложно: цепь надо и чистить, и смазывать — всё наоборот.",
+        "zh": "错误：传动链既需清洁也需润滑，说法说反了。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-catena-trasmissione-5": {
+      "verdict": "VERO",
+      "key_it": "la rottura improvvisa della catena di trasmissione può causare il bloccaggio della ruota posteriore",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: a sudden broken drive chain can lock the rear wheel and cause loss of control of the vehicle.",
+        "ru": "Верно: внезапный обрыв цепи может заблокировать заднее колесо и лишить контроля над ТС.",
+        "zh": "正确：传动链突然断裂可能导致后轮卡死，从而失去对车辆的控制。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-Livello-olio-liquidi-0": {
+      "verdict": "VERO",
+      "key_it": "il livello dell'olio deve essere controllato a veicolo perfettamente orizzontale, poggiato con le ruote a terra e non sul cavalletto",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: on a two-wheeler the oil level is checked with the vehicle perfectly level, wheels on the ground, not on the stand.",
+        "ru": "Верно: уровень масла на мотоцикле проверяют на идеально выровненном ТС, на колёсах, а не на подставке.",
+        "zh": "正确：两轮机动车应在车体完全水平、车轮着地（而非放在支架上）时检查油位。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
