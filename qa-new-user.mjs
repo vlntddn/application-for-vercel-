@@ -308,6 +308,52 @@ async function main() {
   // уходим НЕ доигрывая: экзамен прерывается, прогресс не засчитывается как результат
   log('покидаем экзамен без завершения (5 минут не доигрываем)');
 
+  /* ---- 5b. Q1(e): экзамен до конца: 30 ответов → SUBMIT EXAM → результат ----
+   * Ловит regression на экране результата (BOCCIATO/PROMOSSO) — шаг, который
+   * не покрывался: выше экзамен намеренно прерывают, здесь доигрываем все 30
+   * вопросов и проверяем, что submit-экран рендерится без JS-ошибок.
+   * Внимание: после шага 5 hash остаётся #/exam — повторное присваивание того же
+   * hash не вызывает hashchange и не рендерит заново, поэтому сначала уходим
+   * на #/ (route() отрисует дашборд) и только потом возвращаемся на #/exam. */
+  await evaluate(`location.hash = '#/'`);
+  await waitFor(`(document.getElementById('view')?.innerText||'').includes('CIAO, QA')`, 'dashboard before exam Q1e', 30000);
+  await evaluate(`location.hash = '#/exam'`);
+  await waitFor(`(document.getElementById('view')?.innerText||'').toUpperCase().includes('HOW THE REAL EXAM WORKS')`, 'exam Q1e presstart', 30000);
+  check(await click('BEGIN EXAM'), 'экзамен: BEGIN EXAM открывает сессию (Q1e)');
+  await waitFor(`!!document.querySelector('#view .btn-true')`, 'exam Q1e running', 30000);
+  // Отвечаем до тех пор, пока счётчик «N ANSWERED» не станет 30: читаем реальное
+  // состояние из DOM, а не перебираем клики (последний вопрос не авто-переходит,
+  // поэтому счёт по «кнопкам» завышался).
+  // Счётчик «N ANSWERED» в шапке вопроса — источник истины. answer() возвращает
+  // false (click() → undefined), поэтому НЕ смотрим на его результат: только
+  // на счётчик и наличие кнопки .btn-true.
+  const answeredCount = () => evaluate(`(() => { const t = Array.from(document.querySelectorAll('#view .quiz-head .tag')).find((e) => /ANSWERED/.test(e.textContent)); const m = t && t.textContent.match(/\\d+/); return m ? Number(m[0]) : -1; })()`);
+  const hasAnswerBtn = () => evaluate(`!!document.querySelector('#view .btn-true')`);
+  let answered30 = await answeredCount();
+  let prev = answered30;
+  for (let i = 0; i < 40; i++) {
+    if (answered30 >= 30) break;
+    if (!(await hasAnswerBtn())) break;
+    await answer(true); // VERO → автопереход на следующий вопрос
+    await sleep(150);
+    answered30 = await answeredCount();
+    if (answered30 === prev) break; // застряли (нет авто-перехода) — не крутим впустую
+    prev = answered30;
+  }
+  check(answered30 === 30, `экзамен: отвечены все 30 вопросов (${answered30}/30)`);
+  check(await click('SUBMIT EXAM'), 'экзамен: кнопка SUBMIT EXAM отвечает');
+  await waitFor(`((document.getElementById('view')?.innerText||'').toUpperCase().includes('PROMOSSO')||(document.getElementById('view')?.innerText||'').toUpperCase().includes('BOCCIATO'))`, 'exam result rendered', 30000);
+  const resTxt = (await viewText()).toUpperCase();
+  check(resTxt.includes('PROMOSSO') || resTxt.includes('BOCCIATO'), 'экзамен: результат BOCCIATO или PROMOSSO');
+  check(/OUT OF 30 QUESTIONS/.test(resTxt), 'экзамен: результат показывает счёт «out of 30 questions»');
+  check(!(await evaluate(`!!document.querySelector('#view .timer')`)), 'экзамен: таймер остановлен на экране результата');
+  const examErrs = jsErrors.length;
+  check(examErrs === 0, `экзамен: submit и результат без JS-ошибок${examErrs ? ': ' + jsErrors.slice(-3).join('; ') : ''}`);
+  await shot('10-exam-result.png');
+  // вернёмся на дашборд перед перезапуском
+  await evaluate(`location.hash = '#/'`);
+  await waitFor(`(document.getElementById('view')?.innerText||'').includes('CIAO, QA')`, 'back to dashboard after exam', 30000);
+
   /* ---- 6. Закрыть и открыть заново: ничего не потеряно ---- */
   // перезагрузка остаётся на #/exam (прерванный экзамен → прес-старт);
   // дашборд открываем явно
