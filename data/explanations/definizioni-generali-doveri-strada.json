@@ -5070,6 +5070,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autoveicoli-3": {
+      "verdict": "VERO",
+      "key_it": "L'autocarro è un autoveicolo",
+      "chapter": "ch1",
+      "why": {
+        "en": "A truck is a vehicle built for carrying goods, and it falls within the motor-vehicle (autoveicolo) class defined by the Code.",
+        "ru": "Грузовик — это транспортное средство для перевозки грузов, и оно входит в класс автомобилей (autoveicoli), определённый Кодексом.",
+        "zh": "卡车是用于运送货物的车辆，属于法规定义的机动车（autoveicolo）类别。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autoveicoli-4": {
+      "verdict": "VERO",
+      "key_it": "I quadricicli non sono autoveicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Under the Code, light quadricycles are grouped with mopeds rather than being treated as motor vehicles (autoveicoli).",
+        "ru": "Согласно Кодексу дорог, лёгкие квадрициклы отнесены к мопедам, а не считаются автомобилями (autoveicoli).",
+        "zh": "根据道路法规，轻便四轮机动车归入轻便摩托车一类，而非机动车（autoveicoli）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autoveicoli-8": {
+      "verdict": "FALSO",
+      "key_it": "Il triciclo a motore è un autoveicolo",
+      "chapter": "ch1",
+      "why": {
+        "en": "A motorized tricycle is treated as a low-power light vehicle, not as a motor vehicle (autoveicolo), under the Code's classification.",
+        "ru": "Моторизованный трицикл по Кодексу относится к маломощным лёгким транспортным средствам, а не к автомобилям (autoveicoli).",
+        "zh": "按法规分类，机动三轮车与轻型车辆同类，不属于机动车（autoveicoli）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autoveicoli-9": {
+      "verdict": "FALSO",
+      "key_it": "qualunque veicolo a motore",
+      "chapter": "ch1",
+      "why": {
+        "en": "No: 'motor vehicle' has a precise Code definition and does not include every vehicle that has an engine — mopeds and light quadricycles sit outside it.",
+        "ru": "Нет: у термина «автомобиль» есть точное определение в Кодексе, и к нему не относится всё, что имеет двигатель — например, мопеды и лёгкие квадрициклы.",
+        "zh": "不对：「机动车」在法规中有明确界定，并非凡是装发动机都算——例如轻便摩托车和轻便四轮车就不在此列。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autoveicoli-10": {
+      "verdict": "FALSO",
+      "key_it": "trasporto di merce",
+      "chapter": "ch1",
+      "why": {
+        "en": "No: a motor vehicle is a broader category that also covers passenger cars and buses; it is not defined simply as a vehicle for carrying goods.",
+        "ru": "Нет: «автомобиль» — более широкая категория, включающая и легковые, и автобусы; определяется не просто по перевозке грузов.",
+        "zh": "不对：「机动车」是更宽泛的类别，也包括乘用车和公共汽车；并非仅指运货车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autovetture-0": {
+      "verdict": "VERO",
+      "key_it": "massimo nove persone",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: a passenger car (autovettura) is a road motor vehicle built to carry no more than nine people, driver included — exactly the Code's definition.",
+        "ru": "Верно: легковой автомобиль (autovettura) — дорожное транспортное средство для перевозки не более девяти человек, включая водителя, — это определение Кодекса.",
+        "zh": "正确：乘用车（autovettura）是道路车辆，最多可载九人（含驾驶员），这正是法规的定义。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autovetture-1": {
+      "verdict": "VERO",
+      "key_it": "L'autovettura fa parte",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the passenger car is one of the sub-categories that make up the motor-vehicle (autoveicolo) class, so it belongs to it.",
+        "ru": "Верно: легковой автомобиль — одна из подкатегорий, из которых складывается класс автомобилей (autoveicoli), поэтому он к нему относится.",
+        "zh": "正确：乘用车是构成机动车（autoveicoli）这一大类的一个子类，因此属于其中。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autovetture-3": {
+      "verdict": "VERO",
+      "key_it": "L'autobus non è un",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: a bus is a separate vehicle type built for carrying many passengers, so it is a motor vehicle but not a passenger car.",
+        "ru": "Верно: автобус — отдельный тип транспортного средства для перевозки множества пассажиров, то есть это автомобиль, но не легковой.",
+        "zh": "正确：公共汽车是独立的车辆类型（供多人乘坐），因此属于机动车，但不是乘用车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autovetture-4": {
+      "verdict": "VERO",
+      "key_it": "motore elettrico",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the Code does not require a particular engine type, so a passenger car may run on an electric motor as well as on petrol or diesel.",
+        "ru": "Верно: Кодекс не предписывает конкретный тип двигателя, поэтому легковой может работать и на электромоторе, и на бензине или дизеле.",
+        "zh": "正确：法规未规定发动机类型，因此乘用车既可以电动驱动，也可用汽油或柴油。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autovetture-5": {
+      "verdict": "VERO",
+      "key_it": "revisione periodica",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: like other motor vehicles, passenger cars must pass the periodic technical inspection (revisione) at the intervals the Code sets.",
+        "ru": "Верно: как и другие автомобили, легковые обязаны проходить периодический технический осмотр (revisione) в установленные Кодексом сроки.",
+        "zh": "正确：与其他机动车一样，乘用车须按法规规定间隔通过定期技术检验（revisione）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autovetture-7": {
+      "verdict": "FALSO",
+      "key_it": "trainare carrelli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a passenger car may tow a trailer or a car-trailer, provided the vehicle and driver meet the required mass and licence conditions.",
+        "ru": "Неверно: легковой может буксировать прицеп или прицеп-тележку, если транспортное средство и водитель удовлетворяют требованиям по массе и категории.",
+        "zh": "错误：乘用车可以牵引挂车或车拖车，只要车辆和驾驶员满足相应质量与驾照类别要求。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autovetture-9": {
+      "verdict": "FALSO",
+      "key_it": "dieci posti in totale",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the passenger-car limit is nine people including the driver; a vehicle built for ten seats already falls outside that category.",
+        "ru": "Неверно: предел для легкового — девять человек, включая водителя; рассчитанное на десять мест транспортное средство уже выходит из этой категории.",
+        "zh": "错误：乘用车的上限是九人（含驾驶员）；设计十个座位的车辆已超出这一类别。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autovetture-10": {
+      "verdict": "FALSO",
+      "key_it": "veicolo blindato",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: that description matches the armored cash-transport vehicle (veicolo blindato), a separate class; a passenger car is defined by size and seating capacity.",
+        "ru": "Неверно: такое описание относится к бронированному автомобилю для перевозки ценностей (veicolo blindato) — отдельному классу; легковой определяется габаритами и числом мест.",
+        "zh": "错误：该描述对应的是装甲运钞车（veicolo blindato）——独立类别；乘用车按尺寸和座位数界定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autovetture-11": {
+      "verdict": "FALSO",
+      "key_it": "L'autocarro è un",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a truck is built for carrying goods, so it belongs to the goods-vehicle (autocarro) class, not to passenger cars.",
+        "ru": "Неверно: грузовик предназначен для перевозки грузов, поэтому относится к классу грузовых (autocarri), а не легковых.",
+        "zh": "错误：卡车用于运货，属于货车（autocarri）类别，而非乘用车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autovetture-13": {
+      "verdict": "FALSO",
+      "key_it": "ogni cinque anni",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: for a passenger car the first inspection comes four years after first registration, then every two years — not every five years.",
+        "ru": "Неверно: для легкового первый осмотр — через четыре года после первой регистрации, далее каждые два года, а не каждые пять.",
+        "zh": "错误：乘用车首次检验在初次登记四年后，之后每两年一次——并非每五年。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-rimorchi-0": {
+      "verdict": "VERO",
+      "key_it": "privi di motore, destinati",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: a trailer (or semitrailer) has no engine of its own; it is built to be pulled by a motor vehicle, exactly as the Code defines them.",
+        "ru": "Верно: прицеп (или полуприцеп) не имеет собственного двигателя; он создан, чтобы буксироваться автомобилем, — так их и определяет Кодекс.",
+        "zh": "正确：挂车（或半挂车）没有自身发动机；它设计为被机动车牵引——法规正是如此界定。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-rimorchi-1": {
+      "verdict": "VERO",
+      "key_it": "massa massima a pieno carico",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: a light trailer is one whose maximum mass in loaded condition does not exceed 750 kg; heavier trailers are classified differently.",
+        "ru": "Верно: лёгкий прицеп — тот, чья максимальная полная масса не превышает 750 кг; более тяжёлые классифицируются иначе.",
+        "zh": "正确：轻型挂车指满载最大质量不超过 750 公斤的挂车；更重的挂车另行归类。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-rimorchi-2": {
+      "verdict": "VERO",
+      "key_it": "L'autosnodato non è classificato",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: an articulated lorry is a combination of a towing unit and a semitrailer, so the Code treats it as a vehicle combination, not as a trailer.",
+        "ru": "Верно: составной грузовик — это сочетание тягача и полуприцепа, поэтому Кодекс рассматривает его как составное транспортное средство, а не как прицеп.",
+        "zh": "正确：铰接式货车由牵引车和半挂车组合而成，法规将其视为车辆组合，而非挂车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-rimorchi-3": {
+      "verdict": "VERO",
+      "key_it": "L'autocaravan non è un rimorchio",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: a motorhome (autocaravan) has its own engine and drives under its own power, so it is a self-propelled motor vehicle, not a trailer.",
+        "ru": "Верно: кемпер (autocaravan) имеет собственный двигатель и движется своими силами, то есть это самоходный автомобиль, а не прицеп.",
+        "zh": "正确：房车（autocaravan）自带发动机、自行行驶，因此是机动车，而非挂车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-rimorchi-4": {
+      "verdict": "FALSO",
+      "key_it": "Il caravan non è un rimorchio",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a caravan is in fact a trailer — an unpowered vehicle used for living, meant to be towed by a motor vehicle.",
+        "ru": "Неверно: караван (прицеп для проживания) как раз и есть прицеп — бездвигательное транспортное средство для жилья, предназначенное для буксировки.",
+        "zh": "错误：旅居挂车（caravan）恰恰就是挂车——无动力的旅居车辆，供机动车牵引。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
