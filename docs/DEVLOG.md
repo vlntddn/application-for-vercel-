@@ -1,3 +1,13 @@
+## 2026-10-01 — L9b: пояснения, порция 112 — ch1 (definizioni-generali-doveri-strada) не-карт. НЕ-сигнальные +20
+
+Что сделано (коммит feat: L9b пояснения порция 112 на self-improve):
+- data/explanations/definizioni-generali-doveri-strada.json: 430→450 — порция 112 (20 НЕ-сигнальных ch1 без картинок; продолжение ch1 не-карт. НЕ-сигнальных).
+- ВАЖНО (пофиксил фильтр): image_url хранится как `/images/550.png` (без кавычки в конце) — старый regex `sig` не срабатывал и не исключал 33 вопроса-схемы; первые 20 «открытых» (carreggiata-doppio-senso, strada-sei-corsie, strada-tre-carreggiate…) — это вопросы-схемы, их пропускаем. Правильный open-count = 68 (совпадает с контекстом).
+- Состав (20 = 14 VERO / 6 FALSO): segnaletica-stradale 1 (VERO — не удалять) + 3 (FALSO — без исключений для danger) + 4 (FALSO — даже с уведомлением полиции) + 5 (FALSO — ограждения/конусы тоже нельзя); gare-velocita 0 (VERO — запрещено) + 1 (VERO — реclusione) + 2 (VERO — reclusione) + 3 (VERO — ставки) + 4 (FALSO — только с разрешением); inquinamento-strade 0 (VERO — не выбрасывать окурки) + 1 (VERO — опасно для двухколёсных) + 2 (VERO — пожар) + 3 (VERO — грязь на дороге) + 9 (VERO — чистить колёса) + 10 (VERO — не сыпать землю) + 11 (FALSO — не переставлять знаки для парковки) + 12 (FALSO — не выбрасывать бумагу); comportamento-conducente 8 (VERO — преимущество ≠ беспечность) + 9 (FALSO — размер ≠ приоритет); attenzion-conducente 1 (VERO — смотреть в зеркало).
+- Числа в why: нет (все why без цифр; в text_it порции 112 цифр нет).
+- Как проверено: scripts/check-explanations.mjs (checkAll) — 0 ошибок (450/450); key_it проверены substring'ом до записи (add-script abort on bad key); scripts/verify.sh — VERIFY OK (npm test 184 passed, smoke 8/8 на :3917); diff 260 insertions / 0 deletions.
+- Дальше по L9b: ch1 не-карт. НЕ-сигнальных осталось 48 (порция 113: следующие 20 в порядке файла без картинок и без схем).
+
 ## 2026-10-01 — L9b: пояснения, порция 111 — ch1 (definizioni-generali-doveri-strada) не-карт. НЕ-сигнальные +20
 
 Что сделано (коммит feat: L9b пояснения порция 111 на self-improve):
