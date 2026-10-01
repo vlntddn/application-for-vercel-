@@ -1,3 +1,14 @@
+## 2026-10-01 — L9b: пояснения, порция 82 — ch1 (definizioni-generali-doveri-strada) +10 сигнальных, НЕ-КАРТ. СИГНАЛЬНЫЕ ch1 ЗАКРЫТЫ 168/168, сигнал 1005/2030
+
+Что сделано (коммит feat: L9b пояснения порция 82 на self-improve):
+- data/explanations/definizioni-generali-doveri-strada.json: 160→170 — порция 82 (все 10 — сигнальные без картинок): segnaletica-stradale 2 (VERO), inquinamento-strade 6/8/13/14/15 (запрет выбрасывать мусор/предметы из окна на дорогу), piazzole 4/11 (FALSO — парковка/стоянка вне разрешённых мест), taxi-conducente 2 (VERO — место только для такси), 6 (FALSO — ночного исключения нет, ограничение действует всё время).
+- ch1 не-карт. сигнальные ЗАКРЫТЫ 168/168 (остаток ch1 — только 6 сигналов с картинками, ждут ручного разбора).
+- Счётчики (node /tmp/pp-counters.mjs): не-карт. сигнал 970→980/1253; общий сигнал 995→1005/2030.
+- Закрыт вопрос p81: «мусор» в ru piazzole-11 — НЕ опечатка; проверка кодовых точек (43C 443 441 43E 440 = м у с о р) подтвердила верное написание, искажение было артефактом терминала.
+- Поправка в порции: taxi-conducente-6 — «20:00/08:00» переписано в «from 20 to 8» / «с 20 до 8 часов»: номер-чекер (check-explanations.mjs, extractNumbers) разбирает «08:00» как два числа 8 и 0, «0» нет в allow-сете text_it/mustKnow → invented number 0.
+- Как проверено: scripts/verify.sh — VERIFY OK (npm test 184 passed, smoke 8/8 на :3917); diff add-only (130 insertions / 0 deletions).
+- Дальше по L9b: ch15 luci-dispositivi-acustici (35 не-карт. сигнальных) / ch16 patente-punti-documenti (осталось 8, низкая уверенность) — по PATH_ORDER.
+
 ## 2026-10-01 — L9b: пояснения, порция 81 — ch18 (alcool-droga-primo-soccorso) +7, глава ЗАКРЫТА 141/141, сигнал 995/2030
 
 Что сделано (коммит feat: L9b пояснения порция 81 на self-improve):
