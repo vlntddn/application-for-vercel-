@@ -260,6 +260,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-assicurazione-scaduta-4": {
+      "verdict": "FALSO",
+      "key_it": "si può utilizzare il veicolo solo sul territorio italiano",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: with expired liability insurance the vehicle must not be used at all; there is no special allowance for driving only within Italy.",
+        "ru": "Ложно: при просроченном страховании ответственности транспортным средством нельзя пользоваться вовсе; никакого специального права ездить только по Италии нет.",
+        "zh": "错误：责任险保险过期后根本不能使用该车辆，并无“仅限在意大利境内行驶”的特别许可。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-assicurazione-scaduta-6": {
+      "verdict": "FALSO",
+      "key_it": "deve essere sottoposto a collaudo tecnico prima di essere rimesso in circolazione",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: a lapsed insurance policy does not require a technical inspection before the vehicle goes back on the road; it requires renewed insurance.",
+        "ru": "Ложно: просроченный полис не требует технического осмотра перед возвращением на дорогу; требуется продлённое страхование.",
+        "zh": "错误：保单过期并不要求车辆重新上路前进行技术检验；需要的是续保。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-assicurazione-scaduta-7": {
+      "verdict": "FALSO",
+      "key_it": "solo se si è disposti a pagare personalmente gli eventuali danni arrecati",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: driving with expired insurance is not allowed even if the driver is ready to pay personally; valid compulsory insurance is required before circulating.",
+        "ru": "Ложно: ездить с просроченным полисом нельзя даже при готовности лично возместить ущерб; для движения нужно действующее обязательное страхование.",
+        "zh": "错误：即便愿意个人承担赔偿，保险过期后也不能行驶；上路必须有有效的强制保险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-furto-incendio-6": {
+      "verdict": "FALSO",
+      "key_it": "coprono, normalmente, solo i danni causati da incendi dolosi (intenzionali) e non quelli provocati da incendi accidentali (casuali)",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: vehicle fire policies normally cover accidental (casual) fires, not only intentional ones; the statement reverses the real rule.",
+        "ru": "Ложно: полисы от пожара покрывают, как правило, случайные (несловесные) пожары, а не только умышленные; утверждение переворачивает реальное правило.",
+        "zh": "错误：车辆火灾保险通常赔付偶然（意外）火灾，而不仅是故意纵火；该说法颠倒了实际规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-coperture-assicurazione-0": {
+      "verdict": "VERO",
+      "key_it": "è valida anche per gli incidenti avvenuti nei Paesi dell'Unione Europea",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: civil liability car insurance is also valid for accidents that occur in the countries of the European Union.",
+        "ru": "Верно: страхование гражданской ответственности авто действует и для происшествий, случившихся в странах Европейского союза.",
+        "zh": "正确：汽车民事责任保险同样适用于在欧盟各国内发生的事故。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-coperture-assicurazione-1": {
+      "verdict": "FALSO",
+      "key_it": "copre anche la responsabilità penale in base al premio pagato",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: civil liability insurance does not cover criminal responsibility, whatever the premium; it covers civil damage to third parties only.",
+        "ru": "Ложно: страхование гражданской ответственности не покрывает уголовную ответственность при любом размере премии; оно покрывает лишь гражданский ущерб третьим лицам.",
+        "zh": "错误：无论保费多少，民事责任保险都不覆盖刑事责任；它只赔付对第三方的民事损失。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-coperture-assicurazione-2": {
+      "verdict": "FALSO",
+      "key_it": "copre anche le sanzioni amministrative pecuniarie, previste dal codice della strada",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: the compulsory insurance does not cover the administrative fines provided by the Highway Code; those fines are personal to the offender.",
+        "ru": "Ложно: обязательное страхование не покрывает административные штрафы по ПДД; эти штрафы личные к нарушителю.",
+        "zh": "错误：强制保险不覆盖道路法规定的行政罚款；这些罚款由违法者个人承担。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-coperture-assicurazione-3": {
+      "verdict": "FALSO",
+      "key_it": "copre ogni danno causato, anche se superiore al massimale stabilito",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: the policy pays only up to the established limit; damage above the massimale is not covered by the compulsory policy.",
+        "ru": "Ложно: полис платит только до установленного предела; ущерб сверх лимита не покрывается обязательным страхованием.",
+        "zh": "错误：保单只在规定的限额内赔付；超出限额的损失不由强制保险覆盖。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-coperture-assicurazione-4": {
+      "verdict": "FALSO",
+      "key_it": "copre solo la responsabilità del conducente, ma non quella del proprietario del veicolo",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: civil liability car insurance also covers the civil responsibility of the vehicle owner, not only that of the driver.",
+        "ru": "Ложно: страхование гражданской ответственности авто покрывает и гражданскую ответственность владельца, а не только водителя.",
+        "zh": "错误：汽车民事责任保险也覆盖车辆所有人的民事责任，而非仅驾驶员的责任。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-coperture-assicurazione-5": {
+      "verdict": "FALSO",
+      "key_it": "copre solo i danni arrecati alle persone, perché per i danni alle cose occorre un altro tipo di contratto",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: compulsory insurance covers damage to both people and property caused to third parties; no separate contract is needed for property damage.",
+        "ru": "Ложно: обязательное страхование покрывает ущерб и людям, и имуществу, причинённый третьим лицам; отдельный договор для имущественного ущерба не нужен.",
+        "zh": "错误：强制保险赔付对第三方人身与财产造成的损失；财产损害无需另行签订合同。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-imprese-assicuratrici-0": {
+      "verdict": "VERO",
+      "key_it": "l'impresa assicuratrice deve rilasciare al cliente il certificato di assicurazione",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: after the civil liability contract is signed, the insurer must issue the insurance certificate to the client.",
+        "ru": "Верно: после подписания договора о гражданской ответственности страховая должна выдать клиенту страховое свидетельство.",
+        "zh": "正确：签署民事责任保险合同后，保险公司必须向客户签发保险证书。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-imprese-assicuratrici-2": {
+      "verdict": "VERO",
+      "key_it": "deve essere sempre tenuto a bordo del veicolo",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: the compulsory insurance certificate must always be kept on board the vehicle.",
+        "ru": "Верно: страховое свидетельство обязательного страхования всегда должно находиться на борту транспортного средства.",
+        "zh": "正确：强制保险证书必须始终随车携带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-imprese-assicuratrici-3": {
+      "verdict": "FALSO",
+      "key_it": "deve rilasciare al cliente un elenco delle autocarrozzerie convenzionate, da contattare in caso d'incidente",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: the insurer is not required to hand the client a list of approved bodyshops to contact in case of an accident.",
+        "ru": "Ложно: страховая не обязана выдавать клиенту перечень согласованных кузовных мастерских для связи при ДТП.",
+        "zh": "错误：保险公司没有义务向客户提供事故时应联系的定点车身修理厂名单。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-imprese-assicuratrici-4": {
+      "verdict": "FALSO",
+      "key_it": "deve rilasciare al cliente un libretto sulle nozioni di pronto soccorso",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: the insurer does not have to issue a booklet on first-aid notions as part of the civil liability policy.",
+        "ru": "Ложно: страховая не обязана выдавать брошюру с основами первой помощи по полису гражданской ответственности.",
+        "zh": "错误：保险公司没有义务随民事责任保单发放急救基础手册。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-imprese-assicuratrici-5": {
+      "verdict": "FALSO",
+      "key_it": "deve rilasciare al cliente un manuale su come evitare incidenti",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: the insurer is not obliged to give the client a manual on how to avoid accidents.",
+        "ru": "Ложно: страховая не обязана выдавать клиенту руководство о том, как избегать происшествий.",
+        "zh": "错误：保险公司没有义务向客户提供如何避免事故的手册。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-imprese-assicuratrici-6": {
+      "verdict": "FALSO",
+      "key_it": "comprende il risarcimento dei danni provocati dal veicolo, purché guidato dal proprietario",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: civil liability insurance is not limited to the vehicle when driven by the owner; it covers the damage the vehicle causes to third parties generally.",
+        "ru": "Ложно: страхование гражданской ответственности не ограничено случаями, когда машиной управляет владелец; оно покрывает ущерб, который автомобиль причиняет третьим лицам в общем.",
+        "zh": "错误：民事责任保险并不限于车主亲自驾驶的情形；它一般覆盖车辆对第三方造成的损害。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-0": {
+      "verdict": "VERO",
+      "key_it": "Il conducente non deve mai sopravvalutare la propria abilità di guida",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: a driver must never overestimate their own driving skill; overconfidence is a real source of danger.",
+        "ru": "Верно: водитель никогда не должен переоценивать собственное мастерство; самоуверенность — реальный источник опасности.",
+        "zh": "正确：驾驶员绝不能高估自己的驾驶水平；自信过头是真实危险之源。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-1": {
+      "verdict": "VERO",
+      "key_it": "per garantire una maggior sicurezza di guida per tutti gli utenti della strada",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: traffic rules are set to guarantee greater driving safety for all road users, not just drivers.",
+        "ru": "Верно: нормы движения установлены, чтобы обеспечить большую безопасность для всех участников движения, а не только водителей.",
+        "zh": "正确：交通规则的制定是为了保障所有道路使用者的行车安全，而非仅司机。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-2": {
+      "verdict": "VERO",
+      "key_it": "Concentrare la propria attenzione sulle indicazioni del navigatore satellitare può rappresentare un elemento di distrazione alla guida",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: focusing attention on the sat-nav instructions can be a source of distraction while driving.",
+        "ru": "Верно: сосредоточение внимания на указаниях навигатора может стать источником отвлечения при управлении.",
+        "zh": "正确：将注意力集中在卫星导航的指示上，可能成为驾驶时分心的因素。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-3": {
+      "verdict": "VERO",
+      "key_it": "il conducente deve prestare attenzione, sia a gli utenti che si trovano davanti al proprio veicolo, sia a coloro che si trovano ai bordi della strada",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: while driving the driver must pay attention both to the users ahead of the vehicle and to those at the roadside.",
+        "ru": "Верно: при движении водитель должен обращать внимание и на участников перед автомобилем, и на тех, кто находится у краёв дороги.",
+        "zh": "正确：驾驶时驾驶员既要注意车辆前方的参与者，也要注意道路两侧的人员。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
