@@ -2080,6 +2080,136 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-09-30"
+    },
+    "definizioni-generali-doveri-strada-segnaletica-stradale-2": {
+      "verdict": "VERO",
+      "key_it": "Spostare la segnaletica stradale può comportare pericolo grave",
+      "chapter": "ch1",
+      "why": {
+        "en": "True: moving traffic signs can seriously endanger other road users — vehicles may follow the wrong indications, miss a hazard or an intersection, which the law forbids and punishes.",
+        "ru": "Верно: перемещение дорожных знаков может создать серьёзную опасность для других участников — водители поедут по неверным указаниям, пропустят опасность или перекрёсток; это запрещено и наказывается.",
+        "zh": "正确：移动交通标志会给其他道路使用者带来严重危险——车辆可能按错误指示行驶、错过危险路口，法律明令禁止并处罚。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-6": {
+      "verdict": "VERO",
+      "key_it": "portando con sé un animale domestico, se custodito in apposita gabbia",
+      "chapter": "ch1",
+      "why": {
+        "en": "True: a two-wheeled vehicle driver may carry a pet only if it is kept in a special cage and it does not stick out by more than 50 cm beyond the vehicle — otherwise it endangers the driver and others.",
+        "ru": "Верно: водитель двухколёсного транспорта может везти домашнее животное только в специальной клетке и если оно выступает за габариты не более чем на 50 см — иначе это опасно для водителя и других.",
+        "zh": "正确：两轮车驾驶员可携带宠物，但必须装在专用笼子里，且突出车身不得超过50厘米——否则会危及驾驶员和他人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-8": {
+      "verdict": "VERO",
+      "key_it": "si sporca notevolmente la strada",
+      "chapter": "ch1",
+      "why": {
+        "en": "True: if, leaving a muddy path, you dirty the road noticeably, you can be fined an administrative penalty — keeping the road clean is a driver's duty, and a dirty road is slippery and dangerous.",
+        "ru": "Верно: если, выезжая с грязной тропы, вы заметно загрязняете дорогу — вам грозит административный штраф; чистота дороги — обязанность водителя, а грязная дорога скользка и опасна.",
+        "zh": "正确：离开泥泞小径时若明显弄脏道路，可被处以行政罚款——保持道路清洁是驾驶员义务，脏路湿滑危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-13": {
+      "verdict": "FALSO",
+      "key_it": "lanciare oggetti dal finestrino sulla banchina",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: throwing objects out of the window onto the shoulder is strictly forbidden — litter pollutes the road and the surrounding land and can become a projectile that endangers other drivers.",
+        "ru": "Ложно: выбрасывать предметы из окна на обочину строго запрещено — мусор загрязняет дорогу и окрестности, а предмет в воздухе может стать снарядом, опасным для других водителей.",
+        "zh": "错误：从车窗向路肩抛物品严格禁止——垃圾污染道路和周边土地，空中飞出的物品还可能成为危害其他驾驶员的抛射物。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-14": {
+      "verdict": "FALSO",
+      "key_it": "Su una strada ricoperta da brecciolino il conducente può circolare a velocità sostenuta",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: on a road covered with gravel you must reduce speed — loose stones scatter under the wheels, reduce grip and can damage other vehicles; a sustained high speed here is dangerous and forbidden.",
+        "ru": "Ложно: на дороге, покрытой щебнем, нужно снизить скорость — рыхлые камни разлетаются под колёсами, ухудшают сцепление и разбивают другие машины; устойчивая высокая скорость здесь опасна и запрещена.",
+        "zh": "错误：在碎石路面上必须减速——松石在车轮下飞散、降低抓地力并击伤其他车辆；此处保持较高速度既危险又违规。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-15": {
+      "verdict": "FALSO",
+      "key_it": "superare i veicoli in coda accelerando bruscamente e cambiando ripetutamente corsia",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: cutting through a traffic queue with sudden acceleration and repeated lane changes is forbidden — this is dangerous for the queued drivers and the queue must not be bypassed in this way.",
+        "ru": "Ложно: врезаться в очередь с резким ускорением и частыми перестроениями запрещено — это опасно для стоящих в очереди, и обгонять очередь таким способом нельзя.",
+        "zh": "错误：猛然加速并频繁变道插队是禁止的——这对排队车辆很危险，不得以这种方式超越排队车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-piazzole-4": {
+      "verdict": "VERO",
+      "key_it": "i bambini scendano dall'autobus senza fare attenzione ai veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "True: near a school bus stop children may get off without looking for oncoming vehicles — so the driver must slow down and be ready to stop, anticipating the behaviour of the children.",
+        "ru": "Верно: у остановки школьного автобуса дети могут выйти, не глядя по сторонам, — поэтому водителю нужно сбавить скорость и быть готовым остановиться, предвидя поведение детей.",
+        "zh": "正确：在校车候车亭附近，孩子下车时可能不看来往车辆——因此驾驶员应减速并随时准备停车，预判孩子的行为。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-piazzole-11": {
+      "verdict": "FALSO",
+      "key_it": "non si può proseguire nella marcia se le portiere dello scuolabus sono ancora aperte",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: the rule is the opposite — you must not continue driving next to a school bus while its doors are still open: children may get off or on and step onto the road, so the driver must slow down and be ready to stop.",
+        "ru": "Ложно: правило обратное — пока у школьного автобуса открыты двери, ехать рядом нельзя: дети могут садиться или выходить и шагнуть на дорогу, поэтому водитель должен снизить скорость и быть готовым остановиться.",
+        "zh": "错误：规定恰恰相反——校车车门未关时不得继续行驶：孩子可能上下车并走上路面，驾驶员必须减速并随时准备停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-taxi-conducente-2": {
+      "verdict": "VERO",
+      "key_it": "non può sostare nei posteggi riservati ai taxi",
+      "chapter": "ch1",
+      "why": {
+        "en": "True: parking spaces reserved for taxis may not be used for stopping or parking by other vehicles — occupying them prevents taxis from operating where they are needed.",
+        "ru": "Верно: места, отведённые такси, нельзя использовать для остановки и стоянки другими транспортными средствами — их занятие мешает такси работать там, где оно нужно.",
+        "zh": "正确：出租车专用车位不允许其他车辆停靠或停放——占用会妨碍出租车在需要的地方运营。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-taxi-conducente-6": {
+      "verdict": "FALSO",
+      "key_it": "può sostare nei posteggi riservati ai taxi dalle ore 20.00 alle ore 8.00",
+      "chapter": "ch1",
+      "why": {
+        "en": "False: there is no night exception — taxi spaces are reserved for taxis for the whole period the reservation is in force, so stopping there during the night hours, from 20 to 8, is an infraction just like by day.",
+        "ru": "Ложно: ночного исключения нет — места такси отведены им на всё время действия ограничения, поэтому ночная стоянка там с 20 до 8 часов — такое же нарушение, как и днём.",
+        "zh": "错误：没有夜间例外——出租车车位在限制生效的整个时段都只供出租车使用，因此夜间20点至8点停靠同样违规。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
