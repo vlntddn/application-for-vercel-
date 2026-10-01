@@ -1,3 +1,45 @@
+## 2026-10-02 — Q4.2, срез 4: Путь (learning path) на 3 языках
+
+Ветка self-improve. Четвёртый срез Q4.2 — **страница пути обучения**
+(views/path.js): заголовок + lede, блок «NEXT STEP» (текущая глава, кнопка
+к практике), pipeline из трёх этапов (read → check → practice) со
+статусами, карточки глав на дашборде (текущая/пройдены/завершены,
+прогресс, кнопки продолжить/практика).
+
+**Что.** Все видимые строки path переведены через `t('pth.…')` на en/ru/zh:
+22 ключа в каждом словаре (заголовок/lede/next-step, три pipeline-этапа
+с состояниями pending/active/done, карточки: заголовок, «n steps done»,
+кнопки CONTINUE/PRACTICE, «N of M», «UP NEXT»). EN = байт-в-байт прежний
+хардкод.
+
+**partLabel (особенность).** RU/ZH-строки не должны содержать английских
+слов «Read / Check / Practice» — в path.js введён lookup-мап
+`partLabel = { read: t('pth.partRead'), … }` и подстановка в
+`t('pth.step…', { part: … })` — переводится целиком на стороне словаря.
+
+**Бак, пойманный при переводе.** В ternary кнопки карточки
+(`t('pth.cardContinue') + ' — ' + t('pth.partPractice')`) были перепутаны
+кавычки (одна сторона — двойные) — синтаксис валиден, но EN-вывод
+менялся; исправлено до коммита, EN byte-в-byte.
+
+**Как.**
+- `public/js/i18n.js`: +22 ключа `pth.*` в каждый из трёх словарей,
+  `{…}`-плейсхолдеры идентичны (i18n.test.mjs: 3 языка — паритет OK).
+- `public/js/views/path.js`: `import { t }` (уже был), все литеральные
+  строки → `t('pth.…')`; структура/class-имена не тронуты. `loc` из
+  common.js остался неиспользуемым — как в HEAD, не трогаю.
+- `public/sw.js`: VERSION v82 → v83 (SHELL/DATA cache-bust).
+- `tests/security.test.js`: новый гарант «the learning path screen is
+  localized» — view ссылается только на `t('pth.…')`, старых
+  хардкод-литералов нет, EN-копи живёт в словаре.
+
+**Проверка.** `scripts/verify.sh`: npm test 203 passed (+1 новый),
+qa-new-user 73 PASS / 0 FAIL, smoke 8/8, sw VERSION bumped — VERIFY OK.
+Коммит 97a9049, push self-improve.
+
+Следующий срез: ошибки (#/mistakes) — views/mistakes.js.
+
+
 ## 2026-10-02 — Q4.2, срез 3: Экзамен + результат на 3 языках
 
 Ветка self-improve. Третий срез Q4.2 — **экзамен / экран результата**
