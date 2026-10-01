@@ -806,6 +806,266 @@
       "source": "ai-draft",
       "model": "offline-human-draft",
       "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-cintura-sicurezza-0": {
+      "verdict": "VERO",
+      "key_it": "pur facendo uso della cintura di sicurezza",
+      "chapter": "ch22",
+      "why": {
+        "en": "Penalties apply even if the belt is being used but its normal functioning is altered or obstructed, for example with devices that stop it from retracting.",
+        "ru": "Верно: ответственность наступает и в том случае, если ремень используется, но его нормальная работа нарушена или затруднена, например устройствами, не дающими ему срабатывать.",
+        "zh": "正确：即使在使用安全带，但如果改装或妨碍其正常工作（例如使用使其无法回缩的装置），也会被处罚。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-veicoli-airbag-0": {
+      "verdict": "VERO",
+      "key_it": "schienale rivolto verso il parabrezza",
+      "chapter": "ch22",
+      "why": {
+        "en": "On vehicles with a deactivatable front airbag, the airbag must be switched off before installing a child seat facing backwards, because an inflating airbag would be lethal for the child.",
+        "ru": "Верно: на автомобиле с отключаемой подушкой безопасности перед установкой детского кресла спинкой к лобовому стеклу подушку обязательно отключают — при раскрытии она смертельна для ребёнка.",
+        "zh": "正确：在配备可关闭前排安全气囊的车辆上，安装朝后（背靠挡风玻璃）的儿童座椅前必须关闭安全气囊，否则气囊展开会危及儿童生命。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-veicoli-airbag-2": {
+      "verdict": "FALSO",
+      "key_it": "dotato di air-bag",
+      "chapter": "ch22",
+      "why": {
+        "en": "The airbag is only a supplement to the belts and works safely with them fastened; its presence never removes the duty to wear seat belts while driving.",
+        "ru": "Неверно: подушка безопасности — лишь дополнение к ремням и работает в связке с пристёгнутыми; её наличие никогда не снимает обязанность пристегиваться в движении.",
+        "zh": "错误：安全气囊只是安全带的补充装置，需配合系好的安全带使用；有气囊也绝不免除行驶时系安全带的义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-poggiatesta-0": {
+      "verdict": "VERO",
+      "key_it": "\"colpo di frusta\"",
+      "chapter": "ch22",
+      "why": {
+        "en": "The headrest limits the backwards head movement in rear-end collisions, which is exactly what causes whiplash injuries.",
+        "ru": "Верно: подголовник ограничивает запрокидывание головы назад при ударе сзади — именно так возникает травма «хлыстовый удар».",
+        "zh": "正确：头枕在追尾碰撞中限制头部后仰，而头部后仰正是导致“挥鞭伤”的原因。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-poggiatesta-1": {
+      "verdict": "VERO",
+      "key_it": "regolato correttamente, sia in altezza che in inclinazione",
+      "chapter": "ch22",
+      "why": {
+        "en": "The headrest only protects if it is adjusted correctly, in both height and inclination, so that it supports the head itself.",
+        "ru": "Верно: подголовник защищает только при правильной регулировке — и по высоте, и по наклону, чтобы опиралась именно голова.",
+        "zh": "正确：头枕只有在高度和倾角都调节正确、能承托头部本身时才能起到保护作用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-poggiatesta-2": {
+      "verdict": "FALSO",
+      "key_it": "rilassare la muscolatura",
+      "chapter": "ch22",
+      "why": {
+        "en": "The headrest is a safety device against whiplash, not a comfort accessory for relaxing the neck muscles while driving.",
+        "ru": "Неверно: подголовник — элемент безопасности против «хлыстового удара», а не комфортная опора для расслабления мышц шеи при вождении.",
+        "zh": "错误：头枕是防止“挥鞭伤”的安全部件，而非开车时放松颈部肌肉的舒适配件。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-poggiatesta-3": {
+      "verdict": "FALSO",
+      "key_it": "non di sicurezza, ma estetica",
+      "chapter": "ch22",
+      "why": {
+        "en": "The headrest has precisely a safety function: it protects the head in rear-end collisions, not an aesthetic one.",
+        "ru": "Неверно: у подголовника как раз есть функция безопасности — он защищает голову при ударе сзади, а не чисто эстетическая.",
+        "zh": "错误：头枕恰恰具有安全功能——在追尾碰撞中保护头部，而非纯装饰作用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-situazioni-particolari-sicurezza-0": {
+      "verdict": "VERO",
+      "key_it": "donne in stato di gravidanza con particolari condizioni di rischio certificate",
+      "chapter": "ch22",
+      "why": {
+        "en": "Pregnant women with certified special risk conditions are legally exempt from the belt obligation; for everyone else it always applies.",
+        "ru": "Верно: беременные с официально подтверждённым особым риском по состоянию здоровья освобождаются от обязанности пристегиваться; для всех остальных она действует всегда.",
+        "zh": "正确：有医学证明存在特殊妊娠风险的孕妇可依法免系安全带；其他所有人始终必须系。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-situazioni-particolari-sicurezza-1": {
+      "verdict": "VERO",
+      "key_it": "particolari malattie certificate",
+      "chapter": "ch22",
+      "why": {
+        "en": "People with certified particular medical conditions that make the belt dangerous are exempt from fastening it; a medical certificate is required.",
+        "ru": "Верно: лица, у которых по официальному медицинскому заключению особые заболевания делают ремень опасным, освобождаются от пристёгивания.",
+        "zh": "正确：经医学证明患有系安全带会危害健康的特殊疾病的人可以免系安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-situazioni-particolari-sicurezza-2": {
+      "verdict": "VERO",
+      "key_it": "istruttori di guida",
+      "chapter": "ch22",
+      "why": {
+        "en": "Driving instructors are a listed exemption: while professionally instructing in a dual-control car they are not required to fasten the belt.",
+        "ru": "Верно: инструкторы вождения входят в перечень освобождённых: при профессиональных занятиях в машине с дублирующими педалями пристёгиваться они не обязаны.",
+        "zh": "正确：驾驶教练属于法定豁免人员，在职业教学中（陪驾车辆）不强制系安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-situazioni-particolari-sicurezza-3": {
+      "verdict": "FALSO",
+      "key_it": "postino",
+      "chapter": "ch22",
+      "why": {
+        "en": "The postal worker is not on the list of exempted categories; during work, like any other driver, he must fasten the seat belt.",
+        "ru": "Неверно: почтальон не входит в перечень освобождённых категорий и, как любой другой водитель, обязан пристегнуться при работе.",
+        "zh": "错误：邮递员不在豁免名单之列，工作时和任何驾驶员一样必须系安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-situazioni-particolari-sicurezza-4": {
+      "verdict": "FALSO",
+      "key_it": "oltre 65 anni",
+      "chapter": "ch22",
+      "why": {
+        "en": "There is no age-based exemption: the belt must be fastened at any age; only certified particular conditions can relieve the obligation.",
+        "ru": "Неверно: освобождения по возрасту не существует — пристёгиваться обязаны в любом возрасте; снимают обязанность только подтверждённые особые состояния.",
+        "zh": "错误：没有按年龄的豁免——任何年龄都必须系安全带；只有经证明的特殊情况才可豁免。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-situazioni-particolari-sicurezza-5": {
+      "verdict": "FALSO",
+      "key_it": "autorizzazione ad esercitarsi alla guida",
+      "chapter": "ch22",
+      "why": {
+        "en": "A learner driver practising with a learning authorisation is an ordinary occupant on the road and must use the seat belt like everyone else.",
+        "ru": "Неверно: обучающийся с разрешением на практику — обычный участник движения, и он обязан пристегиваться, как все.",
+        "zh": "错误：持练习许可（实习卡）练车的驾驶者与所有人一样必须系安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-0": {
+      "verdict": "VERO",
+      "key_it": "limitare i danni al conducente e ai passeggeri",
+      "chapter": "ch22",
+      "why": {
+        "en": "The belts limit the injuries of the driver and passengers in a crash: they hold the body and spread the forces over the strongest parts.",
+        "ru": "Верно: ремни ограничивают травмы водителя и пассажиров при ДТП — удерживают тело и распределяют усилие по самым прочным частям тела.",
+        "zh": "正确：安全带的作用是减少事故中驾驶员和乘客的损伤——固定身体并将力分散到身体最坚固的部位。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-1": {
+      "verdict": "VERO",
+      "key_it": "indossate sia dal conducente che dai passeggeri",
+      "chapter": "ch22",
+      "why": {
+        "en": "On cars fitted with belts, both the driver and every passenger must wear them, in town and on any road, at any speed.",
+        "ru": "Верно: в автомобиле с ремнями пристёгиваются и водитель, и все пассажиры — в городе и на любой дороге, на любой скорости.",
+        "zh": "正确：配备安全带的汽车上，驾驶员和所有乘客都必须系好——市区和任何道路、任何速度都一样。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-2": {
+      "verdict": "VERO",
+      "key_it": "periodico controllo del loro stato di usura",
+      "chapter": "ch22",
+      "why": {
+        "en": "Belts are mechanical devices that wear out, so their condition and efficiency must be checked periodically; a worn belt must be replaced.",
+        "ru": "Верно: ремни — механический узел, который изнашивается, поэтому состояние и работоспособность надо периодически проверять, а изношенный ремень менять.",
+        "zh": "正确：安全带是机械部件，会磨损，因此须定期检查其状态和有效性，磨损后必须更换。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-4": {
+      "verdict": "VERO",
+      "key_it": "mantenere il corpo attaccato al sedile",
+      "chapter": "ch22",
+      "why": {
+        "en": "In a hard impact the belts keep the body pressed against the seat so the person does not fly forward inside the car.",
+        "ru": "Верно: при сильном ударе ремни прижимают тело к креслу, чтобы человек не отлетел вперёд по салону.",
+        "zh": "正确：强烈碰撞时安全带将身体固定在座椅上，避免人在车内向前飞出。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-5": {
+      "verdict": "VERO",
+      "key_it": "urtare parti interne del veicolo",
+      "chapter": "ch22",
+      "why": {
+        "en": "By holding the body on the seat, the belts prevent the driver or passengers from hitting the interior parts of the vehicle in a hard impact.",
+        "ru": "Верно: удерживая тело в кресле, ремни не дают водителю или пассажирам удариться о внутренние части автомобиля при сильном ударе.",
+        "zh": "正确：安全带将身体固定在座椅上，防止强烈碰撞时驾驶员或乘客撞击车内部件。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-6": {
+      "verdict": "VERO",
+      "key_it": "proiettati all’esterno della autovettura",
+      "chapter": "ch22",
+      "why": {
+        "en": "In a hard impact the belts keep occupants inside the vehicle, preventing them from being thrown out through the glass or doors.",
+        "ru": "Верно: при сильном ударе ремни удерживают людей внутри автомобиля, не давая вылететь им через стёкла или двери.",
+        "zh": "正确：强烈碰撞时安全带使人留在车内，防止被甩出车外（穿过玻璃或车门）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-15": {
+      "verdict": "FALSO",
+      "key_it": "appositi strumenti",
+      "chapter": "ch22",
+      "why": {
+        "en": "Devices that loosen the belt from the body defeat its function; instead a belt that fits poorly should be checked and corrected at the fitting point.",
+        "ru": "Неверно: приспособления, ослабляющие прилегание ремня к телу, сводят его действие на нет; если ремень лежит неудачно — его нужно проверить и правильно отрегулировать.",
+        "zh": "错误：用来让安全带脱离身体的装置会使其失去作用；如果安全带贴合不好，应检查并正确调整，而不是使用辅助工具。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
     }
   }
 }
