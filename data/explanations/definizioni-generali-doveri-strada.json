@@ -6370,6 +6370,110 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclisti-pedoni-8": {
+      "verdict": "FALSO",
+      "key_it": "si devono sorpassare senza superare la velocità di 30 km/h",
+      "chapter": "ch1",
+      "why": {
+        "en": "No rule fixes a speed ceiling for overtaking cyclists or pedestrians: you must simply keep a safe distance and a reduced, controlled speed.",
+        "ru": "Никакое правило не вводит предел скорости при обгоне велосипедистов и пешеходов: нужно лишь выдержать безопасный интервал и умеренную скорость.",
+        "zh": "并没有规定超越自行车或行人时的速度上限：只需保持安全距离和适中、可控的车速即可。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-gravidanza-carrozzine-1": {
+      "verdict": "VERO",
+      "key_it": "donne in stato di gravidanza che attraversano la strada",
+      "chapter": "ch1",
+      "why": {
+        "en": "A pregnant woman crossing the road needs extra care: she may move more slowly and require a moment, so greater caution and patience are justified.",
+        "ru": "Беременная женщина, переходящая дорогу, требует особой осторожности: она может двигаться медленнее и задержаться, поэтому внимательность и терпение оправданы.",
+        "zh": "正在过马路的孕妇需要格外小心：她可能动作较慢、需要停顿，因此更高的谨慎和耐心是合理的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-gravidanza-carrozzine-2": {
+      "verdict": "VERO",
+      "key_it": "pedoni che spingono una carrozzina per bambini",
+      "chapter": "ch1",
+      "why": {
+        "en": "A pedestrian pushing a child's stroller moves slowly, sees less, and may stop suddenly, so they deserve greater caution.",
+        "ru": "Пешеход, толкающий детскую коляску, движется медленно, хуже видит дорогу и может резко остановиться, — поэтому нужна повышенная осторожность.",
+        "zh": "推婴儿车的行人走得慢、视野受限，还可能突然停下，因此应给予更多的谨慎。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-gravidanza-carrozzine-3": {
+      "verdict": "VERO",
+      "key_it": "è vietato ostruire eventuali scivoli del marciapiede",
+      "chapter": "ch1",
+      "why": {
+        "en": "Parking may not block the sidewalk ramps that wheelchairs and strollers use: they guarantee access for people with reduced mobility.",
+        "ru": "При парковке нельзя перекрывать наклонные дорожки на тротуаре, по которым едут коляски и инвалидные кресла: они обеспечивают доступ маломобильных людей.",
+        "zh": "停车不得占用人行道上供轮椅和婴儿车通行的坡道：它们保障行动不便者的通行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-gravidanza-carrozzine-4": {
+      "verdict": "VERO",
+      "key_it": "non bisogna avvicinarsi troppo con il veicolo",
+      "chapter": "ch1",
+      "why": {
+        "en": "Coming too close to a pregnant woman crossing can frighten her and make her move unpredictably, so keep a comfortable distance.",
+        "ru": "Подъезжать слишком близко к беременной, переходящей дорогу, опасно: её можно напугать, и она может сделать непредсказуемый шаг, — держите дистанцию.",
+        "zh": "太贴近正在过马路的孕妇可能吓到她，使其动作失控，因此应保持舒适的距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-gravidanza-carrozzine-5": {
+      "verdict": "FALSO",
+      "key_it": "ha il passo più rapido e quindi attraversa velocemente",
+      "chapter": "ch1",
+      "why": {
+        "en": "A pregnant woman usually walks more slowly and carefully, not faster, so the claim that she crosses quickly is wrong.",
+        "ru": "Беременная обычно идёт медленнее и осторожнее, а не быстрее, поэтому утверждение о быстром переходе неверно.",
+        "zh": "孕妇通常走得更慢、更小心，而不是更快，所以「她过街很快」的说法是错的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-gravidanza-carrozzine-6": {
+      "verdict": "FALSO",
+      "key_it": "di solito, attraversa rapidamente",
+      "chapter": "ch1",
+      "why": {
+        "en": "Someone pushing a stroller usually crosses slowly and may stop, not quickly, so the assumption is wrong.",
+        "ru": "Человек, толкающий коляску, обычно переходит медленно и может остановиться, а не быстро, — поэтому это предположение неверно.",
+        "zh": "推婴儿车的人通常过街很慢，还可能停下，而不是很快，所以这个假设是错的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-gravidanza-carrozzine-10": {
+      "verdict": "FALSO",
+      "key_it": "E' consentito lasciare il veicolo in sosta sul marciapiede",
+      "chapter": "ch1",
+      "why": {
+        "en": "Leaving a vehicle on the sidewalk without room for strollers and wheelchairs is not allowed: pedestrians must be able to pass.",
+        "ru": "Оставлять автомобиль на тротуаре без свободного места для колясок и инвалидных кресел нельзя: пешеходы должны иметь проход.",
+        "zh": "把车停在人行道上却不给婴儿车和轮椅留出空间是不允许的：行人必须能通行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
