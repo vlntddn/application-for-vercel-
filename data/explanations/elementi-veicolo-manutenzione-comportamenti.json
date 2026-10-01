@@ -1144,6 +1144,45 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-Livello-olio-liquidi-3": {
+      "verdict": "VERO",
+      "key_it": "finestrella posta sulla coppa motore",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: on some motorcycle engines the engine-oil level can be read from a dedicated sight glass set into the engine case.",
+        "ru": "Верно: на двигателях некоторых мотоциклов уровень моторного масла можно проверить через специальное смотровое окно, вмонтированное в картер двигателя.",
+        "zh": "正确：部分摩托车发动机可通过装在发动机曲轴箱上的专用观察窗查看机油液位。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-Livello-olio-liquidi-6": {
+      "verdict": "FALSO",
+      "key_it": "con il motore in funzione al minimo",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: on motorcycles the engine-oil level is checked with the engine off and the bike held upright and level, not running at idle on a stand.",
+        "ru": "Ложно: уровень моторного масла на мотоцикле проверяют при выключенном двигателе и при вертикально выровненном мотоцикле, а не на холостых на подставке.",
+        "zh": "错误：摩托车应在发动机熄火、车身竖直放平的状态下检查机油液位，而非在支架上怠速运行时检查。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-Livello-olio-liquidi-8": {
+      "verdict": "FALSO",
+      "key_it": "raffreddati ad aria, il livello del liquido di raffreddamento",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: air-cooled motorcycles have no liquid cooling circuit, so there is no coolant level to read through the fins.",
+        "ru": "Ложно: у мотоциклов с воздушным охлаждением нет жидкостной системы охлаждения, поэтому уровня охлаждающей жидкости просто нет — ни в каком смотровом окне.",
+        "zh": "错误：风冷摩托车没有液冷回路，因此根本不存在可透过散热片观察的冷却液液位。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
