@@ -1,3 +1,12 @@
+## 2026-10-01 — L9b: пояснения, порция 110 — ch1 (definizioni-generali-doveri-strada) не-карт. НЕ-сигнальные +20
+
+Что сделано (коммит feat: L9b пояснения порция 110 на self-improve):
+- data/explanations/definizioni-generali-doveri-strada.json: 390→410 — порция 110 (20 НЕ-сигнальных ch1 без картинок; продолжение ch1 не-карт. НЕ-сигнальных).
+- Состав (20 = 11 VERO / 9 FALSO): autoveicoli 3 (VERO — грузовик = autoveicolo) + 4 (VERO — квадрициклы не autoveicoli) + 8 (FALSO — трицикл не autoveicolo) + 9 (FALSO — не любое моторное) + 10 (FALSO — не только груз); autovetture 0 (VERO — ≤ 9 чел. с водит.) + 1 (VERO — входит в autoveicoli) + 3 (VERO — автобус не легковой) + 4 (VERO — может быть электрический) + 5 (VERO — подлежит периодическому техосмотру) + 7 (FALSO — может тянуть прицеп) + 9 (FALSO — 10 мест уже вне категории) + 10 (FALSO — это armored/veicolo blindato) + 11 (FALSO — грузовик не легковой) + 13 (FALSO — не каждые 5 лет, а 4 года + каждые 2); rimorchi 0 (VERO — без двигателя, тянутся) + 1 (VERO — лёгкий ≤ 750 кг) + 2 (VERO — составной = комбинация, не прицеп) + 3 (VERO — кемпер не прицеп, а самоходный) + 4 (FALSO — караван как раз прицеп).
+- Числа в why: 9/10 (места/люди) — совпадают с text_it; 750 (кг) — в text_it; «4 года / каждые 2» (autovetture-13) в text_it нет цифр, поэтому — словами «four/two» и «четыре/два» и «四年/两年». Ключи с `'` (autoveicoli-3, autovetture-1, autovetture-11, rimorchi-0/2/3) — верbatim-подстроки text_it (проверено скриптом ck110: ALL KEYS OK).
+- Как проверено: scripts/check-explanations.mjs (checkAll) — 0 ошибок (410/410); scripts/verify.sh — VERIFY OK (npm test 184 passed, smoke 8/8 на :3917); diff 260 insertions / 0 deletions (add-only).
+- Дальше по L9b: ch1 не-карт. НЕ-сигнальных осталось 88 (порция 111: следующие 20 без картинок не-сигнальных в порядке файла).
+
 ## 2026-10-01 — L9b: пояснения, порция 109 — ch1 (definizioni-generali-doveri-strada) не-карт. НЕ-сигнальные +20
 
 Что сделано (коммит feat: L9b пояснения порция 109 на self-improve):
