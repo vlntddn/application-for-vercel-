@@ -289,27 +289,29 @@ test('onboarding explains the exam, the learning loop and local storage', () => 
 test('the exam pre-start screen explains the format and that it is practice', () => {
   // Phase 2.2: before the timer starts, a newcomer must be told how the real
   // exam works AND be told, honestly, that this is a training run — not the
-  // official exam. The content lives in renderExam's first draw (before the
-  // BEGIN EXAM handler runs).
+  // official exam. The copy is localized (Q4.2): the English strings live in
+  // i18n.js and the pre-start draw in exam.js references the ex.* keys, so
+  // read the combined view+i18n source for the copy and the exam slice for
+  // the placement (before `async function start`).
   const views = readViewsSource();
-  // renderExamItalian comes first in the file — match the exact signature.
   const exam = views.slice(views.indexOf('export async function renderExam('));
   const prestart = exam.slice(0, exam.indexOf('async function start'));
   // Honest framing up front — this is the single most important sentence.
-  assert.match(prestart, /THIS IS PRACTICE, NOT THE OFFICIAL EXAM/i,
+  assert.match(prestart, /t\('ex\.notYet'\)/,
     'pre-start screen must say this is a training run, not the official exam');
+  assert.match(views, /THIS IS PRACTICE, NOT THE OFFICIAL EXAM/i);
   // The real exam's shape, in plain words, before the clock starts.
-  assert.match(prestart, /30 RANDOM QUESTIONS/i,
-    'must state the 30-question count');
-  assert.match(prestart, /20 MINUTES/i,
-    'must state the 20-minute limit');
-  assert.match(prestart, /AT MOST 3 ERRORS/i,
-    'must state the 3-error pass line');
+  assert.match(prestart, /t\('ex\.howTime'\)/, 'must state the 30-question count');
+  assert.match(views, /30 RANDOM QUESTIONS/i);
+  assert.match(views, /20 MINUTES/i);
+  assert.match(prestart, /t\('ex\.howErrors'\)/, 'must state the 3-error pass line');
+  assert.match(views, /AT MOST 3 ERRORS/i);
   // Navigation and translation are the two mechanics a newcomer would miss.
-  assert.match(prestart, /MOVE BACK AND FORTH BETWEEN QUESTIONS/i,
-    'must say you can move between questions');
-  assert.match(prestart, /TRANSLATE/i,
+  assert.match(prestart, /t\('ex\.howNav'\)/, 'must say you can move between questions');
+  assert.match(views, /MOVE BACK AND FORTH BETWEEN QUESTIONS/i);
+  assert.match(prestart, /t\('ex\.howTranslate'\)/,
     'must say the T / translate action reveals the user language');
+  assert.match(views, /TRANSLATE/i);
 });
 
 test('the dashboard shows the next step, not raw zeros', () => {

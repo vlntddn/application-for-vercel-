@@ -1,5 +1,6 @@
 import { loadAllQuestions, recordAnswersResilient, recordExamResilient, shuffle } from '../state.js';
 import { el, clear, fmtTime, svgIcon } from '../ui.js';
+import { t } from '../i18n.js';
 import { errorBanner, translationOf, translationArea } from './common.js';
 
 const EXAM_QUESTIONS = 30;
@@ -8,32 +9,31 @@ const EXAM_MAX_ERRORS = 3;
 
 export async function renderExam(root) {
   clear(root,
-    el('h1', {}, 'MOCK EXAM'),
-    el('p.lede', {},
-      'This is practice, not the official exam — but the format and the difficulty are identical.'),
+    el('h1', {}, t('ex.title')),
+    el('p.lede', {}, t('ex.lede')),
     el('div.panel', {},
-      el('h2', {}, 'HOW THE REAL EXAM WORKS'),
-      el('p.stat-sub', {}, '30 random questions on signs and traffic rules'),
-      el('p.stat-sub', {}, '20 minutes — the timer starts the moment you begin'),
-      el('p.stat-sub', {}, 'Pass with at most 3 errors — more, and the exam fails'),
-      el('p.stat-sub', {}, 'Move back and forth between questions — unanswered counts as wrong'),
+      el('h2', {}, t('ex.howTitle')),
+      el('p.stat-sub', {}, t('ex.howQuestions')),
+      el('p.stat-sub', {}, t('ex.howTime')),
+      el('p.stat-sub', {}, t('ex.howErrors')),
+      el('p.stat-sub', {}, t('ex.howNav')),
       el('p.stat-sub', {},
-        'Questions are in Italian; ', el('kbd', {}, 'T'),
-        ' or the translate button shows your language'),
+        t('ex.howTranslate').split('{k}')[0], el('kbd', {}, 'T'),
+        t('ex.howTranslate').split('{k}')[1]),
       el('div.actions', {},
-        el('button.btn.btn-primary.btn-big', { onclick: start }, 'BEGIN EXAM'),
-        el('a.btn', { href: '#/' }, 'NOT YET'),
+        el('button.btn.btn-primary.btn-big', { onclick: start }, t('ex.begin')),
+        el('a.btn', { href: '#/' }, t('ex.notYet')),
       ),
     ),
   );
 
   async function start() {
-    clear(root, el('h1', {}, 'MOCK EXAM'), el('p.lede', { id: 'load-note' }, 'Loading question bank...'));
+    clear(root, el('h1', {}, t('ex.title')), el('p.lede', { id: 'load-note' }, t('ex.loading')));
     let all;
     try {
       all = await loadAllQuestions((done, total) => {
         const note = document.getElementById('load-note');
-        if (note) note.textContent = `Loading question bank... ${done}/${total}`;
+        if (note) note.textContent = t('ex.loadingCount', { done, total });
       });
     } catch (err) {
       return clear(root, errorBanner(err));
@@ -51,7 +51,7 @@ function runExam(root, questions) {
   let finished = false;
   let revealed = false; // translation visibility, reset per question
 
-  const timerEl = el('span.timer', { role: 'timer', 'aria-label': 'Time left' }, fmtTime(secondsLeft));
+  const timerEl = el('span.timer', { role: 'timer', 'aria-label': t('ex.timeAria') }, fmtTime(secondsLeft));
   // Navigating away abandons the exam: stop the timer and keys so they
   // cannot fire over a different screen.
   window.addEventListener('hashchange', () => {
@@ -102,7 +102,7 @@ function runExam(root, questions) {
       (n, q, i) => n + (chosen[i] === q.is_true ? 0 : 1), 0);
     const passed = errors <= EXAM_MAX_ERRORS;
 
-    clear(root, el('h1', {}, 'MOCK EXAM'), el('p.lede', {}, 'Saving result...'));
+    clear(root, el('h1', {}, t('ex.title')), el('p.lede', {}, t('ex.saving')));
     // A finished exam must survive a network blip: both the result and
     // the answers go through the offline-capable queue.
     let synced = true;
@@ -120,26 +120,25 @@ function runExam(root, questions) {
     clear(root,
       synced
         ? null
-        : el('p.offline-note', { role: 'status' },
-            'Offline — this result is saved on this device and will sync later'),
+        : el('p.offline-note', { role: 'status' }, t('ex.offline')),
       el('div.panel', { style: 'text-align:center' },
-        el('h1', {}, passed ? 'PROMOSSO!' : 'BOCCIATO'),
+        el('h1', {}, passed ? t('ex.verdictPassed') : t('ex.verdictFailed')),
         el('p.stat-value', { className: `stat-value ${passed ? 'ok' : 'accent'}` },
-          `${errors} errors`),
-        el('p.lede', {}, `out of ${questions.length} questions (limit: ${EXAM_MAX_ERRORS})`),
+          t('ex.errorsN', { n: errors })),
+        el('p.lede', {}, t('ex.errorsOf', { total: questions.length, limit: EXAM_MAX_ERRORS })),
         el('div.actions', { style: 'justify-content:center' },
-          el('button.btn.btn-primary', { onclick: () => renderExam(root) }, 'TRY AGAIN'),
-          wrongOnes.length ? el('a.btn', { href: '#/mistakes' }, 'REVIEW MISTAKES') : null,
-          el('a.btn', { href: '#/' }, 'DASHBOARD'),
+          el('button.btn.btn-primary', { onclick: () => renderExam(root) }, t('ex.tryAgain')),
+          wrongOnes.length ? el('a.btn', { href: '#/mistakes' }, t('ex.reviewMistakes')) : null,
+          el('a.btn', { href: '#/' }, t('ex.dashboard')),
         ),
       ),
       wrongOnes.length
         ? el('div.panel', {},
-            el('h2', {}, 'WHAT WENT WRONG'),
+            el('h2', {}, t('ex.wrongTitle')),
             ...wrongOnes.map((q) =>
               el('div.row', {},
                 el('span', { style: 'flex:1' }, q.text_it),
-                el('span.tag.bad', {}, `ANSWER: ${q.is_true ? 'VERO' : 'FALSO'}`),
+                el('span.tag.bad', {}, t('ex.answerTag', { ans: q.is_true ? 'VERO' : 'FALSO' })),
               ),
             ),
           )
@@ -152,12 +151,12 @@ function runExam(root, questions) {
     const answeredCount = chosen.filter((c) => c !== null).length;
     clear(root,
       el('div.quiz-head', {},
-        el('span.quiz-progress', {}, `QUESTION ${index + 1}/${questions.length}`),
+        el('span.quiz-progress', {}, t('ex.questionN', { current: index + 1, total: questions.length })),
         timerEl,
-        el('span.tag', {}, `${answeredCount} ANSWERED`),
+        el('span.tag', {}, t('ex.answeredN', { n: answeredCount })),
       ),
       el('div.panel.question-card', {},
-        q.image_url ? el('img.question-img', { src: q.image_url, alt: 'Road sign / situation', onerror: (e) => e.target.remove() }) : null,
+        q.image_url ? el('img.question-img', { src: q.image_url, alt: t('ex.imgAlt'), onerror: (e) => e.target.remove() }) : null,
         el('p.question-text', {}, q.text_it),
         translationArea(translationOf(q), revealed, () => { revealed = true; draw(); }),
         (() => {
@@ -187,7 +186,7 @@ function runExam(root, questions) {
         })(),
         el('p.kbd-hint', {},
           el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ',
-          el('kbd', {}, '←'), el('kbd', {}, '→'), ' NAVIGATE · ', el('kbd', {}, 'T'), ' TRANSLATE'),
+          el('kbd', {}, '←'), el('kbd', {}, '→'), ' ' + t('ex.kbdNavigate') + ' · ', el('kbd', {}, 'T'), ' ' + t('ex.kbdTranslate')),
         el('div.exam-nav', {},
           ...questions.map((_, i) =>
             el('button', {
@@ -201,9 +200,9 @@ function runExam(root, questions) {
           el('button.btn.btn-primary.btn-big', {
             onclick: () => {
               const left = chosen.filter((c) => c === null).length;
-              if (left === 0 || confirm(`${left} unanswered (counted as wrong). Submit anyway?`)) submit();
+              if (left === 0 || confirm(t('ex.confirmSubmit', { n: left }))) submit();
             },
-          }, 'SUBMIT EXAM'),
+          }, t('ex.submit')),
         ),
       ),
     );
