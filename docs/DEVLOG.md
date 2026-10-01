@@ -1,3 +1,34 @@
+## 2026-10-01 — Q4.1 закрыта: фундамент i18n, онбординг на 3 языках
+
+Ветка self-improve, коммит 8cd6fb1.
+
+**Что.** Фундамент перевода интерфейса: `public/js/i18n.js` (словари en/ru/zh +
+`t(key, vars)` с fallback на en), онбординг полностью переведён, выбор языка
+перенесён на ПЕРВЫЙ слайд (был на третьем).
+
+**Как.**
+- `public/js/i18n.js` (новый): `MESSAGES = { en, ru, zh }`, `setLang(code)`
+  (неизвестный код → en), `t(key, vars)` — подстановка `{name}`-плейсхолдеров,
+  fallback: ключа нет в языке → en, и нет в en → сам ключ. 13 ключей `ob.*`.
+- `public/js/views/onboarding.js`: все строки через `t()`; `#ob-lang` селектор
+  на каждом слайде, `change` → `setLang` + перерисовка (текст слайдов меняется
+  живьём); имя+язык теперь собираются на первом слайде.
+- `public/js/main.js`: `import { setLang }`, в `route()` — синхронизация
+  `setLang(profile.language)` перед отрисовкой.
+- `public/sw.js`: VERSION v78→v79, `'/js/i18n.js'` в SHELL-листе.
+- `tests/i18n.test.mjs` (новый): полнота — каждый ключ en есть в ru и zh
+  (12 тестов: non-empty, no extra keys, `{…}`-плейсхолдеры совпадают с en,
+  fallback t(), подстановка `{name}`, reject неизвестного кода).
+- `tests/security.test.js`: `readViewsSource()` теперь включает i18n.js
+  (строки онбординга живут в словаре, source-text ассерты матчат en-версии).
+
+**Как проверено.** `npm test` — 202 PASS (было 190, +12 i18n); `scripts/verify.sh`
+— VERIFY OK: zero deps, protected paths, VERSION bumped, qa-new-user 73 PASS 0
+FAIL (онбординг: шаг 1 lede + SKIP/CONTINUE/START LEARNING кликаются, VERO/FALSO,
+localStorage-текст), smoke 8/200 на :3917.
+
+**След.** Q4.2 — остальные экраны по одному за запуск + двойные вердикты экзамена.
+
 ## 2026-10-01 — Q4 разбита на Q4.1 / Q4.2
 
 Q4 (перевод всего интерфейса) не влезает в один запуск: в роадмапе заменена на
