@@ -377,7 +377,9 @@ test('shouldSuggestBackup decides on answers, backup age and dismissal (S2.8a3)'
 });
 
 test('the dashboard shows a backup reminder with Export and Not now (S2.8a3)', () => {
-  const dashboard = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'dashboard.js'), 'utf8');
+  // Copy is localized (Q4.2); the English strings live in i18n.js, so read
+  // the combined view+i18n source like every other copy assertion (Q4.1).
+  const dashboard = readViewsSource();
   const common = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'common.js'), 'utf8');
   assert.ok(dashboard.includes('backupReminderPanel()'), 'reminder panel not rendered');
   assert.ok(dashboard.includes('shouldSuggestBackup'), 'decision not driven by the pure function');
@@ -410,7 +412,9 @@ test('install reminder decision: uninstalled iOS only, 7-day dismissal (S2.8a4)'
 });
 
 test('dashboard renders the iOS install callout with Not now (S2.8a4)', () => {
-  const dashboard = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'dashboard.js'), 'utf8');
+  // Copy is localized (Q4.2); the English strings live in i18n.js, so read
+  // the combined view+i18n source like every other copy assertion (Q4.1).
+  const dashboard = readViewsSource();
   const common = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'common.js'), 'utf8');
   assert.ok(dashboard.includes('installReminderPanel()'), 'callout not rendered');
   assert.ok(dashboard.includes('shouldSuggestInstallReminder'), 'decision not driven by the pure function');

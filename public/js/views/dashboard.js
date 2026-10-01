@@ -12,6 +12,7 @@ import {
 } from './common.js';
 import { dayKey, weekStrip } from './stats.js';
 import { examReadiness } from '../domain/learning.js';
+import { t } from '../i18n.js';
 
 const EXAM_QUESTIONS = 30;
 const EXAM_SECONDS = 20 * 60;
@@ -49,12 +50,12 @@ export function progressRing(current, goal, { size = 112, label = '' } = {}) {
 
   const wrap = el('div.ds-ring', {
     role: 'img',
-    'aria-label': label ? `${current} of ${goal} — ${label}` : `${current} of ${goal}`,
+    'aria-label': label ? `${label} — ${t('db.ring.aria', { current, goal })}` : t('db.ring.aria', { current, goal }),
   },
     svg,
     el('div.ds-ring__centre', {},
       el('span.ds-ring__num', {}, String(current)),
-      el('span.ds-ring__sub', {}, current >= goal && goal > 0 ? 'Goal met' : `of ${goal}`),
+      el('span.ds-ring__sub', {}, current >= goal && goal > 0 ? t('db.ring.goalMet') : t('db.ring.of', { goal })),
     ),
   );
   return wrap;
@@ -82,42 +83,43 @@ function statsRow(week, daysThisWeek, answeredToday, goal, stats, total) {
       el('span.ds-week__cell', {
         className: `ds-week__cell${day.studied ? ' ds-week__cell--done' : ''}${day.isToday ? ' ds-week__cell--today' : ''}`,
         role: 'img',
-        'aria-label': day.isToday ? `${day.label} (today): ${answeredToday} of ${goal} today`
-          : `${day.label}: ${day.studied ? 'goal met' : 'no practice'}`,
+        'aria-label': day.isToday
+          ? t('db.week.todayAria', { day: day.label, answered: answeredToday, goal })
+          : t(day.studied ? 'db.week.metAria' : 'db.week.noneAria', { day: day.label }),
       }, day.studied ? svgIcon('check') : null),
       el('span.ds-week__label', {}, day.label),
     ));
   return el('div', {},
     el('div.panel.week-panel', {},
       el('div.quiz-head', { style: 'margin-bottom:12px' },
-        el('h2', { style: 'margin:0' }, 'This week'),
+        el('h2', { style: 'margin:0' }, t('db.week.title')),
         el('span.tag', { className: `tag ${daysThisWeek >= 5 ? 'ok' : ''}` },
-          `${daysThisWeek}/7 days`),
+          t('db.week.days', { n: daysThisWeek })),
       ),
       el('div.week-row', {},
         el('div.ds-week', {
           role: 'img',
-          'aria-label': `Studied on ${daysThisWeek} of the last 7 days`,
+          'aria-label': t('db.week.aria', { n: daysThisWeek }),
         }, ...weekDays),
         // The ring tracks today's goal — mastery of 7139 questions would
         // sit near zero for weeks and read as broken.
         el('div.today-goal', {},
           progressRing(answeredToday, goal),
-          el('span.ds-week__label', {}, answeredToday >= goal && goal > 0 ? 'Goal met' : 'Today'),
+          el('span.ds-week__label', {}, answeredToday >= goal && goal > 0 ? t('db.ring.goalMet') : t('db.ring.today')),
         ),
       ),
     ),
     el('div.ds-stat-row', { 'data-testid': 'dashboard-stats' },
-      statCard('Login streak', String(stats.streak), {
+      statCard(t('db.stat.streak'), String(stats.streak), {
         valueClass: 'ds-stat__value--streak',
-        sub: stats.streak === 1 ? 'Day in a row' : 'Days in a row',
+        sub: stats.streak === 1 ? t('db.stat.streakOne') : t('db.stat.streakMany'),
       }),
-      statCard('Questions mastered', String(stats.mastered), {
+      statCard(t('db.stat.mastered'), String(stats.mastered), {
         valueClass: 'ds-stat__value--ok',
-        sub: `Of ${total} (${masteredPct}%)`,
+        sub: t('db.stat.masteredSub', { total, pct: masteredPct }),
       }),
-      statCard('Exam success', `${stats.examSuccess}%`, {
-        sub: `${stats.examsPassed}/${stats.examsTaken} mock exams passed`,
+      statCard(t('db.stat.examSuccess'), `${stats.examSuccess}%`, {
+        sub: t('db.stat.examSub', { passed: stats.examsPassed, taken: stats.examsTaken }),
       }),
     ),
   );
@@ -130,14 +132,12 @@ function statsRow(week, daysThisWeek, answeredToday, goal, stats, total) {
 export function nextStepsPanel() {
   return el('div.ds-card', { id: 'dashboard-next-steps' },
     el('div.ds-card__top', {},
-      el('span.ds-card__eyebrow', {}, 'Next step'),
-      el('span.ds-tag', {}, `${PRACTICE_BATCH} questions`),
+      el('span.ds-card__eyebrow', {}, t('db.next.eyebrow')),
+      el('span.ds-tag', {}, t('db.next.tag', { n: PRACTICE_BATCH })),
     ),
-    el('h3.ds-card__title', {}, 'Start with practice'),
-    el('p.ds-card__sub', {},
-      `Pick a topic and answer ${PRACTICE_BATCH} VERO / FALSO questions — about 5 minutes. ` +
-      `Theory is one tap away when you get stuck.`),
-    el('a.ds-btn.ds-btn--primary.ds-btn--lg', { href: '#/practice' }, 'Start practice'),
+    el('h3.ds-card__title', {}, t('db.next.title')),
+    el('p.ds-card__sub', {}, t('db.next.sub', { n: PRACTICE_BATCH })),
+    el('a.ds-btn.ds-btn--primary.ds-btn--lg', { href: '#/practice' }, t('db.next.btn')),
   );
 }
 
@@ -151,13 +151,12 @@ export function reviewDuePanel() {
   if (!due) return null;
   return el('div.ds-card', { id: 'dashboard-review-due' },
     el('div.ds-card__top', {},
-      el('span.ds-card__eyebrow', {}, 'Spaced repetition'),
-      el('span.ds-tag', {}, 'today'),
+      el('span.ds-card__eyebrow', {}, t('db.review.eyebrow')),
+      el('span.ds-tag', {}, t('db.review.tag')),
     ),
-    el('h3.ds-card__title', {}, `${due} card${due > 1 ? 's' : ''} to review today`),
-    el('p.ds-card__sub', {},
-      'The questions that come back to you are already in the queue — a few minutes keeps them from fading.'),
-    el('a.ds-btn.ds-btn--primary', { href: '#/review' }, 'Review now'),
+    el('h3.ds-card__title', {}, t(due > 1 ? 'db.review.titleMany' : 'db.review.titleOne', { n: due })),
+    el('p.ds-card__sub', {}, t('db.review.sub')),
+    el('a.ds-btn.ds-btn--primary', { href: '#/review' }, t('db.review.btn')),
   );
 }
 
@@ -173,16 +172,16 @@ export function examReadinessPanel() {
   const gain = r.biggestGain;
   return el('div.ds-card', { id: 'dashboard-exam-readiness' },
     el('div.ds-card__top', {},
-      el('span.ds-card__eyebrow', {}, 'Exam readiness'),
-      el('span.ds-tag', {}, r.passPct >= 70 ? 'ready' : 'working'),
+      el('span.ds-card__eyebrow', {}, t('db.exready.eyebrow')),
+      el('span.ds-tag', {}, r.passPct >= 70 ? t('db.exready.tagReady') : t('db.exready.tagWorking')),
     ),
-    el('h3.ds-card__title', {}, `Chance to pass now: ~${r.passPct}%`),
+    el('h3.ds-card__title', {}, t('db.exready.title', { pct: r.passPct })),
     gain
       ? el('p.ds-card__sub', {},
-          `Biggest gain: ${topicLabel({ slug: gain.slug, name: gain.name })} (+${gain.gainPct}%)`)
+          t('db.exready.gain', { topic: topicLabel({ slug: gain.slug, name: gain.name }), pct: gain.gainPct }))
       : null,
     el('p.ds-card__sub', { style: 'opacity:.65;font-size:.82em' },
-      'estimate from your answers, not a guarantee'),
+      t('db.exready.caption')),
   );
 }
 
@@ -200,9 +199,9 @@ export function weakSpotsPanel() {
     .slice(0, 3);
   return el('div.panel', { id: 'dashboard-exam-readiness', style: 'margin-top:24px' },
     el('div.quiz-head', { style: 'margin-bottom:12px' },
-      el('h2', { style: 'margin:0' }, 'UNTIL THE EXAM'),
+      el('h2', { style: 'margin:0' }, t('db.weak.title')),
       el('span.tag', { className: `tag ${last.passed ? 'ok' : 'bad'}` },
-        `LAST: ${last.errors} ERRORS — ${last.passed ? 'PASSED' : 'FAILED'}`),
+        t('db.weak.last', { errors: last.errors, verdict: t(last.passed ? 'db.weak.passed' : 'db.weak.failed') })),
     ),
     weak.length
       ? el('div', {},
@@ -213,14 +212,14 @@ export function weakSpotsPanel() {
             ),
           ),
         )
-      : el('p.empty-note', {}, 'No weak topic under 70% — keep the streak alive.'),
+      : el('p.empty-note', {}, t('db.weak.none')),
     el('div.actions', {},
       weak.length
         ? el('a.btn.btn-primary', { href: `#/practice/${weak[0].slug}` },
-            `STRENGTHEN ${topicLabel(weak[0])}`)
-        : el('a.btn.btn-primary', { href: '#/exam' }, 'ANOTHER MOCK EXAM'),
+            t('db.weak.strengthen', { topic: topicLabel(weak[0]) }))
+        : el('a.btn.btn-primary', { href: '#/exam' }, t('db.weak.another')),
       state.progress.stats.mistakes > 0
-        ? el('a.btn', { href: '#/mistakes' }, `REVIEW ${state.progress.stats.mistakes} MISTAKES`)
+        ? el('a.btn', { href: '#/mistakes' }, t('db.weak.review', { n: state.progress.stats.mistakes }))
         : null,
     ),
   );
@@ -251,12 +250,12 @@ export function backupReminderPanel() {
   return el('div.ds-callout', { id: 'backup-reminder', style: 'margin-top:24px' },
     el('div.ds-callout__icon', {}, svg),
     el('div.ds-callout__body', {},
-      el('span.ds-callout__title', {}, 'Backup'),
-      el('p.ds-callout__text', {}, 'Save a backup copy — your progress lives only in this browser.'),
+      el('span.ds-callout__title', {}, t('db.backup.title')),
+      el('p.ds-callout__text', {}, t('db.backup.text')),
     ),
     el('div.ds-callout__action', {},
-      el('button.btn.btn-primary', { onclick: (e) => { exportProgressSnapshot(); e.target.closest('.ds-callout').remove(); } }, 'Export'),
-      el('button.btn', { onclick: (e) => { writeBackupDismissed(); e.target.closest('.ds-callout').remove(); } }, 'Not now'),
+      el('button.btn.btn-primary', { onclick: (e) => { exportProgressSnapshot(); e.target.closest('.ds-callout').remove(); } }, t('db.backup.export')),
+      el('button.btn', { onclick: (e) => { writeBackupDismissed(); e.target.closest('.ds-callout').remove(); } }, t('db.backup.later')),
     ),
   );
 }
@@ -276,14 +275,14 @@ export function installReminderPanel() {
   return el('div.ds-callout', { id: 'install-reminder', style: 'margin-top:24px' },
     el('div.ds-callout__icon.ds-callout__icon--bad', {}, svgIcon('warn')),
     el('div.ds-callout__body', {},
-      el('span.ds-callout__title', {}, 'iPhone'),
+      el('span.ds-callout__title', {}, t('db.install.title')),
       el('p.ds-callout__text', {},
-        'On iPhone, Safari may erase your progress after a week away. Add Passo to your Home Screen. ',
-        el('a', { href: '#/settings' }, 'How to install'),
+        t('db.install.text'),
+        el('a', { href: '#/settings' }, t('db.install.how')),
       ),
     ),
     el('div.ds-callout__action', {},
-      el('button.btn', { onclick: (e) => { writeInstallDismissed(); e.target.closest('.ds-callout').remove(); } }, 'Not now'),
+      el('button.btn', { onclick: (e) => { writeInstallDismissed(); e.target.closest('.ds-callout').remove(); } }, t('db.install.later')),
     ),
   );
 }
@@ -310,8 +309,8 @@ export async function renderDashboard(root) {
   }
 
   clear(root,
-    el('h1', {}, profile.name ? `CIAO, ${profile.name}` : 'CIAO'),
-    el('p.lede', {}, 'Ready for the exam? Keep the streak alive.'),
+    el('h1', {}, profile.name ? t('db.greetingName', { name: profile.name }) : t('db.greeting')),
+    el('p.lede', {}, t('db.lede')),
 
     // One callout per section: install alert (iOS), then the backup
     // reminder; both sit under the greeting, before the content.
@@ -332,29 +331,29 @@ export async function renderDashboard(root) {
       ? weakSpotsPanel()
       : null,
     el('div.panel', { style: 'margin-top:24px' },
-      el('h2', {}, "PRONTO PER L'ESAME?"),
-      el('p.lede', {}, `${EXAM_QUESTIONS} random questions · ${EXAM_SECONDS / 60} minutes · max ${EXAM_MAX_ERRORS} errors.`),
+      el('h2', {}, t('db.actions.title')),
+      el('p.lede', {}, t('db.actions.sub', { n: EXAM_QUESTIONS, min: EXAM_SECONDS / 60, errors: EXAM_MAX_ERRORS })),
       el('div.actions', {},
-        el('a.btn.btn-primary.btn-big', { href: '#/exam' }, 'START MOCK EXAM'),
-        el('a.btn', { href: '#/review' }, `QUICK REVIEW — ${REVIEW_SIZE} QUESTIONS`),
-        el('a.btn', { href: '#/practice' }, 'PRACTICE BY TOPIC'),
-        el('a.btn', { href: '#/drill/signals' }, 'THE LANGUAGE OF THE EXAM'),
-        el('a.btn', { href: '#/numbers' }, 'THE NUMBERS YOU MUST KNOW'),
-        el('a.btn', { href: '#/theory' }, 'READ THEORY'),
-        el('a.btn', { href: '#/stats' }, 'PROGRESS & STATS'),
+        el('a.btn.btn-primary.btn-big', { href: '#/exam' }, t('db.actions.exam')),
+        el('a.btn', { href: '#/review' }, t('db.actions.quickReview', { n: REVIEW_SIZE })),
+        el('a.btn', { href: '#/practice' }, t('db.actions.practice')),
+        el('a.btn', { href: '#/drill/signals' }, t('db.actions.drill')),
+        el('a.btn', { href: '#/numbers' }, t('db.actions.numbers')),
+        el('a.btn', { href: '#/theory' }, t('db.actions.theory')),
+        el('a.btn', { href: '#/stats' }, t('db.actions.stats')),
         stats.mistakes > 0
-          ? el('a.btn', { href: '#/mistakes' }, `REVIEW ${stats.mistakes} MISTAKES`)
+          ? el('a.btn', { href: '#/mistakes' }, t('db.actions.mistakes', { n: stats.mistakes }))
           : null,
       ),
     ),
     recentExams.length
       ? el('div.panel', {},
-          el('h2', {}, 'RECENT MOCK EXAMS'),
+          el('h2', {}, t('db.recent.title')),
           ...recentExams.map((e) =>
             el('div.row', {},
               el('span', {}, fmtDate(e.date)),
-              el('span', {}, `${e.errors} ERRORS / ${e.total}`),
-              el('span.tag', { className: `tag ${e.passed ? 'ok' : 'bad'}` }, e.passed ? 'PASSED' : 'FAILED'),
+              el('span', {}, t('db.recent.errors', { errors: e.errors, total: e.total })),
+              el('span.tag', { className: `tag ${e.passed ? 'ok' : 'bad'}` }, t(e.passed ? 'db.recent.passed' : 'db.recent.failed')),
             ),
           ),
         )
