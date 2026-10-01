@@ -1,3 +1,41 @@
+## 2026-10-02 — Q4.2, срез 5: Ошибки (mistakes review) на 3 языках
+
+Ветка self-improve. Пятый срез Q4.2 — **страница «Ошибки»**
+(`#/mistakes`, views/review.js, `renderMistakes`): заголовок, lede,
+loading-скелет, пустое состояние, панель «причина ошибок», кнопка
+«Practice all mistakes», сессия, список вопросов, «+N more».
+(В предыдущем срезе этот файл был назван mistakes.js — на деле функции в
+review.js.)
+
+**Что.** Все видимые строки mistakes переведены через `t('ms.…')` на
+en/ru/zh: 14 ключей в каждом словаре (title, loading, lede, empty,
+goPractice, sessionTitle, practiceAll, more, causeTitle, practiceThis +
+`ms.causes.{signal,sign,number,rule}`). EN = байт-в-байт прежний хардкод.
+`VERO`/`FALSO` и `topicLabel(cat)` не тронуты: экзамен-язык и уже
+локализованный заголовок темы.
+
+**causeTitle (особенность).** Старый литерал
+`Most of your mistakes: ${LABEL[cause]}${extra} (${n} of ${M})` заменён
+одним ключом `ms.causeTitle` с плейсхолдерами `{part}/{extra}/{n}/{total}`;
+саму причину (`signal/sign/number/rule`) переводит `t('ms.causes.<cause>')`.
+RU/ZH не содержат английских слов.
+
+**Как.**
+- `public/js/i18n.js`: +14 ключей `ms.*` в каждый из трёх словарей,
+  `{…}`-плейсхолдеры идентичны (i18n.test.mjs: паритет OK, 12/12).
+- `public/js/views/review.js`: `import { t }` (строка 13), все литеральные
+  строки `renderMistakes` → `t('ms.…')`; структура/class не тронуты.
+- `public/sw.js`: VERSION v83 → v84 (cache-bust).
+- `tests/security.test.js`: новый гарант «the mistakes review screen is
+  localized» — view ссылается только на `t('ms.…')`, старых хардкод-
+  литералов нет, EN-копи живёт в словаре.
+
+**Проверка.** `scripts/verify.sh`: npm test 204 passed (+1 новый),
+qa-new-user 73 PASS / 0 FAIL, smoke 8/8, sw VERSION bumped — VERIFY OK.
+Коммит 4ca3227.
+
+Следующий срез: настройки (settings) — views/settings.js.
+
 ## 2026-10-02 — Q4.2, срез 4: Путь (learning path) на 3 языках
 
 Ветка self-improve. Четвёртый срез Q4.2 — **страница пути обучения**
