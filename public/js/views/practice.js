@@ -12,6 +12,7 @@ import {
   recordAnswersResilient,
 } from '../state.js';
 import { el, clear, svgIcon } from '../ui.js';
+import { t } from '../i18n.js';
 import { CATEGORY_CHAPTER } from '../theory-map.js';
 import { playCorrect, playWrong } from '../sound.js';
 import { errorBanner, translationOf, loc, lang, pickQueue, queueOrder, masteryOf, categoryStats, translationArea, PRACTICE_BATCH, feedbackHref } from './common.js';
@@ -44,10 +45,10 @@ export function introQueue(questions, options = {}) {
 export function renderPracticeList(root) {
   const answers = state.progress.answers;
   clear(root,
-    el('h1', {}, 'PRACTICE'),
-    el('p.lede', {}, 'Pick a topic. Unseen and wrong questions come first.'),
+    el('h1', {}, t('pr.title')),
+    el('p.lede', {}, t('pr.lede')),
     el('div.actions', { style: 'margin-bottom:20px' },
-      el('a.btn', { href: '#/search' }, '🔍 SEARCH ALL QUESTIONS'),
+      el('a.btn', { href: '#/search' }, t('pr.searchAll')),
     ),
     el('div.grid.grid-2', {},
       ...state.manifest.categories.map((cat, i) => {
@@ -56,12 +57,12 @@ export function renderPracticeList(root) {
         const pct = Math.round((mastered / cat.count) * 100);
         return el('a.card', { href: `#/practice/${cat.slug}` },
           el('div.quiz-head', {},
-            el('span.tag', {}, `TOPIC ${i + 1}`),
-            mastered === 0 ? el('span.tag', {}, 'NEW') : null,
+            el('span.tag', {}, t('pr.topicN', { n: i + 1 })),
+            mastered === 0 ? el('span.tag', {}, t('pr.new')) : null,
           ),
           el('h2', {}, topicLabel(cat)),
           topicSub(cat) ? el('p.stat-sub', {}, topicSub(cat)) : null,
-          el('p.stat-sub', {}, `${mastered}/${cat.count} mastered (${pct}%)`),
+          el('p.stat-sub', {}, t('pr.mastered', { mastered, total: cat.count, pct })),
           el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${pct}%` })),
         );
       }),
@@ -333,7 +334,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     if (!contents) return null;
     return el('details.why-details', {},
       el('summary.why-details__summary', {},
-        title ? `${title} — more from this chapter` : 'More from this chapter'),
+        title ? t('pr.moreFromChapter', { title }) : t('pr.moreFromChapterPlain')),
       el('div.why-block', {}, ...contents),
     );
   }
@@ -381,9 +382,9 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     const title = await chapterTitle(item.chapter);
     return el('div.why-block.explanation', {},
       el('div.explanation__meta', {},
-        el('span.tag.warn', {}, 'AI draft — check the lesson'),
+        el('span.tag.warn', {}, t('pr.aiDraft')),
         el('a.explanation__link', { href: `#/theory/${item.chapter}` },
-          title || `Chapter ${item.chapter}`),
+          title || t('pr.chapterN', { n: item.chapter })),
       ),
       el('div.why-fact', {},
         el('strong.explanation__key', {}, `«${item.key_it}»`),
@@ -465,10 +466,10 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     },
       el('div.ds-feedback__head', {},
         svgIcon(lastCorrect ? 'check' : 'cross'),
-        lastCorrect ? 'Correct' : 'Not quite'),
+        lastCorrect ? 'Correct' : t('pr.notQuite')),
       lastCorrect
         ? null
-        : el('div.ds-feedback__answer', {}, `Right answer: ${q.is_true ? 'Vero' : 'Falso'}`),
+        : el('div.ds-feedback__answer', {}, t('pr.rightAnswer', { ans: q.is_true ? 'Vero' : 'Falso' })),
     );
     const explanationSlot = el('div.explanation-slot', {});
     panel.append(explanationSlot);
@@ -478,13 +479,13 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     panel.append(whySlot);
     const actions = el('div.ds-feedback__actions', {},
       el('button.btn.btn-primary', { onclick: next },
-        index + 1 >= questions.length ? 'FINISH' : 'NEXT →'),
+        index + 1 >= questions.length ? t('pr.finish') : t('pr.next')),
     );
     panel.append(actions);
     panel.append(el('a.report-link', {
-      href: feedbackHref(`Passo: problem with question ${q.id}`,
-        `Question: ${q.id}\n«${q.text_it}»\nCorrect answer in the app: ${q.is_true ? 'VERO' : 'FALSO'}\n\nWhat is wrong:\n`),
-    }, 'Report a problem with this question'));
+      href: feedbackHref(t('pr.reportSubject', { id: q.id }),
+        t('pr.reportBody', { id: q.id, text: q.text_it, ans: q.is_true ? 'VERO' : 'FALSO' })),
+    }, t('pr.report')));
     const atIndex = index; // question the panel was built for
 
     // Q3: specific content first — the L9a explanation (from the 2nd mistake),
@@ -535,8 +536,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     const q = questions[index];
     clear(root,
       offline
-        ? el('p.offline-note', { role: 'status' },
-            'Offline — answers saved on this device, will sync when the server is back')
+        ? el('p.offline-note', { role: 'status' }, t('pr.offline'))
         : null,
       el('div.quiz-head', {},
         el('a.btn', {
@@ -549,13 +549,13 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
               onQuit();
             }
           },
-        }, '← QUIT'),
-        el('span.quiz-progress', {}, `${title} — ${index + 1}/${questions.length}`),
-        el('span.tag.ok', {}, `${correctCount} CORRECT`),
-        easyStart ? el('span.tag', {}, 'EASY START') : null,
+        }, t('pr.quit')),
+        el('span.quiz-progress', {}, t('pr.progress', { title, current: index + 1, total: questions.length })),
+        el('span.tag.ok', {}, t('pr.correct', { n: correctCount })),
+        easyStart ? el('span.tag', {}, t('pr.easyStart')) : null,
       ),
       el('div.panel.question-card', {},
-        q.image_url ? el('img.question-img', { src: q.image_url, alt: 'Road sign / situation', onerror: (e) => e.target.remove() }) : null,
+        q.image_url ? el('img.question-img', { src: q.image_url, alt: t('pr.imgAlt'), onerror: (e) => e.target.remove() }) : null,
         termText(q),
         translationArea(translationOf(q), revealed, reveal),
         answerButtons(q),
@@ -575,8 +575,8 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
 
 export async function renderPracticeSession(root, slug) {
   const cat = state.manifest.categories.find((c) => c.slug === slug);
-  if (!cat) return clear(root, el('p.empty-note', {}, 'Topic not found'));
-  clear(root, el('h1', {}, topicLabel(cat)), el('p.lede', {}, topicSub(cat) || 'Loading questions...'));
+  if (!cat) return clear(root, el('p.empty-note', {}, t('pr.topicNotFound')));
+  clear(root, el('h1', {}, topicLabel(cat)), el('p.lede', {}, topicSub(cat) || t('pr.loading')));
 
   let questions;
   try {
@@ -598,13 +598,13 @@ export async function renderPracticeSession(root, slug) {
     onFinish: (correct, total) => {
       clear(root,
         el('div.panel', { style: 'text-align:center' },
-          el('h1', {}, 'Session complete'),
-          el('p.stat-value.ok', {}, `${correct}/${total}`),
-          el('p.lede', {}, 'Correct answers'),
+          el('h1', {}, t('pr.sessionComplete')),
+          el('p.stat-value.ok', {}, t('pr.score', { correct, total })),
+          el('p.lede', {}, t('pr.correctAnswers')),
           el('div.actions', { style: 'justify-content:center' },
-            el('a.btn.btn-primary', { href: `#/practice/${slug}`, onclick: () => renderPracticeSession(root, slug) }, 'ONE MORE ROUND'),
-            el('a.btn', { href: '#/practice' }, 'ALL TOPICS'),
-            el('a.btn', { href: '#/' }, 'DASHBOARD'),
+            el('a.btn.btn-primary', { href: `#/practice/${slug}`, onclick: () => renderPracticeSession(root, slug) }, t('pr.oneMore')),
+            el('a.btn', { href: '#/practice' }, t('pr.allTopics')),
+            el('a.btn', { href: '#/' }, t('pr.dashboard')),
           ),
         ),
       );
