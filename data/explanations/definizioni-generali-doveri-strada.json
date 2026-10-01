@@ -4030,6 +4030,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passo-carrabile-1": {
+      "verdict": "VERO",
+      "key_it": "permette ai veicoli che circolano su una strada pubblica di accedere",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: a vehicle access lets vehicles on the public road reach a side area for parking.",
+        "ru": "Верно: выезд позволяет транспорту, движущемуся по общественной дороге, подъехать к боковой площадке стоянки.",
+        "zh": "正确：车辆通道使公共道路上的车辆能够到达侧面的停车区域。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passo-carrabile-3": {
+      "verdict": "VERO",
+      "key_it": "è una zona per l’accesso dei veicoli alle proprietà laterali",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: a vehicle access is a zone for vehicles to reach properties beside the road.",
+        "ru": "Верно: выезд — это зона, через которую транспорт попадает к владениям у дороги.",
+        "zh": "正确：车辆通道是车辆到达道路旁私有场所的区域。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passo-carrabile-4": {
+      "verdict": "VERO",
+      "key_it": "è consentita la fermata",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: stopping is allowed at a vehicle access.",
+        "ru": "Верно: у выезда (проезжей площадки) разрешена остановка.",
+        "zh": "正确：在车辆通道处允许临时停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passo-carrabile-5": {
+      "verdict": "FALSO",
+      "key_it": "è un parcheggio scambiatore",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a vehicle access is not a park-and-ride lot; it is an access to a private property.",
+        "ru": "Неверно: выезд — не парковка-пересадка, а подъезд к частному владению.",
+        "zh": "错误：车辆通道不是换乘停车场，而是通往私人场所的入口。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passo-carrabile-6": {
+      "verdict": "FALSO",
+      "key_it": "riservata ai carri trainati da animali",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a vehicle access is not a road reserved for animal-drawn carriages.",
+        "ru": "Неверно: выезд — не дорога, зарезервированная для повозок, запряжённых животными.",
+        "zh": "错误：车辆通道不是专供畜力马车行驶的道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passo-carrabile-7": {
+      "verdict": "FALSO",
+      "key_it": "riservata agli autocarri",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a vehicle access is not a road reserved for lorries.",
+        "ru": "Неверно: выезд — не дорога, зарезервированная для грузовиков.",
+        "zh": "错误：车辆通道不是专供卡车行驶的道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passo-carrabile-8": {
+      "verdict": "FALSO",
+      "key_it": "è un salvagente circolare",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a vehicle access is not a circular pedestrian handrail.",
+        "ru": "Неверно: выезд — не круговой поручень для пешеходов.",
+        "zh": "错误：车辆通道不是圆形的人行扶手。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passo-carrabile-9": {
+      "verdict": "FALSO",
+      "key_it": "impone la circolazione rotatoria su una piazza",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a vehicle access is not a sign imposing a roundabout on a square.",
+        "ru": "Неверно: выезд — не знак, предписывающий круговое движение на площади.",
+        "zh": "错误：车辆通道不是强制广场环形通行的标志。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-passo-carrabile-10": {
+      "verdict": "FALSO",
+      "key_it": "è consentita la sosta",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: what is allowed at a vehicle access is stopping (fermata), not parking (sosta).",
+        "ru": "Неверно: у выезда разрешена остановка (fermata), а не стоянка (sosta).",
+        "zh": "错误：在车辆通道处允许的是临时停车（fermata），而非长时间停放（sosta）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclomotori-0": {
+      "verdict": "VERO",
+      "key_it": "motore termico fino a 50 cm3",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: two-wheeled vehicles with a thermal engine up to 50 cm3 and max speed of 45 km/h are mopeds.",
+        "ru": "Верно: двухколёсные ТС с двигателем до 50 см3 и максимальной скоростью 45 км/ч — это мопеды.",
+        "zh": "正确：排量至多50立方厘米、最高时速45公里的二轮车辆是轻便摩托车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclomotori-1": {
+      "verdict": "VERO",
+      "key_it": "possono avere due o tre ruote",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: mopeds can have two or three wheels.",
+        "ru": "Верно: у мопедов может быть два или три колеса.",
+        "zh": "正确：轻便摩托车可以是两个或三个车轮。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclomotori-3": {
+      "verdict": "VERO",
+      "key_it": "non possono avere un motore termico di cilindrata superiore a 50 cm3",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: two-wheeled mopeds may not have a thermal engine above 50 cm3.",
+        "ru": "Верно: у двухколёсных мопедов двигатель не может быть мощнее 50 см3.",
+        "zh": "正确：两轮轻便摩托车的发动机排量不得超过50立方厘米。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclomotori-4": {
+      "verdict": "VERO",
+      "key_it": "soggetti a revisione dopo quattro anni",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: mopeds are inspected four years after first registration, then every two years.",
+        "ru": "Верно: мопеды проходят техосмотр через четыре года после первой регистрации, далее каждые два года.",
+        "zh": "正确：轻便摩托车自首次登记起四年后需检验，此后每两年一次。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclomotori-5": {
+      "verdict": "FALSO",
+      "key_it": "non hanno più di due ruote",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: mopeds may also have three wheels, not only two.",
+        "ru": "Неверно: у мопедов может быть и три колеса, а не только два.",
+        "zh": "错误：轻便摩托车也可以有三个车轮，而非仅两个。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclomotori-6": {
+      "verdict": "FALSO",
+      "key_it": "biciclette con pedalata assistita",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: e-bikes with an assist motor up to 0.25 kW are not classified as mopeds.",
+        "ru": "Неверно: электровелосипеды с двигателем до 0,25 кВт не классифицируются как мопеды.",
+        "zh": "错误：功率至多0.25千瓦的助动电动车不属于轻便摩托车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclomotori-8": {
+      "verdict": "FALSO",
+      "key_it": "devono essere muniti di cambio manuale",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: mopeds are not required to have a manual gearbox to be classified as such.",
+        "ru": "Неверно: для классификации мопедов не требуется ручная коробка передач.",
+        "zh": "错误：轻便摩托车并不要求配备手动变速箱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclomotori-9": {
+      "verdict": "FALSO",
+      "key_it": "possono circolare alla velocità di 60 km/h",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: mopeds are not allowed to travel at 60 km/h outside built-up areas.",
+        "ru": "Неверно: мопеды не могут двигаться со скоростью 60 км/ч вне населённых пунктов.",
+        "zh": "错误：轻便摩托车在城外不得以60公里时速行驶。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-ciclomotori-10": {
+      "verdict": "FALSO",
+      "key_it": "non sono soggetti a revisione periodica",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: mopeds are subject to periodic technical inspection.",
+        "ru": "Неверно: мопеды подлежат периодическому техническому осмотру.",
+        "zh": "错误：轻便摩托车需要定期接受技术检验。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-tricicli-motore-0": {
+      "verdict": "VERO",
+      "key_it": "sono veicoli a motore a tre ruote simmetriche",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: motor tricycles are powered vehicles with three symmetrical wheels.",
+        "ru": "Верно: моторизированные трёхколёсные ТС — это трёхколёсные транспортные средства с симметричным расположением колёс.",
+        "zh": "正确：机动三轮车是三个车轮对称布置的机动车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-tricicli-motore-1": {
+      "verdict": "VERO",
+      "key_it": "sono veicoli con motore di cilindrata superiore a 50 cm3",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: motor tricycles have an engine with a displacement above 50 cm3.",
+        "ru": "Верно: у моторизированных трёхколёсных ТС двигатель имеет рабочий объём больше 50 см3.",
+        "zh": "正确：机动三轮车的发动机排量超过50立方厘米。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
