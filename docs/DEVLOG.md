@@ -1,3 +1,39 @@
+## 2026-10-02 — Q4.2, срез 1: Главная (Dashboard) на 3 языках
+
+Ветка self-improve, коммит dbc5a1b. Задача Q4.2 — «по одному экрану за запуск»;
+сегодня закрыт первый экран — **Главная**, остальные (практика/панель ответа,
+экзамен/результат, путь, ошибки, настройки) — в следующих запусках.
+
+**Что.** Все видимые строки Dashboard переведены через `t('db.…')` на en/ru/zh:
+приветствие и lede, This week + aria-labels дней, стат-карточки (streak /
+mastered / exam success), next-steps, review-due, exam-readiness, weak-spots,
+callouts (backup, iOS install), панель действий, recent exams. EN-значения
+байт-в-байт совпадают с прежними хардкодом (правило Q4.2). «CIAO» оставлен
+буквально во всех трёх языках — решение продукта.
+
+**Как.**
+- `public/js/i18n.js`: +48 ключей `db.*` в каждый из трёх словарей (группы
+  `db.greeting*`, `db.ring.*`, `db.week.*`, `db.stat.*`, `db.next.*`,
+  `db.review.*`, `db.exready.*`, `db.weak.*`, `db.backup.*`, `db.install.*`,
+  `db.actions.*`, `db.recent.*`); `{placeholder}`-ы идентичны между языками —
+  это проверяет `tests/i18n.test.mjs` (parity + placeholders).
+- `public/js/views/dashboard.js`: импортирован `t`, все литеральные строки
+  заменены на `t('db.…')`; прогресс-кольцо, стат-карточки, панели и callouts
+  берут тексты из словаря. Структура и class-имена не тронуты.
+- `public/sw.js`: VERSION v79 → v80 (обязательный bump при правке public/).
+- `tests/security.test.js`: два ассерта S2.8a3/S2.8a4 читали dashboard.js
+  напрямую и ломались, когда EN-копи ушла в i18n.js; переведены на
+  `readViewsSource()` (комбайн views + i18n.js) — по прецеденту Q4.1
+  («source-text ассерты матчат en-версии»). Семантика проверок сохранена:
+  все asserted-строки присутствуют в EN-словаре дословно.
+
+**Как проверено.** `scripts/verify.sh` → VERIFY OK: zero deps, protected paths,
+sw bump, overlay/explanations intact, **npm test 202 passed** (было 2 fail на
+S2.8a3/a4 — починено выше), smoke 8×200 на :3917, **qa-new-user: 73 PASS, 0
+FAIL** (EN-сценарий — `CIAO, QA` и lede regex подтверждают byte-identity).
+
+**Следующий срез Q4.2:** практика/панель ответа.
+
 ## 2026-10-01 — Q4.1 закрыта: фундамент i18n, онбординг на 3 языках
 
 Ветка self-improve, коммит 8cd6fb1.
