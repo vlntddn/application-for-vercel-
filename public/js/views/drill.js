@@ -12,7 +12,7 @@ import {
 import { el, clear, svgIcon } from '../ui.js';
 import { playCorrect, playWrong } from '../sound.js';
 import { errorBanner, translationOf, loc, translationArea, feedbackHref } from './common.js';
-import { signalQueue } from '../domain/learning.js';
+import { signalQueue, signalSpans } from '../domain/learning.js';
 
 const DRILL_SIZE = 20;
 const PER_SIDE = DRILL_SIZE / 2;

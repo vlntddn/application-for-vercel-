@@ -276,7 +276,8 @@ async function main() {
    * Ловит потерянные при рефакторинге импорты/константы (S1.3 потерял
    * DAILY_GOAL_CHOICES — Settings не открывался, а тесты молчали). */
   const ROUTES = ['#/', '#/theory', '#/practice', '#/exam', '#/mistakes', '#/review',
-    '#/search', '#/dictionary', '#/path', '#/stats', '#/settings', '#/exam-italian'];
+    '#/search', '#/dictionary', '#/path', '#/stats', '#/settings', '#/exam-italian',
+    '#/numbers', '#/drill/signals'];
   for (const r of ROUTES) {
     const before = jsErrors.length;
     await evaluate(`location.hash = ${JSON.stringify(r)}`);
