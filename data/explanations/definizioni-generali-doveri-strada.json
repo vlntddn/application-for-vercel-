@@ -3250,6 +3250,266 @@
       "source": "ai-draft",
       "model": "agent",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strada-definizione-7": {
+      "verdict": "FALSO",
+      "key_it": "normalmente riservata alla circolazione dei soli veicoli e animali",
+      "chapter": "ch1",
+      "why": {
+        "en": "No: pedestrians may also be on the road (on sidewalks or shoulders), not only vehicles and animals. What is reserved to traffic is the carriageway, not the whole road.",
+        "ru": "Нет: на дороге могут находиться и пешеходы (на тротуарах и обочинах), а не только транспорт и животные. Движению отдана лишь проезжая часть, а не вся дорога.",
+        "zh": "不对：路上也可以有行人（在人行道上或路肩上），并非只有车辆和动物。供通行的是行车道，而非整条道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strada-definizione-8": {
+      "verdict": "FALSO",
+      "key_it": "non comprende i marciapiedi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the road includes the sidewalks, together with the carriageway, shoulders and cycle paths. Sidewalks are a part of the road.",
+        "ru": "Неверно: дорога включает тротуары вместе с проезжей частью, обочинами и велодорожками. Тротуары — часть дороги.",
+        "zh": "错误：道路包括人行道、行车道、路肩和自行车道。人行道是道路的一部分。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autostrada-0": {
+      "verdict": "VERO",
+      "key_it": "non ha incroci a raso che l'attraversano",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: on motorways crossings are at different levels, so nothing cuts across the carriageway at the same level. That keeps the flow free.",
+        "ru": "Верно: на автомагистралях пересечения — на разных уровнях, поэтому на одной отметке ничего проезжую часть не пересекает. Поток остаётся свободным.",
+        "zh": "正确：高速公路的交叉在不同标高，因此同一标高上没有任何东西横穿行车道，车流得以畅通。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autostrada-1": {
+      "verdict": "VERO",
+      "key_it": "speciali corsie per l'ingresso e l'uscita",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: motorways have dedicated acceleration lanes for entering and deceleration lanes for leaving, so vehicles merge smoothly into the main flow.",
+        "ru": "Верно: у автомагистралей есть разгонные полосы для въезда и тормозные для съезда — транспорт плавно вливается в основной поток.",
+        "zh": "正确：高速公路设有专门的加速车道用于驶入、减速车道用于驶出，车辆能平顺汇入主车流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autostrada-2": {
+      "verdict": "VERO",
+      "key_it": "a carreggiate indipendenti o separate da spartitraffico",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: motorways have separate carriageways for the two directions, independent or divided by a median, so opposing traffic never meets at the same level.",
+        "ru": "Верно: у автомагистралей — раздельные проезжие части для двух направлений, независимые или разделённые разделительной полосой; встречные потоки не встречаются на одном уровне.",
+        "zh": "正确：高速公路两个方向为分开的行车道，彼此独立或由中央分隔带隔开，对向车流不会在同一标高相遇。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autostrada-4": {
+      "verdict": "VERO",
+      "key_it": "Le macchine agricole non possono circolare in autostrada",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: farm vehicles are barred from motorways because they are too slow for the highway flow.",
+        "ru": "Верно: сельхозмашины на автомагистрали не допускаются, поскольку для потока шоссе они слишком медленные.",
+        "zh": "正确：农业车辆禁止驶入高速公路，因为它们对高速公路的车流而言过于缓慢。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autostrada-6": {
+      "verdict": "VERO",
+      "key_it": "tramite corsie di decelerazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: leaving a motorway is done through deceleration lanes, which let you drop speed safely before the exit.",
+        "ru": "Верно: съезд с автомагистрали выполняется по тормозным полосам, где безопасно сбрасывается скорость перед выходом.",
+        "zh": "正确：驶离高速公路要经过减速车道，从而在出口前安全地降低车速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autostrada-11": {
+      "verdict": "FALSO",
+      "key_it": "possono circolare i ciclomotori e i motocicli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: mopeds and small motorcycles may not drive on motorways — they are too slow and too light for the high-speed flow.",
+        "ru": "Неверно: мопеды и небольшие мотоциклы на автомагистрали ездить не могут — они слишком медленные и лёгкие для высокоскоростного потока.",
+        "zh": "错误：轻便摩托车和小排量摩托车不得驶入高速公路——它们对高速车流而言过于缓慢、过于轻便。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-carreggiata-3": {
+      "verdict": "VERO",
+      "key_it": "non comprende le piste ciclabili",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the carriageway does not include the cycle paths, which are laid separately for bikes.",
+        "ru": "Верно: проезжая часть не включает велодорожки, которые выделены отдельно для велосипедов.",
+        "zh": "正确：行车道不包括自行车道，自行车道为自行车单独设置。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-carreggiata-4": {
+      "verdict": "VERO",
+      "key_it": "non comprende i marciapiedi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the carriageway does not include the sidewalks; sidewalks belong to the wider road, not to the part meant for vehicles.",
+        "ru": "Верно: проезжая часть не включает тротуары; они входят в более широкое понятие дороги, а не в часть, отведённую транспорту.",
+        "zh": "正确：行车道不包括人行道；人行道属于范围更广的“道路”，而不属于供车辆使用的部分。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-carreggiata-5": {
+      "verdict": "VERO",
+      "key_it": "destinata normalmente alla circolazione dei veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: the carriageway is exactly the part of the road meant, normally, for the movement of vehicles.",
+        "ru": "Верно: проезжая часть — это как раз та часть дороги, которая предназначена (обычно) для движения транспорта.",
+        "zh": "正确：行车道正是道路上通常供车辆行驶的那一部分。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-carreggiata-7": {
+      "verdict": "FALSO",
+      "key_it": "destinata alla sosta di emergenza",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the carriageway is for driving, not for emergency parking. On motorways stopping is allowed only on the emergency lane.",
+        "ru": "Неверно: проезжая часть предназначена для движения, а не для аварийной остановки. На автомагистралях остановка разрешена только на аварийной полосе.",
+        "zh": "错误：行车道用于行驶，而非紧急停车。高速公路上只允许在应急车道停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-carreggiata-8": {
+      "verdict": "FALSO",
+      "key_it": "destinata alla sosta degli autocarri",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the carriageway is for the flow of traffic, not for trucks to park on. Parking happens on shoulders or dedicated bays.",
+        "ru": "Неверно: проезжая часть служит движению транспорта, а не для стоянки грузовиков. Стоят на обочине или в специальных местах.",
+        "zh": "错误：行车道服务于车流通行，而非供卡车停靠。停车应在路肩或专用停车区进行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-carreggiata-9": {
+      "verdict": "FALSO",
+      "key_it": "la traccia lasciata dalle ruote",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: that describes a wheel track in snow. The carriageway is the paved surface of the road reserved to traffic.",
+        "ru": "Неверно: так описан колёсный след в снегу. Проезжая часть — это вымощенная поверхность дороги, отведённая движению.",
+        "zh": "错误：那样描述的是雪地上的车轮印。行车道是供通行的铺装路面。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-carreggiata-10": {
+      "verdict": "FALSO",
+      "key_it": "comprende le piazzole di sosta",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the carriageway does not include the parking bays; those are set apart from the part used for driving.",
+        "ru": "Неверно: проезжая часть не включает площадки для стоянки; они отделены от части, используемой для движения.",
+        "zh": "错误：行车道不包括停车区；停车区是与行驶区域分开的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-parti-carreggiata-0": {
+      "verdict": "VERO",
+      "key_it": "Fanno parte della carreggiata le corsie di marcia",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: driving lanes are part of the carriageway, divided into strips where vehicles move in one direction.",
+        "ru": "Верно: полосы движения входят в проезжую часть — это выделенные участки, по которым транспорт движется в одном направлении.",
+        "zh": "正确：行车道包含车道——即划分出的、车辆沿同一方向行驶的条带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-parti-carreggiata-1": {
+      "verdict": "VERO",
+      "key_it": "Fanno parte della carreggiata gli attraversamenti ciclabili",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: cycle crossings are part of the carriageway, since they cross the surface set for traffic.",
+        "ru": "Верно: велосипедные переходы входят в проезжую часть, поскольку пересекают предназначенную для движения поверхность.",
+        "zh": "正确：自行车穿越道属于行车道，因为它跨越了供通行的路面。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-parti-carreggiata-2": {
+      "verdict": "VERO",
+      "key_it": "Fanno parte della carreggiata gli attraversamenti pedonali",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: pedestrian crossings are part of the carriageway, as they cross the part of the road used by vehicles.",
+        "ru": "Верно: пешеходные переходы входят в проезжую часть, так как пересекают часть дороги, по которой едет транспорт.",
+        "zh": "正确：人行横道属于行车道，因为它横穿车辆通行的道路部分。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-parti-carreggiata-3": {
+      "verdict": "VERO",
+      "key_it": "Fanno parte della carreggiata le corsie di sorpasso",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: overtaking lanes are part of the carriageway, being the extra strips reserved for passing.",
+        "ru": "Верно: обгонные полосы входят в проезжую часть — это дополнительные полосы, отведённые для обгона.",
+        "zh": "正确：超车车道属于行车道，它们是专用于超车的额外条带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-parti-carreggiata-4": {
+      "verdict": "FALSO",
+      "key_it": "corsie di emergenza delle autostrade",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the motorway emergency lanes are not part of the carriageway; they are set apart and used only for stopping in an emergency.",
+        "ru": "Неверно: аварийные полосы автомагистрали не входят в проезжую часть; они выделены отдельно и служат только для остановки при нештатной ситуации.",
+        "zh": "错误：高速公路的应急车道不属于行车道；它们单独设置，仅供紧急情况下停车使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
