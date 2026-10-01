@@ -1,0 +1,174 @@
+{
+  "category": "semafori-vigili",
+  "items": {
+    "semafori-vigili-agenti-traffico-0": {
+      "verdict": "VERO",
+      "key_it": "la carta di circolazione",
+      "chapter": "ch7",
+      "why": {
+        "en": "True: the driver of a car or motorcycle must show the vehicle registration (carta di circolazione) when an officer asks for it, because the officer has to identify the vehicle.",
+        "ru": "Верно: водитель автомобиля или мотоцикла по требованию сотрудника обязан предъявить свидетельство о регистрации (carta di circolazione), потому что инспектору нужно опознать транспортное средство.",
+        "zh": "正确：汽车或摩托车驾驶人被执法人员要求时必须出示行驶证，因为执法者需要识别车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "semafori-vigili-agenti-traffico-1": {
+      "verdict": "VERO",
+      "key_it": "la patente di guida",
+      "chapter": "ch7",
+      "why": {
+        "en": "True: the driver of a car or motorcycle must show the driving licence when an officer asks, because that is the document proving the right to drive that category of vehicle.",
+        "ru": "Верно: водитель автомобиля или мотоцикла по требованию обязан предъявить водительское удостоверение, потому что именно оно подтверждает право управлять этим классом средств.",
+        "zh": "正确：汽车或摩托车驾驶人被要求时必须出示驾照，因为正是它证明驾驶该类别车辆的资格。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "semafori-vigili-agenti-traffico-2": {
+      "verdict": "VERO",
+      "key_it": "il certificato di assicurazione del veicolo",
+      "chapter": "ch7",
+      "why": {
+        "en": "True: the driver of a car or motorcycle must show the vehicle insurance certificate on request, because the officer checks that the vehicle is legally insured.",
+        "ru": "Верно: водитель автомобиля или мотоцикла по требованию обязан предъявить страховое свидетельство, потому что инспектор проверяет законно застрахован ли транспортное средство.",
+        "zh": "正确：汽车或摩托车驾驶人被要求时必须出示车辆保险证明，因为执法者要确认车辆依法投保。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "semafori-vigili-agenti-traffico-3": {
+      "verdict": "VERO",
+      "key_it": "il segnale mobile di pericolo (triangolo)",
+      "chapter": "ch7",
+      "why": {
+        "en": "True: the driver of a car must show the portable hazard warning sign (the triangle) on request, because a car is required to carry it and the officer can verify that it is present.",
+        "ru": "Верно: водитель автомобиля по требованию обязан предъявить знак аварийной остановки (треугольник), потому что автомобиль обязан его иметь, и инспектор может проверить наличие.",
+        "zh": "正确：汽车驾驶人被要求时必须出示临时警示三角牌，因为汽车必须携带它，执法者可以核对是否具备。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "semafori-vigili-agenti-traffico-4": {
+      "verdict": "FALSO",
+      "key_it": "la valigetta di pronto soccorso",
+      "chapter": "ch7",
+      "why": {
+        "en": "False: although a first-aid kit must be carried on board, the driver is not required to produce it to an officer on request, so it is not among the documents to be shown.",
+        "ru": "Неверно: хотя аптечку иметь на борту обязательно, предъявлять её инспектору по требованию не нужно, поэтому она не входит в документы, которые обязаны показывать.",
+        "zh": "错误：虽然车上必须配备急救包，但被要求时无需向执法者出示，所以它不属于要出示的文件。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "semafori-vigili-agenti-traffico-5": {
+      "verdict": "FALSO",
+      "key_it": "il certificato di proprietà",
+      "chapter": "ch7",
+      "why": {
+        "en": "False: the ownership certificate is not required to be shown to an officer on request; the documents to produce are the ones tied to driving and to the vehicle itself.",
+        "ru": "Неверно: свидетельство о собственности по требованию предъявлять не требуется; показываются документы, связанные с управлением и самим транспортным средством.",
+        "zh": "错误：所有权证书不被要求向执法者出示；要出示的是与驾驶和车辆本身相关的文件。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "semafori-vigili-agenti-traffico-6": {
+      "verdict": "FALSO",
+      "key_it": "il codice fiscale",
+      "chapter": "ch7",
+      "why": {
+        "en": "False: the tax code (codice fiscale) is a personal document and is not among the items the driver must show to an officer on request.",
+        "ru": "Неверно: налоговый код (codice fiscale) — личный документ и не входит в то, что водитель обязан предъявить инспектору по требованию.",
+        "zh": "错误：个人税号是个人文件，不属于驾驶人被要求时必须向执法者出示的项目。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "semafori-vigili-agenti-traffico-7": {
+      "verdict": "FALSO",
+      "key_it": "l'attestazione di pagamento della tassa di possesso (bollo)",
+      "chapter": "ch7",
+      "why": {
+        "en": "False: the proof of payment of the ownership tax (bollo) is not required to be shown to an officer on request, so the statement that it must be produced is wrong.",
+        "ru": "Неверно: подтверждение оплаты налога на владение (bollo) по требованию инспектору предъявлять не требуется, поэтому утверждение о его предъявлении неверно.",
+        "zh": "错误：持有税（bollo）的缴费证明不被要求向执法者出示，因此声称必须出示它是错误的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "semafori-vigili-fischeitto-0": {
+      "verdict": "VERO",
+      "key_it": "significa che tutti i veicoli si devono arrestare, in condizioni di sicurezza",
+      "chapter": "ch7",
+      "why": {
+        "en": "True: a prolonged whistle from the traffic officer means all vehicles must stop, in safe conditions, because the officer is giving a command that overrides normal flow.",
+        "ru": "Верно: протяжный свисток сотрудника дорожной службы означает, что все транспортные средства должны остановиться в безопасных условиях, потому что это команда, отменяющая обычный порядок.",
+        "zh": "正确：交通管理人员的长哨声表示所有车辆必须在安全条件下停车，因为这是覆盖正常通行秩序的指令。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "semafori-vigili-fischeitto-5": {
+      "verdict": "FALSO",
+      "key_it": "serve per arrestare o deviare solo i veicoli che arrivano dalla sua destra",
+      "chapter": "ch7",
+      "why": {
+        "en": "False: the prolonged whistle is a general command that applies to all approaching vehicles, not only to the ones coming from the officer's right.",
+        "ru": "Неверно: протяжный свисток — общая команда, она действует на все приближающиеся транспортные средства, а не только на те, что едут справа от инспектора.",
+        "zh": "错误：长哨声是通用指令，适用于所有接近的车辆，而不只是从执法人员右侧驶来的车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "semafori-vigili-vicinanze-passaggio-livello-1": {
+      "verdict": "VERO",
+      "key_it": "non si deve accelerare per attraversare prima che si abbassi la semibarriera",
+      "chapter": "ch7",
+      "why": {
+        "en": "True: with the red lights on and the half-barrier still raised you must not speed up to get across before it closes; the red lights already command a stop.",
+        "ru": "Верно: при горении красных огней и ещё поднятом полубарьере нельзя ускоряться, чтобы пересечь перед тем, как он опустится; красные огни уже предписывают остановку.",
+        "zh": "正确：红灯亮而半栏杆尚未放下时，不能加速抢先通过；红灯已经命令停车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "semafori-vigili-vicinanze-passaggio-livello-2": {
+      "verdict": "FALSO",
+      "key_it": "si può passare velocemente, se non si vede sopraggiungere il treno",
+      "chapter": "ch7",
+      "why": {
+        "en": "False: the lit red lights at the level crossing command a stop even if the barrier is still up and no train is visible, so passing quickly is forbidden.",
+        "ru": "Неверно: включённые красные огни на переезде предписывают остановку, даже если барьер ещё поднят и поезд не виден, поэтому ехать быстро нельзя.",
+        "zh": "错误：道口红灯亮起时就命令停车，即使栏杆还抬着、看不到列车，快速通过是被禁止的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "semafori-vigili-vicinanze-passaggio-livello-5": {
+      "verdict": "FALSO",
+      "key_it": "è possibile attraversare se la linea ferroviaria è ad un solo binario",
+      "chapter": "ch7",
+      "why": {
+        "en": "False: whether the line has one or more tracks does not matter; the red lights alone require you to stop and not to cross, so a single track gives no right to pass.",
+        "ru": "Неверно: количество путей не имеет значения; одних красных огней достаточно, чтобы потребовалась остановка и пересечение было запрещено, один путь не даёт права проехать.",
+        "zh": "错误：线路是单轨还是多轨都不重要；仅凭红灯就要求停车、禁止跨越，单轨不给你通行的权利。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    }
+  }
+}

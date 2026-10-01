@@ -1,0 +1,31 @@
+{
+  "category": "segnaletica-orizzontale-ostacoli",
+  "items": {
+    "segnaletica-orizzontale-ostacoli-carreggiata-doppio-senso-circolazione-0": {
+      "verdict": "VERO",
+      "key_it": "può essere continua o discontinua (tratteggiata)",
+      "chapter": "ch6",
+      "why": {
+        "en": "True: the centre line that separates the two opposite directions may be either a continuous line or a dashed one; the rule does not force it to be one kind or the other.",
+        "ru": "Верно: средняя линия, разделяющая встречные потоки, может быть сплошной или прерывистой — правило не навязывает только один вариант.",
+        "zh": "正确：分隔对向车流的中间线可以是实线或虚线；规则并不强制规定必须是其中一种。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "segnaletica-orizzontale-ostacoli-carreggiata-doppio-senso-circolazione-1": {
+      "verdict": "VERO",
+      "key_it": "se discontinua (tratteggiata), può essere superata durante un sorpasso",
+      "chapter": "ch6",
+      "why": {
+        "en": "True: when the centre line is dashed you may cross it to overtake, because a dashed line does not forbid crossing; it would be forbidden only if it were continuous.",
+        "ru": "Верно: если средняя линия прерывистая, её можно пересекать при обгоне, потому что прерывистая линия пересечения не запрещает; запрет был бы только при сплошной.",
+        "zh": "正确：中间线若是虚线，超车时可以越过，因为虚线不禁止跨越；只有实线才禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    }
+  }
+}
