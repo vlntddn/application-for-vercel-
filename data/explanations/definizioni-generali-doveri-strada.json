@@ -4810,6 +4810,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autocaravan-camper-5": {
+      "verdict": "FALSO",
+      "key_it": "sono veicoli destinati ai lavori agricoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorhomes (campers) are for carrying and housing people, not vehicles built for agricultural work.",
+        "ru": "Автодома (camper) — для перевозки и размещения людей, а не транспортные средства для сельскохозяйственных работ.",
+        "zh": "房车（autocaravan/camper）用于载人并供人居住，而非为农业作业建造的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autocaravan-camper-6": {
+      "verdict": "FALSO",
+      "key_it": "destinati alla costruzione e alla manutenzione di opere stradali",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorhomes (campers) are not for building or maintaining road works; that is a different vehicle class.",
+        "ru": "Автодома (camper) не предназначены для строительства и ремонта дорожных сооружений; это другой класс машин.",
+        "zh": "房车（autocaravan/camper）并非用于修建或维护道路工程；那是另一类车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autocaravan-camper-8": {
+      "verdict": "FALSO",
+      "key_it": "soggette a revisione ogni cinque anni",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorhomes are not inspected on a five-year cycle; their revision period is not that long.",
+        "ru": "Автодома не осматриваются по пятилетнему циклу; период их техосмотра не такой длинный.",
+        "zh": "房车并非按五年周期检验；它的检验周期没有这么长。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strisce-pannelli-retroriflettenti-2": {
+      "verdict": "VERO",
+      "key_it": "superiore a 3,5 t devono essere segnalati con strisce posteriori e laterali retroriflettenti",
+      "chapter": "ch1",
+      "why": {
+        "en": "Trucks and trailers over 3.5 t maximum laden mass must carry rear and side retroreflective strips while circulating.",
+        "ru": "Грузовики и прицепы с максимальной полной массой выше 3,5 т должны иметь задние и боковые ретроотражающие полосы при движении.",
+        "zh": "最大满载质量超过 3.5 吨的卡车和挂车在行驶时须装有后部和侧部逆向反光条。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strisce-pannelli-retroriflettenti-5": {
+      "verdict": "VERO",
+      "key_it": "applicate lateralmente ad alcuni veicoli possono essere di colore bianco o giallo",
+      "chapter": "ch1",
+      "why": {
+        "en": "Side retroreflective strips on certain vehicles may be white or yellow.",
+        "ru": "Боковые ретроотражающие полосы на некоторых ТС могут быть белого или жёлтого цвета.",
+        "zh": "某些车辆侧面的逆向反光条可以是白色或黄色。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strisce-pannelli-retroriflettenti-6": {
+      "verdict": "VERO",
+      "key_it": "applicate dietro ad alcuni veicoli possono essere di colore rosso o giallo",
+      "chapter": "ch1",
+      "why": {
+        "en": "Rear retroreflective strips on certain vehicles may be red or yellow.",
+        "ru": "Задние ретроотражающие полосы на некоторых ТС могут быть красного или жёлтого цвета.",
+        "zh": "某些车辆后部的逆向反光条可以是红色或黄色。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strisce-pannelli-retroriflettenti-9": {
+      "verdict": "FALSO",
+      "key_it": "inferiore a 3,5 tonnellate",
+      "chapter": "ch1",
+      "why": {
+        "en": "Trucks with maximum laden mass under 3.5 t are not required to carry lateral retroreflective strips.",
+        "ru": "Грузовики с максимальной полной массой ниже 3,5 т не обязаны иметь боковые ретроотражающие полосы.",
+        "zh": "最大满载质量低于 3.5 吨的卡车不要求装侧部逆向反光条。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strisce-pannelli-retroriflettenti-10": {
+      "verdict": "FALSO",
+      "key_it": "inferiore o uguale a 3,5 tonnellate devono essere segnalati posteriormente con pannelli retroriflettenti gialli e rossi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Trucks at or under 3.5 t maximum laden mass are not required to be marked rearly with yellow and red retroreflective panels.",
+        "ru": "Грузовики с максимальной полной массой до 3,5 т включительно не обязаны маркироваться задними жёлто-красными ретроотражающими панелями.",
+        "zh": "最大满载质量不超过 3.5 吨的卡车不要求用黄红逆向反光板在车后部做标识。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strisce-pannelli-retroriflettenti-13": {
+      "verdict": "FALSO",
+      "key_it": "muniti posteriormente di strisce retroriflettenti di colore rosso o giallo",
+      "chapter": "ch1",
+      "why": {
+        "en": "Caravans (roulottes) are not required to carry red or yellow retroreflective strips at the rear.",
+        "ru": "Караваны (roulottes) не обязаны иметь задние ретроотражающие полосы красного или жёлтого цвета.",
+        "zh": "房车挂车（caravan/roulotte）不要求装有红色或黄色的后部逆向反光条。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-strisce-pannelli-retroriflettenti-14": {
+      "verdict": "FALSO",
+      "key_it": "muniti, nella parte posteriore di strisce retroriflettenti di colore rosso o bianco",
+      "chapter": "ch1",
+      "why": {
+        "en": "Buses are not required to carry red or white retroreflective strips at the rear.",
+        "ru": "Автобусы не обязаны иметь задние ретроотражающие полосы красного или белого цвета.",
+        "zh": "公共汽车不要求装有红色或白色的后部逆向反光条。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-motocicli-0": {
+      "verdict": "VERO",
+      "key_it": "I motocicli sono veicoli a due ruote",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorcycles are two-wheeled vehicles.",
+        "ru": "Мотоциклы — двухколёсные транспортные средства.",
+        "zh": "摩托车是两轮车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-motocicli-1": {
+      "verdict": "VERO",
+      "key_it": "cilindrata superiore a 50 cm3",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorcycles have an engine displacement above 50 cm3.",
+        "ru": "У мотоциклов объём двигателя выше 50 см³.",
+        "zh": "摩托车的发动机排量大于 50 立方厘米。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-motocicli-2": {
+      "verdict": "VERO",
+      "key_it": "I ciclomotori non rientrano nella categoria dei motocicli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Mopeds (ciclomotori) are not part of the motorcycle category; they are a separate class.",
+        "ru": "Мопеды (ciclomotori) не входят в категорию мотоциклов; это отдельный класс.",
+        "zh": "助动车（ciclomotore）不属于摩托车类别；它是单独的一类。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-motocicli-3": {
+      "verdict": "VERO",
+      "key_it": "possono essere dotati di cambio automatico",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorcycles may be fitted with an automatic transmission.",
+        "ru": "Мотоциклы могут быть оснащены автоматической коробкой передач.",
+        "zh": "摩托车可以配备自动变速箱。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-motocicli-4": {
+      "verdict": "VERO",
+      "key_it": "revisione dopo quattro anni dalla prima immatricolazione, successivamente ogni due anni",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorcycles are inspected four years after first registration, then every two years.",
+        "ru": "Мотоциклы осматриваются через четыре года после первой регистрации, затем каждые два года.",
+        "zh": "摩托车在首次登记四年后接受检验，此后每两年一次。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-motocicli-6": {
+      "verdict": "FALSO",
+      "key_it": "sono veicoli a motore con più di due ruote",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorcycles are not multi-wheeled vehicles with more than two wheels; they are two-wheeled.",
+        "ru": "Мотоциклы — не многоколёсные ТС с более чем двумя колёсами; они двухколёсные.",
+        "zh": "摩托车并非多于两个车轮的机动车辆；它是两轮的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-motocicli-7": {
+      "verdict": "FALSO",
+      "key_it": "Il motociclo è un qualunque veicolo a due ruote",
+      "chapter": "ch1",
+      "why": {
+        "en": "A motorcycle is not just any two-wheeled vehicle; it is a motorized two-wheeler meeting specific limits.",
+        "ru": "Мотоцикл — не просто любое двухколёсное ТС; это моторизованное двухколёсное ТС, отвечающее определённым параметрам.",
+        "zh": "摩托车并非任意两轮车辆；它是满足特定参数的机动两轮车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-motocicli-9": {
+      "verdict": "FALSO",
+      "key_it": "motore di cilindrata fino a 50 cm3 e sviluppano una velocità fino a 45 km/h",
+      "chapter": "ch1",
+      "why": {
+        "en": "Motorcycles are not limited to 50 cm3 and 45 km/h; those limits describe mopeds, not motorcycles.",
+        "ru": "Мотоциклы не ограничены 50 см³ и 45 км/ч; такие лимиты описывают мопеды, а не мотоциклы.",
+        "zh": "摩托车并不限于 50 立方厘米和 45 公里/小时；这些限制描述的是助动车，而非摩托车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-motocicli-10": {
+      "verdict": "FALSO",
+      "key_it": "i quadricicli leggeri sono assimilati ai motocicli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Light quadricycles are not assimilated to motorcycles for circulation purposes; they are treated as mopeds.",
+        "ru": "Лёгкие квадрициклы не приравниваются к мотоциклам в целях движения; они рассматриваются как мопеды.",
+        "zh": "轻型四轮机动车在通行目的上并不与摩托车等同；它被视同助动车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-autoveicoli-2": {
+      "verdict": "VERO",
+      "key_it": "L'autobus viene classificato autoveicolo",
+      "chapter": "ch1",
+      "why": {
+        "en": "A bus is classified as a motor vehicle (autoveicolo).",
+        "ru": "Автобус классифицируется как автомобиль (autoveicolo).",
+        "zh": "公共汽车被归类为机动车（autoveicolo）。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
