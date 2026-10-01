@@ -1222,6 +1222,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-cause-shock-7": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "FALSO",
+      "key_it": "Lo stato di shock non rappresenta un pericolo per la salute",
+      "why": {
+        "en": "False: shock is a life-threatening condition. The body's vital functions collapse and without prompt first aid the casualty can die.",
+        "ru": "Неверно: шок — угроза жизни. Жизненно важные функции организма нарушаются, и без своевременной помощи пострадавший может погибнуть.",
+        "zh": "错误：休克是危及生命的情况，身体重要功能崩溃，若不及时急救可能导致死亡。"
+      }
+    },
+    "alcool-droga-primo-soccorso-corpo-estraneo-occhio-2": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "VERO",
+      "key_it": "bisogna bendarglielo, evitando di toccarlo fino all",
+      "why": {
+        "en": "True: with a foreign body in one eye, bandage the eye and avoid touching it until a specialist intervenes.",
+        "ru": "Верно: при инородном теле в глазу глаз закрывают повязкой и не трогают до приезда специалиста.",
+        "zh": "正确：眼睛有异物时，用绷带遮住眼睛，避免触碰，直到专业人员处理。"
+      }
+    },
+    "alcool-droga-primo-soccorso-corpo-estraneo-occhio-4": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "FALSO",
+      "key_it": "bisogna costringerlo a tenere gli occhi aperti",
+      "why": {
+        "en": "False: forcing the casualty to keep the eyes open with a foreign body inside worsens the damage; the eye must be bandaged and left alone.",
+        "ru": "Неверно: заставлять пострадавшего держать глаза открытыми при инородном теле лишь усугубляет повреждения — глаз нужно закрыть повязкой и не трогать.",
+        "zh": "错误：异物在眼内时强迫睁开眼睛会加重损伤，应用绷带遮住眼睛，避免触碰。"
+      }
+    },
+    "alcool-droga-primo-soccorso-corpo-estraneo-occhio-5": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "FALSO",
+      "key_it": "bisogna massaggiargli delicatamente la palpebra",
+      "why": {
+        "en": "False: gently massaging the eyelid with a foreign body inside pushes it deeper and causes more damage; the eye is bandaged and left to a specialist.",
+        "ru": "Неверно: массировать веко при инородном теле в глазу — значит загнать его глубже; глаз закрывают повязкой и оставляют специалисту.",
+        "zh": "错误：眼睛内有异物时按摩眼睑会使其深入并加重损伤，应用绷带遮盖，交由专业人员处理。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-incoscienza-0": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "VERO",
+      "key_it": "verificare se respira ancora",
+      "why": {
+        "en": "True: an unconscious casualty's breathing must be checked by feeling chest or abdomen movement to confirm the airway is working.",
+        "ru": "Верно: у пострадавшего в бессознательном состоянии проверяют дыхание, нащупывая движение грудной клетки или брюшной стенки.",
+        "zh": "正确：对失去意识者应检查是否仍在呼吸，通过观察或触摸胸腹部起伏来确认。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-incoscienza-2": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "VERO",
+      "key_it": "liberare subito il naso e la bocca da eventuali ostruzioni",
+      "why": {
+        "en": "True: if an unconscious casualty struggles to breathe, clear the nose and mouth of any obstruction right away to restore the airway.",
+        "ru": "Верно: если пострадавший без сознания тяжело дышит, сразу освобождают нос и рот от возможных препятствий, чтобы восстановить проходимость дыхательных путей.",
+        "zh": "正确：失去意识者呼吸困难时，应立即清除口鼻内的堵塞物，恢复气道通畅。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-incoscienza-3": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "VERO",
+      "key_it": "bisogna controllare spesso le sue condizioni di salute",
+      "why": {
+        "en": "True: the condition of an unconscious casualty must be monitored constantly until the ambulance arrives, since the state can change quickly.",
+        "ru": "Верно: состояние пострадавшего без сознания нужно часто проверять до прибытия скорой — оно может быстро измениться.",
+        "zh": "正确：失去意识者到达救护车之前要持续关注其状况，因为情况可能迅速变化。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-incoscienza-4": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "FALSO",
+      "key_it": "bisogna somministrargli bevande alcooliche",
+      "why": {
+        "en": "False: an unconscious casualty cannot drink; forcing alcohol in is dangerous and useless — only keep the airway clear and call the ambulance.",
+        "ru": "Неверно: человеку без сознания нельзя давать пить — алкоголь ему не нужен и может лишь навредить; нужно лишь обеспечить проходимость дыхательных путей и вызвать скорую.",
+        "zh": "错误：无意识者不能饮酒，硬灌酒精既无益又危险，只需保持气道通畅并呼叫救护车。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-incoscienza-5": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "FALSO",
+      "key_it": "bisogna bloccargli le mani",
+      "why": {
+        "en": "False: an unconscious casualty's hands are not restrained; the correct priority is airway, breathing, and monitoring the casualty until help arrives.",
+        "ru": "Неверно: руки пострадавшего без сознания не сковывают; главное — обеспечить проходимость дыхательных путей и следить за состоянием до прибытия помощи.",
+        "zh": "错误：无意识者不需要束缚双手，重点是保持气道通畅，等待救援时监测其状况。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-incoscienza-6": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "FALSO",
+      "key_it": "bisogna fasciargli la testa",
+      "why": {
+        "en": "False: an unconscious casualty's head is not bandaged; keep the airway clear, protect the neck and head, and wait for the ambulance.",
+        "ru": "Неверно: голову пострадавшего без сознания не перевязывают; нужно обеспечить проходимость дыхательных путей, защитить шею и голову, и ждать скорую.",
+        "zh": "错误：无意识者不需要包扎头部，应保持气道通畅，保护颈部和头部，等待救护车。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-incoscienza-7": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "FALSO",
+      "key_it": "bisogna metterlo in posizione semiseduta",
+      "why": {
+        "en": "False: an unconscious casualty is never placed semi-sitting — only on the back or in the recovery position, to keep the airway open.",
+        "ru": "Неверно: пострадавшего без сознания не кладут полусидя — только на спину или на бок (поза боковая), чтобы не перекрыть дыхательные пути.",
+        "zh": "错误：无意识者不能半坐位，只能仰卧或恢复侧卧位，以防止气道被阻塞。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-shock-0": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "VERO",
+      "key_it": "va messo a terra e, se possibile, con le gambe sollevate",
+      "why": {
+        "en": "True: a casualty in shock is laid on the ground with the legs raised as much as possible to help blood return to the vital organs.",
+        "ru": "Верно: пострадавшего в шоке укладывают на землю и по возможности поднимают ноги, чтобы обеспечить приток крови к жизненно важным органам.",
+        "zh": "正确：休克者应平放在地上，尽可能抬高双腿，帮助血液回流到重要器官。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-shock-1": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "VERO",
+      "key_it": "va coperto come meglio possibile, per evitare che si raffreddi",
+      "why": {
+        "en": "True: a casualty in shock must be covered as well as possible so the body does not lose heat and the shock does not worsen.",
+        "ru": "Верно: пострадавшего в шоке укрывают насколько возможно, чтобы организм не терял тепло и шок не усугублялся.",
+        "zh": "正确：休克者应尽量盖好，避免体温流失，防止休克加重。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-shock-2": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "VERO",
+      "key_it": "va disteso, tenendo possibilmente le gambe sollevate",
+      "why": {
+        "en": "True: a casualty in shock is laid down with the legs raised as much as possible to support circulation to the head and vital organs.",
+        "ru": "Верно: пострадавшего в шоке укладывают на спину, при этом по возможности поднимают ноги, чтобы поддержать кровообращение головы и жизненно важных органов.",
+        "zh": "正确：休克者应仰卧，尽可能抬高双腿，以维持头部及重要器官的血液循环。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-shock-3": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "FALSO",
+      "key_it": "occorre farlo camminare, per riattivargli la circolazione",
+      "why": {
+        "en": "False: making a casualty in shock walk worsens the condition — the correct move is to lay the casualty down with the legs raised and call the ambulance.",
+        "ru": "Неверно: заставлять пострадавшего в шоке ходить усугубляет состояние; его нужно уложить, поднять ноги и вызвать скорую.",
+        "zh": "错误：让休克者行走会加重病情，正确的做法是平放、抬高双腿并呼叫救护车。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-shock-4": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "FALSO",
+      "key_it": "va messo in posizione seduta",
+      "why": {
+        "en": "False: a casualty in shock is not seated — sitting drops blood from the head and deepens the shock; the casualty is laid on the back with the legs raised.",
+        "ru": "Неверно: пострадавшего в шоке не сажают — сидячая поза отдаляет кровь от головы и углубляет шок; его кладут на спину, поднимая ноги.",
+        "zh": "错误：休克者不能坐起，坐姿使头部供血不足、休克加重，应平放并抬高双腿。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-shock-5": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "FALSO",
+      "key_it": "occorre dargli piccoli schiaffi su guance e gambe",
+      "why": {
+        "en": "False: slapping a casualty in shock on the cheeks or legs does nothing useful — the correct response is to lay the casualty down, raise the legs, cover the casualty, and call the ambulance.",
+        "ru": "Неверно: щипки по щекам и ногам пострадавшему в шоке не помогают; нужно уложить его, поднять ноги, укрыть и вызвать скорую.",
+        "zh": "错误：拍打休克者脸颊或腿部无益，正确做法是平放、抬高双腿、保暖并呼叫救护车。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-stato-shock-6": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "FALSO",
+      "key_it": "occorre fargli bere piccole quantità di superalcolici",
+      "why": {
+        "en": "False: alcohol in any form is never given to a casualty in shock — it worsens circulation and masks the state; only water is allowed if the casualty is conscious and can swallow.",
+        "ru": "Неверно: алкоголь в любой форме пострадавшему в шоке не дают — он ухудшает кровообращение и маскирует состояние; допустима только вода, если пострадавший в сознании и может глотать.",
+        "zh": "错误：休克者任何情况下都不能饮酒，酒精会加重循环障碍并掩盖病情，清醒且能吞咽时只可给予少量水。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-ustionato-0": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "VERO",
+      "key_it": "bisogna spegnerle, soffocandole, ad esempio, con una coperta",
+      "why": {
+        "en": "True: residual flames on a burned casualty are put out by smothering them — for example with a blanket — to stop the burn from spreading.",
+        "ru": "Верно: остаточное пламя на пострадавшем тушат удушением — например, одеялом, — чтобы не дать ожогу распространиться.",
+        "zh": "正确：烧伤者身上残留的火焰应立即用覆盖方式扑灭，例如用毛毯捂住，防止烧伤范围扩大。"
+      }
+    },
+    "alcool-droga-primo-soccorso-ferito-ustionato-1": {
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01",
+      "chapter": "ch18",
+      "verdict": "VERO",
+      "key_it": "è consigliabile non togliere i vestiti rimasti attaccati alla pelle bruciata",
+      "why": {
+        "en": "True: clothes stuck to burned skin are not peeled off — removing them tears healthy tissue away with them and worsens the injury.",
+        "ru": "Верно: прилипшую к обожжённой коже одежду не снимают — отрывая её, можно задеть и здоровые ткани, усугубив травму.",
+        "zh": "正确：粘在烧伤皮肤上的衣物不要撕下，否则可能连健康皮肤一起被撕掉，加重损伤。"
+      }
     }
   }
 }
