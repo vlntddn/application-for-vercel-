@@ -5330,6 +5330,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-rimorchi-5": {
+      "verdict": "FALSO",
+      "key_it": "massa massima a pieno carico",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a light trailer is the one whose maximum mass in loaded condition is up to seven hundred and fifty kilograms, not 500.",
+        "ru": "Неверно: лёгкий прицеп — тот, чья максимальная полная масса до семисот пятидесяти килограммов, а не 500.",
+        "zh": "错误：轻型挂车指满载最大质量达七百五十公斤者，而非 500 公斤。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-rimorchi-6": {
+      "verdict": "FALSO",
+      "key_it": "I semirimorchi sono rimorchi privi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a semitrailer supports part of its own weight on the towing unit, and it is equipped with its own braking system.",
+        "ru": "Неверно: полуприцеп опирается частью массы на тягач и оснащён собственной тормозной системой.",
+        "zh": "错误：半挂车有一部分自重由牵引车承担，并且装有自身的制动系统。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-rimorchi-7": {
+      "verdict": "FALSO",
+      "key_it": "muniti di silenziatore",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: a trailer has no engine, so it carries no exhaust and no silencer (muffler) — that fits motor vehicles.",
+        "ru": "Неверно: у прицепа нет двигателя, значит нет и выхлопа, а потому и глушителя — он есть у моторных транспортных средств.",
+        "zh": "错误：挂车没有发动机，也就没有排气和消音器——那是机动车才有的部件。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-traffico-intenso-0": {
+      "verdict": "VERO",
+      "key_it": "lasciare liberi gli incroci",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: even in heavy traffic a junction must be kept clear, because blocking it blocks the cross-traffic that then cannot move.",
+        "ru": "Верно: даже в плотном потоке перекрёсток нужно держать свободным — загораживаешь его, и останавливаешь пересекающий поток.",
+        "zh": "正确：即使交通拥堵也要保持路口畅通，因为堵住路口会阻断交叉方向的车流。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-traffico-intenso-2": {
+      "verdict": "VERO",
+      "key_it": "lasciare liberi gli attraversamenti",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: when queues build up, you must not stop on a pedestrian or cycle crossing — keep them clear so vulnerable users can pass.",
+        "ru": "Верно: в пробке нельзя останавливаться на пешеходном или велопереходе — держите их свободными, чтобы уязвимые участники могли пройти.",
+        "zh": "正确：排队时不得停在人行或自行车过街处——要保持畅通，让易受伤害的通行者通过。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-traffico-intenso-5": {
+      "verdict": "FALSO",
+      "key_it": "lasciare liberi i cavalcavia",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the rule is about keeping junctions and crossings clear, not about overpasses (cavalcavia); those are not the hazard here.",
+        "ru": "Неверно: правило о пропускании относится к перекрёсткам и переходам, а не к путепроводам — они тут не опасны.",
+        "zh": "错误：该规则针对路口和过街处，而非人行天桥——它们并不是这里的危险点。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-traffico-intenso-6": {
+      "verdict": "FALSO",
+      "key_it": "lasciare libere le gallerie",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the 'keep clear' rule covers junctions and crossings; tunnels are a separate matter and are not what the rule targets.",
+        "ru": "Неверно: правило «не закрывать» касается перекрёстков и переходов; тоннели — отдельный вопрос, не в этом суть.",
+        "zh": "错误：「保持畅通」针对的是路口和过街处；隧道是另一回事，并非此规则所针对。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-traffico-intenso-7": {
+      "verdict": "FALSO",
+      "key_it": "lasciare liberi gli ingressi delle abitazioni",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the duty is not to block junctions and crossings in a queue; private home entrances are not what this rule refers to.",
+        "ru": "Неверно: обязанность не закрывать в пробке — это перекрёстки и переходы, а не частные въезды к домам.",
+        "zh": "错误：排队时的义务是不要堵住路口和过街处，而不是私人住宅的出入口。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-traffico-intenso-8": {
+      "verdict": "FALSO",
+      "key_it": "lasciare liberi i sottovia",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: the rule speaks of junctions and crossings, not underpasses (sottovia); those are not the concern in this case.",
+        "ru": "Неверно: в правиле речь о перекрёстках и переходах, а не о подземных переходах — они тут не в счёт.",
+        "zh": "错误：规则说的是路口和过街处，而非地下通道——此处不涉及它们。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-file-veicoli-1": {
+      "verdict": "VERO",
+      "key_it": "lasciare liberi gli sbocchi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: when driving behind a queue, keeping the mouths of side roads clear helps traffic flow and lets vehicles join or leave.",
+        "ru": "Верно: движась за колонной, держите свободными выходы с боковых дорог — это помогает движению и съезду/выезду машин.",
+        "zh": "正确：跟随车队行驶时，保持支路出口畅通有助于车流，让车辆得以汇入或驶出。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-file-veicoli-2": {
+      "verdict": "VERO",
+      "key_it": "mantenere ugualmente la distanza di sicurezza",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: being in a line behind other vehicles does not cancel the rule — you must still keep the safe following distance.",
+        "ru": "Верно: движение в колонне не отменяет правило — безопасное дистанционное расстояние сохраняется.",
+        "zh": "正确：跟随车队并不取消规则——仍须保持安全跟车距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-file-veicoli-3": {
+      "verdict": "VERO",
+      "key_it": "non avvicinarsi troppo al veicolo che precede",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: for greater safety when following in a line you should not creep up too close to the vehicle ahead.",
+        "ru": "Верно: для большей безопасности при движении в колонне не нужно приближаться слишком близко к впереди идущему.",
+        "zh": "正确：车队行驶中为安全起见，不要跟前车贴得过近。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-file-veicoli-5": {
+      "verdict": "FALSO",
+      "key_it": "è consentito distrarsi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: even at low speed in a queue the driver must stay attentive — distraction is never allowed, at any speed.",
+        "ru": "Неверно: даже на малой скорости в пробке водитель обязан быть внимательным — отвлекаться нельзя на любой скорости.",
+        "zh": "错误：即使在车流中低速行驶，驾驶员也必须保持专注——任何速度下都不允许分心。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-file-veicoli-6": {
+      "verdict": "FALSO",
+      "key_it": "spostarsi il più possibile a sinistra",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: shifting hard left to open a lane on the right in a queue is not required and can force others out; it is not a recommended practice.",
+        "ru": "Неверно: уходить впритык к левому краю, чтобы освободить правую полосу, не требуется и может вытолкнуть других — это не рекомендуемый приём.",
+        "zh": "错误：在车队中尽量靠左、腾出右侧车道并无必要，反而可能挤到他人——并非推荐做法。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-file-veicoli-7": {
+      "verdict": "FALSO",
+      "key_it": "spostarsi al centro della carreggiata",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: steering to the middle of the carriageway to 'watch traffic' is not a rule; you should hold your lane and keep your distance.",
+        "ru": "Неверно: ехать по центру проезжей части «чтобы следить за дорогой» — не правило; держите свою полосу и дистанцию.",
+        "zh": "错误：为了「观察路况」而驶向车道中央并不是规定；应保持在自己的车道并维持距离。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-centro-abitato-1": {
+      "verdict": "VERO",
+      "key_it": "flusso della circolazione viene spesso",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: entering a town, traffic is often slowed or interrupted by vehicles that are stopped, starting, or changing direction.",
+        "ru": "Верно: въезжая в населённый пункт, учитывайте, что движение часто затрудняют или прерывают стоящие, стартующие и меняющие направление машины.",
+        "zh": "正确：驶入城镇时，注意车流常因停靠、起步或变向的车辆而受阻或中断。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-centro-abitato-2": {
+      "verdict": "VERO",
+      "key_it": "si mescolano maggiormente con il traffico",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: in a town other road users — pedestrians and cyclists — mix far more with motorized traffic, so expect more interaction.",
+        "ru": "Верно: в населённом пункте другие участники — пешеходы и велосипедисты — смешиваются с движением значительно сильнее.",
+        "zh": "正确：在城镇里，行人和骑行者等与其他交通流混合更紧密，须预期更多交互。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-centro-abitato-3": {
+      "verdict": "VERO",
+      "key_it": "più attenti, prudenti e tolleranti",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: in a town, with many users interacting in the urban environment, you should be more attentive, cautious and tolerant.",
+        "ru": "Верно: в населённом пункте, где множество участников в городской среде, нужно быть внимательнее, осторожнее и терпимее.",
+        "zh": "正确：在城镇中参与者众多、环境交互频繁，需更加专注、谨慎、包容。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-centro-abitato-5": {
+      "verdict": "FALSO",
+      "key_it": "possibile sostare in corrispondenza di incroci",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: it is precisely at intersections — even uncontrolled ones — that stopping or waiting is most strictly restricted, not permitted.",
+        "ru": "Неверно: именно у перекрёстков — даже нерегулируемых — остановка и стоянка ограничены строже всего, а не разрешены.",
+        "zh": "错误：恰恰在路口（含无信号灯路口）停车与逗留限制最严，而非被允许。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-segnaletica-stradale-0": {
+      "verdict": "VERO",
+      "key_it": "È vietato spostare o imbrattare",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: moving road signs or marking them with graffiti is forbidden — road markings must be kept intact and legible for everyone.",
+        "ru": "Верно: перемещать дорожные знаки или разрисовывать их запрещено — дорожная разметка должна оставаться целой и читаемой для всех.",
+        "zh": "正确：移动或涂污道路交通标志是被禁止的——标线须保持完整、人人可读。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
