@@ -1,3 +1,30 @@
+## 2026-10-01 — Q3 закрыта: панель после ошибки — сначала конкретное
+
+Ветка self-improve, коммит 40cf93e.
+
+**Что.** В панели после ответа (practice) общий блок главы показывался первым и был
+не связан с вопросом, а конкретное пояснение — под ним. Новый порядок:
+(1) вердикт, (2) пояснение L9 (со 2-й ошибки), (3) trap-why урока, (4) факты главы
+в свёрнутом `<details>` «<название главы> — more from this chapter».
+
+**Как.**
+- `public/js/views/practice.js`:
+  - `trapBlock(question)` — ищет `lesson.traps[]` по id вопроса и показывает `why`
+    (только при неверном ответе; нет trap → блок пуст).
+  - `explanationBlock` — «Chapter ch10» → название главы из `theory.json`
+    (`translations[lang].title`, fallback `title_it`) + та же ссылка `#/theory/<ch>`.
+  - `whyBlock` — тот же контент (objective + mustKnow), но в `<details>`, закрыт
+    по умолчанию; summary = «<название главы> — more from this chapter».
+  - Слоты панели: explanation → trap → why (было why → explanation); общий
+    `settle()` для асинхронного наполнения слотов.
+- `data/explanations/*.json` (4 файла, 160 строк): RU-префикс «Ложь:» → «Неверно:»
+  (переписано node-скриптом parse→replace→write, только поле `why.ru`).
+- `public/styles.css`: стили `.why-details`/summary в панели; SW v77→v78.
+
+**Проверка.** `scripts/verify.sh` → VERIFY OK (qa-new-user: 73 PASS, 0 FAIL;
+npm test: 190 passed). Порядок в коде: слоты explanation/trap перед why;
+trapBlock возвращает null без trap (проверено по данным: `chapters.<ch>.traps[].id`).
+
 ## 2026-10-01 — Q2 закрыта: 404-шторм устранён (index.json оверлеев)
 
 Ветка self-improve, коммит 7a18a4c.
