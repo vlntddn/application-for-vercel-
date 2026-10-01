@@ -1742,6 +1742,97 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-ferito-ustionato-3": {
+      "verdict": "VERO",
+      "key_it": "coprirle con materiale pulito, possibilmente sterile",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: chest burns are covered with clean, ideally sterile material — the dressing protects the wound and prevents infection, while creams, ointments and ice are never applied.",
+        "ru": "Верно: ожоги грудной клетки накрывают чистым, лучше стерильным материалом — повязка защищает рану и предотвращает инфекцию; кремы, мази и лёд не применяют.",
+        "zh": "正确：胸部烧伤要盖上清洁、最好无菌的材料——敷料保护伤口并防止感染；不可用乳膏、软膏或冰块。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-ferito-ustionato-4": {
+      "verdict": "FALSO",
+      "key_it": "bisogna aspettare che si spengano da sole",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: a person on fire must be stopped immediately — roll them on the ground or press down with a jacket, blanket or coat. Every second of burning deepens the burns; you cannot wait for the flames to go out on their own.",
+        "ru": "Ложно: горящего остановить немедленно — скатать по земле или прижать курткой, одеялом, пальто. Каждая секунда горения углубляет ожог; ждать, пока огонь погаснет сам, нельзя.",
+        "zh": "错误：着火的伤者要立刻扑灭——在地上滚动或用外套、毛毯、大衣按压。每烧一秒伤口就深一分；绝不能等火自己熄灭。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-ferito-ustionato-6": {
+      "verdict": "FALSO",
+      "key_it": "bisogna disinfettare le bruciature con l'alcool",
+      "chapter": "ch18",
+      "why": {
+        "en": "False: burns are never disinfected with alcohol — alcohol damages the burn tissue and causes intense pain. The correct first aid is cool running water, then covering with clean material.",
+        "ru": "Ложно: ожоги никогда не дезинфицируют алкоголем — спирт повреждает обожжённую ткань и вызывает сильную боль. Правильная помощь: прохладная проточная вода, затем покрытие чистым материалом.",
+        "zh": "错误：烧伤绝不能用酒精消毒——酒精损伤烧伤组织并引起剧痛。正确做法是冷水冲洗，再用清洁材料覆盖。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-occhiali-lenti-contatto-0": {
+      "verdict": "VERO",
+      "key_it": "se nella patente si trova indicato tale obbligo",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: if the licence states the obligation, glasses or contact lenses are mandatory while driving — driving without them while bound by such an obligation means driving with vision below the required standard.",
+        "ru": "Верно: если в правах указано такое обязательство, очки или линзы обязательны при вождении — ехать без них при таком обязательстве значит водить с зрением ниже требуемого стандарта.",
+        "zh": "正确：驾驶证注明该项义务时，开车必须戴眼镜或隐形眼镜——有义务却不戴，等于视力未达标仍开车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-occhiali-lenti-contatto-1": {
+      "verdict": "VERO",
+      "key_it": "è stato inserito il codice armonizzato \"01\"",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: the harmonised code \"01\" in the licence means visual correction is mandatory — driving without glasses or contact lenses in that case is an infraction, because the driver no longer meets the vision requirement.",
+        "ru": "Верно: гармонизированный код «01» в правах означает, что коррекция зрения обязательна — в этом случае ехать без очков или линз является правонарушением, поскольку зрение перестаёт соответствовать требованию.",
+        "zh": "正确：驾照中统一代码「01」表示必须矫正视力——此时不戴眼镜或隐形眼镜开车属于违规，因为视力不再符合要求。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-occhiali-lenti-contatto-2": {
+      "verdict": "VERO",
+      "key_it": "figura, per esteso o sotto forma di codice, tale obbligo",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: the obligation is valid in both forms — written out or as a code in the licence. What matters is that the obligation exists: in that case glasses or contact lenses are required while driving.",
+        "ru": "Верно: обязательство действует в обеих формах — прописанное или в виде кода в правах. Важно, что обязательство существует: в этом случае очки или линзы обязательны при вождении.",
+        "zh": "正确：义务无论是写成文字还是代码形式都有效。关键在于义务存在：此时开车必须戴眼镜或隐形眼镜。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "alcool-droga-primo-soccorso-occhiali-lenti-contatto-3": {
+      "verdict": "VERO",
+      "key_it": "quando è indicato sulla patente",
+      "chapter": "ch18",
+      "why": {
+        "en": "True: if the licence indicates the need for visual correction, the driver is required to wear glasses or contact lenses while driving — the licence itself records the conditions that must be observed on the road.",
+        "ru": "Верно: если в правах указано, что нужна коррекция зрения, водитель обязан водить в очках или линзах — сами права фиксируют условия, которые необходимо соблюдать на дороге.",
+        "zh": "正确：驾照注明需要矫正视力时，开车必须戴眼镜或隐形眼镜——驾驶证本身记载了必须在路上遵守的条件。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
