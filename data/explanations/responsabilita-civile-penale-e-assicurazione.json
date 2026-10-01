@@ -520,6 +520,383 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-4": {
+      "verdict": "VERO",
+      "key_it": "La presenza di passeggeri che schiamazzano a bordo del veicolo può influenzare la concentrazione del conducente",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: noisy, boisterous passengers on board can affect the driver's concentration.",
+        "ru": "Верно: шумные, громкие пассажиры на борту могут влиять на концентрацию водителя.",
+        "zh": "正确：车内喧闹的乘客可能影响驾驶员的注意力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-5": {
+      "verdict": "VERO",
+      "key_it": "Se non si è certi di attraversare in tutta sicurezza un incrocio, è necessario arrestarsi ed aspettare che transitino tutti i veicoli con cui vi può essere un pericolo di collisione",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: if one is not sure of crossing a junction safely, one must stop and wait for every vehicle that could collide to pass.",
+        "ru": "Верно: если не уверен, что пересекешь перекрёсток безопасно, нужно остановиться и подождать, пока пройдут все автомобили, с которыми возможен конфликт.",
+        "zh": "正确：若不能确定能安全通过路口，就必须停车，等待所有可能碰撞的车辆通过。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-6": {
+      "verdict": "VERO",
+      "key_it": "Parlare animosamente con altre persone a bordo del veicolo può influenzare negativamente il comportamento di guida",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: animated talking with other people on board can negatively influence driving behaviour.",
+        "ru": "Верно: оживлённая беседа с другими на борту может негативно влиять на поведение при вождении.",
+        "zh": "正确：与车上乘员热烈交谈可能对驾驶行为产生负面影响。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-7": {
+      "verdict": "VERO",
+      "key_it": "Si può \"allenare\" l'attenzione alla guida",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: attention while driving can be \"trained\" and improved with practice and awareness.",
+        "ru": "Верно: внимание при вождении можно «тренировать» и совершенствовать с помощью практики и осознанности.",
+        "zh": "正确：驾驶时的注意力可以通过练习与自觉来“训练”和提高。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-8": {
+      "verdict": "VERO",
+      "key_it": "Un conducente deve considerare che non sempre è in grado di valutare correttamente le proprie capacità di guida",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: a driver must consider that one cannot always correctly assess one's own driving abilities.",
+        "ru": "Верно: водитель должен учитывать, что не всегда способен верно оценить собственные навыки вождения.",
+        "zh": "正确：驾驶员必须意识到自己并不总能正确评估自己的驾驶能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-9": {
+      "verdict": "VERO",
+      "key_it": "l'ascolto di musica a volume molto alto",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: while driving, the capacity for attention can be affected even by listening to music at very high volume.",
+        "ru": "Верно: при вождении способность к вниманию может снижаться даже из-за прослушивания музыки на очень высокой громкости.",
+        "zh": "正确：驾驶时，即使以非常大的音量听音乐，也会影响注意力的保持。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-10": {
+      "verdict": "VERO",
+      "key_it": "L'ansia può ridurre la capacità di prestare attenzione ai pericoli",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: anxiety can reduce the ability to pay attention to hazards.",
+        "ru": "Верно: тревога может снижать способность обращать внимание на опасности.",
+        "zh": "正确：焦虑会削弱对危险的注意能力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-16": {
+      "verdict": "VERO",
+      "key_it": "anche se con impianto viva-voce, può ridurre l'attenzione alla strada",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: using the phone while driving, even with hands-free, can reduce attention on the road.",
+        "ru": "Верно: использование телефона при вождении, даже через гарнитуру, может снижать внимание к дороге.",
+        "zh": "正确：驾驶时使用手机，即便是免提，也会降低对道路的注意力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-19": {
+      "verdict": "VERO",
+      "key_it": "E' pericoloso, durante la guida, distogliere lo sguardo dalla strada, anche per pochi millisecondi",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: taking the eyes off the road while driving is dangerous, even for a few milliseconds.",
+        "ru": "Верно: отводить взгляд от дороги при вождении опасно даже на миллисекунды.",
+        "zh": "正确：驾驶时把视线移开道路是危险的，哪怕只有几毫秒。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-20": {
+      "verdict": "VERO",
+      "key_it": "Il rispetto delle norme di circolazione permette di limitare i rischi connessi alla guida di tutti i veicoli, sia di quelli a motore, sia di quelli che ne sono privi",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: respecting the rules of the road limits the risks of driving all vehicles, whether powered or not.",
+        "ru": "Верно: соблюдение правил движения снижает риски при управлении всеми транспортными средствами, как с двигателем, так и без него.",
+        "zh": "正确：遵守交通规则能降低驾驶所有车辆（无论机动与否）的风险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-21": {
+      "verdict": "VERO",
+      "key_it": "Distrarsi alla guida può causare incidenti stradali che possono comportare gravi conseguenze",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: being distracted while driving can cause road accidents with serious consequences.",
+        "ru": "Верно: отвлечение при вождении может привести к ДТП с тяжёлыми последствиями.",
+        "zh": "正确：驾驶时分心可能导致造成严重后果的道路事故。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-23": {
+      "verdict": "VERO",
+      "key_it": "I nostri sensi non riescono a cogliere tutti gli stimoli presenti nell'ambiente",
+      "chapter": "ch19",
+      "why": {
+        "en": "True: our senses cannot catch every stimulus present in the environment; attention is limited.",
+        "ru": "Верно: наши органы чувств не способны улавливать все стимулы окружающей среды; внимание ограничено.",
+        "zh": "正确：我们的感官无法捕捉环境中所有刺激；注意力是有限的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-26": {
+      "verdict": "FALSO",
+      "key_it": "può distogliere lo sguardo dalla strada quando ritiene che non ci sia pericolo imminente di incidente",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: a driver must not take their eyes off the road even when they think there is no immediate danger; vigilance must be continuous.",
+        "ru": "Ложно: водитель не должен отводить взгляд от дороги даже при отсутствии явной опасности; бдительность должна быть непрерывной.",
+        "zh": "错误：即使认为没有迫在眉睫的危险，驾驶员也不应把视线移开道路；警惕必须持续。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-27": {
+      "verdict": "FALSO",
+      "key_it": "può arrestarsi e, mentre attende il passaggio di altri veicoli, può inviare un rapido messaggio con il cellulare",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: at a junction, while waiting for other vehicles, a driver may not send a quick text message with the phone.",
+        "ru": "Ложно: на перекрёстке, пока ждёшь других, водитель не может отправить быстрое сообщение с телефона.",
+        "zh": "错误：在路口等待其他车辆时，驾驶员不能用手机发送哪怕一条快捷消息。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-28": {
+      "verdict": "FALSO",
+      "key_it": "che intende passare per primo in un incrocio deve sopraggiungervi più velocemente",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: a driver who wants to go first at a junction must not rush to it; priority depends on the rules, not on speed of arrival.",
+        "ru": "Ложно: тот, кто хочет пройти первым на перекрёстке, не должен быстрее мчаться к нему; приоритет определяется правилами, а не скоростью прибытия.",
+        "zh": "错误：想在路口先行的人不应加速赶过去；优先权由规则决定，而非到达速度。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-29": {
+      "verdict": "FALSO",
+      "key_it": "può comporre un numero di telefono con il cellulare, senza fermarsi",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: while driving, even if there is no immediate danger, a driver may not dial a number on the phone without stopping.",
+        "ru": "Ложно: при вождении, даже без явной опасности, нельзя набирать номер на телефоне без остановки.",
+        "zh": "错误：驾驶时即使没有迫在眉睫的危险，也不得不停车就拨打手机。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-31": {
+      "verdict": "FALSO",
+      "key_it": "Il conducente può non tenere conto del comportamento degli altri utenti della strada, se questi ultimi non rispettano le regole del codice della strada",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: a driver must still account for the behaviour of other road users even if they break the Highway Code.",
+        "ru": "Ложно: даже если другие участники нарушают ПДД, водитель обязан учитывать их поведение.",
+        "zh": "错误：即使其他道路使用者违反道路法，驾驶员也必须考虑他们的行为。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-33": {
+      "verdict": "FALSO",
+      "key_it": "Un conducente deve sempre sottostimare le situazioni di pericolo per non farsi travolgere dall'ansia durante la guida",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: a driver must not underestimate dangerous situations to avoid anxiety; hazards must be judged realistically and carefully.",
+        "ru": "Ложно: нельзя всегда недооценивать опасные ситуации, чтобы избежать тревоги; опасности нужно оценивать реально и внимательно.",
+        "zh": "错误：为避免焦虑而总是低估危险情况是错误的；危险应被客观、谨慎地评估。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-34": {
+      "verdict": "FALSO",
+      "key_it": "Il conducente deve accogliere gli inviti dei passeggeri a guidare più velocemente",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: a driver must not give in to passengers' requests to drive faster; speed is set by conditions and rules.",
+        "ru": "Ложно: нельзя уступать просьбам пассажиров ехать быстрее; скорость определяется условиями и правилами.",
+        "zh": "错误：驾驶员不应迎合乘客要求开快点；速度取决于路况与规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-35": {
+      "verdict": "FALSO",
+      "key_it": "Il conducente deve concentrarsi prevalentemente sul tratto di strada non superiore a tre metri antistante il suo veicolo",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: a driver must not concentrate mainly on a stretch of road of only a few metres ahead; attention must cover a far wider range.",
+        "ru": "Ложно: нельзя сосредоточаться преимущественно лишь на нескольких метрах дороги впереди; внимание должно охватывать значительно более широкую область.",
+        "zh": "错误：不应只把注意力集中在前方几米路面；注意范围必须远得多。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-36": {
+      "verdict": "FALSO",
+      "key_it": "Mentre il veicolo è in marcia, il conducente può programmare il navigatore in qualsiasi momento",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: while the vehicle is moving, the driver may not programme the navigator at any moment; doing so distracts from driving.",
+        "ru": "Ложно: пока автомобиль в движении, нельзя в любой момент настраивать навигатор; это отвлекает от вождения.",
+        "zh": "错误：车辆行驶时，不能在任何时候设置导航器；那样会分散驾驶注意力。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-37": {
+      "verdict": "FALSO",
+      "key_it": "Lo specchio retrovisore posto sul lato destro del veicolo deve essere utilizzato solo da conducenti esperti",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: the right-side mirror is not reserved for experienced drivers; every driver uses the mirrors.",
+        "ru": "Ложно: правое зеркало не только для опытных водителей; зеркала используют все.",
+        "zh": "错误：右侧后视镜并非只供资深驾驶员使用；所有驾驶员都使用后视镜。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-39": {
+      "verdict": "FALSO",
+      "key_it": "Il rispetto delle norme di circolazione è importante solo se la loro violazione comporta una sanzione economica elevata",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: respecting the rules matters regardless of the size of the fine; they exist for safety, not to avoid penalties.",
+        "ru": "Ложно: соблюдать правила важно вне зависимости от размера штрафа; они существуют ради безопасности, а не ради избегания наказаний.",
+        "zh": "错误：遵守规则与罚款金额高低无关；它们为安全而设，而非为避免处罚。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-42": {
+      "verdict": "FALSO",
+      "key_it": "Il divieto di sorpasso può non essere osservato se si è in coda dietro a un veicolo lento da più di 10 minuti e si ritiene di poter sorpassare senza pericoli",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: the overtaking ban must always be respected, even if one has been stuck behind a slow vehicle for a long time and thinks it could be passed safely.",
+        "ru": "Ложно: запрет обгона должен соблюдаться всегда, даже если ты давно стоит за медленным автомобилем и считаешь, что обгонить можно безопасно.",
+        "zh": "错误：即使长时间跟在慢车后面并认为可以安全超车，超车禁令也必须始终遵守。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-43": {
+      "verdict": "FALSO",
+      "key_it": "Il rispetto della posizione sulla carreggiata è una norma secondaria che può, se del caso, non essere osservata",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: keeping the correct position on the carriageway is not a minor rule that can be ignored when convenient.",
+        "ru": "Ложно: соблюдение положения на проезжей части — не второстепенное правило, которым можно пренебречь по ситуации.",
+        "zh": "错误：保持车道的正确位置不是可以视情况忽略的次要规则。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-44": {
+      "verdict": "FALSO",
+      "key_it": "L'attenzione alla guida è importante solo quando si compiono manovre pericolose quali, ad esempio, un sorpasso",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: attention while driving is not important only during dangerous manoeuvres like overtaking; it is required all the time.",
+        "ru": "Ложно: внимание при вождении важно не только при опасных манёврах вроде обгона; оно нужно всё время.",
+        "zh": "错误：驾驶注意力并非只在超车等危险操作时才重要；它始终必需。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-48": {
+      "verdict": "FALSO",
+      "key_it": "La quantità di attenzione che si può prestare alla strada mentre si guida è illimitata",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: the amount of attention one can devote to the road while driving is limited, not unlimited.",
+        "ru": "Ложно: объём внимания, который можно уделять дороге при вождении, ограничен, а не безграничен.",
+        "zh": "错误：驾驶时能投入道路的关注量是有限的，并非无限。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-50": {
+      "verdict": "FALSO",
+      "key_it": "I nostri sensi riescono a cogliere tutti gli stimoli presenti nell'ambiente",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: our senses cannot catch every stimulus in the environment; some are missed, which is why vigilance is key.",
+        "ru": "Ложно: наши органы чувств не улавливают все стимулы; часть пропускается, поэтому важна бдительность.",
+        "zh": "错误：我们的感官无法捕捉环境中所有刺激；会漏掉一些，这正是警惕性的意义所在。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "responsabilita-civile-penale-e-assicurazione-psicologia-traffico-52": {
+      "verdict": "FALSO",
+      "key_it": "In condizioni di traffico intenso lo stress può aiutare il conducente a mantenersi vigile",
+      "chapter": "ch19",
+      "why": {
+        "en": "False: in heavy traffic stress does not help the driver stay alert; it impairs judgement and attention and raises accident risk.",
+        "ru": "Ложно: в плотном трафике стресс не помогает водителю оставаться бдительным; он ухудшает суждение и внимание и повышает риск.",
+        "zh": "错误：在拥堵路况下压力无助于驾驶员保持警惕；它会损害判断力与注意力并提高事故风险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
