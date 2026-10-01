@@ -1,0 +1,629 @@
+{
+  "category": "elementi-veicolo-manutenzione-comportamenti",
+  "items": {
+    "elementi-veicolo-manutenzione-comportamenti-coefficiente-aderenza-4": {
+      "verdict": "FALSO",
+      "key_it": "Se il coefficiente di aderenza è basso bisogna ridurre la velocità solo in curva",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: with a low adhesion coefficient, speed must be reduced not only in curves but on every kind of road.",
+        "ru": "Ложно: при низком коэффициенте сцепления скорость нужно снижать не только в поворотах, но и на любом типе дороги.",
+        "zh": "错误：附着力低时，不应只在弯道减速，而应在各类路面上都减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-conduzione-motociclo-0": {
+      "verdict": "VERO",
+      "key_it": "l'aderenza diminuisce sulle rotaie specialmente in caso di pioggia",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: a motorcyclist must consider that adhesion drops on rails, especially in the rain.",
+        "ru": "Верно: мотоциклист должен учитывать, что сцепление ухудшается на рельсах, особенно в дождь.",
+        "zh": "正确：骑摩托车必须考虑附着系数在铁轨上会降低，雨天尤甚。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-conduzione-motociclo-1": {
+      "verdict": "VERO",
+      "key_it": "l'aderenza diminuisce sulle strisce della segnaletica orizzontale in caso di pioggia",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: a motorcyclist must consider that adhesion drops on the painted lines of the horizontal markings in the rain.",
+        "ru": "Верно: мотоциклист должен учитывать, что сцепление ухудшается на полосах горизонтальной разметки в дождь.",
+        "zh": "正确：骑摩托车必须考虑雨天附着系数在水平标线（油漆条纹）上会降低。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-conduzione-motociclo-2": {
+      "verdict": "FALSO",
+      "key_it": "l'aderenza non dipende dal tipo di pavimentazione stradale",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: adhesion depends on the type of road surface, so it varies with the pavement.",
+        "ru": "Ложно: сцепление зависит от типа дорожного покрытия, поэтому меняется в зависимости от асфальта.",
+        "zh": "错误：附着系数取决于路面类型，会随铺装而变化。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-conduzione-motociclo-3": {
+      "verdict": "FALSO",
+      "key_it": "l'aderenza diminuisce quando trasporta un passeggero",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: carrying a passenger does not reduce adhesion; adhesion depends on surface and tyres, not on the load.",
+        "ru": "Ложно: перевозка пассажира не снижает сцепление; сцепление зависит от покрытия и шин, а не от груза.",
+        "zh": "错误：载人不降低附着系数；附着力取决于路面和轮胎，与负载无关。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-percorrenza-curva-1": {
+      "verdict": "VERO",
+      "key_it": "la velocità eccessiva può provocarne lo sbandamento",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: when a vehicle goes through a curve, excessive speed can cause it to skid sideways.",
+        "ru": "Верно: при прохождении поворота чрезмерная скорость может вызвать снос.",
+        "zh": "正确：车辆过弯时，过快的速度可能导致侧滑。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-percorrenza-curva-2": {
+      "verdict": "VERO",
+      "key_it": "la velocità eccessiva può provocarne il ribaltamento",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: when a vehicle goes through a curve, excessive speed can cause it to overturn.",
+        "ru": "Верно: при прохождении поворота чрезмерная скорость может привести к опрокидыванию.",
+        "zh": "正确：车辆过弯时，过快的速度可能导致侧翻。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-percorrenza-curva-4": {
+      "verdict": "FALSO",
+      "key_it": "si deve aumentare la velocità per evitare lo slittamento",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: in a curve one must not increase speed to avoid skidding; one should reduce it.",
+        "ru": "Ложно: в повороте нельзя повышать скорость, чтобы избежать заноса; нужно её снизить.",
+        "zh": "错误：弯道中不能为防侧滑而提速；应当减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-percorrenza-curva-5": {
+      "verdict": "FALSO",
+      "key_it": "si deve aumentare la velocità per evitare il ribaltamento",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: in a curve one must not increase speed to avoid overturning; one should reduce it.",
+        "ru": "Ложно: в повороте нельзя повышать скорость, чтобы избежать опрокидывания; нужно её снизить.",
+        "zh": "错误：弯道中不能为防侧翻而提速；应当减速。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-funzioni-1": {
+      "verdict": "VERO",
+      "key_it": "L'A.B.S. consente di correggere la traiettoria del veicolo anche durante una frenata di emergenza",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: the ABS allows correcting the vehicle's path even during an emergency brake.",
+        "ru": "Верно: ABS позволяет корректировать траекторию даже во время экстренного торможения.",
+        "zh": "正确：ABS即使在紧急制动时也能修正车辆行驶轨迹。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-funzioni-4": {
+      "verdict": "VERO",
+      "key_it": "L'A.B.S. agisce anche quando gli pneumatici sono usurati",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: the ABS also works when the tyres are worn.",
+        "ru": "Верно: ABS работает и при изношенных шинах.",
+        "zh": "正确：即使在轮胎磨损时，ABS也能起作用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-funzioni-5": {
+      "verdict": "VERO",
+      "key_it": "L'A.B.S. agisce anche quando l'asfalto è bagnato",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: the ABS also works when the road surface is wet.",
+        "ru": "Верно: ABS работает и на мокром асфальте.",
+        "zh": "正确：即使在路面湿滑时，ABS也能起作用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-pressione-gonfiaggio-0": {
+      "verdict": "VERO",
+      "key_it": "Si deve controllare periodicamente la pressione di gonfiaggio dei pneumatici, compresa quella della ruota di scorta",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: tyre inflation pressure must be checked periodically, including that of the spare wheel.",
+        "ru": "Верно: давление в шинах нужно проверять периодически, включая запасное колесо.",
+        "zh": "正确：应定期检查轮胎气压，包括备胎。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-pressione-gonfiaggio-3": {
+      "verdict": "VERO",
+      "key_it": "Un'insufficiente pressione di gonfiaggio degli pneumatici fa aumentare l'attrito e anche i consumi di carburante",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: insufficient tyre inflation increases friction and also fuel consumption.",
+        "ru": "Верно: недостаточное давление в шинах повышает трение и расход топлива.",
+        "zh": "正确：轮胎气压不足会增加摩擦，也会加大油耗。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-pressione-gonfiaggio-4": {
+      "verdict": "VERO",
+      "key_it": "La pressione di gonfiaggio dei pneumatici deve essere controllata quando la gomma è fredda",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: tyre inflation pressure must be checked when the tyre is cold.",
+        "ru": "Верно: давление в шинах нужно проверять, когда шина холодная.",
+        "zh": "正确：应在轮胎冷态时检查胎压。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-pressione-gonfiaggio-10": {
+      "verdict": "FALSO",
+      "key_it": "Nei veicoli con rimorchio, la pressione di gonfiaggio degli pneumatici del veicolo trainante deve essere uguale a quella degli pneumatici del rimorchio",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: on vehicles with a trailer, the towing vehicle's tyre pressure need not equal the trailer's; each follows its own specification.",
+        "ru": "Ложно: на автомобиле с прицепом давление в шинах тягача не обязано быть равным давлению в шинах прицепа; каждое следует своей спецификации.",
+        "zh": "错误：带挂车的车辆，牵引车与挂车的胎压不必相等；各按自身规格执行。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-pneumatici-tubeless-0": {
+      "verdict": "VERO",
+      "key_it": "Lo spessore minimo del battistrada degli pneumatici di un autoveicolo deve essere di 1,6 millimetri",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: the minimum tread depth of a car's tyres must be 1,6 millimetres.",
+        "ru": "Верно: минимальная глубина протектора шин легкового автомобиля — 1,6 мм.",
+        "zh": "正确：汽车轮胎的最小胎面深度须为 1,6 毫米。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-pneumatici-tubeless-1": {
+      "verdict": "VERO",
+      "key_it": "E' consigliabile sostituire gli pneumatici dopo alcuni anni, anche se non sono consumati",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: it is advisable to replace tyres after a few years, even if they are not worn.",
+        "ru": "Верно: через несколько лет шины стоит заменять, даже если они не изношены.",
+        "zh": "正确：即使轮胎未磨损，几年后也应更换。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-pneumatici-tubeless-2": {
+      "verdict": "VERO",
+      "key_it": "Lo spessore minimo del battistrada degli pneumatici di un motociclo deve essere di 1,0 millimetri",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: the minimum tread depth of a motorcycle's tyres must be 1,0 millimetres.",
+        "ru": "Верно: минимальная глубина протектора шин мотоцикла — 1,0 мм.",
+        "zh": "正确：摩托车轮胎的最小胎面深度须为 1,0 毫米。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-pneumatici-tubeless-5": {
+      "verdict": "FALSO",
+      "key_it": "Gli pneumatici \"tubeless\" possono essere riparati solo con apposite bombolette contenenti uno speciale mastice, che chiudono il foro dall'interno",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: tubeless tyres are not repaired only with special mastic cans sealing the hole from inside; other repair methods exist.",
+        "ru": "Ложно: бескамерные шины ремонтируются не только специальными аэрозолями со спецамимастиком, закрывающим прокол изнутри; существуют и другие способы.",
+        "zh": "错误：无内胎轮胎并非只能用专用胶罐从内部封住破洞来修补；还有其他修复方式。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-pneumatici-neve-3": {
+      "verdict": "FALSO",
+      "key_it": "Gli pneumatici chiodati vanno montati solo su due ruote dello stesso asse",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: studded tyres must be fitted on all four wheels, not only on two of the same axle.",
+        "ru": "Ложно: шипованные шины ставятся на все четыре колеса, а не только на два колёса одной оси.",
+        "zh": "错误：钉胎须装在全部四个车轮上，而不是只装同一轴的两个车轮。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-sostituzione-ruota-4": {
+      "verdict": "VERO",
+      "key_it": "Per sostituire una ruota, dopo aver sollevato il veicolo e inserito la ruota di scorta, bisogna stringere leggermente i bulloni a veicolo sollevato e completarne il bloccaggio solo dopo averlo abbassato",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: when replacing a wheel, after lifting the vehicle and fitting the spare, the bolts are tightened lightly with the vehicle raised and the final tightening is completed only after lowering it.",
+        "ru": "Верно: при замене колеса, после подъёма и установки запаски, гайки слегка подтягивают на поднятoм, а полностью затягивают только после опускания.",
+        "zh": "正确：换轮时，升车装好备胎后先在悬空时轻轻拧紧螺母，待放下车辆后再完全锁紧。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-sostituzione-ruota-5": {
+      "verdict": "VERO",
+      "key_it": "In caso di foratura, prima di procedere alla sostituzione della ruota, è opportuno far scendere dal veicolo tutti i passeggeri, facendoli sistemare, per ragioni di sicurezza, fuori dalla carreggiata",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: in case of a puncture, before replacing the wheel, all passengers should get out and, for safety, move clear of the carriageway.",
+        "ru": "Верно: при проколе, прежде чем менять колесо, всех пассажиров следует выпустить и для безопасности отправить с проезжей части.",
+        "zh": "正确：爆胎时，在更换车轮前应让所有乘客下车，出于安全原因站到路面外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-sostituzione-ruota-7": {
+      "verdict": "FALSO",
+      "key_it": "Per smontare una ruota da sostituire bisogna fissare il martinetto (cric) in un punto qualsiasi del longherone del veicolo",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: to remove a wheel, the jack must not be fixed at any point of the chassis rail; it must go on the designated jacking points.",
+        "ru": "Ложно: чтобы снять колесо, домкрат крепят не в произвольной точке рамы, а в предназначенных точках опоры.",
+        "zh": "错误：拆轮时，千斤顶不能固定在车架纵梁的任意位置；必须架在指定的顶起点。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenate-emergenza-6": {
+      "verdict": "FALSO",
+      "key_it": "Tutti i veicoli sono dotati del freno di stazionamento che si aziona con comando manuale",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: not every vehicle has a hand-operated parking brake; some use other types.",
+        "ru": "Ложно: не все ТС оснащены ручным стояночным тормозом; есть и другие типы.",
+        "zh": "错误：并非所有车辆都配有手动的驻车制动器；还有其他类型。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-rischio-incendio-veicolo-1": {
+      "verdict": "VERO",
+      "key_it": "In caso di principio d’incendio del veicolo, in mancanza di estintore, si può gettare sabbia o terra alla base delle fiamme",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: if a vehicle catches fire and there is no extinguisher, sand or earth can be thrown at the base of the flames.",
+        "ru": "Верно: при начале возгорания, если нет огнетушителя, можно бросить песок или землю в основание пламени.",
+        "zh": "正确：车辆起火而没灭火器时，可向火焰根部抛撒沙子或泥土。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-rischio-incendio-veicolo-2": {
+      "verdict": "VERO",
+      "key_it": "Dopo un incidente, se c'è un principio d'incendio del veicolo, in mancanza di estintore si può utilizzare una coperta bagnata per spegnere le fiamme",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: after an accident, if the vehicle catches fire and there is no extinguisher, a wet blanket can be used to put out the flames.",
+        "ru": "Верно: после ДТП, если ТС загорается и нет огнетушителя, можно использовать мокрый плед, чтобы погасить пламя.",
+        "zh": "正确：事故后若车辆起火且没有灭火器，可用湿毯子扑灭火焰。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-varie-manutenzione-3": {
+      "verdict": "VERO",
+      "key_it": "Il climatizzatore può essere utilmente impiegato anche nel periodo invernale, per sbrinare velocemente il parabrezza",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: the air-conditioner can also be usefully used in winter to quickly defrost the windscreen.",
+        "ru": "Верно: климат-контроль полезно использовать и зимой, чтобы быстро разморозить лобовое стекло.",
+        "zh": "正确：空调在冬季也可用于快速除霜前挡风玻璃。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-pulizia-cristalli-3": {
+      "verdict": "VERO",
+      "key_it": "Occorre verificare che nel serbatoio del dispositivo lavacristallo sia sempre presente liquido per detergere i vetri",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: one must check that the windscreen-washer tank always has liquid to clean the windows.",
+        "ru": "Верно: нужно следить, чтобы в бачке омывателя всегда была жидкость для мойки стёкол.",
+        "zh": "正确：须确认洗涤液壶中始终有清洗玻璃的液体。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-condizioni-pneumatici-0": {
+      "verdict": "VERO",
+      "key_it": "Per una maggiore sicurezza, bisogna utilizzare esclusivamente pneumatici delle dimensioni previste dall'omologazione del veicolo",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: for greater safety, one must use only tyres of the dimensions specified by the vehicle's type approval.",
+        "ru": "Верно: для большей безопасности использовать только шины тех размеров, что предусмотрены homologацией автомобиля.",
+        "zh": "正确：为更安全，须只使用车辆认证规定的尺寸轮胎。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-condizioni-pneumatici-2": {
+      "verdict": "VERO",
+      "key_it": "Per una maggiore sicurezza, bisogna controllare le condizioni dei pneumatici anche sui lati, per prevenire improvvisi scoppi o sgonfiamenti",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: for greater safety, tyre condition must be checked on the sides too, to prevent sudden bursts or deflations.",
+        "ru": "Верно: для большей безопасности проверять состояние шин и с боков, чтобы предотвратить внезапные взрывы или спуски.",
+        "zh": "正确：为更安全，也要检查轮胎侧面，以防突发爆胎或漏气。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-condizioni-pneumatici-5": {
+      "verdict": "FALSO",
+      "key_it": "Non bisogna mai invertire la posizione degli pneumatici, per permettere loro di adattarsi meglio",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: it is not forbidden to rotate the tyres; regular rotation helps them wear evenly and adapt better.",
+        "ru": "Ложно: не запрещено переставлять шины; регулярная перестановка помогает им изнашиваться равномерно.",
+        "zh": "错误：并非绝不能调换轮胎位置；定期换位有助于它们更均匀磨损。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-condizioni-pneumatici-6": {
+      "verdict": "FALSO",
+      "key_it": "Per garantire l'aderenza e la stabilità del veicolo, bisogna controllare solo la pressione di gonfiaggio degli pneumatici delle ruote motrici",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: to ensure adhesion and stability one must not check only the drive wheels; all tyres' pressure must be checked.",
+        "ru": "Ложно: для обеспечения сцепления и устойчивости нельзя проверять только приводные; нужно проверять давление во всех шинах.",
+        "zh": "错误：为保证附着力与稳定性，不能只检查驱动轮；须检查全部轮胎气压。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenata-freno-stazionamento-3": {
+      "verdict": "VERO",
+      "key_it": "Il freno di stazionamento deve essere utilizzato per bloccare il veicolo in sosta o per situazioni di emergenza",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: the parking brake must be used to hold the vehicle in a stop or in emergency situations.",
+        "ru": "Верно: стояночный тормоз предназначен для удержания ТС на стоянке или в экстренных ситуациях.",
+        "zh": "正确：驻车制动器用于停车固定车辆或应对紧急情况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenata-freno-stazionamento-4": {
+      "verdict": "VERO",
+      "key_it": "Il livello del liquido idraulico dei freni deve essere periodicamente controllato",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: the level of the brake hydraulic fluid must be checked periodically.",
+        "ru": "Верно: уровень гидравлической жидкости тормозов нужно проверять периодически.",
+        "zh": "正确：须定期检查制动液压油的液位。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenata-freno-stazionamento-5": {
+      "verdict": "VERO",
+      "key_it": "Il freno di stazionamento deve essere in grado di tenere bloccato il veicolo in sosta anche su strade in pendenza",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: the parking brake must be able to hold the vehicle in a stop even on inclined roads.",
+        "ru": "Верно: стояночный тормоз должен удерживать ТС на стоянке даже на дорогах с уклоном.",
+        "zh": "正确：驻车制动器在倾斜路面上也应能固定停放的车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenata-freno-stazionamento-6": {
+      "verdict": "VERO",
+      "key_it": "Il servofreno a depressione non può funzionare a motore spento",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: the vacuum brake booster cannot work with the engine off.",
+        "ru": "Верно: вакуумный усилитель тормозов не работает при заглушённом двигателе.",
+        "zh": "正确：真空助力制动器在发动机熄火时无法工作。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenata-freno-stazionamento-7": {
+      "verdict": "VERO",
+      "key_it": "Il freno di stazionamento non deve essere utilizzato per la frenatura di servizio",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: the parking brake must not be used for service braking.",
+        "ru": "Верно: стояночный тормоз не предназначен для рабочей тормозной системы.",
+        "zh": "正确：驻车制动器不可用于行车制动。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenata-freno-stazionamento-9": {
+      "verdict": "FALSO",
+      "key_it": "Il freno di stazionamento deve essere utilizzato per la frenatura di servizio quando si circola su strade a forte pendenza, in modo da ridurre il surriscaldamento degli elementi frenanti",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: the parking brake must not be used for service braking even on steep roads, in order to avoid overheating; it is only for holding the vehicle.",
+        "ru": "Ложно: стояночный тормоз нельзя использовать для рабочей тормозной даже на крутых подъёмах; он только для удержания ТС.",
+        "zh": "错误：即使在陡坡上，也不能用驻车制动器来行车制动以免过热；它只用于固定车辆。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenata-freno-stazionamento-10": {
+      "verdict": "FALSO",
+      "key_it": "Il servofreno a depressione può funzionare anche a motore spento, purché sia inserita la chiave di accensione nel quadro",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: the vacuum brake booster cannot work with the engine off, even if the key is inserted in the ignition.",
+        "ru": "Ложно: вакуумный усилитель не работает при заглушённом двигателе, даже если ключ в замке зажигания.",
+        "zh": "错误：即使钥匙在点火开关上，发动机熄火时真空助力制动器也无法工作。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenata-freno-stazionamento-11": {
+      "verdict": "FALSO",
+      "key_it": "In caso di frenata di emergenza, il conducente deve inserire rapidamente la retromarcia",
+      "chapter": "ch21",
+      "why": {
+        "en": "False: in an emergency brake, the driver must not quickly shift into reverse; this can cause loss of control and damage.",
+        "ru": "Ложно: при экстренном торможении нельзя быстро включать задний ход; это ведёт к потере контроля и повреждению.",
+        "zh": "错误：紧急制动时不能快速挂入倒挡；这会丧失控制并造成损坏。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-0": {
+      "verdict": "VERO",
+      "key_it": "Una frenatura poco efficiente o squilibrata può essere causata dalla presenza d’aria o vapore nel circuito frenante idraulico",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: inefficient or unbalanced braking can be caused by air or vapour in the hydraulic brake circuit.",
+        "ru": "Верно: неэффективное или несбалансированное торможение может быть вызвано воздухом или паром в гидравлическом контуре.",
+        "zh": "正确：制动乏力或不平衡可能是液压制动管路中存在空气或蒸汽所致。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-1": {
+      "verdict": "VERO",
+      "key_it": "Una frenatura poco efficiente o squilibrata può essere causata dal consumo eccessivo delle guarnizioni frenanti",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: inefficient or unbalanced braking can be caused by excessive wear of the brake linings.",
+        "ru": "Верно: неэффективное или несбалансированное торможение может быть вызвано чрезмерным износом тормозных накладок.",
+        "zh": "正确：制动乏力或不平衡可能是制动衬片过度磨损所致。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-2": {
+      "verdict": "VERO",
+      "key_it": "Una frenatura poco efficiente o squilibrata può essere causata dal consumo irregolare dei tamburi o dei dischi",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: inefficient or unbalanced braking can be caused by irregular wear of the drums or discs.",
+        "ru": "Верно: неэффективное или несбалансированное торможение может быть вызвано неравномерным износом барабанов или дисков.",
+        "zh": "正确：制动乏力或不平衡可能是制动鼓或制动盘磨损不均所致。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-3": {
+      "verdict": "VERO",
+      "key_it": "Una frenatura poco efficiente o squilibrata può essere causata dalla differente pressione di gonfiaggio dei pneumatici dello stesso asse",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: inefficient or unbalanced braking can be caused by different inflation pressures of the tyres on the same axle.",
+        "ru": "Верно: неэффективное или несбалансированное торможение может быть вызвано разным давлением в шинах одной оси.",
+        "zh": "正确：制动乏力或不平衡可能是同一轴上轮胎气压不同所致。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-4": {
+      "verdict": "VERO",
+      "key_it": "Una frenatura poco efficiente può essere causata dall’eccessivo riscaldamento delle guarnizioni frenanti",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: inefficient braking can be caused by excessive heating of the brake linings.",
+        "ru": "Верно: неэффективное торможение может быть вызвано перегревом тормозных накладок.",
+        "zh": "正确：制动乏力可能是制动衬片过热所致。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-5": {
+      "verdict": "VERO",
+      "key_it": "Una frenatura poco efficiente o squilibrata può essere causata dal carico eccessivo o mal ripartito",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: inefficient or unbalanced braking can be caused by an excessive or unevenly distributed load.",
+        "ru": "Верно: неэффективное или несбалансированное торможение может быть вызвано чрезмерной или неравномерно распределённой нагрузкой.",
+        "zh": "正确：制动乏力或不平衡可能是载荷过大或分布不均所致。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "elementi-veicolo-manutenzione-comportamenti-frenatura-poco-efficiente-6": {
+      "verdict": "VERO",
+      "key_it": "Una frenatura poco efficiente può essere causata da eccessive e ripetute frenate",
+      "chapter": "ch21",
+      "why": {
+        "en": "True: inefficient braking can be caused by excessive and repeated braking.",
+        "ru": "Верно: неэффективное торможение может быть вызвано частыми и повторными торможениями.",
+        "zh": "正确：制动乏力可能是频繁重复制动所致。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    }
+  }
+}
