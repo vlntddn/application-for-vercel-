@@ -1,3 +1,14 @@
+## 2026-10-01 — L9b: пояснения, порция 84 — ch19 (responsabilita-civile-penale-e-assicurazione) +20 не-карт. сигнальных, НОВЫЙ ФАЙЛ, сигнал 1030/2030, не-карт. 1005/1253
+
+Что сделано (коммит feat: L9b пояснения порция 84 на self-improve):
+- data/explanations/responsabilita-civile-penale-e-assicurazione.json: НОВЫЙ файл, 0→20 — порция 84 (все 20 — сигнальные без картинок; ch19 до этого не был начат).
+- Состав (20): risarcimento-danni 1/2/3 (VERO — договориться о сумме, отправить в ремонт, вызвать эксперта) + 4 (FALSO — нельзя требовать аннуляции своих прав вместо компенсации); responsabile-sinistro 2/3/4/5 (VERO — санкции, приостановка/аннулирование/ревизия прав) + 6 (FALSO — не «всегда превентивное задержание») + 7 (FALSO — не «только категория ниже»); casi-resp-penale 1 (VERO — и при неумышлённом убийстве) + 5 (FALSO — не «во всех случаях»); responsabilita-civile 4 (VERO — всякий ущерб возмещается) + 9 (FALSO — страховщик платит до massimale); assicurazione 5 (FALSO — фото не обязательны) + 6 (FALSO — R.C.A. покрывает ущерб третьим лицам, не пассажиров); responsabilita-danni 4 (FALSO — отвечает не только водитель, но и владелец); assicurazione-scaduta 2 (VERO — конфискация) + 3 (FALSO — нельзя ехать даже на короткие перегоны); furto-incendio 1 (VERO — выплата ≤ стоимости в момент угона/пожара).
+- Коррекция предыдущей записи: порция 83 отметила не-карт. сигнальные «исчерпаны» — неверно. По scan: ch19 (69), ch20 (28), ch21 (91), ch22 (60) ещё не начаты. ch19 = следующий по PATH_ORDER после ch18.
+- Числа — без ASCII-цифр в why (no invented number). key_it — дословные подстроки из text_it.
+- Как проверено: check-explanations.mjs — 0 ошибок (verdict/substring/chapter ch19/длина ≤280); scripts/verify.sh — VERIFY OK (npm test 184 passed, smoke 8/8 на :3917); diff add-only (новый файл).
+- Счётчики (delta +20 не-карт. сигнальных к порции 83): не-карт. сигнал 985→1005/1253; общий сигнал 1010→1030/2030.
+- Дальше по L9b: ch19 осталось 49 (последующие порции), затем ch20 consumi-ambiente-inquinamento (28) — по PATH_ORDER.
+
 ## 2026-10-01 — L9b: пояснения, порция 83 — ch16 (patente-punti-documenti) +5, сигнал 1010/2030, не-карт. 985/1253
 
 Что сделано (коммит feat: L9b пояснения порция 83 на self-improve):
