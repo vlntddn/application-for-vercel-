@@ -1,6 +1,7 @@
 import { boot, state, flushQueue, scheduleQueueRetry } from './state.js';
 import { api } from './api.js';
 import { el, clear } from './ui.js';
+import { setLang } from './i18n.js';
 import {
   renderOnboarding,
   renderDashboard,
@@ -46,6 +47,8 @@ const routes = [
 ];
 
 function route() {
+  // Keep the i18n module in sync with the stored profile (Q4.1).
+  setLang(state.progress.profile?.language);
   if (!state.progress.profile.onboarded) {
     nav.style.display = 'none';
     renderOnboarding(view, () => {

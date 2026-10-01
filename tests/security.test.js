@@ -28,6 +28,10 @@ function readViewsSource() {
       if (name.endsWith('.js')) parts.push(fs.readFileSync(path.join(dir, name), 'utf8'));
     }
   }
+  // Onboarding copy is localized — the source-text assertions below match
+  // the English dictionary entries (Q4.1), so i18n.js is in scope too.
+  const i18n = path.join(ROOT, 'public', 'js', 'i18n.js');
+  if (fs.existsSync(i18n)) parts.push(fs.readFileSync(i18n, 'utf8'));
   return parts.join('\n');
 }
 

@@ -1,24 +1,31 @@
 import { api } from '../api.js';
 import { state } from '../state.js';
 import { el, clear } from '../ui.js';
+import { setLang, t } from '../i18n.js';
 import { errorBanner } from './common.js';
 
 /**
- * First-run tour: three slides, one idea each (exam format → learning loop →
- * where data lives). Name and language are collected here, not in Settings,
- * so a newcomer is never dropped into a wall of statistics.
+ * First-run tour: three slides, one idea each. Language is collected FIRST
+ * (before any translated text is shown), then name + exam format, then the
+ * learning loop and where data lives (Q4.1). Name and language live here, not
+ * in Settings, so a newcomer is never dropped into a wall of statistics.
+ * The slide text switches live as the user changes the language select.
  */
 const ONBOARDING_STEPS = 3;
+const LANG_OPTIONS = [
+  ['en', 'ENGLISH'], ['ru', 'РУССКИЙ'], ['zh', '中文'],
+];
 
 export function renderOnboarding(root, onDone) {
   let step = 0;
   let name = (state.progress.profile.name || '').trim();
   const langSelect = el('select', { id: 'ob-lang' },
-    el('option', { value: 'en', textContent: 'ENGLISH' }),
-    el('option', { value: 'ru', textContent: 'РУССКИЙ' }),
-    el('option', { value: 'zh', textContent: '中文' }),
+    ...LANG_OPTIONS.map(([value, text]) => el('option', { value, textContent: text })),
   );
-  langSelect.value = state.progress.profile.language;
+  langSelect.value = state.progress.profile.language || 'en';
+  const applyLang = () => { setLang(langSelect.value); draw(); };
+  langSelect.addEventListener('change', applyLang);
+  setLang(langSelect.value);
 
   async function save() {
     try {
@@ -39,6 +46,11 @@ export function renderOnboarding(root, onDone) {
     }
   }
 
+  const nameInput = el('input', {
+    id: 'ob-name', type: 'text', maxLength: 40, value: name,
+  });
+  nameInput.placeholder = t('ob.name.placeholder');
+
   function draw() {
     const dots = el('div.steps', { 'aria-hidden': 'true' },
       ...Array.from({ length: ONBOARDING_STEPS }, (_, i) =>
@@ -47,48 +59,52 @@ export function renderOnboarding(root, onDone) {
 
     let content;
     if (step === 0) {
-      const nameInput = el('input', {
-        id: 'ob-name', type: 'text', maxLength: 40, value: name,
-        placeholder: 'Your name (optional)',
-      });
+      nameInput.placeholder = t('ob.name.placeholder');
       content = [
-        el('h1', {}, 'Welcome!'),
-        el('p.lede', {}, 'The patente B exam: 30 questions, 20 minutes, at most 3 errors.'),
-        el('p.stat-sub', {}, 'This app prepares you for it — on this device, offline, for free.'),
-        el('div.field', {}, el('label', { htmlFor: 'ob-name' }, 'YOUR NAME'), nameInput),
+        el('h1', {}, t('ob.title1')),
+        el('p.lede', {}, t('ob.lede1')),
+        el('p.stat-sub', {}, t('ob.sub1')),
+        el('div.field', {},
+          el('label', { htmlFor: 'ob-lang' }, t('ob.lang.label')), langSelect,
+        ),
+        el('div.field', {},
+          el('label', { htmlFor: 'ob-name' }, t('ob.name.label')), nameInput,
+        ),
         el('div.actions', {},
           el('button.btn', {
             onclick: () => { name = nameInput.value.trim(); save(); },
-          }, 'SKIP THIS TOUR'),
+          }, t('ob.skip')),
           el('button.btn.btn-primary.btn-big', {
             onclick: () => {
               name = nameInput.value.trim();
               step = 1;
               draw();
             },
-          }, 'CONTINUE →'),
+          }, t('ob.continue')),
         ),
       ];
     } else if (step === 1) {
       content = [
-        el('h1', {}, 'How you will study'),
-        el('p.lede', {}, 'Pick a topic and answer VERO or FALSO — read the theory when unsure, then take a mock exam.'),
+        el('h1', {}, t('ob.title2')),
+        el('p.lede', {}, t('ob.lede2')),
+        el('div.field', {},
+          el('label', { htmlFor: 'ob-lang' }, t('ob.lang.label')), langSelect,
+        ),
         el('div.actions', {},
           el('button.btn.btn-primary.btn-big', {
             onclick: () => { step = 2; draw(); },
-          }, 'CONTINUE →'),
+          }, t('ob.continue')),
         ),
       ];
     } else {
       content = [
-        el('h1', {}, 'Your progress never leaves here'),
-        el('p.lede', {}, 'Saved on this device only. In Settings you can export a backup file.'),
+        el('h1', {}, t('ob.title3')),
+        el('p.lede', {}, t('ob.lede3')),
         el('div.field', {},
-          el('label', { htmlFor: 'ob-lang' }, 'TRANSLATION LANGUAGE'),
-          langSelect,
+          el('label', { htmlFor: 'ob-lang' }, t('ob.lang.label')), langSelect,
         ),
         el('div.actions', {},
-          el('button.btn.btn-primary.btn-big', { onclick: () => save() }, 'START LEARNING →'),
+          el('button.btn.btn-primary.btn-big', { onclick: () => save() }, t('ob.start')),
         ),
       ];
     }
