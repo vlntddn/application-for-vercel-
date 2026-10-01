@@ -1060,7 +1060,7 @@
       "chapter": "ch16",
       "why": {
         "en": "False: not carrying the licence on you is a minor infraction — it is not a ground for revocation.",
-        "ru": "Ложь: отсутствие прав при себе — мелкое нарушение, а не основание для лишения.",
+        "ru": "Неверно: отсутствие прав при себе — мелкое нарушение, а не основание для лишения.",
         "zh": "错误：身上未随身携带驾照只是轻微违章，不构成吊销事由。"
       },
       "source": "ai-draft",
@@ -1073,7 +1073,7 @@
       "chapter": "ch16",
       "why": {
         "en": "False: driving without the prescribed corrective lenses is not a revocation ground.",
-        "ru": "Ложь: езда без назначенных корректирующих очков не является основанием для лишения прав.",
+        "ru": "Неверно: езда без назначенных корректирующих очков не является основанием для лишения прав.",
         "zh": "错误：未按处方佩戴矫正镜片驾驶并非吊销驾照的事由。"
       },
       "source": "ai-draft",
@@ -1086,7 +1086,7 @@
       "chapter": "ch16",
       "why": {
         "en": "False: revocation is a measure taken by the competent authority; the police report the fact, they do not dispose the revocation themselves.",
-        "ru": "Ложь: лишение прав — мера, которую выносит компетентный орган; полиция лишь фиксирует нарушение, а сама не решает о лишении.",
+        "ru": "Неверно: лишение прав — мера, которую выносит компетентный орган; полиция лишь фиксирует нарушение, а сама не решает о лишении.",
         "zh": "错误：吊销由主管机关作出；警察只是记录违法行为，并不自行作出吊销决定。"
       },
       "source": "ai-draft",
@@ -1099,7 +1099,7 @@
       "chapter": "ch16",
       "why": {
         "en": "False: driving a vehicle registered to someone else without a written declaration is not a revocation ground.",
-        "ru": "Ложь: езда на автомобиле, зарегистрированном на другого, без письменного заявления — не основание для лишения.",
+        "ru": "Неверно: езда на автомобиле, зарегистрированном на другого, без письменного заявления — не основание для лишения.",
         "zh": "错误：驾驶登记在他人名下的车辆而无书面声明，不构成吊销事由。"
       },
       "source": "ai-draft",
@@ -1138,7 +1138,7 @@
       "chapter": "ch16",
       "why": {
         "en": "False: speeding over the limit by a moderate margin is not by itself a suspension ground.",
-        "ru": "Ложь: умеренное превышение лимита скорости само по себе не основание для приостановления прав.",
+        "ru": "Неверно: умеренное превышение лимита скорости само по себе не основание для приостановления прав.",
         "zh": "错误：中度超速本身并非暂停驾照的事由。"
       },
       "source": "ai-draft",
@@ -1151,7 +1151,7 @@
       "chapter": "ch16",
       "why": {
         "en": "False: driving without the licence on you is a minor infraction, not a suspension ground.",
-        "ru": "Ложь: езда без прав при себе — мелкое нарушение, а не основание для приостановления.",
+        "ru": "Неверно: езда без прав при себе — мелкое нарушение, а не основание для приостановления.",
         "zh": "错误：身上未带驾照驾驶是轻微违章，不构成暂停事由。"
       },
       "source": "ai-draft",
@@ -1203,7 +1203,7 @@
       "chapter": "ch16",
       "why": {
         "en": "False: the cap for simultaneous point-losing violations is not ten, and the exception is suspension, not revocation.",
-        "ru": "Ложь: лимит при нескольких одновременных нарушениях — не десять, а пятнадцать, и исключение — приостановление, а не лишение.",
+        "ru": "Неверно: лимит при нескольких одновременных нарушениях — не десять, а пятнадцать, и исключение — приостановление, а не лишение.",
         "zh": "错误：同时多起扣分类违法的扣分上限并非十分，且例外情形是暂停而非吊销。"
       },
       "source": "ai-draft",

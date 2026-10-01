@@ -2087,7 +2087,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: a green light does not cancel the duty to yield to pedestrians. When turning you must give way to those crossing the road you enter, whatever the light shows.",
-        "ru": "Ложь: зелёный сигнал не отменяет обязанность уступить пешеходам. Поворачивая, вы обязаны уступить идущим по дороге, на которую поворачиваете, — независимо от света.",
+        "ru": "Неверно: зелёный сигнал не отменяет обязанность уступить пешеходам. Поворачивая, вы обязаны уступить идущим по дороге, на которую поворачиваете, — независимо от света.",
         "zh": "错误：绿灯并不取消让行行人的义务。转弯时必须让正在横穿你所转入道路的行人，无论信号灯如何。"
       },
       "source": "ai-draft",
@@ -2113,7 +2113,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: a flashing yellow means proceed with caution — you must be ready to slow down or stop and check the intersection, not treat the light as an absolute green.",
-        "ru": "Ложь: мигающий жёлтый означает «движись с осторожностью» — надо быть готовым снизить скорость или остановиться и проверить перекрёсток, а не считать сигнал безусловным зелёным.",
+        "ru": "Неверно: мигающий жёлтый означает «движись с осторожностью» — надо быть готовым снизить скорость или остановиться и проверить перекрёсток, а не считать сигнал безусловным зелёным.",
         "zh": "错误：闪烁黄灯表示谨慎通行——必须准备好减速或停车并确认路口情况，而不是把它当成绝对的绿灯。"
       },
       "source": "ai-draft",
@@ -2126,7 +2126,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: leaving a private property obliges you to give way to everyone and to signal with the turn indicator, but honking the horn is not a legal requirement anywhere.",
-        "ru": "Ложь: выезжая с частной территории, вы обязаны уступить всем и включить указатель поворота, но гудок клаксона законным требованием нигде не является.",
+        "ru": "Неверно: выезжая с частной территории, вы обязаны уступить всем и включить указатель поворота, но гудок клаксона законным требованием нигде не является.",
         "zh": "错误：驶出私人地块时，你应当让行所有车辆并打转向灯，但鸣喇叭在任何地方都不是法律要求。"
       },
       "source": "ai-draft",
@@ -2152,7 +2152,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: the left side mirror is adjusted to see the traffic behind and beside you, not the passengers. The rear seats are monitored through the central rear-view mirror.",
-        "ru": "Ложь: левое боковое зеркало настраивают на обзор движения позади и сбоку, а не на пассажиров. За задними сиденьями наблюдают через центральное зеркало заднего вида.",
+        "ru": "Неверно: левое боковое зеркало настраивают на обзор движения позади и сбоку, а не на пассажиров. За задними сиденьями наблюдают через центральное зеркало заднего вида.",
         "zh": "错误：左侧后视镜是调节来观察车后方和侧方交通的，而不是看乘客。后排座位应通过中央后视镜来观察。"
       },
       "source": "ai-draft",
@@ -2165,7 +2165,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: folding the side mirror removes your rear-side sight exactly when you need it most. On narrow mountain roads the mirrors stay in working position — they are not optional.",
-        "ru": "Ложь: сложив боковое зеркало, вы убираете обзор сзади и сбоку именно тогда, когда он нужнее всего. На узких горных дорогах зеркала остаются в рабочем положении — это не опция.",
+        "ru": "Неверно: сложив боковое зеркало, вы убираете обзор сзади и сбоку именно тогда, когда он нужнее всего. На узких горных дорогах зеркала остаются в рабочем положении — это не опция.",
         "zh": "错误：收起侧后视镜恰恰在最需要它的时候取消了后侧方视野。在狭窄的山路上后视镜必须保持工作位置——它不是可选项。"
       },
       "source": "ai-draft",
@@ -2178,7 +2178,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: the correct technique is the opposite — mirror first, then a quick direct look into the blind spot before merging. Skipping the direct glance leaves exactly the zone where vehicles are most dangerous.",
-        "ru": "Ложь: правильная техника обратная — сначала зеркало, затем быстрый прямой взгляд в слепую зону перед выездом. Пропуская прямой взгляд, вы как раз не видите ту зону, где машины опаснее всего.",
+        "ru": "Неверно: правильная техника обратная — сначала зеркало, затем быстрый прямой взгляд в слепую зону перед выездом. Пропуская прямой взгляд, вы как раз не видите ту зону, где машины опаснее всего.",
         "zh": "错误：正确做法恰恰相反——先看后视镜，再快速直接地看向盲区，然后再并入车流。跳过直接观察，正好看不见车辆最危险的那个区域。"
       },
       "source": "ai-draft",
@@ -2191,7 +2191,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: the central mirror exists to watch the traffic behind you; turning it into a GPS screen blocks that sight and adds a distraction. A device must not hide the road view.",
-        "ru": "Ложь: центральное зеркало существует, чтобы наблюдать за движением позади; превращая его в экран навигатора, вы закрываете этот обзор и добавляете отвлекающий фактор. Устройство не должно скрывать вид на дорогу.",
+        "ru": "Неверно: центральное зеркало существует, чтобы наблюдать за движением позади; превращая его в экран навигатора, вы закрываете этот обзор и добавляете отвлекающий фактор. Устройство не должно скрывать вид на дорогу.",
         "zh": "错误：中央后视镜是用来观察后方交通的；把它当作导航屏会挡住这一视野并增加分心。任何设备都不能遮挡对道路的观察。"
       },
       "source": "ai-draft",
@@ -2269,7 +2269,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: entering the traffic flow coming from side roads is normal driving, not forbidden — you only have to yield to the vehicles already on the main road.",
-        "ru": "Ложь: выезд в поток со второстепенных дорог — обычный манёвр, а не запрет: надо лишь уступить движущимся по главной дороге.",
+        "ru": "Неверно: выезд в поток со второстепенных дорог — обычный манёвр, а не запрет: надо лишь уступить движущимся по главной дороге.",
         "zh": "错误：从支路汇入车流是正常的驾驶行为，并不被禁止——你只需让行已在主干道上行驶的车辆。"
       },
       "source": "ai-draft",
@@ -2282,7 +2282,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: adapting speed to the characteristics and conditions of the road is an obligation, not a prohibition — the statement turns a duty into a ban.",
-        "ru": "Ложь: подстраивать скорость под характеристики и условия дороги — это обязанность, а не запрет: утверждение превращает долг в запрет.",
+        "ru": "Неверно: подстраивать скорость под характеристики и условия дороги — это обязанность, а не запрет: утверждение превращает долг в запрет.",
         "zh": "错误：根据道路特征与状况调整速度是义务而非禁止——该陈述把义务说成了禁令。"
       },
       "source": "ai-draft",
@@ -2295,7 +2295,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: stopping a vehicle momentarily along the right edge of a one-way carriageway is the normal form of «ferma» (a brief stop) — it is not forbidden when done at the edge.",
-        "ru": "Ложь: моментанная остановка у правого края односторонней проезжей части — это обычная «ферма» (краткая остановка), а не запрет, если машина у края.",
+        "ru": "Неверно: моментанная остановка у правого края односторонней проезжей части — это обычная «ферма» (краткая остановка), а не запрет, если машина у края.",
         "zh": "错误：在单行道右边缘短暂停车是常规操作（短暂停留），只要停在路边就不属于禁止行为。"
       },
       "source": "ai-draft",
@@ -2321,7 +2321,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: «in nessun caso» is too absolute — a motorcycle may carry a load that is properly secured and does not hinder driving, the lights, or the required visibility.",
-        "ru": "Ложь: «ни в коем случае» слишком абсолютно — на мотоцикле можно перевозить груз, надёжно закреплённый и не мешающий управлению, огням и обзору.",
+        "ru": "Неверно: «ни в коем случае» слишком абсолютно — на мотоцикле можно перевозить груз, надёжно закреплённый и не мешающий управлению, огням и обзору.",
         "zh": "错误：“在任何情况下都不得运输货物”过于绝对——摩托车可以装载固定牢靠、不妨碍驾驶、灯光与必要视线的货物。"
       },
       "source": "ai-draft",
@@ -2412,7 +2412,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: «in ogni caso» (in every case) makes it false — the high beam is forbidden, for example, inside built-up areas and behind other vehicles where it blinds them.",
-        "ru": "Ложь: «в каждом случае» делает утверждение ложным — дальний свет запрещён, например, в населённых пунктах и за другими машинами, где он ослепляет.",
+        "ru": "Неверно: «в каждом случае» делает утверждение ложным — дальний свет запрещён, например, в населённых пунктах и за другими машинами, где он ослепляет.",
         "zh": "错误：“在任何情况下都使用远光灯”是错误的——例如在城区内及跟随其他车辆时，远光灯会使他人目眩而不得使用。"
       },
       "source": "ai-draft",
@@ -2425,7 +2425,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: driving at a high speed to avoid being an obstruction is exactly the wrong idea — speed must be adequate to conditions; going faster than safe creates the real hazard.",
-        "ru": "Ложь: ехать быстро, «чтобы не создавать помех», — совсем неверная мысль: скорость должна быть адекватной условиям; ехать быстрее, чем безопасно, и создаёт реальную опасность.",
+        "ru": "Неверно: ехать быстро, «чтобы не создавать помех», — совсем неверная мысль: скорость должна быть адекватной условиям; ехать быстрее, чем безопасно, и создаёт реальную опасность.",
         "zh": "错误：“为了不造成阻碍就开快车”是错误观念——速度应与路况相称；开得比安全速度更快才是真正的危险。"
       },
       "source": "ai-draft",
@@ -2503,7 +2503,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: you do not stop to ask a traffic officer for advice at the intersection — the right move is to follow the allowed direction and keep traffic flowing.",
-        "ru": "Ложь: у перекрёстка не останавливаются ради консультации инспектора: правильно следовать разрешённому направлению и не мешать движению.",
+        "ru": "Неверно: у перекрёстка не останавливаются ради консультации инспектора: правильно следовать разрешённому направлению и не мешать движению.",
         "zh": "错误：到路口不应当停下来向交警征求意见——正确做法是按允许方向行驶，不阻碍交通。"
       },
       "source": "ai-draft",
@@ -2516,7 +2516,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: pulling over to the right and waiting for the whole queue to pass would itself create an obstruction — you must keep moving in the allowed direction.",
-        "ru": "Ложь: прижиматься к правому краю и ждать, пока проедет вся колонна, — это сама по себе помеха: надо продолжать движение в разрешённом направлении.",
+        "ru": "Неверно: прижиматься к правому краю и ждать, пока проедет вся колонна, — это сама по себе помеха: надо продолжать движение в разрешённом направлении.",
         "zh": "错误：靠右停车等整个车队通过本身就会造成阻碍——必须按允许方向继续行驶。"
       },
       "source": "ai-draft",
@@ -2529,7 +2529,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: reversing back along the road to change the lane is dangerous and forbidden — the mistake is corrected later, not by backing up in the flow.",
-        "ru": "Ложь: отступать назад до начала сплошных линий, чтобы сменить полосу, — опасно и запрещено: ошибку исправляют позже, а не задним ходом в потоке.",
+        "ru": "Неверно: отступать назад до начала сплошных линий, чтобы сменить полосу, — опасно и запрещено: ошибку исправляют позже, а не задним ходом в потоке.",
         "zh": "错误：倒车退回实线起点以更换车道既危险又被禁止——错误应事后纠正，不得在车流中倒车。"
       },
       "source": "ai-draft",
@@ -2542,7 +2542,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: you cannot wait at the light to change into the right lane — once the markings fix your lane, the direction is set; you follow it and choose another route later.",
-        "ru": "Ложь: ждать у светофора, когда можно перестроиться, — нельзя: разметка уже зафиксировала направление, вам надо её выполнить, а маршрут выбрать позже.",
+        "ru": "Неверно: ждать у светофора, когда можно перестроиться, — нельзя: разметка уже зафиксировала направление, вам надо её выполнить, а маршрут выбрать позже.",
         "zh": "错误：在信号灯处等待以便变道是不允许的——标线已确定方向，你须按标线行驶，之后再另选路线。"
       },
       "source": "ai-draft",
@@ -2594,7 +2594,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: the high beam is forbidden inside built-up areas — driving with it at night in town would blind the pedestrian exactly when you need to see him.",
-        "ru": "Ложь: в населённых пунктах дальний свет запрещён — ехать по городу ночью с дальним и ослепить пешехода, которого надо видеть, — наоборот.",
+        "ru": "Неверно: в населённых пунктах дальний свет запрещён — ехать по городу ночью с дальним и ослепить пешехода, которого надо видеть, — наоборот.",
         "zh": "错误：城区内禁止使用远光灯——夜间在城区开远光灯会正好致盲本应看见的行人。"
       },
       "source": "ai-draft",
@@ -2607,7 +2607,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: «we have priority, so we ignore him» is the wrong logic — near a pedestrian in the urban area you must always be ready to yield and stop.",
-        "ru": "Ложь: «у нас преимущество, значит ему не мешаем» — неверная логика: рядом с пешеходом в городе всегда нужно быть готовым уступить и остановиться.",
+        "ru": "Неверно: «у нас преимущество, значит ему не мешаем» — неверная логика: рядом с пешеходом в городе всегда нужно быть готовым уступить и остановиться.",
         "zh": "错误：“我们有优先权所以不理会他”是错误逻辑——在城区靠近行人时必须随时准备让行和停车。"
       },
       "source": "ai-draft",
@@ -2646,7 +2646,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: «luce di profondità» (high beam) is forbidden inside built-up areas — the procession is met at reduced speed and normal low-beam lighting, not with the high beam.",
-        "ru": "Ложь: «глубинный свет» (дальний) запрещён в населённых пунктах — шествие обходят на сниженной скорости с обычным ближним светом, а не с дальним.",
+        "ru": "Неверно: «глубинный свет» (дальний) запрещён в населённых пунктах — шествие обходят на сниженной скорости с обычным ближним светом, а не с дальним.",
         "zh": "错误：“远光灯”在城区内被禁止——应对游行队伍应降低速度、使用普通近光灯，而非远光。"
       },
       "source": "ai-draft",
@@ -2659,7 +2659,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: «in a hurry, pass quickly with continuous horn» inverts the rule — near a procession you must slow down, and the continuous horn is an abuse of the signal.",
-        "ru": "Ложь: «срочно, промчаться с непрерывным клаксоном» — наоборот: рядом с шествием надо замедлиться, а непрерывный клаксон — злоупотребление сигналом.",
+        "ru": "Неверно: «срочно, промчаться с непрерывным клаксоном» — наоборот: рядом с шествием надо замедлиться, а непрерывный клаксон — злоупотребление сигналом.",
         "zh": "错误：“赶时间就按着喇叭快速通过”恰好反了——遇到游行队伍必须减速，持续鸣笛属于滥用信号。"
       },
       "source": "ai-draft",
@@ -2789,7 +2789,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: the anti-glare position of the inside mirror protects against the high beam of the car BEHIND you, not from the oncoming car — here it does nothing.",
-        "ru": "Ложь: антибликовое положение зеркала заднего вида защищает от дальнего света машины, едущей СЗАДИ, а не от встречной — тут оно бесполезно.",
+        "ru": "Неверно: антибликовое положение зеркала заднего вида защищает от дальнего света машины, едущей СЗАДИ, а не от встречной — тут оно бесполезно.",
         "zh": "错误：车内后视镜的防眩位置是防后方车辆远光，对会车无效。"
       },
       "source": "ai-draft",
@@ -2802,7 +2802,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: answering high beam with high beam is a classic mistake — it blinds the other driver and yours as well; you keep the low beam and adjust your speed.",
-        "ru": "Ложь: отвечать дальним на дальний — классическая ошибка: ослепляет и второго водителя, и вас; правильный ответ — ближний свет и подстроенная скорость.",
+        "ru": "Неверно: отвечать дальним на дальний — классическая ошибка: ослепляет и второго водителя, и вас; правильный ответ — ближний свет и подстроенная скорость.",
         "zh": "错误：以远光回应远光会致双方驾驶员眩目，应保持近光灯并调整车速。"
       },
       "source": "ai-draft",
@@ -2815,7 +2815,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: the oncoming car with high beam is not an obstacle requiring an immediate stop on the carriageway — the right response is caution, reduced speed, and low beam.",
-        "ru": "Ложь: встречная машина с дальним светом — не препятствие, требующее немедленной остановки на проезжей части: верные действия — осторожность, снижение скорости и ближний свет.",
+        "ru": "Неверно: встречная машина с дальним светом — не препятствие, требующее немедленной остановки на проезжей части: верные действия — осторожность, снижение скорости и ближний свет.",
         "zh": "错误：对方开远光灯并非障碍物，不需要立即停在行车道上，正确做法是谨慎驾驶、减速并保持近光灯。"
       },
       "source": "ai-draft",
@@ -2828,7 +2828,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: honking at the oncoming driver to make him dip his beam is an abuse of the horn — the horn is reserved for warning of an immediate danger, and it solves nothing here.",
-        "ru": "Ложь: клаксон встречному, чтобы тот переключил свет, — злоупотребление сигналом: клаксон только для предупреждения об непосредственной опасности, тут он ничего не решает.",
+        "ru": "Неверно: клаксон встречному, чтобы тот переключил свет, — злоупотребление сигналом: клаксон только для предупреждения об непосредственной опасности, тут он ничего не решает.",
         "zh": "错误：用喇叭催促对方切换近光灯属于滥用喇叭——喇叭仅用于警示直接危险，此处无济于事。"
       },
       "source": "ai-draft",
@@ -2841,7 +2841,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: shielding the eyes with your hands while driving is dangerous — one hand off the wheel during glare is a recipe for an accident; the correct reaction is slowing down and looking to the right.",
-        "ru": "Ложь: прикрывать глаза руками за рулём — опасно: одна рука с руля при ослеплении — прямой путь к аварии; правильно — снизить скорость и смотреть на правый край.",
+        "ru": "Неверно: прикрывать глаза руками за рулём — опасно: одна рука с руля при ослеплении — прямой путь к аварии; правильно — снизить скорость и смотреть на правый край.",
         "zh": "错误：驾驶时用手遮挡眼睛很危险——眩光时单手离方向盘极易酿祸，正确做法是减速并注视右路边线。"
       },
       "source": "ai-draft",
@@ -2880,7 +2880,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: «merely staying under the maximum limit» is not a recipe for safety — you must also match your speed to the road, the weather and the traffic, even well below the limit.",
-        "ru": "Ложь: «просто не превышать максимальную скорость» — не рецепт безопасности: скорость нужно подстраивать и под дорогу, и под погоду, и под поток — даже заметно ниже лимита.",
+        "ru": "Неверно: «просто не превышать максимальную скорость» — не рецепт безопасности: скорость нужно подстраивать и под дорогу, и под погоду, и под поток — даже заметно ниже лимита.",
         "zh": "错误：仅不超过最高限速并非安全之道，还必须根据路况、天气和车流调整车速，即使远低于限速。"
       },
       "source": "ai-draft",
@@ -2893,7 +2893,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: «only respecting the minimum speed» inverts the logic — the minimum is there so you do not block the flow, not a substitute for the whole safe-driving set of rules.",
-        "ru": "Ложь: «только соблюдать минимальную скорость» — логика вверх ногами: минимум нужен, чтобы не мешать потоку, а не вместо всего набора правил безопасного вождения.",
+        "ru": "Неверно: «только соблюдать минимальную скорость» — логика вверх ногами: минимум нужен, чтобы не мешать потоку, а не вместо всего набора правил безопасного вождения.",
         "zh": "错误：仅遵守最低限速是把逻辑颠倒——最低限速是为了不阻碍车流，不能替代整套安全驾驶规则。"
       },
       "source": "ai-draft",
@@ -2958,7 +2958,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: hugging the LEFT edge to turn right is the mirror image of the rule — that would force you to cross the whole carriageway and is exactly how collisions with oncoming traffic happen.",
-        "ru": "Ложь: держаться ЛЕВОГО края, чтобы повернуть направо, — зеркальное искажение правила: придётся пересечь всю проезжую часть, и так как раз и случаются столкновения со встречными.",
+        "ru": "Неверно: держаться ЛЕВОГО края, чтобы повернуть направо, — зеркальное искажение правила: придётся пересечь всю проезжую часть, и так как раз и случаются столкновения со встречными.",
         "zh": "错误：贴近左路边缘再右转是对规则的镜像错误——需横穿整个路面，极易与对向车辆碰撞。"
       },
       "source": "ai-draft",
@@ -2971,7 +2971,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: starting a right turn from the left lane is forbidden — you block the traffic that continues straight and cut across the lanes at the last moment.",
-        "ru": "Ложь: поворачивать направо из левой полосы нельзя: вы блокируете едущих прямо и в последний момент пересекаете полосы.",
+        "ru": "Неверно: поворачивать направо из левой полосы нельзя: вы блокируете едущих прямо и в последний момент пересекаете полосы.",
         "zh": "错误：从左侧车道右转是禁止的——会阻挡直行车辆并最后时刻横切车道。"
       },
       "source": "ai-draft",
@@ -2984,7 +2984,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: honking persistently at the car ahead that is slow to move at a green is an abuse of the horn — it does not make the intersection safer, it only adds stress and noise.",
-        "ru": "Ложь: настойчивый клаксон медленно стартующей машине впереди на зелёном — злоупотребление сигналом: перекрёсток от этого не станет безопаснее, только стресс и шум.",
+        "ru": "Неверно: настойчивый клаксон медленно стартующей машине впереди на зелёном — злоупотребление сигналом: перекрёсток от этого не станет безопаснее, только стресс и шум.",
         "zh": "错误：对绿灯前缓慢起步的车按喇叭属于滥用喇叭——不能提高路口安全性，只会增加压力和噪音。"
       },
       "source": "ai-draft",
@@ -2997,7 +2997,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: honking at the cars BEHIND you because the lead car is slow inverts the purpose of the horn — the horn warns of an immediate danger, not traffic frustration.",
-        "ru": "Ложь: сигналить водителям за вами, потому что впереди долго стартуют, — искажение назначения клаксона: он предупреждает об непосредственной опасности, а не о недовольстве потоком.",
+        "ru": "Неверно: сигналить водителям за вами, потому что впереди долго стартуют, — искажение назначения клаксона: он предупреждает об непосредственной опасности, а не о недовольстве потоком.",
         "zh": "错误：因前车起步慢而向后方车辆鸣喇叭是对喇叭用途的歪曲——喇叭只用于警示直接危险，不表达不满。"
       },
       "source": "ai-draft",
@@ -3010,7 +3010,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: pulling the handbrake and getting out of a car stopped in the middle of the intersection to find a policeman is dangerous nonsense — you block the flow and become an obstacle and a pedestrian at once.",
-        "ru": "Ложь: поставить ручник в середине перекрёстка и выйти искать регулировщика — опасная ерунда: вы одновременно блокируете поток, создаёте помеху и сами становитесь пешеходом в потоке.",
+        "ru": "Неверно: поставить ручник в середине перекрёстка и выйти искать регулировщика — опасная ерунда: вы одновременно блокируете поток, создаёте помеху и сами становитесь пешеходом в потоке.",
         "zh": "错误：在路口中央拉手刹下车寻找交警是危险行为——既阻碍车流，又将自己置于车流中的行人位置。"
       },
       "source": "ai-draft",
@@ -3036,7 +3036,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: turning right around the luminous post in the center of the intersection turns the maneuver into a wide left-like arc — you cross the oncoming lanes and the pedestrian crossings.",
-        "ru": "Ложь: поворот направо «в обход» светового столба в центре перекрёстка превращает манёвр в широкую дугу налево: вы пересекаете встречные полосы и пешеходные переходы.",
+        "ru": "Неверно: поворот направо «в обход» светового столба в центре перекрёстка превращает манёвр в широкую дугу налево: вы пересекаете встречные полосы и пешеходные переходы.",
         "zh": "错误：右转绕路口中央的灯柱行驶，会把操作变成类似左转弯的宽弧线——会穿过对向车道和人行横道。"
       },
       "source": "ai-draft",
@@ -3049,7 +3049,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: getting to the CENTER of the intersection to turn right is the opposite of the rule — a right turn is performed hugging the right edge, close to the corner, without entering the middle.",
-        "ru": "Ложь: для поворота направо «подъезжать к центру перекрёстка» — обратное правилу: направо поворачивают прижатыми к правому краю, короткой дугой, не въезжая в центр.",
+        "ru": "Неверно: для поворота направо «подъезжать к центру перекрёстка» — обратное правилу: направо поворачивают прижатыми к правому краю, короткой дугой, не въезжая в центр.",
         "zh": "错误：右转靠近路口中心是规则的反面——右转应贴右侧短弧线完成，不进入路口中央。"
       },
       "source": "ai-draft",
@@ -3062,7 +3062,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: on a road with four separated carriageways the central ones are not a reserved overtaking lane — the carriageways are distinct roads, and each is used in its own direction.",
-        "ru": "Ложь: на дороге с четырьмя разделёнными проезжими частями «средние — для обгона» — неверно: это разные дороги, каждая используется по своему направлению.",
+        "ru": "Неверно: на дороге с четырьмя разделёнными проезжими частями «средние — для обгона» — неверно: это разные дороги, каждая используется по своему направлению.",
         "zh": "错误：四幅分隔道路上中央车道为专用超车道的说法错误——它们是各自独立的车道，各按其方向使用。"
       },
       "source": "ai-draft",
@@ -3075,7 +3075,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: a lane change is announced with the turn indicator, NOT the horn — the horn is reserved for warning of an immediate danger, and using it as a «lane-change signal» is an abuse.",
-        "ru": "Ложь: перестроение объявляется поворотником, а НЕ клаксоном: клаксон только для предупреждения об непосредственной опасности, «перестроение-сигналом» он не служит.",
+        "ru": "Неверно: перестроение объявляется поворотником, а НЕ клаксоном: клаксон только для предупреждения об непосредственной опасности, «перестроение-сигналом» он не служит.",
         "zh": "错误：变道用转向灯而非喇叭指示——喇叭仅用于警示直接危险，作为变道信号属滥用。"
       },
       "source": "ai-draft",
@@ -3088,7 +3088,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: requiring a CONTINUOUS line between lanes before changing is the inverse — a continuous line FORBIDS crossing, so a change is possible only where the line is broken.",
-        "ru": "Ложь: требовать перед перестроением, чтобы полосы были разделены СПЛОШНОЙ, — наоборот: сплошная запрещает пересечение, менять полосу можно только там, где линия прерывистая.",
+        "ru": "Неверно: требовать перед перестроением, чтобы полосы были разделены СПЛОШНОЙ, — наоборот: сплошная запрещает пересечение, менять полосу можно только там, где линия прерывистая.",
         "zh": "错误：变道前要求车道由实线分隔是颠倒的——实线禁止跨越，只有虚线处才允许变道。"
       },
       "source": "ai-draft",
@@ -3114,7 +3114,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: for a left turn getting as far LEFT as possible means driving into the oncoming lane — you approach the center of the road, not the left edge.",
-        "ru": "Ложь: «повернуть налево, отъехав как можно левее», — это выезд в встречную полосу: для поворота налево подъезжают к ЦЕНТРУ дороги, а не к левому краю.",
+        "ru": "Неверно: «повернуть налево, отъехав как можно левее», — это выезд в встречную полосу: для поворота налево подъезжают к ЦЕНТРУ дороги, а не к левому краю.",
         "zh": "错误：左转贴最左侧意味着驶入对向车道——左转应靠近道路中心，而非左侧路缘。"
       },
       "source": "ai-draft",
@@ -3127,7 +3127,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: doing the left turn «quickly, to get ahead of traffic from left and right» is a gamble — the turn is done at a controlled speed, yielding to oncoming traffic and crossing the intersection calmly.",
-        "ru": "Ложь: поворот налево «быстро, чтобы пересечься раньше, чем с двух сторон», — ставка: манёвр выполняется на контролируемой скорости, с уступкой встречным и спокойным пересечением.",
+        "ru": "Неверно: поворот налево «быстро, чтобы пересечься раньше, чем с двух сторон», — ставка: манёвр выполняется на контролируемой скорости, с уступкой встречным и спокойным пересечением.",
         "zh": "错误：左转\"快速通过以避免左右来车\"是冒险行为——应控制车速，让行对向车辆，平稳通过路口。"
       },
       "source": "ai-draft",
@@ -3140,7 +3140,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: honking «to cross the intersection more safely» is not in the code — the horn does not replace yielding to oncoming traffic; it only warns of an immediate danger.",
-        "ru": "Ложь: «сигналить, чтобы пересечься безопаснее» — не входит в правила: клаксон не заменяет уступки встречным; он лишь предупреждает об непосредственной опасности.",
+        "ru": "Неверно: «сигналить, чтобы пересечься безопаснее» — не входит в правила: клаксон не заменяет уступки встречным; он лишь предупреждает об непосредственной опасности.",
         "zh": "错误：鸣喇叭\"更安全通过路口\"并非规则要求——喇叭不能代替让行对向车辆，只用于警示直接危险。"
       },
       "source": "ai-draft",
@@ -3192,7 +3192,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: keeping to the right edge to turn left does not work — from the right edge the left arc crosses the whole carriageway late and cuts oncoming traffic.",
-        "ru": "Ложь: «для поворота налево держаться правого края» — не сработает: с правого края дуга налево пересекает всю проезжую часть в последний момент и режет встречный поток.",
+        "ru": "Неверно: «для поворота налево держаться правого края» — не сработает: с правого края дуга налево пересекает всю проезжую часть в последний момент и режет встречный поток.",
         "zh": "错误：左转贴右缘的做法行不通——从右缘出发左转弧线会最后时刻横穿整个路面，切断对向车流。"
       },
       "source": "ai-draft",
@@ -3205,7 +3205,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: driving in the center of the carriageway «because the road is empty» inverts the rule — the right-side reference holds at all times, even on an empty road.",
-        "ru": "Ложь: «ехать по центру, потому что дорога пуста» — обратное правилу: ориентир на правую сторону действует всегда, даже на пустой дороге.",
+        "ru": "Неверно: «ехать по центру, потому что дорога пуста» — обратное правилу: ориентир на правую сторону действует всегда, даже на пустой дороге.",
         "zh": "错误：\"道路空闲时可行于路面中央\"违背规则——靠右行驶的基本面在任何情况下都适用，包括空旷道路。"
       },
       "source": "ai-draft",
@@ -3218,7 +3218,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: using the bus or public-service reserved lanes to make parallel files in heavy traffic is a violation — reserved lanes are not a relief valve for general congestion.",
-        "ru": "Ложь: в плотном потоке «параллельными колоннами по полосам для автобусов и общественного транспорта» — нарушение: резервные полосы не являются клапаном для общего затора.",
+        "ru": "Неверно: в плотном потоке «параллельными колоннами по полосам для автобусов и общественного транспорта» — нарушение: резервные полосы не являются клапаном для общего затора.",
         "zh": "错误：用公交车道做并行车流来缓解拥堵是违规行为——公交专用道不是通用缓解拥堵的通道。"
       },
       "source": "ai-draft",
@@ -3231,7 +3231,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: on a one-way road taking a left curve close to the LEFT edge is a trap — you cut the corner and squeeze the cyclists and pedestrians that also ride the left side.",
-        "ru": "Ложь: на односторонней дороге «поворот налево у левого края» — ловушка: вы срежете угол и сожмёте велосипедистов и пешеходов, которые тоже идут по левой стороне.",
+        "ru": "Неверно: на односторонней дороге «поворот налево у левого края» — ловушка: вы срежете угол и сожмёте велосипедистов и пешеходов, которые тоже идут по левой стороне.",
         "zh": "错误：单行道上左转贴左缘是陷阱——会切掉弯道内角并挤压同样靠左侧行驶的自行车与行人。"
       },
       "source": "ai-draft",
@@ -3244,7 +3244,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: keeping close to the RIGHT edge for a left turn is a trap — the turn then starts too late from the wrong side, cutting the oncoming flow; the left turn approaches the center.",
-        "ru": "Ложь: «для поворота налево держаться у правого края» — ловушка: манёвр начнётся слишком поздно с неверной стороны и перережет встречный поток; налево подъезжают к центру.",
+        "ru": "Неверно: «для поворота налево держаться у правого края» — ловушка: манёвр начнётся слишком поздно с неверной стороны и перережет встречный поток; налево подъезжают к центру.",
         "zh": "错误：左转贴近右缘是陷阱——操作会从错误一侧过晚开始，切断对向车流；左转应靠近中心。"
       },
       "source": "ai-draft",
@@ -3257,7 +3257,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: trams do not ride the LEFT edge as a rule — the same right-side logic applies: they stay on the right of the carriageway, and the left is only for overtaking or turning.",
-        "ru": "Ложь: трамваи не едут «у левого края»: действует та же правосторонняя логика — держатся правой части проезжей части, левая только для обгона или поворота.",
+        "ru": "Неверно: трамваи не едут «у левого края»: действует та же правосторонняя логика — держатся правой части проезжей части, левая только для обгона или поворота.",
         "zh": "错误：电车原则上并不贴左侧行驶——同样适用靠右逻辑，贴右侧行驶，左侧仅用于超车或转弯。"
       },
       "source": "ai-draft",
@@ -3270,7 +3270,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: motorcycles in heavy traffic are not allowed to use the emergency lane — it is reserved for vehicles in trouble, emergencies and authorized services, not for beating the queue.",
-        "ru": "Ложь: мотоциклам в плотном потоке нельзя по экстренной полосе: она для неисправных, ЧП и разрешённых служб, а не для объезда очереди.",
+        "ru": "Неверно: мотоциклам в плотном потоке нельзя по экстренной полосе: она для неисправных, ЧП и разрешённых служб, а не для объезда очереди.",
         "zh": "错误：摩托车在交通繁忙时不得走应急车道——该车道留给故障车辆、紧急情况及许可服务，不能用来超车。"
       },
       "source": "ai-draft",
@@ -3309,7 +3309,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: straddling the lane lines to turn is not allowed in cities — a turn is executed from the lane that allows it, after a proper merge and signal, not «straddling».",
-        "ru": "Ложь: поворачивать «на седле» полосовой разметки в городе нельзя: поворот выполняется из полосы, где он разрешён, после нормального перестроения и сигнала.",
+        "ru": "Неверно: поворачивать «на седле» полосовой разметки в городе нельзя: поворот выполняется из полосы, где он разрешён, после нормального перестроения и сигнала.",
         "zh": "错误：城市路口压线行驶转弯不可行——转弯应在允许该操作的导向车道内，完成正规变道并打转向灯后进行。"
       },
       "source": "ai-draft",
@@ -3322,7 +3322,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: the turn indicator is never «optional because the line is broken» — a broken line only allows crossing, it does not waive the signal; you must always indicate.",
-        "ru": "Ложь: поворотник «не обязателен, потому что линия прерывистая» — неверно: прерывистая разрешает пересечение, но не освобождает от сигнала; указатель обязателен всегда.",
+        "ru": "Неверно: поворотник «не обязателен, потому что линия прерывистая» — неверно: прерывистая разрешает пересечение, но не освобождает от сигнала; указатель обязателен всегда.",
         "zh": "错误：转向灯并非\"因为虚线就可省略\"——虚线只允许跨越，不豁免转向灯；任何情况下都必须打灯。"
       },
       "source": "ai-draft",
@@ -3335,7 +3335,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: «merging into the right lane needs no special attention» is exactly how right-lane incidents happen — the same check applies: mirrors, blind spot, gap, signal.",
-        "ru": "Ложь: «въезд в правую полосу без особого внимания» — так как раз и происходят инциденты справа: та же проверка — зеркала, слепая зона, зазор, сигнал.",
+        "ru": "Неверно: «въезд в правую полосу без особого внимания» — так как раз и происходят инциденты справа: та же проверка — зеркала, слепая зона, зазор, сигнал.",
         "zh": "错误：\"并入右侧车道无需特别留意\"正是右侧事故根源——同样的检查：后视镜、盲区、空档、转向灯。"
       },
       "source": "ai-draft",
@@ -3374,7 +3374,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: moving to the LEFT of the continuous center line for a left turn is the most dangerous option — you end up driving in the oncoming lane before the turn.",
-        "ru": "Ложь: «пересечься левее сплошной оси, чтобы повернуть налево», — самый опасный вариант: вы окажетесь на встречной полосе ещё до начала поворота.",
+        "ru": "Неверно: «пересечься левее сплошной оси, чтобы повернуть налево», — самый опасный вариант: вы окажетесь на встречной полосе ещё до начала поворота.",
         "zh": "错误：左转前越过连续中线驶入对向一侧是最危险选项——在转弯开始前即驶入对向车道。"
       },
       "source": "ai-draft",
@@ -3452,7 +3452,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: parallel files toward an UNcontrolled intersection are not allowed — without a signal or a policeman there is no organizer, and multiple files would collapse into a conflict zone.",
-        "ru": "Ложь: «к нерегулируемому перекрёстку — параллельными колоннами» — нельзя: без света или регулировщика нет организатора, и несколько колонн скатятся в зону конфликта.",
+        "ru": "Неверно: «к нерегулируемому перекрёстку — параллельными колоннами» — нельзя: без света или регулировщика нет организатора, и несколько колонн скатятся в зону конфликта.",
         "zh": "错误：驶向无信号灯或无交警的路口路段不允许并行——没有指挥者，多车道队伍将变成冲突区。"
       },
       "source": "ai-draft",
@@ -3465,7 +3465,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: «parallel files in the city, in any traffic condition» is too broad — parallel driving is allowed only where the road geometry and the intersection control make it safe.",
-        "ru": "Ложь: «в городе параллельно — при любом потоке» — слишком широко: параллельная колонна допустима только там, где геометрия дороги и регулировка делают её безопасной.",
+        "ru": "Неверно: «в городе параллельно — при любом потоке» — слишком широко: параллельная колонна допустима только там, где геометрия дороги и регулировка делают её безопасной.",
         "zh": "错误：\"城市内任何交通状况下均可并行\"过于宽泛——只有道路几何与路口管制使其安全时才允许。"
       },
       "source": "ai-draft",
@@ -3478,7 +3478,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: keeping the left indicator ON while riding the left lane in parallel files is a misuse of the signal — the indicator announces a maneuver, not a lane position.",
-        "ru": "Ложь: «в левой полосе параллельной колонны держать левый поворотник включённым» — неправильное применение: указатель объявляет манёвр, а не позицию в полосе.",
+        "ru": "Неверно: «в левой полосе параллельной колонны держать левый поворотник включённым» — неправильное применение: указатель объявляет манёвр, а не позицию в полосе.",
         "zh": "错误：在并行排队时于左侧车道持续开启左转向灯是对转向灯的误用——转向灯用于预告操作，而非车道位置。"
       },
       "source": "ai-draft",
@@ -3491,7 +3491,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: the restriction is inverted — parallel files are exactly what a single carriageway with several lanes is for: the queue spreads across the lanes toward a controlled junction.",
-        "ru": "Ложь: ограничение перевёрнуто — параллельные колонны и есть то, для чего служат несколько полос одной проезжей части: очередь распределяется по полосам к контролируемому узлу.",
+        "ru": "Неверно: ограничение перевёрнуто — параллельные колонны и есть то, для чего служат несколько полос одной проезжей части: очередь распределяется по полосам к контролируемому узлу.",
         "zh": "错误：限制被颠倒了——并行车队正适用于一条具有多条车道的路面：队伍可向受控路口方向在各车道上铺开。"
       },
       "source": "ai-draft",
@@ -3504,7 +3504,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: weaving between side-by-side vehicles while traffic moves in parallel files is exactly what the parallel-file discipline is meant to prevent — every lane keeps its own line and a motorcycle is no exception.",
-        "ru": "Ложь: перестроение между едущими бок о бок автомобилями при параллельных колоннах — как раз то, чего дисциплина параллельных колонн должна предотвратить: каждая полоса держит свою линию, мотоцикл — не исключение.",
+        "ru": "Неверно: перестроение между едущими бок о бок автомобилями при параллельных колоннах — как раз то, чего дисциплина параллельных колонн должна предотвратить: каждая полоса держит свою линию, мотоцикл — не исключение.",
         "zh": "错误：并行车流中在并排车辆之间穿行，正是并行车队纪律要避免的行为——每条车道保持各自线位，摩托车也不例外。"
       },
       "source": "ai-draft",
@@ -3543,7 +3543,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: at a roundabout the rule is not to yield to both sides — you yield to traffic already inside the roundabout, which approaches from your left. The roundabout mark gives entry priority to the circulating flow.",
-        "ru": "Ложь: на кольце правило не в «уступить с обеих сторон» — вы уступаете потоку, уже внутри кольца, а он подходит слева. Знак ROTATORIA даёт преимущество в движении тем, кто уже в кругу.",
+        "ru": "Неверно: на кольце правило не в «уступить с обеих сторон» — вы уступаете потоку, уже внутри кольца, а он подходит слева. Знак ROTATORIA даёт преимущество в движении тем, кто уже в кругу.",
         "zh": "错误：环岛规则并非“向两侧让行”——你须让行已在环岛内的车流，它从你的左侧驶来。环岛标志赋予环内行驶车辆优先权。"
       },
       "source": "ai-draft",
@@ -3582,7 +3582,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: overtaking fast on the left just before a right turn mixes two conflicting maneuvers — you cross the flow you just passed and the drivers behind expect you to keep the lane.",
-        "ru": "Ложь: «быстро обогнать слева, чтобы повернуть направо» — два конфликтующих манёвра в одном: вы пересекаете поток, который только что обогнали, а водители позади ждут, что вы держите полосу.",
+        "ru": "Неверно: «быстро обогнать слева, чтобы повернуть направо» — два конфликтующих манёвра в одном: вы пересекаете поток, который только что обогнали, а водители позади ждут, что вы держите полосу.",
         "zh": "错误：右转前快速向左超车是两种冲突操作混在一起——你刚超过的车流会被再次横切，而后方司机以为你会保持车道。"
       },
       "source": "ai-draft",
@@ -3595,7 +3595,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: honking near an intersection inside a built-up area is an abuse — the horn is reserved for warning of an immediate danger, and routine intersection traffic is not such a danger.",
-        "ru": "Ложь: клаксон у перекрёстка в населённом пункте — злоупотребление: сигнал предназначен для предупреждения об непосредственной опасности, а обычный перекрёстный трафик такой опасностью не является.",
+        "ru": "Неверно: клаксон у перекрёстка в населённом пункте — злоупотребление: сигнал предназначен для предупреждения об непосредственной опасности, а обычный перекрёстный трафик такой опасностью не является.",
         "zh": "错误：在居民区路口按喇叭属于滥用——喇叭仅用于警示直接危险，而常规路口车流并不构成这种危险。"
       },
       "source": "ai-draft",
@@ -3660,7 +3660,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: the statement is inverted — the low beams are not forbidden at intersections, they are mandatory outside built-up areas, and at a junction the light that shows your vehicle to others is exactly what you need.",
-        "ru": "Ложь: утверждение перевёрнуто — ближний свет на перекрёстке не запрещён, напротив: вне населённых пунктов он обязателен, а на перекрёстке свет, по которому вас видят, — как раз то, что нужно.",
+        "ru": "Неверно: утверждение перевёрнуто — ближний свет на перекрёстке не запрещён, напротив: вне населённых пунктов он обязателен, а на перекрёстке свет, по которому вас видят, — как раз то, что нужно.",
         "zh": "错误：说法颠倒——近光灯在路口并不被禁止，相反：在居民区外近光灯是强制的，路口上让他人看到你的灯光恰恰是需要的。"
       },
       "source": "ai-draft",
@@ -3673,7 +3673,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: there is no automatic sixty-kilometer speed cap at extra-urban intersections — the applicable limit is the one set by the road class and signs, and inventing a lower figure here inverts the rule.",
-        "ru": "Ложь: автоматического предела в шестидесяти километрах на внегородских перекрёстах не существует — действует ограничение, установленное классом дороги и знаками, а выдуманный пониженный лимит здесь искажает правило.",
+        "ru": "Неверно: автоматического предела в шестидесяти километрах на внегородских перекрёстах не существует — действует ограничение, установленное классом дороги и знаками, а выдуманный пониженный лимит здесь искажает правило.",
         "zh": "错误：城外路口没有自动六十公里的限速——适用的是由道路等级和标志规定的限值，此处虚构一个更低的数字反而歪曲了规则。"
       },
       "source": "ai-draft",
@@ -3686,7 +3686,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: skipping the turn indicator for a right turn at a city intersection is a violation — the indicator announces your intent to everyone around, and without it the turn is an ambush for the adjacent lane.",
-        "ru": "Ложь: «не включать поворотник на поворот направо у городского перекрёстка» — нарушение: указатель объявляет намерение всем вокруг, а без него поворот — засада для соседней полосы.",
+        "ru": "Неверно: «не включать поворотник на поворот направо у городского перекрёстка» — нарушение: указатель объявляет намерение всем вокруг, а без него поворот — засада для соседней полосы.",
         "zh": "错误：城市路口右转不打转向灯是违规行为——转向灯向周围所有人宣告你的意图，缺少它右转对相邻车道就是伏击。"
       },
       "source": "ai-draft",
@@ -3699,7 +3699,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: the overtaking ban at intersections covers UNCONTROLLED ones — at a signalized junction the flows are separated by phases, so the rule does not forbid overtaking there.",
-        "ru": "Ложь: запрет обгона на перекрёстах распространяется на нерегулируемые: на регулируемом светофором перекрёстке потоки разделены фазами, и правило обгон там не запрещает.",
+        "ru": "Неверно: запрет обгона на перекрёстах распространяется на нерегулируемые: на регулируемом светофором перекрёстке потоки разделены фазами, и правило обгон там не запрещает.",
         "zh": "错误：路口禁止超车针对的是无信号灯路口——在信号灯控制的路口各车流由相位分隔，因此规则并不禁止在此超车。"
       },
       "source": "ai-draft",
@@ -3712,7 +3712,7 @@
       "chapter": "ch10",
       "why": {
         "en": "False: the horn is not outright forbidden at extra-urban intersections — it stays usable to warn of an immediate danger, what is banned is its routine or attention-grabbing use.",
-        "ru": "Ложь: клаксон на внегородских перекрёстах не запрещён полностью — он остаётся пригодным для предупреждения об непосредственной опасности; запрещены лишь бытовое или привлекающее внимание применение.",
+        "ru": "Неверно: клаксон на внегородских перекрёстах не запрещён полностью — он остаётся пригодным для предупреждения об непосредственной опасности; запрещены лишь бытовое или привлекающее внимание применение.",
         "zh": "错误：城外路口并不完全禁止使用喇叭——它仍可用于警示直接危险；被禁止的只是将其用于日常或吸引注意的用途。"
       },
       "source": "ai-draft",

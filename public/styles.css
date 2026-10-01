@@ -556,6 +556,15 @@ input:focus-visible, select:focus-visible, .nav a:focus-visible, a.card:focus-vi
 .ds-feedback .why-objective,
 .ds-feedback .why-fact { background: var(--paper); }
 .ds-feedback .why-fact:last-of-type { margin-bottom: 0; }
+/* Q3: the chapter facts are collapsed — specific content comes first. */
+.ds-feedback .why-details { margin-top: var(--space-2); }
+.ds-feedback .why-details summary {
+  cursor: pointer;
+  font: 600 0.85rem/1.4 var(--font-sans);
+  color: var(--muted);
+  padding: 6px 0;
+}
+.ds-feedback .why-block { margin-top: var(--space-1); }
 .ds-feedback__actions { display: flex; gap: var(--space-3); margin-top: var(--space-2); }
 
 .kbd-hint { margin-top: 16px; font-size: 0.75rem; font-weight: 600; color: var(--muted); letter-spacing: 0.05em; }

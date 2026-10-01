@@ -4,6 +4,7 @@ import {
   state,
   loadLessons,
   loadInsights,
+  loadTheory,
   loadQuestions,
   loadDictionary,
   loadExplanations,
@@ -107,11 +108,29 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
   let revealed = false; // translation visibility, reset per question
   let offline = false; // answers are queuing locally
   let lessonsPromise = null; // session cache: loadLessons() once per session
+  let theoryPromise = null; // session cache: loadTheory() once per session
   let feedbackPanel = null; // built once per question, reset in next()
 
   function lessons() {
     if (!lessonsPromise) lessonsPromise = loadLessons();
     return lessonsPromise;
+  }
+
+  function theory() {
+    if (!theoryPromise) theoryPromise = loadTheory();
+    return theoryPromise;
+  }
+
+  /** Q3: the theory title for a chapter id ("ch10" → "Правила движения…"
+   *  in the learner's language), falling back to the Italian title. */
+  async function chapterTitle(chapterId) {
+    try {
+      const theory = await theory();
+      const chapter = (Array.isArray(theory) ? theory : theory.chapters || []).find?.((c) => c.id === chapterId);
+      return chapter?.translations?.[lang()]?.title || chapter?.title_it || null;
+    } catch {
+      return null;
+    }
   }
 
   // L2 — signal-word highlight (practice/review only, never the exam):
@@ -300,15 +319,42 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     return para;
   }
 
-  /** S2.9: the "why" content, shown directly under the verdict. Same
-   *  chapter facts as the old expandable WHY? block — no new explanations. */
+  /** Q3: the chapter's general facts, collapsed into a "more from this
+   *  chapter" <details> under the verdict — the specific trap/explanation
+   *  comes first, these facts are second-level context. */
   async function whyBlock(question) {
     const slug = slugForQuestionId(question.id);
     const chapterId = slug ? CATEGORY_CHAPTER[slug] : null;
     if (!chapterId) return null;
-    const contents = await whyContents(chapterId, lessons());
+    const [contents, title] = await Promise.all([
+      whyContents(chapterId, lessons()),
+      chapterTitle(chapterId),
+    ]);
     if (!contents) return null;
-    return el('div.why-block', {}, ...contents);
+    return el('details.why-details', {},
+      el('summary.why-details__summary', {},
+        title ? `${title} — more from this chapter` : 'More from this chapter'),
+      el('div.why-block', {}, ...contents),
+    );
+  }
+
+  /** Q3: the lesson's trap entry for this exact question (matched by id) —
+   *  the most specific explanation we have, shown right after the verdict
+   *  on a wrong answer. Missing lesson / no trap for this question → null. */
+  async function trapBlock(question) {
+    if (lastCorrect) return null;
+    const slug = slugForQuestionId(question.id);
+    const chapterId = slug ? CATEGORY_CHAPTER[slug] : null;
+    if (!chapterId) return null;
+    let lesson;
+    try {
+      lesson = (await lessons()).chapters?.[chapterId];
+    } catch {
+      lesson = null;
+    }
+    const trap = (lesson?.traps || []).find((t) => t.id === question.id);
+    if (!trap?.why) return null;
+    return el('div.why-block.trap-item', {}, el('p.explanation__why', {}, loc(trap.why)));
   }
 
   /**
@@ -332,11 +378,12 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     const file = await loadExplanations(slug);
     const item = file.items?.[question.id];
     if (!item) return null; // no explanation authored for this question yet
+    const title = await chapterTitle(item.chapter);
     return el('div.why-block.explanation', {},
       el('div.explanation__meta', {},
         el('span.tag.warn', {}, 'AI draft — check the lesson'),
         el('a.explanation__link', { href: `#/theory/${item.chapter}` },
-          `Chapter ${item.chapter}`),
+          title || `Chapter ${item.chapter}`),
       ),
       el('div.why-fact', {},
         el('strong.explanation__key', {}, `«${item.key_it}»`),
@@ -423,10 +470,12 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
         ? null
         : el('div.ds-feedback__answer', {}, `Right answer: ${q.is_true ? 'Vero' : 'Falso'}`),
     );
-    const whySlot = el('div.why-slot', {});
-    panel.append(whySlot);
     const explanationSlot = el('div.explanation-slot', {});
     panel.append(explanationSlot);
+    const trapSlot = el('div.trap-slot', {});
+    panel.append(trapSlot);
+    const whySlot = el('div.why-slot', {});
+    panel.append(whySlot);
     const actions = el('div.ds-feedback__actions', {},
       el('button.btn.btn-primary', { onclick: next },
         index + 1 >= questions.length ? 'FINISH' : 'NEXT →'),
@@ -438,21 +487,20 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     }, 'Report a problem with this question'));
     const atIndex = index; // question the panel was built for
 
-    // Chapter facts: insert when loaded (and still on this question, in case
-    // the learner raced ahead) — never hide the explanation behind a tap.
-    whyBlock(q).then((block) => {
-      if (index === atIndex && whySlot.isConnected && !whySlot.firstChild) {
-        whySlot.replaceChildren(block ?? el('span', { style: 'display:none' }));
-      }
-    });
-    // L9a: AI-drafted explanation, only on a repeated mistake. Independent
-    // slot under the chapter facts; stays empty (nothing rendered) when not
-    // yet earned or when no explanation exists for this question.
-    explanationBlock(q).then((block) => {
-      if (index === atIndex && explanationSlot.isConnected && block) {
-        explanationSlot.replaceChildren(block);
-      }
-    });
+    // Q3: specific content first — the L9a explanation (from the 2nd mistake),
+    // then the lesson's trap for this exact question — and the chapter's
+    // general facts last, collapsed into a <details>. Each slot fills
+    // independently when loaded (and still on this question).
+    const settle = (promise, slot) => {
+      promise.then((block) => {
+        if (index === atIndex && slot.isConnected && !slot.firstChild) {
+          slot.replaceChildren(block ?? el('span', { style: 'display:none' }));
+        }
+      }).catch(() => {});
+    };
+    settle(whyBlock(q), whySlot);
+    settle(trapBlock(q), trapSlot);
+    settle(explanationBlock(q), explanationSlot);
     return panel;
   }
 

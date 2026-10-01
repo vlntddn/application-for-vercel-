@@ -1853,7 +1853,7 @@
       "chapter": "ch12",
       "why": {
         "en": "False: a police car not on emergency duty is just an ordinary vehicle; it can be overtaken like any other, respecting the normal overtaking rules.",
-        "ru": "Ложь: патрульная машина вне экстренного задания — обычный автомобиль; её можно обгонять как любой другой, соблюдая общие правила обгона.",
+        "ru": "Неверно: патрульная машина вне экстренного задания — обычный автомобиль; её можно обгонять как любой другой, соблюдая общие правила обгона.",
         "zh": "错误：非执行紧急任务的警车就是普通车辆，可按一般超车规则正常超车。"
       },
       "source": "ai-draft",
@@ -1866,7 +1866,7 @@
       "chapter": "ch12",
       "why": {
         "en": "False: a vehicle with blue flashing lights on emergency duty must not be overtaken or interrupted; the number of lanes on the motorway changes nothing.",
-        "ru": "Ложь: транспортное средство с сине-мигающим маячком на экстренном задании обгонять и перерывать нельзя — количество полос на автобане ничего не меняет.",
+        "ru": "Неверно: транспортное средство с сине-мигающим маячком на экстренном задании обгонять и перерывать нельзя — количество полос на автобане ничего не меняет.",
         "zh": "错误：执行紧急任务、开启蓝闪灯的警车不得被超车或打断，高速公路几条车道都一样。"
       },
       "source": "ai-draft",
@@ -1879,7 +1879,7 @@
       "chapter": "ch12",
       "why": {
         "en": "False: high beams would blind both the oncoming driver and the overtaking vehicle; the right reaction is to slow down and, if the road is wide, move to the right edge.",
-        "ru": "Ложь: дальний свет ослепит и встречного, и обгоняющего; правильная реакция — сбросить скорость и, если дорога широка, отъехать к правому краю.",
+        "ru": "Неверно: дальний свет ослепит и встречного, и обгоняющего; правильная реакция — сбросить скорость и, если дорога широка, отъехать к правому краю.",
         "zh": "错误：远光灯会致盲对向和超车车辆；正确做法是减速，若路面宽则靠右。"
       },
       "source": "ai-draft",
@@ -1892,7 +1892,7 @@
       "chapter": "ch12",
       "why": {
         "en": "False: there is no obligation to keep the same speed; on the contrary, if the vehicle ahead needs more space you should reduce speed and, if possible, move right.",
-        "ru": "Ложь: обязанности держать прежнюю скорость нет; наоборот, если впереди идущему нужно больше места, следует сбросить скорость и по возможности отъехать вправо.",
+        "ru": "Неверно: обязанности держать прежнюю скорость нет; наоборот, если впереди идущему нужно больше места, следует сбросить скорость и по возможности отъехать вправо.",
         "zh": "错误：没有保持原速的义务；相反，若前方车辆需要更多空间，应减速并尽量靠右。"
       },
       "source": "ai-draft",
@@ -1905,7 +1905,7 @@
       "chapter": "ch12",
       "why": {
         "en": "False: the turn indicator means a direction change and would confuse other drivers; it must not be used as a danger signal — slow down and move to the right edge instead.",
-        "ru": "Ложь: поворотник означает смену направления и дезориентирует других; использовать его как сигнал опасности нельзя — нужно сбросить скорость и отъехать к правому краю.",
+        "ru": "Неверно: поворотник означает смену направления и дезориентирует других; использовать его как сигнал опасности нельзя — нужно сбросить скорость и отъехать к правому краю.",
         "zh": "错误：转向灯表示转向，会误导他人；不应把它当危险信号，而应减速靠右。"
       },
       "source": "ai-draft",
@@ -1996,7 +1996,7 @@
       "chapter": "ch12",
       "why": {
         "en": "False: proximity to a rest area is not itself a cause of accidents; what matters is how the manoeuvre is carried out — distance, mirrors, returning to the driving lane.",
-        "ru": "Ложь: близость площадки отдыха сама по себе не причина ДТП; важно, как выполнен манёвр — дистанция, зеркала, возврат в попутную полосу.",
+        "ru": "Неверно: близость площадки отдыха сама по себе не причина ДТП; важно, как выполнен манёвр — дистанция, зеркала, возврат в попутную полосу.",
         "zh": "错误：靠近休息区本身不是事故原因；关键在于操作是否规范——车距、后视镜、及时并回行车道。"
       },
       "source": "ai-draft",
@@ -2009,7 +2009,7 @@
       "chapter": "ch12",
       "why": {
         "en": "False: low beams must stay on at all times on the motorway — a trap; having them on is a duty, not a cause of accidents.",
-        "ru": "Ложь: на автобане ближний свет обязаны держать включённым постоянно — ловушка: это обязанность, а не причина ДТП.",
+        "ru": "Неверно: на автобане ближний свет обязаны держать включённым постоянно — ловушка: это обязанность, а не причина ДТП.",
         "zh": "错误：在高速公路上必须始终开启近光灯——这是义务，不是事故原因（题目是陷阱）。"
       },
       "source": "ai-draft",
