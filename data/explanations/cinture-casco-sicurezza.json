@@ -26,6 +26,266 @@
       "source": "ai-draft",
       "model": "offline-human-draft",
       "at": "2026-09-30"
+    },
+    "cinture-casco-sicurezza-cintura-sicurezza-1": {
+      "verdict": "VERO",
+      "key_it": "si può essere proiettati contro il parabrezza",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: without a seatbelt, a sudden brake can throw the person forward against the windscreen.",
+        "ru": "Верно: без пристёгнутого ремня при резком торможении человека может отбросить вперёд, на лобовое стекло.",
+        "zh": "正确：若不系安全带，急刹车时人可能被甩向前方的挡风玻璃。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-cintura-sicurezza-2": {
+      "verdict": "FALSO",
+      "key_it": "si può fare a meno di allacciare la cintura di sicurezza",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: airbags do not replace the seatbelt — they work correctly only with the belt fastened, so it must never be skipped.",
+        "ru": "Ложно: подушки безопасности не заменяют ремень — они срабатывают правильно только при пристёгнутом ремне, поэтому от него нельзя отказываться.",
+        "zh": "错误：安全气囊不能替代安全带——气囊只有系好安全带时才能正确发挥作用，因此绝不能省略系安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-cintura-sicurezza-3": {
+      "verdict": "FALSO",
+      "key_it": "Le cinture di sicurezza vanno agganciate solo se si circola",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: the seatbelt must be fastened in every driving situation, regardless of speed — there is no minimum-speed threshold.",
+        "ru": "Ложно: ремень нужно пристёгивать в любой ситуации движения, независимо от скорости — порога минимальной скорости не существует.",
+        "zh": "错误：无论车速如何、在任何行驶情况下都必须系安全带，并不存在最低车速门槛。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-veicoli-airbag-1": {
+      "verdict": "VERO",
+      "key_it": "il seggiolino per bambini non deve essere sistemato sul sedile anteriore, con lo schienale rivolto verso la strada",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: without a front-passenger airbag-off switch, a child seat facing the road must not be placed in the front seat, because the airbag would endanger the child.",
+        "ru": "Верно: если нет выключателя подушки на переднем пассажирском месте, детское кресло, обращённое спиной к дороге, нельзя ставить на переднее сиденье — сработавшая подушка нанесёт ребёнку вред.",
+        "zh": "正确：若前排乘客侧没有气囊关闭开关，背向行驶方向的儿童安全座椅不可放在前排，因为弹出的气囊会危及儿童。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-casco-obbligatorio-3": {
+      "verdict": "VERO",
+      "key_it": "Il casco è obbligatorio per il passeggero di un ciclomotore a due ruote",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: on a two-wheeled moped the helmet is mandatory for the passenger too, even if they are an adult.",
+        "ru": "Верно: на двухколёсном мопеде шлем обязателен и для пассажира, даже если он совершеннолетний.",
+        "zh": "正确：在两轮轻便摩托车上，即使乘客已成年，也必须佩戴头盔。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-casco-obbligatorio-4": {
+      "verdict": "FALSO",
+      "key_it": "Il casco è obbligatorio per i conducenti di ciclomotori a due ruote",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: the helmet is mandatory for the rider of a two-wheeled moped at any age — not only for minors.",
+        "ru": "Ложно: шлем обязателен для водителя двухколёсного мопеда в любом возрасте, а не только для несовершеннолетних.",
+        "zh": "错误：两轮轻便摩托车驾驶员在任何年龄都必须佩戴头盔，而不仅限于未成年人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-3": {
+      "verdict": "VERO",
+      "key_it": "devono essere di tipo omologato e devono essere mantenute sempre efficienti",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: seatbelts must be of an approved type and kept in working order at all times.",
+        "ru": "Верно: ремни безопасности должны быть утверждённого типа и постоянно содержаться в исправном состоянии.",
+        "zh": "正确：安全带必须为经认证的类型，并始终保持完好可用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-7": {
+      "verdict": "VERO",
+      "key_it": "Le cinture di sicurezza devono essere utilizzate in qualsiasi situazione di marcia",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: the seatbelt must be worn in every kind of driving, with no exceptions.",
+        "ru": "Верно: ремень нужно использовать в любой ситуации движения, без исключений.",
+        "zh": "正确：在任何行驶情况下都必须使用安全带，没有例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-8": {
+      "verdict": "VERO",
+      "key_it": "anche dai passeggeri dei sedili posteriori",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: rear-seat passengers in a car must also wear the seatbelt.",
+        "ru": "Верно: пассажиры на задних сиденьях автомобиля тоже обязаны пристёгивать ремень.",
+        "zh": "正确：汽车后排乘客同样必须系安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-9": {
+      "verdict": "VERO",
+      "key_it": "devono essere di tipo omologato e mantenute sempre efficienti",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: seatbelts must be an approved type and kept always in working order.",
+        "ru": "Верно: ремни должны быть утверждённого типа и всегда находиться в исправном состоянии.",
+        "zh": "正确：安全带须为经认证类型，并始终保持完好。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-14": {
+      "verdict": "FALSO",
+      "key_it": "La spia che indica il mancato agganciamento delle cinture può essere disabilitata",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: the warning light for an unbuckled belt cannot be switched off by the driver with a dashboard command.",
+        "ru": "Ложно: световой индикатор непристёгнутого ремня водитель не может отключить с помощью кнопки на панели приборов.",
+        "zh": "错误：未系安全带的警示灯不能由驾驶员通过仪表盘上的开关关闭。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-16": {
+      "verdict": "FALSO",
+      "key_it": "L’arrotolatore delle cinture di sicurezza può essere disattivato o modificato dal conducente",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: the belt retractor must never be switched off or modified by the driver, even if it is inconvenient for a passenger.",
+        "ru": "Ложно: катушку ремня безопасности водитель не может ни отключать, ни модифицировать, даже если она неудобна пассажиру.",
+        "zh": "错误：即使安全带卷收器让乘客感到不适，驾驶员也不得将其关闭或改装。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-sistemi-trasporto-bambini-2": {
+      "verdict": "VERO",
+      "key_it": "è possibile trasportare bambini sul sedile anteriore",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: with a front airbag, children may ride in the front seat in a suitable child seat only if the car has a switch to turn the airbag off.",
+        "ru": "Верно: при наличии подушки безопасности детей можно возить на переднем сиденье в подходящем детском кресле, только если в машине есть выключатель этой подушки.",
+        "zh": "正确：若车辆配有前排气囊，只有在具备关闭气囊的开关时，儿童才可坐在合适的安全座椅上于前排乘车。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-sistemi-trasporto-bambini-4": {
+      "verdict": "VERO",
+      "key_it": "I sistemi di ritenuta per bambini devono essere di tipo omologato e mantenuti sempre efficienti",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: child restraint systems must be of an approved type and kept always in working order.",
+        "ru": "Верно: детские удерживающие устройства должны быть утверждённого типа и постоянно находиться в исправном состоянии.",
+        "zh": "正确：儿童约束系统必须为经认证类型，并始终保持完好。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-sistemi-trasporto-bambini-5": {
+      "verdict": "FALSO",
+      "key_it": "I sistemi di ritenuta per bambini sono di un unico tipo",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: child restraint systems come in several types, each suited to a specific weight and height range — there is no single universal type.",
+        "ru": "Ложно: детские удерживающие устройства бывают нескольких типов, каждый для определённого диапазона веса и роста, — единого универсального типа нет.",
+        "zh": "错误：儿童约束系统有多种类型，各适合特定的体重和身高范围，并不存在唯一的通用类型。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-sistemi-trasporto-bambini-6": {
+      "verdict": "FALSO",
+      "key_it": "il trasporto di bambini senza che siano assicurati a sistemi di ritenuta",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: children must always be secured with a child restraint system, also on urban routes — the place of driving does not matter.",
+        "ru": "Ложно: детей всегда нужно закреплять в детском удерживающем устройстве, в том числе в городе — это не зависит от маршрута.",
+        "zh": "错误：儿童任何时候都必须使用儿童约束系统固定，在城市道路上也不例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-sistemi-trasporto-bambini-7": {
+      "verdict": "FALSO",
+      "key_it": "il trasporto di bambini senza che siano assicurati a sistemi di ritenuta",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: children must always be restrained with a child restraint system, regardless of speed — a speed limit does not remove the obligation.",
+        "ru": "Ложно: детей всегда нужно удерживать в детском устройстве независимо от скорости — ограничение скорости не снимает этого обязательства.",
+        "zh": "错误：无论车速如何，儿童都必须使用儿童约束系统固定，限速并不能免除该义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-sistemi-trasporto-bambini-8": {
+      "verdict": "FALSO",
+      "key_it": "il trasporto di bambini senza che siano assicurati a sistemi di ritenuta",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: a child held in the driver's arms is not properly restrained — a child restraint system is always required, in any seat.",
+        "ru": "Ложно: ребёнок на руках у водителя не закреплён должным образом — детское удерживающее устройство обязательно на любом сиденье.",
+        "zh": "错误：被驾驶员抱在怀里的儿童并未得到正确固定——无论在哪个座位都必须使用儿童约束系统。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-sistemi-trasporto-bambini-9": {
+      "verdict": "FALSO",
+      "key_it": "il trasporto di bambini senza che siano assicurati a sistemi di ritenuta",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: a child in an adult's arms in the front seat is not properly restrained — a child restraint system is always required.",
+        "ru": "Ложно: ребёнок на руках у взрослого на переднем сиденье не закреплён должным образом — детское удерживающее устройство обязательно.",
+        "zh": "错误：坐在前排成年人怀里的儿童并未得到正确固定——必须使用儿童约束系统。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-sistemi-trasporto-bambini-10": {
+      "verdict": "FALSO",
+      "key_it": "Si possono utilizzare le cinture di sicurezza al posto dei sistemi di ritenuta",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: below the proper height and weight limits a child must use a child restraint system, not the standard seatbelt alone.",
+        "ru": "Ложно: пока ребёнок не достиг нужных параметров роста и веса, его нужно перевозить в детском удерживающем устройстве, а не просто на обычном ремне.",
+        "zh": "错误：在孩子未达到相应的年龄、身高、体重之前，必须使用儿童约束系统，而不能仅用普通安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
