@@ -1,3 +1,12 @@
+## 2026-10-01 — L9b: пояснения, порция 109 — ch1 (definizioni-generali-doveri-strada) не-карт. НЕ-сигнальные +20
+
+Что сделано (коммит feat: L9b пояснения порция 109 на self-improve):
+- data/explanations/definizioni-generali-doveri-strada.json: 370→390 — порция 109 (20 НЕ-сигнальных ch1 без картинок; продолжение ch1 не-карт. НЕ-сигнальных).
+- Состав (20 = 10 VERO / 10 FALSO): autocaravan-camper 5 (FALSO — не для агроработ) + 6 (FALSO — не для дорожных работ) + 8 (FALSO — не пятилетний техосмотр); strisce-pannelli-retroriflettenti 2 (VERO — > 3.5 т задние/боковые полосы) + 5 (VERO — боковые белые/жёлтые) + 6 (VERO — задние красные/жёлтые) + 9 (FALSO — < 3.5 т без боковых) + 10 (FALSO — ≤ 3.5 т без задних жёлто-красных) + 13 (FALSO — караваны без задних полос) + 14 (FALSO — автобусы без задних красно-белых); motocicli 0 (VERO — двухколёсные) + 1 (VERO — > 50 см³) + 2 (VERO — мопеды не мотоциклы) + 3 (VERO — АКПП) + 4 (VERO — 4 года, далее каждые 2) + 6 (FALSO — не более двух колёс) + 7 (FALSO — не любое двухколёсное) + 9 (FALSO — 50 см³/45 км/ч = мопеды) + 10 (FALSO — лёгкие квадрициклы = мопеды); autoveicoli-2 (VERO — автобус = autoveicolo).
+- Числа в why: 3.5 т / 50 см³ / 45 км/ч — совпадают с text_it (цифры). Число «4/2 года» в text_it написано словом (quattro/due), поэтому в why — «four/two» и «четыре/два» и «四年/两年» (цифры 4/2 вызвали invented-number FAIL; переформулировано словами). Ключи с прямыми апострофами `'` совпадают с text_it (autoveicoli-2: "L'autobus…").
+- Как проверено: scripts/check-explanations.mjs (checkAll) — 0 ошибок (390/390); scripts/verify.sh — VERIFY OK (npm test 184 passed, smoke 8/8 на :3917); diff 260 insertions / 0 deletions (add-only).
+- Дальше по L9b: ch1 не-карт. НЕ-сигнальных осталось 108 (порция 110: следующие 20 без картинок не-сигнальных в порядке файла).
+
 ## 2026-10-01 — L9b: пояснения, порция 108 — ch1 (definizioni-generali-doveri-strada) не-карт. НЕ-сигнальные +20
 
 Что сделано (коммит feat: L9b пояснения порция 108 на self-improve):
