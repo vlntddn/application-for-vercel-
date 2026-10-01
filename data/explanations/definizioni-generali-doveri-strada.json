@@ -5590,6 +5590,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-segnaletica-stradale-1": {
+      "verdict": "VERO",
+      "key_it": "rimuovere la segnaletica stradale",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: removing road signs is forbidden — traffic signs are part of the road and must be kept in place for everyone's safety.",
+        "ru": "Верно: удалять дорожные знаки запрещено — они часть дороги и должны оставаться на месте ради безопасности всех.",
+        "zh": "正确：拆除道路交通标志是被禁止的——它们是道路的一部分，须为所有人的安全而保留。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-segnaletica-stradale-3": {
+      "verdict": "FALSO",
+      "key_it": "se non si tratta di segnali di pericolo",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: you may never move road signs yourself, whether they are danger signs or not — no such exception exists.",
+        "ru": "Неверно: знаки нельзя перемещать самому ни при каких условиях — ни для знаков опасности, ни для других; такого исключения нет.",
+        "zh": "错误：无论是危险标志还是其他标志，都不得自行移动——不存在这样的例外。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-segnaletica-stradale-4": {
+      "verdict": "FALSO",
+      "key_it": "dopo aver avvisato gli organi di polizia",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: even after warning the police, moving road signs yourself is still not allowed — this is a task for the authorities, not drivers.",
+        "ru": "Неверно: даже после уведомления полиции перемещать знаки самому нельзя — это задача властей, а не водителей.",
+        "zh": "错误：即便通知了警察，自行移动标志仍不被允许——这是主管部门的职责，而非驾驶员的。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-segnaletica-stradale-5": {
+      "verdict": "FALSO",
+      "key_it": "barriere di delimitazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: barriers and road cones are also road markings/signs, so they too may not be moved at will.",
+        "ru": "Неверно: ограждения и дорожные конусы тоже относятся к разметке/знакам, поэтому их тоже нельзя перемещать как захочется.",
+        "zh": "错误：护栏和路锥同样属于道路标志/标线，因此也不得随意移动。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-gare-velocita-0": {
+      "verdict": "VERO",
+      "key_it": "gareggiare in velocità",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: holding speed races on roads is forbidden — they are extremely dangerous for everyone nearby.",
+        "ru": "Верно: устраивать гонки на дорогах запрещено — они крайне опасны для всех окружающих.",
+        "zh": "正确：在道路上进行速度比赛是被禁止的——它对周围所有人极其危险。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-gare-velocita-1": {
+      "verdict": "VERO",
+      "key_it": "punito con la reclusione",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: a driver who takes part in unauthorized speed races on public areas is punished with imprisonment.",
+        "ru": "Верно: водитель, участвующий в несанкционированных гонках на общественных территориях, наказывается лишением свободы.",
+        "zh": "正确：参加公共场所未经批准的速度比赛的驾驶员，将被处以监禁。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-gare-velocita-2": {
+      "verdict": "VERO",
+      "key_it": "gareggia in velocità su strade pubbliche",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: racing in speed on public roads is an offense punished by imprisonment.",
+        "ru": "Верно: гонки на публичных дорогах — это проступок, карается лишением свободы.",
+        "zh": "正确：在公共道路上进行速度比赛是违法行为，处以监禁。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-gare-velocita-3": {
+      "verdict": "VERO",
+      "key_it": "scommette su veicoli",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: even betting on vehicles in unauthorized races on public roads is punished with imprisonment.",
+        "ru": "Верно: даже ставки на транспортные средства в несанкционированных гонках на общественных дорогах караются лишением свободы.",
+        "zh": "正确：甚至为公共场所未经批准的比赛中的车辆下注，也会被处以监禁。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-gare-velocita-4": {
+      "verdict": "FALSO",
+      "key_it": "senza autorizzazione",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: vehicle races on public areas are only allowed with proper authorization — never 'without it'.",
+        "ru": "Неверно: гонки на общественных территориях допускаются только при наличии разрешения — и никак не «без него».",
+        "zh": "错误：公共场所的车辆比赛只有在获得许可时才被允许——绝不可「未经许可」。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-0": {
+      "verdict": "VERO",
+      "key_it": "mozziconi di sigaretta accesi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: throwing lit cigarette butts out of the window is forbidden — they can start fires and hurt others.",
+        "ru": "Верно: выбрасывать из окна зажжённые окурки запрещено — они могут вызвать пожар и причинить вред другим.",
+        "zh": "正确：从车窗抛出点燃的烟头是被禁止的——它们可能引发火灾并伤害他人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-1": {
+      "verdict": "VERO",
+      "key_it": "soprattutto se sopraggiungono veicoli a due ruote",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: throwing lit butts out is especially dangerous when two-wheeled vehicles approach, as the debris can cause loss of control.",
+        "ru": "Верно: выбрасывать зажжённые окурки особенно опасно, когда приближаются двухколёсные — мусор может привести к потере контроля.",
+        "zh": "正确：在有两轮车辆接近时，抛出点燃的烟头尤为危险，因为杂物可能导致失控。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-2": {
+      "verdict": "VERO",
+      "key_it": "potrebbe causare incendi",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: throwing lit butts near woods or green areas could cause fires — that is exactly why it is forbidden.",
+        "ru": "Верно: выбрасывать зажжённые окурки рядом с лесами или зелёными зонами — риск пожара; именно поэтому это запрещено.",
+        "zh": "正确：在林地或绿地附近抛出点燃的烟头可能引发火灾——正因如此而被禁止。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-3": {
+      "verdict": "VERO",
+      "key_it": "spargere fango o detriti sulle strade",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: spreading mud or debris on the road with dirty vehicle wheels is forbidden — it endangers everyone else.",
+        "ru": "Верно: растаскивать грязь или обломки по дороге на грязных колёсах запрещено — это опасно для всех остальных.",
+        "zh": "正确：用脏车辆轮胎在道路上撒布泥土或碎片是被禁止的——它危及他人。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-9": {
+      "verdict": "VERO",
+      "key_it": "pulire le ruote del veicolo",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: to avoid dirtying the road you should clean the vehicle wheels before leaving a muddy path.",
+        "ru": "Верно: чтобы не засорять дорогу, нужно очистить колёса перед выездом с грязной дороги.",
+        "zh": "正确：为避免弄脏路面，驶离泥泞小径前应清洁车辆轮胎。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-10": {
+      "verdict": "VERO",
+      "key_it": "non cada terriccio",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: leaving a muddy path or a construction site you must make sure no soil falls off and dirties the road while driving.",
+        "ru": "Верно: выезжая с грязной дороги или стройплощадки, убедитесь, что при движении не осыпается грязь, засоряющая дорогу.",
+        "zh": "正确：驶离泥泞小径或工地时，须确保行驶中不落下的泥土弄脏道路。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-11": {
+      "verdict": "FALSO",
+      "key_it": "per parcheggiare il veicolo",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: temporary vertical signs may not be moved just to find a parking spot — they stay where they were placed.",
+        "ru": "Неверно: временные вертикальные знаки нельзя переставить «под парковку» — они стоят там, где их разместили.",
+        "zh": "错误：不得为找停车位而移动临时立式标志——它们应停放在设置的位置。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-inquinamento-strade-12": {
+      "verdict": "FALSO",
+      "key_it": "lanciare la carta dal finestrino",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: throwing paper or any waste out of the window is not allowed — it pollutes and can blind other drivers.",
+        "ru": "Неверно: выбрасывать бумагу или любой мусор из окна нельзя — это загрязняет и может ослепить других водителей.",
+        "zh": "错误：不允许从车窗抛出纸张或任何垃圾——它会造成污染，还可能让其他驾驶员看不清路况。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-8": {
+      "verdict": "VERO",
+      "key_it": "senza usare prudenza",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: even when you have priority, crossing a junction without care is not justified — always stay alert.",
+        "ru": "Верно: даже имея преимущество, пересекать перекрёсток без осмотрительности нельзя — всегда будьте внимательны.",
+        "zh": "正确：即使享有优先权，也不允许不谨慎地通过路口——须始终保持警惕。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-comportamento-conducente-9": {
+      "verdict": "FALSO",
+      "key_it": "la precedenza sul conducente di un veicolo più piccolo",
+      "chapter": "ch1",
+      "why": {
+        "en": "Wrong: vehicle size gives no priority — a larger vehicle does not have the right of way over a smaller one.",
+        "ru": "Неверно: размер транспортного средства не даёт преимущества — у более крупного нет приоритета перед более мелким.",
+        "zh": "错误：车辆大小不赋予优先权——大型车辆对小型车辆并无路权。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "definizioni-generali-doveri-strada-attenzion-conducente-1": {
+      "verdict": "VERO",
+      "key_it": "ciclista o un motociclista",
+      "chapter": "ch1",
+      "why": {
+        "en": "Correct: check the rearview mirror often for approaching cyclists or motorcyclists — they are fast and easy to lose track of.",
+        "ru": "Верно: часто поглядывайте в зеркало на приближающихся велосипедистов и мотоциклистов — они быстрые и легко теряются из виду.",
+        "zh": "正确：应经常通过后视镜观察接近的自行车和摩托车——它们速度快、易被忽略。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
