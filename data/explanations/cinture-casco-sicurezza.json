@@ -1066,6 +1066,266 @@
       "source": "ai-draft",
       "model": "offline-human-draft",
       "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-17": {
+      "verdict": "FALSO",
+      "key_it": "di utilità trascurabile",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: belts are far from useless in town. Most belt-related injuries actually happen at low, city speeds, so the belt matters at any speed, in town too.",
+        "ru": "Ложно: ремни в городе отнюдь не бесполезны. Большинство травм «без ремня» как раз происходят на низких городских скоростях, поэтому ремень важен на любой скорости, и в городе тоже.",
+        "zh": "错误：安全带在市区绝非可有可无。多数「未系安全带」的事故恰恰发生在低速的城市路况，因此任何速度、包括市区都必须系安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-19": {
+      "verdict": "FALSO",
+      "key_it": "in braccio a un adulto",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: the seatbelt does not make carrying a child on an adult lap in the front safe. Children must travel in an approved child restraint suited to their size, not on a lap.",
+        "ru": "Ложно: ремень не делает безопасной перевозку ребёнка на руках у взрослого на переднем сиденье. Дети едут в сертифицированном удерживающем устройстве по размеру, а не на коленях.",
+        "zh": "错误：安全带并不会让成人把儿童抱在怀里坐前排变得安全。儿童必须使用与其体型匹配的认证儿童约束装置，而不是坐在腿上。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-sistemi-trasporto-bambini-0": {
+      "verdict": "VERO",
+      "key_it": "sistemi di ritenuta omologati",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: children under 1,50 m travelling in a car must be held by an approved (omologated) restraint system matched to their height and weight.",
+        "ru": "Верно: дети ростом ниже 1,50 м в автомобиле должны быть удержаны сертифицированным (омологированным) устройством, подобранным по росту и весу.",
+        "zh": "正确：身高不足1,50米、乘坐汽车的儿童必须使用与其身高体重匹配的认证（omologato）约束装置。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-sistemi-trasporto-bambini-3": {
+      "verdict": "VERO",
+      "key_it": "classificati in gruppi",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: child restraint systems are classified into groups according to the child weight they can accommodate, so the right group matches the child size.",
+        "ru": "Верно: детские удерживающие устройства делятся на группы в зависимости от веса ребёнка, который они рассчитаны принимать, — группа выбирается под размер ребёнка.",
+        "zh": "正确：儿童约束装置按其可承受的儿童体重分为不同组别，因此按儿童体型选择对应组别。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-0": {
+      "verdict": "VERO",
+      "key_it": "cuscino gonfiabile",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: an airbag is an inflatable cushion made of nylon or another synthetic material, designed to deploy and then deflate very quickly.",
+        "ru": "Верно: подушка безопасности — это надувная камера из нейлона или иного синтетического материала, рассчитанная на быстрое развёртывание и сдувание.",
+        "zh": "正确：安全气囊是由尼龙或其他合成材料制成的可充气气垫，展开后迅速放气。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-1": {
+      "verdict": "VERO",
+      "key_it": "urto violento",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: the airbag activates in the event of a road accident involving a violent impact, not in every bump or slow manoeuvre.",
+        "ru": "Верно: подушка срабатывает при дорожном происшествии с сильным ударом, а не при каждом ударе или медленном манёвре.",
+        "zh": "正确：安全气囊在发生伴有强烈撞击的交通事故时才启动，而非每次碰撞或低速操作都会触发。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-3": {
+      "verdict": "VERO",
+      "key_it": "limitare i danni agli occupanti",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: the airbag limits injuries to occupants, cushioning them against the vehicle interior surfaces during a violent impact in an accident.",
+        "ru": "Верно: задача подушки — смягчить повреждения пассажиров, сглаживая их удар о внутренние поверхности салона при сильном ударе в ДТП.",
+        "zh": "正确：安全气囊的作用是减轻乘员受伤，在事故中的强烈撞击时缓冲乘员与车内表面的碰撞。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-5": {
+      "verdict": "VERO",
+      "key_it": "grazie al comando di un sensore",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: the airbag inflates automatically, triggered by a sensor that detects a qualifying impact, without any driver action.",
+        "ru": "Верно: подушка надувается автоматически по команде датчика, фиксирующего соответствующий удар, без каких-либо действий водителя.",
+        "zh": "正确：安全气囊由检测到符合条件的撞击的传感器自动触发充气，无需驾驶人操作。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-6": {
+      "verdict": "VERO",
+      "key_it": "pochi millisecondi",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: the airbag deploys in just a few milliseconds, far too fast for a person to react, so it must be used together with the seatbelt.",
+        "ru": "Верно: подушка разворачивается за считанные миллисекунды — слишком быстро, чтобы человек успел среагировать, поэтому она работает в связке с ремнём.",
+        "zh": "正确：安全气囊在几毫秒内展开，快于人反应，因此必须与安全带配合使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-7": {
+      "verdict": "FALSO",
+      "key_it": "in pochi secondi",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: the airbag inflates in milliseconds, not seconds — a delay of whole seconds would come far too late to protect the occupant.",
+        "ru": "Ложно: подушка надувается за миллисекунды, а не за секунды — задержка в несколько секунд пришла бы слишком поздно, чтобы спасти пассажира.",
+        "zh": "错误：安全气囊在几毫秒内充气，而非几秒——延迟几秒才展开就太迟，无法保护乘员。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-8": {
+      "verdict": "FALSO",
+      "key_it": "premendo un pulsante",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: the airbag is not inflated by pressing a button on the dashboard; it deploys automatically by sensor command during a qualifying impact.",
+        "ru": "Ложно: подушку не надувают нажатием кнопки на приборной панели — она разворачивается автоматически по команде датчика при соответствующем ударе.",
+        "zh": "错误：安全气囊不是通过按仪表盘上的按钮充气的，而是在符合条件的撞击时由传感器自动触发。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-11": {
+      "verdict": "FALSO",
+      "key_it": "non va usato insieme alle cinture",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: the airbag is not used instead of the seatbelt — it complements it and works correctly only with the belt fastened, so both are used together.",
+        "ru": "Ложно: подушка не используется вместо ремня — она дополняет его и работает правильно только при пристёгнутом ремне, поэтому ремни и подушки применяются вместе.",
+        "zh": "错误：安全气囊并非代替安全带使用——它补充安全带，且只有系好安全带时才能正确发挥作用，因此二者需配合使用。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-0": {
+      "verdict": "VERO",
+      "key_it": "invecchiamento dovuto a luce e calore",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: a helmet ages over time due to light and heat, which degrade its materials — so even an unused helmet has a limited service life.",
+        "ru": "Верно: со временем шлем стареет под действием света и тепла, разлагающих его материалы, — поэтому даже неиспользуемый шлем имеет ограниченный срок службы.",
+        "zh": "正确：头盔会因光和热而使材料老化，因此即使未使用的头盔也有有限的服役年限。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-4": {
+      "verdict": "VERO",
+      "key_it": "ridurre gli effetti di eventuali urti alla testa",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: the helmet is needed to reduce the effects of possible impacts to the head, one of the most vulnerable parts of the body in a fall.",
+        "ru": "Верно: шлем нужен, чтобы смягчить последствия возможных ударов по голове — одной из наиболее уязвимых частей тела при падении.",
+        "zh": "正确：佩戴头盔是为了减轻头部可能受到的撞击影响，头部是摔倒时最脆弱的部位之一。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-6": {
+      "verdict": "VERO",
+      "key_it": "sia dotato di visiera",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: it is a good idea for the helmet to have a visor, which protects the face and eyes from impacts and weather.",
+        "ru": "Верно: желательно, чтобы шлем был снабжён визором — он защищает лицо и глаза от ударов и непогоды.",
+        "zh": "正确：头盔最好配有面罩，可保护面部和眼睛免受撞击及恶劣天气影响。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-7": {
+      "verdict": "VERO",
+      "key_it": "protegge il viso e gli occhi da impatti con insetti",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: the helmet visor protects the face and eyes from impacts with insects, which would otherwise distract or injure the rider.",
+        "ru": "Верно: визор шлема защищает лицо и глаза от ударов насекомых, которые иначе отвлекли бы водителя или ранили его.",
+        "zh": "正确：头盔面罩保护面部和眼睛免受昆虫撞击，避免分心或受伤。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-10": {
+      "verdict": "VERO",
+      "key_it": "solventi presenti in vernici o colle",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: solvents found in paints or adhesives can compromise the robustness of the helmet outer shell, so the helmet must never be cleaned or painted with them.",
+        "ru": "Верно: растворители, содержащиеся в красках и клеях, могут снизить прочность внешней оболочки шлема, поэтому чистить или красить шлем ими нельзя.",
+        "zh": "正确：油漆或胶水中含有的溶剂会削弱头盔外壳的强度，因此绝不能用它们清洗或涂漆头盔。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-17": {
+      "verdict": "VERO",
+      "key_it": "limitare il pericolo di appannamento della visiera",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: the helmet ventilation system helps limit the risk of the visor fogging up, keeping the view clear for the rider.",
+        "ru": "Верно: система вентиляции шлема помогает снизить риск запотевания визора, сохраняя обзор для водителя.",
+        "zh": "正确：头盔的通风系统有助于减少面罩起雾的风险，保持视线清晰。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-18": {
+      "verdict": "VERO",
+      "key_it": "soggetto alla decurtazione di punti dalla patente",
+      "chapter": "ch22",
+      "why": {
+        "en": "True: a rider who does not wear a helmet is subject to penalty points being deducted from the driving licence.",
+        "ru": "Верно: водитель, не надевший шлем, несёт ответственность в виде лишения баллов водительского удостоверения.",
+        "zh": "正确：未佩戴头盔的驾驶人将面临驾驶证扣分处罚。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-24": {
+      "verdict": "FALSO",
+      "key_it": "per periodi lunghissimi, di oltre venti anni",
+      "chapter": "ch22",
+      "why": {
+        "en": "False: a helmet does not keep its protective characteristics unchanged for twenty-plus years; light and heat degrade it, so it has a limited service life.",
+        "ru": "Ложно: шлем не сохраняет защитные свойства неизменными двадцать и более лет — свет и тепло его старят, поэтому у шлема ограничен срок службы.",
+        "zh": "错误：头盔不可能保持防护特性在二十年以上不变；光和热会使它老化，因此头盔有有限的使用年限。"
+      },
+      "source": "ai-draft",
+      "model": "offline-ai-draft",
+      "at": "2026-10-01"
     }
   }
 }
