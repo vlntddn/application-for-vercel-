@@ -286,6 +286,266 @@
       "source": "ai-draft",
       "model": "offline-ai-draft",
       "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-casco-obbligatorio-0": {
+      "verdict": "VERO",
+      "key_it": "casco è obbligatorio per i conducenti di ciclomotori a due ruote",
+      "chapter": "ch22",
+      "why": {
+        "en": "The helmet is mandatory for every driver of a two-wheeled moped; no license category grants an exemption.",
+        "ru": "Шлем обязателен для каждого водителя двухколёсного мопеда; категория прав не даёт права не надевать шлем.",
+        "zh": "驾驶两轮轻便摩托车必须佩戴头盔，任何驾照类别都不免除此义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-casco-obbligatorio-1": {
+      "verdict": "VERO",
+      "key_it": "casco è obbligatorio per i conducenti di motocicli non dotati di cellula di sicurezza",
+      "chapter": "ch22",
+      "why": {
+        "en": "On motorcycles without a safety cell or restraint systems, the helmet is mandatory for the driver.",
+        "ru": "На мотоцикле без защитной клетки и систем удержания шлем обязателен для водителя.",
+        "zh": "在没有安全笼或约束系统的摩托车上，驾驶员必须佩戴头盔。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-casco-obbligatorio-2": {
+      "verdict": "VERO",
+      "key_it": "casco è obbligatorio per il passeggero di un motociclo privo di cellula di sicurezza",
+      "chapter": "ch22",
+      "why": {
+        "en": "The passenger on a motorcycle lacking a safety cell and restraint systems must also wear a helmet.",
+        "ru": "Пассажир мотоцикла без защитной клетки и систем удержания также обязан носить шлем.",
+        "zh": "在没有安全笼和约束系统的摩托车上，乘客也必须佩戴头盔。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-casco-obbligatorio-5": {
+      "verdict": "FALSO",
+      "key_it": "casco non è obbligatorio per i conducenti di ciclomotori a due ruote",
+      "chapter": "ch22",
+      "why": {
+        "en": "The helmet is mandatory for all two-wheeled moped drivers; holding a category-B license does not exempt anyone.",
+        "ru": "Шлем обязателен для всех водителей двухколёсных мопедов; наличие прав категории B не освобождает от ношения шлема.",
+        "zh": "所有两轮轻便摩托车驾驶员都必须佩戴头盔，持有B类驾照不能免除此义务。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-casco-obbligatorio-6": {
+      "verdict": "FALSO",
+      "key_it": "casco non è obbligatorio per i conducenti di ciclomotori a due ruote",
+      "chapter": "ch22",
+      "why": {
+        "en": "The helmet is always mandatory for drivers of two-wheeled mopeds; no exemption exists.",
+        "ru": "Шлем всегда обязателен для водителей двухколёсных мопедов; исключений не существует.",
+        "zh": "驾驶两轮轻便摩托车必须始终佩戴头盔，不存在任何豁免。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-10": {
+      "verdict": "FALSO",
+      "key_it": "Non è obbligatorio",
+      "chapter": "ch22",
+      "why": {
+        "en": "Seat belts are obligatory at any speed; there is no speed threshold below which they become optional.",
+        "ru": "Ремень безопасности обязателен при любой скорости; порога, ниже которого он необязателен, не существует.",
+        "zh": "无论车速多低，安全带都是强制的；不存在可以免除安全带的速度阈值。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-11": {
+      "verdict": "FALSO",
+      "key_it": "Non è obbligatorio, ma è consigliato",
+      "chapter": "ch22",
+      "why": {
+        "en": "Seat belts are obligatory in rear seats as well, not merely recommended; every occupant must be belted.",
+        "ru": "Ремень обязателен и на задних сиденьях, а не просто рекомендован; каждый пассажир должен быть пристёгнут.",
+        "zh": "后排座椅同样必须系安全带，而不仅仅是建议；所有乘员都必须系好安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-12": {
+      "verdict": "FALSO",
+      "key_it": "Non è obbligatorio",
+      "chapter": "ch22",
+      "why": {
+        "en": "There is no age-based exemption from wearing a seat belt; the obligation applies to every occupant regardless of age.",
+        "ru": "Не существует возрастных исключений от ношения ремня; обязанность распространяется на всех независимо от возраста.",
+        "zh": "没有基于年龄的安全带豁免；无论年龄多大，每位乘员都必须系好安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-13": {
+      "verdict": "FALSO",
+      "key_it": "Non è obbligatorio",
+      "chapter": "ch22",
+      "why": {
+        "en": "An airbag does not replace the seat belt; both are required. The airbag works only as a complement to the belt.",
+        "ru": "Подушка безопасности не заменяет ремень; необходимы оба. Аирбег работает только как дополнение к ремню.",
+        "zh": "安全气囊不能替代安全带，两者都必须使用。安全气囊只是安全带的补充。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-Scopo-utilizzo-cinture-sicurezza-18": {
+      "verdict": "FALSO",
+      "key_it": "Non è obbligatorio",
+      "chapter": "ch22",
+      "why": {
+        "en": "The seat-belt obligation has no distance exemption; it applies on every trip, even very short ones inside built-up areas.",
+        "ru": "Обязанность пристёгиваться не имеет исключения по расстоянию; она действует на каждой поездке, даже самой короткой.",
+        "zh": "系安全带的义务没有距离豁免；无论行程多短，在城镇区域内都必须系好安全带。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-sistemi-trasporto-bambini-11": {
+      "verdict": "FALSO",
+      "key_it": "costruzione artigianale",
+      "chapter": "ch22",
+      "why": {
+        "en": "Child seats must be of an approved (certified) type; handmade or locally approved seats do not meet the safety standard.",
+        "ru": "Детское сиденье должно быть утверждённого типа; самодельные или местно одобренные кресла не отвечают стандарту безопасности.",
+        "zh": "儿童座椅必须是经认证的类型；自制或仅由地方专家批准的座椅不符合安全标准。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-2": {
+      "verdict": "VERO",
+      "key_it": "può essere pericoloso",
+      "chapter": "ch22",
+      "why": {
+        "en": "If the airbag deploys while the occupant is unbelted, the deployment force can cause severe injuries.",
+        "ru": "Если аирбег сработает, когда пассажир не пристёгнут, сила раскрытия может вызвать серьёзные травмы.",
+        "zh": "如果乘员未系安全带时气囊弹出，弹出的力量可能造成严重伤害。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-4": {
+      "verdict": "VERO",
+      "key_it": "può essere talvolta disattivabile",
+      "chapter": "ch22",
+      "why": {
+        "en": "Some airbags (e.g. front passenger) can be switched off, for instance when a child seat is installed in that position.",
+        "ru": "Некоторые подушки (например, передняя пассажирская) могут быть отключены, например при установке детского кресла на этом месте.",
+        "zh": "某些安全气囊（如前排乘客气囊）可以关闭，例如在该位置安装儿童安全座椅时。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-9": {
+      "verdict": "FALSO",
+      "key_it": "deve essere gonfiato periodicamente",
+      "chapter": "ch22",
+      "why": {
+        "en": "The airbag is a sealed system checked via the indicator light, not by inflating; the driver cannot refill or test it manually.",
+        "ru": "Аирбег — герметичная система, проверяемая индикатором, а не надуванием; водитель не может её наполнить или проверить вручную.",
+        "zh": "气囊是密封系统，通过指示灯检查，而非通过充气；驾驶员不能手动充气或测试。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-10": {
+      "verdict": "FALSO",
+      "key_it": "utile soltanto nei percorsi extraurbani",
+      "chapter": "ch22",
+      "why": {
+        "en": "The airbag protects on any road, including urban streets; its utility does not depend on the type of route.",
+        "ru": "Аирбег защищает на любой дороге, включая городские; его эффективность не зависит от типа маршрута.",
+        "zh": "安全气囊在任何道路上都有效，包括城市街道；其保护效果不取决于道路类型。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-caratteristiche-airbag-13": {
+      "verdict": "FALSO",
+      "key_it": "può tarare",
+      "chapter": "ch22",
+      "why": {
+        "en": "The driver cannot adjust the airbag activation threshold; deployment is factory-set and not user-configurable.",
+        "ru": "Водитель не может регулировать порог срабатывания аирбега; настройка задаётся производителем и не меняется пользователем.",
+        "zh": "驾驶员不能调节气囊触发阈值；触发参数由厂家设定，用户不可调整。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-1": {
+      "verdict": "VERO",
+      "key_it": "detersivi non corrosivi",
+      "chapter": "ch22",
+      "why": {
+        "en": "Helmets must be cleaned with non-corrosive detergents to avoid damaging the shell, paint, or visor materials.",
+        "ru": "Шлем чистят только неагрессивными моющими средствами, чтобы не повредить оболочку, краску или визор.",
+        "zh": "头盔必须用非腐蚀性清洁剂清洗，以免损坏外壳、涂层或面罩材料。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-2": {
+      "verdict": "VERO",
+      "key_it": "non deve essere pulito con solventi",
+      "chapter": "ch22",
+      "why": {
+        "en": "Solvents can dissolve or weaken the helmet shell, paint layer, and visor; only gentle non-corrosive cleaners are allowed.",
+        "ru": "Растворители могут растворять или ослаблять оболочку, слой краски и визор; допустимы только мягкие неагрессивные средства.",
+        "zh": "溶剂可能溶解或削弱头盔外壳、涂层和面罩；只允许使用温和的非腐蚀性清洁剂。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-3": {
+      "verdict": "VERO",
+      "key_it": "non deve essere pulito con benzina",
+      "chapter": "ch22",
+      "why": {
+        "en": "Petrol is a strong solvent that damages the shell, internal adhesives, and visor; it must never be used on a helmet.",
+        "ru": "Бензин — сильный растворитель, повреждающий оболочку, внутренний клей и визор; его нельзя применять для чистки шлема.",
+        "zh": "汽油是强溶剂，会损坏外壳、内部粘合剂和面罩；绝不能用来清洁头盔。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
+    },
+    "cinture-casco-sicurezza-utilizzo-casco-5": {
+      "verdict": "VERO",
+      "key_it": "protegge anche il viso",
+      "chapter": "ch22",
+      "why": {
+        "en": "A full-face (integral) helmet covers the face in addition to the skull, protecting against facial injuries in a crash.",
+        "ru": "Полный (интегральный) шлем закрывает и лицо, и череп, защищая от травм лица при ДТП.",
+        "zh": "全盔（整体式头盔）在保护头骨的同时也覆盖面部，防止事故中的面部伤害。"
+      },
+      "source": "ai-draft",
+      "model": "offline-human-draft",
+      "at": "2026-10-01"
     }
   }
 }
