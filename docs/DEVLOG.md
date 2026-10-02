@@ -1,3 +1,20 @@
+## 2026-10-02 — U4: Многоточие …
+
+Ветка self-improve. Правило типографики: в строках UI — `…` (U+2026), не `...`.
+
+**Что.** `public/js/i18n.js` — 30 вхождений `...` → `…` (en/ru/zh: Loading…,
+Saving…, Building…, PREPARING…, Загрузка…, Собираю…, 正在加载…);
+`public/js/views/theory.js` — 1 вхождение ('Loading…').
+Кодовые три точки (spread и т.п.) не тронуты.
+`public/sw.js` — VERSION v102 → v103.
+
+**Как проверено.** grep: 0 оставшихся `...` в строках UI.
+qa-ux: 221 PASS / 3 FAIL — baseline. scripts/verify.sh → VERIFY OK (222, 73/0, smoke).
+
+**Следующий шаг.** U5 — translate=no.
+
+---
+
 ## 2026-10-02 — U3: touch-action manipulation
 
 Ветка self-improve. Правило mobile UX: убрать 300 мс задержку двойного тапа на iOS.

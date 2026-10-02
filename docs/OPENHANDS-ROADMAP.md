@@ -574,7 +574,7 @@ _Точка обзора B (не блокирует): после L7 — те ж�
 - [x] **U3 `touch-action: manipulation`** на `a, button, [role=button], .ds-answer,
       input, select` (нет ни одного; убирает 300 мс задержку двойного тапа на iOS) и
       `overscroll-behavior: contain` на модалке знака и всплывающих подсказках.
-- [ ] **U4 Многоточие.** В строках интерфейса `...` → `…` (Loading…, Saving…, Building
+- [x] **U4 Многоточие.** В строках интерфейса `...` → `…` (Loading…, Saving…, Building
       your session…, PREPARING…). Только строки UI, не код и не spread.
 - [ ] **U5 Английский бренд не переводить:** `translate="no"` на `.brand__name` и на
       итальянский текст вопросов/ответов (`.question-text`, `lang="it"`), чтобы
