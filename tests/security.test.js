@@ -384,6 +384,29 @@ test('the settings screen is localized: no hardcoded UI copy (Q4.2)', () => {
   assert.match(views, /Export backup/);
 });
 
+test('the dictionary screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2 slice 7: dictionary copy lives in i18n.js under dict.* keys; the view
+  // only references keys, so ru/zh switch in without touching dictionary.js.
+  const views = readViewsSource();
+  const dict = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'dictionary.js'), 'utf8');
+  assert.match(dict, /t\('dict\.title'\)/, 'page title must come from i18n');
+  assert.match(dict, /t\('dict\.lede'\)/, 'lede must come from i18n');
+  assert.match(dict, /t\('dict\.selfTestOn'\)/, 'self-test button must come from i18n');
+  assert.match(dict, /t\('dict\.terms'/, 'terms tag must come from i18n');
+  assert.match(dict, /t\('dict\.revealAria'/, 'reveal aria must come from i18n');
+  // No hardcoded English UI strings left in the view (Italian term content is
+  // data, not UI copy, so it stays as-is).
+  assert.ok(!dict.includes("'DIZIONARIO'"), 'no hardcoded page title');
+  assert.ok(!dict.includes('The exam vocabulary'), 'no hardcoded lede');
+  assert.ok(!dict.includes("'← THEORY'"), 'no hardcoded back link');
+  assert.ok(!dict.includes("'SELF-TEST: ON'"), 'no hardcoded self-test label');
+  assert.ok(!dict.includes('TERMS`'), 'no hardcoded terms tag');
+  assert.ok(!dict.includes("'Tap to reveal'"), 'no hardcoded veil label');
+  // English copy exists in the dictionary (the strings QA checks).
+  assert.match(views, /DIZIONARIO/);
+  assert.match(views, /Tap to reveal/);
+});
+
 test('settings offers an install path on phones', () => {
   const views = readViewsSource();
   assert.match(views, /renderInstallPanel/);

@@ -254,6 +254,17 @@ export const MESSAGES = {
     'st.dangerLede': 'RESET WIPES ALL ANSWERS, MISTAKES, EXAMS AND STREAK. THERE IS NO UNDO.',
     'st.resetBtn': 'RESET ALL PROGRESS',
     'st.resetConfirm': 'Reset ALL progress? This cannot be undone.',
+
+    // Dictionary (Q4.2, screen 7)
+    'dict.title': 'DIZIONARIO',
+    'dict.lede': 'The exam vocabulary, by topic. Learn the Italian term — the exam has no translations.',
+    'dict.loading': 'Loading...',
+    'dict.backTheory': '← THEORY',
+    'dict.selfTestOn': 'SELF-TEST: ON',
+    'dict.selfTestOff': 'SELF-TEST: OFF',
+    'dict.terms': '{n} TERMS',
+    'dict.tapToReveal': 'Tap to reveal',
+    'dict.revealAria': 'Reveal translation of {term}',
   },
   ru: {
     'ob.title1': 'Добро пожаловать!',
@@ -503,6 +514,17 @@ export const MESSAGES = {
     'st.dangerLede': 'СБРОС УДАЛЯЕТ ВСЕ ОТВЕТЫ, ОШИБКИ, ЭКЗАМЕНЫ И СЕРИЮ. ОТМЕНА НЕВОЗМОЖНА.',
     'st.resetBtn': 'СБРОСИТЬ ВЕСЬ ПРОГРЕСС',
     'st.resetConfirm': 'Сбросить весь прогресс? Это необратимо.',
+
+    // Dictionary (Q4.2, screen 7)
+    'dict.title': 'СЛОВАРЬ',
+    'dict.lede': 'Словарь к экзамену, по темам. Учитесь итальянскому термину — на экзамене нет переводов.',
+    'dict.loading': 'Загрузка...',
+    'dict.backTheory': '← ТЕОРИЯ',
+    'dict.selfTestOn': 'САМОПРОВЕРКА: ВКЛ',
+    'dict.selfTestOff': 'САМОПРОВЕРКА: ВЫКЛ',
+    'dict.terms': '{n} ТЕРМИНОВ',
+    'dict.tapToReveal': 'Нажмите, чтобы увидеть',
+    'dict.revealAria': 'Показать перевод: {term}',
   },
   zh: {
     'ob.title1': '欢迎！',
@@ -752,6 +774,17 @@ export const MESSAGES = {
     'st.dangerLede': '重置将清除所有答案、错题、考试和连续天数。无法撤销。',
     'st.resetBtn': '重置全部进度',
     'st.resetConfirm': '重置全部进度吗？此操作无法撤销。',
+
+    // Dictionary (Q4.2, screen 7)
+    'dict.title': '词汇表',
+    'dict.lede': '考试词汇，按主题分类。学意大利语术语——考试没有翻译。',
+    'dict.loading': '加载中...',
+    'dict.backTheory': '← 理论',
+    'dict.selfTestOn': '自测：开',
+    'dict.selfTestOff': '自测：关',
+    'dict.terms': '{n} 个术语',
+    'dict.tapToReveal': '点按显示',
+    'dict.revealAria': '显示 {term} 的翻译',
   },
 };
 
