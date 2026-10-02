@@ -342,6 +342,66 @@ test('streak shield: old snapshots default to 0, import validates 0..1 (S3.7a)',
   }
 });
 
+test('streak best: longest streak is kept across resets and days (S3.9a)', async () => {
+  const { streakShieldState, migrateProgress } = await import('../public/js/domain/progress.js');
+  const localDay = (offset) => {
+    const d = new Date();
+    d.setDate(d.getDate() + offset);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  };
+
+  // 1. A gap-less day raises best to the new current.
+  assert.equal(
+    streakShieldState({ current: 4, lastDay: localDay(-1), shields: 0, best: 4 }, localDay(0), {}, 20).best, 5,
+    'continuing updates best',
+  );
+
+  // 2. A reset does not lower best.
+  const reset = streakShieldState(
+    { current: 5, lastDay: localDay(-2), shields: 0, best: 5 }, localDay(0), {}, 20,
+  );
+  assert.equal(reset.current, 1, 'reset back to 1');
+  assert.equal(reset.best, 5, 'best survives the reset');
+
+  // 3. The shield branch (current unchanged) must not lower best either.
+  assert.equal(
+    streakShieldState({ current: 5, lastDay: localDay(-2), shields: 1, best: 5 }, localDay(0), {}, 20).best, 5,
+    'a spared day keeps best',
+  );
+
+  // 4. End-to-end: two study days build a streak of 2, a reset keeps best = 2.
+  const { service, store } = makeService();
+  await service.recordAnswers({ answers: [{ id: 'd1', correct: true }] });
+  assert.equal(store.data.streak.best, 1, 'first day: best is 1');
+  store.data.streak.lastDay = localDay(-1);
+  store.data.streak.current = 1;
+  store.data.streak.best = 1;
+  delete store.data.dailyAnswers[localDay(0)];
+  await service.recordAnswers({ answers: [{ id: 'd2', correct: true }] });
+  assert.equal(store.data.streak.current, 2, 'second day: streak is 2');
+  assert.equal(store.data.streak.best, 2, 'best follows the streak');
+  store.data.streak.lastDay = localDay(-3);
+  delete store.data.dailyAnswers[localDay(0)];
+  await service.recordAnswers({ answers: [{ id: 'd3', correct: true }] });
+  assert.equal(store.data.streak.current, 1, 'gap: streak reset');
+  assert.equal(store.data.streak.best, 2, 'gap: best untouched');
+
+  // 5. The snapshot exposes the record for the «Рекорды» screen.
+  assert.equal(service.snapshot().stats.streakBest, 2, 'stats.streakBest mirrors streak.best');
+
+  // 6. Migration and import: a pre-S3.9a snapshot starts at 0; a saved
+  //    record is kept; junk best rejects the backup.
+  assert.equal(migrateProgress({ streak: { current: 6, lastDay: '2026-08-27' } }).streak.best, 0, 'pre-best file opens at 0');
+  assert.equal(migrateProgress({ streak: { current: 6, lastDay: '2026-08-27', best: 9 } }).streak.best, 9, 'a saved best is kept');
+  assert.equal((await service.importProgress({ streak: { current: 3, lastDay: '2026-09-30', best: 7 } })).streak.best, 7);
+  for (const junk of [-1, '7', 1.5]) {
+    await assert.rejects(
+      () => service.importProgress({ streak: { current: 3, lastDay: '2026-09-30', best: junk } }),
+      ValidationError, `best=${JSON.stringify(junk)}`,
+    );
+  }
+});
+
 test('daily answer counts drive the dashboard goal and stay capped', async () => {
   const { service, store } = makeService();
   await service.recordAnswers({ answers: [{ id: 'a', correct: true }, { id: 'b', correct: false }] });
