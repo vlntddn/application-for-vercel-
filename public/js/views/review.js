@@ -100,8 +100,8 @@ export async function renderMistakes(root) {
     el('div.panel', {},
       ...questions.slice(0, 50).map((q) =>
         el('div.row', {},
-          el('span', { style: 'flex:1' }, q.text_it),
-          el('span.tag.bad', {}, q.is_true ? 'VERO' : 'FALSO'),
+          el('span', { style: 'flex:1', translate: 'no', lang: 'it' }, q.text_it),
+          el('span.tag.bad', { translate: 'no', lang: 'it' }, q.is_true ? 'VERO' : 'FALSO'),
         ),
       ),
       questions.length > 50 ? el('p.empty-note', {}, t('ms.more', { n: questions.length - 50 })) : null,

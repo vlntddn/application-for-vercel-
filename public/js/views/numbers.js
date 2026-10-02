@@ -230,6 +230,8 @@ function drawDrill(root, numbers, questions) {
       return el('button', {
         type: 'button',
         className: `ds-answer ${value ? 'btn-true' : 'btn-false'}${stateStr ? ` ${stateStr}` : ''}`,
+        translate: 'no',
+        lang: 'it',
         'aria-pressed': answered ? picked : null,
         disabled: answered,
         onclick: answered ? undefined : () => answer(value),
@@ -261,7 +263,7 @@ function drawDrill(root, numbers, questions) {
           src: q.image_url, alt: t('nm.imgAlt'),
           onerror: (e) => e.target.remove(),
         }) : null,
-        el('p.question-text', {}, ...questionText(q)),
+        el('p.question-text', { translate: 'no', lang: 'it' }, ...questionText(q)),
         translationArea(translationOf(q), revealed, reveal),
         answerButtons(q),
         answered ? (feedbackPanel ??= buildFeedbackPanel(q)) : null,

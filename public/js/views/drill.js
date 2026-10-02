@@ -177,6 +177,8 @@ export async function renderSignalDrill(root) {
       return el('button', {
         type: 'button',
         className: `ds-answer ${value ? 'btn-true' : 'btn-false'}${stateStr ? ` ${stateStr}` : ''}`,
+        translate: 'no',
+        lang: 'it',
         'aria-pressed': answered ? picked : null,
         disabled: answered,
         onclick: answered ? undefined : () => answer(value),
@@ -211,7 +213,7 @@ export async function renderSignalDrill(root) {
           src: q.image_url, alt: t('pr.imgAlt'),
           onerror: (e) => e.target.remove(),
         }) : null,
-        el('p.question-text', {}, ...questionText(q)),
+        el('p.question-text', { translate: 'no', lang: 'it' }, ...questionText(q)),
         translationArea(translationOf(q), revealed, reveal),
         answerButtons(q),
         answered ? (feedbackPanel ??= buildFeedbackPanel(q)) : null,

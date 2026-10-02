@@ -84,9 +84,9 @@ export async function renderSearch(root) {
           question.image_url
             ? el('img.search-sign', { src: question.image_url, alt: '', loading: 'lazy' })
             : null,
-          el('span', { style: 'flex:1' }, question.text_it),
+          el('span', { style: 'flex:1', translate: 'no', lang: 'it' }, question.text_it),
           revealedAnswers.has(i)
-            ? el('span.tag', { className: `tag ${question.is_true ? 'ok' : 'bad'}` },
+            ? el('span.tag', { className: `tag ${question.is_true ? 'ok' : 'bad'}`, translate: 'no', lang: 'it' },
                 question.is_true ? 'VERO' : 'FALSO')
             : el('button.btn.btn-small', {
                 onclick: () => { revealedAnswers.add(i); drawResults(); },

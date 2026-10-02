@@ -140,7 +140,7 @@ function runExam(root, questions) {
             el('h2', {}, t('ex.wrongTitle')),
             ...wrongOnes.map(({ q, pick }) =>
               el('div.row.ex-wrong-row', {},
-                el('span.ex-wrong-text', {},
+                el('span.ex-wrong-text', { translate: 'no', lang: 'it' },
                   q.text_it,
                   el('span.ex-wrong-tags', {},
                     el('span.tag.bad', {}, t('ex.yourTag', { ans: pick ? 'VERO' : 'FALSO' })),
@@ -198,7 +198,7 @@ function runExam(root, questions) {
       ),
       el('div.panel.question-card', {},
         q.image_url ? el('img.question-img', { src: q.image_url, alt: t('ex.imgAlt'), onerror: (e) => e.target.remove() }) : null,
-        el('p.question-text', {}, q.text_it),
+        el('p.question-text', { translate: 'no', lang: 'it' }, q.text_it),
         translationArea(translationOf(q), revealed, () => { revealed = true; draw(); }),
         (() => {
           // Neutral at rest; after choosing: the picked button shows ok/bad +
@@ -219,6 +219,8 @@ function runExam(root, questions) {
             return el('button', {
               type: 'button',
               className: `ds-answer ${value ? 'btn-true' : 'btn-false'}${state ? ` ${state}` : ''}`,
+              translate: 'no',
+              lang: 'it',
               'aria-pressed': picked,
               onclick: () => choose(value),
             }, svgIcon(icon), label, word ? el('span.ds-answer__state', {}, word) : null);

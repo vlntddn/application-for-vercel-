@@ -144,12 +144,12 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
   let markSeq = 0;
 
   function signalText(q) {
-    if (!hintsOn) return el('p.question-text', {}, q.text_it);
+    if (!hintsOn) return el('p.question-text', { translate: 'no', lang: 'it' }, q.text_it);
     const p = (insightsPromise ??= loadInsights().then((ins) => ({
       words: (ins?.words || []).map((w) => w.word),
       byWord: new Map((ins?.words || []).map((w) => [w.word, w])),
     })).catch(() => ({ words: [], byWord: new Map() })));
-    const para = el('p.question-text', {}, q.text_it);
+    const para = el('p.question-text', { translate: 'no', lang: 'it' }, q.text_it);
     p.then(({ words, byWord }) => {
       if (!para.isConnected || para.children.length > 1) return; // re-rendered
       const segs = signalSpans(q.text_it, words);
@@ -289,7 +289,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
    */
   function termText(q) {
     if (hintsOn) return signalText(q);
-    const para = el('p.question-text', {}, q.text_it);
+    const para = el('p.question-text', { translate: 'no', lang: 'it' }, q.text_it);
     tapIndex().then((index) => {
       if (!index || markedTerm || !para.isConnected || para.childNodes.length !== 1
           || para.firstChild.nodeType !== Node.TEXT_NODE) return;
@@ -522,6 +522,8 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
       return el('button', {
         type: 'button',
         className: `ds-answer ${value ? 'btn-true' : 'btn-false'}${state ? ` ${state}` : ''}`,
+        translate: 'no',
+        lang: 'it',
         'aria-pressed': answered ? picked : null,
         disabled: answered,
         onclick: answered ? undefined : () => answer(value),
