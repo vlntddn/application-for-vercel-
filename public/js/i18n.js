@@ -289,6 +289,20 @@ export const MESSAGES = {
     'dict.terms': '{n} TERMS',
     'dict.tapToReveal': 'Tap to reveal',
     'dict.revealAria': 'Reveal translation of {term}',
+
+    // Search (Q4.2, screen 8)
+    'sr.title': 'SEARCH',
+    'sr.loading': 'Loading the question bank...',
+    'sr.placeholder': 'e.g. precedenza, tunnel, дистанция…',
+    'sr.hint': 'Type at least 3 characters. Search covers Italian and your language.',
+    'sr.noResults': 'Nothing found for «{q}»',
+    'sr.results': '{n} RESULTS',
+    'sr.practiceThese': 'PRACTICE THESE ({n})',
+    'sr.practiceTitle': 'SEARCH PRACTICE',
+    'sr.back': '← PRACTICE',
+    'sr.lede': 'All {n} questions. Find a wording, check the answer, practice the results.',
+    'sr.findLabel': 'FIND IN QUESTIONS',
+    'sr.answer': 'ANSWER',
   },
   ru: {
     'ob.title1': 'Добро пожаловать!',
@@ -573,6 +587,20 @@ export const MESSAGES = {
     'dict.terms': '{n} ТЕРМИНОВ',
     'dict.tapToReveal': 'Нажмите, чтобы увидеть',
     'dict.revealAria': 'Показать перевод: {term}',
+
+    // Search (Q4.2, screen 8)
+    'sr.title': 'ПОИСК',
+    'sr.loading': 'Загрузка банка вопросов...',
+    'sr.placeholder': 'напр. precedenza, tunnel, дистанция…',
+    'sr.hint': 'Введите минимум 3 символа. Поиск идёт по итальянскому и вашему языку.',
+    'sr.noResults': 'Ничего не найдено по запросу «{q}»',
+    'sr.results': '{n} РЕЗУЛЬТАТОВ',
+    'sr.practiceThese': 'ОТВЕЧАТЬ НА ЭТИ ({n})',
+    'sr.practiceTitle': 'ПРАКТИКА ПО ПОИСКУ',
+    'sr.back': '← ПРАКТИКА',
+    'sr.lede': 'Все {n} вопросов. Найдите формулировку, проверьте ответ, потренируйтесь на результатах.',
+    'sr.findLabel': 'НАЙТИ ВОПРОСЕ',
+    'sr.answer': 'ОТВЕТ',
   },
   zh: {
     'ob.title1': '欢迎！',
@@ -857,6 +885,20 @@ export const MESSAGES = {
     'dict.terms': '{n} 个术语',
     'dict.tapToReveal': '点按显示',
     'dict.revealAria': '显示 {term} 的翻译',
+
+    // Search (Q4.2, screen 8)
+    'sr.title': '搜索',
+    'sr.loading': '正在加载题库...',
+    'sr.placeholder': '例如 precedenza、tunnel、distancia…',
+    'sr.hint': '至少输入 3 个字符。搜索覆盖意大利语和您的语言。',
+    'sr.noResults': '未找到与「{q}」相关的内容',
+    'sr.results': '{n} 条结果',
+    'sr.practiceThese': '练习这些 ({n})',
+    'sr.practiceTitle': '搜索练习',
+    'sr.back': '← 练习',
+    'sr.lede': '全部 {n} 题。查找表述、查看答案、针对结果进行练习。',
+    'sr.findLabel': '在题目中查找',
+    'sr.answer': '答案',
   },
 };
 

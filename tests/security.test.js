@@ -671,4 +671,26 @@ test('VERO/FALSO answers follow the AnswerButton component: neutral at rest, ok/
   assert.match(exam, /'v'/);
 });
 
+test('the search screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2 slice 8 (screen 8): search copy lives in i18n.js under sr.* keys.
+  // VERO/FALSO answer labels are exam data, not UI copy, so they stay hardcoded.
+  const views = readViewsSource();
+  const search = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'search.js'), 'utf8');
+  assert.match(search, /t\('sr\.title'\)/, 'page title must come from i18n');
+  assert.match(search, /t\('sr\.placeholder'\)/, 'input placeholder must come from i18n');
+  assert.match(search, /t\('sr\.noResults'/, 'empty state must come from i18n');
+  assert.match(search, /t\('sr\.practiceThese'/, 'practice button must come from i18n');
+  assert.match(search, /t\('sr\.answer'\)/, 'reveal button must come from i18n');
+  // No hardcoded English UI strings left in the view.
+  assert.ok(!search.includes("'SEARCH'"), 'no hardcoded page title');
+  assert.ok(!search.includes("'Type at least 3 characters'"), 'no hardcoded hint');
+  assert.ok(!search.includes("Nothing found for"), 'no hardcoded empty state');
+  assert.ok(!search.includes('PRACTICE THESE'), 'no hardcoded practice button');
+  assert.ok(!search.includes("'ANSWER'"), 'no hardcoded reveal button');
+  // English copy exists in the dictionaries (the strings QA checks).
+  assert.match(views, /Type at least 3 characters/);
+  assert.match(views, /Nothing found for/);
+  assert.match(views, /PRACTICE THESE/);
+});
+
 
