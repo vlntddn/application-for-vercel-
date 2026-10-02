@@ -260,6 +260,82 @@ test('the streak survives a daylight-saving change', async () => {
   assert.equal(store.data.streak.current, 5, 'a session the next day continues the streak');
 });
 
+test('streak shield: goal earns a shield, one skipped day is forgiven (S3.7a)', async () => {
+  const { streakShieldState, goalReachedOn } = await import('../public/js/domain/progress.js');
+  const localDay = (offset) => {
+    const d = new Date();
+    d.setDate(d.getDate() + offset);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  };
+
+  // 1. Hitting the daily goal earns the shield.
+  assert.deepEqual(goalReachedOn({ '2026-01-15': 20 }, '2026-01-15', 20), true, 'exactly the goal counts');
+  assert.equal(goalReachedOn({ '2026-01-15': 19 }, '2026-01-15', 20), false, 'one short is no shield');
+  assert.equal(goalReachedOn({}, '2026-01-15', 20), false, 'no answers that day');
+
+  // 2. Skipped exactly one day with a shield: streak continues, shield spent.
+  const spared = streakShieldState(
+    { current: 5, lastDay: localDay(-2), shields: 1 }, localDay(0), { [localDay(-2)]: 20 }, 20,
+  );
+  assert.equal(spared.current, 5, 'streak survives the gap');
+  assert.equal(spared.shields, 0, 'the shield is spent');
+  assert.equal(spared.lastDay, localDay(0), 'lastDay moves to the return day');
+
+  // 3. Same gap without a shield: streak resets.
+  const reset = streakShieldState(
+    { current: 5, lastDay: localDay(-2), shields: 0 }, localDay(0), {}, 20,
+  );
+  assert.equal(reset.current, 1, 'no shield — the streak restarts');
+  assert.equal(reset.shields, 0);
+  assert.equal(reset.lastDay, localDay(0), 'a reset streak starts today');
+
+  // 4. A gap of two days: the shield does not reach that far.
+  const farGap = streakShieldState(
+    { current: 5, lastDay: localDay(-3), shields: 1 }, localDay(0), { [localDay(-3)]: 20 }, 20,
+  );
+  assert.equal(farGap.current, 1, 'two missed days beat the shield');
+  assert.equal(farGap.shields, 0, 'an unused shield is lost with the streak');
+  assert.equal(farGap.lastDay, localDay(0), 'the restarted streak starts today');
+
+  // 5. A normal (gap-less) day increments the streak and clears any old shield.
+  const normal = streakShieldState(
+    { current: 4, lastDay: localDay(-1), shields: 1 }, localDay(0), { [localDay(0)]: 20 }, 20,
+  );
+  assert.equal(normal.current, 5, 'a gap-less day just continues');
+  assert.equal(normal.shields, 1, 'today\'s goal earned a fresh shield');
+  assert.equal(streakShieldState({ current: 4, lastDay: localDay(-1), shields: 1 }, localDay(0), {}, 20).shields, 1, 'no goal — the unspent shield is kept');
+
+  // 6. Reaching the goal on the activity day earns a shield even though the
+  //    streak itself keeps counting; a day off is then forgiven end-to-end.
+  const { service, store } = makeService();
+  for (let i = 0; i < 20; i++) {
+    await service.recordAnswers({ answers: [{ id: `g-${i}`, correct: i % 2 === 0 }] });
+  }
+  assert.equal(store.data.streak.shields, 1, 'today\'s goal is met');
+  store.data.streak.lastDay = localDay(-2);
+  store.data.streak.current = 5;
+  delete store.data.dailyAnswers[localDay(0)];
+  await service.recordAnswers({ answers: [{ id: 'back', correct: true }] });
+  assert.equal(store.data.streak.current, 5, 'e2e: the skipped day cost nothing');
+  assert.equal(store.data.streak.shields, 0);
+  assert.equal(store.data.streak.lastDay, localDay(0), 'e2e: lastDay is the return day');
+});
+
+test('streak shield: old snapshots default to 0, import validates 0..1 (S3.7a)', async () => {
+  const { migrateProgress } = await import('../public/js/domain/progress.js');
+  assert.equal(migrateProgress({ streak: { current: 6, lastDay: '2026-08-27' } }).streak.shields, 0, 'a pre-shield file opens with no shield');
+  assert.equal(migrateProgress({ streak: { current: 6, lastDay: '2026-08-27', shields: 1 } }).streak.shields, 1, 'a saved shield is kept');
+
+  const { service } = makeService();
+  assert.equal((await service.importProgress({ streak: { current: 3, lastDay: '2026-09-30', shields: 1 } })).streak.shields, 1);
+  for (const junk of [2, -1, '1', 0.5]) {
+    await assert.rejects(
+      () => service.importProgress({ streak: { current: 3, lastDay: '2026-09-30', shields: junk } }),
+      ValidationError, `shields=${JSON.stringify(junk)}`,
+    );
+  }
+});
+
 test('daily answer counts drive the dashboard goal and stay capped', async () => {
   const { service, store } = makeService();
   await service.recordAnswers({ answers: [{ id: 'a', correct: true }, { id: 'b', correct: false }] });

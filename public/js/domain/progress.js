@@ -41,7 +41,7 @@ export const EMPTY_PROGRESS = {
   dailyAnswers: {}, // YYYY-MM-DD -> answers given that day (last 90)
   theoryRead: [], // chapter ids
   chapters: {}, // chapterId -> { check: N } (best self-check score, L5b)
-  streak: { current: 0, lastDay: '' },
+  streak: { current: 0, lastDay: '', shields: 0 },
 };
 
 /**
@@ -149,6 +149,36 @@ export function shouldRemind(progress, now = Date.now()) {
   if (answeredToday >= goal) return false;
   const last = latestActivity(progress.answers);
   return last === '' || now - Date.parse(last) >= REMIND_AFTER_MS;
+}
+
+/** S3.7a — did the learner hit the daily goal on a given day? */
+export function goalReachedOn(dailyAnswers, day, goal) {
+  const g = Number(goal) || DAILY_GOAL_DEFAULT;
+  return (Number(dailyAnswers && dailyAnswers[day]) || 0) >= g;
+}
+
+/**
+ * S3.7a — streak update with the one-day shield. Pure: returns the new
+ * `{ current, lastDay, shields }` for the first activity on `day`.
+ *
+ * The shield is earned when a day's answers reach the goal, lives as long
+ * as the streak itself (an unspent one dies only when the streak resets),
+ * and is spent to bridge exactly one missed day. A gap of two days resets
+ * the streak to 1 either way.
+ */
+export function streakShieldState(streak, day, dailyAnswers, goal) {
+  const earned = goalReachedOn(dailyAnswers, day, goal) ? 1 : 0;
+  if (streak.lastDay === day) {
+    return { ...streak, shields: earned || streak.shields };
+  }
+  if (streak.lastDay === dayBefore(day)) {
+    return { ...streak, current: streak.current + 1, lastDay: day, shields: earned || streak.shields };
+  }
+  // Exactly one skipped day: the shield forgives it.
+  if (streak.lastDay && streak.lastDay === dayBefore(dayBefore(day)) && streak.shields === 1) {
+    return { ...streak, lastDay: day, shields: 0 };
+  }
+  return { current: 1, lastDay: day, shields: earned };
 }
 
 /**
@@ -307,9 +337,12 @@ export function migrateProgress(raw) {
 
   if (isPlainObject(raw.streak)) {
     const current = Math.trunc(Number(raw.streak.current));
+    // A pre-S3.7a snapshot simply has no shield; only an explicit 0/1 survives.
+    const shields = Number(raw.streak.shields);
     out.streak = {
       current: Number.isFinite(current) && current > 0 ? current : 0,
       lastDay: typeof raw.streak.lastDay === 'string' ? raw.streak.lastDay.slice(0, 10) : '',
+      shields: shields === 1 ? 1 : 0,
     };
   }
 
@@ -380,9 +413,12 @@ export class ProgressService {
       }
     }
 
-    if (d.streak.lastDay === day) return;
-    d.streak.current = d.streak.lastDay === dayBefore(day) ? d.streak.current + 1 : 1;
-    d.streak.lastDay = day;
+    if (d.streak.lastDay === day) {
+      // The day is already counted, but the goal can still be reached later.
+      d.streak.shields = goalReachedOn(d.dailyAnswers, day, d.profile.dailyGoal) ? 1 : d.streak.shields;
+      return;
+    }
+    d.streak = streakShieldState(d.streak, day, d.dailyAnswers, d.profile.dailyGoal);
   }
 
   /** Per-day answer counts drive the dashboard's daily-goal ring. */
@@ -698,9 +734,16 @@ export class ProgressService {
       if (!Number.isInteger(current) || current < 0) {
         throw new ValidationError('"streak.current" must be a non-negative integer');
       }
+      // S3.7a: the shield is an integer 0..1; junk (strings, floats, 2)
+      // rejects the whole backup, like every other validated field.
+      const rawShields = body.streak.shields;
+      if (rawShields !== undefined && (typeof rawShields !== 'number' || !Number.isInteger(rawShields) || rawShields < 0 || rawShields > 1)) {
+        throw new ValidationError('"streak.shields" must be an integer between 0 and 1');
+      }
       clean.streak = {
         current,
         lastDay: typeof body.streak.lastDay === 'string' ? body.streak.lastDay.slice(0, 10) : '',
+        shields: rawShields === 1 ? 1 : 0,
       };
     }
 
