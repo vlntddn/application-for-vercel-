@@ -601,12 +601,15 @@ _Точка обзора B (не блокирует): после L7 — те ж�
 - [x] **T3 Виджеты главной отдельно от экрана статистики.** `dashboard.js`
       импортирует `weekStrip`/`dayKey` из `stats.js` (экран зависит от экрана).
       Вынести в `views/widgets.js` (+ SHELL), оба экрана импортируют оттуда.
-- [ ] **T4 QA-сценарии в CI.** В `.github/workflows/ci.yml` job `e2e` (ubuntu,
+- [x] **T4 QA-сценарии в CI.** В `.github/workflows/ci.yml` job `e2e` (ubuntu,
       Node 22; Chrome на раннере: `google-chrome`): `node qa-new-user.mjs` и
       `node scripts/qa-ux.mjs`. В обоих скриптах путь к Chrome —
       `process.env.CHROME_PATH || '/Applications/Google Chrome.app/…'`, в CI
       `CHROME_PATH=$(which google-chrome)`. qa-ux в CI падает при любом FAIL
-      (флаг `--strict`), локально — как сейчас.
+      (флаг `--strict`), локально — как сейчас. Сделано 2026-10-02: e2e-джоб
+      (headless Chrome, Node 22), `--strict` в qa-ux, CHROME_PATH в обоих
+      скриптах. e2e-джоб сейчас красный — 3 pre-existing qa-ux FAIL (1× p7
+      @1280, 2× p8 @375), целевой 0-FAIL — S2.14.
 - [ ] **T5 Старые классы.** После S2.14: старые `.btn`, `.tag`, `.card`,
       `.panel` — где есть `ds-*` аналог и старый не используется — удалить из
       styles.css (qa-ux и скриншоты — без изменений).

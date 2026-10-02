@@ -1,3 +1,25 @@
+## 2026-10-02 — T4 закрыта: QA-сценарии в CI (e2e-джоб, qa-ux --strict, CHROME_PATH)
+
+**Что.** `.github/workflows/ci.yml`: новый job `e2e` (ubuntu-latest, Node 22,
+Chrome на раннере) — сначала `node qa-new-user.mjs`, потом
+`node scripts/qa-ux.mjs --strict`; оба со `CHROME_PATH=$(which google-chrome)`.
+`qa-new-user.mjs` и `scripts/qa-ux.mjs`: путь к Chrome теперь
+`process.env.CHROME_PATH || '<mac default>'` (был хардкод mac).
+`scripts/qa-ux.mjs`: флаг `--strict` (`process.argv.includes`) — при любом FAIL
+код выхода 1; локально (без флага) baseline-FAIL дают 0, как раньше.
+
+**Проверка.** `--strict` с текущей базовой линией → EXIT=1 (221 PASS, 3 FAIL);
+без флага → EXIT=0. `scripts/verify.sh` → VERIFY OK (npm test 222 passed;
+smoke :3917; qa-new-user 73 PASS). YAML валиден (jobs: test, smoke, e2e).
+
+**Замечание.** e2e-джоб в CI сейчас красный — 3 pre-existing qa-ux FAIL
+(1× p7 @1280: next-steps у новичка ниже 812px — install-reminder панель
+S2.8a4 на десктопе; 2× p8 @375: button.ds-answer@64px в drill/signals и review).
+Это ожидаемо: `--strict` превращает любой FAIL в падение CI, а целевой 0-FAIL
+на обоих вьюпортах закрывает S2.14 (🔒). Локально qa-ux остаётся advisory.
+
+---
+
 ## 2026-10-02 — T3 закрыта: weekStrip/dayKey вынесены в views/widgets.js
 
 **Что.** Чистый перенос кода (T3): `dayKey` и `weekStrip` переехали из
