@@ -170,10 +170,10 @@ function runExam(root, questions) {
             if (picked) {
               const right = value === q.is_true;
               state = right ? 'ds-answer--ok' : 'ds-answer--bad';
-              word = right ? 'Correct' : 'Wrong';
+              word = right ? t('pr.correct') : t('pr.wrong');
             } else if (chosen[index] !== null && !chosen[index] && value === q.is_true) {
               state = 'ds-answer--reveal';
-              word = 'Right answer';
+              word = t('pr.rightAnswerTag');
             }
             return el('button', {
               type: 'button',
@@ -185,7 +185,7 @@ function runExam(root, questions) {
           return el('div.ds-answers', {}, btn(true, 'check', 'VERO'), btn(false, 'cross', 'FALSO'));
         })(),
         el('p.kbd-hint', {},
-          el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ',
+          el('kbd', {}, 'V'), ' ' + t('ex.kbdTrue') + ' · ', el('kbd', {}, 'F'), ' ' + t('ex.kbdFalse') + ' · ',
           el('kbd', {}, '←'), el('kbd', {}, '→'), ' ' + t('ex.kbdNavigate') + ' · ', el('kbd', {}, 'T'), ' ' + t('ex.kbdTranslate')),
         el('div.exam-nav', {},
           ...questions.map((_, i) =>

@@ -693,6 +693,25 @@ test('the search screen is localized: no hardcoded UI copy (Q4.2)', () => {
   assert.match(views, /PRACTICE THESE/);
 });
 
+test('the exam screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2 slice 10 (screen 3): exam copy lives in i18n.js under ex.*/pr.* keys.
+  // VERO/FALSO button labels and PROMOSSO/BOCCIATO verdicts are exam data /
+  // Italian exam wording (double verdicts already in the dictionaries).
+  const exam = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'exam.js'), 'utf8');
+  assert.match(exam, /t\('ex\.title'\)/, 'page title must come from i18n');
+  assert.match(exam, /t\('ex\.submit'\)/, 'submit button must come from i18n');
+  assert.match(exam, /t\('ex\.kbdTrue'\)/, 'kbd hint VERO must come from i18n');
+  assert.match(exam, /t\('ex\.kbdFalse'\)/, 'kbd hint FALSO must come from i18n');
+  assert.match(exam, /t\('pr\.correct'\)/, 'answer state word must come from i18n');
+  assert.match(exam, /t\('pr\.wrong'\)/, 'answer state word must come from i18n');
+  assert.match(exam, /t\('pr\.rightAnswerTag'\)/, 'reveal tag must come from i18n');
+  // No hardcoded English UI strings left in the view.
+  assert.ok(!exam.includes("'Correct'"), 'no hardcoded ok word');
+  assert.ok(!exam.includes("'Wrong'"), 'no hardcoded bad word');
+  assert.ok(!exam.includes("'Right answer'"), 'no hardcoded reveal tag');
+  assert.ok(!exam.includes("' VERO · '"), 'no hardcoded kbd hint');
+});
+
 test('the practice/feedback screen is localized: no hardcoded UI copy (Q4.2)', () => {
   // Q4.2 slice 9 (screen 2): practice + post-answer feedback copy lives in
   // i18n.js under pr.* keys. VERO/FALSO answer labels and kbd letters are
