@@ -1,3 +1,28 @@
+## 2026-10-02 — Q7: Мелочи онбординга и ошибок
+
+Ветка self-improve. Четыре визуальные мелочи из пункта Q7.
+
+**Что.**
+1. Онбординг слайд 1: `.onboard .lede { margin-bottom: 12px }` и
+   `.onboard .stat-sub { margin-bottom: 20px }` — был слипшийся блок
+   (lede→label, поле→кнопка без воздуха).
+2. `CONTINUE →` переносился по 375px: `.onboard .btn { white-space: nowrap }`.
+3. Lede ошибок (#/mistakes) капсом → обычный регистр (en + ru): i18n.js,
+   ключи `ms.lede` — «{n} questions you last answered wrong — answer
+   correctly to clear them.». zh (line 1115) и so (1177) и так без капса — не трогал.
+4. Два primary-кнопки на #/mistakes → одна: «GO PRACTICE» остаётся
+   `.btn-primary`, «PRACTICE THIS SIGN (n)» в `review.js` — `a.btn`
+   (secondary). Панель причины уже `margin-bottom:24px`.
+
+**Почему.** Указано в Q7: «по пути» — четыре правки, не раздувать.
+
+**Как проверено.** verify OK (216 тестов, smoke, qa-new-user 73 PASS).
+qa-ux: 221 PASS / 3 FAIL — ровно те же 3 FAIL, что и до правок
+(stash-сравнение: p1/p2/p3 baseline-сводка, p7, p8) — регрессии нет.
+sw.js v98→v99.
+
+---
+
 ## 2026-10-02 — Q6: Экран результата экзамена — 3 бага
 
 Ветка self-improve. Экран результата экзамена (#/exam после submit) имел
