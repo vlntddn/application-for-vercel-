@@ -954,6 +954,7 @@ kbd {
 
 .modal {
   background: var(--surface);
+  overscroll-behavior: contain;
   border: var(--border);
   box-shadow: var(--shadow);
   max-width: 560px;
@@ -1162,7 +1163,7 @@ kbd {
   letter-spacing: 0.05em;
   color: var(--accent-ink, #8a6100);
 }
-details.word-true { margin-top: 6px; }
+details.word-true { margin-top: 6px; overscroll-behavior: contain; }
 details.word-true summary {
   list-style: none;
   cursor: pointer;
@@ -1274,6 +1275,11 @@ mark.ds-signal {
 
 @media (prefers-reduced-motion: reduce) {
   .ds-feedback { animation: none; }
+}
+
+/* U3: убирает ~300 мс задержку двойного тапа на iOS */
+a, button, [role="button"], .ds-answer, input, select {
+  touch-action: manipulation;
 }
 
 /* ---------- Accessibility ---------- */
