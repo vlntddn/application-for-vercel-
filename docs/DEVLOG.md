@@ -1,3 +1,31 @@
+## 2026-10-02 — S3.4 закрыта: вибрация на ответ (navigator.vibrate)
+
+**Что.** Тактильный отклик на ответ, сдвоенный со звуковым блипом в
+`public/js/sound.js`: верный ответ → `vibrate([30])` (короткий тик),
+неверный → `vibrate([60, 40, 60])` (двойной «бац-пауза-бац»). Вибрация
+срабатывает только если `profile.sound` включено (тот же тумблер, что и
+звук) и устройство поддерживает `navigator.vibrate`; в противном случае —
+тихий no-op без ошибок (на платформах, где `vibrate` может бросить по
+ошибочному паттерну, вызов обёрнут в try/catch).
+
+**Файлы:**
+- `public/js/sound.js` — новый helper `vibrate(pattern)` (проверка
+  `enabled()` → `'vibrate' in navigator` → try/catch); вызывается из
+  `playCorrect()` (после блипа) и `playWrong()`. Плюс защита
+  `audioContext()` от `ReferenceError` вне браузера: `typeof window ===
+  'undefined'` → null (раньше модуль падал в Node-тесте, и тест на
+  «не бросает без vibrate» был невозможен).
+- `public/sw.js` — `VERSION` v108 → v109 (кэш shell обновлён).
+- `tests/sound.test.js` (новый) — 4 теста: без `navigator.vibrate`
+  `playCorrect`/`playWrong` не бросают; верный паттерн `[30]`; неверный
+  `[60, 40, 60]`; при `profile.sound=false` вибрации нет (spy на
+  `navigator.vibrate` через `Object.defineProperty`, Node 22 позволяет).
+
+**Проверка.** `scripts/verify.sh` → VERIFY OK (npm test 228 passed —
++4 от sound.test.js; qa-new-user 73 PASS, 0 FAIL). Вибрация в headless
+Chrome без актуатора проверить нечем, поэтому закреплена паттернами в
+тесте (требование задачи).
+
 ## 2026-10-02 — S3.3 закрыта: тема `auto` (prefers-color-scheme)
 
 **Что.** Новая опция темы `auto` — система берёт OS-схему (`prefers-color-scheme`)
