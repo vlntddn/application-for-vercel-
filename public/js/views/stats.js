@@ -163,7 +163,10 @@ export function renderStats(root) {
   clear(root,
     el('div.quiz-head', {},
       el('h1', { style: 'margin:0' }, t('ss.title')),
-      el('a.btn', { href: '#/' }, t('ss.backDashboard')),
+      el('span', { style: 'display:flex;gap:8px' },
+        el('a.btn', { href: '#/' }, t('ss.backDashboard')),
+        el('a.btn.btn-ghost', { href: '#/records' }, t('ss.records')),
+      ),
     ),
     el('p.lede', {}, t('ss.lede')),
 

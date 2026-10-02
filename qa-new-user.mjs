@@ -505,6 +505,19 @@ async function main() {
     check(errs.length === 0 && len > 40, `экран ${r} открывается без JS-ошибок${errs.length ? ': ' + errs.join('; ') : ''}`);
   }
   check(jsErrors.length === 0, `за весь прогон ни одной JS-ошибки${jsErrors.length ? ': ' + jsErrors.join('; ') : ''}`);
+
+  /* ---- 9b. Экран «Рекорды» (S3.9b): ссылка из статистики, 4 карточки ---- */
+  await evaluate(`location.hash = '#/stats'`);
+  await sleep(900);
+  const recordsLink = await evaluate(`Array.from(document.querySelectorAll('#view a[href="#/records"]')).length`);
+  check(recordsLink === 1, '(9b) Рекорды: на экране статистики ровно одна ссылка #/records');
+  await evaluate(`location.hash = '#/records'`);
+  await waitFor(`(document.getElementById('view')?.innerText||'').length > 40`, 'records screen rendered', 5000);
+  const recordsCards = await evaluate(`document.querySelectorAll('#view .ds-stat').length`);
+  const recordsText = await evaluate(`document.getElementById('view').innerText`);
+  check(recordsCards === 4, `(9b) Рекорды: 4 карточки (по факту ${recordsCards})`);
+  check(/RECORDS|РЕКОРДЫ|最佳记录/.test(recordsText), '(9b) Рекорды: заголовок экрана виден');
+  await shot('14-records.png');
   // Q2: 404-шторм. Раньше при каждой загрузке клиент просил 25
   // /data/translations/<slug>.json (и аналогично explanations), хотя файлов
   // всего 3 → ~22 404 на старте. Теперь index.json фильтрует запросы, и 404

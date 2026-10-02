@@ -1524,6 +1524,8 @@ main:focus { outline: none; }
 
 /* Stat: label, one big number, one sub line. Friendly zeros, no third line. */
 .ds-stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+/* The records screen shows 4 cards — 2×2 on desktop (S3.9b). */
+.ds-stat-row--records { grid-template-columns: repeat(2, 1fr); }
 .ds-stat {
   display: grid;
   gap: 4px;

@@ -8,6 +8,7 @@ import {
   renderTheoryList,
   renderTheoryChapter,
   renderStats,
+  renderRecords,
   renderQuickReview,
   renderSearch,
   renderExamItalian,
@@ -28,6 +29,7 @@ const nav = document.getElementById('nav');
 const routes = [
   { pattern: /^#?\/?$/, name: 'dashboard', render: () => renderDashboard(view) },
   { pattern: /^#\/stats$/, name: 'dashboard', render: () => renderStats(view) },
+  { pattern: /^#\/records$/, name: 'records', render: () => renderRecords(view) },
   { pattern: /^#\/path$/, name: 'dashboard', render: () => renderPath(view) },
   { pattern: /^#\/theory$/, name: 'theory', render: () => renderTheoryList(view) },
   { pattern: /^#\/theory\/([\w-]+)\/check$/, name: 'theory', render: (m) => renderTheoryChapter(view, m[1], { check: true }) },

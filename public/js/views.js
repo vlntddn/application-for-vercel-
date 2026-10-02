@@ -40,3 +40,5 @@ export { renderDictionary } from './views/dictionary.js';
 
 /* Stats screen lives in views/stats.js (Sprint 1, S1.6). */
 export { renderStats } from './views/stats.js';
+/* Records screen lives in views/records.js (S3.9b). */
+export { renderRecords } from './views/records.js';
