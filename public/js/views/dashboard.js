@@ -10,7 +10,7 @@ import {
   writeBackupDismissed, exportProgressSnapshot,
   shouldSuggestInstallReminder, readInstallDismissed, writeInstallDismissed,
 } from './common.js';
-import { dayKey, weekStrip } from './stats.js';
+import { dayKey, weekStrip } from './widgets.js';
 import { examReadiness, learningPath, nextStepAction } from '../domain/learning.js';
 import { t } from '../i18n.js';
 

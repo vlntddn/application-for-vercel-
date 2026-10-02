@@ -1,47 +1,13 @@
-// Statistics screen: the ACTIVITY heatmap (shared date helpers live here)
-// and the PROGRESS & STATS view. Extracted from views.js (Sprint 1, S1.6) —
-// pure code move, no behavior change.
+// Statistics screen: the ACTIVITY heatmap and the PROGRESS & STATS view.
+// Extracted from views.js (Sprint 1, S1.6) — pure code move, no behavior change.
 import { state } from '../state.js';
 import { el, clear } from '../ui.js';
 import { t } from '../i18n.js';
 import { topicLabel } from '../topics.js';
 import { categoryStats } from './common.js';
+import { dayKey } from './widgets.js';
 
 const EXAM_MAX_ERRORS = 3;
-
-/* ============================== DASHBOARD ============================== */
-
-/** Local calendar date as YYYY-MM-DD — matches how the domain stores days. */
-export function dayKey(date) {
-  const y = date.getFullYear();
-  const m = String(date.getMonth() + 1).padStart(2, '0');
-  const d = String(date.getDate()).padStart(2, '0');
-  return `${y}-${m}-${d}`;
-}
-
-/**
- * The last seven days, oldest first, marked with whether the user studied.
- * Week starts on Monday, as it does in Italy.
- */
-export function weekStrip(activeDays = []) {
-  const done = new Set(activeDays);
-  const initials = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
-  const todayKey = dayKey(new Date());
-  const cells = [];
-  for (let back = 6; back >= 0; back--) {
-    const date = new Date();
-    date.setDate(date.getDate() - back);
-    const key = dayKey(date);
-    // getDay(): 0 = Sunday, so shift to a Monday-first index.
-    cells.push({
-      key,
-      label: initials[(date.getDay() + 6) % 7],
-      studied: done.has(key),
-      isToday: key === todayKey,
-    });
-  }
-  return cells;
-}
 
 /** The activity heatmap: answers per day over the last 90 days, weeks as columns. */
 const HEAT_DAYS = 90; // must match the domain's ACTIVE_DAYS_KEPT cap
