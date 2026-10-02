@@ -840,3 +840,22 @@ test('the theory chapter screen is localized: no hardcoded UI copy (Q4.2)', () =
   assert.match(views, /'MARK AS READ'/);
   assert.match(views, /'WHAT THIS SIGN MEANS'/);
 });
+
+test('the stats screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2 slice 15: stats copy lives in i18n.js under ss.* keys.
+  const source = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'stats.js'), 'utf8');
+  assert.match(source, /t\('ss\.title'\)/, 'title must come from i18n');
+  assert.match(source, /t\('ss\.activityTitle'\)/, 'activity heading must come from i18n');
+  assert.match(source, /t\('ss\.masteredOf'/, 'mastered sub must come from i18n');
+  assert.match(source, /t\('ss\.examsPassed'/, 'exam sub must come from i18n');
+  assert.match(source, /t\('ss\.weakTitle'\)/, 'weak heading must come from i18n');
+  assert.match(source, /t\('ss\.trendLede'/, 'trend lede must come from i18n');
+  // No hardcoded English UI strings left in the stats view.
+  assert.ok(!source.includes("'PROGRESS & STATS'"), 'no hardcoded title');
+  assert.ok(!source.includes("'ACTIVITY — LAST 90 DAYS'"), 'no hardcoded activity heading');
+  assert.ok(!source.includes("'WEAK SPOTS'"), 'no hardcoded weak heading');
+  assert.ok(!source.includes("'MOCK-EXAM TREND'"), 'no hardcoded trend heading');
+  assert.ok(!source.includes("'ALL TOPICS'"), 'no hardcoded topics heading');
+  assert.ok(!source.includes("'NOT TRIED'"), 'no hardcoded not-tried tag');
+  assert.ok(!source.includes("'PRACTICE'"), 'no hardcoded practice button');
+});

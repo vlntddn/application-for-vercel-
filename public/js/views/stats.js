@@ -3,6 +3,7 @@
 // pure code move, no behavior change.
 import { state } from '../state.js';
 import { el, clear } from '../ui.js';
+import { t } from '../i18n.js';
 import { topicLabel } from '../topics.js';
 import { categoryStats } from './common.js';
 
@@ -46,7 +47,6 @@ export function weekStrip(activeDays = []) {
 const HEAT_DAYS = 90; // must match the domain's ACTIVE_DAYS_KEPT cap
 // Answer counts that reach each step: 1–19, 20–39, 40–79, 80+.
 const HEAT_BANDS = [19, 39, 79];
-const HEAT_MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
 function heatLevel(count) {
   if (!count) return 0;
@@ -76,8 +76,8 @@ function activityHeatmap() {
 
   if (!active) {
     return el('div.panel', {},
-      el('h2', {}, 'ACTIVITY — LAST 90 DAYS'),
-      el('p.empty-note', {}, 'Answer some questions and your daily activity will show up here.'),
+      el('h2', {}, t('ss.activityTitle')),
+      el('p.empty-note', {}, t('ss.activityEmpty')),
     );
   }
 
@@ -112,7 +112,7 @@ function activityHeatmap() {
     const d = new Date(col.week);
     d.setDate(d.getDate() + idx);
     if (d.getMonth() === lastMonth) return;
-    wanted.push({ i, label: HEAT_MONTHS[d.getMonth()] });
+    wanted.push({ i, label: t('ss.months').split(',')[d.getMonth()] });
     lastMonth = d.getMonth();
   });
   const labels = new Array(columns.length).fill('');
@@ -124,7 +124,7 @@ function activityHeatmap() {
 
   const grid = el('div.heat-grid', {
     role: 'img',
-    'aria-label': `Daily activity over the last ${HEAT_DAYS} days: ${active} active days, ${total} questions answered, best day ${best.count} on ${best.key}`,
+    'aria-label': t('ss.heatAria', { active, total, best: best.count, key: best.key }),
   },
     ...columns.map((col) =>
       el('div.heat-col', {},
@@ -133,7 +133,9 @@ function activityHeatmap() {
             ? el('div.heat-cell', { className: 'heat-cell empty' })
             : el('div.heat-cell', {
                 className: `heat-cell l${cell.level}`,
-                title: cell.count ? `${cell.count} QUESTIONS · ${cell.key}` : `NONE · ${cell.key}`,
+                title: cell.count
+                  ? t('ss.heatCell', { n: cell.count, key: cell.key })
+                  : t('ss.heatCellNone', { key: cell.key }),
               }),
         ),
       ),
@@ -141,17 +143,17 @@ function activityHeatmap() {
   );
 
   return el('div.panel', {},
-    el('h2', {}, 'ACTIVITY — LAST 90 DAYS'),
+    el('h2', {}, t('ss.activityTitle')),
     el('p.stat-sub', { style: 'margin-bottom:12px' },
-      `${active} active days · ${total} questions answered · best day ${best.count} (${best.key})`),
+      t('ss.activitySummary', { active, total, best: best.count, key: best.key })),
     el('div.heat-months', { 'aria-hidden': 'true' },
       ...columns.map((col) => el('span.heat-month', {}, col.label)),
     ),
     grid,
     el('div.heat-legend', { 'aria-hidden': 'true' },
-      'LESS',
+      t('ss.legendLess'),
       ...[0, 1, 2, 3, 4].map((l) => el('div.heat-cell', { className: `heat-cell l${l}` })),
-      'MORE',
+      t('ss.legendMore'),
     ),
   );
 }
@@ -187,34 +189,36 @@ export function renderStats(root) {
   const maxErrors = Math.max(EXAM_MAX_ERRORS + 1, ...recentExams.map((e) => e.errors), 1);
 
   function accTag(acc) {
-    if (acc === null) return el('span.tag', {}, 'NOT TRIED');
+    if (acc === null) return el('span.tag', {}, t('ss.notTried'));
     const cls = acc >= 90 ? 'ok' : acc >= 70 ? 'warn' : 'bad';
     return el('span.tag', { className: `tag ${cls}` }, `${acc}%`);
   }
 
   clear(root,
     el('div.quiz-head', {},
-      el('h1', { style: 'margin:0' }, 'PROGRESS & STATS'),
-      el('a.btn', { href: '#/' }, '← DASHBOARD'),
+      el('h1', { style: 'margin:0' }, t('ss.title')),
+      el('a.btn', { href: '#/' }, t('ss.backDashboard')),
     ),
-    el('p.lede', {}, 'Find your weakest topic and practice it until the tag reads green.'),
+    el('p.lede', {}, t('ss.lede')),
 
     el('div.grid.grid-3', {},
       el('div.card', {},
-        el('h2', {}, 'MASTERED'),
+        el('h2', {}, t('ss.mastered')),
         el('p.stat-value.ok', {}, `${Math.round((stats.mastered / total) * 100)}%`),
-        el('p.stat-sub', {}, `${stats.mastered} of ${total} questions`),
+        el('p.stat-sub', {}, t('ss.masteredOf', { n: stats.mastered, total })),
         el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${Math.round((stats.mastered / total) * 100)}%` })),
       ),
       el('div.card', {},
-        el('h2', {}, 'OVERALL ACCURACY'),
+        el('h2', {}, t('ss.overallAccuracy')),
         el('p.stat-value', {}, overallAccuracy === null ? '—' : `${overallAccuracy}%`),
-        el('p.stat-sub', {}, `${attempted} questions tried (${coveragePct}% coverage)`),
+        el('p.stat-sub', {}, t('ss.tried', { n: attempted, pct: coveragePct })),
       ),
       el('div.card', {},
-        el('h2', {}, 'EXAM SUCCESS'),
+        el('h2', {}, t('ss.examSuccess')),
         el('p.stat-value.accent', {}, `${stats.examSuccess}%`),
-        el('p.stat-sub', {}, `${stats.examsPassed}/${stats.examsTaken} passed · streak ${stats.streak}`),
+        el('p.stat-sub', {}, t('ss.examsPassed', {
+          passed: stats.examsPassed, taken: stats.examsTaken, streak: stats.streak,
+        })),
       ),
     ),
 
@@ -222,32 +226,34 @@ export function renderStats(root) {
 
     weak.length
       ? el('div.panel', {},
-          el('h2', {}, 'WEAK SPOTS — STUDY THESE FIRST'),
+          el('h2', {}, t('ss.weakTitle')),
           ...weak.map((c) =>
             el('div.row', {},
               el('div', { style: 'flex:1' },
                 el('strong', {}, topicLabel(c)),
-                el('p.stat-sub', {}, `Mastered ${c.masteredPct}% · ${c.attempted}/${c.count} tried`),
+                el('p.stat-sub', {}, t('ss.masteredPct', {
+                  pct: c.masteredPct, tried: c.attempted, count: c.count,
+                })),
               ),
               accTag(c.accuracy),
-              el('a.btn.btn-small', { href: `#/practice/${c.slug}` }, 'PRACTICE'),
+              el('a.btn.btn-small', { href: `#/practice/${c.slug}` }, t('ss.practice')),
             ),
           ),
         )
       : el('div.panel', {},
-          el('h2', {}, 'WEAK SPOTS'),
-          el('p.empty-note', {}, 'Answer some questions and your weak topics will show up here.'),
-          el('div.actions', {}, el('a.btn.btn-primary', { href: '#/practice' }, 'START PRACTICE')),
+          el('h2', {}, t('ss.weakTitleEmpty')),
+          el('p.empty-note', {}, t('ss.weakEmpty')),
+          el('div.actions', {}, el('a.btn.btn-primary', { href: '#/practice' }, t('ss.startPractice'))),
         ),
 
     recentExams.length
       ? el('div.panel', {},
-          el('h2', {}, 'MOCK-EXAM TREND'),
+          el('h2', {}, t('ss.trendTitle')),
           el('p.stat-sub', { style: 'margin-bottom:12px' },
-            `Errors per exam · pass line at ${EXAM_MAX_ERRORS} (latest ${recentExams.length})`),
+            t('ss.trendLede', { max: EXAM_MAX_ERRORS, n: recentExams.length })),
           el('div.exam-trend', {},
             ...recentExams.map((e) =>
-              el('div.trend-col', { title: `${e.errors} errors` },
+              el('div.trend-col', { title: t('ss.trendCell', { n: e.errors }) },
                 el('div.trend-bar', {
                   className: `trend-bar ${e.passed ? 'ok' : 'bad'}`,
                   style: `height:${Math.max(6, Math.round((e.errors / maxErrors) * 100))}%`,
@@ -260,7 +266,7 @@ export function renderStats(root) {
       : null,
 
     el('div.panel', {},
-      el('h2', {}, 'ALL TOPICS'),
+      el('h2', {}, t('ss.allTopics')),
       ...ranked.map((c) =>
         el('div.row', {},
           el('div', { style: 'flex:1' },
@@ -268,7 +274,7 @@ export function renderStats(root) {
             el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${c.masteredPct}%` })),
           ),
           el('span.stat-sub', { style: 'min-width:110px;text-align:right' },
-            `${c.masteredPct}% · ${c.attempted}/${c.count}`),
+            t('ss.topicProgress', { pct: c.masteredPct, tried: c.attempted, count: c.count })),
           accTag(c.accuracy),
         ),
       ),
