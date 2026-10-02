@@ -137,7 +137,9 @@ export function nextStepsPanel() {
     ),
     el('h3.ds-card__title', {}, t('db.next.title')),
     el('p.ds-card__sub', {}, t('db.next.sub', { n: PRACTICE_BATCH })),
-    el('a.ds-btn.ds-btn--primary.ds-btn--lg', { href: '#/practice' }, t('db.next.btn')),
+    // U1 — one primary per screen: the path card above carries the primary
+    // (Continue); this card's Start practice is a regular button.
+    el('a.ds-btn.ds-btn--lg', { href: '#/practice' }, t('db.next.btn')),
   );
 }
 

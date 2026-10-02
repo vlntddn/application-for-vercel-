@@ -68,7 +68,7 @@ function stepCard(step, index, total) {
     ),
     isDone
       ? null
-      : el('a.ds-btn.ds-btn--primary.ds-btn--lg', { href: target },
+      : el(isNew ? 'a.ds-btn.ds-btn--primary.ds-btn--lg' : 'a.ds-btn.ds-btn--lg', { href: target },
           action === 'practice' ? t('pth.btnPractice')
             : t('pth.btnContinuePart', { part: { read: t('pth.partRead'), check: t('pth.partCheck') }[action] })),
   );
