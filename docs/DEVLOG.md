@@ -1,3 +1,18 @@
+## 2026-10-02 — S3.9a: домен `streak.best` (максимум стрика)
+
+**Что.** Экран «Рекорды» (S3.9) разбит на S3.9a/S3.9b: сначала домен. В
+`streak` добавлено поле `best` — максимальный стрик за всё время:
+`EMPTY_PROGRESS` (`progress.js`), `streakShieldState` (обновляется при
+продолжении и при сбросе — best никогда не падает), `migrateProgress`
+(старые файлы открываются с `best: 0`, сохранённое значение сохраняется),
+`importProgress` (валидация: целое ≥ 0, мусор отклоняет бэкап),
+`snapshot().stats.streakBest`. Тест `streak best: ...` в
+`tests/progress.test.js`: 6 блоков — чистая функция, сброс, щит, e2e через
+`recordAnswers`, snapshot, migrate + import. Бамп sw v113→v114.
+
+**Как проверено.** `node --test tests/progress.test.js` — 40 pass;
+`scripts/verify.sh` → VERIFY OK (237 passed, smoke 8/200, qa-new-user 73/0).
+
 ## 2026-10-02 — S3.7b: витрина стрик-щита на дашборде
 
 **Что.** На дашборде в карточке `DAYS IN A ROW` рядом с числом — иконка
