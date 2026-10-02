@@ -245,7 +245,7 @@ body {
   justify-content: center;
   background: var(--bad);
   color: #fff;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
   line-height: 1;
   border-radius: 9px;
@@ -382,7 +382,7 @@ a.card:active { transform: translate(3px, 3px); box-shadow: 0 0 0 var(--ink); }
 .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
 
 label {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -1039,7 +1039,7 @@ kbd {
 .trend-bar.bad { background: var(--bad); }
 
 .trend-label {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 900;
 }
 
@@ -1157,7 +1157,7 @@ kbd {
 /* L1b — bank data under an absolute word */
 .word-stat {
   margin: 8px 0 0;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.05em;
   color: var(--accent-ink, #8a6100);
@@ -1170,7 +1170,7 @@ details.word-true summary {
   min-width: 44px;
   display: flex;
   align-items: center;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1203,7 +1203,7 @@ mark.ds-signal {
 }
 .signal-notes { margin-top: 12px; display: grid; gap: 4px; }
 .signal-ratio {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.05em;
   color: var(--accent-ink, #8a6100);
@@ -1693,7 +1693,7 @@ mark.ds-term[role='button']:focus-visible {
   background: var(--surface-sunken);
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 800;
   color: var(--ink-muted);
 }
