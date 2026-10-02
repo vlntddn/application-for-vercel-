@@ -1,3 +1,25 @@
+## 2026-10-02 — U3: touch-action manipulation
+
+Ветка self-improve. Правило mobile UX: убрать 300 мс задержку двойного тапа на iOS.
+
+**Что.** `public/styles.css`: `a, button, [role="button"], .ds-answer, input, select {
+touch-action: manipulation; }` (ранее не было ни одного места);
+`overscroll-behavior: contain` на `.modal` (модалка знака) и
+`details.word-true` (всплывающая подсказка правильного слова).
+`public/sw.js` — VERSION v101 → v102.
+
+**Почему.** На iOS Safari двойной тап для зума давал ~300 мс паузу на каждом
+тапе по кнопке; overscroll на модалке/подсказках не пускал rubber-band
+на страницу позади.
+
+**Как проверено.** qa-ux: 221 PASS / 3 FAIL — ровно baseline. scripts/verify.sh
+→ VERIFY OK (222 теста, qa-new-user 73/0, smoke :3917). touch-action —
+инертное свойство, на десктопных маршрутах проверок не видно.
+
+**Следующий шаг.** U4 — многоточие.
+
+---
+
 ## 2026-10-02 — U2: Пол шрифта 12px
 
 Ветка self-improve. Правило типографики: minimum 12px / 0.75rem.
