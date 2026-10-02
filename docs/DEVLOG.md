@@ -1,3 +1,35 @@
+## 2026-10-02 — S3.3 закрыта: тема `auto` (prefers-color-scheme)
+
+**Что.** Новая опция темы `auto` — система берёт OS-схему (`prefers-color-scheme`)
+и переключает палитру без участия пользователя; дефолт НОВОГО профиля теперь
+`'auto'` (ранее `'light'`). Существующие профили НЕ мигрируются: валидная
+сохранённая тема (`light`/`dark`/`auto`) сохраняется как есть, битая тема
+падает в `'light'` (не в `auto`, чтобы старый профиль без явного выбора не
+зависел от OS-схемы).
+
+**Файлы:**
+- `public/js/domain/progress.js` — `THEMES = ['light','dark','auto']`;
+  `EMPTY_PROGRESS.profile.theme = 'auto'`; в `migrateProgress` валидная тема
+  держится, невалидная → `'light'`; `updateProfile`/обновление `profile.theme`
+  принимают только из `THEMES`, иначе `ValidationError` (→ HTTP 422).
+- `public/styles.css` — блок
+  `@media (prefers-color-scheme: dark) { [data-theme="auto"] { … } }`:
+  1:1-копия тёмных переменных из `[data-theme="dark"]`.
+- `public/js/views/settings.js` — третий пункт селектора `<option value="auto">`.
+- `public/js/i18n.js` — `st.themeAuto`: en `AUTO` / ru `АВТО` / zh `自动`.
+- `public/sw.js` — `VERSION` v107 → v108 (кэш shell/data обновлён).
+- `tests/progress.test.js` — новый профиль по умолчанию `auto`; `auto`
+  принимается; `theme:'neon'` → `ValidationError`.
+
+**Проверка.** `scripts/verify.sh` → VERIFY OK (npm test 224 passed,
+qa-new-user 73 PASS). Темы подтверждены headless Chrome (375×812, CDP
+`Emulation.setEmulatedMedia`): на `data-theme=auto` OS-схема light →
+`body-bg rgb(244,241,234)`, OS-схема dark → `body-bg rgb(12,12,12)` — авто-тема
+реально реагирует на prefers-color-scheme. Скриншоты 5 экранов нижнего меню
+(dashboard/theory/practice/exam/mistakes) × 2 схемы (10 PNG) сняты в
+`/tmp/pp-shot-*/shots/*-{light,dark}.png` (временная папка, в репозиторий не
+попадает — там запрет на temp-файлы).
+
 ## 2026-10-02 — S3.1 закрыта: плашка «Доступна новая версия» при обновлении SW
 
 > **⚠️ PUSH-БЛОКЕР (не S3.1, pre-existing).** `git push origin self-improve`
