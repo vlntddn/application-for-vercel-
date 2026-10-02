@@ -342,6 +342,22 @@ export const MESSAGES = {
     'sr.lede': 'All {n} questions. Find a wording, check the answer, practice the results.',
     'sr.findLabel': 'FIND IN QUESTIONS',
     'sr.answer': 'ANSWER',
+
+    // Theory list screen (Q4.2)
+    'th.title': 'THEORY MANUAL',
+    'th.loading': 'Loading...',
+    'th.lede': 'Read the Italian first — translate only when stuck.',
+    'th.progressTitle': 'READING PROGRESS',
+    'th.chapters': '{done}/{total} CHAPTERS',
+    'th.continue': 'CONTINUE — CHAPTER {n}',
+    'th.dictLink': 'DIZIONARIO — EXAM VOCABULARY',
+    'th.exitalTitle': "L'ITALIANO DELL'ESAME",
+    'th.exitalSub': 'Sempre · Mai · Solo · Deve · Può — the words that decide VERO or FALSO. Read the lesson first.',
+    'th.lessonTag': 'LESSON',
+    'th.chapter': 'CHAPTER {n}',
+    'th.read': 'READ',
+    'th.new': 'NEW',
+    'th.mastered': '{n} questions · mastered {pct}%',
   },
   ru: {
     'ob.title1': 'Добро пожаловать!',
@@ -679,6 +695,22 @@ export const MESSAGES = {
     'sr.lede': 'Все {n} вопросов. Найдите формулировку, проверьте ответ, потренируйтесь на результатах.',
     'sr.findLabel': 'НАЙТИ ВОПРОСЕ',
     'sr.answer': 'ОТВЕТ',
+
+    // Экран списка теории (Q4.2)
+    'th.title': 'ТЕОРЕТИЧЕСКОЕ РУКОВОДСТВО',
+    'th.loading': 'Загрузка…',
+    'th.lede': 'Сначала читайте по-итальянски — переводите, только когда застряли.',
+    'th.progressTitle': 'ПРОГРЕСС ЧТЕНИЯ',
+    'th.chapters': '{done}/{total} ГЛАВ',
+    'th.continue': 'ПРОДОЛЖИТЬ — ГЛАВА {n}',
+    'th.dictLink': 'СЛОВАРЬ — ЭКЗАМЕНАЦИОННАЯ ЛЕКСИКА',
+    'th.exitalTitle': 'ИТАЛЬЯНСКИЙ ЯЗЫК ЭКЗАМЕНА',
+    'th.exitalSub': 'Sempre · Mai · Solo · Deve · Può — слова, которые решают, VERO или FALSO. Сначала прочитайте урок.',
+    'th.lessonTag': 'УРОК',
+    'th.chapter': 'ГЛАВА {n}',
+    'th.read': 'ПРОЧИТАНО',
+    'th.new': 'НОВОЕ',
+    'th.mastered': '{n} вопросов · освоено {pct}%',
   },
   zh: {
     'ob.title1': '欢迎！',
@@ -1016,6 +1048,22 @@ export const MESSAGES = {
     'sr.lede': '全部 {n} 题。查找表述、查看答案、针对结果进行练习。',
     'sr.findLabel': '在题目中查找',
     'sr.answer': '答案',
+
+    // 理论列表屏幕 (Q4.2)
+    'th.title': '理论手册',
+    'th.loading': '加载中…',
+    'th.lede': '先读意大利语——只有卡住时才看翻译。',
+    'th.progressTitle': '阅读进度',
+    'th.chapters': '{done}/{total} 章',
+    'th.continue': '继续 — 第 {n} 章',
+    'th.dictLink': '词典 — 考试词汇',
+    'th.exitalTitle': '考试的意大利语',
+    'th.exitalSub': 'Sempre · Mai · Solo · Deve · Può — 决定 VERO 还是 FALSO 的词。先读这一课。',
+    'th.lessonTag': '课程',
+    'th.chapter': '第 {n} 章',
+    'th.read': '已读',
+    'th.new': '新',
+    'th.mastered': '{n} 题 · 已掌握 {pct}%',
   },
 };
 

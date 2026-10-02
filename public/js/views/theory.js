@@ -3,6 +3,7 @@ import { state, loadTheory, loadDictionary, loadLessons, loadQuestions } from '.
 import { el, clear } from '../ui.js';
 import { CHAPTER_CATEGORY } from '../theory-map.js';
 import { translationOf, lang, loc, pickQueue, masteryOf, errorBanner } from './common.js';
+import { t } from '../i18n.js';
 import { renderQuizSession } from '../views.js';
 import { PATH_CHECK_QUESTIONS } from '../domain/learning.js';
 
@@ -70,7 +71,7 @@ function showSignModal(imageUrl, signQuestions, onPractice) {
 /* ============================== THEORY ============================== */
 
 export async function renderTheoryList(root) {
-  clear(root, el('h1', {}, 'THEORY MANUAL'), el('p.lede', {}, 'Loading...'));
+  clear(root, el('h1', {}, t('th.title')), el('p.lede', {}, t('th.loading')));
   let chapters;
   try {
     chapters = await loadTheory();
@@ -89,31 +90,30 @@ export async function renderTheoryList(root) {
   }
 
   clear(root,
-    el('h1', {}, 'THEORY MANUAL'),
-    el('p.lede', {}, 'Read the Italian first — translate only when stuck.'),
+    el('h1', {}, t('th.title')),
+    el('p.lede', {}, t('th.lede')),
     el('div.panel', {},
       el('div.quiz-head', {},
-        el('h2', { style: 'margin:0' }, 'READING PROGRESS'),
+        el('h2', { style: 'margin:0' }, t('th.progressTitle')),
         el('span.tag', { className: `tag ${read.size === chapters.length ? 'ok' : ''}` },
-          `${read.size}/${chapters.length} CHAPTERS`),
+          t('th.chapters', { done: read.size, total: chapters.length })),
       ),
       el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${readPct}%` })),
       el('div.actions', {},
         firstUnread
           ? el('a.btn.btn-primary', { href: `#/theory/${firstUnread.id}` },
-              `CONTINUE — CHAPTER ${firstUnread.chapter}`)
+              t('th.continue', { n: firstUnread.chapter }))
           : null,
-        el('a.btn', { href: '#/dictionary' }, 'DIZIONARIO — EXAM VOCABULARY'),
+        el('a.btn', { href: '#/dictionary' }, t('th.dictLink')),
       ),
     ),
     el('a.panel.exam-italian-banner', { href: '#/exam-italian' },
       el('div.quiz-head', { style: 'margin:0' },
         el('div', {},
-          el('h2', { style: 'margin-bottom:4px' }, "L'ITALIANO DELL'ESAME"),
-          el('p.stat-sub', {},
-            'Sempre · Mai · Solo · Deve · Può — the words that decide VERO or FALSO. Read the lesson first.'),
+          el('h2', { style: 'margin-bottom:4px' }, t('th.exitalTitle')),
+          el('p.stat-sub', {}, t('th.exitalSub')),
         ),
-        el('span.tag', {}, 'LESSON'),
+        el('span.tag', {}, t('th.lessonTag')),
       ),
     ),
     el('div.grid.grid-2', {},
@@ -123,17 +123,17 @@ export async function renderTheoryList(root) {
         const m = cat ? masteryOf(slug, cat.count) : null;
         return el('a.card', { href: `#/theory/${ch.id}` },
           el('div.quiz-head', {},
-            el('span.tag', {}, `CHAPTER ${ch.chapter}`),
+            el('span.tag', {}, t('th.chapter', { n: ch.chapter })),
             el('span', { style: 'display:flex;gap:6px' },
-              lessonChapters.has(ch.id) ? el('span.tag.accent-tag', {}, 'LESSON') : null,
-              read.has(ch.id) ? el('span.tag.ok', {}, 'READ') : el('span.tag.warn', {}, 'NEW'),
+              lessonChapters.has(ch.id) ? el('span.tag.accent-tag', {}, t('th.lessonTag')) : null,
+              read.has(ch.id) ? el('span.tag.ok', {}, t('th.read')) : el('span.tag.warn', {}, t('th.new')),
             ),
           ),
           el('h2', {}, ch.title_it),
           el('p.stat-sub', {}, ch.translations?.[lang()]?.title || ''),
           m
             ? el('div', {},
-                el('p.stat-sub', {}, `${cat.count} questions · mastered ${m.pct}%`),
+                el('p.stat-sub', {}, t('th.mastered', { n: cat.count, pct: m.pct })),
                 el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${m.pct}%` })),
               )
             : null,

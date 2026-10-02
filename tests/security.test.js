@@ -785,3 +785,23 @@ test('the numbers screen is localized: no hardcoded UI copy (Q4.2)', () => {
 });
 
 
+
+test('the theory list screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2: theory-list copy lives in i18n.js under th.* keys; renderTheoryList
+  // only references keys, so ru/zh switch in without touching theory.js.
+  // (The chapter view and exam-italian guide are later Q4.2 slices.)
+  const views = readViewsSource();
+  const theoryView = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'theory.js'), 'utf8');
+  assert.match(theoryView, /t\('th\.title'\)/, 'page title must come from i18n');
+  assert.match(theoryView, /t\('th\.progressTitle'\)/, 'progress heading must come from i18n');
+  assert.match(theoryView, /t\('th\.chapters'/, 'chapters count must come from i18n');
+  assert.match(theoryView, /t\('th\.continue'/, 'continue button must come from i18n');
+  assert.match(theoryView, /t\('th\.dictLink'\)/, 'dictionary link must come from i18n');
+  assert.ok(!theoryView.includes("'THEORY MANUAL'"), 'no hardcoded page title');
+  assert.ok(!theoryView.includes("READING PROGRESS'"), 'no hardcoded progress heading');
+  assert.ok(!theoryView.includes("CHAPTERS`"), 'no hardcoded chapters count');
+  assert.ok(!theoryView.includes("CONTINUE — CHAPTER ${firstUnread.chapter}"), 'no hardcoded continue button');
+  assert.ok(!theoryView.includes("'DIZIONARIO — EXAM VOCABULARY'"), 'no hardcoded dictionary link');
+  assert.match(views, /'THEORY MANUAL'/);
+  assert.match(views, /'CONTINUE — CHAPTER {n}'/);
+});
