@@ -1,3 +1,30 @@
+## 2026-10-02 — U5: translate=no / lang=it
+
+Ветка self-improve. Автопереводчик браузера (Chrome/Safari) переписывал
+английский бренд «Passo» и итальянские экзаменационные формулировки на язык
+ученика, ломая смысл вопросов.
+
+**Что.**
+- `public/index.html` — `<span class="brand__name" translate="no">`.
+- `public/js/views/*.js` — `translate="no" lang="it"` на:
+  - `.question-text` (practice/exam/numbers/drill) — текст вопроса;
+  - кнопки `ds-answer` VERO/FALSO (practice/exam/numbers/drill);
+  - `ex-wrong-text` + теги ответа (exam), строки поиска (search),
+    список ошибок в #/review (review.js).
+- `public/sw.js` — VERSION v103 → v104 (обновить кэш у инсталлированных).
+
+Атрибуты передаются через DOM-builder `el(tag, {attrs})` в `public/js/ui.js`
+нормально (setAttribute), innerHTML не используется.
+
+**Как проверено.** scripts/verify.sh → VERIFY OK (222 теста, 73/0, smoke,
+overlay/explanations PASS). qa-ux: 221 PASS / 3 FAIL — ровно baseline
+(p7/p8 pre-existing, не блокируют).
+
+**Следующий шаг.** U6 — «Ложь:» → «Неверно:» в `data/explanations/*.json`
+(права скриптом).
+
+---
+
 ## 2026-10-02 — U4: Многоточие …
 
 Ветка self-improve. Правило типографики: в строках UI — `…` (U+2026), не `...`.
