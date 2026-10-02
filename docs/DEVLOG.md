@@ -1,3 +1,23 @@
+## 2026-10-02 — U7 закрыта: названия глав в #/numbers + без счётчика для фактов без вопросов
+
+**Что.** `public/js/views/numbers.js`:
+- `chapterTitles`: theory.json — это САМ МАССИВ глав (не `{chapters: []}`),
+  поэтому старый `theory?.chapters || []` всегда давал пустой Map и заголовок
+  деградировал в «Cap. N». Теперь строится Map по `c.id` («ch1»…), а заголовок —
+  «Cap. N · title_it» (напр. «Cap. 2 · Segnali di pericolo»); fallback «Cap. N»
+  оставлен для неизвестного id.
+- Строка счётчика «N bank questions» больше не рендерится, когда
+  `r.questions === 0` (5 фактов в таблице: Corsia, Croce di Sant'Andrea,
+  Divieto di sosta, Tasso alcolemico, Neopatentati).
+- `public/sw.js`: VERSION v104 → v105.
+
+**Проверка.** node-скрипт по реальным данным: все 11 глав таблицы получили
+«Cap. N · title». `scripts/verify.sh` → VERIFY OK (npm test 222 passed; smoke
+:3917; qa-new-user 73 PASS / 0 FAIL). TODO.md U7 не фигурирует — там не
+отмечалось.
+
+---
+
 ## 2026-10-02 — U6 закрыта: русские пояснения, единый префикс Верно:/Неверно:
 
 **Что.** Задача просила заменить в `data/explanations/*.json` префикс «Ложь:» →
