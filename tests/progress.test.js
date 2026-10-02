@@ -640,8 +640,12 @@ test('shouldRemind: below goal + away ≥12h shows, otherwise hidden (S3.6)', ()
 test('latestActivity: newest answer timestamp, ignores junk (S3.6)', () => {
   assert.equal(latestActivity({}), '');
   assert.equal(latestActivity({ q: { last: '' } }), '');
-  assert.equal(latestActivity({ a: { last: at(24) }, b: { last: at(1) } }), at(1));
-  assert.equal(latestActivity({ a: { last: 'nonsense' }, b: { last: at(5) } }), at(5));
+  // Fix the timestamps once — calling at() twice can land on different
+  // milliseconds and would make the fixture itself flaky.
+  const t1 = at(1);
+  const t5 = at(5);
+  assert.equal(latestActivity({ a: { last: at(24) }, b: { last: t1 } }), t1);
+  assert.equal(latestActivity({ a: { last: 'nonsense' }, b: { last: t5 } }), t5);
   assert.equal(latestActivity(null), '');
 });
 
