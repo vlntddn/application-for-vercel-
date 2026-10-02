@@ -91,9 +91,47 @@ function route() {
 window.addEventListener('hashchange', route);
 
 // Offline support: the service worker caches the shell and study data.
+// S3.1: when a newer worker is installed while this tab is running, offer a
+// "New version available" strip (no external requests). Silent when offline.
 if ('serviceWorker' in navigator) {
+  let newVersionBanner = null;
+
+  function showNewVersionBanner() {
+    if (newVersionBanner) return;
+    newVersionBanner = el('div.ds-notice.ds-notice--new', { id: 'new-version-banner' },
+      el('span', {}, t('nv.title')),
+      el('button.ds-notice__btn', { onclick: () => location.reload() }, t('nv.reload')));
+    document.body.insertBefore(newVersionBanner, view);
+  }
+
+  navigator.serviceWorker
+    .addEventListener('updatefound', () => {
+      const worker = navigator.serviceWorker.registration?.installing;
+      if (!worker) return;
+      worker.addEventListener('statechange', () => {
+        // Only an upgrade (an older worker still controls the page) is a
+        // "new version" — the very first install has no controller yet.
+        if (worker.state === 'installed' && navigator.serviceWorker.controller && navigator.onLine) {
+          showNewVersionBanner();
+        }
+      });
+    });
+
   navigator.serviceWorker.register('/sw.js').catch(() => {
     /* app works fine without it */
+  });
+
+  // Re-check for a newer build when the tab becomes visible, at most once
+  // every 10 minutes. Offline: update() is a no-op, so stay silent.
+  let lastUpdateCheck = 0;
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState !== 'visible' || !navigator.onLine) return;
+    const now = Date.now();
+    if (now - lastUpdateCheck < 10 * 60 * 1000) return;
+    lastUpdateCheck = now;
+    navigator.serviceWorker.registration?.update().catch(() => {
+      /* offline or transient — try again on the next visible turn */
+    });
   });
 }
 

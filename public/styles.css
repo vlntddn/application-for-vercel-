@@ -722,6 +722,11 @@ kbd {
 .ds-notice__btn:active { transform: translateY(1px); }
 .ds-notice__btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 
+/* S3.1: "New version available" strip — same shape as the privacy notice,
+   but in accent colour so it reads as actionable, not informational. */
+.ds-notice--new { background: var(--accent); color: var(--on-accent); border-color: var(--ink); }
+.ds-notice--new .ds-notice__btn { background: var(--paper); color: var(--ink); border-color: var(--ink); }
+
 @media (max-width: 760px) {
   .ds-notice { margin: 0 16px 12px; padding: var(--space-2) var(--space-3); }
 }

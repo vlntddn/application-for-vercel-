@@ -870,3 +870,26 @@ test('the boot error screen is localized: no hardcoded UI copy (Q4.2)', () => {
   assert.ok(!source.includes('COULD NOT LOAD APP DATA'), 'no hardcoded lede');
   assert.ok(!source.includes("'RETRY'"), 'no hardcoded retry button');
 });
+
+test('service worker offers a new-version strip, no external requests (S3.1)', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'public', 'js', 'main.js'), 'utf8');
+  assert.match(source, /updatefound/, 'must listen for updatefound');
+  assert.match(source, /registration\?\.update\(\)/, 'must re-check on visibilitychange');
+  assert.match(source, /location\.reload\(\)/, 'strip button must reload');
+  assert.match(source, /navigator\.onLine/, 'must stay silent when offline');
+  // Copy comes from i18n, not hardcoded.
+  assert.match(source, /t\('nv\.title'\)/, 'strip title must come from i18n');
+  assert.match(source, /t\('nv\.reload'\)/, 'strip button must come from i18n');
+  // The banner is built with el() — no innerHTML / eval in this block.
+  assert.match(source, /ds-notice--new/, 'strip must use the ds-notice markup');
+});
+
+test('S3.1 new-version strings exist in every language', async () => {
+  const { MESSAGES, LANGUAGES } = await import('../public/js/i18n.js');
+  for (const lang of LANGUAGES) {
+    assert.equal(typeof MESSAGES[lang]['nv.title'], 'string');
+    assert.ok(MESSAGES[lang]['nv.title'].trim().length > 0);
+    assert.equal(typeof MESSAGES[lang]['nv.reload'], 'string');
+    assert.ok(MESSAGES[lang]['nv.reload'].trim().length > 0);
+  }
+});
