@@ -1,3 +1,42 @@
+## 2026-10-02 — S3.5 закрыта: Поделиться результатом (navigator.share / clipboard)
+
+**Что.** Кнопка SHARE на экране результата экзамена и на экране
+SESSION COMPLETE. Стек: `navigator.share({ text })` → fallback
+`navigator.clipboard.writeText` + тост «COPIED»; если ни одного API
+нет — кнопка не показывается (shareButton возвращает null). Текст
+без URL (CSP 'self', приватность «ничего не покидает устройство»).
+Чистая функция `shareText(result)` — покрыта тестами.
+
+**Примечание по тексту:** в роадмапе пример «… — Patente Pro», но
+приложение переименовано в **Passo** (title index.html, reportSubject),
+поэтому текст использует `SHARE_APP_NAME = 'Passo'` — актуальный бренд.
+
+**Файлы:**
+- `public/js/domain/progress.js` — `shareText(result)` + `SHARE_APP_NAME`.
+  `kind: 'exam' | 'session'`, валидация через ValidationError (total ≥ 1,
+  0 ≤ errors ≤ total, неизвестный kind бросает). 3 языка (ru — русская
+  плюрализация «ошибка/ошибки/ошибок», en, zh), lang вне LANGUAGES → en.
+- `public/js/views/common.js` — `shareButton(result)`: проверка наличия
+  API, Web Share → clipboard+тост (`.share-copied`, role=status,
+  2 сек), AbortError/NotAllowedError от share — тишина; lang берётся
+  из профиля через `lang()`.
+- `public/js/views/exam.js` — shareButton в `.exam-result-actions`
+  (kind: exam, total: questions.length, errors).
+- `public/js/views/practice.js` — shareButton на SESSION COMPLETE
+  (kind: session, total, errors: total − correct).
+- `public/js/i18n.js` — `sh.btn`, `sh.copied` в en/ru/zh
+  (SHARE RESULT / ПОДЕЛИТЬСЯ / 分享结果; COPIED / СКОПИРОВАНО / 已复制).
+- `public/styles.css` — тост `.share-copied` (fixed, bottom-center,
+  `--ok`, z-index 100).
+- `public/sw.js` — `VERSION` v109 → v110.
+- `tests/progress.test.js` — 4 теста shareText: ru-пример из ТЗ
+  дословно + плюральность (1 ошибка / 3 ошибки / 5 ошибок / без
+  ошибок), en + zh + «нет URL в тексте», session, невалидный ввод
+  бросает ValidationError.
+
+**Проверка.** `scripts/verify.sh` → VERIFY OK (npm test 232 passed —
++4 от shareText; qa-new-user 73 PASS, 0 FAIL).
+
 ## 2026-10-02 — S3.4 закрыта: вибрация на ответ (navigator.vibrate)
 
 **Что.** Тактильный отклик на ответ, сдвоенный со звуковым блипом в
