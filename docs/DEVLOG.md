@@ -1,3 +1,28 @@
+## 2026-10-02 — S2.14 разбита на S2.14a/b: диагностика 6 FAIL qa-ux (код не тронут)
+
+**Что.** S2.14 (🔒 «ждёт Q и U») — оба спринта закрыты, 🔒 снято. Задача не влезла в
+лимит запуска (15 мин) без единой правки, поэтому разбита в роадмапе на
+**S2.14a** (4 CSS-FAIL @375: 2× p8 `button.ds-answer@64px` + 2× p5 `span.tag@1.84:1`)
+и **S2.14b** (2× p7 `#dashboard-next-steps`: overflow bottom=848 @375 и «отсутствует»
+@1280 + финальные условия спринта). Закоммичен только этот разбивочный док-коммит,
+код не менялся — verify на старте был OK (237 тестов, 8 endpoints).
+
+**Диагностика (для S2.14a).** (1) p8: mobile-правило `.ds-answer` в media query
+(styles.css ~948) задаёт `min-height:64px; font:900 20px/24px` → высота 64px, а p8
+проверяет height ≤ 1.6×line-height + padding = 38.4px. Лечится `line-height: 40px`
+(1.6×40=64) — вид не меняется: одна строка по центру. (2) p5: `.tag.ok`
+(styles.css 662) `background: var(--ok); color:#fff`; в dark-теме `--ok:#4fd0e0`
+(styles.css 107/140) — белый по яркому бирюзовому даёт 1.84:1. Тег появляется только
+в состоянии ответа/reveal, поэтому FAIL только на #/drill/signals и #/review; light
+тема (`--ok:#006b7a`) проходит. QA работает в dark: theme=auto + prefDark=true
+(подтверждено debug-прогоном). (3) p7 @375: `#dashboard-next-steps` bottom=848 > 812
+(панель 230px, top=618). (4) p7 @1280: панель «отсутствует» — нужно найти, почему
+условие `stats.answered===0 ? nextStepsPanel()` в dashboard.js:421 на десктопе не
+рисуется (отдельный баг).
+
+**Push.** `git push origin self-improve` по-прежнему блокируется workflow-scope
+(pre-existing с T4) — коммит копится локально, см. записи выше.
+
 ## 2026-10-02 — S4.last выполнена локально, ПУШ БЛОКИРОВАН (workflow scope)
 
 **Что.** Счётчики 107→147 в README/PLAY-STORE/TODO/роадмапе, [x] в роадмапе, коммит 605ad12. verify OK.
