@@ -211,11 +211,11 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
       : null;
     const callout = el('div.ds-signal-callout', {
       role: 'status',
-      'aria-label': `Signal word ${entry.word}`,
+      'aria-label': t('pr.signalWordAria', { word: entry.word }),
     },
       el('strong', {}, entry.word),
       el('span.ds-signal-callout__gloss', {}, loc(gloss?.gloss) || '—'),
-      falsePct ? el('span.tag.bad', {}, `FALSO IN ${falsePct} OF ${entry.questions} QUESTIONS`) : null,
+      falsePct ? el('span.tag.bad', {}, t('pr.falsoShare', { pct: falsePct, n: entry.questions })) : null,
     );
     para.insertAdjacentElement('afterend', callout);
     openCallout = callout;
@@ -256,7 +256,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     closeSignalCallout();
     const callout = el('div.ds-term-callout', {
       role: 'status',
-      'aria-label': `Translation of ${term.it}`,
+      'aria-label': t('pr.translationAria', { word: term.it }),
     },
       el('strong', {}, term.it),
       el('span.ds-term-callout__gloss', {}, term[lang()] || term.en || '—'),
@@ -466,7 +466,7 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
     },
       el('div.ds-feedback__head', {},
         svgIcon(lastCorrect ? 'check' : 'cross'),
-        lastCorrect ? 'Correct' : t('pr.notQuite')),
+        lastCorrect ? t('pr.correct') : t('pr.notQuite')),
       lastCorrect
         ? null
         : el('div.ds-feedback__answer', {}, t('pr.rightAnswer', { ans: q.is_true ? 'Vero' : 'Falso' })),
@@ -515,9 +515,9 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
       const picked = chosenValue === value;
       const isRight = value === q.is_true;
       if (answered) {
-        if (picked && lastCorrect) { state = 'ds-answer--ok'; word = 'Correct'; }
-        else if (picked && !lastCorrect) { state = 'ds-answer--bad'; word = 'Wrong'; }
-        else if (!picked && !lastCorrect && isRight) { state = 'ds-answer--reveal'; word = 'Right answer'; }
+        if (picked && lastCorrect) { state = 'ds-answer--ok'; word = t('pr.correct'); }
+        else if (picked && !lastCorrect) { state = 'ds-answer--bad'; word = t('pr.wrong'); }
+        else if (!picked && !lastCorrect && isRight) { state = 'ds-answer--reveal'; word = t('pr.rightAnswerTag'); }
       }
       return el('button', {
         type: 'button',
@@ -564,8 +564,8 @@ export function renderQuizSession(root, questions, { title, backHash, onFinish, 
           : null,
         el('p.kbd-hint', {},
           answered
-            ? [el('kbd', {}, 'ENTER'), ' NEXT · ', el('kbd', {}, 'T'), ' TRANSLATE']
-            : [el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ', el('kbd', {}, 'T'), ' TRANSLATE']),
+            ? [el('kbd', {}, 'ENTER'), t('pr.kbdNext'), el('kbd', {}, 'T'), t('pr.kbdTranslate')]
+            : [el('kbd', {}, 'V'), t('pr.kbdTrue'), el('kbd', {}, 'F'), t('pr.kbdFalse'), el('kbd', {}, 'T'), t('pr.kbdTranslate')]),
       ),
     );
   }

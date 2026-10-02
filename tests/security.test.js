@@ -657,8 +657,8 @@ test('VERO/FALSO answers follow the AnswerButton component: neutral at rest, ok/
   assert.ok(!restState.includes("state = 'ds-answer"), 'at rest no state is set — it may only change after the answer');
   assert.match(practice, /let state = '';[\s\S]*?if \(answered\) \{/);
   for (const token of ['ds-answer--ok', 'ds-answer--bad', 'ds-answer--reveal',
-    "'Correct'", "'Wrong'", "'Right answer'"]) {
-    assert.match(practice, new RegExp(token.replace(/[-']/g, (m) => `\\${m}`)), `practice missing ${token}`);
+    "t('pr.correct')", "t('pr.wrong')", "t('pr.rightAnswerTag')"]) {
+    assert.match(practice, new RegExp(token.replace(/[-'()]/g, (m) => `\\${m}`)), `practice missing ${token}`);
   }
   // Exam: the same states, and the old neutral "--picked" hack is gone.
   const exam = views.slice(views.indexOf('renderExam('));
@@ -691,6 +691,31 @@ test('the search screen is localized: no hardcoded UI copy (Q4.2)', () => {
   assert.match(views, /Type at least 3 characters/);
   assert.match(views, /Nothing found for/);
   assert.match(views, /PRACTICE THESE/);
+});
+
+test('the practice/feedback screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2 slice 9 (screen 2): practice + post-answer feedback copy lives in
+  // i18n.js under pr.* keys. VERO/FALSO answer labels and kbd letters are
+  // exam data / shortcuts, not UI copy, so they stay hardcoded.
+  const i18n = fs.readFileSync(path.join(ROOT, 'public', 'js', 'i18n.js'), 'utf8');
+  const practice = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'practice.js'), 'utf8');
+  assert.match(practice, /t\('pr\.correct'\)/, 'feedback verdict must come from i18n');
+  assert.match(practice, /t\('pr\.wrong'\)/, 'answer-button state must come from i18n');
+  assert.match(practice, /t\('pr\.rightAnswerTag'\)/, 'reveal tag must come from i18n');
+  assert.match(practice, /t\('pr\.signalWordAria'/, 'signal callout aria-label must come from i18n');
+  assert.match(practice, /t\('pr\.translationAria'/, 'term callout aria-label must come from i18n');
+  assert.match(practice, /t\('pr\.falsoShare'/, 'FALSO share tag must come from i18n');
+  assert.match(practice, /t\('pr\.kbdNext'\)/, 'kbd hint must come from i18n');
+  // No hardcoded English UI strings left in the view.
+  assert.ok(!practice.includes("'Correct'"), 'no hardcoded verdict');
+  assert.ok(!practice.includes("'Wrong'"), 'no hardcoded answer state');
+  assert.ok(!practice.includes("'Right answer'"), 'no hardcoded reveal tag');
+  assert.ok(!practice.includes('FALSO IN ${falsePct}'), 'no hardcoded FALSO share');
+  assert.ok(!practice.includes("' TRANSLATE'"), 'no hardcoded kbd hint');
+  // English copy exists in the dictionaries (the strings QA checks).
+  assert.match(i18n, /'FALSO IN \{pct\} OF \{n\} QUESTIONS'/);
+  assert.match(i18n, /' TRANSLATE'/);
+  assert.match(i18n, /'Signal word \{word\}'/);
 });
 
 
