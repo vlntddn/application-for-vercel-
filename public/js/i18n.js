@@ -348,6 +348,10 @@ export const MESSAGES = {
     'ss.trendCell': '{n} errors',
     'ss.allTopics': 'ALL TOPICS',
     'ss.topicProgress': '{pct}% · {tried}/{count}',
+    // err.* — boot error screen (main.js, Q4.2).
+    'err.title': 'SERVER UNREACHABLE',
+    'err.lede': 'COULD NOT LOAD APP DATA: {err}',
+    'err.retry': 'RETRY',
 
     // Dictionary (Q4.2, screen 7)
     'dict.title': 'DIZIONARIO',
@@ -772,6 +776,10 @@ export const MESSAGES = {
     'ss.trendCell': '{n} ошибок',
     'ss.allTopics': 'ВСЕ ТЕМЫ',
     'ss.topicProgress': '{pct}% · {tried}/{count}',
+    // err.* — экран ошибки запуска (main.js, Q4.2).
+    'err.title': 'СЕРВЕР НЕДОСТУПЕН',
+    'err.lede': 'НЕ УДАЛОСЬ ЗАГРУЗИТЬ ДАННЫЕ: {err}',
+    'err.retry': 'ПОПРОБОВАТЬ СНОВА',
 
     // Dictionary (Q4.2, screen 7)
     'dict.title': 'СЛОВАРЬ',
@@ -1196,6 +1204,10 @@ export const MESSAGES = {
     'ss.trendCell': '{n} 个错误',
     'ss.allTopics': '全部主题',
     'ss.topicProgress': '{pct}% · {tried}/{count}',
+    // err.* — 启动错误页面（main.js，Q4.2）。
+    'err.title': '无法连接服务器',
+    'err.lede': '无法加载应用数据：{err}',
+    'err.retry': '重试',
 
     // Dictionary (Q4.2, screen 7)
     'dict.title': '词汇表',

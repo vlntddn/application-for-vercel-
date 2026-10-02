@@ -1,7 +1,7 @@
 import { boot, state, flushQueue, scheduleQueueRetry } from './state.js';
 import { api } from './api.js';
 import { el, clear } from './ui.js';
-import { setLang } from './i18n.js';
+import { setLang, t } from './i18n.js';
 import {
   renderOnboarding,
   renderDashboard,
@@ -136,9 +136,9 @@ boot()
   .catch((err) => {
     clear(view,
       el('div.panel', {},
-        el('h1', {}, 'SERVER UNREACHABLE'),
-        el('p.lede', {}, `COULD NOT LOAD APP DATA: ${err.message}`),
-        el('button.btn.btn-primary', { onclick: () => location.reload() }, 'RETRY'),
+        el('h1', {}, t('err.title')),
+        el('p.lede', {}, t('err.lede', { err: err.message })),
+        el('button.btn.btn-primary', { onclick: () => location.reload() }, t('err.retry')),
       ),
     );
   });

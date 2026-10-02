@@ -859,3 +859,14 @@ test('the stats screen is localized: no hardcoded UI copy (Q4.2)', () => {
   assert.ok(!source.includes("'NOT TRIED'"), 'no hardcoded not-tried tag');
   assert.ok(!source.includes("'PRACTICE'"), 'no hardcoded practice button');
 });
+
+test('the boot error screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2: main.js catch-block copy lives in i18n.js under err.* keys.
+  const source = fs.readFileSync(path.join(ROOT, 'public', 'js', 'main.js'), 'utf8');
+  assert.match(source, /t\('err\.title'\)/, 'error title must come from i18n');
+  assert.match(source, /t\('err\.lede'/, 'error lede must come from i18n');
+  assert.match(source, /t\('err\.retry'\)/, 'retry button must come from i18n');
+  assert.ok(!source.includes("'SERVER UNREACHABLE'"), 'no hardcoded title');
+  assert.ok(!source.includes('COULD NOT LOAD APP DATA'), 'no hardcoded lede');
+  assert.ok(!source.includes("'RETRY'"), 'no hardcoded retry button');
+});
