@@ -1,3 +1,44 @@
+## 2026-10-02 — Q5: Главная без каши — 1 primary CTA + сетка 2x3 плиток
+
+Ветка self-improve. Главная (#/) — «стена»: 7 кнопок подряд
+(Continue/Practice/Quick Review/Drill/Theory/Numbers/Stats) + 3 primary
+(MOCK EXAM/Theory/Numbers), между карточками — inline margin-top:24px.
+
+**Что.** Один primary CTA + 6 вторичных плиток (иконка + подпись) в сетке
+2x3. CTA = Continue (по пути ученика); если путь готов — Mock exam.
+Плитки: Practice / Quick Review / Drill / Theory / Numbers / Stats;
+при mistakes>0 последняя плитка заменяется на «Ошибки (n)».
+
+**Как.**
+- public/js/views/dashboard.js: actionsPanel(stats) переписан — вместо
+  wall из 7 <button> — <div.dashboard-stack> с 1 <button.ds-btn ds-btn-primary>
+  + <div.action-tiles> из 6 <button.action-tile>. Все inline margin-top
+  убраны — зазор между карточками теперь flex gap.
+- public/styles.css: .dashboard-stack { display:flex; flex-direction:column;
+  gap:24px }, .action-tiles { grid 2 col, gap:12px }, .action-tile —
+  touch target, brutalist (border/shadow/focus), :active offset.
+  Старое .actions .btn margin-bottom:16px -> margin-bottom:0
+  (зазор берёт .dashboard-stack).
+- public/js/i18n.js: db.actions.* в 3 языках (en/ru/zh) — examCta +
+  native-language заголовки плиток.
+- public/js/ui.js: svgIcon() — новые kinds (check/grid/star/hash/book/
+  chart/cross).
+- public/sw.js: VERSION v96 -> v97 (public/ менялся).
+
+**Проверка.** scripts/verify.sh -> VERIFY OK (npm test 216 passed, smoke
+8 endpoints, qa-new-user 73 PASS / 0 FAIL). node scripts/qa-ux.mjs ->
+221 PASS, 3 FAIL — все pre-existing и вне зоны Q5: 2x p8 (text wrapped
+в .ds-answer на #/drill/signals и #/review) + 1x p7 (#dashboard-next-steps
+отсутствует @1280 — это newcomer-only панель, а qa-ux бежит на
+non-newcomer baseline-профиле; та же пара была в закрытом S2.11).
+
+**Решение по i18n-ключам.** Задание просило db.actions.* — но
+actionsPanel ранее не имел собственных key (заголовки шли из
+db.actions.title/sub и db.practice/quick/theory/numbers/stats).
+Ввели единый префикс db.actions.* (title/sub/examCta/6 плиток) —
+старики db.practice/quick/theory/numbers/stats оставлены (их
+использует nav и другие экраны), дублирование только в 3 словарях.
+
 ## 2026-10-02 — Q4.2, срез 16: Экран ошибки запуска (boot error, main.js) — перевод на 3 языка
 
 Ветка self-improve. Единственный оставшийся непереведённый UI:
