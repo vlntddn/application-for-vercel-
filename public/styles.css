@@ -39,6 +39,7 @@
   --accent-soft: #ffe3d6;
   --ok: #006b7a;
   --ok-soft: #d9f1f4;
+  --on-ok: #002b31;
   --bad: #b3002c;
   --bad-soft: #ffe0e6;
   --warn: #ffd000;
@@ -106,6 +107,7 @@
   --accent-soft: #3a1a0d;
   --ok: #4fd0e0;
   --ok-soft: #0c2f35;
+  --on-ok: #002b31;
   --bad: #ff7b96;
   --bad-soft: #3a0f1a;
   --warn-ink: #ffd000;
@@ -139,6 +141,7 @@
     --accent-soft: #3a1a0d;
     --ok: #4fd0e0;
     --ok-soft: #0c2f35;
+    --on-ok: #002b31;
     --bad: #ff7b96;
     --bad-soft: #3a0f1a;
     --warn-ink: #ffd000;
@@ -659,7 +662,7 @@ kbd {
   white-space: nowrap;
 }
 
-.tag.ok { background: var(--ok); color: #fff; }
+.tag.ok { background: var(--ok); color: var(--on-ok); }
 .tag.bad { background: var(--bad); color: #fff; }
 .tag.warn { background: var(--warn); color: #000; }
 
@@ -945,7 +948,7 @@ kbd {
 
   /* Big thumb targets for answering */
   .ds-answers { gap: var(--space-3); }
-  .ds-answer { min-height: 64px; font: 900 20px/24px var(--font-sans); }
+  .ds-answer { min-height: 64px; font: 900 20px/40px var(--font-sans); }
 
   .quiz-head { gap: 8px; }
   .quiz-head .btn { padding: 8px 12px; }
