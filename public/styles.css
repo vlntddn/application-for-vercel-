@@ -1668,6 +1668,17 @@ main:focus { outline: none; }
   .today-goal .ds-ring__sub { display: none; }
 }
 
+/* S2.14b: the newcomer next-steps panel must fit in the first 812px at 375px -
+   compress its internal spacing on a phone (it is the last content card before
+   the fixed bar, so it is the piece that overflows). */
+@media (max-width: 480px) {
+  #dashboard-next-steps { padding: 8px 12px; }
+  #dashboard-next-steps .ds-card__top { margin-bottom: 4px; }
+  #dashboard-next-steps .ds-card__title { margin-bottom: 2px; }
+  #dashboard-next-steps .ds-card__sub { margin-bottom: 8px; }
+  #dashboard-next-steps .ds-btn--lg { min-height: 48px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ds-ring__value { transition: none; }
   .ds-btn, .ds-card { transition: none; }

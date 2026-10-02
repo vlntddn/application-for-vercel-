@@ -230,7 +230,14 @@ function checkExprs() {
         if (!b.innerText.trim()) continue;
         const cs = getComputedStyle(b);
         if (cs.display === 'none') continue;
-        const maxH = 1.6 * parseFloat(cs.lineHeight) + parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+        const padH = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
+        const singleLine = 1.6 * parseFloat(cs.lineHeight) + padH;
+        // Кнопку, растянутую до намеренного min-height (тач-таргет), НЕ считать
+        // «перенесённой»: перенос текста — это когда высота превысит и
+        // min-height, и размер одной строки. (Иначе .ds-answer с min-height 72px
+        // ложно падал в @1280, где одна строка 28px.)
+        const minH = parseFloat(cs.minHeight) || 0;
+        const maxH = Math.max(singleLine, minH);
         const r = b.getBoundingClientRect();
         if (r.height > maxH + 1) wrapped.push((b.id ? '#' + b.id : 'button') + '.' + String(b.className).split(' ')[0] + '@' + Math.round(r.height) + 'px');
       }
@@ -400,11 +407,12 @@ async function main() {
       width: vp.w, height: vp.h, deviceScaleFactor: 2, mobile: vp.w < 500,
     });
     await evaluate(`document.fonts ? document.fonts.ready.then(1) : 1`);
-    if (vp.w === VIEWPORTS[0].w) {
-      // первый запуск — чистый профиль: маршруты без онбординга рендерят
-      // онбординг, поэтому сначала кликаемся через него
-      await completeOnboarding();
-    }
+    // Каждый вьюпорт стартует с НЕ-онбордингованного профиля: checkOnboarding
+    // прошлого вьюпорта сбрасывает профиль (DELETE /api/progress), поэтому
+    // дашборд и другие маршруты рендерят онбординг, пока мы не пройдём его.
+    // (Раньше онбординг проходили только на 1-м вьюпорте — из-за этого на 1280
+    // #dashboard-next-steps «отсутствовал»: показывался онбординг, не дашборд.)
+    await completeOnboarding();
     for (const route of ROUTES) await checkRoute(route, vp);
     // онбординг — последним: сбрасывает профиль (DELETE), остальные маршруты — с прогрессом
     await checkOnboarding(vp);
