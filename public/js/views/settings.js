@@ -5,6 +5,7 @@ import { el, clear } from '../ui.js';
 import { requestPersistentStorage } from '../local-progress.js';
 import { renderInstallPanel } from '../install.js';
 import { DAILY_GOAL_DEFAULT, SIGNAL_HINT_MODES } from '../domain/progress.js';
+import { t } from '../i18n.js';
 import { errorBanner, readLastBackup, exportProgressSnapshot, feedbackHref, FEEDBACK_EMAIL } from './common.js';
 
 // Options of the daily-goal selector (lost in the S1.3 move — restored).
@@ -25,11 +26,11 @@ async function showStorageStatus(root) {
   const word = line.querySelector('#storage-status-word');
   const { supported, persisted } = await requestPersistentStorage();
   if (persisted) {
-    word.textContent = 'Protected';
+    word.textContent = t('st.storageProtected');
   } else if (supported) {
-    word.textContent = 'Not protected yet — add the app to your Home Screen';
+    word.textContent = t('st.storageNotProtected');
   } else {
-    word.textContent = 'Saved in this browser';
+    word.textContent = t('st.storageSavedBrowser');
   }
 }
 
@@ -37,7 +38,7 @@ async function showStorageStatus(root) {
 function exportProgress(button) {
   const exportedAt = exportProgressSnapshot();
   const line = button.closest('.panel').querySelector('#last-backup');
-  if (line) line.textContent = `Last backup: ${new Date(exportedAt).toLocaleDateString()}`;
+  if (line) line.textContent = t('st.lastBackup', { date: new Date(exportedAt).toLocaleDateString() });
 }
 
 /** Replaces all progress with a backup file, after confirmation. */
@@ -47,16 +48,16 @@ async function importProgressFile(picker, root, box) {
   try {
     const parsed = JSON.parse(await file.text());
     const answers = Object.keys(parsed.answers || {}).length;
-    if (!confirm(`Replace ALL current progress with this backup (${answers} answered questions)? This cannot be undone.`)) {
+    if (!confirm(t('st.importConfirm', { answers }))) {
       return;
     }
     state.progress = await api.importProgress(parsed);
     applyTheme();
-    box?.replaceChildren(el('span.tag.ok', {}, `IMPORTED — ${answers} ANSWERS RESTORED`));
+    box?.replaceChildren(el('span.tag.ok', {}, t('st.imported', { answers })));
     setTimeout(() => renderSettings(root), 1500);
   } catch (err) {
     box?.replaceChildren(errorBanner(
-      err instanceof SyntaxError ? new Error('That file is not a valid backup') : err,
+      err instanceof SyntaxError ? new Error(t('st.invalidBackup')) : err,
     ));
   }
 }
@@ -70,10 +71,10 @@ async function downloadForOffline(button) {
   const box = button.parentElement;
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
     box.replaceChildren(el('p.error-banner', { role: 'alert' },
-      'OFFLINE CACHE NOT READY — RELOAD THE PAGE ONCE AND TRY AGAIN.'));
+      t('st.offlineNotReady')));
     return;
   }
-  const label = el('span.tag', {}, 'PREPARING...');
+  const label = el('span.tag', {}, t('st.offlinePreparing'));
   box.replaceChildren(label);
   try {
     const dataUrls = [
@@ -87,7 +88,7 @@ async function downloadForOffline(button) {
       if (url.startsWith('/data/questions/')) {
         for (const q of await res.json()) if (q.image_url) images.add(q.image_url);
       }
-      label.textContent = `DATA ${++done}/${dataUrls.length}`;
+      label.textContent = t('st.offlineData', { done: ++done, total: dataUrls.length });
     }
     const imageList = [...images];
     done = 0;
@@ -98,12 +99,12 @@ async function downloadForOffline(button) {
         await fetch(url).catch(() => {});
         done += 1;
         if (done % 20 === 0 || done === images.size) {
-          label.textContent = `IMAGES ${done}/${images.size}`;
+          label.textContent = t('st.offlineImages', { done, total: images.size });
         }
       }
     });
     await Promise.all(workers);
-    box.replaceChildren(el('span.tag.ok', {}, 'READY FOR OFFLINE USE'));
+    box.replaceChildren(el('span.tag.ok', {}, t('st.offlineReady')));
   } catch (err) {
     box.replaceChildren(errorBanner(err));
   }
@@ -137,21 +138,21 @@ export function renderSettings(root) {
   );
   langSelect.value = profile.language;
   const themeSelect = el('select', { id: 's-theme' },
-    el('option', { value: 'light', textContent: 'LIGHT' }),
-    el('option', { value: 'dark', textContent: 'DARK' }),
+    el('option', { value: 'light', textContent: t('st.themeLight') }),
+    el('option', { value: 'dark', textContent: t('st.themeDark') }),
   );
   themeSelect.value = profile.theme;
   const soundSelect = el('select', { id: 's-sound' },
-    el('option', { value: 'on', textContent: 'ON' }),
-    el('option', { value: 'off', textContent: 'OFF' }),
+    el('option', { value: 'on', textContent: t('st.soundOn') }),
+    el('option', { value: 'off', textContent: t('st.soundOff') }),
   );
   soundSelect.value = profile.sound === false ? 'off' : 'on';
   // L2 — signal-word hints in practice questions: auto (default; off after
   // 100 answers), on (always), off (never). Invalid stored value → 'auto'.
   const signalSelect = el('select', { id: 's-signal-hints' },
-    el('option', { value: 'auto', textContent: 'AUTO (OFF AFTER 100 ANSWERS)' }),
-    el('option', { value: 'on', textContent: 'ALWAYS ON' }),
-    el('option', { value: 'off', textContent: 'OFF' }),
+    el('option', { value: 'auto', textContent: t('st.hintsAuto') }),
+    el('option', { value: 'on', textContent: t('st.hintsOn') }),
+    el('option', { value: 'off', textContent: t('st.hintsOff') }),
   );
   signalSelect.value = SIGNAL_HINT_MODES.includes(profile.signalHints) ? profile.signalHints : 'auto';
   const storedGoal = Number.isInteger(profile.dailyGoal) ? profile.dailyGoal : DAILY_GOAL_DEFAULT;
@@ -160,7 +161,7 @@ export function renderSettings(root) {
     ? DAILY_GOAL_CHOICES
     : [...DAILY_GOAL_CHOICES, storedGoal].sort((a, b) => a - b);
   const goalSelect = el('select', { id: 's-goal' },
-    ...goalOptions.map((n) => el('option', { value: String(n), textContent: `${n} QUESTIONS` })),
+    ...goalOptions.map((n) => el('option', { value: String(n), textContent: t('st.goalQuestions', { n }) })),
   );
   goalSelect.value = String(storedGoal);
 
@@ -169,24 +170,24 @@ export function renderSettings(root) {
   const lastBackup = readLastBackup();
   const importBox = el('div.actions', { id: 'backup-actions' });
   const progressPanel = el('div.panel', {},
-    el('h2', {}, 'YOUR PROGRESS'),
-    el('p.lede', {}, 'Your progress stays on this device. A website update never erases it — only these do.'),
+    el('h2', {}, t('st.yourProgress')),
+    el('p.lede', {}, t('st.progressLede')),
     el('div.row', { id: 'storage-status' },
       shieldIcon(),
       el('div', { style: 'flex:1' },
-        el('strong', {}, el('span', { id: 'storage-status-word' }, 'Checking…')),
-        el('p.stat-sub', { id: 'last-backup' }, `Last backup: ${lastBackup ? new Date(lastBackup).toLocaleDateString() : 'never'}`),
+        el('strong', {}, el('span', { id: 'storage-status-word' }, t('st.checking'))),
+        el('p.stat-sub', { id: 'last-backup' }, t('st.lastBackup', { date: lastBackup ? new Date(lastBackup).toLocaleDateString() : t('st.lastBackupNever') })),
       ),
     ),
     el('dl.progress-erases', {},
-      el('dt', {}, 'What erases it'),
-      el('dd', {}, 'Clearing this site’s data or browser history'),
-      el('dd', {}, 'Private or incognito mode — when the window closes'),
-      el('dd', {}, 'Safari on iPhone/iPad, after ~7 days without a visit, if the app is not on your Home Screen'),
-      el('dd', {}, 'It is not in any other browser or device — move it with a backup file'),
+      el('dt', {}, t('st.erasesTitle')),
+      el('dd', {}, t('st.erasesClear')),
+      el('dd', {}, t('st.erasesPrivate')),
+      el('dd', {}, t('st.erasesSafari')),
+      el('dd', {}, t('st.erasesOther')),
     ),
     el('div.actions', { id: 'progress-actions' },
-      el('button.btn.btn-primary', { onclick: (e) => exportProgress(e.target) }, 'Export backup'),
+      el('button.btn.btn-primary', { onclick: (e) => exportProgress(e.target) }, t('st.exportBackup')),
       el('button.btn', {
         onclick: (e) => {
           const picker = el('input', {
@@ -195,18 +196,18 @@ export function renderSettings(root) {
           });
           picker.click();
         },
-      }, 'Import backup'),
+      }, t('st.importBackup')),
     ),
     importBox,
   );
   const profilePanel = el('div.panel', {},
-    el('h2', {}, 'PROFILE'),
-    el('div.field', {}, el('label', { htmlFor: 's-name' }, 'YOUR NAME'), nameInput),
-    el('div.field', {}, el('label', { htmlFor: 's-lang' }, 'TRANSLATION LANGUAGE'), langSelect),
-    el('div.field', {}, el('label', { htmlFor: 's-theme' }, 'THEME'), themeSelect),
-    el('div.field', {}, el('label', { htmlFor: 's-sound' }, 'ANSWER SOUNDS'), soundSelect),
-    el('div.field', {}, el('label', { htmlFor: 's-signal-hints' }, 'SIGNAL HINTS IN QUESTIONS'), signalSelect),
-    el('div.field', {}, el('label', { htmlFor: 's-goal' }, 'DAILY GOAL'), goalSelect),
+    el('h2', {}, t('st.profile')),
+    el('div.field', {}, el('label', { htmlFor: 's-name' }, t('st.yourName')), nameInput),
+    el('div.field', {}, el('label', { htmlFor: 's-lang' }, t('st.langLabel')), langSelect),
+    el('div.field', {}, el('label', { htmlFor: 's-theme' }, t('st.themeLabel')), themeSelect),
+    el('div.field', {}, el('label', { htmlFor: 's-sound' }, t('st.soundLabel')), soundSelect),
+    el('div.field', {}, el('label', { htmlFor: 's-signal-hints' }, t('st.hintsLabel')), signalSelect),
+    el('div.field', {}, el('label', { htmlFor: 's-goal' }, t('st.goalLabel')), goalSelect),
     el('div.actions', {},
       el('button.btn.btn-primary', {
         onclick: async (e) => {
@@ -226,53 +227,53 @@ export function renderSettings(root) {
             e.target.closest('.panel').prepend(errorBanner(err));
           }
         },
-      }, 'SAVE'),
+      }, t('st.save')),
     ),
   );
   clear(root,
-    el('h1', {}, 'SETTINGS'),
+    el('h1', {}, t('st.title')),
     profilePanel,
     progressPanel,
     el('div.panel', {},
-      el('h2', {}, 'BACKUP'),
-      el('p.lede', {}, 'Export and import your backup in the "Your progress" block above — it also tells you what erases your progress and when the last backup was.'),
+      el('h2', {}, t('st.backup')),
+      el('p.lede', {}, t('st.backupLede')),
     ),
     el('div.panel', { id: 'install-panel' }),
     el('div.panel', {},
-      el('h2', {}, 'OFFLINE MODE'),
-      el('p.lede', {}, 'DOWNLOAD THE WHOLE QUESTION BANK, THEORY AND SIGN IMAGES (~8 MB) TO STUDY WITHOUT INTERNET.'),
+      el('h2', {}, t('st.offline')),
+      el('p.lede', {}, t('st.offlineLede')),
       el('div.actions', { id: 'offline-actions' },
-        el('button.btn.btn-primary', { onclick: (e) => downloadForOffline(e.target) }, 'DOWNLOAD FOR OFFLINE'),
+        el('button.btn.btn-primary', { onclick: (e) => downloadForOffline(e.target) }, t('st.offlineBtn')),
       ),
     ),
     el('div.panel', {},
-      el('h2', {}, 'FEEDBACK'),
-      el('p.lede', {}, 'Found a mistake in a question or a translation, or have an idea? Write to us — we read every message.'),
+      el('h2', {}, t('st.feedback')),
+      el('p.lede', {}, t('st.feedbackLede')),
       el('div.actions', {},
-        el('a.btn.btn-primary', { href: feedbackHref('Passo feedback') }, 'WRITE TO US'),
+        el('a.btn.btn-primary', { href: feedbackHref('Passo feedback') }, t('st.writeUs')),
       ),
       el('p.stat-sub', {}, FEEDBACK_EMAIL),
     ),
     el('div.panel', {},
-      el('h2', {}, 'ABOUT'),
+      el('h2', {}, t('st.about')),
       el('div.row', {},
         el('div', { style: 'flex:1' },
           el('strong', {}, 'PASSO'),
-          el('p.stat-sub', {}, '7139 QUESTIONS · 25 LESSONS · NOT AN OFFICIAL APP'),
+          el('p.stat-sub', {}, t('st.aboutStats')),
         ),
       ),
       el('div.actions', {},
-        el('a.btn.btn-small', { href: '/credits.html' }, 'CREDITS & LICENCES'),
-        el('a.btn.btn-small', { href: '/privacy.html' }, 'PRIVACY'),
+        el('a.btn.btn-small', { href: '/credits.html' }, t('st.credits')),
+        el('a.btn.btn-small', { href: '/privacy.html' }, t('st.privacy')),
       ),
     ),
     el('div.panel', {},
-      el('h2', {}, 'DANGER ZONE'),
-      el('p.lede', {}, 'RESET WIPES ALL ANSWERS, MISTAKES, EXAMS AND STREAK. THERE IS NO UNDO.'),
+      el('h2', {}, t('st.danger')),
+      el('p.lede', {}, t('st.dangerLede')),
       el('div.actions', {},
         el('button.btn', {
           onclick: async (e) => {
-            if (!confirm('Reset ALL progress? This cannot be undone.')) return;
+            if (!confirm(t('st.resetConfirm'))) return;
             try {
               state.progress = await api.resetProgress();
               applyTheme();
@@ -281,7 +282,7 @@ export function renderSettings(root) {
               e.target.closest('.panel').prepend(errorBanner(err));
             }
           },
-        }, 'RESET ALL PROGRESS'),
+        }, t('st.resetBtn')),
       ),
     ),
   );

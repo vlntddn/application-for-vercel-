@@ -364,6 +364,26 @@ test('the mistakes review screen is localized: no hardcoded UI copy (Q4.2)', () 
   assert.match(views, /PRACTICE ALL MISTAKES/);
 });
 
+test('the settings screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2 slice 6: settings copy lives in i18n.js under st.* keys; the view
+  // only references keys, so ru/zh switch in without touching settings.js.
+  const views = readViewsSource();
+  const settings = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'settings.js'), 'utf8');
+  assert.match(settings, /t\('st\.title'\)/, 'page title must come from i18n');
+  assert.match(settings, /t\('st\.exportBackup'\)/, 'export button must come from i18n');
+  assert.match(settings, /t\('st\.resetConfirm'\)/, 'reset confirm must come from i18n');
+  assert.match(settings, /t\('st\.goalQuestions'/, 'goal options must come from i18n');
+  // No hardcoded English UI strings left in the view.
+  assert.ok(!settings.includes("'SETTINGS'"), 'no hardcoded page title');
+  assert.ok(!settings.includes("'YOUR PROGRESS'"), 'no hardcoded progress title');
+  assert.ok(!settings.includes("'Export backup'"), 'no hardcoded export button');
+  assert.ok(!settings.includes('What erases it'), 'no hardcoded erasing labels');
+  assert.ok(!settings.includes("'RESET ALL PROGRESS'"), 'no hardcoded reset button');
+  // English copy exists in the dictionary (the strings QA checks).
+  assert.match(views, /SETTINGS/);
+  assert.match(views, /Export backup/);
+});
+
 test('settings offers an install path on phones', () => {
   const views = readViewsSource();
   assert.match(views, /renderInstallPanel/);
@@ -377,19 +397,20 @@ test('settings offers an install path on phones', () => {
 test('settings explains where progress lives and how to back it up (S2.8a)', () => {
   const settings = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'settings.js'), 'utf8');
   // The "Your progress" block comes right after the profile panel.
-  assert.ok(settings.indexOf('YOUR PROGRESS') > -1, 'progress panel missing');
+  // S2.8a copy is now localized (Q4.2): the panel exists via the i18n key.
+  assert.ok(settings.indexOf("st.yourProgress") > -1, 'progress panel missing');
   const clearCall = settings.slice(settings.indexOf("clear(root,"));
   assert.ok(clearCall.indexOf("profilePanel") < clearCall.indexOf("progressPanel"),
     'progress panel must come after the profile panel');
   // The four erasing cases, and the last-backup date in localStorage.
-  assert.match(settings, /What erases it/);
+  assert.match(settings, /st\.erasesTitle/);
   // The backup storage moved to the shared module (S2.8a3); settings reads it.
   const common = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'common.js'), 'utf8');
   assert.match(common, /pp-last-backup/);
   assert.match(settings, /readLastBackup/);
-  // Export/import buttons live in the block.
-  assert.match(settings, /Export backup/);
-  assert.match(settings, /Import backup/);
+  // Export/import buttons live in the block (localized via i18n keys, Q4.2).
+  assert.match(settings, /st\.exportBackup/);
+  assert.match(settings, /st\.importBackup/);
   // The privacy strip links to the block.
   const index = fs.readFileSync(path.join(ROOT, 'public', 'index.html'), 'utf8');
   assert.match(index, /href="#\/settings"[^>]*>How it's kept/);
