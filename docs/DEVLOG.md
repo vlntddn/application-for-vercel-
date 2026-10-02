@@ -1,3 +1,90 @@
+## 2026-10-02 — Q4.2, срез 6: Настройки (settings) на 3 языках
+
+Ветка self-improve. Шестой срез Q4.2 — **страница настроек**
+(#/settings, views/settings.js, renderSettings + showStorageStatus /
+exportProgress / importProgressFile / downloadForOffline): заголовок,
+profile-панель (имя, язык, тема, звук, сигнальные подсказки, дневная цель,
+SAVE), progress-панель (хранилище, 4 случая стирания, экспорт/импорт
+бэкапа), панели BACKUP / OFFLINE MODE / FEEDBACK / ABOUT / DANGER ZONE.
+
+**Что.** Все видимые строки настроек переведены через t(st.…) на en/ru/zh:
+56 ключей в каждом словаре (заголовок, метки полей, опции select, статусы
+хранилища, lede всех панелей, кнопки, confirm-строки, прогресс
+офлайн-загрузки, статистика ABOUT). EN = байт-в-байт прежний хардкод
+(включая 7139 QUESTIONS · 25 LESSONS · NOT AN OFFICIAL APP).
+
+**Не тронуто намеренно.** Endonyms в select языка (ENGLISH/РУССКИЙ/中文) —
+native-названия, по дизайну не переводятся. Бренд PASSO в ABOUT — имя
+продукта. FEEDBACK_EMAIL — данные, не UI-копи.
+
+**Особенности с плейсхолдерами.** st.lastBackup {date}, st.goalQuestions
+{n}, st.importConfirm {answers}, st.imported {answers}, st.offlineData
+{done}/{total}, st.offlineImages {done}/{total}, st.aboutStats (числа —
+фикс-строкой в словаре).
+
+**Как.**
+- public/js/i18n.js: +56 ключей st.* в каждый из трёх словарей,
+  {…}-плейсхолдеры идентичны (i18n.test.mjs: паритет OK, 12/12).
+- public/js/views/settings.js: import { t } (строка 8), все литеральные
+  строки -> t(st.…); структура/class/id не тронуты.
+- public/sw.js: VERSION v84 -> v85 (cache-bust).
+- tests/security.test.js: S2.8a-гарант переписан на ключи i18n
+  (st.yourProgress, st.erasesTitle, st.exportBackup, st.importBackup)
+  вместо старых литералов; новый гарант «the settings screen is
+  localized: no hardcoded UI copy (Q4.2)» — view ссылается только на
+  t(st.…), старых литералов нет, EN-копи живёт в словаре.
+
+**Проверка.** scripts/verify.sh: zero deps, protected paths, sw VERSION
+bumped, npm test 205 passed (+1 новый), smoke 8/8 на :3917,
+qa-new-user 73 PASS / 0 FAIL — VERIFY OK. Коммит 25538aa.
+
+Следующий срез: финальный экран Q4.2 (срез 7+).
+
+## 2026-10-02 — Q4.2, срез 6: Настройки (settings) на 3 языках
+
+Ветка self-improve. Шестой срез Q4.2 — **страница настроек**
+(`#/settings`, views/settings.js, `renderSettings` + вспомогательные
+`showStorageStatus`/`exportProgress`/`importProgressFile`/
+`downloadForOffline`): заголовок, profile-панель (имя, язык, тема, звук,
+сигнальные подсказки, дневная цель, SAVE), progress-панель
+(хранилище, 4 случая стирания, экспорт/импорт бэкапа), панели
+BACKUP / OFFLINE MODE / FEEDBACK / ABOUT / DANGER ZONE.
+
+**Что.** Все видимые строки настроек переведены через `t('st.…')` на
+en/ru/zh: 56 ключей в каждом словаре (заголовок, метки полей, опции
+select'ов, статусы хранилища, lede всех панелей, кнопки, confirm-строки,
+прогресс офлайн-загрузки, статистика ABOUT). EN = байт-в-байт прежний
+хардкод (включая `7139 QUESTIONS · 25 LESSONS · NOT AN OFFICIAL APP`).
+
+**Не тронуто намеренно.** Endonyms в select'е языка
+(`ENGLISH`/`РУССКИЙ`/`中文`) — native-названия, по дизайну не
+переводятся. Бренд `PASSO` в ABOUT — имя продукта. `FEEDBACK_EMAIL` —
+данные, не UI-копи.
+
+**Особенности с плейсхолдерами.** `st.lastBackup {date|«никогда»}`,
+`st.goalQuestions {n}`, `st.importConfirm {answers}`, `st.imported
+{answers}`, `st.offlineData {done}/{total}`, `st.offlineImages
+{done}/{total}`, `st.aboutStats` (числа фикс-строкой в словаре).
+
+**Как.**
+- `public/js/i18n.js`: +56 ключей `st.*` в каждый из трёх словарей,
+  `{…}`-плейсхолдеры идентичны (i18n.test.mjs: паритет OK, 12/12).
+- `public/js/views/settings.js`: `import { t }` (строка 8), все
+  литеральные строки → `t('st.…')`; структура/class/id не тронуты.
+- `public/sw.js`: VERSION v84 → v85 (cache-bust).
+- `tests/security.test.js`: S2.8a-гарант переписан на ключи i18n
+  (`st.yourProgress`, `st.erasesTitle`, `st.exportBackup`,
+  `st.importBackup`) вместо старых литералов; новый гарант
+  «the settings screen is localized: no hardcoded UI copy (Q4.2)» —
+  view ссылается только на `t('st.…')`, старых литералов нет,
+  EN-копи живёт в словаре.
+
+**Проверка.** `scripts/verify.sh`: zero deps, protected paths, sw
+VERSION bumped, npm test 205 passed (+1 новый), smoke 8/8 на :3917,
+qa-new-user 73 PASS / 0 FAIL — VERIFY OK. Коммит 25538aa.
+
+Следующий срез: финальный экран Q4.2 (срез 7+).
+
 ## 2026-10-02 — Q4.2, срез 5: Ошибки (mistakes review) на 3 языках
 
 Ветка self-improve. Пятый срез Q4.2 — **страница «Ошибки»**
