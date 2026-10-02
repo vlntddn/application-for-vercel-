@@ -13,7 +13,7 @@
  *   replayed when the server responds again; other mutations error.
  */
 
-const VERSION = 'v86';
+const VERSION = 'v87';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 

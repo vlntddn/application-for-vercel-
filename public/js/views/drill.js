@@ -11,6 +11,7 @@ import {
 } from '../state.js';
 import { el, clear, svgIcon } from '../ui.js';
 import { playCorrect, playWrong } from '../sound.js';
+import { t } from '../i18n.js';
 import { errorBanner, translationOf, loc, translationArea, feedbackHref } from './common.js';
 import { signalQueue, signalSpans } from '../domain/learning.js';
 
@@ -18,7 +19,7 @@ const DRILL_SIZE = 20;
 const PER_SIDE = DRILL_SIZE / 2;
 
 export async function renderSignalDrill(root) {
-  clear(root, el('h1', {}, 'The language of the exam'), el('p.lede', {}, 'Loading signal words...'));
+  clear(root, el('h1', {}, t('dr.title')), el('p.lede', {}, t('dr.loading')));
   let insights, questions;
   try {
     [insights, questions] = await Promise.all([loadInsights(), loadAllQuestions()]);
@@ -29,7 +30,7 @@ export async function renderSignalDrill(root) {
   const falseCount = pool.filter((q) => q.is_true === false).length;
   const trueCount = pool.length - falseCount;
   if (pool.length !== DRILL_SIZE || falseCount !== PER_SIDE || trueCount !== PER_SIDE) {
-    return clear(root, errorBanner(new Error('Drill pool is incomplete')));
+    return clear(root, errorBanner(new Error(t('dr.poolError'))));
   }
 
   // trap-why по id вопроса: lessons.chapters[*].traps[] с id === question.id.
@@ -104,13 +105,13 @@ export async function renderSignalDrill(root) {
   function finish() {
     clear(root,
       el('div.panel', { style: 'text-align:center' },
-        el('h1', {}, 'Signal drill complete'),
+        el('h1', {}, t('dr.finishTitle')),
         el('p.stat-value.ok', {}, `${correctCount}/${total}`),
-        el('p.lede', {}, 'Correct answers'),
+        el('p.lede', {}, t('dr.correctAnswers')),
         el('div.actions', { style: 'justify-content:center' },
-          el('a.btn.btn-primary', { href: '#/drill/signals' }, 'ONE MORE ROUND'),
-          el('a.btn', { href: '#/exam-italian' }, 'THE EXAM GUIDE'),
-          el('a.btn', { href: '#/' }, 'DASHBOARD'),
+          el('a.btn.btn-primary', { href: '#/drill/signals' }, t('dr.oneMore')),
+          el('a.btn', { href: '#/exam-italian' }, t('dr.examGuide')),
+          el('a.btn', { href: '#/' }, t('pr.dashboard')),
         ),
       ),
     );
@@ -121,12 +122,12 @@ export async function renderSignalDrill(root) {
     if (!w) return null;
     const pct = Math.round(w.falseRatio * 100);
     const nodes = [el('p.signal-ratio', {},
-      `«${w.word}» — FALSO in ${pct}% of the bank`,
+      t('dr.falsoIn', { word: w.word, pct }),
     )];
     const trap = trapById.get(q.id);
     if (trap && q.is_true === true && trap.why) {
       nodes.push(el('p.signal-true', {},
-        `here it is TRUE because ${loc(trap.why)}`,
+        t('dr.trueBecause', { why: loc(trap.why) }),
       ));
     }
     return el('div.signal-notes', {}, ...nodes);
@@ -139,24 +140,25 @@ export async function renderSignalDrill(root) {
     },
       el('div.ds-feedback__head', {},
         svgIcon(lastCorrect ? 'check' : 'cross'),
-        lastCorrect ? 'Correct' : 'Not quite'),
+        lastCorrect ? t('dr.correct') : t('pr.notQuite')),
       lastCorrect
         ? null
-        : el('div.ds-feedback__answer', {}, `Right answer: ${q.is_true ? 'Vero' : 'Falso'}`),
+        : el('div.ds-feedback__answer', {},
+          t('pr.rightAnswer', { ans: q.is_true ? 'Vero' : 'Falso' })),
     );
     const note = signalNote(q);
     if (note) panel.append(note);
     panel.append(
       el('div.ds-feedback__actions', {},
         el('button.btn.btn-primary', { onclick: next },
-          index + 1 >= pool.length ? 'FINISH' : 'NEXT →'),
+          index + 1 >= pool.length ? t('dr.finish') : t('dr.next')),
       ),
       el('a.report-link', {
         href: feedbackHref(
-          'Passo: problem with question ' + q.id,
-          `Question: ${q.id}\n«${q.text_it}»\nCorrect answer in the app: ${q.is_true ? 'VERO' : 'FALSO'}\n\nWhat is wrong:\n`,
+          t('pr.reportSubject', { id: q.id }),
+          t('pr.reportBody', { id: q.id, text: q.text_it, ans: q.is_true ? 'VERO' : 'FALSO' }),
         ),
-      }, 'Report a problem with this question'),
+      }, t('pr.report')),
     );
     return panel;
   }
@@ -168,9 +170,9 @@ export async function renderSignalDrill(root) {
       const picked = chosenValue === value;
       const isRight = value === q.is_true;
       if (answered) {
-        if (picked && lastCorrect) { stateStr = 'ds-answer--ok'; word = 'Correct'; }
-        else if (picked && !lastCorrect) { stateStr = 'ds-answer--bad'; word = 'Wrong'; }
-        else if (!picked && !lastCorrect && isRight) { stateStr = 'ds-answer--reveal'; word = 'Right answer'; }
+        if (picked && lastCorrect) { stateStr = 'ds-answer--ok'; word = t('dr.correct'); }
+        else if (picked && !lastCorrect) { stateStr = 'ds-answer--bad'; word = t('dr.wrong'); }
+        else if (!picked && !lastCorrect && isRight) { stateStr = 'ds-answer--reveal'; word = t('dr.rightAnswerTag'); }
       }
       return el('button', {
         type: 'button',
@@ -194,20 +196,19 @@ export async function renderSignalDrill(root) {
     const q = pool[index];
     clear(root,
       offline
-        ? el('p.offline-note', { role: 'status' },
-          'Offline — answers saved on this device, will sync when the server is back')
+        ? el('p.offline-note', { role: 'status' }, t('pr.offline'))
         : null,
       el('div.quiz-head', {},
         el('a.btn', {
           href: '#/exam-italian',
           onclick: () => document.removeEventListener('keydown', keyHandler),
-        }, '← QUIT'),
-        el('span.quiz-progress', {}, `Signals — ${index + 1}/${total}`),
-        el('span.tag.ok', {}, `${correctCount} CORRECT`),
+        }, t('dr.quit')),
+        el('span.quiz-progress', {}, t('dr.progress', { current: index + 1, total })),
+        el('span.tag.ok', {}, t('dr.correctTag', { n: correctCount })),
       ),
       el('div.panel.question-card', {},
         q.image_url ? el('img.question-img', {
-          src: q.image_url, alt: 'Road sign / situation',
+          src: q.image_url, alt: t('pr.imgAlt'),
           onerror: (e) => e.target.remove(),
         }) : null,
         el('p.question-text', {}, ...questionText(q)),
@@ -216,8 +217,8 @@ export async function renderSignalDrill(root) {
         answered ? (feedbackPanel ??= buildFeedbackPanel(q)) : null,
         el('p.kbd-hint', {},
           answered
-            ? [el('kbd', {}, 'ENTER'), ' NEXT · ', el('kbd', {}, 'T'), ' TRANSLATE']
-            : [el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ', el('kbd', {}, 'T'), ' TRANSLATE'],
+            ? [el('kbd', {}, 'ENTER'), t('dr.kbdNext'), el('kbd', {}, 'T'), t('dr.kbdTranslate')]
+            : [el('kbd', {}, 'V'), t('dr.kbdTrue'), el('kbd', {}, 'F'), t('dr.kbdFalse'), el('kbd', {}, 'T'), t('dr.kbdTranslate')],
         ),
       ),
     );

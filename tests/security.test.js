@@ -407,6 +407,31 @@ test('the dictionary screen is localized: no hardcoded UI copy (Q4.2)', () => {
   assert.match(views, /Tap to reveal/);
 });
 
+test('the signal drill screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2 slice 7 (screen 2): drill copy lives in i18n.js under dr.* keys;
+  // shared copy reuses pr.* keys from slice 2. VERO/FALSO answer labels are
+  // exam data, not UI copy, so they stay hardcoded in the view.
+  const views = readViewsSource();
+  const drill = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'drill.js'), 'utf8');
+  assert.match(drill, /t\('dr\.title'\)/, 'page title must come from i18n');
+  assert.match(drill, /t\('dr\.falsoIn'/, 'FALSO ratio note must come from i18n');
+  assert.match(drill, /t\('dr\.progress'/, 'progress counter must come from i18n');
+  assert.match(drill, /t\('pr\.notQuite'\)/, 'feedback head must come from i18n');
+  assert.match(drill, /t\('pr\.report'\)/, 'report link must come from i18n');
+  // No hardcoded English UI strings left in the view.
+  assert.ok(!drill.includes("'The language of the exam'"), 'no hardcoded page title');
+  assert.ok(!drill.includes('FALSO in ${pct}% of the bank'), 'no hardcoded FALSO ratio');
+  assert.ok(!drill.includes("'Correct'"), 'no hardcoded feedback head');
+  assert.ok(!drill.includes("'Right answer'"), 'no hardcoded reveal tag');
+  assert.ok(!drill.includes("'Report a problem with this question'"), 'no hardcoded report link');
+  assert.ok(!drill.includes("'← QUIT'"), 'no hardcoded quit link');
+  assert.ok(!drill.includes('CORRECT`'), 'no hardcoded correct tag');
+  // English copy exists in the dictionaries (the strings QA checks).
+  assert.match(views, /The language of the exam/);
+  assert.match(views, /FALSO in \{pct\}% of the bank/);
+  assert.match(views, /Report a problem with this question/);
+});
+
 test('settings offers an install path on phones', () => {
   const views = readViewsSource();
   assert.match(views, /renderInstallPanel/);

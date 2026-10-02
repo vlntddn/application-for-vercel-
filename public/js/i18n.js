@@ -124,6 +124,30 @@ export const MESSAGES = {
     'pr.allTopics': 'ALL TOPICS',
     'pr.dashboard': 'DASHBOARD',
 
+    // Signal drill (Q4.2, screen 2). VERO/FALSO words are exam data, not UI copy.
+    'dr.title': 'The language of the exam',
+    'dr.loading': 'Loading signal words...',
+    'dr.poolError': 'Drill pool is incomplete',
+    'dr.finishTitle': 'Signal drill complete',
+    'dr.correctAnswers': 'Correct answers',
+    'dr.oneMore': 'ONE MORE ROUND',
+    'dr.examGuide': 'THE EXAM GUIDE',
+    'dr.falsoIn': '«{word}» — FALSO in {pct}% of the bank',
+    'dr.trueBecause': 'here it is TRUE because {why}',
+    'dr.correct': 'Correct',
+    'dr.wrong': 'Wrong',
+    'dr.rightAnswerTag': 'Right answer',
+    'dr.finish': 'FINISH',
+    'dr.next': 'NEXT →',
+    'dr.offline': 'Offline — answers saved on this device, will sync when the server is back',
+    'dr.quit': '← QUIT',
+    'dr.progress': 'Signals — {current}/{total}',
+    'dr.correctTag': '{n} CORRECT',
+    'dr.kbdTrue': ' VERO · ',
+    'dr.kbdFalse': ' FALSO · ',
+    'dr.kbdNext': ' NEXT · ',
+    'dr.kbdTranslate': ' TRANSLATE',
+
     // Mock exam: pre-start, session, result (Q4.2, screen 3/7).
     // Verdicts are double (Q4.2): the Italian verdict stays, the learner's
     // language explains it. EN keeps the historical bare verdict.
@@ -385,6 +409,30 @@ export const MESSAGES = {
     'pr.allTopics': 'ВСЕ ТЕМЫ',
     'pr.dashboard': 'ГЛАВНАЯ',
 
+    // Тренажёр сигналов (Q4.2, экран 2). Слова VERO/FALSO — данные экзамена, не UI-копи.
+    'dr.title': 'Язык экзамена',
+    'dr.loading': 'Загрузка слов-сигналов...',
+    'dr.poolError': 'Набор вопросов тренажёра неполный',
+    'dr.finishTitle': 'Тренажёр сигналов завершён',
+    'dr.correctAnswers': 'Правильных ответов',
+    'dr.oneMore': 'ЕЩЁ ОДИН РАУНД',
+    'dr.examGuide': 'РУКОВОДСТВО ПО ЭКЗАМЕНУ',
+    'dr.falsoIn': '«{word}» — FALSO в {pct}% банка',
+    'dr.trueBecause': 'здесь это TRUE, потому что {why}',
+    'dr.correct': 'Верно',
+    'dr.wrong': 'Неверно',
+    'dr.rightAnswerTag': 'Правильный ответ',
+    'dr.finish': 'ЗАВЕРШИТЬ',
+    'dr.next': 'ДАЛЕЕ →',
+    'dr.offline': 'Офлайн — ответы сохранены на этом устройстве, синхронизируются, когда сервер вернётся',
+    'dr.quit': '← ВЫЙТИ',
+    'dr.progress': 'Сигналы — {current}/{total}',
+    'dr.correctTag': '{n} ВЕРНО',
+    'dr.kbdTrue': ' VERO · ',
+    'dr.kbdFalse': ' FALSO · ',
+    'dr.kbdNext': ' ДАЛЕЕ · ',
+    'dr.kbdTranslate': ' ПЕРЕВОД',
+
     // Пробный экзамен: предстарт, сессия, результат (Q4.2, экран 3/7).
     // Вердикты — двойные (Q4.2): итальянский остаётся, язык ученика объясняет.
     'ex.title': 'ПРОБНЫЙ ЭКЗАМЕН',
@@ -644,6 +692,30 @@ export const MESSAGES = {
     'pr.oneMore': '再来一轮',
     'pr.allTopics': '全部主题',
     'pr.dashboard': '主页',
+
+    // 信号训练（Q4.2，第 2 屏）。VERO/FALSO 是考试数据，不是界面文案。
+    'dr.title': '考试的语言',
+    'dr.loading': '加载信号词...',
+    'dr.poolError': '训练题库不完整',
+    'dr.finishTitle': '信号训练完成',
+    'dr.correctAnswers': '答对的题目',
+    'dr.oneMore': '再来一轮',
+    'dr.examGuide': '考试指南',
+    'dr.falsoIn': '“{word}”在题库中 {pct}% 为 FALSO',
+    'dr.trueBecause': '此处为 TRUE，因为 {why}',
+    'dr.correct': '正确',
+    'dr.wrong': '错误',
+    'dr.rightAnswerTag': '正确答案',
+    'dr.finish': '完成',
+    'dr.next': '下一题 →',
+    'dr.offline': '离线 — 答案已保存在此设备上，服务器恢复后会同步',
+    'dr.quit': '← 退出',
+    'dr.progress': '信号词 — {current}/{total}',
+    'dr.correctTag': '{n} 题正确',
+    'dr.kbdTrue': ' VERO · ',
+    'dr.kbdFalse': ' FALSO · ',
+    'dr.kbdNext': ' 下一题 · ',
+    'dr.kbdTranslate': ' 翻译',
 
     // 模拟考试：考前说明、答题会话、结果页（Q4.2，第 3/7 屏）。
     // 判定为双语（Q4.2）：保留意大利语判定，学员语言作解释。
