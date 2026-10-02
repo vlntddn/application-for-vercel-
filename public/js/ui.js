@@ -39,7 +39,17 @@ export function svgIcon(kind) {
     ? 'M4 12.5l5 5 11-11'
     : kind === 'warn'
       ? 'M12 4L2.5 20h19L12 4zm0 5.5v4.5m0 3v.5'
-      : 'M6 6l12 12M18 6L6 18';
+      : kind === 'grid'    // practice by topic
+        ? 'M4 4h6.5v6.5H4zM13.5 4H20v6.5h-6.5zM4 13.5h6.5V20H4zM13.5 13.5H20V20h-6.5z'
+      : kind === 'book'    // theory
+        ? 'M5 4.5h9a3 3 0 013 3v12H8a3 3 0 00-3 3z'
+        : kind === 'chart' // stats
+        ? 'M5 20v-7M12 20V6M19 20v-4M3.5 20.5h17'
+        : kind === 'star'  // language of the exam
+        ? 'M12 4l2.2 4.8 5.3.6-4 3.5 1.1 5.2-4.6-2.8-4.6 2.8 1.1-5.2-4-3.5 5.3-.6z'
+        : kind === 'hash'  // the numbers
+        ? 'M9 4.5L7 19.5M17 4.5l-2 15M5 9.5h15M4 14.5h15'
+        : 'M6 6l12 12M18 6L6 18';
   path.setAttribute('d', d);
   svg.append(path);
   return svg;

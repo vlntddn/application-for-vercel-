@@ -771,7 +771,35 @@ kbd {
   }
 }
 
-.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+/* Q5 — dashboard is one column; the flex gap is the only spacing between
+   sections, so per-child bottom margins would double it. */
+.dashboard-stack { display: flex; flex-direction: column; gap: 24px; }
+.dashboard-stack > * { margin-bottom: 0; }
+
+/* Q5 — secondary actions as a 2x3 tile grid instead of a button row. */
+.action-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; }
+.action-tile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: var(--tap-min);
+  padding: 10px 12px;
+  background: var(--surface);
+  border: var(--border-3) solid var(--ink);
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  font: 700 13px/16px var(--font-sans);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 80ms ease, box-shadow 80ms ease, background-color 80ms ease;
+}
+.action-tile:hover { background: var(--surface-sunken); transform: translate(-1px, -1px); }
+.action-tile:active { transform: translate(3px, 3px); box-shadow: none; }
+.action-tile:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.action-tile__icon { flex: none; width: 20px; height: 20px; }
+.action-tile__icon .ic { width: 20px; height: 20px; }
+.action-tile__label { overflow: hidden; text-overflow: ellipsis; }
 
 /* ---------- Mobile ---------- */
 
@@ -840,7 +868,6 @@ kbd {
   .quiz-head { gap: 8px; }
   .quiz-head .btn { padding: 8px 12px; }
 
-  .actions .btn { flex: 1; text-align: center; }
 
   .kbd-hint { display: none; } /* no keyboard on phones */
 

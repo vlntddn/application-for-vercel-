@@ -1,6 +1,6 @@
 import { state, loadLessons } from '../state.js';
 import { el, clear, fmtDate, svgIcon } from '../ui.js';
-import { pathLinkCard } from './path.js';
+import { pathLinkCard, pathContinueTarget } from './path.js';
 import { topicLabel } from '../topics.js';
 import { detectMode, MODE } from '../api.js';
 import { isInstalled } from '../install.js';
@@ -11,7 +11,7 @@ import {
   shouldSuggestInstallReminder, readInstallDismissed, writeInstallDismissed,
 } from './common.js';
 import { dayKey, weekStrip } from './stats.js';
-import { examReadiness } from '../domain/learning.js';
+import { examReadiness, learningPath, nextStepAction } from '../domain/learning.js';
 import { t } from '../i18n.js';
 
 const EXAM_QUESTIONS = 30;
@@ -197,7 +197,7 @@ export function weakSpotsPanel() {
     .filter((c) => c.attempted && c.accuracy < 70)
     .sort((a, b) => a.accuracy - b.accuracy)
     .slice(0, 3);
-  return el('div.panel', { id: 'dashboard-exam-readiness', style: 'margin-top:24px' },
+  return el('div.panel', { id: 'dashboard-exam-readiness' },
     el('div.quiz-head', { style: 'margin-bottom:12px' },
       el('h2', { style: 'margin:0' }, t('db.weak.title')),
       el('span.tag', { className: `tag ${last.passed ? 'ok' : 'bad'}` },
@@ -226,6 +226,58 @@ export function weakSpotsPanel() {
 }
 
 /**
+ * Q5 — dashboard actions: ONE primary CTA (continue the path; a user who
+ * finished the whole path gets the mock exam) above a 2×3 grid of
+ * secondary tiles (icon + label). No button wall.
+ */
+function actionsPanel(stats) {
+  // Same target the learning-path card points at — one primary, same intent.
+  const lessons = state.lessons;
+  const path = lessons ? (() => { try { return learningPath(state.progress, state.manifest, lessons); } catch { return null; } })() : null;
+  let cta;
+  if (path && path.ready) {
+    cta = el('a.ds-btn.ds-btn--primary.ds-btn--lg', { href: '#/exam' }, t('db.actions.examCta'));
+  } else if (path) {
+    const step = path.steps[path.currentIndex];
+    const target = pathContinueTarget(step);
+    cta = el('a.ds-btn.ds-btn--primary.ds-btn--lg', { href: target },
+      nextStepAction(step) === 'practice'
+        ? t('pth.cardContinuePractice')
+        : t('pth.cardContinue'));
+  } else {
+    // No lessons loaded yet — path card is absent, CTA falls back to practice.
+    cta = el('a.ds-btn.ds-btn--primary.ds-btn--lg', { href: '#/practice' }, t('db.actions.practice'));
+  }
+  const tiles = [
+    { icon: 'check', href: '#/review', label: t('db.actions.quickReview', { n: REVIEW_SIZE }) },
+    { icon: 'grid', href: '#/practice', label: t('db.actions.practice') },
+    { icon: 'star', href: '#/drill/signals', label: t('db.actions.drill') },
+    { icon: 'hash', href: '#/numbers', label: t('db.actions.numbers') },
+    { icon: 'book', href: '#/theory', label: t('db.actions.theory') },
+    { icon: 'chart', href: '#/stats', label: t('db.actions.stats') },
+  ];
+  if (stats.mistakes > 0) {
+    // Replace the grid's last tile so the count stays visible — the grid
+    // stays 2 columns, no 7th tile dangling.
+    tiles[tiles.length - 1] = { icon: 'cross', href: '#/mistakes', label: t('db.actions.mistakes', { n: stats.mistakes }) };
+  }
+  return el('div.panel', { id: 'dashboard-actions' },
+    el('div.quiz-head', { style: 'margin-bottom:12px' },
+      el('h2', { style: 'margin:0' }, t('db.actions.title')),
+      el('span.tag', {}, t('db.actions.sub', { n: EXAM_QUESTIONS, min: EXAM_SECONDS / 60, errors: EXAM_MAX_ERRORS })),
+    ),
+    cta,
+    el('div.action-tiles', {},
+      ...tiles.map((tile) =>
+        el('a.action-tile', { href: tile.href },
+          el('span.action-tile__icon', {}, svgIcon(tile.icon)),
+          el('span.action-tile__label', {}, tile.label),
+        )),
+    ),
+  );
+}
+
+/**
  * Backup reminder (S2.8a3): enough answers + no fresh backup → one callout
  * with Export as the action; "Not now" hides it for a week (localStorage).
  */
@@ -247,7 +299,7 @@ export function backupReminderPanel() {
   const path = document.createElementNS(svgNS, 'path');
   path.setAttribute('d', 'M12 3l8 3v6c0 4.5-3.2 7.7-8 9-4.8-1.3-8-4.5-8-9V6z');
   svg.append(path);
-  return el('div.ds-callout', { id: 'backup-reminder', style: 'margin-top:24px' },
+  return el('div.ds-callout', { id: 'backup-reminder' },
     el('div.ds-callout__icon', {}, svg),
     el('div.ds-callout__body', {},
       el('span.ds-callout__title', {}, t('db.backup.title')),
@@ -272,7 +324,7 @@ export function installReminderPanel() {
   if (!shouldSuggestInstallReminder(navigator.userAgent, isInstalled(), readInstallDismissed(), Date.now())) {
     return null;
   }
-  return el('div.ds-callout', { id: 'install-reminder', style: 'margin-top:24px' },
+  return el('div.ds-callout', { id: 'install-reminder' },
     el('div.ds-callout__icon.ds-callout__icon--bad', {}, svgIcon('warn')),
     el('div.ds-callout__body', {},
       el('span.ds-callout__title', {}, t('db.install.title')),
@@ -311,53 +363,39 @@ export async function renderDashboard(root) {
   clear(root,
     el('h1', {}, profile.name ? t('db.greetingName', { name: profile.name }) : t('db.greeting')),
     el('p.lede', {}, t('db.lede')),
-
-    // One callout per section: install alert (iOS), then the backup
-    // reminder; both sit under the greeting, before the content.
-    installReminderPanel(),
-    backupReminderPanel(),
-
-    pathCard,
-
-    // A newcomer gets the next action instead of raw statistics
-    // (Phase 2.2); a user with practice history gets the week + goal
-    // panel and the Stat cards.
-    stats.answered === 0
-      ? nextStepsPanel()
-      : statsRow(week, daysThisWeek, answeredToday, goal, stats, total),
-    stats.answered > 0 ? reviewDuePanel() : null,
-    examReadinessPanel(),
-    exams.length > 0
-      ? weakSpotsPanel()
-      : null,
-    el('div.panel', { style: 'margin-top:24px' },
-      el('h2', {}, t('db.actions.title')),
-      el('p.lede', {}, t('db.actions.sub', { n: EXAM_QUESTIONS, min: EXAM_SECONDS / 60, errors: EXAM_MAX_ERRORS })),
-      el('div.actions', {},
-        el('a.btn.btn-primary.btn-big', { href: '#/exam' }, t('db.actions.exam')),
-        el('a.btn', { href: '#/review' }, t('db.actions.quickReview', { n: REVIEW_SIZE })),
-        el('a.btn', { href: '#/practice' }, t('db.actions.practice')),
-        el('a.btn', { href: '#/drill/signals' }, t('db.actions.drill')),
-        el('a.btn', { href: '#/numbers' }, t('db.actions.numbers')),
-        el('a.btn', { href: '#/theory' }, t('db.actions.theory')),
-        el('a.btn', { href: '#/stats' }, t('db.actions.stats')),
-        stats.mistakes > 0
-          ? el('a.btn', { href: '#/mistakes' }, t('db.actions.mistakes', { n: stats.mistakes }))
-          : null,
-      ),
-    ),
-    recentExams.length
-      ? el('div.panel', {},
-          el('h2', {}, t('db.recent.title')),
-          ...recentExams.map((e) =>
-            el('div.row', {},
-              el('span', {}, fmtDate(e.date)),
-              el('span', {}, t('db.recent.errors', { errors: e.errors, total: e.total })),
-              el('span.tag', { className: `tag ${e.passed ? 'ok' : 'bad'}` }, t(e.passed ? 'db.recent.passed' : 'db.recent.failed')),
+    // Q5: single column, 24px gap between sections — the gap is the
+    // only thing separating the cards (no ad-hoc inline margins).
+    el('div.dashboard-stack', {},
+      // One callout per section: install alert (iOS), then the backup
+      // reminder; both sit under the greeting, before the content.
+      installReminderPanel(),
+      backupReminderPanel(),
+      pathCard,
+      // A newcomer gets the next action instead of raw statistics
+      // (Phase 2.2); a user with practice history gets the week + goal
+      // panel and the Stat cards.
+      stats.answered === 0
+        ? nextStepsPanel()
+        : statsRow(week, daysThisWeek, answeredToday, goal, stats, total),
+      stats.answered > 0 ? reviewDuePanel() : null,
+      examReadinessPanel(),
+      exams.length > 0
+        ? weakSpotsPanel()
+        : null,
+      actionsPanel(stats),
+      recentExams.length
+        ? el('div.panel', {},
+            el('h2', {}, t('db.recent.title')),
+            ...recentExams.map((e) =>
+              el('div.row', {},
+                el('span', {}, fmtDate(e.date)),
+                el('span', {}, t('db.recent.errors', { errors: e.errors, total: e.total })),
+                el('span.tag', { className: `tag ${e.passed ? 'ok' : 'bad'}` }, t(e.passed ? 'db.recent.passed' : 'db.recent.failed')),
+              ),
             ),
-          ),
-        )
-      : null,
+          )
+        : null,
+    ),
   );
 }
 
