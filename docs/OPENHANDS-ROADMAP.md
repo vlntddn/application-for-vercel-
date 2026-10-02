@@ -668,13 +668,15 @@ _Точка обзора B (не блокирует): после L7 — те ж�
       *(закрыто S3.6: shouldRemind/REMIND_AFTER_MS в progress.js с тестами,
       dailyGoalReminderPanel в dashboard.js, dismiss-хелперы в common.js, .ds-callout__close
       в styles.css, 12 i18n-ключей en/ru/zh; см. DEVLOG 2026-10-02 S3.6)*
-- [ ] **S3.7a Стрик-щит: домен.** В `progress.js`: `streak.shields` (0..1).
+- [x] **S3.7a Стрик-щит: домен.** В `progress.js`: `streak.shields` (0..1).
       Правило: выполнил дневную цель (`dailyGoal`) → `shields = 1`. Пропущен ровно
       один день и `shields === 1` → стрик продолжается, `shields = 0`. Пропуск
       ≥ 2 дней → стрик = 1. Миграция: нет поля → 0. Валидация импорта: целое 0..1.
       Сначала **тесты** (5 случаев: цель выполнена; пропуск 1 день со щитом;
       без щита; пропуск 2 дня; импорт мусора → 422), потом код.
       *Проверка:* `node --test tests/progress.test.js`; verify OK.
+      *(закрыто 2026-10-02: `goalReachedOn()` + `streakShieldState()`, `shields`
+      в `streak`/миграции/импорте, 6 тестовых случаев; см. DEVLOG 2026-10-02 S3.7a)*
 - [ ] **S3.7b Стрик-щит: витрина.** На дашборде рядом с `DAYS IN A ROW` —
       значок щита, если `shields === 1`, с `aria-label`.
       *Проверка:* verify OK; скриншот дашборда.
