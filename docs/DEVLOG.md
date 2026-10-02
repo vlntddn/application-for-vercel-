@@ -1,3 +1,44 @@
+## 2026-10-02 — S4.2b: словарь +20 терминов (127 → 147)
+
+**Что.** Порция 2 Спринта 4: ещё 20 терминов en/ru/zh в 9 существующих
+разделов `data/dictionary.json` — segnaletica+3 (il segnale di divieto di
+sosta, lo stop, la segnaletica verticale), strada+3 (il guardrail,
+la corsia di accelerazione/decelerazione, il viadotto), manovre+3 (il
+cambio di marcia, l'attraversamento, la manovra in curva), sosta+2 (la
+sosta in doppia fila, il dissuasore di sosta), velocita+2 (l'eccesso di
+velocità, la velocità massima), veicoli+2 (il pneumatico, il cambio),
+documenti+1 (il libretto di circolazione), sicurezza+2 (la vittima, il
+casco di sicurezza), verbi+2 (fermare, arrestarsi).
+
+**Почему.** Продолжение Фазы 2 «107 → ~250»: после S4.2a (127) — вторая
+порция к ~147. Термины из top-300 `scripts/dictionary-candidates.mjs`, все
+проверены на уникальность против 127 существующих до записи. Разделы —
+только существующие; новых не создавал.
+
+**Как сделано.** Node-скрипт: чтение JSON → поиск блока `terms` каждой
+секции → вставка в конец (запятые между новыми строками + запятая у
+предыдущей последней строки) → запись с сохранением стиля. Diff: 29
+insertions, 9 deletions (только добавления + запятые последних строк),
+без trailing spaces.
+
+**Баг-лог скрипта (по пути к результату):** (1) depth-баланс квадратных
+скобок стартовал с 0, хотя открывающая `[` на строке `"terms": [` —
+посчитал на первом термине, блок «закрывался» на первом элементе →
+JSON.parse упал; фикс: старт depth=1. (2) между вставленными строками не
+ставил запятые кроме последней → «Expected ',' or ']'» на 2-м вставленном
+термине; фикс: запятая у всех, кроме последней. Оба падения были ДО записи
+(ре-парс перед fs.writeFileSync), файл не повреждался.
+
+**zh — требует вычитки носителем** (все 20 новых, правило S4.2).
+
+**Как проверено.** `node --test tests/dictionary.test.js` → 4 pass / 0 fail.
+Число терминов выросло ровно на 20 (127 → 147, проверка в скрипте до
+записи + `new Set(...it).size === total`). `scripts/verify.sh` → VERIFY OK
+(237 passed, smoke 8/200).
+
+**Следующая:** S4.2c (ещё ~20 терминов, → ~167) и, отдельно, S4.last —
+обновить счётчик «107 терминов» в UI/доках.
+
 ## 2026-10-02 — S4.2a: словарь +20 терминов (107 → 127)
 
 **Что.** Первая порция Спринта 4: 20 терминов en/ru/zh в 7 существующих
