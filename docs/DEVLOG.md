@@ -1,3 +1,31 @@
+## 2026-10-02 — Q4.2, срез 12: Quick Review (#/review) — перевод на 3 языка
+
+Ветка self-improve. Экран **Quick Review** (`#/review`, views/review.js) —
+«быстрый раунд» на 10 карточек (due-карты из spaced repetition, ошибки,
+слабые темы, retention) + панель «done». Срез перевёл весь UI-текст
+экрана через `t()` на en/ru/zh. Алгоритм подбора вопросов, data-слой и
+spaced-repetition-механика не тронуты.
+
+**Что.** Новые ключи `qr.*` в каждый из трёх словарей (title, loading,
+done-заголовок, perfect/misses-подпись, dashboard-кнопка, one-more-кнопка).
+EN = байт-в-байт прежний хардкод; RU/ZH — новые переводы (первый раз этот
+экран был только на EN).
+
+**Как.**
+- public/js/views/review.js: 5 строковых литералов (h1-заголовок, loading
+  lede, title сессии, done-заголовок, perfect/misses-подпись, DASHBOARD и
+  ONE MORE ROUND кнопки) → t('qr.*'); `correct===total ? 'qr.perfect' :
+  'qr.misses'` внутри `t(...)`.
+- public/js/i18n.js: +7 ключей qr.* в en/ru/zh (вставлены между ms.* и st.*);
+  i18n.test.mjs: паритет OK.
+- public/sw.js: VERSION v91 → v92 (публичный JS изменился).
+- tests/security.test.js: guard «the quick review screen is localized» —
+  каждый литерал экрана идёт через t(), англ. хардкод не остался, EN-копи
+  присутствуют в словаре.
+
+**Проверка.** scripts/verify.sh → VERIFY OK: 212 тестов (was 211 +1 guard),
+smoke 8/200, qa-new-user 73 PASS 0 FAIL.
+
 ## 2026-10-02 — Q4.2, срез 11: Numbers (#/numbers) — перевод на 3 языка
 
 Ветка self-improve. Экран **Numbers** (`#/numbers`, views/numbers.js) —
