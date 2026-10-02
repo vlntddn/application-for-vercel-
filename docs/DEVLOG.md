@@ -1,3 +1,21 @@
+## 2026-10-03 — S2.14a выполнена: 4 FAIL @375 устранены (2×p8 + 2×p5)
+
+**Что.** (a) p8: `.ds-answer` в mobile media query (styles.css ~948)
+`font: 900 20px/24px` → `font: 900 20px/40px`: line-height 40px, 1.6×40=64px =
+фактическая высота кнопки (min-height:64px). Вид не меняется — одна строка,
+центрируется. (b) p5: введён токен `--on-ok: #002b31` в светлой и в обеих
+dark-блоках (`:root`, `[data-theme="dark"]`, `[data-theme="auto"]` при
+prefers-color-scheme: dark); `.tag.ok` — `color: var(--on-ok)`. Контраст:
+по `--ok:#006b7a` (light) ≈ 9.2:1, по `--ok:#4fd0e0` (dark) ≈ 9.1:1 — оба
+значительно выше 4.5:1.
+
+**Как проверено.** `node scripts/qa-ux.mjs`: p5 0/28 FAIL, p8 0/28 FAIL
+(было 2+2). `scripts/verify.sh` → VERIFY OK (237 тестов, 8 endpoints,
+qa-new-user 77 PASS). Осталось 2× p7 (`#dashboard-next-steps`) — это S2.14b.
+
+**Push.** По-прежнему блокируется workflow scope (pre-existing с T4) —
+коммит копится локально, см. записи выше.
+
 ## 2026-10-02 — S2.14 разбита на S2.14a/b: диагностика 6 FAIL qa-ux (код не тронут)
 
 **Что.** S2.14 (🔒 «ждёт Q и U») — оба спринта закрыты, 🔒 снято. Задача не влезла в
