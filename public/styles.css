@@ -1548,6 +1548,10 @@ main:focus { outline: none; }
 
 .ds-stat__value--streak { color: var(--accent-ink); }
 .ds-stat__value--ok { color: var(--ok); }
+/* S3.7b: value + streak-shield badge on one baseline-aligned row. */
+.ds-stat__valrow { display: flex; align-items: center; gap: 8px; }
+.ds-stat__shield { display: grid; place-items: center; flex: none; color: var(--accent-ink); }
+.ds-stat__shield svg.ic { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .ds-stat__sub { margin: 0; font: 400 14px/20px var(--font-sans); color: var(--ink-muted); }
 
 /* WeekStrip: 7 cells, 44px tall, accent fill = goal met, today outlined. */

@@ -319,6 +319,12 @@ test('streak shield: goal earns a shield, one skipped day is forgiven (S3.7a)', 
   assert.equal(store.data.streak.current, 5, 'e2e: the skipped day cost nothing');
   assert.equal(store.data.streak.shields, 0);
   assert.equal(store.data.streak.lastDay, localDay(0), 'e2e: lastDay is the return day');
+
+  // 7. S3.7b: the snapshot exposes the unspent shield for the dashboard.
+  store.data.streak.shields = 1;
+  assert.equal(service.snapshot().stats.shield, 1, 'an unspent shield shows in stats');
+  store.data.streak.shields = 0;
+  assert.equal(service.snapshot().stats.shield, 0, 'no shield — stats.shield is 0');
 });
 
 test('streak shield: old snapshots default to 0, import validates 0..1 (S3.7a)', async () => {

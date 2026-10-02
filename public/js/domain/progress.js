@@ -395,6 +395,8 @@ export class ProgressService {
         examsPassed: passed,
         examSuccess: d.exams.length ? Math.round((passed / d.exams.length) * 100) : 0,
         streak: d.streak.current,
+        // S3.7b: the unspent streak shield, so the dashboard can show it.
+        shield: d.streak.shields === 1 ? 1 : 0,
       },
     };
   }

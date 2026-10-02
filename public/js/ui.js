@@ -49,7 +49,9 @@ export function svgIcon(kind) {
         ? 'M12 4l2.2 4.8 5.3.6-4 3.5 1.1 5.2-4.6-2.8-4.6 2.8 1.1-5.2-4-3.5 5.3-.6z'
         : kind === 'hash'  // the numbers
         ? 'M9 4.5L7 19.5M17 4.5l-2 15M5 9.5h15M4 14.5h15'
-        : 'M6 6l12 12M18 6L6 18';
+        : kind === 'shield' // streak shield (S3.7b)
+          ? 'M12 3l7 2.8v5.4c0 4.6-3 7.6-7 9.8-4-2.2-7-5.2-7-9.8V5.8L12 3z'
+          : 'M6 6l12 12M18 6L6 18';
   path.setAttribute('d', d);
   svg.append(path);
   return svg;

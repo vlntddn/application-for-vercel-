@@ -63,11 +63,16 @@ export function progressRing(current, goal, { size = 112, label = '' } = {}) {
   return wrap;
 }
 
-/** Stat card (design system): uppercase label, 44px value, one sub line. */
-function statCard(label, value, { valueClass = '', sub } = {}) {
+/** Stat card (design system): uppercase label, 44px value, one sub line.
+ *  `badge` — optional inline icon next to the value (S3.7b: the streak shield). */
+function statCard(label, value, { valueClass = '', sub, badge = null } = {}) {
   return el('div.ds-stat', {},
     el('span.ds-stat__label', {}, label),
-    el('span.ds-stat__value', { className: valueClass ? `ds-stat__value ${valueClass}` : 'ds-stat__value' }, value),
+    badge
+      ? el('span.ds-stat__valrow', {},
+          el('span.ds-stat__value', { className: valueClass ? `ds-stat__value ${valueClass}` : 'ds-stat__value' }, value),
+          badge)
+      : el('span.ds-stat__value', { className: valueClass ? `ds-stat__value ${valueClass}` : 'ds-stat__value' }, value),
     el('p.ds-stat__sub', {}, sub),
   );
 }
@@ -114,6 +119,10 @@ function statsRow(week, daysThisWeek, answeredToday, goal, stats, total) {
     el('div.ds-stat-row', { 'data-testid': 'dashboard-stats' },
       statCard(t('db.stat.streak'), String(stats.streak), {
         valueClass: 'ds-stat__value--streak',
+        // S3.7b: unspent shield — one skipped day will be forgiven.
+        badge: stats.shield === 1
+          ? el('span.ds-stat__shield', { role: 'img', 'aria-label': t('db.stat.shieldAria') }, svgIcon('shield'))
+          : null,
         sub: stats.streak === 1 ? t('db.stat.streakOne') : t('db.stat.streakMany'),
       }),
       statCard(t('db.stat.mastered'), String(stats.mastered), {
