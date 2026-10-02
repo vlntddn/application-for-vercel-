@@ -1,3 +1,37 @@
+## 2026-10-02 — Q4.2, срез 15: Экран статистики (#/stats) — перевод на 3 языка
+
+Ветка self-improve. Экран **статистики** (`#/stats`, `renderStats` +
+`activityHeatmap` в views/stats.js). UI: заголовок + подзаголовок,
+3 карточки (mastered / overall accuracy / exam success), heatmap
+активности за 90 дней (заголовок, легенда, aria, месяцы, тултипы ячеек),
+секция слабых тем (пустая и заполненная), тренд мок-экзаменов, панель
+«все темы». Срез перевёл весь UI-текст через `t('ss.*')` на en/ru/zh.
+Экспорт `dayKey`/`weekStrip` (используются dashboard.js) не трогал.
+
+**Что.** Новые ключи `ss.*` (30 шт.) в каждый из трёх словарей:
+title, backDashboard, lede, mastered, masteredOf, overallAccuracy,
+tried, examSuccess, examsPassed, activityTitle, activityEmpty,
+activitySummary, heatAria, heatCell, heatCellNone, legendLess,
+legendMore, months, weakTitle, weakTitleEmpty, weakEmpty, practice,
+startPractice, masteredPct, notTried, trendTitle, trendLede, trendCell,
+allTopics, topicProgress.
+EN = байт-в-байт прежний хардкод (месяцы «JAN,FEB,…»);
+RU/ZH — новые переводы. Константа `HEAT_MONTHS` удалена — месяцы берутся
+из `t('ss.months')` (split по запятой), чтобы подписи календаря были
+локализованы.
+
+**Как.**
+- public/js/views/stats.js: +импорт `t`; ~35 строковых литералов
+  renderStats + activityHeatmap → t('ss.*'); удалён HEAT_MONTHS.
+- public/js/i18n.js: +30 ключей ss.* в каждый из en/ru/zh
+  (блок после st.resetConfirm).
+- public/sw.js: VERSION v94 → v95.
+- tests/security.test.js: +guard-тест «the stats screen is localized»
+  (6 t('ss.*')-assert + 7 «нет хардкода»).
+
+**Проверка.** scripts/verify.sh → VERIFY OK (215 test, qa-new-user
+73 PASS / 0 FAIL, SW-bump, i18n-разметка по плейсхолдерам).
+
 ## 2026-10-02 — Q4.2, срез 14: Глава теории (#/theory/:id) + Sign Modal — перевод на 3 языка
 
 Ветка self-improve. Экран **главы теории** (`#/theory/:id`,
