@@ -140,6 +140,7 @@ export function renderSettings(root) {
   const themeSelect = el('select', { id: 's-theme' },
     el('option', { value: 'light', textContent: t('st.themeLight') }),
     el('option', { value: 'dark', textContent: t('st.themeDark') }),
+    el('option', { value: 'auto', textContent: t('st.themeAuto') }),
   );
   themeSelect.value = profile.theme;
   const soundSelect = el('select', { id: 's-sound' },

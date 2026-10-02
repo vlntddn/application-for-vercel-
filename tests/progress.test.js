@@ -14,10 +14,16 @@ function makeService() {
 }
 
 test('profile updates validate name, language and theme', async () => {
-  const { service } = makeService();
+  const { service, store } = makeService();
+  // S3.3: a brand-new profile starts on the 'auto' theme.
+  assert.equal(store.data.profile.theme, 'auto', 'new profile defaults to auto');
+
   const profile = await service.updateProfile({ name: '  Anna  ', language: 'ru', theme: 'dark', onboarded: true });
   assert.equal(profile.name, 'Anna');
   assert.equal(profile.language, 'ru');
+
+  const autoProfile = await service.updateProfile({ theme: 'auto' });
+  assert.equal(autoProfile.theme, 'auto', 'auto is accepted');
 
   await assert.rejects(() => service.updateProfile({ language: 'it' }), ValidationError);
   await assert.rejects(() => service.updateProfile({ theme: 'neon' }), ValidationError);

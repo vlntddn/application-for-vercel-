@@ -122,6 +122,40 @@
   --shadow-md: 6px 6px 0 #f4f1ea;
 }
 
+/* S3.3: 'auto' theme — follow the OS. Light by default (the :root values
+   apply); in dark mode use exactly the [data-theme="dark"] variables. Kept
+   1:1 with the dark block on purpose — do not hand-edit one without the
+   other. */
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] {
+    --paper: #0c0c0c;
+    --surface: #1a1a1a;
+    --surface-sunken: #121212;
+    --ink: #f4f1ea;
+    --ink-muted: #b5b0a5;
+    --line-soft: #2e2e2e;
+    --on-ink: #0c0c0c;
+    --accent-ink: #ff7a3d;
+    --accent-soft: #3a1a0d;
+    --ok: #4fd0e0;
+    --ok-soft: #0c2f35;
+    --bad: #ff7b96;
+    --bad-soft: #3a0f1a;
+    --warn-ink: #ffd000;
+    --warn-soft: #3a3000;
+    --focus: #7aa2ff;
+    /* activity heat map, low to high */
+    --heat-0: #262626;
+    --heat-1: #5c2c14;
+    --heat-2: #93431c;
+    --heat-3: #c25a20;
+    --heat-4: #ff4d00;
+
+    --shadow-sm: 3px 3px 0 #f4f1ea;
+    --shadow-md: 6px 6px 0 #f4f1ea;
+  }
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {

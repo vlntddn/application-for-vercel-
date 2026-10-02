@@ -1,7 +1,7 @@
 import { PATH_MINI_PASS, PATH_CHECK_QUESTIONS } from './learning.js';
 
 export const LANGUAGES = ['en', 'ru', 'zh'];
-export const THEMES = ['light', 'dark'];
+export const THEMES = ['light', 'dark', 'auto'];
 export const SIGNAL_HINT_MODES = ['auto', 'on', 'off'];
 
 // The daily-goal ring on the dashboard: how many questions a day the user
@@ -33,7 +33,7 @@ export const MASTERY_STREAK = 2;
 
 export const EMPTY_PROGRESS = {
   version: SCHEMA_VERSION,
-  profile: { name: '', language: 'en', theme: 'light', sound: true, dailyGoal: DAILY_GOAL_DEFAULT, signalHints: 'auto', onboarded: false },
+  profile: { name: '', language: 'en', theme: 'auto', sound: true, dailyGoal: DAILY_GOAL_DEFAULT, signalHints: 'auto', onboarded: false },
   answers: {}, // questionId -> { correct, wrong, lastCorrect, last, streak, due }
   mistakes: [], // questionIds currently answered wrong
   exams: [], // { date, total, errors, passed }
@@ -165,7 +165,11 @@ export function migrateProgress(raw) {
   if (isPlainObject(p)) {
     if (typeof p.name === 'string') out.profile.name = p.name.slice(0, NAME_MAX);
     if (LANGUAGES.includes(p.language)) out.profile.language = p.language;
+    // A valid stored theme is kept as-is (old profiles are not migrated). A
+    // corrupted value falls back to an explicit 'light' — never to 'auto',
+    // which is only the default for genuinely new profiles.
     if (THEMES.includes(p.theme)) out.profile.theme = p.theme;
+    else out.profile.theme = 'light';
     if (typeof p.sound === 'boolean') out.profile.sound = p.sound;
     // A snapshot written before the goal was configurable simply gets the
     // default; a broken value is dropped rather than trusted.
