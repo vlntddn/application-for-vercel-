@@ -16,6 +16,18 @@
 **Проверка.** Тест прогнан 10 раз подряд — 0 падений; полный
 `scripts/verify.sh` → `VERIFY OK` (236 passed, smoke 8/8).
 
+> **⚠️ PUSH-БЛОКЕР (не этот фикс, pre-existing).** `git push origin
+> self-improve` снова отклонён GitHub: `refusing to allow a Personal Access
+> Token to create or update workflow '.github/workflows/ci.yml' without
+> 'workflow' scope`. Оба коммита этого запуска (`a05e89f` fix-тест, этот
+> docs-коммит) workflow-файлы не трогают. Блокёр — тот же pre-existing
+> `a70235a` (T4, e2e-джоб), который изменил `.github/workflows/ci.yml` и всё
+> ещё не запушен (git push уносит всю цепочку unpushed-коммитов разом).
+> **Действие для владельца:** дать PAT scope `workflow`, затем
+> `git push origin self-improve` унесёт весь стек локально-готовых и
+> верифицированных коммитов. Фикс flaky-теста локально готов и верифицирован
+> (VERIFY OK).
+
 ## 2026-10-02 — S3.7a закрыта: Стрик-щит, домен (один пропущенный день прощается)
 
 **Что.** За день, в который число ответов достигло `dailyGoal`, ученик
