@@ -1,3 +1,35 @@
+## 2026-10-02 — S3.1 закрыта: плашка «Доступна новая версия» при обновлении SW
+
+**Что.** `public/js/main.js` — в блоке регистрации SW: слушатель `updatefound`,
+который на `statechange` нового worker в `installed` **и** при наличии
+`controller` (т.е. это апгрейд, а не первый инсталл) **и** `navigator.onLine`
+показывает плашку `NEW VERSION · RELOAD` (через `el()`, класс
+`ds-notice ds-notice--new`, вставляется перед `<main id="view">` — та же
+анатомия, что у privacy-notice). Кнопка → `location.reload()`. Плюс
+`registration.update()` на `visibilitychange → visible`, не чаще раза в 10 мин
+(`lastUpdateCheck`); офлайн — молча (и `onLine`-guard на показе, и `.catch`
+на `update()`). `public/js/i18n.js`: `nv.title`/`nv.reload` в en/ru/zh
+(тест i18n-полноты требует все 3 языка). `public/styles.css`: `.ds-notice--new`
+— акцентная версия базовой плашки (файл помечен как binary для редактора,
+правка через sed). `public/sw.js`: VERSION `v106 → v107` (verify требует bump
+при правке public/). `tests/security.test.js`: 2 теста — (1) main.js содержит
+`updatefound`, `registration?.update()`, `location.reload()`, `navigator.onLine`,
+i18n-ключи `nv.*`, класс `ds-notice--new`; (2) `nv.title`/`nv.reload` непустые
+во всех 3 языках.
+
+**Проверка.** `node --test tests/security.test.js tests/i18n.test.mjs` →
+55 pass, 0 fail (включая 2 новых). `scripts/verify.sh` → VERIFY OK (npm test
+224 passed, smoke 8/8 :3917, qa-new-user 73 PASS, 0 FAIL).
+
+**Ручная (описание).** Локально открыть :3917, дождаться инсталла SW, поднять
+`VERSION` в sw.js (v107→v108), перезагрузить страницу, потом вернуться во
+вкладку (нажать в неё из дашборда / переключить на десктопе) — при `visible`
+срабатывает `registration.update()`, новый worker уходит в `installed` при
+живом `controller` → плашка `ДОСТУПНА НОВАЯ ВЕРСИЯ · ОБНОВИТЬ`. Клик →
+`location.reload()` → актуальный shell. Офлайн: `update()` no-op + `onLine`-guard
+→ плашки нет.
+
+---
 ## 2026-10-02 — T4 закрыта: QA-сценарии в CI (e2e-джоб, qa-ux --strict, CHROME_PATH)
 
 **Что.** `.github/workflows/ci.yml`: новый job `e2e` (ubuntu-latest, Node 22,
