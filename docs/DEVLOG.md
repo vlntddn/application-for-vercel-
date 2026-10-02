@@ -1,3 +1,25 @@
+## 2026-10-03 — S2.14b выполнена: p7 next-steps закрыт, qa-ux 0 FAIL на обоих вьюпортах
+
+**Что.** (a) p7 @375 — `#dashboard-next-steps` bottom 848px > 812: в `public/styles.css`
+добавлен mobile-блок `@media (max-width: 480px)` — padding панели `10px→8px`,
+margin подзаголовка `10px→8px`, CTA `.ds-btn--lg min-height` сохранён 48px (tap-min).
+(b) p7 @1280 «панель отсутствует» — **ложное срабатывание тест-харнеса**, а не баг
+dashboard.js: `checkOnboarding` сбрасывает профиль (DELETE) перед каждым вьюпортом,
+но `completeOnboarding()` кликался только на 1-м вьюпорте, поэтому на @1280 дашборд
+рендерил онбординг вместо панели. Исправлено в `scripts/qa-ux.mjs`: онбординг
+проходится в каждом вьюпорте. (в) p8 @1280 ×2 — тоже ложное: `max(height, min-height)`
+теперь учитывает намеренный тач-таргет `.ds-answer` (min-height 72px, одна строка 28px)
+и больше не считает его «переносом текста»; реальный multi-line wrap по-прежнему ловится.
+`public/sw.js` v116→v117 (менялся public/). dashboard.js не тронут.
+
+**Как проверено.** `node scripts/qa-ux.mjs`: **224 PASS, 0 FAIL** (10 маршрутов +
+онбординг, 2 вьюпорта). `scripts/verify.sh` → VERIFY OK (zero-deps ✓, protected paths ✓,
+sw bump ✓, translations ✓, npm test 237 ✓, smoke 8/8 ✓). Скриншоты 375px всех экранов
+(11 шт.) в `/tmp/pp-ux/` (375-dashboard.png, …, 375-settings.png).
+
+**Push.** `git push origin self-improve` по-прежнему блокируется workflow-scope
+(pre-existing с T4) — коммиты копятся локально, см. записи выше.
+
 ## 2026-10-03 — S2.14a выполнена: 4 FAIL @375 устранены (2×p8 + 2×p5)
 
 **Что.** (a) p8: `.ds-answer` в mobile media query (styles.css ~948)
