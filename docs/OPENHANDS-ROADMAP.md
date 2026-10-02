@@ -685,7 +685,7 @@ _Точка обзора B (не блокирует): после L7 — те ж�
       `streak` (EMPTY_PROGRESS, `streakShieldState`, migrate, import-валидация,
       `stats.streakBest` в snapshot) + тесты.
       *Проверка:* `node --test tests/progress.test.js`, verify OK.
-- [ ] **S3.9b Экран «Рекорды».** Маршрут `#/records` (ссылка из `#/stats`, не
+- [x] **S3.9b Экран «Рекорды».** Маршрут `#/records` (ссылка из `#/stats`, не
       в нижнее меню — там уже 5 пунктов). Макс. стрик (S3.9a), лучший экзамен,
       всего ответов, терминов словаря в self-test «выучено». Lede-строка в
       стиле остальных экранов.

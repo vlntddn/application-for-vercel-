@@ -1,3 +1,28 @@
+## 2026-10-02 — S3.9b: экран «Рекорды» (#/records)
+
+**Что.** Экран вечных рекордов (S3.9b, вторая половина S3.9): новый файл
+`public/js/views/records.js`, маршрут `#/records` в `main.js`, реэкспорт в
+`views.js`, ссылка-кнопка «РЕКОРДЫ» в шапке `#/stats` (`views/stats.js`,
+рядом с «← ДАШБОРД»). Четыре карточки `ds-stat` (2×2 через
+`.ds-stat-row--records` в `styles.css`): самая длинная серия
+(`stats.streakBest` из S3.9a), лучший экзамен (минимум ошибок, дата через
+`fmtDate`), всего ответов (`stats.answered`), терминов словаря в self-test
+(сумма `section.terms` из `data/dictionary.json`). Lede-строка в стиле
+остальных экранов, i18n `rd.*` + `ss.records` в en/ru/zh. Bump sw
+v114→v115, `/js/views/records.js` в SHELL. В `qa-new-user.mjs` — шаг 9b:
+ровно одна ссылка `#/records` на статистике, 4 карточки, заголовок виден.
+Возвращена с незакоммиченным стейтом упавшего запуска (stash
+`abandoned-run 2026-10-02T19:03`), добавлен `fmtDate` для даты экзамена.
+
+**Как проверено.** `scripts/verify.sh` → VERIFY OK (237 passed, smoke 8/200,
+qa-new-user 77 PASS / 0 FAIL, включая новый шаг 9b).
+
+**PUSH.** Коммиты сделаны локально, но `git push origin self-improve`
+отклонён: в стеке незапушенных коммитов есть pre-existing `a70235a` (T4),
+меняющий `.github/workflows/ci.yml`, а PAT без scope `workflow`. Те же
+коммиты S3.9b чисто (не трогает workflow) — блок только от pre-existing T4.
+Решение владельца: запушить стеком токеном с `workflow`-scope.
+
 ## 2026-10-02 — S3.9a: домен `streak.best` (максимум стрика)
 
 **Что.** Экран «Рекорды» (S3.9) разбит на S3.9a/S3.9b: сначала домен. В
