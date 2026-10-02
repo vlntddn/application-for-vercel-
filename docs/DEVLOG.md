@@ -1,3 +1,39 @@
+## 2026-10-02 — Q4.2, срез 14: Глава теории (#/theory/:id) + Sign Modal — перевод на 3 языка
+
+Ветка self-improve. Экран **главы теории** (`#/theory/:id`,
+`renderTheoryChapter` в views/theory.js) + модальное окно знака
+(`showSignModal`). UI: заголовок главы, in-this-lesson, key ideas,
+original text, must-know facts, traps (trick-вопросы), сетка знаков,
+ссылки на словарь, чек-панель, mark-as-read, навигация между главами;
+модал: «WHAT THIS SIGN MEANS», «PRACTICE THIS SIGN (N Q)».
+Срез перевёл весь UI-текст через `t('tc.*')` на en/ru/zh.
+`renderExamItalian` (другой маршрут) за рамками среза.
+
+**Что.** Новые ключи `tc.*` (39 шт.) в каждый из трёх словарей:
+allChapters, chapterOf, keyIdeas, originalText, mustKnow, trickTitle,
+trickLede, revealTrap, fullGuide, signsInChapter, tapSign, showSign,
+roadSign, vocabOfChapter, terms, open, checkYourself, questionsInTopic,
+quickCheck, fullPractice, markRead, markedRead, prevCap, nextCap,
+read, new, notFound, checkTitle, whatThisSign, signPractice,
+practiceSign, close, lessonLede, translationLabel, inThisLesson,
+signPracticeTitle, signPracticeSub.
+EN = байт-в-байт прежний хардкод; RU/ZH — новые переводы.
+VERO/FALSO оставлены литералами (язык экзамена).
+
+**Как.**
+- public/js/views/theory.js: +импорт `t`; ~30 строковых литералов
+  renderTheoryChapter + showSignModal → t('tc.*'); fix: `.btn-icon`
+  вместо `[aria-label="Close"]` (модал не имел aria-label); fix:
+  shadowing `traps.map((tr,i))` вместо `(t,i)` (тень t()); данные
+  (title_it, translations, text_it, why) не тронуты.
+- public/js/i18n.js: +39 ключей tc.* в en/ru/zh (после th.mastered).
+- public/sw.js: VERSION v93 → v94.
+- tests/security.test.js: guard «the theory chapter screen is localized»
+  — 12 t('tc.*') ассертов + 12 no-hardcoded + 3 EN-копи в словаре.
+
+**Проверка.** scripts/verify.sh → VERIFY OK: 214 тестов (was 213 +1 guard),
+smoke 8/200, qa-new-user 73 PASS 0 FAIL.
+
 ## 2026-10-02 — Q4.2, срез 13: Список теории (#/theory) — перевод на 3 языка
 
 Ветка self-improve. Экран **списка теории** (`#/theory`, `renderTheoryList`
