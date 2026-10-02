@@ -1,3 +1,18 @@
+## 2026-10-02 — T3 закрыта: weekStrip/dayKey вынесены в views/widgets.js
+
+**Что.** Чистый перенос кода (T3): `dayKey` и `weekStrip` переехали из
+`stats.js` в новый `public/js/views/widgets.js` — теперь главный экран
+(`dashboard.js`) и экран статистики (`stats.js`) импортируют их оттуда,
+экран больше не зависит от экрана. `widgets.js` добавлен в SHELL в
+`public/sw.js`, VERSION v105 → v106. TODO.md T3 не фигурирует — там не
+отмечалось.
+
+**Проверка.** grep: пользователи хелперов — только widgets.js, dashboard.js,
+stats.js. `scripts/verify.sh` → VERIFY OK (npm test 222 passed; smoke :3917;
+qa-new-user 73 PASS / 0 FAIL).
+
+---
+
 ## 2026-10-02 — U7 закрыта: названия глав в #/numbers + без счётчика для фактов без вопросов
 
 **Что.** `public/js/views/numbers.js`:
