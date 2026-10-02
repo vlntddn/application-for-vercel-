@@ -1,3 +1,40 @@
+## 2026-10-02 — Q4.2, срез 7 (первый экран): Словарь (dictionary) на 3 языках
+
+Ветка self-improve. Срез 7 Q4.2 — **остальные экраны** (по одному за
+запуск). Первый из них — **словарь** (`#/dictionary`,
+views/dictionary.js, `renderDictionary`): заголовок DIZIONARIO, lede,
+кнопка ← THEORY, переключатель SELF-TEST, тег «N TERMS» по секциям,
+подсказка «Tap to reveal» и aria-label перевода.
+
+**Что.** Все видимые строки словаря переведены через `t('dict.…')` на
+en/ru/zh: 9 ключей в каждом словаре (dict.title, dict.lede,
+dict.loading, dict.backTheory, dict.selfTestOn/Off, dict.terms {n},
+dict.tapToReveal, dict.revealAria {term}). EN = байт-в-байт прежний
+хардкод; RU/zh — переводы. Заголовок в RU = «СЛОВАРЬ» (не итальянский
+«DIZIONARIO», чтобы экран не выглядел «итальянским» в русском языке).
+
+**Не тронуто намеренно.** Italian-термины (term.it) и названия секций
+sec.title_it — это ДАННЫЕ словаря (что ученик должен выучить), не
+UI-копи; переводится только оболочка экрана. Подзаголовки секций уже
+локализованы (sec.titles[lang()]).
+
+**Как.**
+- public/js/i18n.js: +9 ключей dict.* в каждый из трёх словарей,
+  плейсхолдеры {n}/{term} идентичны (i18n.test.mjs: паритет OK, 12/12).
+- public/js/views/dictionary.js: import { t } (строка 4), все литеральные
+  строки -> t(dict.…); параметр map'а `t` переименован в `term` (он
+  затенял импорт t). Структура/class/id не тронуты.
+- public/sw.js: VERSION v85 -> v86 (cache-bust).
+- tests/security.test.js: новый гарант «the dictionary screen is
+  localized: no hardcoded UI copy (Q4.2)» — view ссылается только на
+  t(dict.…), старых литералов нет, EN-копи живёт в словаре.
+
+**Проверка.** scripts/verify.sh: zero deps, protected paths, sw VERSION
+bumped, npm test 206 passed (+1 новый), smoke 8/8 на :3917,
+qa-new-user 73 PASS / 0 FAIL — VERIFY OK. Коммит e5413cf.
+
+Остались экраны среза 7: drill, numbers, search, stats, theory, review.
+
 ## 2026-10-02 — Q4.2, срез 6: Настройки (settings) на 3 языках
 
 Ветка self-improve. Шестой срез Q4.2 — **страница настроек**
