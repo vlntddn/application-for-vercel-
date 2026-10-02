@@ -15,7 +15,7 @@ import { el, clear, svgIcon } from '../ui.js';
 import { t } from '../i18n.js';
 import { CATEGORY_CHAPTER } from '../theory-map.js';
 import { playCorrect, playWrong } from '../sound.js';
-import { errorBanner, translationOf, loc, lang, pickQueue, queueOrder, masteryOf, categoryStats, translationArea, PRACTICE_BATCH, feedbackHref } from './common.js';
+import { errorBanner, translationOf, loc, lang, pickQueue, queueOrder, masteryOf, categoryStats, translationArea, PRACTICE_BATCH, feedbackHref, shareButton } from './common.js';
 import {
   introQueue as domainIntroQueue,
   INTRO_QUESTIONS,
@@ -607,6 +607,7 @@ export async function renderPracticeSession(root, slug) {
             el('a.btn.btn-primary', { href: `#/practice/${slug}`, onclick: () => renderPracticeSession(root, slug) }, t('pr.oneMore')),
             el('a.btn', { href: '#/practice' }, t('pr.allTopics')),
             el('a.btn', { href: '#/' }, t('pr.dashboard')),
+            shareButton({ kind: 'session', total, errors: total - correct }),
           ),
         ),
       );

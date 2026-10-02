@@ -1,7 +1,7 @@
 import { loadAllQuestions, loadExplanations, loadLessons, loadTheory, recordAnswersResilient, recordExamResilient, shuffle, slugForQuestionId } from '../state.js';
 import { el, clear, fmtTime, svgIcon } from '../ui.js';
 import { t } from '../i18n.js';
-import { errorBanner, translationOf, translationArea, lang } from './common.js';
+import { errorBanner, translationOf, translationArea, lang, shareButton } from './common.js';
 import { CATEGORY_CHAPTER } from '../theory-map.js';
 
 const EXAM_QUESTIONS = 30;
@@ -133,6 +133,7 @@ function runExam(root, questions) {
           el('button.btn.btn-primary', { onclick: () => renderExam(root) }, t('ex.tryAgain')),
           wrongOnes.length ? el('a.btn', { href: '#/mistakes' }, t('ex.reviewMistakes')) : null,
           el('a.btn', { href: '#/' }, t('ex.dashboard')),
+          shareButton({ kind: 'exam', total: questions.length, errors }),
         ),
       ),
       wrongOnes.length

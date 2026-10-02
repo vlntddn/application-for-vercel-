@@ -550,3 +550,55 @@ test('the snapshot reports how many cards are due for review today', async () =>
   service.store.data.answers.q2.due = dayOffset(0); // one due today, one overdue
   assert.equal(service.snapshot().stats.reviewDue, 2);
 });
+
+// S3.5 — shareText: share text for exam/session results.
+import { shareText } from '../public/js/domain/progress.js';
+
+test('shareText: exam result in ru (spec example and plurals)', () => {
+  assert.equal(
+    shareText({ kind: 'exam', total: 30, errors: 3, lang: 'ru' }),
+    'Пройден пробный экзамен: 27/30, 3 ошибки — Passo',
+  );
+  assert.equal(
+    shareText({ kind: 'exam', total: 30, errors: 1, lang: 'ru' }),
+    'Пройден пробный экзамен: 29/30, 1 ошибка — Passo',
+  );
+  assert.equal(
+    shareText({ kind: 'exam', total: 30, errors: 5, lang: 'ru' }),
+    'Пройден пробный экзамен: 25/30, 5 ошибок — Passo',
+  );
+  assert.equal(
+    shareText({ kind: 'exam', total: 30, errors: 0, lang: 'ru' }),
+    'Пройден пробный экзамен: 30/30, без ошибок — Passo',
+  );
+});
+
+test('shareText: exam result in en and zh, no URL', () => {
+  const en = shareText({ kind: 'exam', total: 30, errors: 3, lang: 'en' });
+  assert.equal(en, 'Mock exam completed: 27/30, 3 errors — Passo');
+  assert.equal(en, shareText({ kind: 'exam', total: 30, errors: 3 })); // lang defaults to en
+  const zh = shareText({ kind: 'exam', total: 30, errors: 3, lang: 'zh' });
+  assert.ok(zh.includes('27/30') && zh.includes('Passo'), `zh text: ${zh}`);
+  for (const s of [en, zh, shareText({ kind: 'exam', total: 30, errors: 3, lang: 'ru' })]) {
+    assert.ok(!/https?:\/\//.test(s), `share text must not contain a URL: ${s}`);
+  }
+});
+
+test('shareText: session result', () => {
+  assert.equal(
+    shareText({ kind: 'session', total: 20, errors: 2, lang: 'ru' }),
+    'Тренировка: 18/20 правильных — Passo',
+  );
+  assert.equal(
+    shareText({ kind: 'session', total: 20, errors: 2, lang: 'en' }),
+    'Practice session: 18/20 correct — Passo',
+  );
+});
+
+test('shareText: invalid input throws ValidationError', () => {
+  assert.throws(() => shareText(null), ValidationError);
+  assert.throws(() => shareText({ kind: 'quiz', total: 30, errors: 3 }), ValidationError);
+  assert.throws(() => shareText({ kind: 'exam', total: 0, errors: 0 }), ValidationError);
+  assert.throws(() => shareText({ kind: 'exam', total: 30, errors: 31 }), ValidationError);
+  assert.throws(() => shareText({ kind: 'exam', total: 30, errors: -1 }), ValidationError);
+});

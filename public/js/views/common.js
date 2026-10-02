@@ -2,7 +2,8 @@
 // (Sprint 1, S1.2) — pure code move, no behavior change.
 import { state, shuffle } from '../state.js';
 import { el } from '../ui.js';
-import { DAILY_GOAL_DEFAULT } from '../domain/progress.js';
+import { DAILY_GOAL_DEFAULT, shareText } from '../domain/progress.js';
+import { t } from '../i18n.js';
 import { queueOrder as domainQueueOrder, masteryOf as domainMasteryOf, categoryStats as domainCategoryStats } from '../domain/learning.js';
 
 /** Size of one practice batch (dashboard hint, practice queue, search practice). */
@@ -171,6 +172,46 @@ export function shouldSuggestBackup(stats, lastBackupAt, dismissedAt, now) {
 /** Owner's feedback address (2026-09-29). mailto: opens the user's own mail app —
  *  nothing is sent by Passo itself. */
 export const FEEDBACK_EMAIL = 'hello@studiodudin.com';
+
+// S3.5 — SHARE button for result screens (exam, session complete).
+// navigator.share when available, else clipboard + toast. When neither
+// exists the button is hidden (returns null).
+
+function shareAvailable() {
+  return typeof navigator !== 'undefined' &&
+    (typeof navigator.share === 'function' ||
+      (typeof navigator.clipboard !== 'undefined' && typeof navigator.clipboard.writeText === 'function'));
+}
+
+function showCopiedToast() {
+  const toast = el('p.share-copied', { role: 'status' }, t('sh.copied'));
+  document.body.append(toast);
+  setTimeout(() => toast.remove(), 2000);
+}
+
+/** SHARE button: Web Share API first, clipboard+toast as fallback. */
+export function shareButton(result) {
+  if (!shareAvailable()) return null;
+  return el('button.btn', {
+    onclick: async () => {
+      const text = shareText({ ...result, lang: lang() });
+      if (typeof navigator.share === 'function') {
+        try {
+          await navigator.share({ text });
+          return;
+        } catch (err) {
+          if (err && (err.name === 'AbortError' || err.name === 'NotAllowedError')) return;
+        }
+      }
+      try {
+        await navigator.clipboard.writeText(text);
+        showCopiedToast();
+      } catch {
+        // clipboard blocked (permissions, insecure context) — nothing else we can do
+      }
+    },
+  }, t('sh.btn'));
+}
 
 /** mailto: link with a prefilled subject (and optional body). */
 export function feedbackHref(subject, body = '') {

@@ -149,6 +149,50 @@ function cleanDays(value, cap) {
 }
 
 /**
+ * S3.5 — share text for the exam and session result screens.
+ * No URL on purpose: the app is privacy-first (CSP 'self', "nothing
+ * leaves the device"), so the text is a plain sentence with the app
+ * name as the only brand. Pure function — covered by tests.
+ */
+export const SHARE_APP_NAME = 'Passo';
+
+/** Russian plural for «ошибка» (0/1/2-4/5+), e.g. 3 ошибки, 5 ошибок. */
+function ruErrorWord(n) {
+  if (n === 0) return 'без ошибок';
+  if (n === 1) return '1 ошибка';
+  const d10 = n % 10, d100 = n % 100;
+  if (d10 >= 2 && d10 <= 4 && (d100 < 12 || d100 > 14)) return `${n} ошибки`;
+  return `${n} ошибок`;
+}
+
+export function shareText(result) {
+  if (!isPlainObject(result)) {
+    throw new ValidationError('shareText: result must be an object');
+  }
+  const { kind, total, errors, lang } = result;
+  if (kind !== 'exam' && kind !== 'session') {
+    throw new ValidationError('shareText: "kind" must be "exam" or "session"');
+  }
+  if (!Number.isInteger(total) || total < 1) {
+    throw new ValidationError('shareText: "total" must be a positive integer');
+  }
+  if (!Number.isInteger(errors) || errors < 0 || errors > total) {
+    throw new ValidationError('shareText: "errors" must be an integer between 0 and total');
+  }
+  const correct = total - errors;
+  const l = LANGUAGES.includes(lang) ? lang : 'en';
+
+  if (kind === 'exam') {
+    if (l === 'ru') return `Пройден пробный экзамен: ${correct}/${total}, ${ruErrorWord(errors)} — ${SHARE_APP_NAME}`;
+    if (l === 'zh') return `模拟考试完成：${correct}/${total}，${errors === 0 ? '无错误' : `错误 ${errors} 个`} — ${SHARE_APP_NAME}`;
+    return `Mock exam completed: ${correct}/${total}, ${errors === 0 ? 'no errors' : errors === 1 ? '1 error' : `${errors} errors`} — ${SHARE_APP_NAME}`;
+  }
+  if (l === 'ru') return `Тренировка: ${correct}/${total} правильных — ${SHARE_APP_NAME}`;
+  if (l === 'zh') return `练习：${correct}/${total} 答对 — ${SHARE_APP_NAME}`;
+  return `Practice session: ${correct}/${total} correct — ${SHARE_APP_NAME}`;
+}
+
+/**
  * Brings a stored snapshot up to the current shape.
  *
  * Unlike importProgress(), which rejects a bad file so the user is told,
