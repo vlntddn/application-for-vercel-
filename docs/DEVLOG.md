@@ -1,3 +1,17 @@
+## 2026-10-02 — S3.7b: витрина стрик-щита на дашборде
+
+**Что.** На дашборде в карточке `DAYS IN A ROW` рядом с числом — иконка
+щита, когда есть неиспользованный стрик-щит (`stats.streak.shields === 1`).
+`snapshot().stats.shield` (0/1) добавлен в домен (`progress.js`), иконка
+`svgIcon('shield')` в `ui.js`, `aria-label` из i18n-ключа
+`db.stat.shieldAria` (en/ru/zh), стили `.ds-stat__valrow` / `.ds-stat__shield`
+в `styles.css`, bump sw v112→v113. Тест в `tests/progress.test.js`:
+`stats.shield` отражает неиспользованный щит.
+
+**Как проверено.** `node --test tests/progress.test.js` — pass;
+`scripts/verify.sh` → VERIFY OK (236 passed, smoke 8/200, qa-new-user 73/0).
+Скриншот не снимался: щит виден только после выполнения дневной цели.
+
 ## 2026-10-02 — Flaky-тест latestActivity: фикс fixtures (gate-починка)
 
 **Что.** `scripts/verify.sh` падал ДО изменений запуска: тест
