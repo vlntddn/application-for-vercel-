@@ -803,6 +803,21 @@ kbd {
   padding-right: var(--space-3);
 }
 
+/* S3.6 — the daily nudge's close control: a square icon button (44x44 for
+ * the touch target) that sits to the right of the primary action. */
+.ds-callout__close {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: var(--surface);
+  color: var(--ink);
+  border: var(--border-3) solid var(--ink);
+  cursor: pointer;
+}
+.ds-callout__close .ic { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
 @media (max-width: 760px) {
   .ds-callout { flex-wrap: wrap; }
   .ds-callout__body { flex: 1 1 calc(100% - 56px - 24px); }

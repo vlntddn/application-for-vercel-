@@ -67,6 +67,19 @@ export function translationArea(translation, revealed, onReveal) {
     `TRANSLATE (${lang().toUpperCase()})`);
 }
 
+/**
+ * S3.6 — the dashboard nudge is closed with a cross "until the end of the
+ * day": the dismissed calendar day (YYYY-MM-DD, local) is compared against
+ * today, so the banner reappears on the next day automatically. UI metadata,
+ * not progress; localStorage, try/catch.
+ */
+export function readDailyReminderDismissed() {
+  try { return localStorage.getItem('pp-daily-remind-dismissed'); } catch { return null; }
+}
+export function writeDailyReminderDismissed(day) {
+  try { localStorage.setItem('pp-daily-remind-dismissed', day); } catch { /* private mode */ }
+}
+
 /** Last export date — UI metadata, not progress; localStorage, try/catch. */
 export function readLastBackup() {
   try { return localStorage.getItem('pp-last-backup'); } catch { return null; }

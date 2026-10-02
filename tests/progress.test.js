@@ -534,6 +534,41 @@ test('dueReview picks cards whose review day has come, oldest due first', async 
   assert.deepEqual(dueReview({}), []);
 });
 
+// S3.6 — the dashboard nudge: below today's goal AND away for ≥ 12h.
+import { shouldRemind, latestActivity, REMIND_AFTER_MS } from '../public/js/domain/progress.js';
+
+function remindProgress({ answeredToday = 0, last = '', goal = 20 } = {}) {
+  const rec = last ? { last } : undefined;
+  return {
+    profile: { dailyGoal: goal },
+    dailyAnswers: answeredToday ? { [dayOffset(0)]: answeredToday } : {},
+    answers: rec ? { q: rec } : {},
+  };
+}
+const at = (h) => new Date(Date.now() - h * 60 * 60 * 1000).toISOString();
+
+test('shouldRemind: below goal + away ≥12h shows, otherwise hidden (S3.6)', () => {
+  assert.equal(shouldRemind(remindProgress({ last: at(13) })), true, '13h away, goal missed');
+  assert.equal(shouldRemind(remindProgress({ last: at(11.9) })), false, '11.9h away — not inactive yet');
+  assert.equal(shouldRemind(remindProgress({ last: at(0) })), false, 'just answered');
+  assert.equal(shouldRemind(remindProgress({ last: at(30), answeredToday: 20 })), false, 'goal already reached today');
+  assert.equal(shouldRemind(remindProgress({ last: at(30), answeredToday: 19, goal: 20 })), true, 'one short of the goal');
+  assert.equal(shouldRemind(remindProgress({ last: at(30), answeredToday: 50, goal: 20 })), false, 'over the goal');
+  assert.equal(shouldRemind(remindProgress({})), true, 'fresh profile, never answered');
+  assert.equal(shouldRemind(remindProgress({ last: 'garbage-string' })), true, 'unparseable last counts as long away');
+  assert.equal(shouldRemind(null), false, 'no progress -> no nudge');
+  // last was 15h ago; if we evaluate at 6h ago (now = real - 6h), elapsed = 9h < 12h
+  assert.equal(shouldRemind(remindProgress({ last: at(15) }), Date.now() - REMIND_AFTER_MS / 2), false, 'explicit now: only 9h away then');
+});
+
+test('latestActivity: newest answer timestamp, ignores junk (S3.6)', () => {
+  assert.equal(latestActivity({}), '');
+  assert.equal(latestActivity({ q: { last: '' } }), '');
+  assert.equal(latestActivity({ a: { last: at(24) }, b: { last: at(1) } }), at(1));
+  assert.equal(latestActivity({ a: { last: 'nonsense' }, b: { last: at(5) } }), at(5));
+  assert.equal(latestActivity(null), '');
+});
+
 test('the snapshot reports how many cards are due for review today', async () => {
   const { service } = makeService();
   assert.equal(service.snapshot().stats.reviewDue, 0, 'nothing answered -> nothing due');

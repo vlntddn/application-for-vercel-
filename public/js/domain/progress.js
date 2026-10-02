@@ -122,6 +122,35 @@ export function addDays(from, n, date = new Date()) {
 
 const isDay = (v) => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v);
 
+/** S3.6 — "last activity" is the latest answer timestamp in `answers`. */
+export function latestActivity(answers) {
+  let max = '';
+  if (answers && typeof answers === 'object') {
+    for (const rec of Object.values(answers)) {
+      const last = rec && typeof rec.last === 'string' ? rec.last : '';
+      if (Date.parse(last) > 0 && last > max) max = last;
+    }
+  }
+  return max;
+}
+
+/** S3.6 — a learner "counts as inactive" once this much time has passed. */
+export const REMIND_AFTER_MS = 12 * 60 * 60 * 1000;
+
+/**
+ * S3.6 — show the dashboard reminder when the learner has not reached today's
+ * goal AND has been away for REMIND_AFTER_MS (or never answered at all).
+ * A fresh profile has no `last` timestamps, so it is treated as "long away".
+ */
+export function shouldRemind(progress, now = Date.now()) {
+  if (!progress || typeof progress !== 'object') return false;
+  const answeredToday = (progress.dailyAnswers && progress.dailyAnswers[today()]) || 0;
+  const goal = Number(progress.profile && progress.profile.dailyGoal) || DAILY_GOAL_DEFAULT;
+  if (answeredToday >= goal) return false;
+  const last = latestActivity(progress.answers);
+  return last === '' || now - Date.parse(last) >= REMIND_AFTER_MS;
+}
+
 /**
  * L6a — recovers the spaced-repetition fields of an answer record.
  * Records written before `streak`/`due` existed are re-derived:

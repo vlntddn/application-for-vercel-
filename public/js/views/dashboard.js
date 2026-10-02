@@ -9,9 +9,11 @@ import {
   shouldSuggestBackup, readLastBackup, readBackupDismissed,
   writeBackupDismissed, exportProgressSnapshot,
   shouldSuggestInstallReminder, readInstallDismissed, writeInstallDismissed,
+  readDailyReminderDismissed, writeDailyReminderDismissed,
 } from './common.js';
 import { dayKey, weekStrip } from './widgets.js';
 import { examReadiness, learningPath, nextStepAction } from '../domain/learning.js';
+import { shouldRemind } from '../domain/progress.js';
 import { t } from '../i18n.js';
 
 const EXAM_QUESTIONS = 30;
@@ -341,6 +343,35 @@ export function installReminderPanel() {
   );
 }
 
+/**
+ * S3.6 — in-app nudge: goal not reached today AND away for ≥ 12h. In-app only
+ * (no push, per owner). The cross closes it for the rest of the day; the
+ * banner comes back the next day on its own.
+ */
+export function dailyGoalReminderPanel() {
+  if (!shouldRemind(state.progress)) return null;
+  const today = dayKey(new Date());
+  if (readDailyReminderDismissed() === today) return null;
+  // START goes to quick review when something is due (that is the natural
+  // "get back in" path), otherwise to practice.
+  const startHref = (state.progress.stats?.reviewDue ?? 0) > 0 ? '#/review' : '#/practice';
+  const close = (e) => {
+    writeDailyReminderDismissed(today);
+    e.target.closest('.ds-callout')?.remove();
+  };
+  return el('div.ds-callout', { id: 'daily-reminder' },
+    el('div.ds-callout__icon', {}, svgIcon('warn')),
+    el('div.ds-callout__body', {},
+      el('span.ds-callout__title', {}, t('db.remd.title', { done: state.progress.dailyAnswers?.[today] ?? 0, goal: dailyGoal() })),
+      el('p.ds-callout__text', {}, t('db.remd.text')),
+    ),
+    el('div.ds-callout__action', {},
+      el('a.ds-btn.ds-btn--primary', { href: startHref }, t('db.remd.start')),
+      el('button.ds-callout__close', { 'aria-label': t('db.remd.closeAria'), onclick: close }, svgIcon('x')),
+    ),
+  );
+}
+
 export async function renderDashboard(root) {
   const { profile, stats, exams } = state.progress;
   const total = state.manifest.totalQuestions;
@@ -370,6 +401,7 @@ export async function renderDashboard(root) {
     el('div.dashboard-stack', {},
       // One callout per section: install alert (iOS), then the backup
       // reminder; both sit under the greeting, before the content.
+      dailyGoalReminderPanel(),
       installReminderPanel(),
       backupReminderPanel(),
       pathCard,
