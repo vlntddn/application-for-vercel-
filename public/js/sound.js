@@ -9,6 +9,8 @@ import { state } from './state.js';
 let ctx = null;
 
 function audioContext() {
+  // No `window` outside the browser (Node test runs) — stay silent.
+  if (typeof window === 'undefined') return null;
   const Ctx = window.AudioContext || window.webkitAudioContext;
   if (!Ctx) return null;
   if (!ctx) ctx = new Ctx();
@@ -39,12 +41,29 @@ function blip(notes) {
   }
 }
 
+/**
+ * Haptic feedback alongside the blips. Only fires when the profile allows it
+ * and the device supports `navigator.vibrate`; otherwise a silent no-op.
+ * Some platforms throw on unexpected patterns, so vibration is best-effort.
+ */
+function vibrate(pattern) {
+  if (!enabled()) return;
+  if (typeof navigator === 'undefined' || typeof navigator.vibrate !== 'function') return;
+  try {
+    navigator.vibrate(pattern);
+  } catch {
+    // Ignore — haptics must never break the answer flow.
+  }
+}
+
 /** Rising major third — short and dry. */
 export function playCorrect() {
   blip([[660, 0, 0.09], [880, 0.09, 0.12]]);
+  vibrate([30]);
 }
 
 /** Single low buzz — unmistakably wrong, not punishing. */
 export function playWrong() {
   blip([[160, 0, 0.22]]);
+  vibrate([60, 40, 60]);
 }
