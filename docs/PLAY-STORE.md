@@ -145,7 +145,7 @@ WHAT'S INSIDE
 • "The Italian of the exam": a guide to the words that decide VERO or FALSO
 • Real trap questions from the bank, dissected one by one
 • Every road sign explained, built from the true statements about it
-• An exam vocabulary of 107 terms with a self-test mode
+• An exam vocabulary of 147 terms with a self-test mode
 
 HOW IT HELPS YOU IMPROVE
 • Practice by topic — unseen and previously wrong questions come first

@@ -118,7 +118,7 @@ npm test         # built-in node:test runner
   then your weakest topics, then long-unseen questions for retention.
 - **Search** — full-text across all 7139 questions in Italian and your
   language, accent-insensitive; practice the results as a session.
-- **Dictionary** — exam vocabulary in 9 thematic sections (107 terms,
+- **Dictionary** — exam vocabulary in 9 thematic sections (147 terms,
   EN/RU/ZH) with a self-test mode; sign descriptions on tap, built from
   true statements in the question bank.
 - **Progress & stats** — per-topic accuracy and mastery, weak-spot ranking
