@@ -1,7 +1,8 @@
-import { loadAllQuestions, recordAnswersResilient, recordExamResilient, shuffle } from '../state.js';
+import { loadAllQuestions, loadExplanations, loadLessons, loadTheory, recordAnswersResilient, recordExamResilient, shuffle, slugForQuestionId } from '../state.js';
 import { el, clear, fmtTime, svgIcon } from '../ui.js';
 import { t } from '../i18n.js';
-import { errorBanner, translationOf, translationArea } from './common.js';
+import { errorBanner, translationOf, translationArea, lang } from './common.js';
+import { CATEGORY_CHAPTER } from '../theory-map.js';
 
 const EXAM_QUESTIONS = 30;
 const EXAM_SECONDS = 20 * 60;
@@ -116,7 +117,9 @@ function runExam(root, questions) {
       root.prepend(errorBanner(err));
     }
 
-    const wrongOnes = questions.filter((q, i) => chosen[i] !== q.is_true);
+    const wrongOnes = questions
+      .map((q, i) => ({ q, pick: chosen[i] }))
+      .filter(({ q, pick }) => pick !== q.is_true);
     clear(root,
       synced
         ? null
@@ -126,7 +129,7 @@ function runExam(root, questions) {
         el('p.stat-value', { className: `stat-value ${passed ? 'ok' : 'accent'}` },
           t('ex.errorsN', { n: errors })),
         el('p.lede', {}, t('ex.errorsOf', { total: questions.length, limit: EXAM_MAX_ERRORS })),
-        el('div.actions', { style: 'justify-content:center' },
+        el('div.actions.exam-result-actions', { style: 'justify-content:center' },
           el('button.btn.btn-primary', { onclick: () => renderExam(root) }, t('ex.tryAgain')),
           wrongOnes.length ? el('a.btn', { href: '#/mistakes' }, t('ex.reviewMistakes')) : null,
           el('a.btn', { href: '#/' }, t('ex.dashboard')),
@@ -135,15 +138,53 @@ function runExam(root, questions) {
       wrongOnes.length
         ? el('div.panel', {},
             el('h2', {}, t('ex.wrongTitle')),
-            ...wrongOnes.map((q) =>
-              el('div.row', {},
-                el('span', { style: 'flex:1' }, q.text_it),
-                el('span.tag.bad', {}, t('ex.answerTag', { ans: q.is_true ? 'VERO' : 'FALSO' })),
+            ...wrongOnes.map(({ q, pick }) =>
+              el('div.row.ex-wrong-row', {},
+                el('span.ex-wrong-text', {},
+                  q.text_it,
+                  el('span.ex-wrong-tags', {},
+                    el('span.tag.bad', {}, t('ex.yourTag', { ans: pick ? 'VERO' : 'FALSO' })),
+                    el('span.tag.ok', {}, t('ex.rightTag', { ans: q.is_true ? 'VERO' : 'FALSO' })),
+                  ),
+                ),
+                whyLink(q),
               ),
             ),
           )
         : null,
     );
+  }
+
+  /** Q6: «Why?» link to the theory chapter that teaches this question —
+   *  only when we actually have an explanation (a lesson trap or an L9a
+   *  explanation entry). Fire-and-forget: the link appears once the data
+   *  resolves, or the row stays without one. */
+  function whyLink(question) {
+    const span = el('span.ex-wrong-why');
+    (async () => {
+      const slug = slugForQuestionId(question.id);
+      const chapterId = slug ? CATEGORY_CHAPTER[slug] : null;
+      if (!chapterId) return;
+      let hasExplanation = false;
+      try {
+        const lesson = (await loadLessons()).chapters?.[chapterId];
+        hasExplanation = (lesson?.traps || []).some((tr) => tr.id === question.id && tr.why);
+      } catch { /* no lesson → fall through to explanations */ }
+      if (!hasExplanation) {
+        try {
+          const file = await loadExplanations(slug);
+          hasExplanation = Boolean(file?.items?.[question.id]);
+        } catch { /* missing explanation file */ }
+      }
+      if (!hasExplanation) return;
+      const theory = await loadTheory().catch(() => null);
+      const chapter = (Array.isArray(theory) ? theory : theory?.chapters || []).find?.((c) => c.id === chapterId);
+      const title = chapter?.translations?.[lang()]?.title || chapter?.title_it;
+      const link = el('a.ex-wrong-why__link', { href: `#/theory/${chapterId}` }, t('ex.why'));
+      if (title) link.title = title;
+      span.append(link);
+    })();
+    return span;
   }
 
   function draw() {

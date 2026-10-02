@@ -778,6 +778,30 @@ kbd {
 
 /* Q5 — secondary actions as a 2x3 tile grid instead of a button row. */
 .action-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 16px; }
+
+/* Q6 — exam result actions: one full-width button per line, so «DASHBOARD»
+   and the long «РАЗБРАТЬ ОШИБКИ» never overflow at 375px. */
+.exam-result-actions { display: flex; flex-direction: column; align-items: stretch; gap: 10px; margin-top: 20px; }
+.exam-result-actions .btn { width: 100%; }
+
+/* Q6 — «what went wrong» row: statement + student's vs. right answer tags,
+   with a «Why?» link that appears once the chapter explanation is found. */
+.ex-wrong-row { flex-wrap: wrap; gap: 8px; padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
+.ex-wrong-row:last-child { border-bottom: none; }
+.ex-wrong-text { flex: 1 1 100%; font-weight: 600; }
+.ex-wrong-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.ex-wrong-why { flex: 0 0 auto; }
+.ex-wrong-why__link {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 4px 0;
+  display: inline-block;
+}
 .action-tile {
   display: flex;
   align-items: center;

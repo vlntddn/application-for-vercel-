@@ -186,8 +186,8 @@ export const MESSAGES = {
     'ex.confirmSubmit': '{n} unanswered (counted as wrong). Submit anyway?',
     'ex.saving': 'Saving result...',
     'ex.offline': 'Offline — this result is saved on this device and will sync later',
-    'ex.verdictPassed': 'PROMOSSO!',
-    'ex.verdictFailed': 'BOCCIATO',
+    'ex.verdictPassed': 'Promosso · Passed',
+    'ex.verdictFailed': 'Bocciato · Not passed',
     'ex.errorsN': '{n} errors',
     'ex.errorsOf': 'out of {total} questions (limit: {limit})',
     'ex.tryAgain': 'TRY AGAIN',
@@ -195,6 +195,9 @@ export const MESSAGES = {
     'ex.dashboard': 'DASHBOARD',
     'ex.wrongTitle': 'WHAT WENT WRONG',
     'ex.answerTag': 'ANSWER: {ans}',
+    'ex.yourTag': 'YOURS: {ans}',
+    'ex.rightTag': 'RIGHT: {ans}',
+    'ex.why': 'Why?',
 
     // Numbers screen (#/numbers) + numbers drill (Q4.2, screen «numbers»).
     // Drill words (Correct / Wrong / Right answer, kbd hints, offline note,
@@ -615,8 +618,8 @@ export const MESSAGES = {
     'ex.confirmSubmit': '{n} без ответа (засчитаются как ошибки). Отправить всё равно?',
     'ex.saving': 'Сохранение результата...',
     'ex.offline': 'Офлайн — результат сохранён на этом устройстве и синхронизируется позже',
-    'ex.verdictPassed': 'PROMOSSO! — сдал',
-    'ex.verdictFailed': 'BOCCIATO — не сдал',
+    'ex.verdictPassed': 'Promosso — сдал',
+    'ex.verdictFailed': 'Bocciato — не сдал',
     'ex.errorsN': 'ошибок: {n}',
     'ex.errorsOf': 'из {total} вопросов (лимит: {limit})',
     'ex.tryAgain': 'ЕЩЁ РАЗ',
@@ -624,6 +627,9 @@ export const MESSAGES = {
     'ex.dashboard': 'ГЛАВНАЯ',
     'ex.wrongTitle': 'ГДЕ БЫЛИ ОШИБКИ',
     'ex.answerTag': 'ОТВЕТ: {ans}',
+    'ex.yourTag': 'ВАШ ОТВЕТ: {ans}',
+    'ex.rightTag': 'ПРАВИЛЬНО: {ans}',
+    'ex.why': 'Почему?',
 
     // Числа (#/numbers) и тренажёр чисел (Q4.2, экран «числа»).
     // Слова тренажёра (Correct / Wrong / Right answer, kbd-подсказки,
@@ -1044,8 +1050,8 @@ export const MESSAGES = {
     'ex.confirmSubmit': '{n} 题未答（按错误计）。仍要提交吗？',
     'ex.saving': '正在保存结果...',
     'ex.offline': '离线——结果已保存在此设备上，稍后自动同步',
-    'ex.verdictPassed': 'PROMOSSO! — 通过',
-    'ex.verdictFailed': 'BOCCIATO — 未通过',
+    'ex.verdictPassed': 'Promosso — 通过',
+    'ex.verdictFailed': 'Bocciato — 未通过',
     'ex.errorsN': '错误：{n} 个',
     'ex.errorsOf': '共 {total} 题（上限 {limit} 个）',
     'ex.tryAgain': '再试一次',
@@ -1053,6 +1059,9 @@ export const MESSAGES = {
     'ex.dashboard': '主页',
     'ex.wrongTitle': '哪里答错了',
     'ex.answerTag': '答案：{ans}',
+    'ex.yourTag': '你的答案：{ans}',
+    'ex.rightTag': '正确答案：{ans}',
+    'ex.why': '为什么？',
 
     // 数字（#/numbers）与数字练习（Q4.2，屏幕「数字」）。
     // 练习用语（Correct / Wrong / Right answer、kbd 提示、离线提示、
