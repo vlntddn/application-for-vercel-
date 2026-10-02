@@ -1,3 +1,50 @@
+## 2026-10-02 — S3.6 закрыта: Напоминание внутри приложения (в-апп баннер, без push)
+
+**Что.** Баннер на дашборде «TODAY: done/goal · START»: показывается,
+когда за сегодня отвечено меньше `dailyGoal` И с последней активности
+прошло ≥ 12 ч (или отвечено вообще никогда). START ведёт в быстрое
+повторение, если есть due, иначе в практику. Крестик закрывает баннер
+до конца дня — метка дня (локальный YYYY-MM-DD) в localStorage,
+на следующий день баннер возвращается сам. Только в-апп: без push,
+без Notification API (решение владельца по В4).
+
+**Дизайн.** Показ — чистая функция `shouldRemind(progress, now)` в
+`progress.js`: `!progress` → false; цель уже выполнена → false;
+иначе — нет `last` (свежий профиль) или `now - last ≥ 12 ч`. Тумблер
+«закрыт сегодня» живёт в UI-слое (сравнение dismiss-дня с today), не
+в доменной функции — чтобы `shouldRemind` оставалась чисто про данные.
+`REMIND_AFTER_MS = 12 * 60 * 60 * 1000` экспортируется (используется
+в тесте с явным `now`).
+
+**Файлы:**
+- `public/js/domain/progress.js` — `REMIND_AFTER_MS`, `latestActivity()`
+  (новый `last` среди записей, мусор игнорируется, null → ''), `shouldRemind()`.
+- `tests/progress.test.js` — тест `shouldRemind` (10 случаев, включая
+  явный `now` и garbage `last`) и тест `latestActivity` (5 случаев).
+- `public/js/views/common.js` — `readDailyReminderDismissed()` /
+  `writeDailyReminderDismissed(day)`: ключ `pp-daily-remind-dismissed`,
+  чтение/запись в try/catch (приватный режим → null / тишина).
+- `public/js/views/dashboard.js` — `dailyGoalReminderPanel()`: guard
+  `shouldRemind` + dismiss-сегодня → null; callout с иконкой warn,
+  заголовком «TODAY: done/goal», текстом и кнопкой START (href
+  `#/review` при `reviewDue > 0`, иначе `#/practice`); крестик
+  (`aria-label`, иконка x) пишет dismiss-день и удаляет callout.
+  Подключена первой в `.dashboard-stack` — над install/backup-алертами.
+- `public/styles.css` — `.ds-callout__close`: 44×44 grid, place-items
+  center, иконка 20px stroke currentColor.
+- `public/js/i18n.js` — 4 ключа × 3 языка (`db.remd.title` с
+  `{done}`/`{goal}`, `db.remd.text`, `db.remd.start`, `db.remd.closeAria`).
+- `public/sw.js` — VERSION v110 → v111 (verify требует bump при правке public/).
+
+**Как проверено:** `node --test tests/progress.test.js` — 37/37 (была
+ошибка в тесте с явным `now`: `at(30)` при `now = real - 6h` даёт
+elapsed 24ч, а не 6ч — исправил на `at(15)`, elapsed 9ч < 12ч → false);
+`npm test` — 234/234; `node --check` на всех правленых JS; `scripts/verify.sh`
+→ VERIFY OK (включая smoke :3917 и qa-new-user 73 PASS). Скриншот дашборда
+зафиксировать не смог (нет браузерного инструмента) — валидация DOM-вставки
+через код-ревью: панель возвращает null, когда не пора напоминать,
+иначе вставляется в `.dashboard-stack` до контента.
+
 ## 2026-10-02 — S3.5 закрыта: Поделиться результатом (navigator.share / clipboard)
 
 **Что.** Кнопка SHARE на экране результата экзамена и на экране

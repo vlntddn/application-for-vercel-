@@ -656,7 +656,7 @@ _Точка обзора B (не блокирует): после L7 — те ж�
       *Проверка:* verify OK + тест `shareText`.
       *(закрыто S3.5: shareText(result) в progress.js с тестами, shareButton в
       common.js — navigator.share → clipboard+тост, иначе кнопки нет; см. DEVLOG 2026-10-02 S3.5)*
-- [ ] **S3.6 Напоминание внутри приложения** (решение владельца по В4,
+- [x] **S3.6 Напоминание внутри приложения** (решение владельца по В4,
       без push и без Notification API). При открытии дашборда: если сегодня
       отвечено меньше `dailyGoal` и с последней активности прошло ≥ 12 ч —
       баннер над контентом «TODAY: 0/20 · START» (кнопка → практика/быстрое
@@ -665,6 +665,9 @@ _Точка обзора B (не блокирует): после L7 — те ж�
       функция `shouldRemind(progress, now)` в `progress.js` с тестами
       (цель выполнена → нет; < 12 ч → нет; закрыт сегодня → нет; иначе → да).
       *Проверка:* verify OK + тесты `shouldRemind`; скриншот дашборда.
+      *(закрыто S3.6: shouldRemind/REMIND_AFTER_MS в progress.js с тестами,
+      dailyGoalReminderPanel в dashboard.js, dismiss-хелперы в common.js, .ds-callout__close
+      в styles.css, 12 i18n-ключей en/ru/zh; см. DEVLOG 2026-10-02 S3.6)*
 - [ ] **S3.7a Стрик-щит: домен.** В `progress.js`: `streak.shields` (0..1).
       Правило: выполнил дневную цель (`dailyGoal`) → `shields = 1`. Пропущен ровно
       один день и `shields === 1` → стрик продолжается, `shields = 0`. Пропуск
