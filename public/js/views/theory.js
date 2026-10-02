@@ -440,7 +440,7 @@ function absoluteWordData(w, bankStat) {
  * valuable page for non-Italian speakers.
  */
 export async function renderExamItalian(root) {
-  clear(root, el('h1', {}, "L'ITALIANO DELL'ESAME"), el('p.lede', {}, 'Loading...'));
+  clear(root, el('h1', {}, "L'ITALIANO DELL'ESAME"), el('p.lede', {}, 'Loading…'));
   let guide;
   try {
     guide = (await loadLessons()).examItalian;
