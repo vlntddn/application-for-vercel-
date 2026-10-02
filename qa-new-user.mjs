@@ -22,7 +22,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME = process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const DEV = 'http://127.0.0.1:9333';
 const TEMP = fs.mkdtempSync(path.join(os.tmpdir(), 'pp-qa-'));
 const QA_PORT = process.env.QA_PORT || '3919';

@@ -29,6 +29,7 @@
  * «сколько FAIL по каждой проверке» (базовая линия для DEVLOG).
  * Код выхода 1 только если скрипт упал с ошибкой — сами FAIL-и дают 0,
  * потому что базовая линия по заданию сейчас ожидаемо красная.
+ * С флагом --strict (CI) любой FAIL — код выхода 1.
  *
  * Запуск: node scripts/qa-ux.mjs
  */
@@ -37,11 +38,12 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME = process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const DEV = 'http://127.0.0.1:9333';
 const TEMP = fs.mkdtempSync(path.join(os.tmpdir(), 'pp-ux-'));
 const PORT = process.env.UX_PORT || '3921'; // 3917 — verify.sh, 3919 — qa-new-user
 const APP = `http://127.0.0.1:${PORT}`;
+const STRICT = process.argv.includes('--strict');
 const VIEWPORTS = [{ w: 375, h: 812 }, { w: 1280, h: 800 }];
 
 const storage = path.join(TEMP, 'storage');
@@ -420,7 +422,8 @@ async function main() {
 
 try {
   await main();
-  process.exitCode = 0;
+  // --strict (CI): любой FAIL — ненулевой код; локально baseline-FAIL дают 0.
+  process.exitCode = (STRICT && failures > 0) ? 1 : 0;
 } catch (err) {
   console.error(`[ux] ОШИБКА: ${err.stack || err.message}`);
   process.exitCode = 1;

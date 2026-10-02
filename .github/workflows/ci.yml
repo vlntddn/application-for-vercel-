@@ -56,3 +56,19 @@ jobs:
             echo "$path -> $code"
             [ "$code" = "200" ] || exit 1
           done
+  e2e:
+    runs-on: ubuntu-latest
+    name: QA scenarios (headless Chrome)
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: QA new-user path
+        run: |
+          export CHROME_PATH=$(which google-chrome)
+          node qa-new-user.mjs
+      - name: UX audit (strict)
+        run: |
+          export CHROME_PATH=$(which google-chrome)
+          node scripts/qa-ux.mjs --strict
