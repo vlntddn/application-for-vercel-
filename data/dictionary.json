@@ -25,7 +25,10 @@
         { "it": "il passaggio a livello", "en": "level crossing", "ru": "ж/д переезд", "zh": "铁路道口" },
         { "it": "la strada extraurbana", "en": "extra-urban road", "ru": "внегородская дорога", "zh": "城外公路" },
         { "it": "la zona a traffico limitato", "en": "limited traffic zone (ZTL)", "ru": "зона с ограниченным движением", "zh": "限流区" },
-        { "it": "la corsia trasversale", "en": "transverse lane (hatched area)", "ru": "диагональная (запретная) зона на перекрёстке", "zh": "横向导流车道" }
+        { "it": "la corsia trasversale", "en": "transverse lane (hatched area)", "ru": "диагональная (запретная) зона на перекрёстке", "zh": "横向导流车道" },
+        { "it": "il guardrail", "chapters": ["ch1"], "en": "guardrail", "ru": "защитное ограждение", "zh": "护栏" },
+        { "it": "la corsia di accelerazione / decelerazione", "chapters": ["ch1"], "en": "acceleration / deceleration lane", "ru": "полоса разгона / торможения", "zh": "加速/减速车道" },
+        { "it": "il viadotto", "chapters": ["ch1"], "en": "viaduct", "ru": "мост-эстакада", "zh": "高架桥" }
       ]
     },
     {
@@ -47,7 +50,10 @@
         { "it": "il semaforo", "en": "traffic light", "ru": "светофор", "zh": "红绿灯" },
         { "it": "l'agente del traffico (il vigile)", "en": "traffic officer", "ru": "регулировщик", "zh": "交通警察" },
         { "it": "il cantiere", "en": "roadworks site", "ru": "дорожные работы", "zh": "施工区" },
-        { "it": "raffigurato", "en": "depicted, shown", "ru": "изображённый", "zh": "图示的" }
+        { "it": "raffigurato", "en": "depicted, shown", "ru": "изображённый", "zh": "图示的" },
+        { "it": "il segnale di divieto di sosta", "chapters": ["ch3"], "en": "no-parking sign", "ru": "знак запрета остановки", "zh": "禁止停车标志" },
+        { "it": "lo stop", "chapters": ["ch4"], "en": "stop sign (octagonal)", "ru": "знак «STOP»", "zh": "停车标志" },
+        { "it": "la segnaletica verticale", "chapters": ["ch2"], "en": "vertical signage (road signs)", "ru": "вертикальная дорожная разметка", "zh": "道路交通标志" }
       ]
     },
     {
@@ -70,7 +76,10 @@
         { "it": "attraversare", "en": "to cross", "ru": "пересекать", "zh": "穿越" },
         { "it": "la manovra", "en": "manoeuvre", "ru": "манёвр", "zh": "驾驶动作, 操作" },
         { "it": "fermarsi", "en": "to stop", "ru": "останавливаться", "zh": "停车" },
-        { "it": "la corsia di sorpasso", "en": "overtaking lane", "ru": "полоса для обгона", "zh": "超车车道" }
+        { "it": "la corsia di sorpasso", "en": "overtaking lane", "ru": "полоса для обгона", "zh": "超车车道" },
+        { "it": "il cambio di marcia", "chapters": ["ch10"], "en": "gear change (shifting)", "ru": "смена передачи", "zh": "换挡" },
+        { "it": "l'attraversamento", "chapters": ["ch10"], "en": "crossing", "ru": "пересечение (дороги)", "zh": "通过" },
+        { "it": "la manovra in curva", "chapters": ["ch11"], "en": "maneuver in a curve", "ru": "манёвр на повороте", "zh": "弯道行驶" }
       ]
     },
     {
@@ -90,7 +99,9 @@
         { "it": "il triangolo", "en": "warning triangle", "ru": "знак аварийной остановки", "zh": "三角警示牌" },
         { "it": "il parcheggio", "en": "parking, car park", "ru": "парковка, стоянка", "zh": "停车场" },
         { "it": "la sosta di emergenza", "en": "emergency stop", "ru": "аварийная остановка", "zh": "紧急停车" },
-        { "it": "la corsia di emergenza", "en": "emergency lane, shoulder", "ru": "аварийная полоса", "zh": "应急车道" }
+        { "it": "la corsia di emergenza", "en": "emergency lane, shoulder", "ru": "аварийная полоса", "zh": "应急车道" },
+        { "it": "la sosta in doppia fila", "chapters": ["ch13"], "en": "double-parking", "ru": "двойная парковка (напротив потока)", "zh": "双排停车" },
+        { "it": "il dissuasore di sosta", "chapters": ["ch13"], "en": "parking deterrent (bollard)", "ru": "противостоянковое препятствие", "zh": "防停车障碍物" }
       ]
     },
     {
@@ -111,7 +122,9 @@
         { "it": "il tamponamento", "en": "rear-end collision", "ru": "наезд сзади", "zh": "追尾" },
         { "it": "il limite massimo di velocità", "en": "maximum speed limit", "ru": "максимально допустимая скорость", "zh": "最高限速" },
         { "it": "la frenatura d'emergenza", "en": "emergency braking", "ru": "аварийное торможение", "zh": "紧急制动" },
-        { "it": "il sorpasso vietato", "en": "no overtaking (sign)", "ru": "запрет обгона (знак)", "zh": "禁止超车" }
+        { "it": "il sorpasso vietato", "en": "no overtaking (sign)", "ru": "запрет обгона (знак)", "zh": "禁止超车" },
+        { "it": "l'eccesso di velocità", "chapters": ["ch8"], "en": "speeding (excess speed)", "ru": "превышение скорости", "zh": "超速" },
+        { "it": "la velocità massima", "chapters": ["ch8"], "en": "maximum speed", "ru": "максимальная скорость", "zh": "最高速度" }
       ]
     },
     {
@@ -133,7 +146,9 @@
         { "it": "la manutenzione", "en": "maintenance", "ru": "техническое обслуживание", "zh": "保养" },
         { "it": "il traino", "en": "towing", "ru": "буксировка", "zh": "牵引" },
         { "it": "il motore", "en": "engine", "ru": "двигатель", "zh": "发动机" },
-        { "it": "il veicolo in avaria", "en": "broken-down vehicle", "ru": "аварийное (поломившееся) ТС", "zh": "故障车辆" }
+        { "it": "il veicolo in avaria", "en": "broken-down vehicle", "ru": "аварийное (поломившееся) ТС", "zh": "故障车辆" },
+        { "it": "il pneumatico", "chapters": ["ch21"], "en": "tyre (tire)", "ru": "шина", "zh": "轮胎" },
+        { "it": "il cambio", "chapters": ["ch21"], "en": "gearbox, transmission", "ru": "коробка передач", "zh": "变速箱" }
       ]
     },
     {
@@ -154,7 +169,8 @@
         { "it": "la revoca", "en": "revocation (of licence)", "ru": "аннулирование (прав)", "zh": "吊销(驾照)" },
         { "it": "la responsabilità civile", "en": "civil liability", "ru": "гражданская ответственность", "zh": "民事责任" },
         { "it": "il risarcimento", "en": "compensation", "ru": "возмещение ущерба", "zh": "赔偿" },
-        { "it": "la targa", "en": "number plate, licence plate", "ru": "номерной знак", "zh": "车牌" }
+        { "it": "la targa", "en": "number plate, licence plate", "ru": "номерной знак", "zh": "车牌" },
+        { "it": "il libretto di circolazione", "chapters": ["ch16"], "en": "vehicle registration certificate", "ru": "свидетельство о регистрации ТС", "zh": "车辆行驶证" }
       ]
     },
     {
@@ -176,7 +192,9 @@
         { "it": "l'inquinamento", "en": "pollution", "ru": "загрязнение окружающей среды", "zh": "污染" },
         { "it": "i consumi", "en": "fuel consumption", "ru": "расход топлива", "zh": "油耗" },
         { "it": "il casco protettivo", "en": "protective helmet", "ru": "защитный шлем", "zh": "防护头盔" },
-        { "it": "il ferito", "en": "the injured person", "ru": "пострадавший", "zh": "受伤者" }
+        { "it": "il ferito", "en": "the injured person", "ru": "пострадавший", "zh": "受伤者" },
+        { "it": "la vittima", "chapters": ["ch22"], "en": "victim", "ru": "пострадавший", "zh": "受害者" },
+        { "it": "il casco di sicurezza", "chapters": ["ch15"], "en": "safety helmet", "ru": "защитный шлем", "zh": "安全头盔" }
       ]
     },
     {
@@ -196,7 +214,9 @@
         { "it": "effettuare", "en": "to carry out, to perform", "ru": "выполнять, совершать", "zh": "进行, 实施" },
         { "it": "comportare", "en": "to entail, to involve", "ru": "влечь за собой", "zh": "导致, 涉及" },
         { "it": "occorre / bisogna", "en": "it is necessary", "ru": "необходимо, нужно", "zh": "必须, 需要" },
-        { "it": "è opportuno", "en": "it is advisable", "ru": "целесообразно, следует", "zh": "宜, 应当" }
+        { "it": "è opportuno", "en": "it is advisable", "ru": "целесообразно, следует", "zh": "宜, 应当" },
+        { "it": "fermare", "en": "to stop (a vehicle)", "ru": "остановить (транспорт)", "zh": "停车/使…停下" },
+        { "it": "arrestarsi", "en": "to come to a halt", "ru": "остановиться (полностью)", "zh": "停车" }
       ]
     }
   ]
