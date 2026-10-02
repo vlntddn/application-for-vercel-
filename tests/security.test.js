@@ -737,4 +737,27 @@ test('the practice/feedback screen is localized: no hardcoded UI copy (Q4.2)', (
   assert.match(i18n, /'Signal word \{word\}'/);
 });
 
+test('the numbers screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2 screen «numbers»: the table + drill copy lives in i18n.js under
+  // nm.* keys; drill feedback words (Correct/Wrong/Right answer, kbd hints,
+  // offline note, report link, DASHBOARD) reuse the pr.* keys.
+  const i18n = fs.readFileSync(path.join(ROOT, 'public', 'js', 'i18n.js'), 'utf8');
+  const numbers = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'numbers.js'), 'utf8');
+  assert.match(numbers, /t\('nm\.title'\)/, 'page title must come from i18n');
+  assert.match(numbers, /t\('nm\.lede'/, 'table lede must come from i18n');
+  assert.match(numbers, /t\('nm\.drillStart'\)/, 'drill start button must come from i18n');
+  assert.match(numbers, /t\('nm\.falsoShare'/, 'FALSO share note must come from i18n');
+  assert.match(numbers, /t\('pr\.correct'\)/, 'feedback verdict must come from i18n');
+  assert.match(numbers, /t\('pr\.rightAnswer'/, 'reveal answer must come from i18n');
+  // No hardcoded English UI strings left in the view.
+  assert.ok(!numbers.includes("'Correct'"), 'no hardcoded verdict');
+  assert.ok(!numbers.includes("'Wrong'"), 'no hardcoded answer state');
+  assert.ok(!numbers.includes("'Right answer'"), 'no hardcoded reveal tag');
+  assert.ok(!numbers.includes("'START THE DRILL'"), 'no hardcoded drill button');
+  assert.ok(!numbers.includes("FALSO in ${pct}%"), 'no hardcoded FALSO share');
+  // English copy exists in the dictionaries (the strings QA checks).
+  assert.match(i18n, /'The numbers you must know'/);
+  assert.match(i18n, /'START THE DRILL →'/);
+});
+
 

@@ -14,6 +14,7 @@ import {
   recordAnswersResilient,
 } from '../state.js';
 import { el, clear, svgIcon } from '../ui.js';
+import { t } from '../i18n.js';
 import { playCorrect, playWrong } from '../sound.js';
 import { errorBanner, translationOf, loc, translationArea, feedbackHref } from './common.js';
 import { numbersQueue, numberSpans } from '../domain/learning.js';
@@ -22,8 +23,8 @@ const DRILL_SIZE = 20;
 
 export async function renderNumbers(root) {
   clear(root,
-    el('h1', {}, 'The numbers you must know'),
-    el('p.lede', {}, 'Loading...'),
+    el('h1', {}, t('nm.title')),
+    el('p.lede', {}, t('ms.loading')),
   );
   let numbers, lessons, theory, questions;
   try {
@@ -61,8 +62,8 @@ function tableBlock(numbers, lessons, titleOf) {
   const total = rows.reduce((s, r) => s + r.questions, 0);
 
   return el('div.panel', {},
-    el('h1', {}, 'The numbers you must know'),
-    el('p.lede', {}, `${rows.length} facts · ${total} bank questions touch these numbers.`),
+    el('h1', {}, t('nm.title')),
+    el('p.lede', {}, t('nm.lede', { facts: rows.length, questions: total })),
     ...chapters.map(([ch, chRows]) => el('section.numbers-chapter', {},
       el('h2.numbers-chapter__title', {}, titleOf(ch)),
       ...chRows.map((r) => el('div.numbers-fact', {},
@@ -71,7 +72,7 @@ function tableBlock(numbers, lessons, titleOf) {
           el('span.numbers-fact__value', {}, r.value)),
         noteFor(lessons, r) ? el('p.numbers-fact__note', {}, loc(noteFor(lessons, r))) : null,
         el('p.numbers-fact__sub', {},
-          `${r.questions} bank question${r.questions === 1 ? '' : 's'} use this number`),
+          t(r.questions === 1 ? 'nm.factsOne' : 'nm.factsMany', { n: r.questions })),
       )),
     )),
   );
@@ -83,7 +84,7 @@ function drawTable(root, numbers, lessons, theory, questions) {
     tableBlock(numbers, lessons, chapterTitles(theory)),
     el('div.actions', { style: 'margin-top:24px' },
       el('button.btn.btn-primary.btn-big', { type: 'button', onclick: () =>
-        drawDrill(root, numbers, questions) }, 'START THE DRILL →'),
+        drawDrill(root, numbers, questions) }, t('nm.drillStart')),
     ),
   );
 }
@@ -97,9 +98,9 @@ function drawDrill(root, numbers, questions) {
   const trueCount = pool.length - falseCount;
   if (pool.length < 10 || falseCount === 0 || trueCount === 0) {
     return clear(root,
-      el('h1', {}, 'The numbers you must know'),
+      el('h1', {}, t('nm.title')),
       errorBanner(new Error(
-        `Need a balanced pool of at least 10 number questions (found ${pool.length}: ${falseCount} FALSO / ${trueCount} VERO).`)),
+        t('nm.poolError', { found: pool.length, false: falseCount, true: trueCount }))),
     );
   }
   // Token → counts, so the feedback can say «50 — FALSO in 62% of the bank».
@@ -164,25 +165,25 @@ function drawDrill(root, numbers, questions) {
   function finish() {
     clear(root,
       el('div.panel', { style: 'text-align:center' },
-        el('h1', {}, 'Numbers drill complete'),
+        el('h1', {}, t('nm.complete')),
         el('p.stat-value.ok', {}, `${correctCount}/${total}`),
-        el('p.lede', {}, 'Correct answers'),
+        el('p.lede', {}, t('pr.correctAnswers')),
         el('div.actions', { style: 'justify-content:center' },
           el('button.btn.btn-primary', { type: 'button', onclick: () =>
-            drawDrill(root, numbers, questions) }, 'ONE MORE ROUND'),
-          el('a.btn', { href: '#/exam-italian' }, 'THE EXAM GUIDE'),
-          el('a.btn', { href: '#/' }, 'DASHBOARD'),
+            drawDrill(root, numbers, questions) }, t('pr.oneMore')),
+          el('a.btn', { href: '#/exam-italian' }, t('nm.examGuide')),
+          el('a.btn', { href: '#/' }, t('pr.dashboard')),
         ),
       ),
     );
   }
 
   function numberNote(q) {
-    const t = tokenById.get(q.number);
-    if (!t || !t.total) return null;
-    const pct = Math.round((t.false / t.total) * 100);
-    const nodes = [el('p.signal-ratio', {}, `«${q.number}» — FALSO in ${pct}% of the bank`)];
-    if (q.is_true) nodes.push(el('p.signal-true', {}, 'here the number makes the statement VERO'));
+    const tok = tokenById.get(q.number);
+    if (!tok || !tok.total) return null;
+    const pct = Math.round((tok.false / tok.total) * 100);
+    const nodes = [el('p.signal-ratio', {}, t('nm.falsoShare', { number: q.number, pct }))];
+    if (q.is_true) nodes.push(el('p.signal-true', {}, t('nm.trueNote')));
     return el('div.signal-notes', {}, ...nodes);
   }
 
@@ -193,24 +194,24 @@ function drawDrill(root, numbers, questions) {
     },
       el('div.ds-feedback__head', {},
         svgIcon(lastCorrect ? 'check' : 'cross'),
-        lastCorrect ? 'Correct' : 'Not quite'),
+        lastCorrect ? t('pr.correct') : t('pr.wrong')),
       lastCorrect
         ? null
-        : el('div.ds-feedback__answer', {}, `Right answer: ${q.is_true ? 'Vero' : 'Falso'}`),
+        : el('div.ds-feedback__answer', {}, t('pr.rightAnswer', { ans: q.is_true ? 'Vero' : 'Falso' })),
     );
     const note = numberNote(q);
     if (note) panel.append(note);
     panel.append(
       el('div.ds-feedback__actions', {},
         el('button.btn.btn-primary', { type: 'button', onclick: next },
-          index + 1 >= pool.length ? 'FINISH' : 'NEXT →'),
+          index + 1 >= pool.length ? t('pr.finish') : t('pr.next')),
       ),
       el('a.report-link', {
         href: feedbackHref(
-          'Passo: problem with question ' + q.id,
-          `Question: ${q.id}\n«${q.text_it}»\nCorrect answer in the app: ${q.is_true ? 'VERO' : 'FALSO'}\n\nWhat is wrong:\n`,
+          t('pr.reportSubject', { id: q.id }),
+          t('pr.reportBody', { id: q.id, text: q.text_it, ans: q.is_true ? 'VERO' : 'FALSO' }),
         ),
-      }, 'Report a problem with this question'),
+      }, t('pr.report')),
     );
     return panel;
   }
@@ -222,9 +223,9 @@ function drawDrill(root, numbers, questions) {
       const picked = chosenValue === value;
       const isRight = value === q.is_true;
       if (answered) {
-        if (picked && lastCorrect) { stateStr = 'ds-answer--ok'; word = 'Correct'; }
-        else if (picked && !lastCorrect) { stateStr = 'ds-answer--bad'; word = 'Wrong'; }
-        else if (!picked && !lastCorrect && isRight) { stateStr = 'ds-answer--reveal'; word = 'Right answer'; }
+        if (picked && lastCorrect) { stateStr = 'ds-answer--ok'; word = t('pr.correct'); }
+        else if (picked && !lastCorrect) { stateStr = 'ds-answer--bad'; word = t('pr.wrong'); }
+        else if (!picked && !lastCorrect && isRight) { stateStr = 'ds-answer--reveal'; word = t('pr.rightAnswerTag'); }
       }
       return el('button', {
         type: 'button',
@@ -248,17 +249,16 @@ function drawDrill(root, numbers, questions) {
     const q = pool[index];
     clear(root,
       offline
-        ? el('p.offline-note', { role: 'status' },
-          'Offline — answers saved on this device, will sync when the server is back')
+        ? el('p.offline-note', { role: 'status' }, t('pr.offline'))
         : null,
       el('div.quiz-head', {},
-        el('a.btn', { href: '#/numbers' }, '← BACK TO TABLE'),
-        el('span.quiz-progress', {}, `Numbers — ${index + 1}/${total}`),
-        el('span.tag.ok', {}, `${correctCount} CORRECT`),
+        el('a.btn', { href: '#/numbers' }, t('nm.backToTable')),
+        el('span.quiz-progress', {}, t('nm.progress', { n: index + 1, total })),
+        el('span.tag.ok', {}, t('nm.correctTag', { n: correctCount })),
       ),
       el('div.panel.question-card', {},
         q.image_url ? el('img.question-img', {
-          src: q.image_url, alt: 'Road sign / situation',
+          src: q.image_url, alt: t('nm.imgAlt'),
           onerror: (e) => e.target.remove(),
         }) : null,
         el('p.question-text', {}, ...questionText(q)),
@@ -267,9 +267,8 @@ function drawDrill(root, numbers, questions) {
         answered ? (feedbackPanel ??= buildFeedbackPanel(q)) : null,
         el('p.kbd-hint', {},
           answered
-            ? [el('kbd', {}, 'ENTER'), ' NEXT · ', el('kbd', {}, 'T'), ' TRANSLATE']
-            : [el('kbd', {}, 'V'), ' VERO · ', el('kbd', {}, 'F'), ' FALSO · ', el('kbd', {}, 'T'), ' TRANSLATE'],
-        ),
+            ? [el('kbd', {}, 'ENTER'), t('pr.kbdNext'), el('kbd', {}, 'T'), t('pr.kbdTranslate')]
+            : [el('kbd', {}, 'V'), t('pr.kbdTrue'), el('kbd', {}, 'F'), t('pr.kbdFalse'), el('kbd', {}, 'T'), t('pr.kbdTranslate')]),
       ),
     );
   }

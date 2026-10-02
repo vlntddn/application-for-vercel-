@@ -195,6 +195,26 @@ export const MESSAGES = {
     'ex.wrongTitle': 'WHAT WENT WRONG',
     'ex.answerTag': 'ANSWER: {ans}',
 
+    // Numbers screen (#/numbers) + numbers drill (Q4.2, screen «numbers»).
+    // Drill words (Correct / Wrong / Right answer, kbd hints, offline note,
+    // report link, DASHBOARD) reuse the pr.* keys from the practice session.
+    'nm.title': 'The numbers you must know',
+    'nm.lede': '{facts} facts · {questions} bank questions touch these numbers.',
+    'nm.factsOne': '{n} bank question uses this number',
+    'nm.factsMany': '{n} bank questions use this number',
+    'nm.drillStart': 'START THE DRILL →',
+    'nm.complete': 'Numbers drill complete',
+    'nm.correctAnswers': 'Correct answers',
+    'nm.oneMoreRound': 'ONE MORE ROUND',
+    'nm.examGuide': 'THE EXAM GUIDE',
+    'nm.backToTable': '← THE TABLE',
+    'nm.progress': 'Numbers — {n}/{total}',
+    'nm.correctTag': '{n} CORRECT',
+    'nm.falsoShare': '«{number}» — FALSO in {pct}% of the bank',
+    'nm.trueNote': 'here the number makes the statement VERO',
+    'nm.imgAlt': 'Road sign / situation',
+    'nm.poolError': 'Need a balanced pool of at least 10 number questions (found {found}: {false} FALSO / {true} VERO).',
+
     // Learning path (Q4.2, screen 4/7)
     'pth.partRead': 'Read',
     'pth.partCheck': 'Check',
@@ -505,6 +525,26 @@ export const MESSAGES = {
     'ex.wrongTitle': 'ГДЕ БЫЛИ ОШИБКИ',
     'ex.answerTag': 'ОТВЕТ: {ans}',
 
+    // Числа (#/numbers) и тренажёр чисел (Q4.2, экран «числа»).
+    // Слова тренажёра (Correct / Wrong / Right answer, kbd-подсказки,
+    // offline-заметка, report-ссылка, ГЛАВНАЯ) переиспользуют pr.*.
+    'nm.title': 'Числа, которые нужно знать',
+    'nm.lede': 'Фактов: {facts} · вопросов банка, где они встречаются: {questions}.',
+    'nm.factsOne': '{n} вопрос банка использует это число',
+    'nm.factsMany': '{n} вопросов банка используют это число',
+    'nm.drillStart': 'НАЧАТЬ ТРЕНАЖЁР →',
+    'nm.complete': 'Тренажёр чисел завершён',
+    'nm.correctAnswers': 'Верных ответов',
+    'nm.oneMoreRound': 'ЕЩЁ РАЗ',
+    'nm.examGuide': 'РУКОВОДСТВО К ЭКЗАМЕНУ',
+    'nm.backToTable': '← К ТАБЛИЦЕ',
+    'nm.progress': 'Числа — {n}/{total}',
+    'nm.correctTag': 'ВЕРНО: {n}',
+    'nm.falsoShare': '«{number}» — FALSO в {pct}% вопросов банка',
+    'nm.trueNote': 'здесь число делает утверждение VERO',
+    'nm.imgAlt': 'Дорожный знак / ситуация',
+    'nm.poolError': 'Нужен сбалансированный пул из минимум 10 числовых вопросов (найдено {found}: {false} FALSO / {true} VERO).',
+
     // Путь обучения (Q4.2, экран 4/7)
     'pth.partRead': 'Чтение',
     'pth.partCheck': 'Проверка',
@@ -814,6 +854,26 @@ export const MESSAGES = {
     'ex.dashboard': '主页',
     'ex.wrongTitle': '哪里答错了',
     'ex.answerTag': '答案：{ans}',
+
+    // 数字（#/numbers）与数字练习（Q4.2，屏幕「数字」）。
+    // 练习用语（Correct / Wrong / Right answer、kbd 提示、离线提示、
+    // 报错链接、主页）复用 pr.* 键。
+    'nm.title': '必须记住的数字',
+    'nm.lede': '{facts} 个事实 · 题库中有 {questions} 题涉及这些数字。',
+    'nm.factsOne': '题库中有 {n} 题使用这个数字',
+    'nm.factsMany': '题库中有 {n} 题使用这个数字',
+    'nm.drillStart': '开始练习 →',
+    'nm.complete': '数字练习完成',
+    'nm.correctAnswers': '答对题数',
+    'nm.oneMoreRound': '再来一轮',
+    'nm.examGuide': '考试指南',
+    'nm.backToTable': '← 返回表格',
+    'nm.progress': '数字 — {n}/{total}',
+    'nm.correctTag': '答对 {n} 题',
+    'nm.falsoShare': '«{number}» — 题库中 {pct}% 的题答案为 FALSO',
+    'nm.trueNote': '这里这个数字使陈述为 VERO',
+    'nm.imgAlt': '交通标志 / 场景',
+    'nm.poolError': '至少需要 10 道数值题组成的平衡题库（找到 {found} 道：{false} FALSO / {true} VERO）。',
 
     // 学习路径 (Q4.2, 屏幕 4/7)
     'pth.partRead': '阅读',
