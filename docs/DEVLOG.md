@@ -1,5 +1,19 @@
 ## 2026-10-02 — S3.1 закрыта: плашка «Доступна новая версия» при обновлении SW
 
+> **⚠️ PUSH-БЛОКЕР (не S3.1, pre-existing).** `git push origin self-improve`
+> отклонён GitHub: `refusing to allow a Personal Access Token to create or
+> update workflow '.github/workflows/ci.yml' without 'workflow' scope`.
+> Причина — **не** S3.1: оба S3.1-коммита (`73e03fb`, `3384be4`) workflow-файлы
+> не трогают (только `public/js/*`, `public/sw.js`, `tests/*`, `docs/*`).
+> Блокёром является pre-existing коммит **`a70235a` (T4, e2e-джоб)**, который
+> изменил `.github/workflows/ci.yml` и остался безпушем после предыдущего
+> запуска — git push передаёт всю цепочку unpushed-коммитов, поэтому `ci.yml`
+> уезжает вместе с S3.1. GITHUB_TOKEN не имеет scope `workflow`.
+> **Действие для владельца:** дать PAT scope `workflow` (или запушить `a70235a`
+> вручную), после чего `git push origin self-improve` унесёт весь стек
+> (a70235a, 8afd49a, 73e03fb, 3384be4) разом. Код S3.1 локально готов и
+> верифицирован (VERIFY OK, 224 tests).
+
 **Что.** `public/js/main.js` — в блоке регистрации SW: слушатель `updatefound`,
 который на `statechange` нового worker в `installed` **и** при наличии
 `controller` (т.е. это апгрейд, а не первый инсталл) **и** `navigator.onLine`
