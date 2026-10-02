@@ -37,10 +37,14 @@ export async function renderNumbers(root) {
   drawTable(root, numbers, lessons, theory, questions);
 }
 
-/** Chapter id → display title (theory.json carries the titles). */
+/** Chapter id → «Cap. N · Title» (theory.json IS the array of chapters). */
 function chapterTitles(theory) {
-  const byId = new Map((theory?.chapters || []).map((c) => [c.id, c.title_it]));
-  return (id) => byId.get(id) || `Cap. ${String(id).replace(/\D/g, '')}`;
+  const byId = new Map((Array.isArray(theory) ? theory : []).map((c) => [c.id, c]));
+  return (id) => {
+    const ch = byId.get(id);
+    const num = String(id).replace(/\D/g, '');
+    return ch ? `Cap. ${ch.chapter ?? num} · ${ch.title_it}` : `Cap. ${num}`;
+  };
 }
 
 /** The lesson note behind a table row (multilingual {en,ru,zh} or null). */
@@ -71,8 +75,8 @@ function tableBlock(numbers, lessons, titleOf) {
           el('span.numbers-fact__name', {}, r.fact),
           el('span.numbers-fact__value', {}, r.value)),
         noteFor(lessons, r) ? el('p.numbers-fact__note', {}, loc(noteFor(lessons, r))) : null,
-        el('p.numbers-fact__sub', {},
-          t(r.questions === 1 ? 'nm.factsOne' : 'nm.factsMany', { n: r.questions })),
+        r.questions > 0 ? el('p.numbers-fact__sub', {},
+          t(r.questions === 1 ? 'nm.factsOne' : 'nm.factsMany', { n: r.questions })) : null,
       )),
     )),
   );
