@@ -1,3 +1,35 @@
+## 2026-10-02 — Q4.2, срез 9: Практика + панель ответа (practice) на 3 языках
+
+Ветка self-improve. Экран **Практики** (`#/practice`, views/practice.js):
+verдикт фидбека «Correct», состояния кнопок VERO/FALSO после ответа
+(«Correct» / «Wrong» / «Right answer»), callout сигнала
+(aria-label «Signal word X», тег «FALSO IN N OF M QUESTIONS»),
+callout перевода (aria-label «Translation of X»), kbd-подсказка
+(NEXT · / TRANSLATE · VERO · / FALSO ·).
+
+**Что.** 11 новых ключей `pr.*` в en/ru/zh (плейсхолдеры
+{word}/{pct}/{n} идентичны во всех трёх языках). EN = байт-в-байт
+прежний хардкод (в т.ч. «FALSO IN {pct} OF {n} QUESTIONS» — его
+подшаблон проверяет qa-new-user); RU/zh — переводы. Кbd-буквы
+(ENTER/V/F/T) и метки VERO/FALSO — данные/шорткаты, не локализуем.
+
+**Как.**
+- public/js/i18n.js: +11 ключей pr.* в каждый из трёх словарей;
+  i18n.test.mjs: паритет OK (все 3 языка, плейсхолдеры совпадают).
+- public/js/views/practice.js: все найденные UI-литералы → `t('pr.…')`.
+- public/sw.js: VERSION v88 → v89 (публичный JS изменился).
+- tests/security.test.js: guard «the practice/feedback screen is
+  localized»; S2.8-тест AnswerButton обновлён: вместо литералов
+  слов теперь ожидает `t('pr.correct'/'pr.wrong'/'pr.rightAnswerTag')`
+  (слова уехали в словарь, состояния ds-answer--* на месте).
+
+**Проверка.** scripts/verify.sh → VERIFY OK: 209 тестов (was 208 +1
+guard), smoke 8/200, qa-new-user 73 PASS 0 FAIL (RU-сценарий:
+VERO/FALSO → фидбек → NEXT/FINISH, EN-строки callout на месте).
+
+Следующий срез: экзамен/результат (экран 3 из Q4.2).
+
+
 ## 2026-10-02 — Q4.2, срез 8: Поиск (search) на 3 языках
 
 Ветка self-improve. Экран **Поиска** (`#/search`, views/search.js,
