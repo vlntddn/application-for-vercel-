@@ -1,3 +1,35 @@
+## 2026-10-02 — S4.2a: словарь +20 терминов (107 → 127)
+
+**Что.** Первая порция Спринта 4: 20 терминов en/ru/zh в 7 существующих
+разделов `data/dictionary.json` — strada+6 (l'autostrada, la tangenziale,
+il passaggio a livello, la strada extraurbana, la zona a traffico limitato,
+la corsia trasversale), velocita+3 (il limite massimo di velocità,
+la frenatura d'emergenza, il sorpasso vietato), manovre+3 (la manovra,
+fermarsi, la corsia di sorpasso), sosta+3 (il parcheggio, la sosta di
+emergenza, la corsia di emergenza), veicoli+2 (il motore, il veicolo in
+avaria), documenti+1 (la targa), sicurezza+2 (il casco protettivo,
+il ferito).
+
+**Почему.** Фаза 2 «107 → ~250 терминов»: словарь взято из top-300
+`scripts/dictionary-candidates.mjs` (S4.1) — слова реального банка вопросов,
+а не догадки. Разделы-мишени — только существующие (задача требует), новых
+секций не создавал.
+
+**Как сделано.** Node-скрипт: чтение JSON → правка объекта (append в
+`terms`) → запись с сохранением стиля файла (inline-термины). Не переписывал
+файл «по памяти». Diff: 28 insertions, 9 deletions (только добавления +
+запятые последних строк).
+
+**zh — требует вычитки носителем** (все 20 новых zh-переводов, как и по
+правилу S4.2).
+
+**Как проверено.** `node --test tests/dictionary.test.js` → 4 pass / 0 fail
+(включая «no duplicate/empty terms», «≥5 terms per section»). Число терминов
+выросло ровно на 20 (107 → 127, проверка в скрипте до записи).
+`scripts/verify.sh` → VERIFY OK (237 passed, smoke 8/200).
+
+**Следующая:** S4.2b (ещё ~20 терминов).
+
 ## 2026-10-02 — пуш self-improve блокируется (workflow scope) — не ошибка S4.1
 
 **Что.** `git push origin self-improve` отклонён: токен не имеет scope
