@@ -119,7 +119,7 @@ const REVIEW_SIZE = 10;
  * longest time ago. New users just get a starter mix.
  */
 export async function renderQuickReview(root) {
-  clear(root, el('h1', {}, 'QUICK REVIEW'), el('p.lede', {}, 'Building your session...'));
+  clear(root, el('h1', {}, t('qr.title')), el('p.lede', {}, t('qr.loading')));
   const picked = new Map(); // id -> question
 
   async function resolveIds(ids) {
@@ -197,21 +197,19 @@ export async function renderQuickReview(root) {
   const rest = shuffle([...picked.values()].filter((q) => !dueSet.has(q.id)));
   const queue = [...dueFirst, ...rest].slice(0, REVIEW_SIZE);
   renderQuizSession(root, queue, {
-    title: 'QUICK REVIEW',
+    title: t('qr.title'),
     backHash: '#/',
     onQuit: () => { location.hash = '#/'; },
     onFinish: (correct, total) => {
       clear(root,
-        el('h1', {}, 'Quick review done'),
+        el('h1', {}, t('qr.doneTitle')),
         el('div.panel', {},
           el('p.stat-value', { className: `stat-value ${correct === total ? 'ok' : ''}` },
             `${correct}/${total}`),
-          el('p.stat-sub', {}, correct === total
-            ? 'Perfect. Same time tomorrow.'
-            : 'Misses went to your mistakes list — they will come back.'),
+          el('p.stat-sub', {}, t(correct === total ? 'qr.perfect' : 'qr.misses')),
           el('div.actions', { style: 'margin-top:16px' },
-            el('a.btn.btn-primary', { href: '#/' }, 'DASHBOARD'),
-            el('button.btn', { onclick: () => renderQuickReview(root) }, 'ONE MORE ROUND'),
+            el('a.btn.btn-primary', { href: '#/' }, t('qr.dashboard')),
+            el('button.btn', { onclick: () => renderQuickReview(root) }, t('qr.oneMore')),
           ),
         ),
       );

@@ -364,6 +364,30 @@ test('the mistakes review screen is localized: no hardcoded UI copy (Q4.2)', () 
   assert.match(views, /PRACTICE ALL MISTAKES/);
 });
 
+test('the quick review screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2: quick review copy lives in i18n.js under qr.* keys; the view only
+  // references keys, so ru/zh switch in without touching review.js.
+  const views = readViewsSource();
+  const reviewView = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'review.js'), 'utf8');
+  assert.match(reviewView, /t\('qr\.title'\)/, 'page title must come from i18n');
+  assert.match(reviewView, /t\('qr\.loading'\)/, 'loading lede must come from i18n');
+  assert.match(reviewView, /t\('qr\.doneTitle'\)/, 'done heading must come from i18n');
+  assert.match(reviewView, /'qr\.perfect' : 'qr\.misses'/, 'result note must come from i18n');
+  assert.match(reviewView, /t\('qr\.dashboard'\)/, 'dashboard button must come from i18n');
+  assert.match(reviewView, /t\('qr\.oneMore'\)/, 'one more round button must come from i18n');
+  // No hardcoded English UI strings left in the quick review flow.
+  assert.ok(!reviewView.includes("'QUICK REVIEW'"), 'no hardcoded page title');
+  assert.ok(!reviewView.includes('Building your session'), 'no hardcoded loading lede');
+  assert.ok(!reviewView.includes('Quick review done'), 'no hardcoded done heading');
+  assert.ok(!reviewView.includes('Perfect. Same time tomorrow'), 'no hardcoded perfect note');
+  assert.ok(!reviewView.includes('Misses went to your mistakes list'), 'no hardcoded misses note');
+  assert.ok(!reviewView.includes("'DASHBOARD'"), 'no hardcoded dashboard button');
+  assert.ok(!reviewView.includes("'ONE MORE ROUND'"), 'no hardcoded one-more button');
+  // English copy exists in the dictionary (the strings QA checks).
+  assert.match(views, /QUICK REVIEW/);
+  assert.match(views, /Perfect\. Same time tomorrow\./);
+});
+
 test('the settings screen is localized: no hardcoded UI copy (Q4.2)', () => {
   // Q4.2 slice 6: settings copy lives in i18n.js under st.* keys; the view
   // only references keys, so ru/zh switch in without touching settings.js.
