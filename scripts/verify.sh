@@ -80,6 +80,12 @@ else
   fail "explanation entries lost vs $BASE (restore them, merge instead of overwrite):"; echo "$EXPL_LOST"
 fi
 
+# 4c. Q8 causal-word advisory: print the counter (never a FAIL — owner proofread).
+CAUSAL_COUNT="$(node scripts/check-explanations.mjs 2>/dev/null | awk -F': ' '/^causal-word warnings: /{print $2; exit}')"
+if [ -n "$CAUSAL_COUNT" ]; then
+  echo "INFO  explanations causal-word warnings: $CAUSAL_COUNT (advisory — node scripts/sample-explanations.mjs)"
+fi
+
 # 5. Unit tests.
 if npm test --silent >/tmp/pp-verify-test.log 2>&1; then
   pass "npm test ($(grep -E '^# pass' /tmp/pp-verify-test.log | awk '{print $3}') passed)"

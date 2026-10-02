@@ -25,6 +25,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { CATEGORY_CHAPTER } from '../public/js/theory-map.js';
 
 export const WHY_LANGS = ['en', 'ru', 'zh'];
@@ -165,4 +166,99 @@ export function checkAll(root) {
     for (const { id, errors } of validateFile(file, bank, chapters)) allErrors.push(...errors);
   }
   return allErrors;
+}
+
+/**
+ * Q8 causal-word auto-gate (advisory, never fails the hard gate).
+ *
+ * A "why" that states a cause with a causal word ("because", "this keeps",
+ * "потому что", "так как", "чтобы") is a candidate for INVENTED reasoning
+ * (~2 of 10 drafts do it). It is only flagged when the same justification is
+ * absent from the sources a why may legitimately draw on: the question's
+ * text_it, the matching trap's why, and this chapter's mustKnow facts.
+ * This is a counter + list for the owner to proofread, not an error.
+ */
+export const CAUSAL_WORDS = {
+  en: ['because', 'this keeps'],
+  ru: ['потому что', 'так как', 'чтобы'],
+};
+const CAUSAL_LANGS = ['en', 'ru'];
+
+/** Same-language support corpus for a why: text_it + trap-why + mustKnow. */
+export function causalSupportFor(entry, question, chapters, lang) {
+  const ch = (chapters && chapters[entry.chapter]) || {};
+  let s = (question && question.text_it) || '';
+  const trap = Array.isArray(ch.traps) ? ch.traps.find((t) => t && t.id === question.id) : null;
+  if (trap && trap.why && typeof trap.why[lang] === 'string') s += ' ' + trap.why[lang];
+  for (const mk of Array.isArray(ch.mustKnow) ? ch.mustKnow : []) {
+    s += ' ' + (mk.fact_it || '') + ' ' + (mk.value || '');
+    if (mk.note && typeof mk.note[lang] === 'string') s += ' ' + mk.note[lang];
+  }
+  return s;
+}
+
+/**
+ * Advisory warnings for one explanation: a why uses a causal word with no
+ * matching justification in its support sources. Returns human-readable
+ * strings (empty = no warning). Pure and deterministic.
+ */
+export function causalWarnings(entry, question, chapters) {
+  const out = [];
+  const why = entry && entry.why ? entry.why : {};
+  for (const lang of CAUSAL_LANGS) {
+    const w = why[lang];
+    if (typeof w !== 'string' || !w) continue;
+    const found = CAUSAL_WORDS[lang].filter((word) => w.toLowerCase().includes(word));
+    if (!found.length) continue;
+    const sup = causalSupportFor(entry, question, chapters, lang).toLowerCase();
+    const supported = found.some((word) => sup.includes(word));
+    if (!supported) {
+      out.push(
+        `${question.id}: why.${lang} uses "${found.join(' / ')}" with no matching justification in text_it / trap-why / ${entry.chapter} mustKnow`,
+      );
+    }
+  }
+  return out;
+}
+
+/** Scan every explanation file; return { count, warnings } (deterministic). */
+export function causalWarningsAll(root) {
+  const bank = loadQuestionBank(root);
+  const chapters = loadChapters(root);
+  const exDir = path.join(root, 'data', 'explanations');
+  const warnings = [];
+  if (!fs.existsSync(exDir)) return { count: 0, warnings };
+  for (const f of fs.readdirSync(exDir).filter((f) => f.endsWith('.json'))) {
+    const file = JSON.parse(fs.readFileSync(path.join(exDir, f), 'utf8'));
+    for (const [id, entry] of Object.entries((file && file.items) || {})) {
+      const question = bank.get(id);
+      if (!question) continue;
+      warnings.push(...causalWarnings(entry, question, chapters));
+    }
+  }
+  return { count: warnings.length, warnings };
+}
+
+// CLI entry: `node scripts/check-explanations.mjs` — prints the hard-gate
+// errors and the Q8 causal-word warning counter + suspicious list. Warnings
+// are advisory (owner proofread) and never change the exit status on their
+// own; the exit code reflects hard-gate errors only.
+const IS_MAIN = (() => {
+  try {
+    const entry = fs.realpathSync(fileURLToPath(import.meta.url));
+    return entry === fs.realpathSync(process.argv[1]);
+  } catch {
+    return false;
+  }
+})();
+if (IS_MAIN) {
+  const root = process.cwd();
+  const errors = checkAll(root);
+  const causal = causalWarningsAll(root);
+  for (const e of errors) console.error('ERROR  ' + e);
+  console.log(`explanations hard gate: ${errors.length} error(s)`);
+  console.log(`causal-word warnings: ${causal.count}`);
+  for (const w of causal.warnings.slice(0, 50)) console.log('  ? ' + w);
+  if (causal.count > 50) console.log(`  ... and ${causal.count - 50} more`);
+  process.exit(errors.length ? 1 : 0);
 }

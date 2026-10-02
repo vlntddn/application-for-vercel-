@@ -7,6 +7,9 @@ import {
   validateExplanation,
   validateFile,
   checkAll,
+  causalWarnings,
+  causalWarningsAll,
+  CAUSAL_WORDS,
   WHY_MAX_LEN,
 } from '../scripts/check-explanations.mjs';
 
@@ -127,6 +130,56 @@ test('mustKnowNumbers: gathers numbers from every fact field', () => {
   const nums = mustKnowNumbers(CHAPTERS.ch22);
   assert.ok(nums.has(1));
   assert.equal(nums.has(0), false);
+});
+
+// Q8 causal-word advisory gate (never an error — owner proofread).
+
+test('canonical causal word list covers en + ru', () => {
+  assert.ok(CAUSAL_WORDS.en.includes('because'));
+  assert.ok(CAUSAL_WORDS.en.includes('this keeps'));
+  for (const w of ['потому что', 'так как', 'чтобы']) assert.ok(CAUSAL_WORDS.ru.includes(w));
+});
+
+test('causal: no causal word → no warning', () => {
+  const e = validEntry();
+  e.why.en = 'The airbag deploys on impact.';
+  assert.deepEqual(causalWarnings(e, FIXTURE, CHAPTERS), []);
+});
+
+test('causal: unsupported "because" in why.en → flagged', () => {
+  const e = validEntry();
+  e.why.en = 'This applies because the road is very wet.';
+  const w = causalWarnings(e, FIXTURE, CHAPTERS);
+  assert.equal(w.length, 1);
+  assert.ok(w[0].includes('because') && w[0].includes('why.en'), w.join(' | '));
+});
+
+test('causal: supported when trap-why carries the same word → not flagged', () => {
+  const ch = {
+    ch22: {
+      ...CHAPTERS.ch22,
+      traps: [{ id: FIXTURE.id, why: { en: 'This only applies because older cars differ.', ru: '—', zh: '—' } }],
+    },
+  };
+  const e = validEntry();
+  e.why.en = 'This is so because of the vehicle class.';
+  assert.deepEqual(causalWarnings(e, FIXTURE, ch), []);
+});
+
+test('causal: unsupported ru word "чтобы" → flagged on why.ru', () => {
+  const e = validEntry();
+  e.why.ru = 'Правило работает, чтобы снизить риск.';
+  const w = causalWarnings(e, FIXTURE, CHAPTERS);
+  assert.ok(w.some((s) => s.includes('why.ru') && s.includes('чтобы')), w.join(' | '));
+});
+
+test('causal: causalWarningsAll is deterministic across calls', () => {
+  const root = new URL('..', import.meta.url).pathname;
+  const a = causalWarningsAll(root);
+  const b = causalWarningsAll(root);
+  assert.equal(a.count, b.count);
+  assert.deepEqual(a.warnings, b.warnings);
+  assert.ok(a.count >= 0);
 });
 
 test('checkAll: the shipped data/explanations/ is valid (or empty)', () => {
