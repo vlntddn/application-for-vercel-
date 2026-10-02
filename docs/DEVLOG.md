@@ -1,3 +1,25 @@
+## 2026-10-02 — U2: Пол шрифта 12px
+
+Ветка self-improve. Правило типографики: minimum 12px / 0.75rem.
+
+**Что.** Все размеры текста меньше 12px подняты до 0.75rem:
+`label` в Settings (0.7rem), `.path-part__label` (0.7rem, ×75 на экране пути),
+`.trend-label` (0.7rem), бейдж счётчика в `.nav` (11px), `.word-stat`,
+`details.word-true summary`, `.signal-ratio` (0.72rem). Итого 7 мест.
+`public/sw.js` — VERSION v100 → v101.
+
+**Почему.** 11–11.5px на Retina — ниже порога комфортного чтения; самый
+заметный случай — 75 подписей Parts на #/path.
+
+**Как проверено.** qa-ux: 221 PASS / 3 FAIL — ровно baseline (pre-existing
+p7/p8, не блокируют). scripts/verify.sh → VERIFY OK (222 теста,
+qa-new-user 73/0, smoke :3917). В стилях не осталось font-size < 0.75rem.
+
+**Следующий шаг.** U3 — контраст.
+
+---
+
+
 ## 2026-10-02 — U1: Один primary на экран
 
 Ветка self-improve. Правило Web Interface Guidelines: one primary per screen.

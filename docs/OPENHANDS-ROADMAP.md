@@ -568,7 +568,7 @@ _Точка обзора B (не блокирует): после L7 — те ж�
       у остальных — обычная кнопка (`.btn`) или ссылка. Главная: из двух карточек
       (Learning path и Next step) primary оставить одной — Continue пути; «Start practice»
       — обычной кнопкой. Правило системы: one primary per screen.
-- [ ] **U2 Пол шрифта 12px.** `.path-part__label` (11.2px ×75), подписи полей в Settings
+- [x] **U2 Пол шрифта 12px.** `.path-part__label` (11.2px ×75), подписи полей в Settings
       (11.2px), `.numbers-fact__sub`, теги — минимум `0.75rem` (12px). В qa-ux добавить
       проверку p9 «нет текста < 12px» (кроме `kbd`), FAIL считается.
 - [ ] **U3 `touch-action: manipulation`** на `a, button, [role=button], .ds-answer,
