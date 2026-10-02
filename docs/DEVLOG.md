@@ -1,3 +1,68 @@
+## 2026-10-02 — Q4.2, срез 13: Список теории (#/theory) — перевод на 3 языка
+
+Ветка self-improve. Экран **списка теории** (`#/theory`, `renderTheoryList`
+в views/theory.js) — обложка теоретического мануала: прогресс чтения глав,
+кнопка «продолжить с главы N», ссылка на словарь, баннер «итальянский
+экзамена» и сетка карточек глав. Срез перевёл весь UI-текст списка через
+`t()` на en/ru/zh. Глава (renderTheoryChapter) и гид экзамен-итальянского
+(renderExamItalian) — отдельные срезы Q4.2, за ними не тронуты.
+
+**Что.** Новые ключи `th.*` в каждый из трёх словарей: title, loading, lede,
+progressTitle, chapters (count), continue (с {n}), dictLink, exitalTitle,
+exitalSub, lessonTag, chapter (с {n}), read, new, mastered (с {n}/{pct}).
+EN = байт-в-байт прежний хардкод; RU/ZH — новые переводы (первый раз этот
+экран был только на EN).
+
+**Как.**
+- public/js/views/theory.js: +импорт `t`; 12 строковых литералов списка
+  (h1, loading lede, lede, заголовок прогресса, «N/M CHAPTERS», «CONTINUE —
+  CHAPTER N», «DIZIONARIO — EXAM VOCABULARY», заголовок и подзаголовок
+  exam-italian-баннера, «LESSON», «CHAPTER N», «READ»/«NEW», «N questions ·
+  mastered P%») → t('th.*'); данные (ch.title_it, перевод заголовка) не
+  тронуты.
+- public/js/i18n.js: +13 ключей th.* в en/ru/zh (вставлены в конце каждого
+  блока, после sr.*); i18n.test.mjs: паритет OK (213 тестов).
+- public/sw.js: VERSION v92 → v93 (публичный JS изменился).
+- tests/security.test.js: guard «the theory list screen is localized» —
+  каждый литерал списка идёт через t(), англ. хардкод не остался, EN-копи
+  присутствуют в словаре.
+
+**Проверка.** scripts/verify.sh → VERIFY OK: 213 тестов (was 212 +1 guard),
+smoke 8/200, qa-new-user 73 PASS 0 FAIL.
+
+## 2026-10-02 — Q4.2, срез 12: Quick Review (#/review) — перевод на 3 языка
+## 2026-10-02 — Q4.2, срез 13: Список теории (#/theory) — перевод на 3 языка
+
+Ветка self-improve. Экран **списка теории** (`#/theory`, `renderTheoryList`
+в views/theory.js) — обложка теоретического мануала: прогресс чтения глав,
+кнопка «продолжить с главы N», ссылка на словарь, баннер «итальянский
+экзамена» и сетка карточек глав. Срез перевёл весь UI-текст списка через
+`t()` на en/ru/zh. Глава (renderTheoryChapter) и гид экзамен-итальянского
+(renderExamItalian) — отдельные срезy Q4.2, за ними не тронуты.
+
+**Что.** Новые ключи `th.*` в каждый из трёх словарей: title, loading, lede,
+progressTitle, chapters (count continue (с {n})), dictLink, exitalTitle,
+exitalSub, lessonTag, chapter (с {n}), read, new, mastered (с {n}/{pct}).
+EN = байт-в-байт прежний хардкод; RU/ZH — новые переводы (первый раз этот
+экран был только на EN).
+
+**Как.**
+- public/js/views/theory.js: +импорт `t`; 12 строковых литералов списка
+  (h1, loading lede, lede, заголовок прогресса, «N/M CHAPTERS», «CONTINUE —
+  CHAPTER N», «DIZIONARIO — EXAM VOCABULARY», заголовок и подзаголовок
+  exam-italian-баннера, «LESSON», «CHAPTER N», «READ»/«NEW», «N questions ·
+  mastered P%») → t('th.*'); данные (ch.title_it, перевод заголовка) не
+  тронуты.
+- public/js/i18n.js: +13 ключей th.* в en/ru/zh (вставлены в конце каждого
+  блока, после sr.*); i18n.test.mjs: паритет OK (213 тестов).
+- public/sw.js: VERSION v92 → v93 (публичный JS изменился).
+- tests/security.test.js: guard «the theory list screen is localized» —
+  каждый литерал списка идёт через t(), англ. хардкод не остался, EN-копи
+  присутствуют в словаре.
+
+**Проверка.** scripts/verify.sh → VERIFY OK: 213 тестов (was 212 +1 guard),
+smoke 8/200, qa-new-user 73 PASS 0 FAIL.
+
 ## 2026-10-02 — Q4.2, срез 12: Quick Review (#/review) — перевод на 3 языка
 
 Ветка self-improve. Экран **Quick Review** (`#/review`, views/review.js) —
