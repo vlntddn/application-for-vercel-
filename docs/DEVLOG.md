@@ -1,3 +1,15 @@
+## 2026-10-03 — T5 выполнена: мёртвый .btn-why удалён из styles.css
+
+**Что.** Проверял 4 класса из задачи (.btn, .tag, .card, .panel) + все варианты.
+Все 4 базовых класса всё ещё активно используются в JS-вьюх (.btn в
+onboarding/dashboard/drill/exam/numbers/practice, .tag в ui/practice/theory,
+.card в stats.js, .panel в main/onboarding/review/install) — не удалял.
+Единственный мёртвый класс — .btn-why (border-style: dashed): ноль ссылок
+в JS, HTML и тестах. Удалил из public/styles.css (1 строка), sw.js v117→v118.
+
+**Проверка.** verify.sh VERIFY OK (237 tests, 8 smoke, qa-new-user 77 PASS).
+qa-ux 224 PASS, 0 FAIL (оба вьюпорта).
+
 ## 2026-10-03 — S2.14b выполнена: p7 next-steps закрыт, qa-ux 0 FAIL на обоих вьюпортах
 
 **Что.** (a) p7 @375 — `#dashboard-next-steps` bottom 848px > 812: в `public/styles.css`
