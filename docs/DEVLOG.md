@@ -1,3 +1,35 @@
+## 2026-10-02 — Q4.2, срез 10: Экзамен (exam) — остаток хардкода в i18n
+
+Ветка self-improve. Экран **экзамена** (`#/exam`, views/exam.js). Большая
+часть (prestart-экран, вопросы, сабмит, verdict «PROMOSSO! — сдал /
+BOCCIATO — не сдал», panel wrong answers) уже была в i18n. Срез убрал
+последние хардкод-литералы в `runExam`:
+- слова состояний AnswerButton после ответа: «Correct» / «Wrong» /
+  «Right answer» → переиспользованы `pr.correct` / `pr.wrong` /
+  `pr.rightAnswerTag` из среза 9 (практика и экзамен — один компонент);
+- kbd-подсказка «V VERO · F FALSO · …» → новые ключи `ex.kbdTrue` /
+  `ex.kbdFalse` (EN: VERO/FALSO, RU: ПРАВИЛЬНО/НЕПРАВИЛЬНО, ZH: 对/错).
+
+**Что.** 2 новых ключа `ex.kbdTrue`/`ex.kbdFalse` в en/ru/zh.
+EN = байт-в-байт прежний хардкод. Кbd-буквы (V/F/T/←/→) и кнопки
+VERO/FALSO в самом вопросе — данные/шорткаты, не локализуем (как в
+срезах 9-10).
+
+**Как.**
+- public/js/i18n.js: +2 ключа ex.* в каждый из трёх словарей;
+  i18n.test.mjs: паритет OK.
+- public/js/views/exam.js: 6 литералов → t() (3 состояния ответа
+  через pr.*, 2 слова kbd-подсказки через ex.*).
+- public/sw.js: VERSION v89 → v90 (публичный JS изменился).
+- tests/security.test.js: guard «the exam screen is localized» —
+  t-вызовы на месте, хардкод ушёл.
+
+**Проверка.** scripts/verify.sh → VERIFY OK: 210 тестов (was 209 +1
+guard), smoke 8/200, qa-new-user 73 PASS 0 FAIL.
+
+Следующий срез: путь / ошибки / настройки / остальные экраны (Q4.2).
+
+
 ## 2026-10-02 — Q4.2, срез 9: Практика + панель ответа (practice) на 3 языках
 
 Ветка self-improve. Экран **Практики** (`#/practice`, views/practice.js):
