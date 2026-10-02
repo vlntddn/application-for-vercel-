@@ -1,3 +1,8 @@
+## 2026-10-02 — S4.last выполнена локально, ПУШ БЛОКИРОВАН (workflow scope)
+
+**Что.** Счётчики 107→147 в README/PLAY-STORE/TODO/роадмапе, [x] в роадмапе, коммит 605ad12. verify OK.
+
+**Push-блокёр (pre-existing).** `git push origin self-improve` отклонён: PAT без scope workflow, цепочка содержит T4 (a70235a) с ci.yml. Тот же блокёр зафиксирован с S3.1. Коммиты с T4 по S4.last копятся локально; нужен токен с workflow scope (владелец).
 ## 2026-10-02 — S4.last: счётчик «107 терминов» → 147
 
 **Что.** Обновил актуальные счётчики словаря: README.md (147 terms), docs/PLAY-STORE.md (147 terms), docs/TODO.md (147 терминов в закрытом пункте), docs/OPENHANDS-ROADMAP.md (строка статуса Фазы 2). Исторические записи DEVLOG и «107 → 127»/«107 → ~250» не трогал.
