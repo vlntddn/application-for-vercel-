@@ -1,3 +1,36 @@
+## 2026-10-02 — Q6: Экран результата экзамена — 3 бага
+
+Ветка self-improve. Экран результата экзамена (#/exam после submit) имел
+три визуальных/контентных бага.
+
+**Что.**
+1. Вердикт капсалом: `BOCCIATO` / `PROMOSSO!` → «Bocciato · Not passed» /
+   «Promosso · Passed» (en), «Bocciato — не сдал» / «Promosso — сдал» (ru),
+   «Bocciato — 未通过» / «Promosso — 通过» (zh) — i18n.js, ключи
+   `ex.verdictPassed` / `ex.verdictFailed`, все 3 языка.
+2. Кнопка `DASHBOARD` вылезала за рамку на 375px (`.actions` не был flex-контейнером).
+   Добавлен класс `.exam-result-actions` в `public/styles.css`
+   (`display:flex; flex-direction:column; align-items:stretch; gap:10px`) и
+   `.exam-result-actions .btn { width:100% }` — каждая кнопка в полный столбец.
+3. Панель «WHAT WENT WRONG» показывала только правильный ответ. Перестроена
+   `wrongOnes` в exam.js из `questions.filter(...)` в
+   `questions.map((q,i)=>({q, pick: chosen[i]})).filter(({q,pick})=>pick!==q.is_true)` —
+   теперь держим выбор ученика. Каждая строка ошибки: два тега
+   «YOURS: {ans}» / «RIGHT: {ans}» (i18n: `ex.yourTag`/`ex.rightTag`) + ссылка
+   «Why?» (`ex.why`), если у вопроса есть пояснение. `whyLink(question)` асинхронно
+   проверяет lesson traps (`loadLessons`) и `loadExplanations(slug)`, и только если
+   пояснение найдено — рендерит `<a href="#/theory/{chapterId}">` (route совпадает
+   с теорией). Убран устаревший хелпер `wrongOnesIndex`, `whyLinkPlaceholder`→`whyLink`.
+
+**Почему.** Экран результата — первое, что видит ученик после экзамена; вердикт
+капсалом выглядел как shout без причины, DASHBOARD обрезался на мобильном, а
+«What went wrong» без ответа ученика и ссылки на теорию не позволял разобраться в
+ошибках.
+
+**Как проверено.** `scripts/verify.sh` → VERIFY OK: npm test 216 passed, smoke
+8 endpoints 200, qa-new-user 73 PASS 0 FAIL, sw.js VERSION bumped (v97→v98),
+protected paths untouched.
+
 ## 2026-10-02 — Q5: Главная без каши — 1 primary CTA + сетка 2x3 плиток
 
 Ветка self-improve. Главная (#/) — «стена»: 7 кнопок подряд

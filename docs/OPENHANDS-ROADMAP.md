@@ -540,7 +540,7 @@ _Точка обзора B (не блокирует): после L7 — те ж�
       «Learning path» и «This week» (тень налезает на соседа). Сделать: один primary
       (Continue пути), «Quick review / Practice / Language of the exam / Numbers / Theory /
       Stats» — сеткой 2×3 вторичных плиток с иконкой; между панелями `margin-bottom: 24px`.
-- [ ] **Q6 Экран результата экзамена.** «BOCCIATO» без объяснения → «Bocciato · Not passed»
+- [x] **Q6 Экран результата экзамена.** «BOCCIATO» без объяснения → «Bocciato · Not passed»
       (по языку ученика); кнопка DASHBOARD вылезает за рамку на 375px (минимум padding /
       перенос); в «What went wrong» показывать ответ ученика и правильный (не только
       правильный) + ссылка «Why?» на пояснение, если есть.
