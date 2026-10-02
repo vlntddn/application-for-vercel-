@@ -1,3 +1,29 @@
+## 2026-10-02 — U1: Один primary на экран
+
+Ветка self-improve. Правило Web Interface Guidelines: one primary per screen.
+
+**Что.**
+1. `#/path` (path.js, `stepCard`): оранжевая `.ds-btn--primary` только у шага
+   со статусом `ready` (тег «Up next»); остальные незакрытые шаги — обычная
+   `.ds-btn--lg`.
+2. Главная (dashboard.js, `nextStepsPanel`): кнопка «Start practice» — обычная
+   `.ds-btn--lg`; единственный primary экрана остаётся у карточки Learning path
+   (Continue пути).
+3. `public/sw.js` — VERSION v99 → v100.
+
+**Почему.** На #/path было до 24 оранжевых кнопок подряд — терялся фокус
+«что делать дальше»; на главной два primary (Learning path и Next step)
+конкурировали. Теперь в каждом экране один.
+
+**Как проверено.** qa-ux: 221 PASS / 3 FAIL — ровно как до правки (pre-existing
+FAIL p7/p8 не блокируют). scripts/verify.sh → VERIFY OK (222 теста,
+qa-new-user 73 PASS / 0 FAIL, smoke :3917).
+
+**Следующий шаг.** U2 — пол шрифта 12px.
+
+---
+
+
 ## 2026-10-02 — Q8: Выборка пояснений для вычитки владельцем
 
 Ветка self-improve. Инструменты вычитки «почему» (живой тест показал, что у ~2 из 10

@@ -564,7 +564,7 @@ _Точка обзора B (не блокирует): после L7 — те ж�
 Источник: ревью архитектора по правилам Web Interface Guidelines + дизайн-системе.
 Каждая задача — маленькая; проверка: verify + `node scripts/qa-ux.mjs` (не хуже).
 
-- [ ] **U1 Один primary на экран.** `#/path`: оранжевая CONTINUE только у шага «Up next»,
+- [x] **U1 Один primary на экран.** `#/path`: оранжевая CONTINUE только у шага «Up next»,
       у остальных — обычная кнопка (`.btn`) или ссылка. Главная: из двух карточек
       (Learning path и Next step) primary оставить одной — Continue пути; «Start practice»
       — обычной кнопкой. Правило системы: one primary per screen.
