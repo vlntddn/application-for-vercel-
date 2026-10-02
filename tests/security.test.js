@@ -805,3 +805,38 @@ test('the theory list screen is localized: no hardcoded UI copy (Q4.2)', () => {
   assert.match(views, /'THEORY MANUAL'/);
   assert.match(views, /'CONTINUE — CHAPTER {n}'/);
 });
+
+test('the theory chapter screen is localized: no hardcoded UI copy (Q4.2)', () => {
+  // Q4.2 slice 14: chapter view copy lives in i18n.js under tc.* keys.
+  const views = readViewsSource();
+  const theoryView = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'theory.js'), 'utf8');
+  assert.match(theoryView, /t\('tc\.allChapters'\)/, 'back link must come from i18n');
+  assert.match(theoryView, /t\('tc\.chapterOf'/, 'chapter badge must come from i18n');
+  assert.match(theoryView, /t\('tc\.keyIdeas'\)/, 'key ideas heading must come from i18n');
+  assert.match(theoryView, /t\('tc\.originalText'\)/, 'original text heading must come from i18n');
+  assert.match(theoryView, /t\('tc\.mustKnow'\)/, 'must know heading must come from i18n');
+  assert.match(theoryView, /t\('tc\.trickTitle'\)/, 'tricks heading must come from i18n');
+  assert.match(theoryView, /t\('tc\.signsInChapter'/, 'signs heading must come from i18n');
+  assert.match(theoryView, /t\('tc\.vocabOfChapter'\)/, 'vocab heading must come from i18n');
+  assert.match(theoryView, /t\('tc\.checkYourself'\)/, 'check heading must come from i18n');
+  assert.match(theoryView, /t\('tc\.markRead'\)/, 'mark read button must come from i18n');
+  assert.match(theoryView, /t\('tc\.whatThisSign'\)/, 'modal title must come from i18n');
+  assert.match(theoryView, /t\('tc\.practiceSign'/, 'modal practice button must come from i18n');
+  // No hardcoded English UI strings left in the chapter view.
+  assert.ok(!theoryView.includes("'← ALL CHAPTERS'"), 'no hardcoded back link');
+  assert.ok(!theoryView.includes("'IN THIS LESSON'"), 'no hardcoded lesson heading');
+  assert.ok(!theoryView.includes("'KEY IDEAS'"), 'no hardcoded key ideas heading');
+  assert.ok(!theoryView.includes("'ORIGINAL TEXT (ITALIAN)'"), 'no hardcoded original text heading');
+  assert.ok(!theoryView.includes("'MUST KNOW — NUMBERS & FACTS'"), 'no hardcoded must know heading');
+  assert.ok(!theoryView.includes("'HOW THE EXAM TRICKS YOU HERE'"), 'no hardcoded tricks heading');
+  assert.ok(!theoryView.includes("'VOCABULARY OF THIS CHAPTER'"), 'no hardcoded vocab heading');
+  assert.ok(!theoryView.includes("'CHECK YOURSELF'"), 'no hardcoded check heading');
+  assert.ok(!theoryView.includes("'MARK AS READ'"), 'no hardcoded mark read button');
+  assert.ok(!theoryView.includes("'WHAT THIS SIGN MEANS'"), 'no hardcoded modal title');
+  assert.ok(!theoryView.includes("'PRACTICE THIS SIGN"), 'no hardcoded modal practice button');
+  assert.ok(!theoryView.includes("'SIGN PRACTICE'"), 'no hardcoded sign practice title');
+  // English copy exists in the dictionary.
+  assert.match(views, /'← ALL CHAPTERS'/);
+  assert.match(views, /'MARK AS READ'/);
+  assert.match(views, /'WHAT THIS SIGN MEANS'/);
+});

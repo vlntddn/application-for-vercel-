@@ -32,10 +32,10 @@ function showSignModal(imageUrl, signQuestions, onPractice) {
     overlay.replaceChildren(
       el('div.modal', { role: 'dialog', 'aria-modal': 'true' },
         el('div.quiz-head', {},
-          el('h2', { style: 'margin:0' }, 'WHAT THIS SIGN MEANS'),
-          el('button.btn.btn-icon', { onclick: close, 'aria-label': 'Close' }, '✕'),
+          el('h2', { style: 'margin:0' }, t('tc.whatThisSign')),
+          el('button.btn.btn-icon', { onclick: close, 'aria-label': t('tc.close') }, '✕'),
         ),
-        el('img.modal-sign', { src: imageUrl, alt: 'Road sign' }),
+        el('img.modal-sign', { src: imageUrl, alt: t('tc.roadSign') }),
         facts.length
           ? el('div', {},
               ...facts.map((q) =>
@@ -49,15 +49,15 @@ function showSignModal(imageUrl, signQuestions, onPractice) {
               !revealed
                 ? el('button.btn.btn-small.btn-translate', {
                     onclick: () => { revealed = true; draw(); },
-                  }, `TRANSLATE (${lang().toUpperCase()})`)
+                  }, t('tc.translate', { lang: lang().toUpperCase() }))
                 : null,
             )
-          : el('p.empty-note', {}, 'No description in the question bank'),
+          : el('p.empty-note', {}, t('tc.noDescription')),
         el('div.actions', {},
           el('button.btn.btn-primary', {
             onclick: () => { close(); onPractice(); },
-          }, `PRACTICE THIS SIGN — ${signQuestions.length} QUESTIONS`),
-          el('button.btn', { onclick: close }, 'CLOSE'),
+          }, t('tc.practiceSign', { n: signQuestions.length })),
+          el('button.btn', { onclick: close }, t('tc.close')),
         ),
       ),
     );
@@ -65,7 +65,7 @@ function showSignModal(imageUrl, signQuestions, onPractice) {
 
   draw();
   document.body.append(overlay);
-  overlay.querySelector('button[aria-label="Close"]')?.focus();
+  overlay.querySelector('.btn-icon')?.focus();
 }
 
 /* ============================== THEORY ============================== */
@@ -151,7 +151,7 @@ export async function renderTheoryChapter(root, id, opts = {}) {
     return clear(root, errorBanner(err));
   }
   const ch = chapters.find((c) => c.id === id);
-  if (!ch) return clear(root, el('p.empty-note', {}, 'Chapter not found'));
+  if (!ch) return clear(root, el('p.empty-note', {}, t('tc.notFound')));
   const tr = ch.translations?.[lang()];
 
   // Linked question-bank topic: powers the signs gallery and self-check.
@@ -205,7 +205,7 @@ export async function renderTheoryChapter(root, id, opts = {}) {
   function startCheck() {
     document.removeEventListener('keydown', keyHandler);
     renderQuizSession(root, pickQueue(catQuestions, PATH_CHECK_QUESTIONS), {
-      title: `CHECK — CAP. ${ch.chapter}`,
+      title: t('tc.checkTitle', { n: ch.chapter }),
       backHash: `#/theory/${id}`,
       onQuit: () => renderTheoryChapter(root, id),
       onFinish: (correct, total) => {
@@ -232,9 +232,9 @@ export async function renderTheoryChapter(root, id, opts = {}) {
     const m = cat ? masteryOf(slug, cat.count) : null;
     clear(root,
       el('div.quiz-head', {},
-        el('a.btn', { href: '#/theory' }, '← ALL CHAPTERS'),
-        el('span.tag', {}, `CHAPTER ${ch.chapter}/${sorted.length}`),
-        isRead ? el('span.tag.ok', {}, 'READ') : el('span.tag.warn', {}, 'NEW'),
+        el('a.btn', { href: '#/theory' }, t('tc.allChapters')),
+        el('span.tag', {}, t('tc.chapterOf', { n: ch.chapter, total: sorted.length })),
+        isRead ? el('span.tag.ok', {}, t('tc.read')) : el('span.tag.warn', {}, t('tc.new')),
       ),
       el('h1', { style: 'margin-top:20px' }, ch.title_it),
       revealed && tr?.title ? el('p.lede', {}, tr.title) : null,
@@ -243,19 +243,19 @@ export async function renderTheoryChapter(root, id, opts = {}) {
         ? el('div.ds-feedback', {
             className: `ds-feedback ${opts.quizResult.correct === opts.quizResult.total ? 'ds-feedback--ok' : 'ds-feedback--bad'}`,
             style: 'margin:0 0 20px',
-          }, `Self-check: ${opts.quizResult.correct}/${opts.quizResult.total} correct`)
+          }, t('tc.selfCheck', { correct: opts.quizResult.correct, total: opts.quizResult.total }))
         : null,
 
       lesson
         ? el('div.panel.lesson-objective', {},
-            el('h2', {}, 'IN THIS LESSON'),
+            el('h2', {}, t('tc.inThisLesson')),
             el('p.lede', { style: 'margin:0' }, loc(lesson.objective)),
           )
         : null,
 
       lesson?.keyIdeas?.length
         ? el('div.panel', {},
-            el('h2', {}, 'KEY IDEAS'),
+            el('h2', {}, t('tc.keyIdeas')),
             ...lesson.keyIdeas.map((idea, i) =>
               el('div.key-idea', {},
                 el('div.key-idea-num', {}, String(i + 1)),
@@ -269,24 +269,24 @@ export async function renderTheoryChapter(root, id, opts = {}) {
         : null,
 
       el('div.panel.chapter-body', {},
-        el('h2', {}, 'ORIGINAL TEXT (ITALIAN)'),
+        el('h2', {}, t('tc.originalText')),
         el('p', {}, ch.content_it),
         revealed && tr?.content
-          ? el('div.translation-block', {}, el('strong', {}, 'Translation — '), tr.content)
+          ? el('div.translation-block', {}, el('strong', {}, t('tc.translation')), tr.content)
           : null,
         revealed && tr?.simple_it
-          ? el('div.simple-block', {}, el('strong', {}, 'In simple words — '), tr.simple_it)
+          ? el('div.simple-block', {}, el('strong', {}, t('tc.simpleWords')), tr.simple_it)
           : null,
         !revealed && (tr?.content || tr?.simple_it)
           ? el('button.btn.btn-small.btn-translate', {
               onclick: () => { revealed = true; draw(); },
-            }, `TRANSLATE (${lang().toUpperCase()})`)
+            }, t('tc.translate', { lang: lang().toUpperCase() }))
           : null,
       ),
 
       lesson?.mustKnow?.length
         ? el('div.panel', {},
-            el('h2', {}, 'MUST KNOW — NUMBERS & FACTS'),
+            el('h2', {}, t('tc.mustKnow')),
             ...lesson.mustKnow.map((f) =>
               el('div.row', {},
                 el('div', { style: 'flex:1' },
@@ -301,46 +301,46 @@ export async function renderTheoryChapter(root, id, opts = {}) {
 
       traps.length
         ? el('div.panel.traps-panel', {},
-            el('h2', {}, 'HOW THE EXAM TRICKS YOU HERE'),
+            el('h2', {}, t('tc.trickTitle')),
             el('p.stat-sub', { style: 'margin-bottom:14px' },
-              'Real exam questions. Decide VERO or FALSO, then reveal the trap.'),
-            ...traps.map((t, i) =>
+              t('tc.trickLede')),
+            ...traps.map((tr, i) =>
               el('div.trap', {},
-                t.q.image_url
-                  ? el('img.trap-img', { src: t.q.image_url, alt: 'Road sign', loading: 'lazy' })
+                tr.q.image_url
+                  ? el('img.trap-img', { src: tr.q.image_url, alt: t('tc.roadSign'), loading: 'lazy' })
                   : null,
-                el('p.trap-text', {}, `«${t.q.text_it}»`),
+                el('p.trap-text', {}, `«${tr.q.text_it}»`),
                 trapRevealed.has(i)
                   ? el('div.trap-answer', {},
-                      el('span.tag', { className: `tag ${t.q.is_true ? 'ok' : 'bad'}` },
-                        t.q.is_true ? 'VERO' : 'FALSO'),
-                      el('p.trap-why', {}, loc(t.why)),
+                      el('span.tag', { className: `tag ${tr.q.is_true ? 'ok' : 'bad'}` },
+                        tr.q.is_true ? 'VERO' : 'FALSO'),
+                      el('p.trap-why', {}, loc(tr.why)),
                     )
                   : el('button.btn.btn-small', {
                       onclick: () => { trapRevealed.add(i); draw(); },
-                    }, 'REVEAL THE TRAP'),
+                    }, t('tc.revealTrap')),
               ),
             ),
             el('div.actions', {},
-              el('a.btn.btn-small', { href: '#/exam-italian' }, 'FULL GUIDE: THE ITALIAN OF THE EXAM →'),
+              el('a.btn.btn-small', { href: '#/exam-italian' }, t('tc.fullGuide')),
             ),
           )
         : null,
 
       signs.length
         ? el('div.panel', {},
-            el('h2', {}, `SIGNS IN THIS CHAPTER — ${signs.length}`),
-            el('p.stat-sub', { style: 'margin-bottom:12px' }, 'TAP A SIGN TO SEE WHAT IT MEANS'),
+            el('h2', {}, t('tc.signsInChapter', { n: signs.length })),
+            el('p.stat-sub', { style: 'margin-bottom:12px' }, t('tc.tapSign')),
             el('div.signs-grid', {},
               ...signs.map((src) =>
                 el('button.sign-tile', {
-                  'aria-label': 'Show sign description',
+                  'aria-label': t('tc.showSign'),
                   onclick: () => {
                     const signQuestions = catQuestions.filter((q) => q.image_url === src);
                     showSignModal(src, signQuestions, () => {
                       document.removeEventListener('keydown', keyHandler);
                       renderQuizSession(root, pickQueue(signQuestions, signQuestions.length), {
-                        title: 'SIGN PRACTICE',
+                        title: t('tc.signPractice'),
                         backHash: `#/theory/${id}`,
                         onQuit: () => renderTheoryChapter(root, id),
                         onFinish: (correct, total) =>
@@ -348,7 +348,7 @@ export async function renderTheoryChapter(root, id, opts = {}) {
                       });
                     });
                   },
-                }, el('img', { src, alt: 'Road sign', loading: 'lazy', onerror: (e) => e.target.closest('button').remove() })),
+                }, el('img', { src, alt: t('tc.roadSign'), loading: 'lazy', onerror: (e) => e.target.closest('button').remove() })),
               ),
             ),
           )
@@ -356,14 +356,14 @@ export async function renderTheoryChapter(root, id, opts = {}) {
 
       vocabSections.length
         ? el('div.panel', {},
-            el('h2', {}, 'VOCABULARY OF THIS CHAPTER'),
+            el('h2', {}, t('tc.vocabOfChapter')),
             ...vocabSections.map((s) =>
               el('div.row', {},
                 el('div', {},
                   el('strong', {}, s.title_it),
-                  el('p.stat-sub', {}, `${s.terms.length} TERMS · ${s.titles?.[lang()] || ''}`),
+                  el('p.stat-sub', {}, t('tc.terms', { n: s.terms.length, sub: s.titles?.[lang()] || '' })),
                 ),
-                el('a.btn.btn-small', { href: `#/dictionary/${s.id}` }, 'OPEN'),
+                el('a.btn.btn-small', { href: `#/dictionary/${s.id}` }, t('tc.open')),
               ),
             ),
           )
@@ -371,27 +371,27 @@ export async function renderTheoryChapter(root, id, opts = {}) {
 
       cat
         ? el('div.panel', {},
-            el('h2', {}, 'CHECK YOURSELF'),
-            el('p.stat-sub', {}, `${cat.count} QUESTIONS IN THIS TOPIC · MASTERED ${m.mastered} (${m.pct}%)`),
+            el('h2', {}, t('tc.checkYourself')),
+            el('p.stat-sub', {}, t('tc.questionsInTopic', { n: cat.count, mastered: m.mastered, pct: m.pct })),
             el('div.bar', { 'aria-hidden': 'true' }, el('div', { style: `width:${m.pct}%` })),
             el('div.actions', {},
-              el('button.btn.btn-primary', { onclick: startCheck }, 'QUICK CHECK — 5 QUESTIONS'),
-              el('a.btn', { href: `#/practice/${slug}` }, 'FULL PRACTICE'),
+              el('button.btn.btn-primary', { onclick: startCheck }, t('tc.quickCheck')),
+              el('a.btn', { href: `#/practice/${slug}` }, t('tc.fullPractice')),
             ),
           )
         : null,
 
       el('div.actions', {},
         isRead
-          ? el('span.tag.ok', {}, 'MARKED AS READ')
-          : el('button.btn.btn-primary', { onclick: markRead }, 'MARK AS READ'),
+          ? el('span.tag.ok', {}, t('tc.markedRead'))
+          : el('button.btn.btn-primary', { onclick: markRead }, t('tc.markRead')),
       ),
       el('div.chapter-nav', {},
         prev
-          ? el('a.btn', { href: `#/theory/${prev.id}` }, `← CAP. ${prev.chapter}`)
+          ? el('a.btn', { href: `#/theory/${prev.id}` }, t('tc.prevCap', { n: prev.chapter }))
           : el('span', {}),
         next
-          ? el('a.btn', { href: `#/theory/${next.id}` }, `CAP. ${next.chapter} →`)
+          ? el('a.btn', { href: `#/theory/${next.id}` }, t('tc.nextCap', { n: next.chapter }))
           : el('span', {}),
       ),
     );
