@@ -655,6 +655,10 @@ kbd {
 
 .onboard { max-width: 480px; margin: 40px auto; }
 
+.onboard .lede { margin-bottom: 12px; }
+.onboard .stat-sub { margin-bottom: 20px; }
+.onboard .btn { white-space: nowrap; }
+
 .steps { display: flex; gap: 8px; margin-bottom: 24px; }
 .steps span { flex: 1; height: 10px; border: var(--border-thin); background: var(--surface); }
 .steps span.done { background: var(--accent); }

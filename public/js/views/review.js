@@ -76,7 +76,7 @@ export async function renderMistakes(root) {
       }
       causePanel = el('div.panel', { style: 'margin-bottom:24px' },
         el('h2', {}, t('ms.causeTitle', { part: t(`ms.causes.${cause}`), extra, n, total: questions.length })),
-        el('div.actions', {}, el('a.btn.btn-primary', { href }, t('ms.practiceThis'))),
+        el('div.actions', {}, el('a.btn', { href }, t('ms.practiceThis'))),
       );
     }
   } catch {
