@@ -19,7 +19,13 @@
         { "it": "il centro abitato", "en": "built-up area", "ru": "населённый пункт", "zh": "居民区" },
         { "it": "la curva", "en": "bend, curve", "ru": "поворот (дороги), кривая", "zh": "弯道" },
         { "it": "il dosso", "en": "hump, crest", "ru": "пригорок, неровность (горб)", "zh": "路脊, 凸起" },
-        { "it": "la cunetta", "en": "dip, gutter", "ru": "впадина, кювет", "zh": "凹陷, 排水沟" }
+        { "it": "la cunetta", "en": "dip, gutter", "ru": "впадина, кювет", "zh": "凹陷, 排水沟" },
+        { "it": "l'autostrada", "en": "motorway, highway", "ru": "автострада", "zh": "高速公路" },
+        { "it": "la tangenziale", "en": "ring road, bypass", "ru": "кольцевая дорога", "zh": "环城路, 环线" },
+        { "it": "il passaggio a livello", "en": "level crossing", "ru": "ж/д переезд", "zh": "铁路道口" },
+        { "it": "la strada extraurbana", "en": "extra-urban road", "ru": "внегородская дорога", "zh": "城外公路" },
+        { "it": "la zona a traffico limitato", "en": "limited traffic zone (ZTL)", "ru": "зона с ограниченным движением", "zh": "限流区" },
+        { "it": "la corsia trasversale", "en": "transverse lane (hatched area)", "ru": "диагональная (запретная) зона на перекрёстке", "zh": "横向导流车道" }
       ]
     },
     {
@@ -61,7 +67,10 @@
         { "it": "la circolazione", "en": "traffic, circulation", "ru": "дорожное движение", "zh": "通行, 交通" },
         { "it": "la marcia", "en": "driving, travel; gear", "ru": "движение, ход; передача", "zh": "行驶; 挡位" },
         { "it": "proseguire", "en": "to continue, to go on", "ru": "продолжать движение", "zh": "继续行驶" },
-        { "it": "attraversare", "en": "to cross", "ru": "пересекать", "zh": "穿越" }
+        { "it": "attraversare", "en": "to cross", "ru": "пересекать", "zh": "穿越" },
+        { "it": "la manovra", "en": "manoeuvre", "ru": "манёвр", "zh": "驾驶动作, 操作" },
+        { "it": "fermarsi", "en": "to stop", "ru": "останавливаться", "zh": "停车" },
+        { "it": "la corsia di sorpasso", "en": "overtaking lane", "ru": "полоса для обгона", "zh": "超车车道" }
       ]
     },
     {
@@ -78,7 +87,10 @@
         { "it": "l'intralcio", "en": "hindrance to traffic", "ru": "помеха движению", "zh": "妨碍交通" },
         { "it": "la rimozione (forzata)", "en": "(forced) removal, towing", "ru": "эвакуация (принудительная)", "zh": "强制拖移" },
         { "it": "il veicolo fermo", "en": "stationary vehicle", "ru": "неподвижное транспортное средство", "zh": "停驶车辆" },
-        { "it": "il triangolo", "en": "warning triangle", "ru": "знак аварийной остановки", "zh": "三角警示牌" }
+        { "it": "il triangolo", "en": "warning triangle", "ru": "знак аварийной остановки", "zh": "三角警示牌" },
+        { "it": "il parcheggio", "en": "parking, car park", "ru": "парковка, стоянка", "zh": "停车场" },
+        { "it": "la sosta di emergenza", "en": "emergency stop", "ru": "аварийная остановка", "zh": "紧急停车" },
+        { "it": "la corsia di emergenza", "en": "emergency lane, shoulder", "ru": "аварийная полоса", "zh": "应急车道" }
       ]
     },
     {
@@ -96,7 +108,10 @@
         { "it": "la visibilità", "en": "visibility", "ru": "видимость", "zh": "能见度" },
         { "it": "l'aderenza", "en": "grip, traction", "ru": "сцепление с дорогой", "zh": "附着力" },
         { "it": "lo slittamento", "en": "skidding", "ru": "занос, скольжение", "zh": "打滑" },
-        { "it": "il tamponamento", "en": "rear-end collision", "ru": "наезд сзади", "zh": "追尾" }
+        { "it": "il tamponamento", "en": "rear-end collision", "ru": "наезд сзади", "zh": "追尾" },
+        { "it": "il limite massimo di velocità", "en": "maximum speed limit", "ru": "максимально допустимая скорость", "zh": "最高限速" },
+        { "it": "la frenatura d'emergenza", "en": "emergency braking", "ru": "аварийное торможение", "zh": "紧急制动" },
+        { "it": "il sorpasso vietato", "en": "no overtaking (sign)", "ru": "запрет обгона (знак)", "zh": "禁止超车" }
       ]
     },
     {
@@ -116,7 +131,9 @@
         { "it": "gli pneumatici", "en": "tyres", "ru": "шины", "zh": "轮胎" },
         { "it": "i freni", "en": "brakes", "ru": "тормоза", "zh": "刹车" },
         { "it": "la manutenzione", "en": "maintenance", "ru": "техническое обслуживание", "zh": "保养" },
-        { "it": "il traino", "en": "towing", "ru": "буксировка", "zh": "牵引" }
+        { "it": "il traino", "en": "towing", "ru": "буксировка", "zh": "牵引" },
+        { "it": "il motore", "en": "engine", "ru": "двигатель", "zh": "发动机" },
+        { "it": "il veicolo in avaria", "en": "broken-down vehicle", "ru": "аварийное (поломившееся) ТС", "zh": "故障车辆" }
       ]
     },
     {
@@ -136,7 +153,8 @@
         { "it": "la sospensione", "en": "suspension (of licence)", "ru": "приостановление действия (прав)", "zh": "暂扣(驾照)" },
         { "it": "la revoca", "en": "revocation (of licence)", "ru": "аннулирование (прав)", "zh": "吊销(驾照)" },
         { "it": "la responsabilità civile", "en": "civil liability", "ru": "гражданская ответственность", "zh": "民事责任" },
-        { "it": "il risarcimento", "en": "compensation", "ru": "возмещение ущерба", "zh": "赔偿" }
+        { "it": "il risarcimento", "en": "compensation", "ru": "возмещение ущерба", "zh": "赔偿" },
+        { "it": "la targa", "en": "number plate, licence plate", "ru": "номерной знак", "zh": "车牌" }
       ]
     },
     {
@@ -156,7 +174,9 @@
         { "it": "lo stato di ebbrezza", "en": "state of intoxication", "ru": "состояние опьянения", "zh": "醉酒状态" },
         { "it": "le sostanze stupefacenti", "en": "narcotic substances, drugs", "ru": "наркотические вещества", "zh": "毒品" },
         { "it": "l'inquinamento", "en": "pollution", "ru": "загрязнение окружающей среды", "zh": "污染" },
-        { "it": "i consumi", "en": "fuel consumption", "ru": "расход топлива", "zh": "油耗" }
+        { "it": "i consumi", "en": "fuel consumption", "ru": "расход топлива", "zh": "油耗" },
+        { "it": "il casco protettivo", "en": "protective helmet", "ru": "защитный шлем", "zh": "防护头盔" },
+        { "it": "il ferito", "en": "the injured person", "ru": "пострадавший", "zh": "受伤者" }
       ]
     },
     {
