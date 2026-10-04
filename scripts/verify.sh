@@ -86,6 +86,19 @@ if [ -n "$CAUSAL_COUNT" ]; then
   echo "INFO  explanations causal-word warnings: $CAUSAL_COUNT (advisory — node scripts/sample-explanations.mjs)"
 fi
 
+# 5a. Secret scanner (SEC4): no tokens/keys in the diff, recent commit
+# messages, or the origin remote URL; no dependencies in package.json.
+if node scripts/scan-secrets.mjs "$BASE" >/tmp/pp-verify-secrets.log 2>&1; then
+  pass "secret scan: no tokens/keys in diff, commit messages, or remote URL"
+else
+  fail "secret scan — see /tmp/pp-verify-secrets.log:"; cat /tmp/pp-verify-secrets.log
+fi
+if node -e "const p=require('./package.json');process.exit(p.dependencies?1:0)"; then
+  pass "package.json: no dependencies"
+else
+  fail "package.json has dependencies (SEC4)"
+fi
+
 # 5. Unit tests.
 if npm test --silent >/tmp/pp-verify-test.log 2>&1; then
   pass "npm test ($(grep -E '^# pass' /tmp/pp-verify-test.log | awk '{print $3}') passed)"
