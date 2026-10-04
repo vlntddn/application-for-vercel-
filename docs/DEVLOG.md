@@ -1,3 +1,41 @@
+## 2026-10-04 — ST2: рефакторинг настроек (разбиение + автосейв) + фикс appVersion
+
+**Что сделано.**
+Разбит `public/js/views/settings.js` (293 строки, 8 панелей) на
+`views/settings/{index,learning,progress,offline,about}.js` (все ≤ 123
+строки), re-export `renderSettings` сохранён в `views.js`. Панели ровно в
+порядке: Learning → Your progress → Offline & install → Help & feedback →
+About → Danger zone. Панель «Backup» (заголовок + абзац без действий)
+удалена, ключи `st.backup*` вычищены из словарей (остались только
+`st.lastBackup` / `st.exportBackup` / `st.importBackup` для панели "Your
+progress" по спецификации). Learning — автосейв по изменению (no SAVE
+button), короткий «Saved ✓» через `role="status"`.
+
+**Найденный в процессе баг (ST1 FAIL ×3).**
+`appVersion()` в `about.js` не была идемпотентной: первый вызов
+возвращал `Promise`, а второй — строку `cachedVersion`; повторный рендер
+настроек (hashchange) → `appVersion().then is not a function` → весь
+`renderSettings` падал, h1 оставался dashboard. Фикс: кешируем сам
+promise (`versionPromise`), функция идемпотентна, всегда thenable.
+
+**Проверка.**
+- `scripts/verify.sh` → VERIFY OK (253 unit + smoke 8/8 + qa-new-user 87/0).
+- `qa-new-user.mjs` ×3 прогона: **87 PASS, 0 FAIL** (было 80; +7 новых
+  ST2-чек: порядок панелей, отсутствие заголовка «Backup», автосейв языка
+  → `progress.profile.language` без нажатия SAVE, «Saved ✓» role=status).
+- `scripts/qa-ux.mjs` → **224 PASS, 0 FAIL** (не хуже baseline).
+- CDP: `Page.navigate` на hash-only URL — noop; QA теперь двигает
+  `location.hash` (double-hash trick `#/` → `#/settings`), чтобы
+  гарантированно триггернуть `hashchange`.
+
+**Версии.** `public/sw.js` bumped v122 → v123.
+
+**Следующий шаг.** ST3 (тест настроек: Export/Import/Credits/Privacy/
+mailto/Reset).
+
+---
+
+
 ## 2026-10-04 — SEC2: безопасные ключи прогресса (V3)
 
 Аудит: ключи объектов `answers`/`chapters` брались из тела запроса без
