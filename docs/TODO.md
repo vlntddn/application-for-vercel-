@@ -280,6 +280,9 @@ docs/OPENHANDS-ROADMAP.md, Спринт L.
 - [ ] Бэкапы данных, лог ошибок, health-мониторинг
 - [x] CI: GitHub Actions — npm test на Node 18/22, проверка «ноль
       зависимостей», smoke-тест поднятого сервера
+- [x] CI: готовый вариант с минимальными правами (`permissions: contents: read`),
+      действия по SHA и джоб `e2e` (headless Chrome) — в
+      `docs/proposed-workflows/ci.yml` + README, применяет владелец (SEC5)
 
 ## Принятые решения (не пересматривать без причины)
 - Ноль runtime-зависимостей до Фазы 3; первая зависимость — драйвер

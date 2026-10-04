@@ -1,3 +1,28 @@
+## 2026-10-04 — SEC5: готовый CI с минимальными правами (docs/proposed-workflows)
+
+**Что сделано.**
+Готовый workflow лежит в `docs/proposed-workflows/ci.yml` (намеренно НЕ в
+`.github/` — менять CI решает владелец). Внутри: текущий CI (тесты на Node
+18/22, «Fail if a dependency sneaked in», smoke-тест сервера) + джоб `e2e`
+(headless Chrome: `qa-new-user.mjs` и `scripts/qa-ux.mjs --strict`,
+`CHROME_PATH`), плюс `permissions: contents: read` и действия, закреплённые
+по полному SHA (checkout f548e57, setup-node 54337e0) вместо @v-тегов.
+Рядом `docs/proposed-workflows/README.md` — инструкция для владельца: как
+применить через веб GitHub или токеном с правом `workflow`, как обновлять
+SHA. Тест `tests/ci-proposed.test.mjs`: line-parse YAML (без внешних
+парсеров — табы в отступах запрещены), наличие `name:/on:/permissions:/jobs:`,
+что `permissions:` = `contents: read`, что все `uses:` закреплены по 40-шестеричному
+SHA, что есть джоб `e2e`.
+
+**Почему.**
+Готовить CI, не меняя `.github/` — решение владельца; агент правит только
+предложение и проверяет его формой.
+
+**Как проверено.**
+`node --test tests/ci-proposed.test.mjs` → pass. Полный гейт:
+`scripts/verify.sh` → VERIFY OK (258 passed, smoke 8/8). `public/` не тронут
+→ bump sw.js не нужен.
+
 ## 2026-10-04 — SEC4: секрет-сканер в verify.sh
 
 **Что сделано.**

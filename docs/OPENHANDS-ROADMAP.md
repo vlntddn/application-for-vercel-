@@ -579,7 +579,7 @@ _Точка обзора B (не блокирует): после L7 — те ж�
       или токеном; (c) в `package.json` нет `dependencies`. Нашёл — FAIL с именем файла, без
       вывода самого секрета. *Проверка:* временный файл с поддельным `ghp_` + 30 символов
       → verify красный; без него — зелёный.
-- [ ] **SEC5 Готовый CI с минимальными правами.** Создать `docs/proposed-workflows/ci.yml`
+- [x] **SEC5 Готовый CI с минимальными правами.** Создать `docs/proposed-workflows/ci.yml`
       (НЕ в `.github/`): текущий CI + `permissions: contents: read`, действия закреплены по
       SHA, джоб `e2e` (headless Chrome, `qa-new-user.mjs`, `qa-ux.mjs --strict`, `CHROME_PATH`).
       Рядом `README.md` с инструкцией для владельца: как применить через GitHub (правка файла в
