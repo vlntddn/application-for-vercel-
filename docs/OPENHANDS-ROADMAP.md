@@ -538,7 +538,7 @@ _Точка обзора B (не блокирует): после L7 — те ж�
       отправлять. Фронтенд и `qa-new-user` продолжают работать без изменений (проверить).
       *Проверка:* тесты по каждому случаю из аудита: `text/plain` → 415, `Host: evil.example` →
       421, `Origin: https://evil.example` → 403, штатный запрос → 200; `npm test`; verify.
-- [ ] **SEC2 Безопасные ключи прогресса (V3).** В `public/js/domain/progress.js`: id вопроса
+- [x] **SEC2 Безопасные ключи прогресса (V3).** В `public/js/domain/progress.js`: id вопроса
       принимать только по `/^[A-Za-z0-9_-]{1,ID_MAX}$/` (в банке других нет — проверить
       скриптом по `data/questions`), поиск записи — через `Object.hasOwn(d.answers, id)`,
       объекты `answers/dailyAnswers/chapters` создавать без прототипа или проверять

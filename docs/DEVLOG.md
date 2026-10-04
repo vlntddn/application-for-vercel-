@@ -1,3 +1,26 @@
+## 2026-10-04 — SEC2: безопасные ключи прогресса (V3)
+
+Аудит: ключи объектов `answers`/`chapters` брались из тела запроса без
+проверки, и `obj[id]` мог дотянуться до прототип-метода (`constructor`,
+`toString`, `hasOwnProperty`, `valueOf`, `__proto__`), а запись с таким
+ключом — его затереть. В `public/js/domain/progress.js`: (1) id принимает
+только `ID_RE = /^[A-Za-z0-9_-]{1,120}$/` (+`isSafeId`, `assertId`), (2) все
+поиски записи — через `Object.hasOwn`-хелпер (`recordAnswers`,
+`recordChapterCheck`, фильтр mistakes при импорте), (3) свободные ключи
+`answers`/`chapters` всегда проходят `isSafeId`, а `dailyAnswers` — только
+ключи `YYYY-MM-DD` (regex, прототип-имя невозможно), (4) `constructor`,
+`prototype`, `__proto__` + остальные прототип-методы — в `FORBIDDEN_IDS`,
+`recordAnswers`/`import` их отвергают с 422; миграция `answers`/`mistakes`/
+`chapters` отбрасывает невалидные ключи, старые данные не ломаются. sw.js
+bump v121→v122 (public/ менялся). Тест `tests/security.test.js` «prototype-
+method ids are rejected, not stored or shadowed»: `recordAnswers` на 6
+прототип-именах — 422, `snapshot().answers` — `Object.hasOwn(...)===false`,
+`{}.pwned` (через `valueOf`) не задан, импорт с `__proto__`/`constructor` —
+422; миграционный подтест: `q1` остаётся, `constructor`/`toString`
+отброшены, `mistakes` — только валидные ещё-неправильные. Проверка:
+`node --test tests/security.test.js tests/progress.test.js` 92/92,
+`scripts/verify.sh` — VERIFY OK.
+
 ## 2026-10-04 — SEC1: локальный сервер закрыт от чужих запросов (V1, V2)
 
 Аудит: сервер на 127.0.0.1 мог принимать мутации от кросс-сайтового «simple
