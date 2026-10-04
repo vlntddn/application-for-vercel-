@@ -61,12 +61,6 @@ function check(cond, name) {
 /* ---- CDP поверх WebSocket (stdlib WebSocket, Node >= 21) ---- */
 let ws, seq = 0;
 const pending = new Map();
-let fileChooserResolve = null;
-/** Ждём Page.fileChooserOpened (input[type=file].click()) до timeout; null если нет. */
-const waitForFileChooser = (timeout = 6000) => new Promise((resolve) => {
-  const t = setTimeout(() => { fileChooserResolve = null; resolve(null); }, timeout);
-  fileChooserResolve = (params) => { clearTimeout(t); fileChooserResolve = null; resolve(params); };
-});
 const send = (method, params = {}) => new Promise((resolve, reject) => {
   const id = ++seq;
   pending.set(id, { resolve, reject });
@@ -127,19 +121,11 @@ async function connectTab() {
     } else if (m.method === 'Network.responseReceived') {
       const s = m.params.response?.status;
       if (s === 404) http404s.push(m.params.request?.url || '?');
-    } else if (m.method === 'Page.fileChooserOpened' && fileChooserResolve) {
-      fileChooserResolve(m.params);
     }
   };
   await send('Page.enable');
   await send('Runtime.enable');
   await send('Network.enable');
-  // Export-кнопка делает <a download>.click() (blob:) — в headless скачивание
-  // без destinations работает не всегда, даём Chrome каталог (ST3).
-  await send('Page.setDownloadBehavior', {
-    behavior: 'allow', downloadPath: path.join(TEMP, 'downloads'),
-    eventsEnabled: true,
-  });
 }
 
 /** Клик по кнопке/ссылке, чей text совпадает (или содержит) label. */
@@ -605,37 +591,31 @@ async function main() {
   const mailtoHref = await evaluate(`(() => { const a = Array.from(document.querySelectorAll('#view a')).find((x) => (x.getAttribute('href') || '').startsWith('mailto:')); return a ? a.getAttribute('href') : null; })()`);
   check(!!mailtoHref && /mailto:hello@studiodudin\.com\?/.test(mailtoHref) && mailtoHref.includes('subject=Passo%20feedback'),
     `ST3: Write to us — mailto с адресом и темой (${mailtoHref})`);
-  // Export: перехватываем anchor.click ДО revokeObjectURL, чтобы blob был
-  // ещё жив, и читаем имя файла + содержимое. Таймаут-защита, чтобы
-  // зависший onclick не подвесил CDP-команду.
+  // Export: перехватываем URL.createObjectURL (ловим сам Blob) и имя
+  // download с anchor.click, revokeObjectURL на время держим noop, чтобы
+  // blob был жив, пока мы его дочитываем (exportProgressSnapshot сам
+  // отзывает URL сразу после link.click() — иначе blob умрёт раньше, чем
+  // мы успеем прочитать). Реального скачивания в headless нет — нам нужен
+  // только содержимое + имя.
   const exportData = await evaluate(`new Promise((res) => {
     let settled = false;
-    const restore = () => {
-      if (HTMLAnchorElement.prototype.click !== __patchClick) HTMLAnchorElement.prototype.click = __origClick;
-      URL.revokeObjectURL = __origRevoke;
-    };
     const done = (v) => { if (!settled) { settled = true; res(v); } };
-    const __origClick = HTMLAnchorElement.prototype.click;
+    const restore = () => { URL.createObjectURL = __origCreate; URL.revokeObjectURL = __origRevoke; HTMLAnchorElement.prototype.click = __origClick; };
+    const __origCreate = URL.createObjectURL;
     const __origRevoke = URL.revokeObjectURL;
-    // revoke держим noop, пока не дочитаем blob: exportProgressSnapshot сам
-    // дергает revokeObjectURL сразу после link.click() — если вернуть его
-    // раньше, blob умрёт до того, как fetch его прочитает.
+    const __origClick = HTMLAnchorElement.prototype.click;
+    let __blob = null, __name = null;
+    URL.createObjectURL = (b) => { __blob = b; return __origCreate(b); };
     URL.revokeObjectURL = () => {};
-    const __patchClick = function () {
-      const url = this.href, name = this.download || null;
-      HTMLAnchorElement.prototype.click = __origClick;
-      if (url.startsWith('blob:')) {
-        fetch(url).then((r) => r.json()).then(
-          (d) => { restore(); done({ name, json: d }); },
-          () => { restore(); done({ name, json: null }); },
-        );
-      } else { restore(); done({ name, json: null }); }
-    };
-    HTMLAnchorElement.prototype.click = __patchClick;
-    setTimeout(() => { restore(); done(null); }, 10000);
+    HTMLAnchorElement.prototype.click = function () { __name = this.download || null; HTMLAnchorElement.prototype.click = __origClick; };
     const b = Array.from(document.querySelectorAll('#view button')).find((x) => /EXPORT/i.test(x.innerText));
     if (!b) { restore(); return done(null); }
     b.click();
+    setTimeout(() => {
+      restore();
+      if (!__blob) return done(null);
+      __blob.text().then((t) => { let json = null; try { json = JSON.parse(t); } catch { /* не JSON */ } done({ name: __name, text: t, json }); }, () => done(null));
+    }, 300);
   })`);
   check(!!exportData && /^patente-pro-backup-\d{4}-\d{2}-\d{2}\.json$/.test(exportData.name),
     `ST3: Export создаёт файл с именем по дате (${exportData ? exportData.name : 'нет файла'})`);
@@ -643,26 +623,32 @@ async function main() {
     'ST3: содержимое бэкапа — валидный JSON снапшота (app + profile.name=QA)');
   check(await tryWait(`(() => { const l = document.querySelector('#view #last-backup'); return l && /\\d{4}/.test(l.textContent); })()`, 5000),
     'ST3: после Export строка last-backup показывает дату');
-  // Import: клик → CDP ловит input[type=file] → setFileInputFiles.
-  // confirm() не должен блокировать: подменяем ДО setFileInputFiles
-  // (onchange → confirm).
-  const answersBeforeImport = Object.keys((await (await fetch(`${APP}/api/progress`)).json()).answers || {}).length;
-  const fcPromise = waitForFileChooser(8000);
-  const importClicked = await click('IMPORT');
-  check(importClicked, 'ST3: кнопка Import есть и отвечает');
-  const fc = await fcPromise;
-  check(!!fc, 'ST3: Import открывает file-chooser (input[type=file])');
-  if (fc) {
-    // Свой снапшот (не зависит от успешного чтения blob в Export): профиль и
-    // ответы = текущим, чтобы после импорта всё осталось на месте.
-    const cur = await (await fetch(`${APP}/api/progress`)).json();
-    const importSnapshot = { app: 'patente-pro', profile: cur.profile, answers: cur.answers || {} };
-    fs.writeFileSync(path.join(TEMP, 'import-backup.json'), JSON.stringify(importSnapshot));
-    await evaluate(`(() => { window.__origConfirm = window.confirm; window.confirm = () => true; return true; })()`);
-    await send('DOM.setFileInputFiles', {
-      files: [path.join(TEMP, 'import-backup.json')],
-      backendNodeId: fc.backendNodeId,
-    });
+  // Import: клик по кнопке создаёт input[type=file] и дергает picker.click().
+  // Перехватываем input.click, чтобы достать picker, вставляем в него File
+  // (DataTransfer) и шлём change — это запускает РЕАЛЬНЫЙ onchange, а не
+  // имитацию. Снапшот = текущий прогресс, чтобы после импорта всё осталось.
+  const cur = await (await fetch(`${APP}/api/progress`)).json();
+  const answersBeforeImport = Object.keys(cur.answers || {}).length;
+  const importSnapshot = { app: 'patente-pro', profile: cur.profile, answers: cur.answers || {} };
+  await evaluate(`window.__importText = ${JSON.stringify(JSON.stringify(importSnapshot))}; true`);
+  await evaluate(`(() => { window.__origConfirm = window.confirm; window.confirm = () => true; return true; })()`);
+  const importRes = await evaluate(`(async () => {
+    const __origClick = HTMLInputElement.prototype.click;
+    let __picker = null;
+    HTMLInputElement.prototype.click = function () { __picker = this; HTMLInputElement.prototype.click = __origClick; };
+    const btn = Array.from(document.querySelectorAll('#view button')).find((x) => /IMPORT/i.test(x.innerText));
+    if (!btn) { HTMLInputElement.prototype.click = __origClick; return { clicked: false, picker: false }; }
+    btn.click();
+    if (!__picker) { HTMLInputElement.prototype.click = __origClick; return { clicked: true, picker: false }; }
+    const dt = new DataTransfer();
+    dt.items.add(new File([window.__importText], 'import-backup.json', { type: 'application/json' }));
+    __picker.files = dt.files;
+    __picker.dispatchEvent(new Event('change', { bubbles: true }));
+    return { clicked: true, picker: true };
+  })()`);
+  check(!!importRes?.clicked, 'ST3: кнопка Import есть и отвечает');
+  check(!!importRes?.picker, 'ST3: Import открывает input[type=file] (перехвачен picker)');
+  if (importRes?.picker) {
     const imported = await tryWait(`(() => { const b = document.querySelector('#view #backup-actions'); return b && /IMPORTED/i.test(b.innerText); })()`, 20000);
     check(imported, 'ST3: Import принимает файл — «IMPORTED … RESTORED» в панели');
     const afterImport = await (await fetch(`${APP}/api/progress`)).json();
