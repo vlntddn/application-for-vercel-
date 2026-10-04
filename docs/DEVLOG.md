@@ -1,3 +1,44 @@
+## 2026-10-04 — ST3: QA-тесты всех ссылок и кнопок настроек (qa-new-user.mjs, секция 9e)
+
+**Что сделано.**
+В `qa-new-user.mjs` добавлена секция 9e, проверяющая каждый интерактивный
+элемент экрана настроек (12 новых чеков):
+- **Write to us (mailto):** href содержит `mailto:hello@studiodudin.com?` и
+  `subject=Passo%20feedback`.
+- **Export:** перехватываем `URL.createObjectURL` (ловим сам `Blob`) и имя
+  `download` с `anchor.click`; `revokeObjectURL` на время держим noop, чтобы
+  blob был жив, пока читаем (функция экспорта отзывает URL сразу после
+  `link.click()` — иначе blob умер бы раньше). Проверяем имя
+  `patente-pro-backup-YYYY-MM-DD.json` и содержимое (валидный JSON снапшота:
+  `app=patente-pro`, `profile.name=QA`) + строку last-backup с датой.
+  Реального скачивания в headless нет — проверяем содержимое+имя.
+- **Import:** клик по кнопке создаёт `input[type=file]` и дергает
+  `picker.click()`. Перехватываем `input.click`, чтобы достать picker,
+  вставляем в него `File` (через `DataTransfer`) и шлём `change` — запускается
+  **реальный** `onchange` (не имитация). Снапшот = текущий прогресс; после
+  импорта `name=QA` и число ответов не меняется. `confirm` подменён на `true`.
+- **Privacy:** как ST1 для Credits — полная навигация, `<title>` и
+  `location.pathname === /privacy.html`. (Credits проверяется в секции 9a.)
+- **Reset:** `confirm` подменён на `false`; проверяем, что `confirm` вызван
+  и прогресс **не стёрт** после отказа.
+
+**Проверка.** `node qa-new-user.mjs` → 99 PASS, 0 FAIL (было 95/2 до правок
+в секции 9e — тогда Export-blob и file-chooser не работали в headless).
+`scripts/verify.sh` → VERIFY OK (253 теста npm, smoke 8/8 на :3917,
+zero-deps, overlay, explanations PASS).
+
+**Примечание.** В предыдущем коммите (78acd19, помеченном «секция 9d»)
+уже лежал черновик ST3 (CDP `Page.fileChooserOpened` + `setDownloadBehavior`
++ чтение blob через `fetch(blobUrl)`), но 2 чека падали в headless: Export-blob
+отзывался раньше `fetch`, а file-chooser на деташед `input[type=file]` в
+headless Chrome не приходил. Этот запуск заменил оба пути на in-page-перехват
+выше (blob из `createObjectURL` + `DataTransfer`/`change` в picker) — 0 FAIL.
+
+**Дальше.** SEC3 (предел роста данных: max 8000 ответов / 400 exams / 400
+dailyAnswers, лишнее — 422).
+
+---
+
 ## 2026-10-04 — ST2: рефакторинг настроек (разбиение + автосейв) + фикс appVersion
 
 **Что сделано.**
