@@ -135,7 +135,11 @@ const server = http.createServer(async (req, res) => {
         cache: 'max-age=86400',
       });
     } else if (req.method === 'GET' || req.method === 'HEAD') {
-      await serveFile(res, config.publicDir, pathname === '/' ? '/index.html' : pathname);
+      // Pages without a <link rel="icon"> (standalone credits/privacy) make
+      // the browser fall back to /favicon.ico. Serve the app icon so that
+      // request doesn't 404.
+      const staticPath = pathname === '/' ? '/index.html' : pathname === '/favicon.ico' ? '/icons/icon-192.png' : pathname;
+      await serveFile(res, config.publicDir, staticPath);
     } else {
       sendError(res, 405, 'Method not allowed');
     }

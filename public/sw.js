@@ -13,7 +13,7 @@
  *   replayed when the server responds again; other mutations error.
  */
 
-const VERSION = 'v120';
+const VERSION = 'v121';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -62,6 +62,11 @@ const SHELL = [
   '/icons/icon-512.png',
   '/icons/icon-maskable-512.png',
 ];
+
+// Standalone HTML pages served as themselves on navigation (not the "/"
+// shell, which hash-routing would show instead). Single source of truth
+// for both the navigate branch below and tests.
+const STANDALONE_PAGES = ['/credits.html', '/privacy.html'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -123,7 +128,15 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return;
 
   if (request.mode === 'navigate') {
-    // Any route (hash routing → always "/") falls back to the cached shell.
+    // Any route (hash routing → always "/") falls back to the cached shell,
+    // EXCEPT standalone pages (credits/privacy), which are served as
+    // themselves: network-first, offline — from SHELL_CACHE.
+    if (STANDALONE_PAGES.includes(url.pathname)) {
+      event.respondWith(
+        networkFirst(new Request(url.pathname), SHELL_CACHE).catch(() => caches.match(url.pathname)),
+      );
+      return;
+    }
     event.respondWith(
       networkFirst(new Request('/'), SHELL_CACHE).catch(() => caches.match('/')),
     );

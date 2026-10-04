@@ -518,6 +518,33 @@ async function main() {
   check(recordsCards === 4, `(9b) Рекорды: 4 карточки (по факту ${recordsCards})`);
   check(/RECORDS|РЕКОРДЫ|最佳记录/.test(recordsText), '(9b) Рекорды: заголовок экрана виден');
   await shot('14-records.png');
+
+  /* ---- 9c. ST1: Credits/Privacy из настроек открывают СВОИ страницы ----
+   * До фикса sw.js ловил ЛЮБУЮ navigate → отдавал кэшированный «/»
+   * (hash-роутинг), и Credits/Privacy показывали приложение, а не документ.
+   * Фикс — STANDALONE_PAGES: эти переходы отдаются самими файлами.
+   * Чтобы реально проверить именно SW-ветку (а не прямой HTTP), сначала
+   * доводим SW до контроля вкладки (forceUpdate + skipWaiting уже в sw.js),
+   * затем кликаем ссылку из Настроек и проверяем <title> открывшегося документа. */
+  await send('Page.navigate', { url: `${APP}/#/settings` });
+  await waitFor(`!!document.querySelector('#view a[href="/credits.html"]')`, 'settings credits link', 20000);
+  check(await tryWait(`navigator.serviceWorker?.controller !== null`, 20000), 'ST1: SW контролирует вкладку (наведение перехватывается)');
+  // клик по ссылке — полная навигация (mode=navigate) → её перехватывает SW.
+  // evaluate должен вернуть value ДО навигации (иначе context уничтожается):
+  // поэтому клик — fire-and-forget, а <title> читаем отдельно после загрузки.
+  await evaluate(`document.querySelector('#view a[href="/credits.html"]')?.click() || false`);
+  // ждём именно credits-документ (title SPA = «Passo», не содержит «Credits»),
+  // чтобы не сработало на ещё живом настройках-документе.
+  await waitFor(`/Credits/i.test(document.title)`, 'credits doc loaded', 15000);
+  const creditsTitle = await evaluate(`document.title`);
+  check(/Credits/i.test(creditsTitle), `ST1: клик Credits из настроек → заголовок «Credits» (${creditsTitle})`);
+  const creditsUrl = await evaluate(`location.pathname`);
+  check(creditsUrl === '/credits.html', `ST1: адрес после клика Credits = /credits.html (${creditsUrl})`);
+  await shot('15-credits.png');
+  // обратно в SPA, чтобы финальный свип/сверка шли от дашборда
+  await send('Page.navigate', { url: `${APP}/#/` });
+  await waitFor(`(document.getElementById('view')?.innerText||'').includes('CIAO, QA')`, 'back to dashboard after credits', 20000);
+
   // Q2: 404-шторм. Раньше при каждой загрузке клиент просил 25
   // /data/translations/<slug>.json (и аналогично explanations), хотя файлов
   // всего 3 → ~22 404 на старте. Теперь index.json фильтрует запросы, и 404
