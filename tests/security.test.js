@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import net from 'node:net';
 import { fileURLToPath } from 'node:url';
 
 import { JsonStore } from '../server/store.js';
@@ -892,4 +893,142 @@ test('S3.1 new-version strings exist in every language', async () => {
     assert.equal(typeof MESSAGES[lang]['nv.reload'], 'string');
     assert.ok(MESSAGES[lang]['nv.reload'].trim().length > 0);
   }
+});
+
+/* ---------------- SEC1: loopback-only server hardening (audit V1, V2) ---------------- */
+
+// Spawns the real server on a random port and calls fn(url, port).
+async function withLiveServer(fn) {
+  const storageDir = fs.mkdtempSync(path.join(os.tmpdir(), 'patente-sec1-'));
+  const { spawn } = await import('node:child_process');
+  const proc = spawn(process.execPath, ['server/index.js'], {
+    cwd: ROOT,
+    env: { ...process.env, PORT: '0', STORAGE_DIR: storageDir },
+    stdio: ['ignore', 'pipe', 'pipe'],
+  });
+  const url = await new Promise((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error('server did not start')), 10000);
+    proc.stdout.on('data', (chunk) => {
+      const m = chunk.toString().match(/PASSO running at (http:\/\/[^ ]+)/);
+      if (m) {
+        clearTimeout(timer);
+        resolve(m[1]);
+      }
+    });
+    proc.on('exit', (code) => reject(new Error(`server exited early: ${code}`)));
+  });
+  try {
+    await fn(url, new URL(url).port);
+  } finally {
+    proc.kill('SIGTERM');
+    await new Promise((r) => proc.once('exit', r));
+  }
+}
+
+// Raw HTTP request so we can forge headers fetch strips (Host) or omits
+// (Content-Type). Returns the response status code.
+function rawRequest(port, { host, method, path, headers = [], body = '' }) {
+  const payload = `${method} ${path} HTTP/1.1\r\n` +
+    `Host: ${host}\r\n` +
+    headers.map((h) => h + '\r\n').join('') +
+    `Content-Length: ${Buffer.byteLength(body)}\r\n` +
+    `Connection: close\r\n\r\n` +
+    body;
+  return new Promise((resolve, reject) => {
+    const sock = net.connect(Number(port), '127.0.0.1', () => sock.write(payload));
+    let data = '';
+    sock.on('data', (c) => (data += c));
+    sock.on('error', reject);
+    sock.on('end', () => {
+      const m = data.match(/^HTTP\/1\.1 (\d{3})/);
+      resolve(m ? Number(m[1]) : -1);
+    });
+  });
+}
+
+const JSON_ANSWERS = JSON.stringify({ answers: [{ id: 'q1', correct: true }] });
+
+test('SEC1: mutation with text/plain Content-Type is rejected with 415', async () => {
+  await withLiveServer(async (url) => {
+    const res = await fetch(`${url}/api/progress/answers`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON_ANSWERS,
+    });
+    assert.equal(res.status, 415);
+  });
+});
+
+test('SEC1: mutation with no Content-Type fails closed (415)', async () => {
+  await withLiveServer(async (_url, port) => {
+    const status = await rawRequest(port, {
+      host: '127.0.0.1',
+      method: 'POST',
+      path: '/api/progress/answers',
+      body: JSON_ANSWERS,
+    });
+    assert.equal(status, 415);
+  });
+});
+
+test('SEC1: Host header naming a foreign host is rejected with 421', async () => {
+  await withLiveServer(async (_url, port) => {
+    const status = await rawRequest(port, {
+      host: 'evil.example',
+      method: 'POST',
+      path: '/api/progress/answers',
+      headers: ['Content-Type: application/json'],
+      body: JSON_ANSWERS,
+    });
+    assert.equal(status, 421);
+  });
+});
+
+test('SEC1: cross-site Origin on a mutation is rejected with 403', async () => {
+  await withLiveServer(async (url) => {
+    const res = await fetch(`${url}/api/progress/answers`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Origin: 'https://evil.example' },
+      body: JSON_ANSWERS,
+    });
+    assert.equal(res.status, 403);
+  });
+});
+
+test('SEC1: same-origin Origin on a mutation is allowed and recorded', async () => {
+  await withLiveServer(async (url) => {
+    const res = await fetch(`${url}/api/progress/answers`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Origin: url.replace(/\/$/, '') },
+      body: JSON_ANSWERS,
+    });
+    assert.equal(res.status, 200);
+    const snap = await (await fetch(`${url}/api/progress`)).json();
+    assert.ok(snap.answers && snap.answers.q1, 'answer should be recorded for same-origin POST');
+  });
+});
+
+test('SEC1: application/json with charset is accepted', async () => {
+  await withLiveServer(async (url) => {
+    const res = await fetch(`${url}/api/progress/answers`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON_ANSWERS,
+    });
+    assert.equal(res.status, 200);
+  });
+});
+
+test('SEC1: DELETE without a body is allowed (reset store)', async () => {
+  await withLiveServer(async (url) => {
+    const res = await fetch(`${url}/api/progress`, { method: 'DELETE' });
+    assert.equal(res.status, 200);
+  });
+});
+
+test('SEC1: GET requests are not affected by the mutation rules', async () => {
+  await withLiveServer(async (url) => {
+    const res = await fetch(`${url}/api/progress`);
+    assert.equal(res.status, 200);
+  });
 });

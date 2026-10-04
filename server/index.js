@@ -18,6 +18,45 @@ const validSlugs = new Set(manifest.categories.map((c) => c.slug));
 
 const QUESTIONS_RE = /^\/api\/questions\/([a-z0-9-]+)$/;
 
+// DNS-rebinding / cross-site hardening (SEC1, audit V1/V2):
+// (a) the Host header must name a loopback interface, otherwise 421;
+// (b) mutations with an Origin header must come from the same origin;
+// (c) mutations with a body must send application/json, so "simple"
+//     cross-site fetches (text/plain) are rejected.
+const LOCALHOST_HOST_RE = /^(127\.0\.0\.1|localhost|\[::1\])(:\d+)?$/;
+// application/json plus optional "; key=value" parameters (space after the
+// semicolon is the standard separator and must not be rejected).
+const JSON_CONTENT_TYPE_RE = /^application\/json(?:\s*;\s*[^\s;]+=\S*)*$/i;
+
+function allowedHost(req) {
+  const host = req.headers.host;
+  return typeof host === 'string' && LOCALHOST_HOST_RE.test(host);
+}
+
+function originMatchesHost(req) {
+  const origin = req.headers.origin;
+  return origin === `http://${req.headers.host}`;
+}
+
+/**
+ * Rejects requests that fail the SEC1 rules before any route runs.
+ * Returns { status, message }, or null if the request may proceed.
+ */
+function securityGate(req) {
+  if (!allowedHost(req)) return { status: 421, message: 'Malformed Host header' };
+  if (req.method === 'POST' || req.method === 'PUT' || req.method === 'DELETE') {
+    if (req.headers.origin !== undefined && !originMatchesHost(req)) {
+      return { status: 403, message: 'Forbidden origin' };
+    }
+    // Fail closed: a mutation with a body must declare application/json.
+    // DELETE resets the whole store and carries no body, so it is exempt.
+    if (req.method !== 'DELETE' && !JSON_CONTENT_TYPE_RE.test(req.headers['content-type'] || '')) {
+      return { status: 415, message: 'Content-Type must be application/json' };
+    }
+  }
+  return null;
+}
+
 async function handleApi(req, res, pathname) {
   if (req.method === 'GET') {
     if (pathname === '/api/health') {
@@ -115,6 +154,8 @@ const server = http.createServer(async (req, res) => {
   for (const [name, value] of Object.entries(SECURITY_HEADERS)) {
     res.setHeader(name, value);
   }
+  const gate = securityGate(req);
+  if (gate) return sendError(res, gate.status, gate.message);
   let pathname;
   try {
     pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
