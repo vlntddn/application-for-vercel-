@@ -1,3 +1,19 @@
+## 2026-10-04 — ST1: ссылки Credits/Privacy больше не ведут на главную
+
+`public/sw.js`: ветка `request.mode === 'navigate'` отвечала кэшированным `/` на ЛЮБУЮ
+навигацию (hash-роутинг), поэтому клик по Credits/Privacy менял адрес на
+`/credits.html`, но показывал приложение. Добавлена константа `STANDALONE_PAGES =
+['/credits.html', '/privacy.html']`: эти переходы теперь network-first, офлайн — из
+`SHELL_CACHE` (оба файла уже в списке SHELL), остальные навигации — по-прежнему `/`.
+`VERSION` v120 → v121. Вторичный баг, выявленный живым тестом: standalone-страницы без
+`<link rel="icon">` (credits/privacy защищены — править нельзя) роняли `/favicon.ico` →
+404. Починено в `server/index.js` (не `public/`): `/favicon.ico` отдаёт
+`/icons/icon-192.png` — SW bump не нужен. Проверка: `tests/sw-navigation.test.js`
+(sw.js в `node:vm` с поддельным `self`/`caches`/`fetch`: навигация на `/credits.html` и `/`
+запрашивают разные адреса) + qa-new-user «клик Credits → заголовок «Credits»», адрес
+`/credits.html`, и «за весь прогон ни одного 404». Итог verify: 244 юнита, smoke 8×200,
+qa-new-user 80/0, VERIFY OK.
+
 ## 2026-10-04 — #/numbers на языке ученика; пустой путь больше не «пройден»
 
 Скриншоты владельца (Safari, десктоп): (1) на главной новичка «All steps done — You
