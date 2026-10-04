@@ -1,3 +1,23 @@
+## 2026-10-04 — SEC1: локальный сервер закрыт от чужих запросов (V1, V2)
+
+Аудит: сервер на 127.0.0.1 мог принимать мутации от кросс-сайтового «simple
+request» (text/plain) и от любого, кто знал порт. В `server/index.js` до роутов
+добавлен `securityGate`: (a) `Host` — только `127.0.0.1|localhost|[::1](:<порт>)`,
+иначе `421`; (b) мутация с `Origin` — только `http://<Host>`, иначе `403`;
+(c) `POST/PUT` — `Content-Type` обязан быть `application/json` (regex допускает
+`; charset=utf-8`), иначе `415`; отсутствие CT у мутации с телом — тоже `415`
+(fail-closed, «простой» fetch не пройдёт); `DELETE /api/progress` (сброс, без
+тела) и `GET` — не затронуты. CORS-заголовки по-прежнему не отправляем.
+Фронтенд шлёт `Content-Type: application/json` на все мутации с телом
+(`public/js/api.js: request`), qa-ux — только `DELETE` без тела: ни один живой
+клиент не затронут. Тесты `tests/security.test.js` (+8): fetch-кейсы (text/plain
+415, evil Origin 403, same-origin 200+запись, charset 200, DELETE 200, GET 200)
+плюс raw-socket `rawRequest()` для двух случаев, которые fetch сделать не умеет:
+forged `Host: evil.example` → 421 (undici выбрасывает forbidden header) и мутация
+без `Content-Type` → 415 (undici сам подставляет text/plain). Проверка:
+`node --test tests/security.test.js` 51/51, `scripts/verify.sh` — 252 юнита,
+smoke 8×200, VERIFY OK.
+
 ## 2026-10-04 — ST1: ссылки Credits/Privacy больше не ведут на главную
 
 `public/sw.js`: ветка `request.mode === 'navigate'` отвечала кэшированным `/` на ЛЮБУЮ
