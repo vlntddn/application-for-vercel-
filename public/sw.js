@@ -13,8 +13,8 @@
  *   replayed when the server responds again; other mutations error.
  */
 
-// v123 — ST2: settings screen split into panels (views/settings/*)
-const VERSION = 'v123';
+// v124 — SEC3: hard store caps on answers/exams/dailyAnswers
+const VERSION = 'v124';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 

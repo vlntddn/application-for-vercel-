@@ -17,10 +17,13 @@ const ID_MAX = 120;
 // `hasOwnProperty`, `valueOf` — is rejected, so a stored or imported key can
 // never reach a prototype method through an `obj[id]` access.
 const ID_RE = /^[A-Za-z0-9_-]{1,120}$/;
+// Store growth caps (SEC3): progress must not grow without a bound.
+const MAX_STORE_ANSWERS = 8000;
+const MAX_STORE_EXAMS = 400;
+const MAX_STORE_DAILY_DAYS = 400;
 // Import caps: generous enough for a full bank, small enough to bound work.
 const MAX_IMPORT_ANSWERS = 20000;
 const ACTIVE_DAYS_KEPT = 90;
-const MAX_IMPORT_EXAMS = 2000;
 
 /**
  * Bumped only when the stored shape changes in a way that needs code to
@@ -398,6 +401,12 @@ export function migrateProgress(raw) {
       if (Number.isFinite(n) && n > 0) out.dailyAnswers[day] = n;
     }
   }
+  // SEC3 hard caps for old snapshots: newest entries are kept.
+  out.exams = out.exams.slice(-MAX_STORE_EXAMS);
+  const dailyDays = Object.keys(out.dailyAnswers).sort();
+  for (const day of dailyDays.slice(0, Math.max(0, dailyDays.length - MAX_STORE_DAILY_DAYS))) {
+    delete out.dailyAnswers[day];
+  }
 
   // Days the user studied are implied by the counters too, so a snapshot
   // written before activeDays existed still lights up the week strip.
@@ -537,6 +546,12 @@ export class ProgressService {
       throw new ValidationError('"answers" must contain at most 100 items');
     }
     const d = this.store.data;
+    // SEC3: reject before any entry is applied, so an over-cap batch leaves
+    // the store untouched.
+    const newIds = new Set(body.answers.filter((e) => e && !hasOwn(d.answers, e.id)).map((e) => e.id));
+    if (Object.keys(d.answers).length + newIds.size > MAX_STORE_ANSWERS) {
+      throw new ValidationError(`"answers" holds more than ${MAX_STORE_ANSWERS} entries`);
+    }
     let answeredNow = 0;
     for (const entry of body.answers) {
       assertObject(entry);
@@ -576,6 +591,9 @@ export class ProgressService {
     }
     if (!Number.isInteger(errors) || errors < 0 || errors > total) {
       throw new ValidationError('"errors" must be an integer between 0 and "total"');
+    }
+    if (this.store.data.exams.length >= MAX_STORE_EXAMS) {
+      throw new ValidationError(`"exams" holds the maximum of ${MAX_STORE_EXAMS} entries`);
     }
     const exam = {
       date: new Date().toISOString(),
@@ -677,8 +695,8 @@ export class ProgressService {
     if (body.answers !== undefined) {
       assertObject(body.answers);
       const entries = Object.entries(body.answers);
-      if (entries.length > MAX_IMPORT_ANSWERS) {
-        throw new ValidationError(`"answers" holds more than ${MAX_IMPORT_ANSWERS} entries`);
+      if (entries.length > MAX_STORE_ANSWERS) {
+        throw new ValidationError(`"answers" holds more than ${MAX_STORE_ANSWERS} entries`);
       }
       for (const [id, rec] of entries) {
         assertId(id, 'answers key');
@@ -710,8 +728,8 @@ export class ProgressService {
 
     if (body.exams !== undefined) {
       if (!Array.isArray(body.exams)) throw new ValidationError('"exams" must be an array');
-      if (body.exams.length > MAX_IMPORT_EXAMS) {
-        throw new ValidationError(`"exams" holds more than ${MAX_IMPORT_EXAMS} entries`);
+      if (body.exams.length > MAX_STORE_EXAMS) {
+        throw new ValidationError(`"exams" holds more than ${MAX_STORE_EXAMS} entries`);
       }
       for (const exam of body.exams) {
         assertObject(exam);
@@ -739,8 +757,11 @@ export class ProgressService {
 
     if (body.dailyAnswers !== undefined) {
       assertObject(body.dailyAnswers);
-      for (const [day, count] of Object.entries(body.dailyAnswers)) {
-        if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) continue;
+      const days = Object.entries(body.dailyAnswers).filter(([day]) => /^\d{4}-\d{2}-\d{2}$/.test(day));
+      if (days.length > MAX_STORE_DAILY_DAYS) {
+        throw new ValidationError(`"dailyAnswers" holds more than ${MAX_STORE_DAILY_DAYS} days`);
+      }
+      for (const [day, count] of days) {
         const n = Number(count);
         if (!Number.isInteger(n) || n < 0) {
           throw new ValidationError(`"dailyAnswers.${day}" must be a non-negative integer`);

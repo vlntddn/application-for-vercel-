@@ -6,6 +6,7 @@ import path from 'node:path';
 
 import { JsonStore } from '../server/store.js';
 import { ProgressService, ValidationError, EMPTY_PROGRESS } from '../server/progress.js';
+import { migrateProgress } from '../public/js/domain/progress.js';
 
 function makeService() {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'patente-'));
@@ -782,4 +783,57 @@ test('shareText: invalid input throws ValidationError', () => {
   assert.throws(() => shareText({ kind: 'exam', total: 0, errors: 0 }), ValidationError);
   assert.throws(() => shareText({ kind: 'exam', total: 30, errors: 31 }), ValidationError);
   assert.throws(() => shareText({ kind: 'exam', total: 30, errors: -1 }), ValidationError);
+});
+
+test('SEC3: answer store is capped at 8000 keys (422)', async () => {
+  const { service, store } = makeService();
+  store.data.answers = Object.fromEntries(Array.from({ length: 8000 }, (_, i) => [`seed-${i}`, { correct: 0, wrong: 0, lastCorrect: false, last: '', streak: 0, due: '' }]));
+  // One new id pushes past the cap: rejected, store untouched.
+  await assert.rejects(
+    () => service.recordAnswers({ answers: [{ id: 'new-1', correct: true }] }),
+    (err) => err instanceof ValidationError && /8000/.test(err.message),
+  );
+  assert.equal(Object.keys(store.data.answers).length, 8000);
+  // Re-answering known ids stays allowed at the cap.
+  const snap = await service.recordAnswers({ answers: [{ id: 'seed-0', correct: true }] });
+  assert.equal(snap.stats.answered, 8000);
+});
+
+test('SEC3: exam list is capped at 400 entries (422)', async () => {
+  const { service, store } = makeService();
+  store.data.exams = Array.from({ length: 400 }, () => ({ date: 'x', total: 30, errors: 0, passed: true }));
+  await assert.rejects(
+    () => service.recordExam({ total: 30, errors: 2 }),
+    (err) => err instanceof ValidationError && /400/.test(err.message),
+  );
+  assert.equal(store.data.exams.length, 400);
+});
+
+test('SEC3: import enforces the same caps (422)', async () => {
+  const { service } = makeService();
+  const answers = Object.fromEntries(Array.from({ length: 8001 }, (_, i) => [`q-${i}`, { correct: 1, wrong: 0, lastCorrect: true }]));
+  await assert.rejects(() => service.importProgress({ answers }), (err) => err instanceof ValidationError && /8000/.test(err.message));
+  await assert.rejects(
+    () => service.importProgress({ exams: Array.from({ length: 401 }, () => ({ total: 30, errors: 0 })) }),
+    (err) => err instanceof ValidationError && /400/.test(err.message),
+  );
+  const daysFor = (n) => Array.from({ length: n }, (_, i) => `2020-${String((i / 28 | 0) + 1).padStart(2, '0')}-${String((i % 28) + 1).padStart(2, '0')}`);
+  const daily = Object.fromEntries(daysFor(401).map((d) => [d, 5]));
+  await assert.rejects(() => service.importProgress({ dailyAnswers: daily }), (err) => err instanceof ValidationError && /400/.test(err.message));
+  // Exactly at the caps the import goes through.
+  const atCap = Object.fromEntries(daysFor(400).map((d) => [d, 5]));
+  const snap = await service.importProgress({ dailyAnswers: atCap, exams: Array.from({ length: 400 }, () => ({ total: 30, errors: 0 })) });
+  assert.equal(snap.exams.length, 400);
+  assert.equal(Object.keys(snap.dailyAnswers).length, 400);
+});
+
+test('SEC3: migration trims an over-cap stored snapshot (newest kept)', () => {
+  const raw = {
+    exams: Array.from({ length: 500 }, (_, i) => ({ date: `d${i}`, total: 30, errors: 0, passed: true })),
+    dailyAnswers: Object.fromEntries(Array.from({ length: 500 }, (_, i) => [`2020-${String((i / 28 | 0) + 1).padStart(2, '0')}-${String((i % 28) + 1).padStart(2, '0')}`, 5])),
+  };
+  const out = migrateProgress(raw);
+  assert.equal(out.exams.length, 400);
+  assert.equal(out.exams[out.exams.length - 1].date, 'd499', 'newest exam kept');
+  assert.ok(Object.keys(out.dailyAnswers).length <= 400);
 });
