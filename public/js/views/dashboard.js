@@ -276,10 +276,8 @@ function actionsPanel(stats) {
     tiles[tiles.length - 1] = { icon: 'cross', href: '#/mistakes', label: t('db.actions.mistakes', { n: stats.mistakes }) };
   }
   return el('div.panel', { id: 'dashboard-actions' },
-    el('div.quiz-head', { style: 'margin-bottom:12px' },
-      el('h2', { style: 'margin:0' }, t('db.actions.title')),
-      el('span.tag', {}, t('db.actions.sub', { n: EXAM_QUESTIONS, min: EXAM_SECONDS / 60, errors: EXAM_MAX_ERRORS })),
-    ),
+    el('h2', {}, t('db.actions.title')),
+    el('p.quiz-sub', {}, t('db.actions.sub', { n: EXAM_QUESTIONS, min: EXAM_SECONDS / 60, errors: EXAM_MAX_ERRORS })),
     cta,
     el('div.action-tiles', {},
       ...tiles.map((tile) =>

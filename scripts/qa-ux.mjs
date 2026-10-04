@@ -1,6 +1,6 @@
 /**
  * UX-аудит (Спринт 2, задача S2.1). Базовая линия: сколько FAIL по каждой
- * из 8 проверок — приложение в этом запуске НЕ чинится, скрипт только меряет.
+ * из 9 проверок — приложение в этом запуске НЕ чинится, скрипт только меряет.
  *
  * CDP-хелперы переиспользуются из qa-new-user.mjs (тот же подход):
  * headless Chrome, Runtime.evaluate, чистый профиль через DELETE /api/progress.
@@ -140,6 +140,7 @@ const CHECK_NAMES = [
   '6: header ≤ 64px @375',
   '7: next-steps inside first 812px',
   '8: button text not wrapped',
+  '9: no adjacent-block overlap >2px',
 ];
 // Сводка: check → [total, fails]
 const totals = CHECK_NAMES.map(() => [0, 0]);
@@ -168,7 +169,17 @@ async function settled(waitExpr) {
   await sleep(250);
 }
 
-/* ---- 8 проверок; каждая возвращает null (ok) или строку-виновника ---- */
+/* ---- (UI1) screenshots 1280: #/ and #/exam to /tmp/pp-ux/ ---- */
+const SHOT_DIR = path.join(os.tmpdir(), 'pp-ux');
+async function screenshot(name) {
+  fs.mkdirSync(SHOT_DIR, { recursive: true });
+  const r = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: false });
+  const file = path.join(SHOT_DIR, name + '.png');
+  fs.writeFileSync(file, Buffer.from(r.data, 'base64'));
+  log('screenshot 1280: ' + file);
+}
+
+/* ---- checks: null (ok) or a culprit string ---- */
 function checkExprs() {
   return {
     // 1. горизонтальный скролл по определению из задания:
@@ -243,6 +254,29 @@ function checkExprs() {
       }
       return wrapped.length ? wrapped.slice(0, 5).join(', ') : null;
     })()`,
+    // 9. (UI1) соседние дочерние #view не пересекаются больше 2 px.
+    //    absolute/fixed мимо (намеренные оверлеи); box - border-box (тени не считаются).
+    9: `(() => {
+      const sel = (e) => e.tagName.toLowerCase() + (e.id ? '#' + e.id : '') + (e.className ? '.' + String(e.className).split(' ')[0] : '');
+      const overlaps = [];
+      for (const c of document.querySelectorAll('#view')) {
+        const kids = Array.from(c.children).filter((k) => {
+          const cs = getComputedStyle(k);
+          if (cs.display === 'none' || cs.visibility === 'hidden') return false;
+          if (cs.position === 'absolute' || cs.position === 'fixed') return false;
+          const r = k.getBoundingClientRect();
+          return r.width > 0 && r.height > 0;
+        });
+        for (let i = 0; i + 1 < kids.length; i++) {
+          const a = kids[i].getBoundingClientRect();
+          const b = kids[i + 1].getBoundingClientRect();
+          const dx = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+          const dy = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+          if (dx > 2 && dy > 2) overlaps.push(sel(kids[i]) + 'x' + sel(kids[i + 1]) + ' (over ' + Math.round(dx) + 'x' + Math.round(dy) + 'px)');
+        }
+      }
+      return overlaps.length ? overlaps.slice(0, 5).join(', ') : null;
+    })()`
   };
 }
 
@@ -330,7 +364,7 @@ async function checkRoute(route, vp) {
   await sleep(150);
 
   const exprs = checkExprs();
-  for (const num of [1, 2, 4, 6, 8]) {
+  for (const num of [1, 2, 4, 6, 8, 9]) {
     if (num === 6 && vp.w !== 375) { check(6, tag, true, null); continue; } // п.6 — только на 375
     const culprit = await evaluate(exprs[num]);
     check(num, tag, culprit === null, culprit || 'ok');
@@ -363,7 +397,7 @@ async function checkOnboarding(vp) {
   await evaluate(`location.href = ${JSON.stringify(`${APP}/`)}`);
   await settled(`!!document.getElementById('ob-name')`);
   const exprs = checkExprs();
-  for (const num of [1, 2, 4, 6, 8]) {
+  for (const num of [1, 2, 4, 6, 8, 9]) {
     if (num === 6 && vp.w !== 375) { check(6, tag, true, null); continue; }
     const culprit = await evaluate(exprs[num]);
     check(num, tag, culprit === null, culprit || 'ok');
@@ -414,6 +448,12 @@ async function main() {
     // #dashboard-next-steps «отсутствовал»: показывался онбординг, не дашборд.)
     await completeOnboarding();
     for (const route of ROUTES) await checkRoute(route, vp);
+    if (vp.w === 1280) {
+      await evaluate(`location.hash = '#/'`); await settled(`(document.getElementById('view')?.innerText||'').length > 100`); await sleep(300);
+      await screenshot('1280-dashboard');
+      await evaluate(`location.hash = '#/exam'`); await settled(`(document.getElementById('view')?.innerText||'').length > 100`); await sleep(300);
+      await screenshot('1280-exam');
+    }
     // онбординг — последним: сбрасывает профиль (DELETE), остальные маршруты — с прогрессом
     await checkOnboarding(vp);
     ws.close();
