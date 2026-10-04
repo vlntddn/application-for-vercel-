@@ -1,0 +1,82 @@
+# Предложенный CI (SEC5): текущий .github/workflows/ci.yml + минимальные права
+# и действия, закреплённые по полному SHA (без @v-тегов — теги можно подменить).
+# Этот файл НАМЕРЕННО не в .github/ — применяет владелец, см. README.md рядом.
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+# Минимальные права: workflow читает репозиторий, и ничего больше.
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # The lowest version we claim to support, plus current LTS.
+        node: ['18', '22']
+    name: tests (node ${{ matrix.node }})
+    steps:
+      - uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a # v4
+      - uses: actions/setup-node@54337e0d02de9202d0948aaff36ad556375497b9 # v4
+        with:
+          node-version: ${{ matrix.node }}
+      # No install step on purpose: the app has zero runtime dependencies,
+      # so a green run here also proves that claim still holds.
+      - name: Fail if a dependency sneaked in
+        run: |
+          node -e "
+            const pkg = require('./package.json');
+            const deps = { ...pkg.dependencies, ...pkg.devDependencies };
+            if (Object.keys(deps).length) {
+              console.error('Dependencies found:', Object.keys(deps).join(', '));
+              process.exit(1);
+            }
+            console.log('Zero dependencies — ok');
+          "
+      - run: npm test
+
+  smoke:
+    runs-on: ubuntu-latest
+    name: server smoke test
+    steps:
+      - uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a # v4
+      - uses: actions/setup-node@54337e0d02de9202d0948aaff36ad556375497b9 # v4
+        with:
+          node-version: '22'
+      - name: Boot the server and check the key endpoints
+        run: |
+          node server/index.js &
+          for i in $(seq 1 30); do
+            curl -sf http://127.0.0.1:3000/api/health >/dev/null && break
+            sleep 1
+          done
+          set -e
+          for path in / /api/health /api/manifest /api/theory /api/lessons \
+                      /api/dictionary /api/progress /manifest.webmanifest; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "http://127.0.0.1:3000$path")
+            echo "$path -> $code"
+            [ "$code" = "200" ] || exit 1
+          done
+
+  e2e:
+    runs-on: ubuntu-latest
+    name: QA scenarios (headless Chrome)
+    steps:
+      - uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a # v4
+      - uses: actions/setup-node@54337e0d02de9202d0948aaff36ad556375497b9 # v4
+        with:
+          node-version: '22'
+      - name: QA new-user path
+        run: |
+          export CHROME_PATH=${CHROME_PATH:-$(which google-chrome)}
+          node qa-new-user.mjs
+      - name: UX audit (strict)
+        run: |
+          export CHROME_PATH=${CHROME_PATH:-$(which google-chrome)}
+          node scripts/qa-ux.mjs --strict
