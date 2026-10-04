@@ -8,6 +8,7 @@
  * Already installed (display-mode: standalone): we say so and stop.
  */
 import { el } from './ui.js';
+import { t } from './i18n.js';
 
 let deferredPrompt = null;
 window.addEventListener('beforeinstallprompt', (event) => {
@@ -28,55 +29,53 @@ export function isIOSSafari() {
   return /iphone|ipad|ipod/i.test(navigator.userAgent);
 }
 
-async function offerInstall(panel) {
+async function offerInstall(box) {
   const prompt = deferredPrompt;
   if (!prompt) {
-    renderInstallPanel(panel);
+    renderInstallBox(box);
     return;
   }
   prompt.prompt();
   const choice = await prompt.userChoice;
   // A declined offer cannot be re-offered in this session.
   deferredPrompt = null;
-  renderInstallPanel(panel);
+  renderInstallBox(box);
 }
 
-/** Fills the Settings "INSTALL AS APP" panel body with the right offer. */
-export function renderInstallPanel(panel) {
-  panel.replaceChildren(el('h2', {}, 'INSTALL AS APP'));
-  const box = el('div.panel-body', {});
-  panel.append(box);
-  const target = box;
-
+/**
+ * Fills a container with the right install offer, WITHOUT its own panel
+ * title — the surrounding settings panel supplies the heading (ST2: the
+ * old standalone "INSTALL AS APP" panel is folded into "Offline & install").
+ */
+export function renderInstallBox(box) {
+  box.replaceChildren(el('h3.label', {}, t('st.install')));
   if (isInstalled()) {
-    target.append(
-      el('p.lede', {}, 'Installed. It opens as a full app, works offline, and your progress lives only on this device.'),
-    );
+    box.append(el('p.stat-sub', {}, t('st.installedYes')));
     return;
   }
   if (isIOSSafari()) {
-    target.append(
-      el('p.lede', {}, 'In Safari: tap the Share button, then Add to Home Screen. The app opens without the browser bar, and installing it keeps your progress safe from browser cleanup.'),
-    );
+    box.append(el('p.stat-sub', {}, t('st.installIos')));
     return;
   }
   if (deferredPrompt) {
-    target.append(
-      el('div.actions', {},
-        el('button.btn.btn-primary', {
-          onclick: () => offerInstall(panel),
-        }, 'INSTALL APP'),
-      ),
-    );
+    box.append(el('div.actions', {},
+      el('button.btn.btn-primary', { onclick: () => offerInstall(box) }, t('st.installBtn')),
+    ));
     return;
   }
-  target.append(
-    el('p.lede', {}, 'In Chrome or Android: menu (three dots) then Install App, or Add to Home Screen.'),
-  );
+  box.append(el('p.stat-sub', {}, t('st.installChrome')));
 }
 
-// If the install finishes while Settings is open, refresh the panel.
+/** Legacy whole-panel form (title + body); kept for any other callers. */
+export function renderInstallPanel(panel) {
+  panel.replaceChildren(el('h2', {}, t('st.install')));
+  const box = el('div.panel-body', {});
+  panel.append(box);
+  renderInstallBox(box);
+}
+
+// If the install finishes while Settings is open, refresh the box.
 window.addEventListener('appinstalled', () => {
-  const panel = document.getElementById('install-panel');
-  if (panel) renderInstallPanel(panel);
+  const box = document.getElementById('install-box');
+  if (box) renderInstallBox(box);
 });

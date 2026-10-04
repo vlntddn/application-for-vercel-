@@ -17,23 +17,37 @@ function makeService() {
   return { store, service: new ProgressService(store) };
 }
 
-// Views may live in views.js alone or be split into views/*.js modules.
-// Concatenate everything so source-text tests work in both cases.
+// Views may live in views.js alone or be split into views/**.js modules.
+// Concatenate everything (recursively) so source-text tests work in both.
 function readViewsSource() {
   const parts = [
     fs.readFileSync(path.join(ROOT, 'public', 'js', 'views.js'), 'utf8'),
   ];
   const dir = path.join(ROOT, 'public', 'js', 'views');
   if (fs.existsSync(dir)) {
-    for (const name of fs.readdirSync(dir).sort()) {
-      if (name.endsWith('.js')) parts.push(fs.readFileSync(path.join(dir, name), 'utf8'));
-    }
+    (function walk(d) {
+      for (const name of fs.readdirSync(d).sort()) {
+        const p = path.join(d, name);
+        if (fs.statSync(p).isDirectory()) walk(p);
+        else if (name.endsWith('.js')) parts.push(fs.readFileSync(p, 'utf8'));
+      }
+    })(dir);
   }
   // Onboarding copy is localized — the source-text assertions below match
   // the English dictionary entries (Q4.1), so i18n.js is in scope too.
   const i18n = path.join(ROOT, 'public', 'js', 'i18n.js');
   if (fs.existsSync(i18n)) parts.push(fs.readFileSync(i18n, 'utf8'));
   return parts.join('\n');
+}
+
+// Settings screen split into views/settings/*.js (ST2) — concatenate all of
+// them so the per-file source-text assertions below keep working.
+function readSettingsSource() {
+  const dir = path.join(ROOT, 'public', 'js', 'views', 'settings');
+  return fs.readdirSync(dir).sort()
+    .filter((name) => name.endsWith('.js'))
+    .map((name) => fs.readFileSync(path.join(dir, name), 'utf8'))
+    .join('\n');
 }
 
 /* ---------------- no data can leave the device ---------------- */
@@ -442,22 +456,22 @@ test('the quick review screen is localized: no hardcoded UI copy (Q4.2)', () => 
 });
 
 test('the settings screen is localized: no hardcoded UI copy (Q4.2)', () => {
-  // Q4.2 slice 6: settings copy lives in i18n.js under st.* keys; the view
-  // only references keys, so ru/zh switch in without touching settings.js.
+  // Q4.2 slice 6: settings copy lives in i18n.js under st.* keys; the views
+  // (now views/settings/*.js) only reference keys, so ru/zh switch in.
   const views = readViewsSource();
-  const settings = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'settings.js'), 'utf8');
+  const settings = readSettingsSource();
   assert.match(settings, /t\('st\.title'\)/, 'page title must come from i18n');
   assert.match(settings, /t\('st\.exportBackup'\)/, 'export button must come from i18n');
   assert.match(settings, /t\('st\.resetConfirm'\)/, 'reset confirm must come from i18n');
   assert.match(settings, /t\('st\.goalQuestions'/, 'goal options must come from i18n');
-  // No hardcoded English UI strings left in the view.
+  // No hardcoded English UI strings left in the views.
   assert.ok(!settings.includes("'SETTINGS'"), 'no hardcoded page title');
   assert.ok(!settings.includes("'YOUR PROGRESS'"), 'no hardcoded progress title');
   assert.ok(!settings.includes("'Export backup'"), 'no hardcoded export button');
   assert.ok(!settings.includes('What erases it'), 'no hardcoded erasing labels');
   assert.ok(!settings.includes("'RESET ALL PROGRESS'"), 'no hardcoded reset button');
   // English copy exists in the dictionary (the strings QA checks).
-  assert.match(views, /SETTINGS/);
+  assert.match(views, /Settings/);
   assert.match(views, /Export backup/);
 });
 
@@ -511,7 +525,7 @@ test('the signal drill screen is localized: no hardcoded UI copy (Q4.2)', () => 
 
 test('settings offers an install path on phones', () => {
   const views = readViewsSource();
-  assert.match(views, /renderInstallPanel/);
+  assert.match(views, /renderInstallBox/);
   const install = fs.readFileSync(path.join(ROOT, 'public', 'js', 'install.js'), 'utf8');
   // The real install mechanism on Android is beforeinstallprompt.
   assert.match(install, /beforeinstallprompt/);
@@ -520,13 +534,14 @@ test('settings offers an install path on phones', () => {
 });
 
 test('settings explains where progress lives and how to back it up (S2.8a)', () => {
-  const settings = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'settings.js'), 'utf8');
-  // The "Your progress" block comes right after the profile panel.
-  // S2.8a copy is now localized (Q4.2): the panel exists via the i18n key.
+  // ST2: the settings screen is split into views/settings/*.js; read them all.
+  const settings = readSettingsSource();
+  const indexView = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'settings', 'index.js'), 'utf8');
+  // The "Your progress" block exists and comes right after the Learning panel
+  // (which absorbed the old PROFILE panel). S2.8a copy is localized (Q4.2).
   assert.ok(settings.indexOf("st.yourProgress") > -1, 'progress panel missing');
-  const clearCall = settings.slice(settings.indexOf("clear(root,"));
-  assert.ok(clearCall.indexOf("profilePanel") < clearCall.indexOf("progressPanel"),
-    'progress panel must come after the profile panel');
+  assert.ok(indexView.indexOf('learningPanel()') < indexView.indexOf('progressPanel('),
+    'progress panel must come after the learning panel');
   // The four erasing cases, and the last-backup date in localStorage.
   assert.match(settings, /st\.erasesTitle/);
   // The backup storage moved to the shared module (S2.8a3); settings reads it.
@@ -959,7 +974,7 @@ async function withLiveServer(fn) {
     stdio: ['ignore', 'pipe', 'pipe'],
   });
   const url = await new Promise((resolve, reject) => {
-    // 20s: the server can start slow when the full suite runs on a loaded machine
+        // 20s: the server can start slow when the full suite runs on a loaded machine
     const timer = setTimeout(() => reject(new Error('server did not start')), 20000);
     proc.stdout.on('data', (chunk) => {
       const m = chunk.toString().match(/PASSO running at (http:\/\/[^ ]+)/);

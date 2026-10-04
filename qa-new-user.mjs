@@ -526,8 +526,17 @@ async function main() {
    * Чтобы реально проверить именно SW-ветку (а не прямой HTTP), сначала
    * доводим SW до контроля вкладки (forceUpdate + skipWaiting уже в sw.js),
    * затем кликаем ссылку из Настроек и проверяем <title> открывшегося документа. */
-  await send('Page.navigate', { url: `${APP}/#/settings` });
-  await waitFor(`!!document.querySelector('#view a[href="/credits.html"]')`, 'settings credits link', 20000);
+  // CDP Page.navigate на URL, отличающийся только hash — in-page anchor
+  // navigation (ни reload, ни полный hashchange-цикл, если hash совпал).
+  // Чтобы гарантированно триггернуть hashchange, сначала сдвигаем hash на #/,
+  // затем на #/settings — роутер перерисует экран.
+  await evaluate(`location.hash = '#/'`);
+  await sleep(300);
+  await evaluate(`location.hash = '#/settings'`);
+  // Отрисовка settings может занять время (fetch /api/progress + appVersion):
+  // ждём по предикату, а не одним снапшотом.
+  const creditsReady = `!!document.querySelector('#view a[href="/credits.html"]')`;
+  check(await tryWait(creditsReady, 15000), 'ST1: настройки отрисовались (credits-ссылка на месте)');
   check(await tryWait(`navigator.serviceWorker?.controller !== null`, 20000), 'ST1: SW контролирует вкладку (наведение перехватывается)');
   // клик по ссылке — полная навигация (mode=navigate) → её перехватывает SW.
   // evaluate должен вернуть value ДО навигации (иначе context уничтожается):
@@ -544,6 +553,30 @@ async function main() {
   // обратно в SPA, чтобы финальный свип/сверка шли от дашборда
   await send('Page.navigate', { url: `${APP}/#/` });
   await waitFor(`(document.getElementById('view')?.innerText||'').includes('CIAO, QA')`, 'back to dashboard after credits', 20000);
+
+  /* ---- 9d. ST2: новая структура настроек ----
+   * Панели ровно в заказанном порядке; автосохранение языка БЕЗ кнопки
+   * SAVE; заголовка «Backup» нет (панель удалена, ключи st.backup* — из словарей). */
+  await send('Page.navigate', { url: `${APP}/#/settings` });
+  await waitFor(creditsReady, 'settings rendered for ST2 checks', 20000);
+  const panelTitles = await evaluate(`Array.from(document.querySelectorAll('#view .panel h2')).map(h => h.textContent)`);
+  const wanted = ['Learning', 'Your progress', 'Offline & install', 'Help', 'About'];
+  check(JSON.stringify(panelTitles.slice(0, 5)) === JSON.stringify(wanted),
+    `ST2: панели в порядке Learning→Your progress→Offline & install→Help→About (по факту: ${panelTitles.slice(0, 5).join(' | ')})`);
+  const noSaveBtn = !(await evaluate(`Array.from(document.querySelectorAll('#view button')).some(b => /^(SAVE|СОХРАНИТЬ|保存)$/.test(b.textContent.trim()))`));
+  check(noSaveBtn, 'ST2: кнопки SAVE нет (автосохранение)');
+  const noBackupHeading = !(await evaluate(`Array.from(document.querySelectorAll('#view .panel h2')).some(h => /backup/i.test(h.textContent))`));
+  check(noBackupHeading, 'ST2: заголовка «Backup» в панелях нет');
+  // меняем язык перевода → в progress.json запись language=ru БЕЗ нажатия SAVE
+  await evaluate(`(() => { const s = document.getElementById('s-lang'); s.value = 'ru'; s.dispatchEvent(new Event('change', { bubbles: true })); return s.value; })()`);
+  const savedShown = await tryWait(`(() => { const n = document.querySelector('#view [role="status"]'); return n && /Saved|Сохранено/.test(n.textContent) && n.style.opacity === '1'; })()`, 10000);
+  check(savedShown, 'ST2: после смены языка мигает «Saved ✓» (role=status)');
+  const profileLang = await fetch(`${APP}/api/progress`).then((r) => r.json()).then((p) => p.profile?.language);
+  check(profileLang === 'ru', `ST2: язык сохранён в прогрессе без кнопки SAVE (progress.profile.language = ${profileLang})`);
+  await evaluate(`(() => { const s = document.getElementById('s-lang'); s.value = 'en'; s.dispatchEvent(new Event('change', { bubbles: true })); })()`);
+  await tryWait(`document.getElementById('s-lang')?.value === 'en'`, 'language back to en', 10000);
+  const profileLangBack = await fetch(`${APP}/api/progress`).then((r) => r.json()).then((p) => p.profile?.language);
+  check(profileLangBack === 'en', `ST2: язык возвращён на en (progress.profile.language = ${profileLangBack})`);
 
   // Q2: 404-шторм. Раньше при каждой загрузке клиент просил 25
   // /data/translations/<slug>.json (и аналогично explanations), хотя файлов

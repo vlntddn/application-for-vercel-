@@ -13,7 +13,8 @@
  *   replayed when the server responds again; other mutations error.
  */
 
-const VERSION = 'v122';
+// v123 — ST2: settings screen split into panels (views/settings/*)
+const VERSION = 'v123';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -27,7 +28,11 @@ const SHELL = [
   '/js/views/common.js',
   '/js/views/search.js',
   '/js/views/dictionary.js',
-  '/js/views/settings.js',
+  '/js/views/settings/index.js',
+  '/js/views/settings/learning.js',
+  '/js/views/settings/progress.js',
+  '/js/views/settings/offline.js',
+  '/js/views/settings/about.js',
   '/js/views/stats.js',
   '/js/views/records.js',
   '/js/views/widgets.js',

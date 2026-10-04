@@ -28,8 +28,8 @@ export { renderMistakes, renderQuickReview } from './views/review.js';
 export { renderExam } from './views/exam.js';
 
 
-/* Settings screen lives in views/settings.js (Sprint 1, S1.3). */
-export { renderSettings } from './views/settings.js';
+/* Settings screen lives in views/settings/ (ST2: one panel per module). */
+export { renderSettings } from './views/settings/index.js';
 
 /* Search screen lives in views/search.js (Sprint 1, S1.4). */
 export { renderSearch } from './views/search.js';
