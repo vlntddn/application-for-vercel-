@@ -8,6 +8,7 @@
 // other trainers do. START THE DRILL swaps the table for the drill in place.
 import {
   loadNumbers,
+  loadNumbersGlossary,
   loadLessons,
   loadTheory,
   loadAllQuestions,
@@ -18,6 +19,8 @@ import { t } from '../i18n.js';
 import { playCorrect, playWrong } from '../sound.js';
 import { errorBanner, translationOf, loc, translationArea, feedbackHref } from './common.js';
 import { numbersQueue, numberSpans } from '../domain/learning.js';
+import { TOPICS } from '../topics.js';
+import { CHAPTER_CATEGORY } from '../theory-map.js';
 
 const DRILL_SIZE = 20;
 
@@ -26,24 +29,27 @@ export async function renderNumbers(root) {
     el('h1', {}, t('nm.title')),
     el('p.lede', {}, t('ms.loading')),
   );
-  let numbers, lessons, theory, questions;
+  let numbers, lessons, theory, questions, glossary;
   try {
-    [numbers, lessons, theory, questions] = await Promise.all([
-      loadNumbers(), loadLessons(), loadTheory(), loadAllQuestions(),
+    [numbers, lessons, theory, questions, glossary] = await Promise.all([
+      loadNumbers(), loadLessons(), loadTheory(), loadAllQuestions(), loadNumbersGlossary(),
     ]);
   } catch (err) {
     return clear(root, errorBanner(err));
   }
-  drawTable(root, numbers, lessons, theory, questions);
+  drawTable(root, numbers, lessons, theory, questions, glossary);
 }
 
-/** Chapter id → «Cap. N · Title» (theory.json IS the array of chapters). */
+/** Chapter id → «Cap. N · Title» in the learner's language (Italian title kept as the exam term). */
 function chapterTitles(theory) {
   const byId = new Map((Array.isArray(theory) ? theory : []).map((c) => [c.id, c]));
   return (id) => {
     const ch = byId.get(id);
     const num = String(id).replace(/\D/g, '');
-    return ch ? `Cap. ${ch.chapter ?? num} · ${ch.title_it}` : `Cap. ${num}`;
+    const topic = TOPICS[CHAPTER_CATEGORY[id]];
+    const mine = topic?.label ? loc(topic.label) : '';
+    const it = ch?.title_it || topic?.label?.it || '';
+    return { num: ch?.chapter ?? num, title: mine || it, it: mine && it && mine !== it ? it : '' };
   };
 }
 
@@ -54,7 +60,7 @@ function noteFor(lessons, row) {
   return fact?.note || null;
 }
 
-function tableBlock(numbers, lessons, titleOf) {
+function tableBlock(numbers, lessons, titleOf, glossary = {}) {
   const rows = numbers.table || [];
   const byChapter = new Map();
   for (const row of rows) {
@@ -68,24 +74,40 @@ function tableBlock(numbers, lessons, titleOf) {
   return el('div.panel', {},
     el('h1', {}, t('nm.title')),
     el('p.lede', {}, t('nm.lede', { facts: rows.length, questions: total })),
-    ...chapters.map(([ch, chRows]) => el('section.numbers-chapter', {},
-      el('h2.numbers-chapter__title', {}, titleOf(ch)),
-      ...chRows.map((r) => el('div.numbers-fact', {},
-        el('div.numbers-fact__head', {},
-          el('span.numbers-fact__name', {}, r.fact),
-          el('span.numbers-fact__value', {}, r.value)),
-        noteFor(lessons, r) ? el('p.numbers-fact__note', {}, loc(noteFor(lessons, r))) : null,
-        r.questions > 0 ? el('p.numbers-fact__sub', {},
-          t(r.questions === 1 ? 'nm.factsOne' : 'nm.factsMany', { n: r.questions })) : null,
-      )),
-    )),
+    ...chapters.map(([ch, chRows]) => {
+      const head = titleOf(ch);
+      return el('section.numbers-chapter', {},
+        el('h2.numbers-chapter__title', {},
+          `Cap. ${head.num} · ${head.title}`,
+          head.it ? el('span.numbers-chapter__it', { lang: 'it', translate: 'no' }, head.it) : null),
+        ...chRows.map((r) => {
+          // Learner language first; the Italian exam wording stays visible
+          // underneath because the questions themselves are in Italian.
+          const g = glossary[`${r.chapter}|${r.fact}`];
+          const name = g ? loc(g.title) : r.fact;
+          const value = g ? loc(g.value) : r.value;
+          const meaning = g ? loc(g.meaning) : (noteFor(lessons, r) ? loc(noteFor(lessons, r)) : '');
+          return el('div.numbers-fact', {},
+            el('div.numbers-fact__head', {},
+              el('span.numbers-fact__name', {}, name),
+              el('span.numbers-fact__value', {}, value)),
+            meaning ? el('p.numbers-fact__note', {}, meaning) : null,
+            g ? el('p.numbers-fact__it', {},
+              `${t('nm.examTerm')} `,
+              el('span', { lang: 'it', translate: 'no' }, `${r.fact} — ${r.value}`)) : null,
+            r.questions > 0 ? el('p.numbers-fact__sub', {},
+              t(r.questions === 1 ? 'nm.factsOne' : 'nm.factsMany', { n: r.questions })) : null,
+          );
+        }),
+      );
+    }),
   );
 }
 
 /** State 1 — the reference table plus the drill entry point. */
-function drawTable(root, numbers, lessons, theory, questions) {
+function drawTable(root, numbers, lessons, theory, questions, glossary) {
   clear(root,
-    tableBlock(numbers, lessons, chapterTitles(theory)),
+    tableBlock(numbers, lessons, chapterTitles(theory), glossary),
     el('div.actions', { style: 'margin-top:24px' },
       el('button.btn.btn-primary.btn-big', { type: 'button', onclick: () =>
         drawDrill(root, numbers, questions) }, t('nm.drillStart')),

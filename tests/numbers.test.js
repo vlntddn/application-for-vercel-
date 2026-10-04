@@ -120,3 +120,22 @@ test('data/insights/numbers.json: build output is consistent with lessons.json',
   const both = data.tokens.filter((t) => t.false > 0 && t.true > 0);
   assert.ok(both.length >= 3, 'at least 3 numbers exist on both FALSO and VERO sides');
 });
+
+/* ---------------- learner-language glossary (2026-10-04) ---------------- */
+
+test('numbers glossary covers every table row in en, ru and zh', () => {
+  const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+  const table = JSON.parse(fs.readFileSync(path.join(root, 'data/insights/numbers.json'), 'utf8')).table;
+  const entries = JSON.parse(fs.readFileSync(path.join(root, 'data/numbers-glossary.json'), 'utf8')).entries;
+  const keys = table.map((r) => `${r.chapter}|${r.fact}`);
+  assert.deepEqual(keys.filter((k) => !entries[k]), [], 'every numbers row has a glossary entry');
+  assert.deepEqual(Object.keys(entries).filter((k) => !keys.includes(k)), [], 'no orphan glossary entries');
+  for (const [key, g] of Object.entries(entries)) {
+    for (const field of ['title', 'value', 'meaning']) {
+      for (const lang of ['en', 'ru', 'zh']) {
+        assert.ok(typeof g[field]?.[lang] === 'string' && g[field][lang].trim().length > 1,
+          `${key}.${field}.${lang} is filled`);
+      }
+    }
+  }
+});

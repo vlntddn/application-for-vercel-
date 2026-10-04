@@ -1812,3 +1812,8 @@ mark.ds-term[role='button']:focus-visible {
 .path-card { margin-bottom: 10px; }
 .path-card .ds-btn { margin-top: 10px; width: 100%; }
 .path-list { margin-top: 16px; }
+
+/* #/numbers: learner-language row + Italian exam term underneath */
+.numbers-chapter__it { display: block; margin-top: 2px; font-size: 0.8rem; font-weight: 600; color: var(--ink-muted); letter-spacing: 0; }
+.numbers-fact__it { margin: 4px 0 0; font-size: 0.85rem; color: var(--ink-muted); }
+.numbers-fact__it span { font-weight: 700; color: var(--ink); }

@@ -58,6 +58,7 @@ const staticApi = {
   lessons: () => request('/data/lessons.json'),
   insights: () => request('/data/insights/signal-words.json'),
   numbers: () => request('/data/insights/numbers.json'),
+  numbersGlossary: () => request('/data/numbers-glossary.json'),
   questions: (slug) => request(`/data/questions/${slug}.json`),
   explanations: (slug) => request(`/data/explanations/${slug}.json`),
 };

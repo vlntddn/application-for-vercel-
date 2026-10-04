@@ -246,7 +246,8 @@ export function weakSpotsPanel() {
 function actionsPanel(stats) {
   // Same target the learning-path card points at — one primary, same intent.
   const lessons = state.lessons;
-  const path = lessons ? (() => { try { return learningPath(state.progress, state.manifest, lessons); } catch { return null; } })() : null;
+  const rawPath = lessons ? (() => { try { return learningPath(state.progress, state.manifest, lessons); } catch { return null; } })() : null;
+  const path = rawPath && !rawPath.empty ? rawPath : null;
   let cta;
   if (path && path.ready) {
     cta = el('a.ds-btn.ds-btn--primary.ds-btn--lg', { href: '#/exam' }, t('db.actions.examCta'));

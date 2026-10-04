@@ -82,6 +82,7 @@ export function pathLinkCard() {
   const lessons = state.lessons;
   if (!lessons) return null;
   const path = learningPath(state.progress, state.manifest, lessons);
+  if (path.empty) return null;
   const total = path.steps.length;
   if (path.ready) {
     return el('div.ds-card', { id: 'dashboard-learning-path' },
@@ -117,6 +118,7 @@ export async function renderPath(root) {
     return clear(root, errorBanner(err));
   }
   const path = learningPath(state.progress, state.manifest, lessons);
+  if (path.empty) return clear(root, errorBanner(new Error('The lessons did not load — reload the page.')));
   const total = path.steps.length;
   const doneCount = path.steps.filter((s) => s.status === 'done').length;
   clear(root,

@@ -399,7 +399,8 @@ test('learningPath: all steps done → currentIndex -1, ready true', () => {
 test('learningPath: tolerates missing/null inputs without throwing', () => {
   const p = learningPath(null, null, null);
   assert.equal(p.steps.length, 0);
-  assert.equal(p.ready, true);
+  assert.equal(p.ready, false, 'no chapters is not "all steps done"');
+  assert.equal(p.empty, true);
   assert.equal(p.currentIndex, -1);
 });
 
@@ -494,4 +495,15 @@ test('examReadiness: biggestGain names the weakest topic', () => {
   assert.ok(r.biggestGain, 'expected a biggest gain topic');
   assert.equal(r.biggestGain.slug, weak.slug);
   assert.ok(r.biggestGain.gainPct >= 1);
+});
+
+test('learningPath: no chapters is NOT "all done" (was "the whole 0-step path")', async () => {
+  const { learningPath } = await import('../public/js/domain/learning.js');
+  const path = learningPath({ answers: {}, theoryRead: [], chapters: {} }, { categories: [] }, { chapters: {} });
+  assert.equal(path.steps.length, 0);
+  assert.equal(path.empty, true);
+  assert.equal(path.ready, false);
+  const missing = learningPath({ answers: {} }, { categories: [] }, null);
+  assert.equal(missing.ready, false);
+  assert.equal(missing.empty, true);
 });

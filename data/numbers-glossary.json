@@ -1,0 +1,311 @@
+{
+ "_comment": "Learner-language glossary for #/numbers. Key = '<chapter>|<fact_it>' exactly as in data/insights/numbers.json. title/value/meaning in en, ru, zh. Hand-written 2026-10-04 (owner: numbers page was Italian-only).",
+ "entries": {
+  "ch1|Corsia": {
+   "title": {
+    "en": "Width of a lane",
+    "ru": "Ширина полосы движения",
+    "zh": "车道宽度"
+   },
+   "value": {
+    "en": "1 line of vehicles",
+    "ru": "1 ряд машин",
+    "zh": "1列车辆"
+   },
+   "meaning": {
+    "en": "A lane (corsia) is wide enough for exactly one line of vehicles.",
+    "ru": "Полоса (corsia) вмещает ровно один ряд машин.",
+    "zh": "一条车道（corsia）的宽度刚好容纳一列车辆。"
+   }
+  },
+  "ch2|Distanza dal pericolo (extraurbane)": {
+   "title": {
+    "en": "Danger sign: distance to the hazard (outside towns)",
+    "ru": "Предупреждающий знак: расстояние до опасности (вне населённого пункта)",
+    "zh": "警告标志：距危险点的距离（城外道路）"
+   },
+   "value": {
+    "en": "150 m",
+    "ru": "150 м",
+    "zh": "150米"
+   },
+   "meaning": {
+    "en": "Outside built-up areas a danger sign normally stands about 150 m before the hazard. A panel under the sign can give a different distance.",
+    "ru": "Вне населённых пунктов предупреждающий знак обычно стоит примерно за 150 м до опасного места. Табличка под знаком может указать другое расстояние.",
+    "zh": "在城外道路上，警告标志通常设在危险地点前约150米处；标志下方的附加牌可以标明其他距离。"
+   }
+  },
+  "ch2|Croce di Sant'Andrea singola": {
+   "title": {
+    "en": "Level crossing: single St Andrew's cross",
+    "ru": "Железнодорожный переезд: одиночный Андреевский крест",
+    "zh": "铁路道口：单个十字标志"
+   },
+   "value": {
+    "en": "1 track",
+    "ru": "1 путь",
+    "zh": "1条轨道"
+   },
+   "meaning": {
+    "en": "A single cross at a railway crossing means one track. A double cross means two or more tracks.",
+    "ru": "Одиночный крест у переезда означает один путь. Двойной крест — два пути и больше.",
+    "zh": "道口处的单个十字标志表示一条轨道；双十字表示两条或更多轨道。"
+   }
+  },
+  "ch3|Divieto di sosta (centro abitato)": {
+   "title": {
+    "en": "No-parking sign: the hours it applies in town",
+    "ru": "Знак «Стоянка запрещена»: часы действия в населённом пункте",
+    "zh": "禁止停车标志：城区内的适用时间"
+   },
+   "value": {
+    "en": "8:00–20:00",
+    "ru": "8:00–20:00",
+    "zh": "8:00–20:00"
+   },
+   "meaning": {
+    "en": "In a built-up area the no-parking sign applies from 8:00 to 20:00. Outside built-up areas it applies 24 hours a day.",
+    "ru": "В населённом пункте знак действует с 8:00 до 20:00. Вне населённых пунктов — круглосуточно.",
+    "zh": "在城区内，禁止停车标志的适用时间是8:00至20:00；城区外则全天24小时有效。"
+   }
+  },
+  "ch8|Centro abitato": {
+   "title": {
+    "en": "Speed limit in town",
+    "ru": "Ограничение скорости в населённом пункте",
+    "zh": "城区限速"
+   },
+   "value": {
+    "en": "50 km/h",
+    "ru": "50 км/ч",
+    "zh": "50公里/小时"
+   },
+   "meaning": {
+    "en": "Built-up areas: 50 km/h. Up to 70 km/h only on urban roads marked with a sign.",
+    "ru": "Населённый пункт: 50 км/ч. До 70 км/ч — только на городских дорогах с соответствующим знаком.",
+    "zh": "城区：50公里/小时。只有带标志的城市道路才可达70公里/小时。"
+   }
+  },
+  "ch8|Extraurbane secondarie": {
+   "title": {
+    "en": "Speed limit on secondary roads outside towns",
+    "ru": "Ограничение скорости на второстепенных загородных дорогах",
+    "zh": "城外次要道路限速"
+   },
+   "value": {
+    "en": "90 km/h",
+    "ru": "90 км/ч",
+    "zh": "90公里/小时"
+   },
+   "meaning": {
+    "en": "Secondary out-of-town roads (strade extraurbane secondarie): 90 km/h.",
+    "ru": "Второстепенные загородные дороги (strade extraurbane secondarie): 90 км/ч.",
+    "zh": "城外次要道路（strade extraurbane secondarie）：90公里/小时。"
+   }
+  },
+  "ch8|Extraurbane principali": {
+   "title": {
+    "en": "Speed limit on main roads outside towns",
+    "ru": "Ограничение скорости на главных загородных дорогах",
+    "zh": "城外主干道限速"
+   },
+   "value": {
+    "en": "110 km/h",
+    "ru": "110 км/ч",
+    "zh": "110公里/小时"
+   },
+   "meaning": {
+    "en": "Main out-of-town roads (strade extraurbane principali): 110 km/h, and 90 km/h in rain.",
+    "ru": "Главные загородные дороги (strade extraurbane principali): 110 км/ч, при дожде — 90 км/ч.",
+    "zh": "城外主干道（strade extraurbane principali）：110公里/小时，下雨时90公里/小时。"
+   }
+  },
+  "ch8|Autostrade": {
+   "title": {
+    "en": "Speed limit on motorways",
+    "ru": "Ограничение скорости на автострадах",
+    "zh": "高速公路限速"
+   },
+   "value": {
+    "en": "130 km/h",
+    "ru": "130 км/ч",
+    "zh": "130公里/小时"
+   },
+   "meaning": {
+    "en": "Motorways (autostrade): 130 km/h, and 110 km/h in rain.",
+    "ru": "Автострады (autostrade): 130 км/ч, при дожде — 110 км/ч.",
+    "zh": "高速公路（autostrade）：130公里/小时，下雨时110公里/小时。"
+   }
+  },
+  "ch8|Neopatentati (3 anni)": {
+   "title": {
+    "en": "Speed limit for new drivers (first 3 years after getting the licence)",
+    "ru": "Ограничение скорости для начинающих водителей (первые 3 года после получения прав)",
+    "zh": "新手司机限速（取得驾照后的头3年）"
+   },
+   "value": {
+    "en": "100 / 90 km/h",
+    "ru": "100 / 90 км/ч",
+    "zh": "100 / 90 公里/小时"
+   },
+   "meaning": {
+    "en": "A neopatentato is a driver in the first 3 years of the licence: at most 100 km/h on motorways and 90 km/h on main out-of-town roads.",
+    "ru": "Neopatentato — водитель в первые 3 года после получения прав: не более 100 км/ч на автострадах и 90 км/ч на главных загородных дорогах.",
+    "zh": "neopatentato 指取得驾照不满3年的新手司机：高速公路最高100公里/小时，城外主干道最高90公里/小时。"
+   }
+  },
+  "ch9|Spazio di reazione (1 sec)": {
+   "title": {
+    "en": "Reaction distance (about 1 second)",
+    "ru": "Путь за время реакции (около 1 секунды)",
+    "zh": "反应距离（约1秒）"
+   },
+   "value": {
+    "en": "≈ speed ÷ 10 × 3 m",
+    "ru": "≈ скорость ÷ 10 × 3 м",
+    "zh": "≈ 速度 ÷ 10 × 3米"
+   },
+   "meaning": {
+    "en": "In about 1 second of reaction time the vehicle keeps moving: speed ÷ 10 × 3 metres. At 90 km/h that is roughly 25 m before braking even starts.",
+    "ru": "За время реакции (около 1 секунды) машина продолжает ехать: скорость ÷ 10 × 3 метра. При 90 км/ч это примерно 25 м ещё до начала торможения.",
+    "zh": "约1秒的反应时间内车辆仍在前进：速度 ÷ 10 × 3米。时速90公里时，在开始刹车之前就已前进约25米。"
+   }
+  },
+  "ch13|Distanza dall'incrocio (sosta)": {
+   "title": {
+    "en": "Parking near a junction",
+    "ru": "Стоянка рядом с перекрёстком",
+    "zh": "路口附近停车"
+   },
+   "value": {
+    "en": "at least 5 m",
+    "ru": "не менее 5 м",
+    "zh": "至少5米"
+   },
+   "meaning": {
+    "en": "Do not park closer than 5 m to the corner of a junction.",
+    "ru": "Нельзя ставить машину ближе 5 м к углу перекрёстка.",
+    "zh": "停车位置距路口拐角不得少于5米。"
+   }
+  },
+  "ch14|Triangolo: distanza": {
+   "title": {
+    "en": "Warning triangle: how far behind the vehicle",
+    "ru": "Знак аварийной остановки: на каком расстоянии от машины",
+    "zh": "警告三角牌：放在车后多远"
+   },
+   "value": {
+    "en": "at least 50 m",
+    "ru": "не менее 50 м",
+    "zh": "至少50米"
+   },
+   "meaning": {
+    "en": "Place the triangle at least 50 m behind the vehicle. It must be visible from at least 100 m.",
+    "ru": "Знак ставят не менее чем в 50 м позади машины. Он должен быть виден минимум со 100 м.",
+    "zh": "三角牌应放在车后至少50米处，并且至少在100米外就能看见。"
+   }
+  },
+  "ch16|Età minime": {
+   "title": {
+    "en": "Minimum age for a licence",
+    "ru": "Минимальный возраст для получения прав",
+    "zh": "考驾照的最低年龄"
+   },
+   "value": {
+    "en": "AM 14 · A1 16 · B 18",
+    "ru": "AM 14 · A1 16 · B 18",
+    "zh": "AM 14 · A1 16 · B 18"
+   },
+   "meaning": {
+    "en": "Moped (AM): 14 years. Light motorcycle (A1): 16 years. Car (B): 18 years.",
+    "ru": "Мопед (AM): 14 лет. Лёгкий мотоцикл (A1): 16 лет. Легковой автомобиль (B): 18 лет.",
+    "zh": "轻便摩托车（AM）：14岁。小型摩托车（A1）：16岁。小汽车（B）：18岁。"
+   }
+  },
+  "ch16|Punti iniziali": {
+   "title": {
+    "en": "Licence points at the start",
+    "ru": "Баллы на правах в начале",
+    "zh": "驾照初始分数"
+   },
+   "value": {
+    "en": "20 (max 30)",
+    "ru": "20 (макс. 30)",
+    "zh": "20分（最多30分）"
+   },
+   "meaning": {
+    "en": "A new licence starts with 20 points and the maximum is 30. You gain +2 points for every two years without violations.",
+    "ru": "Новые права начинаются с 20 баллов, максимум — 30. За каждые два года без нарушений добавляется +2 балла.",
+    "zh": "新驾照初始为20分，最高30分。每两年没有违章可加2分。"
+   }
+  },
+  "ch18|Tasso alcolemico": {
+   "title": {
+    "en": "Alcohol limit for ordinary drivers",
+    "ru": "Допустимый алкоголь для обычных водителей",
+    "zh": "普通司机的酒精限值"
+   },
+   "value": {
+    "en": "0.5 g/l",
+    "ru": "0,5 г/л",
+    "zh": "0.5克/升"
+   },
+   "meaning": {
+    "en": "The general limit is 0.5 grams of alcohol per litre of blood.",
+    "ru": "Общий предел — 0,5 грамма алкоголя на литр крови.",
+    "zh": "一般限值为每升血液0.5克酒精。"
+   }
+  },
+  "ch18|Neopatentati / under 21 / professionali": {
+   "title": {
+    "en": "Zero-alcohol drivers",
+    "ru": "Водители с нулевой нормой алкоголя",
+    "zh": "零酒精司机"
+   },
+   "value": {
+    "en": "0 g/l",
+    "ru": "0 г/л",
+    "zh": "0克/升"
+   },
+   "meaning": {
+    "en": "Zero alcohol for new drivers (first 3 years), drivers under 21 and professional drivers.",
+    "ru": "Ноль алкоголя для начинающих водителей (первые 3 года), водителей до 21 года и профессиональных водителей.",
+    "zh": "新手司机（头3年）、21岁以下司机和职业司机必须零酒精。"
+   }
+  },
+  "ch21|Battistrada (autovetture)": {
+   "title": {
+    "en": "Minimum tyre tread depth (cars)",
+    "ru": "Минимальная глубина протектора (легковые)",
+    "zh": "轮胎最小花纹深度（小汽车）"
+   },
+   "value": {
+    "en": "at least 1.6 mm",
+    "ru": "не менее 1,6 мм",
+    "zh": "至少1.6毫米"
+   },
+   "meaning": {
+    "en": "The tread (battistrada) of a car tyre must be at least 1.6 mm deep.",
+    "ru": "Протектор (battistrada) шины легкового автомобиля должен быть глубиной не менее 1,6 мм.",
+    "zh": "小汽车轮胎的花纹（battistrada）深度不得少于1.6毫米。"
+   }
+  },
+  "ch23|Sporgenza posteriore": {
+   "title": {
+    "en": "Load sticking out at the back",
+    "ru": "Груз, выступающий сзади",
+    "zh": "货物向后伸出的长度"
+   },
+   "value": {
+    "en": "max 3/10 of the length",
+    "ru": "макс. 3/10 длины",
+    "zh": "最多为车长的3/10"
+   },
+   "meaning": {
+    "en": "A load may stick out behind the vehicle by at most 3/10 of the vehicle's length.",
+    "ru": "Груз может выступать за заднюю часть машины не более чем на 3/10 её длины.",
+    "zh": "货物向车后伸出的部分最多为车辆长度的3/10。"
+   }
+  }
+ }
+}

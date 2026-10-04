@@ -212,6 +212,7 @@ export const MESSAGES = {
     // Drill words (Correct / Wrong / Right answer, kbd hints, offline note,
     // report link, DASHBOARD) reuse the pr.* keys from the practice session.
     'nm.title': 'The numbers you must know',
+    'nm.examTerm': 'In the exam:',
     'nm.lede': '{facts} facts · {questions} bank questions touch these numbers.',
     'nm.factsOne': '{n} bank question uses this number',
     'nm.factsMany': '{n} bank questions use this number',
@@ -668,6 +669,7 @@ export const MESSAGES = {
     // Слова тренажёра (Correct / Wrong / Right answer, kbd-подсказки,
     // offline-заметка, report-ссылка, ГЛАВНАЯ) переиспользуют pr.*.
     'nm.title': 'Числа, которые нужно знать',
+    'nm.examTerm': 'В экзамене:',
     'nm.lede': 'Фактов: {facts} · вопросов банка, где они встречаются: {questions}.',
     'nm.factsOne': '{n} вопрос банка использует это число',
     'nm.factsMany': '{n} вопросов банка используют это число',
@@ -1124,6 +1126,7 @@ export const MESSAGES = {
     // 练习用语（Correct / Wrong / Right answer、kbd 提示、离线提示、
     // 报错链接、主页）复用 pr.* 键。
     'nm.title': '必须记住的数字',
+    'nm.examTerm': '考试用语：',
     'nm.lede': '{facts} 个事实 · 题库中有 {questions} 题涉及这些数字。',
     'nm.factsOne': '题库中有 {n} 题使用这个数字',
     'nm.factsMany': '题库中有 {n} 题使用这个数字',

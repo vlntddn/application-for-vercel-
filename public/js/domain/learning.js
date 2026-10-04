@@ -583,10 +583,14 @@ export function learningPath(progress, manifest, lessons) {
   });
   const current = steps.find((s) => !s.done) || null;
   if (current) current.status = 'ready';
+  // No chapters (lessons failed to load or came back empty) is NOT «all done»:
+  // that read as «You finished the whole 0-step path» on a brand-new profile.
+  const empty = steps.length === 0;
   return {
     steps,
     currentIndex: current ? steps.indexOf(current) : -1,
-    ready: current === null,
+    ready: !empty && current === null,
+    empty,
   };
 }
 

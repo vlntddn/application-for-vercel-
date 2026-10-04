@@ -11,6 +11,7 @@ export const state = {
   lessons: null,
   insights: null,
   numbers: null,
+  numbersGlossary: null,
   questionsBySlug: new Map(),
   // Per-category explanation files (L9a); a Map of slug -> {items}. A missing
   // file caches as an empty object so repeated loads are cheap.
@@ -44,13 +45,29 @@ export async function loadDictionary() {
 }
 
 export async function loadLessons() {
-  if (!state.lessons) state.lessons = await api.lessons();
+  if (!state.lessons) {
+    const lessons = await api.lessons();
+    // A response without chapters (stale or partial cache) must not be kept:
+    // the learning path would read «0 steps, all done».
+    if (!lessons || !lessons.chapters || Object.keys(lessons.chapters).length === 0) {
+      throw new Error('lessons data has no chapters — reload the page');
+    }
+    state.lessons = lessons;
+  }
   return state.lessons;
 }
 
 export async function loadInsights() {
   if (!state.insights) state.insights = await api.insights();
   return state.insights;
+}
+
+/** Learner-language glossary for #/numbers; never throws — the page falls back to the Italian rows. */
+export async function loadNumbersGlossary() {
+  if (!state.numbersGlossary) {
+    try { state.numbersGlossary = (await api.numbersGlossary()).entries || {}; } catch { state.numbersGlossary = {}; }
+  }
+  return state.numbersGlossary;
 }
 
 export async function loadNumbers() {
