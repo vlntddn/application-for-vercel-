@@ -959,7 +959,8 @@ async function withLiveServer(fn) {
     stdio: ['ignore', 'pipe', 'pipe'],
   });
   const url = await new Promise((resolve, reject) => {
-    const timer = setTimeout(() => reject(new Error('server did not start')), 10000);
+    // 20s: the server can start slow when the full suite runs on a loaded machine
+    const timer = setTimeout(() => reject(new Error('server did not start')), 20000);
     proc.stdout.on('data', (chunk) => {
       const m = chunk.toString().match(/PASSO running at (http:\/\/[^ ]+)/);
       if (m) {
