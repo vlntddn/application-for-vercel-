@@ -1,3 +1,27 @@
+## 2026-10-04 — SEC4: секрет-сканер в verify.sh
+
+**Что сделано.**
+Новый шаг гейта `scripts/verify.sh` (блок 5a) + скрипт `scripts/scan-secrets.mjs`:
+- (a) скан добавленных строк `git diff -U0 HEAD` и сообщений последних 10
+  коммитов на `ghp_[A-Za-z0-9]{20,}`, `github_pat_`, `sk-[A-Za-z0-9]{20,}`,
+  `AKIA[A-Z0-9]{16}`, `-----BEGIN … PRIVATE KEY`;
+- (b) `git remote get-url origin` — FAIL, если в URL зашит логин/токен
+  (userinfo в http(s)-URL или `git@host:…@…`);
+- (c) отдельная проверка: в `package.json` нет `dependencies` (в дополнение
+  к существующему «zero dependencies»);
+- при находке verify FAIL с указанием, где найдено, **без вывода самого
+  секрета** (в логе только метка типа «GitHub personal access token»).
+
+**Почему.**
+Защита от случайного попадания токенов/ключей в репозиторий на ранней
+студии — ровно перед коммитом, пока поправить легко.
+
+**Как проверено.**
+Сканер по отдельности (все 5 паттернов: clean exit 0, с подделкой exit 1).
+Гейт целиком: `pp-secret-probe.txt` с поддельным `ghp_`+30 символов →
+`FAIL secret scan`, VERIFY FAILED (1); после удаления → VERIFY OK
+(257 passed). `public/` не тронут → bump sw.js не нужен.
+
 ## 2026-10-04 — SEC3: жёсткие пределы роста данных (progress.js, 422)
 
 **Что сделано.**
