@@ -1,3 +1,76 @@
+## 2026-10-04 — UI1: десктоп 1280 — наложения и вылезания
+
+**Что сделано.**
+- **(a) Экран экзамена.** Кнопка BEGIN EXAM больше не наезжает на последнюю
+  строку списка, значок клавиши «T» стоит в строке, а не поверх текста.
+  - .panel — display:flex; flex-direction:column; gap:12px (вертикальный
+    ритм: CTA-ряд не прилипает к последней строке).
+  - .panel .actions — display:flex; gap:12px; flex-wrap:wrap; margin-top:4px
+    (ряд действий отделён от списка правил).
+  - kbd — display:inline-block; vertical-align:baseline (значок клавиши
+    вставлен в поток строки).
+- **(b) Главная.** Плашка «30 random questions · 20 minutes · max 3 errors»
+  перестала висеть справа отдельной рамкой: в dashboard.js (actionsPanel)
+  она теперь обычный <p class="quiz-sub"> под заголовком. .quiz-sub —
+  0.875rem / 500 / var(--muted).
+- **(c) Весь десктоп.** Ограничена ширина колонки контента (читаемая строка
+  ≤ 72 символов): @media (min-width:1101px) main > * { max-width:860px },
+  широкие раскладки (.grid, .dashboard-stack, .exam-nav, .grid-2, .grid-3)
+  держат полные 1100 px. Заголовок «Italian theory master» в шапке
+  перестал быть моноширинным капсом: .brand__tag — font:500 13px/16px
+  var(--font-sans), убраны letter-spacing и text-transform:uppercase.
+- **qa-ux: проверка p9 «соседние блоки не перекрываются».** Для пар соседних
+  дочерних #view прямоугольники не пересекаются больше 2 px (кроме
+  absolute/fixed оверлеев и теней; box = border-box). На обоих вьюпортах.
+  Скрипт добавлен в [1,2,4,6,8] → [1,2,4,6,8,9] и в onboarding-цикл.
+- **qa-ux: скриншоты 1280.** На вьюпорте 1280 скрипт снимает #/ (главная)
+  и #/exam в /tmp/pp-ux/1280-dashboard.png и /tmp/pp-ux/1280-exam.png.
+- public/sw.js VERSION v124 → v126 (правка public/ ⇒ +1 и выше).
+  SHA256SUMS перегенерирован (node scripts/make-checksums.js).
+
+**Как проверено.**
+- scripts/verify.sh → VERIFY OK (262 passed, qa-new-user 99/0).
+- node scripts/qa-ux.mjs → 252 PASS, 0 FAIL; p9 = 0/28 FAIL на обоих
+  вьюпортах. Скриншоты: /tmp/pp-ux/1280-dashboard.png и
+  /tmp/pp-ux/1280-exam.png.
+
+## 2026-10-04 — UI1: десктоп 1280 — наложения и вылезания
+
+**Что сделано.**
+- **(a) Экран экзамена.** Кнопка BEGIN EXAM больше не наезжает на последнюю
+  строку списка, значок клавиши «T» стоит в строке, а не поверх текста.
+  - `.panel` — `display:flex; flex-direction:column; gap:12px` (вертикальный
+    ритм: CTA-ряд не прилипает к последней строке).
+  - `.panel .actions` — `display:flex; gap:12px; flex-wrap:wrap; margin-top:4px`
+    (ряд действий отделён от списка правил).
+  - `kbd` — `display:inline-block; vertical-align:baseline` (значок клавиши
+    вставлен в поток строки).
+- **(b) Главная.** Плашка «30 random questions · 20 minutes · max 3 errors»
+  перестала висеть справа отдельной рамкой: в `dashboard.js` (`actionsPanel`)
+  она теперь обычный `<p class="quiz-sub">` под заголовком. `.quiz-sub` —
+  `0.875rem / 500 / var(--muted)`.
+- **(c) Весь десктоп.** Ограничена ширина колонки контента (читаемая строка
+  ≤ 72 символов): `@media (min-width:1101px) main > * { max-width:860px }`,
+  широкие раскладки (`.grid`, `.dashboard-stack`, `.exam-nav`, `.grid-2`,
+  `.grid-3`) держат полные 1100 px. Заголовок «Italian theory master» в шапке
+  перестал быть моноширинным капсом: `.brand__tag` — `font:500 13px/16px
+  var(--font-sans)`, убраны `letter-spacing` и `text-transform:uppercase`.
+- **qa-ux: проверка p9 «соседние блоки не перекрываются».** Для пар соседних
+  дочерних `#view` прямоугольники не пересекаются больше 2 px (кроме
+  absolute/fixed оверлеев и теней; box = border-box). На обоих вьюпортах.
+  Скрипт добавлен в `[1,2,4,6,8] → [1,2,4,6,8,9]` и в onboarding-цикл.
+- **qa-ux: скриншоты 1280.** На вьюпорте 1280 скрипт снимает `#/` (главная)
+  и `#/exam` в `/tmp/pp-ux/1280-dashboard.png` и `/tmp/pp-ux/1280-exam.png`.
+- `public/sw.js` VERSION `v124 → v126` (правка `public/` ⇒ +1 и выше;
+  коммитится с задачей UI1). `SHA256SUMS` перегенерирован
+  (`node scripts/make-checksums.js`).
+
+**Как проверено.**
+- `scripts/verify.sh` → `VERIFY OK` (262 passed, qa-new-user 99/0).
+- `node scripts/qa-ux.mjs` → 252 PASS, 0 FAIL; **p9 = 0/28 FAIL** на обоих
+  вьюпортах. Скриншоты в `/tmp/pp-ux/1280-dashboard.png` и
+  `/tmp/pp-ux/1280-exam.png`.
+
 ## 2026-10-04 — SEC6: целостность установщика (SHA256SUMS)
 
 **Что сделано.**
