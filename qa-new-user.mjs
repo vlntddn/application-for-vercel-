@@ -61,6 +61,12 @@ function check(cond, name) {
 /* ---- CDP поверх WebSocket (stdlib WebSocket, Node >= 21) ---- */
 let ws, seq = 0;
 const pending = new Map();
+let fileChooserResolve = null;
+/** Ждём Page.fileChooserOpened (input[type=file].click()) до timeout; null если нет. */
+const waitForFileChooser = (timeout = 6000) => new Promise((resolve) => {
+  const t = setTimeout(() => { fileChooserResolve = null; resolve(null); }, timeout);
+  fileChooserResolve = (params) => { clearTimeout(t); fileChooserResolve = null; resolve(params); };
+});
 const send = (method, params = {}) => new Promise((resolve, reject) => {
   const id = ++seq;
   pending.set(id, { resolve, reject });
@@ -121,11 +127,19 @@ async function connectTab() {
     } else if (m.method === 'Network.responseReceived') {
       const s = m.params.response?.status;
       if (s === 404) http404s.push(m.params.request?.url || '?');
+    } else if (m.method === 'Page.fileChooserOpened' && fileChooserResolve) {
+      fileChooserResolve(m.params);
     }
   };
   await send('Page.enable');
   await send('Runtime.enable');
   await send('Network.enable');
+  // Export-кнопка делает <a download>.click() (blob:) — в headless скачивание
+  // без destinations работает не всегда, даём Chrome каталог (ST3).
+  await send('Page.setDownloadBehavior', {
+    behavior: 'allow', downloadPath: path.join(TEMP, 'downloads'),
+    eventsEnabled: true,
+  });
 }
 
 /** Клик по кнопке/ссылке, чей text совпадает (или содержит) label. */
@@ -577,6 +591,107 @@ async function main() {
   await tryWait(`document.getElementById('s-lang')?.value === 'en'`, 'language back to en', 10000);
   const profileLangBack = await fetch(`${APP}/api/progress`).then((r) => r.json()).then((p) => p.profile?.language);
   check(profileLangBack === 'en', `ST2: язык возвращён на en (progress.profile.language = ${profileLangBack})`);
+
+  /* ---- 9e. ST3: все ссылки и кнопки настроек работают ----
+   * mailto содержит адрес; Export создаёт файл с именем по дате и валидным
+   * содержимым (перехват <a download>.click + отмена revokeObjectURL, что
+   * позволяет дочитать blob ДО того, как его отзовут); Import принимает
+   * файл (CDP Page.fileChooserOpened + DOM.setFileInputFiles); Privacy
+   * открывает СВОЮ страницу (как ST1 для Credits); Reset просит
+   * подтверждения и при отказе ничего не стирает (confirm перехвачен). */
+  await send('Page.navigate', { url: `${APP}/#/settings` });
+  await waitFor(creditsReady, 'settings rendered for ST3 checks', 20000);
+  // mailto: адрес и тема в href (текст кнопки — uppercase через CSS).
+  const mailtoHref = await evaluate(`(() => { const a = Array.from(document.querySelectorAll('#view a')).find((x) => (x.getAttribute('href') || '').startsWith('mailto:')); return a ? a.getAttribute('href') : null; })()`);
+  check(!!mailtoHref && /mailto:hello@studiodudin\.com\?/.test(mailtoHref) && mailtoHref.includes('subject=Passo%20feedback'),
+    `ST3: Write to us — mailto с адресом и темой (${mailtoHref})`);
+  // Export: перехватываем anchor.click ДО revokeObjectURL, чтобы blob был
+  // ещё жив, и читаем имя файла + содержимое. Таймаут-защита, чтобы
+  // зависший onclick не подвесил CDP-команду.
+  const exportData = await evaluate(`new Promise((res) => {
+    let settled = false;
+    const restore = () => {
+      if (HTMLAnchorElement.prototype.click !== __patchClick) HTMLAnchorElement.prototype.click = __origClick;
+      URL.revokeObjectURL = __origRevoke;
+    };
+    const done = (v) => { if (!settled) { settled = true; res(v); } };
+    const __origClick = HTMLAnchorElement.prototype.click;
+    const __origRevoke = URL.revokeObjectURL;
+    // revoke держим noop, пока не дочитаем blob: exportProgressSnapshot сам
+    // дергает revokeObjectURL сразу после link.click() — если вернуть его
+    // раньше, blob умрёт до того, как fetch его прочитает.
+    URL.revokeObjectURL = () => {};
+    const __patchClick = function () {
+      const url = this.href, name = this.download || null;
+      HTMLAnchorElement.prototype.click = __origClick;
+      if (url.startsWith('blob:')) {
+        fetch(url).then((r) => r.json()).then(
+          (d) => { restore(); done({ name, json: d }); },
+          () => { restore(); done({ name, json: null }); },
+        );
+      } else { restore(); done({ name, json: null }); }
+    };
+    HTMLAnchorElement.prototype.click = __patchClick;
+    setTimeout(() => { restore(); done(null); }, 10000);
+    const b = Array.from(document.querySelectorAll('#view button')).find((x) => /EXPORT/i.test(x.innerText));
+    if (!b) { restore(); return done(null); }
+    b.click();
+  })`);
+  check(!!exportData && /^patente-pro-backup-\d{4}-\d{2}-\d{2}\.json$/.test(exportData.name),
+    `ST3: Export создаёт файл с именем по дате (${exportData ? exportData.name : 'нет файла'})`);
+  check(!!exportData && exportData.json?.app === 'patente-pro' && exportData.json?.profile?.name === 'QA',
+    'ST3: содержимое бэкапа — валидный JSON снапшота (app + profile.name=QA)');
+  check(await tryWait(`(() => { const l = document.querySelector('#view #last-backup'); return l && /\\d{4}/.test(l.textContent); })()`, 5000),
+    'ST3: после Export строка last-backup показывает дату');
+  // Import: клик → CDP ловит input[type=file] → setFileInputFiles.
+  // confirm() не должен блокировать: подменяем ДО setFileInputFiles
+  // (onchange → confirm).
+  const answersBeforeImport = Object.keys((await (await fetch(`${APP}/api/progress`)).json()).answers || {}).length;
+  const fcPromise = waitForFileChooser(8000);
+  const importClicked = await click('IMPORT');
+  check(importClicked, 'ST3: кнопка Import есть и отвечает');
+  const fc = await fcPromise;
+  check(!!fc, 'ST3: Import открывает file-chooser (input[type=file])');
+  if (fc) {
+    // Свой снапшот (не зависит от успешного чтения blob в Export): профиль и
+    // ответы = текущим, чтобы после импорта всё осталось на месте.
+    const cur = await (await fetch(`${APP}/api/progress`)).json();
+    const importSnapshot = { app: 'patente-pro', profile: cur.profile, answers: cur.answers || {} };
+    fs.writeFileSync(path.join(TEMP, 'import-backup.json'), JSON.stringify(importSnapshot));
+    await evaluate(`(() => { window.__origConfirm = window.confirm; window.confirm = () => true; return true; })()`);
+    await send('DOM.setFileInputFiles', {
+      files: [path.join(TEMP, 'import-backup.json')],
+      backendNodeId: fc.backendNodeId,
+    });
+    const imported = await tryWait(`(() => { const b = document.querySelector('#view #backup-actions'); return b && /IMPORTED/i.test(b.innerText); })()`, 20000);
+    check(imported, 'ST3: Import принимает файл — «IMPORTED … RESTORED» в панели');
+    const afterImport = await (await fetch(`${APP}/api/progress`)).json();
+    check(afterImport.profile?.name === 'QA' && Object.keys(afterImport.answers || {}).length === answersBeforeImport,
+      `ST3: после Import прогресс на месте (name=QA, ${answersBeforeImport} ответов)`);
+    await evaluate(`(() => { window.confirm = window.__origConfirm; delete window.__origConfirm; return true; })()`);
+  }
+  // Privacy: как ST1 для Credits — полная навигация, проверяем <title>/адрес.
+  await evaluate(`document.querySelector('#view a[href="/privacy.html"]')?.click() || false`);
+  await waitFor(`/Privacy/i.test(document.title)`, 'privacy doc loaded', 15000);
+  const privacyUrl = await evaluate(`location.pathname`);
+  check(privacyUrl === '/privacy.html', `ST3: клик Privacy → /privacy.html (${privacyUrl})`);
+  // Reset: перехватываем confirm → false, проверяем, что прогресс не стёрт.
+  await send('Page.navigate', { url: `${APP}/#/settings` });
+  await waitFor(creditsReady, 'settings rendered for ST3 reset check', 20000);
+  const beforeReset = await (await fetch(`${APP}/api/progress`)).json();
+  const beforeResetCount = Object.keys(beforeReset.answers || {}).length;
+  await evaluate(`(() => { window.__confirmCalled = false; window.__origConfirm = window.confirm; window.confirm = () => { window.__confirmCalled = true; return false; }; return true; })()`);
+  const resetClicked = await click('RESET');
+  check(resetClicked, 'ST3: кнопка Reset есть и отвечает');
+  const confirmAsked = await tryWait(`window.__confirmCalled === true`, 3000);
+  check(confirmAsked, 'ST3: Reset просит подтверждения (confirm вызван)');
+  const afterReset = await (await fetch(`${APP}/api/progress`)).json();
+  check(afterReset.profile?.name === 'QA' && Object.keys(afterReset.answers || {}).length === beforeResetCount,
+    `ST3: отказ в подтверждении → прогресс не стёрт (name=QA, ${beforeResetCount} ответов)`);
+  await evaluate(`(() => { window.confirm = window.__origConfirm; delete window.__origConfirm; return true; })()`);
+  // возврат на дашборд (Privacy вывел нас из SPA, Reset-экран — рабочий).
+  await evaluate(`location.hash = '#/'`);
+  await waitFor(`(document.getElementById('view')?.innerText||'').includes('CIAO, QA')`, 'back to dashboard after ST3', 30000);
 
   // Q2: 404-шторм. Раньше при каждой загрузке клиент просил 25
   // /data/translations/<slug>.json (и аналогично explanations), хотя файлов
