@@ -39,7 +39,7 @@
   --accent-soft: #ffe3d6;
   --ok: #006b7a;
   --ok-soft: #d9f1f4;
-  --on-ok: #002b31;
+  --on-ok: #ffffff; /* light theme: --ok is dark teal, text on it must be white (6:1) */
   --bad: #b3002c;
   --bad-soft: #ffe0e6;
   --warn: #ffd000;
