@@ -153,17 +153,69 @@ test('an imported backup cannot pollute Object.prototype', async () => {
   assert.equal({}.isAdmin, undefined, 'prototype polluted through profile');
 });
 
+test('prototype-method ids are rejected, not stored or shadowed', async () => {
+  const { migrateProgress } = await import('../public/js/domain/progress.js');
+  const { service } = makeService();
+
+  // recordAnswers: a key named after a prototype method is a 422, not a write.
+  for (const id of ['constructor', 'toString', 'hasOwnProperty', 'valueOf', '__proto__']) {
+    await assert.rejects(
+      () => service.recordAnswers({ answers: [{ id, correct: true }] }),
+      (err) => err instanceof ValidationError,
+      `recordAnswers(${id}) must be rejected`,
+    );
+  }
+  const snap = await service.snapshot();
+  assert.ok(!Object.hasOwn(snap.answers, 'constructor'), 'constructor never stored');
+  assert.equal({}.pwned, undefined);
+
+  // import: the same keys make the whole backup a 422.
+  for (const id of ['constructor', 'toString', 'hasOwnProperty', 'valueOf', '__proto__']) {
+    await assert.rejects(
+      () => service.importProgress({ answers: { [id]: { correct: 1, wrong: 0, lastCorrect: true } } }),
+      (err) => err instanceof ValidationError,
+      `importProgress answers.${id} must be rejected`,
+    );
+  }
+  for (const id of ['constructor', '__proto__']) {
+    await assert.rejects(
+      () => service.importProgress({ mistakes: [id] }),
+      (err) => err instanceof ValidationError,
+      `importProgress mistakes[${id}] must be rejected`,
+    );
+  }
+  assert.equal(Object.prototype.pwned, undefined, 'no pollution via import');
+
+  // migration: invalid keys are dropped, valid history is kept.
+  const migrated = migrateProgress({
+    answers: {
+      q1: { correct: 1, wrong: 1, lastCorrect: false },
+      constructor: { correct: 1, wrong: 0, lastCorrect: true },
+      toString: { correct: 1, wrong: 0, lastCorrect: true },
+      __proto__: { correct: 1, wrong: 0, lastCorrect: true, pwned: true },
+    },
+    mistakes: ['q1', 'constructor', 'valueOf'],
+    chapters: { ch1: { check: 3 }, prototype: { check: 9 } },
+  });
+  assert.ok(Object.hasOwn(migrated.answers, 'q1'), 'valid answer kept');
+  assert.ok(!Object.hasOwn(migrated.answers, 'constructor'), 'constructor dropped');
+  assert.ok(!Object.hasOwn(migrated.answers, 'toString'), 'toString dropped');
+  assert.deepEqual(migrated.chapters, { ch1: { check: 3 } }, 'chapters keeps only valid ids');
+  assert.deepEqual(migrated.mistakes, ['q1'], 'mistakes keep only valid, still-wrong ids');
+  assert.equal({}.pwned, undefined, 'no pollution via migration');
+});
+
 test('markup in imported values is stored verbatim, never interpreted', async () => {
   const { service } = makeService();
   const payload = '<img src=x onerror=alert(1)>';
   const snap = await service.importProgress({
     profile: { name: payload, onboarded: true },
-    answers: { [payload]: { correct: 0, wrong: 1, lastCorrect: false } },
-    mistakes: [payload],
+    answers: { q1: { correct: 0, wrong: 1, lastCorrect: false } },
+    mistakes: ['q1'],
   });
   // The domain layer stores strings as-is; the DOM layer renders text nodes.
   assert.equal(snap.profile.name, payload);
-  assert.deepEqual(snap.mistakes, [payload]);
+  assert.deepEqual(snap.mistakes, ['q1']);
 });
 
 test('oversized and malformed bodies are refused with a status, not a crash', async () => {

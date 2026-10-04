@@ -12,6 +12,11 @@ export const DAILY_GOAL_DEFAULT = 20;
 
 const NAME_MAX = 40;
 const ID_MAX = 120;
+// Question / chapter ids in the bank only ever use this alphabet. Anything
+// else — notably `constructor`, `prototype`, `__proto__`, `toString`,
+// `hasOwnProperty`, `valueOf` — is rejected, so a stored or imported key can
+// never reach a prototype method through an `obj[id]` access.
+const ID_RE = /^[A-Za-z0-9_-]{1,120}$/;
 // Import caps: generous enough for a full bank, small enough to bound work.
 const MAX_IMPORT_ANSWERS = 20000;
 const ACTIVE_DAYS_KEPT = 90;
@@ -78,11 +83,43 @@ function assertObject(body) {
   return body;
 }
 
+// Own-property test that is safe on prototype-less objects, unlike
+// `obj.hasOwnProperty` — a key literally named `hasOwnProperty` would
+// shadow the inherited method and throw.
+function hasOwn(obj, key) {
+  return Object.hasOwn(obj, key);
+}
+
+// Keys that name a method on Object.prototype. They pass the id alphabet
+// check (they are plain words), so they must be rejected explicitly: stored
+// under such a key they would shadow the inherited method on every later
+// `answers[id]` / `chapters[id]` read.
+const FORBIDDEN_IDS = new Set([
+  'constructor',
+  'prototype',
+  '__proto__',
+  'toString',
+  'valueOf',
+  'hasOwnProperty',
+  'isPrototypeOf',
+  'propertyIsEnumerable',
+  '__defineGetter__',
+  '__defineSetter__',
+  '__lookupGetter__',
+  '__lookupSetter__',
+]);
+
 function assertId(value, field) {
-  if (typeof value !== 'string' || !value || value.length > ID_MAX) {
-    throw new ValidationError(`"${field}" must be a non-empty string`);
+  if (!isSafeId(value)) {
+    throw new ValidationError(`"${field}" must be a non-empty id of letters, digits, "-" or "_"`);
   }
   return value;
+}
+
+// The migration counterpart of assertId: drop unsafe keys silently instead of
+// throwing, so a stray key in an old snapshot loses only that record.
+function isSafeId(value) {
+  return typeof value === 'string' && ID_RE.test(value) && !FORBIDDEN_IDS.has(value);
 }
 
 function assertDailyGoal(value, field = 'dailyGoal') {
@@ -288,7 +325,9 @@ export function migrateProgress(raw) {
 
   if (isPlainObject(raw.answers)) {
     for (const [id, rec] of Object.entries(raw.answers)) {
-      if (id === '__proto__' || !id || !isPlainObject(rec)) continue;
+      // A key outside the bank alphabet (constructor, __proto__, …) is dropped,
+      // not trusted, so it can never shadow a prototype method later on.
+      if (!isSafeId(id) || !isPlainObject(rec)) continue;
       const correct = Math.trunc(Number(rec.correct));
       const wrong = Math.trunc(Number(rec.wrong));
       if (!Number.isFinite(correct) || !Number.isFinite(wrong)) continue;
@@ -306,14 +345,14 @@ export function migrateProgress(raw) {
 
   for (const field of ['mistakes', 'theoryRead']) {
     if (!Array.isArray(raw[field])) continue;
-    out[field] = raw[field].filter((id) => typeof id === 'string' && id && id.length <= ID_MAX);
+    out[field] = raw[field].filter(isSafeId);
   }
   // A mistake only means something if the answer behind it is still wrong.
-  out.mistakes = out.mistakes.filter((id) => out.answers[id] && !out.answers[id].lastCorrect);
+  out.mistakes = out.mistakes.filter((id) => hasOwn(out.answers, id) && !out.answers[id].lastCorrect);
 
   if (isPlainObject(raw.chapters)) {
     for (const [id, rec] of Object.entries(raw.chapters)) {
-      if (id === '__proto__' || !id || id.length > ID_MAX || !isPlainObject(rec)) continue;
+      if (!isSafeId(id) || !isPlainObject(rec)) continue;
       const check = Math.trunc(Number(rec.check));
       if (Number.isFinite(check) && check >= 0 && check <= PATH_CHECK_QUESTIONS) {
         out.chapters[id] = { check };
@@ -505,7 +544,7 @@ export class ProgressService {
       if (typeof entry.correct !== 'boolean') {
         throw new ValidationError('"answers[].correct" must be a boolean');
       }
-      const rec = d.answers[id] ?? { correct: 0, wrong: 0, lastCorrect: false, last: '', streak: 0, due: '' };
+      const rec = hasOwn(d.answers, id) ? d.answers[id] : { correct: 0, wrong: 0, lastCorrect: false, last: '', streak: 0, due: '' };
       if (entry.correct) {
         rec.correct += 1;
         rec.streak = (Number.isInteger(rec.streak) ? rec.streak : 0) + 1;
@@ -570,7 +609,7 @@ export class ProgressService {
     }
     const data = this.store.data;
     if (!isPlainObject(data.chapters)) data.chapters = {};
-    const rec = isPlainObject(data.chapters[id]) ? data.chapters[id] : { check: 0 };
+    const rec = hasOwn(data.chapters, id) && isPlainObject(data.chapters[id]) ? data.chapters[id] : { check: 0 };
     rec.check = Math.max(rec.check, correct);
     data.chapters[id] = rec;
     await this.store.persist();
@@ -761,7 +800,7 @@ export class ProgressService {
     }
 
     // Mistakes must stay consistent with the answers they refer to.
-    clean.mistakes = clean.mistakes.filter((id) => clean.answers[id] && !clean.answers[id].lastCorrect);
+    clean.mistakes = clean.mistakes.filter((id) => hasOwn(clean.answers, id) && !clean.answers[id].lastCorrect);
 
     Object.assign(this.store.data, clean);
     await this.store.persist();
