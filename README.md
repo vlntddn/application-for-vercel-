@@ -67,6 +67,12 @@ cd application-for-vercel-; .\install.ps1
 > irm https://raw.githubusercontent.com/vlntddn/application-for-vercel-/main/install.ps1 | iex
 > ```
 
+After downloading, each installer verifies the archive against `SHA256SUMS`
+and refuses to install on any mismatch. This is why the one-command form only
+works while the repository is **public** — a private repo cannot be fetched
+this way at all. Whether to publish the repo (and its question bank) is the
+owner's decision.
+
 Then launch it from your applications menu, or:
 
 ```bash

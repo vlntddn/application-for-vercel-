@@ -67,6 +67,27 @@ try {
   if (-not (Test-Path (Join-Path $src 'server\index.js'))) {
     Die 'Download looks incomplete (server\index.js missing).'
   }
+
+  # ------------------------------------------------- Integrity: SHA256SUMS
+  # The table is part of the ref we just downloaded, so it describes exactly
+  # these files. Refs that predate SHA256SUMS install without verification.
+  if (Test-Path (Join-Path $src 'SHA256SUMS')) {
+    Step "Verifying checksums (SHA256SUMS from $Ref)"
+    $bad = @()
+    foreach ($line in Get-Content (Join-Path $src 'SHA256SUMS')) {
+      if (-not $line -or $line.StartsWith('#')) { continue }
+      $parts = $line -split '\s+', 2
+      $want = $parts[0].ToLower(); $rel = $parts[1]
+      $full = Join-Path $src $rel
+      if (-not (Test-Path $full)) { $bad += "missing: $rel"; continue }
+      $got = (Get-FileHash $full -Algorithm SHA256).Hash.ToLower()
+      if ($got -ne $want) { $bad += "mismatch: $rel" }
+    }
+    if ($bad.Count -gt 0) {
+      Die ("Integrity check FAILED for ref '{0}': {1}" -f $Ref, ($bad -join ', '))
+    }
+    Write-Host '    sha256 of every listed file matches SHA256SUMS - ok'
+  }
   if (-not (Test-Path (Join-Path $src 'bin\patente-pro.js'))) {
     Warn "Ref '$Ref' has no bin\patente-pro.js - it predates the desktop launcher."
     Write-Host '  Install a ref that contains it, e.g. -Ref claude/vibrant-gates-b12x31'

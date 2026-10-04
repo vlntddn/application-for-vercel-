@@ -69,7 +69,10 @@ trap cleanup EXIT
 
 step "Downloading Patente Pro ($REF)"
 SRC="$TMP_DIR/src"
-if command -v git >/dev/null 2>&1; then
+if [ -n "${PP_SRC:-}" ]; then
+  # Local copy (installing from a checkout): no network, no self-download.
+  rm -rf "$SRC"; cp -R "$PP_SRC" "$SRC"
+elif command -v git >/dev/null 2>&1; then
   git clone --depth 1 --branch "$REF" --quiet \
     "https://github.com/$REPO_SLUG.git" "$SRC" \
     || die "Could not clone $REPO_SLUG at ref '$REF'."
@@ -87,6 +90,29 @@ if [ ! -f "$SRC/server/index.js" ] || [ ! -f "$SRC/bin/patente-pro.js" ]; then
   say  "  Pick a ref that does, for example:"
   say  "    --ref claude/vibrant-gates-b12x31"
   exit 1
+fi
+
+# ------------------------------------------------- Integrity: SHA256SUMS
+# The table is part of the ref we just downloaded, so it describes exactly
+# these files. Refs that predate SHA256SUMS install without verification.
+if [ -f "$SRC/SHA256SUMS" ]; then
+  step "Verifying checksums (SHA256SUMS from $REF)"
+  HASH=""
+  if command -v sha256sum >/dev/null 2>&1; then HASH="sha256sum"
+  elif command -v shasum >/dev/null 2>&1; then HASH="shasum -a 256"
+  else die "Need sha256sum or shasum to verify the download."
+  fi
+  CHECKSUMS_BAD=""
+  while read -r want rel _; do
+    case "$rel" in ''|\#*) continue ;; esac
+    [ -f "$SRC/$rel" ] || { CHECKSUMS_BAD="$CHECKSUMS_BAD missing: $rel"; continue; }
+    got="$($HASH < "$SRC/$rel" | awk '{print $1}' | tr 'A-F' 'a-f')"
+    [ "$got" = "$want" ] || CHECKSUMS_BAD="$CHECKSUMS_BAD mismatch: $rel"
+  done < "$SRC/SHA256SUMS"
+  if [ -n "$CHECKSUMS_BAD" ]; then
+    die "Integrity check FAILED for ref '$REF' ($CHECKSUMS_BAD)."
+  fi
+  say "    sha256 of every listed file matches SHA256SUMS — ok"
 fi
 
 # -------------------------------------------------------------------- Install
