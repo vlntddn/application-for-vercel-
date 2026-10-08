@@ -5,8 +5,9 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 
 import { buildSignalWords, loadQuestions, normalize } from '../scripts/build-insights.mjs';
+import { fileURLToPath } from 'node:url';
 
-const root = path.join(import.meta.dirname, '..');
+const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(root, 'data', 'insights', 'signal-words.json');
 
 const questions = loadQuestions();

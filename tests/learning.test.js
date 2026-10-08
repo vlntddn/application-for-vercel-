@@ -27,12 +27,13 @@ import {
   EXAM_READINESS_MIN_ANSWERS,
 } from '../public/js/domain/learning.js';
 import { CHAPTER_CATEGORY } from '../public/js/theory-map.js';
+import { fileURLToPath } from 'node:url';
 
 const manifest = JSON.parse(
-  fs.readFileSync(path.join(import.meta.dirname, '..', 'data', 'manifest.json'), 'utf8'),
+  fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data', 'manifest.json'), 'utf8'),
 );
 const lessons = JSON.parse(
-  fs.readFileSync(path.join(import.meta.dirname, '..', 'data', 'lessons.json'), 'utf8'),
+  fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data', 'lessons.json'), 'utf8'),
 );
 
 /** Deterministic PRNG (mulberry32) — stable order across runs/Node versions. */

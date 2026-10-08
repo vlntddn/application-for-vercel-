@@ -14,8 +14,9 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { loadQuestions } from './build-insights.mjs';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = path.join(import.meta.dirname, '..');
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const lessons = JSON.parse(
   fs.readFileSync(path.join(ROOT, 'data', 'lessons.json'), 'utf8'),
 );
