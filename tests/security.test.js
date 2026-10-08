@@ -248,7 +248,7 @@ test('the service worker shell covers every frontend script', () => {
   // A new public/js module that is not in the SHELL list fails offline:
   // the first cold start on a phone without network would crash boot.
   const sw = fs.readFileSync(path.join(ROOT, 'public', 'sw.js'), 'utf8');
-  const shell = sw.slice(sw.indexOf('const SHELL'), sw.indexOf('];', sw.indexOf('const SHELL')));
+  const shell = sw.slice(sw.indexOf('const SHELL = ['), sw.indexOf('];', sw.indexOf('const SHELL = [')));
   const publicJs = fs
     .readdirSync(path.join(ROOT, 'public', 'js'), { recursive: true })
     .filter((name) => String(name).endsWith('.js'));
@@ -891,5 +891,102 @@ test('S3.1 new-version strings exist in every language', async () => {
     assert.ok(MESSAGES[lang]['nv.title'].trim().length > 0);
     assert.equal(typeof MESSAGES[lang]['nv.reload'], 'string');
     assert.ok(MESSAGES[lang]['nv.reload'].trim().length > 0);
+  }
+});
+
+/* ---------------- SEC1: cross-site requests to the local server ---------------- */
+
+import { spawn } from 'node:child_process';
+import http from 'node:http';
+import { allowedHosts, checkRequest } from '../server/request-guard.js';
+
+test('request guard: loopback hosts pass, foreign hosts get 421 (V2)', () => {
+  const hosts = allowedHosts('127.0.0.1', 3000);
+  for (const host of ['127.0.0.1:3000', 'localhost:3000', '[::1]:3000', 'LOCALHOST:3000']) {
+    assert.equal(checkRequest({ method: 'GET', headers: { host } }, hosts), null, host);
+  }
+  for (const host of ['evil.example', 'evil.example:3000', '127.0.0.1:3001', undefined]) {
+    assert.equal(checkRequest({ method: 'GET', headers: { host } }, hosts)?.status, 421, String(host));
+  }
+  assert.ok(allowedHosts('192.168.1.5', 3000).has('192.168.1.5:3000'));
+  assert.ok(!allowedHosts('0.0.0.0', 3000).has('0.0.0.0:3000'));
+});
+
+test('request guard: mutations need a matching Origin and a JSON body (V1)', () => {
+  const hosts = allowedHosts('127.0.0.1', 3000);
+  const req = (method, extra = {}) => ({ method, headers: { host: '127.0.0.1:3000', ...extra } });
+  const json = { 'content-type': 'application/json' };
+  assert.equal(checkRequest(req('POST', json), hosts), null);
+  assert.equal(checkRequest(req('POST', { 'content-type': 'application/json; charset=utf-8' }), hosts), null);
+  assert.equal(checkRequest(req('POST', { ...json, origin: 'http://127.0.0.1:3000' }), hosts), null);
+  assert.equal(checkRequest(req('POST', { ...json, origin: 'https://evil.example' }), hosts)?.status, 403);
+  assert.equal(checkRequest(req('POST', { ...json, origin: 'null' }), hosts)?.status, 403);
+  for (const type of ['text/plain', 'application/x-www-form-urlencoded', 'multipart/form-data', undefined]) {
+    assert.equal(checkRequest(req('POST', { 'content-type': type }), hosts)?.status, 415, String(type));
+  }
+  assert.equal(checkRequest(req('PUT', { 'content-type': 'text/plain' }), hosts)?.status, 415);
+  assert.equal(checkRequest(req('DELETE'), hosts), null);
+  assert.equal(checkRequest(req('DELETE', { origin: 'https://evil.example' }), hosts)?.status, 403);
+});
+
+function startServer() {
+  const storage = fs.mkdtempSync(path.join(os.tmpdir(), 'patente-sec1-'));
+  const child = spawn(process.execPath, [path.join(ROOT, 'server', 'index.js')], {
+    env: { ...process.env, PORT: '0', HOST: '127.0.0.1', STORAGE_DIR: storage },
+    stdio: ['ignore', 'pipe', 'pipe'],
+  });
+  return new Promise((resolve, reject) => {
+    let out = '';
+    child.stdout.on('data', (d) => {
+      out += d;
+      const m = out.match(/running at http:\/\/127\.0\.0\.1:(\d+)/);
+      if (m) resolve({ child, port: Number(m[1]) });
+    });
+    child.on('exit', (code) => reject(new Error(`server exited ${code}`)));
+  });
+}
+
+function rawRequest(port, { method = 'GET', path: p = '/api/health', headers = {}, body } = {}) {
+  return new Promise((resolve, reject) => {
+    const req = http.request({ host: '127.0.0.1', port, method, path: p, headers }, (res) => {
+      res.resume();
+      res.on('end', () => resolve(res.statusCode));
+    });
+    req.on('error', reject);
+    if (body) req.write(body);
+    req.end();
+  });
+}
+
+test('local server refuses the cross-site attacks from the audit (SEC1)', async () => {
+  const { child, port } = await startServer();
+  try {
+    const host = `127.0.0.1:${port}`;
+    const backup = JSON.stringify({ answers: {}, profile: { name: 'pwned' } });
+    // V1: a foreign page posting text/plain (a "simple" request, no preflight).
+    assert.equal(await rawRequest(port, {
+      method: 'POST', path: '/api/progress/import', body: backup,
+      headers: { host, 'content-type': 'text/plain', origin: 'https://evil.example' },
+    }), 403);
+    assert.equal(await rawRequest(port, {
+      method: 'POST', path: '/api/progress/import', body: backup,
+      headers: { host, 'content-type': 'text/plain' },
+    }), 415);
+    // V2: DNS rebinding keeps the attacker's name in Host.
+    assert.equal(await rawRequest(port, { headers: { host: 'evil.example' } }), 421);
+    assert.equal(await rawRequest(port, {
+      method: 'POST', path: '/api/progress/import', body: backup,
+      headers: { host: `evil.example:${port}`, 'content-type': 'application/json' },
+    }), 421);
+    // The app itself still works.
+    assert.equal(await rawRequest(port, { headers: { host } }), 200);
+    assert.equal(await rawRequest(port, { headers: { host: `localhost:${port}` } }), 200);
+    assert.equal(await rawRequest(port, {
+      method: 'PUT', path: '/api/progress/profile', body: JSON.stringify({ name: 'ok' }),
+      headers: { host, 'content-type': 'application/json', origin: `http://${host}` },
+    }), 200);
+    assert.equal(await rawRequest(port, { method: 'DELETE', path: '/api/progress', headers: { host } }), 200);
+  } finally {
+    child.kill();
   }
 });
