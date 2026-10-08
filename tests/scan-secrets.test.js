@@ -22,6 +22,7 @@ test('secret scan recognises each kind of credential (SEC4)', () => {
 
 test('secret scan stays quiet on ordinary text and on its own patterns', () => {
   assert.deepEqual(findSecrets('ghp_ short, sk-1, task-list, AKIA lower'), []);
+  assert.deepEqual(findSecrets('"mask-image-linear-from-pos":[{"mask-linear"}]'), []);
   for (const file of ['scripts/scan-secrets.mjs', 'scripts/verify.sh', 'docs/SECURITY-AUDIT-2026-10-04.md']) {
     assert.deepEqual(findSecrets(fs.readFileSync(path.join(ROOT, file), 'utf8')), [], file);
   }
@@ -54,4 +55,21 @@ test('the scanner CLI fails on a planted token and names only the file', () => {
   assert.match(bad.out, /leak\.txt: looks like a GitHub token/);
   assert.ok(!bad.out.includes(token), 'the secret itself must not be printed');
   assert.equal(run(clean).code, 0);
+});
+
+test('the proposed CI is valid-looking YAML with read-only permissions (SEC5)', () => {
+  const yml = fs.readFileSync(path.join(ROOT, 'docs', 'proposed-workflows', 'ci.yml'), 'utf8');
+  const lines = yml.split('\n');
+  // Simple structural parse: spaces only, even indents, no tabs.
+  for (const [i, line] of lines.entries()) {
+    assert.ok(!line.includes('\t'), `tab on line ${i + 1}`);
+    const indent = line.match(/^ */)[0].length;
+    assert.equal(indent % 2, 0, `odd indent on line ${i + 1}`);
+  }
+  assert.ok(lines.includes('permissions:'), 'top-level permissions block');
+  assert.ok(lines.includes('  contents: read'));
+  for (const job of ['test', 'smoke', 'e2e']) assert.ok(lines.includes(`  ${job}:`), job);
+  assert.match(yml, /scripts\/scan-secrets\.mjs/);
+  assert.match(yml, /qa-ux\.mjs --strict/);
+  assert.ok(fs.existsSync(path.join(ROOT, 'docs', 'proposed-workflows', 'README.md')));
 });

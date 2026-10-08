@@ -14,7 +14,8 @@ import { fileURLToPath } from 'node:url';
 export const SECRET_PATTERNS = [
   ['GitHub token', /gh[pousr]_[A-Za-z0-9]{20,}/],
   ['GitHub fine-grained token', /github_pat_[A-Za-z0-9_]{20,}/],
-  ['API key (sk-)', /sk-[A-Za-z0-9_-]{20,}/],
+  // Not preceded by a letter: CSS like "mask-image-linear-..." is not a key.
+  ['API key (sk-)', /(?<![A-Za-z0-9-])sk-[A-Za-z0-9_-]{20,}/],
   ['AWS access key', /AKIA[0-9A-Z]{16}/],
   ['private key', /-----BEGIN [A-Z ]*PRIVATE KEY-----/],
 ];
