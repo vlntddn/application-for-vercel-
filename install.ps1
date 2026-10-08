@@ -49,7 +49,8 @@ try {
   Step "Downloading Patente Pro ($Ref)"
   $git = Get-Command git -ErrorAction SilentlyContinue
   if ($git) {
-    & git clone --depth 1 --branch $Ref --quiet "https://github.com/$Repo.git" $src
+    # autocrlf off: CRLF checkouts would not match SHA256SUMS.
+    & git -c core.autocrlf=false clone --depth 1 --branch $Ref --quiet "https://github.com/$Repo.git" $src
     if ($LASTEXITCODE -ne 0) { Die "Could not clone $Repo at ref '$Ref'." }
     Remove-Item (Join-Path $src '.git') -Recurse -Force -ErrorAction SilentlyContinue
   } else {
@@ -63,6 +64,22 @@ try {
     $extracted = Get-ChildItem -Path $tmp -Directory | Where-Object { $_.Name -ne 'src' } | Select-Object -First 1
     if (-not $extracted) { Die 'Archive did not contain the expected folder.' }
     Move-Item $extracted.FullName $src
+  }
+  # Integrity (SEC6): a release tag carries SHA256SUMS; any mismatch aborts.
+  $sums = Join-Path $src 'SHA256SUMS'
+  if (Test-Path $sums) {
+    Step 'Verifying checksums'
+    foreach ($line in Get-Content $sums) {
+      if ($line -notmatch '^([0-9a-f]{64})  (.+)$') { continue }
+      $file = Join-Path $src ($Matches[2] -replace '/', '\')
+      $actual = if (Test-Path $file) { (Get-FileHash -Algorithm SHA256 -Path $file).Hash.ToLower() } else { '' }
+      if ($actual -ne $Matches[1]) {
+        Die "Checksum mismatch in $($Matches[2]): the download is damaged or was altered. Nothing was installed."
+      }
+    }
+    Write-Host '    all files match SHA256SUMS'
+  } else {
+    Write-Host "    No SHA256SUMS in '$Ref' (only release tags have one): integrity check skipped."
   }
   if (-not (Test-Path (Join-Path $src 'server\index.js'))) {
     Die 'Download looks incomplete (server\index.js missing).'
