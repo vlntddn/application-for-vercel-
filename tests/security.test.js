@@ -155,14 +155,14 @@ test('an imported backup cannot pollute Object.prototype', async () => {
 test('markup in imported values is stored verbatim, never interpreted', async () => {
   const { service } = makeService();
   const payload = '<img src=x onerror=alert(1)>';
-  const snap = await service.importProgress({
-    profile: { name: payload, onboarded: true },
-    answers: { [payload]: { correct: 0, wrong: 1, lastCorrect: false } },
-    mistakes: [payload],
-  });
+  const snap = await service.importProgress({ profile: { name: payload, onboarded: true } });
   // The domain layer stores strings as-is; the DOM layer renders text nodes.
   assert.equal(snap.profile.name, payload);
-  assert.deepEqual(snap.mistakes, [payload]);
+  // Ids are stricter (SEC2): markup is not a question id, so it is refused.
+  await assert.rejects(() => service.importProgress({
+    answers: { [payload]: { correct: 0, wrong: 1, lastCorrect: false } },
+  }), ValidationError);
+  await assert.rejects(() => service.importProgress({ mistakes: [payload] }), ValidationError);
 });
 
 test('oversized and malformed bodies are refused with a status, not a crash', async () => {
@@ -191,11 +191,90 @@ test('oversized and malformed bodies are refused with a status, not a crash', as
 test('import caps the amount of work a single file can request', async () => {
   const { service } = makeService();
   const answers = {};
-  for (let i = 0; i < 20001; i++) answers[`q-${i}`] = { correct: 1, wrong: 0, lastCorrect: true };
+  for (let i = 0; i < 8001; i++) answers[`q-${i}`] = { correct: 1, wrong: 0, lastCorrect: true };
   await assert.rejects(() => service.importProgress({ answers }), ValidationError);
 
-  const exams = Array.from({ length: 2001 }, () => ({ total: 30, errors: 0 }));
+  const exams = Array.from({ length: 401 }, () => ({ total: 30, errors: 0 }));
   await assert.rejects(() => service.importProgress({ exams }), ValidationError);
+
+  const dailyAnswers = {};
+  for (let i = 0; i < 401; i++) dailyAnswers[new Date(Date.UTC(2020, 0, 1 + i)).toISOString().slice(0, 10)] = 1;
+  await assert.rejects(() => service.importProgress({ dailyAnswers }), ValidationError);
+
+  // Exactly at the caps is still a valid backup.
+  delete answers['q-8000'];
+  const snap = await service.importProgress({ answers, exams: exams.slice(1) });
+  assert.equal(Object.keys(snap.answers).length, 8000);
+  assert.equal(snap.exams.length, 400);
+});
+
+/* ---------------- SEC2 / SEC3: safe ids and bounded growth ---------------- */
+
+const BUILTIN_NAMES = ['constructor', 'toString', 'hasOwnProperty', 'valueOf', '__proto__'];
+
+test('answers keyed by built-in names are refused and never touch Object (V3)', async () => {
+  const { service } = makeService();
+  for (const id of BUILTIN_NAMES) {
+    await assert.rejects(() => service.recordAnswers({ answers: [{ id, correct: true }] }), ValidationError, id);
+    await assert.rejects(() => service.recordChapterCheck({ chapterId: id, correct: 1 }), ValidationError, id);
+    await assert.rejects(() => service.markTheoryRead({ chapterId: id }), ValidationError, id);
+    await assert.rejects(
+      () => service.importProgress({ answers: JSON.parse(`{"${id}":{"correct":1,"wrong":0,"lastCorrect":true}}`) }),
+      ValidationError, id,
+    );
+  }
+  assert.equal(Object.correct, undefined);
+  assert.equal(Object.prototype.correct, undefined);
+  assert.equal(Function.prototype.correct, undefined);
+  for (const id of ['abc', 'q-1_2', 'A'.repeat(120)]) {
+    await service.recordAnswers({ answers: [{ id, correct: true }] });
+  }
+  for (const id of ['', 'a b', 'a/b', 'A'.repeat(121), 42]) {
+    await assert.rejects(() => service.recordAnswers({ answers: [{ id, correct: true }] }), ValidationError, String(id));
+  }
+});
+
+test('every id in the question bank passes the id rule', async () => {
+  const { isSafeId } = await import('../public/js/domain/progress.js');
+  const dir = path.join(ROOT, 'data', 'questions');
+  let count = 0;
+  for (const name of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
+    const data = JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8'));
+    const list = Array.isArray(data) ? data : data.questions ?? Object.values(data).find(Array.isArray);
+    for (const q of list) {
+      assert.ok(isSafeId(q.id), `${name}: ${q.id}`);
+      count += 1;
+    }
+  }
+  assert.ok(count > 7000);
+});
+
+test('stored progress with unsafe keys loads with those keys dropped', async () => {
+  const { migrateProgress } = await import('../public/js/domain/progress.js');
+  const raw = JSON.parse(`{
+    "answers": { "constructor": {"correct":1,"wrong":0}, "q-ok": {"correct":1,"wrong":0,"lastCorrect":true} },
+    "chapters": { "toString": {"check":1}, "ch1": {"check":2} },
+    "theoryRead": ["valueOf", "ch1"],
+    "mistakes": ["hasOwnProperty"]
+  }`);
+  const out = migrateProgress(raw);
+  assert.deepEqual(Object.keys(out.answers), ['q-ok']);
+  assert.deepEqual(Object.keys(out.chapters), ['ch1']);
+  assert.deepEqual(out.theoryRead, ['ch1']);
+  assert.deepEqual(out.mistakes, []);
+});
+
+test('live progress cannot grow past its caps (SEC3)', async () => {
+  const { service, store } = makeService();
+  const { MAX_ANSWERS, MAX_EXAMS } = await import('../public/js/domain/progress.js');
+  for (let i = 0; i < MAX_ANSWERS; i++) store.data.answers[`q-${i}`] = { correct: 1, wrong: 0, lastCorrect: true, last: '', streak: 1, due: '' };
+  await assert.rejects(() => service.recordAnswers({ answers: [{ id: 'one-more', correct: true }] }), ValidationError);
+  // An already answered question can still be answered again.
+  await service.recordAnswers({ answers: [{ id: 'q-1', correct: false }] });
+  assert.equal(store.data.answers['q-1'].wrong, 1);
+
+  for (let i = 0; i < MAX_EXAMS + 5; i++) await service.recordExam({ total: 30, errors: i % 4 });
+  assert.equal(store.data.exams.length, MAX_EXAMS);
 });
 
 /* ---------------- the Android wrapper ---------------- */
