@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 
 import {
   hasNumber,
@@ -86,7 +87,7 @@ test('numberSpans: first number token is marked, original text kept', () => {
 });
 
 test('data/insights/numbers.json: committed file = script output (файл = скрипт)', () => {
-  const repoRoot = path.join(import.meta.dirname, '..');
+  const repoRoot = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
   const file = path.join(repoRoot, 'data', 'insights', 'numbers.json');
   const before = fs.readFileSync(file, 'utf8');
   // The build is deterministic (contentHash-stamped): re-running it must not
@@ -97,11 +98,11 @@ test('data/insights/numbers.json: committed file = script output (файл = с�
 });
 
 test('data/insights/numbers.json: build output is consistent with lessons.json', () => {
-  const file = path.join(import.meta.dirname, '..', 'data', 'insights', 'numbers.json');
+  const file = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data', 'insights', 'numbers.json');
   assert.ok(fs.existsSync(file), 'numbers.json must be committed');
   const data = JSON.parse(fs.readFileSync(file, 'utf8'));
   const lessons = JSON.parse(
-    fs.readFileSync(path.join(import.meta.dirname, '..', 'data', 'lessons.json'), 'utf8'),
+    fs.readFileSync(path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data', 'lessons.json'), 'utf8'),
   );
   // every table row belongs to a real chapter and keeps its fact
   for (const row of data.table) {

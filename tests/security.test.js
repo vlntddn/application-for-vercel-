@@ -35,6 +35,13 @@ function readViewsSource() {
   return parts.join('\n');
 }
 
+// ST2: the settings screen is split into views/settings/*.js modules.
+function readSettingsSource() {
+  const dir = path.join(ROOT, 'public', 'js', 'views', 'settings');
+  return fs.readdirSync(dir).sort().filter((n) => n.endsWith('.js'))
+    .map((n) => fs.readFileSync(path.join(dir, n), 'utf8')).join('\n');
+}
+
 /* ---------------- no data can leave the device ---------------- */
 
 test('the frontend never references an external origin', () => {
@@ -155,14 +162,14 @@ test('an imported backup cannot pollute Object.prototype', async () => {
 test('markup in imported values is stored verbatim, never interpreted', async () => {
   const { service } = makeService();
   const payload = '<img src=x onerror=alert(1)>';
-  const snap = await service.importProgress({
-    profile: { name: payload, onboarded: true },
-    answers: { [payload]: { correct: 0, wrong: 1, lastCorrect: false } },
-    mistakes: [payload],
-  });
+  const snap = await service.importProgress({ profile: { name: payload, onboarded: true } });
   // The domain layer stores strings as-is; the DOM layer renders text nodes.
   assert.equal(snap.profile.name, payload);
-  assert.deepEqual(snap.mistakes, [payload]);
+  // Ids are stricter (SEC2): markup is not a question id, so it is refused.
+  await assert.rejects(() => service.importProgress({
+    answers: { [payload]: { correct: 0, wrong: 1, lastCorrect: false } },
+  }), ValidationError);
+  await assert.rejects(() => service.importProgress({ mistakes: [payload] }), ValidationError);
 });
 
 test('oversized and malformed bodies are refused with a status, not a crash', async () => {
@@ -191,11 +198,90 @@ test('oversized and malformed bodies are refused with a status, not a crash', as
 test('import caps the amount of work a single file can request', async () => {
   const { service } = makeService();
   const answers = {};
-  for (let i = 0; i < 20001; i++) answers[`q-${i}`] = { correct: 1, wrong: 0, lastCorrect: true };
+  for (let i = 0; i < 8001; i++) answers[`q-${i}`] = { correct: 1, wrong: 0, lastCorrect: true };
   await assert.rejects(() => service.importProgress({ answers }), ValidationError);
 
-  const exams = Array.from({ length: 2001 }, () => ({ total: 30, errors: 0 }));
+  const exams = Array.from({ length: 401 }, () => ({ total: 30, errors: 0 }));
   await assert.rejects(() => service.importProgress({ exams }), ValidationError);
+
+  const dailyAnswers = {};
+  for (let i = 0; i < 401; i++) dailyAnswers[new Date(Date.UTC(2020, 0, 1 + i)).toISOString().slice(0, 10)] = 1;
+  await assert.rejects(() => service.importProgress({ dailyAnswers }), ValidationError);
+
+  // Exactly at the caps is still a valid backup.
+  delete answers['q-8000'];
+  const snap = await service.importProgress({ answers, exams: exams.slice(1) });
+  assert.equal(Object.keys(snap.answers).length, 8000);
+  assert.equal(snap.exams.length, 400);
+});
+
+/* ---------------- SEC2 / SEC3: safe ids and bounded growth ---------------- */
+
+const BUILTIN_NAMES = ['constructor', 'toString', 'hasOwnProperty', 'valueOf', '__proto__'];
+
+test('answers keyed by built-in names are refused and never touch Object (V3)', async () => {
+  const { service } = makeService();
+  for (const id of BUILTIN_NAMES) {
+    await assert.rejects(() => service.recordAnswers({ answers: [{ id, correct: true }] }), ValidationError, id);
+    await assert.rejects(() => service.recordChapterCheck({ chapterId: id, correct: 1 }), ValidationError, id);
+    await assert.rejects(() => service.markTheoryRead({ chapterId: id }), ValidationError, id);
+    await assert.rejects(
+      () => service.importProgress({ answers: JSON.parse(`{"${id}":{"correct":1,"wrong":0,"lastCorrect":true}}`) }),
+      ValidationError, id,
+    );
+  }
+  assert.equal(Object.correct, undefined);
+  assert.equal(Object.prototype.correct, undefined);
+  assert.equal(Function.prototype.correct, undefined);
+  for (const id of ['abc', 'q-1_2', 'A'.repeat(120)]) {
+    await service.recordAnswers({ answers: [{ id, correct: true }] });
+  }
+  for (const id of ['', 'a b', 'a/b', 'A'.repeat(121), 42]) {
+    await assert.rejects(() => service.recordAnswers({ answers: [{ id, correct: true }] }), ValidationError, String(id));
+  }
+});
+
+test('every id in the question bank passes the id rule', async () => {
+  const { isSafeId } = await import('../public/js/domain/progress.js');
+  const dir = path.join(ROOT, 'data', 'questions');
+  let count = 0;
+  for (const name of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
+    const data = JSON.parse(fs.readFileSync(path.join(dir, name), 'utf8'));
+    const list = Array.isArray(data) ? data : data.questions ?? Object.values(data).find(Array.isArray);
+    for (const q of list) {
+      assert.ok(isSafeId(q.id), `${name}: ${q.id}`);
+      count += 1;
+    }
+  }
+  assert.ok(count > 7000);
+});
+
+test('stored progress with unsafe keys loads with those keys dropped', async () => {
+  const { migrateProgress } = await import('../public/js/domain/progress.js');
+  const raw = JSON.parse(`{
+    "answers": { "constructor": {"correct":1,"wrong":0}, "q-ok": {"correct":1,"wrong":0,"lastCorrect":true} },
+    "chapters": { "toString": {"check":1}, "ch1": {"check":2} },
+    "theoryRead": ["valueOf", "ch1"],
+    "mistakes": ["hasOwnProperty"]
+  }`);
+  const out = migrateProgress(raw);
+  assert.deepEqual(Object.keys(out.answers), ['q-ok']);
+  assert.deepEqual(Object.keys(out.chapters), ['ch1']);
+  assert.deepEqual(out.theoryRead, ['ch1']);
+  assert.deepEqual(out.mistakes, []);
+});
+
+test('live progress cannot grow past its caps (SEC3)', async () => {
+  const { service, store } = makeService();
+  const { MAX_ANSWERS, MAX_EXAMS } = await import('../public/js/domain/progress.js');
+  for (let i = 0; i < MAX_ANSWERS; i++) store.data.answers[`q-${i}`] = { correct: 1, wrong: 0, lastCorrect: true, last: '', streak: 1, due: '' };
+  await assert.rejects(() => service.recordAnswers({ answers: [{ id: 'one-more', correct: true }] }), ValidationError);
+  // An already answered question can still be answered again.
+  await service.recordAnswers({ answers: [{ id: 'q-1', correct: false }] });
+  assert.equal(store.data.answers['q-1'].wrong, 1);
+
+  for (let i = 0; i < MAX_EXAMS + 5; i++) await service.recordExam({ total: 30, errors: i % 4 });
+  assert.equal(store.data.exams.length, MAX_EXAMS);
 });
 
 /* ---------------- the Android wrapper ---------------- */
@@ -248,7 +334,7 @@ test('the service worker shell covers every frontend script', () => {
   // A new public/js module that is not in the SHELL list fails offline:
   // the first cold start on a phone without network would crash boot.
   const sw = fs.readFileSync(path.join(ROOT, 'public', 'sw.js'), 'utf8');
-  const shell = sw.slice(sw.indexOf('const SHELL'), sw.indexOf('];', sw.indexOf('const SHELL')));
+  const shell = sw.slice(sw.indexOf('const SHELL = ['), sw.indexOf('];', sw.indexOf('const SHELL = [')));
   const publicJs = fs
     .readdirSync(path.join(ROOT, 'public', 'js'), { recursive: true })
     .filter((name) => String(name).endsWith('.js'));
@@ -392,7 +478,7 @@ test('the settings screen is localized: no hardcoded UI copy (Q4.2)', () => {
   // Q4.2 slice 6: settings copy lives in i18n.js under st.* keys; the view
   // only references keys, so ru/zh switch in without touching settings.js.
   const views = readViewsSource();
-  const settings = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'settings.js'), 'utf8');
+  const settings = readSettingsSource();
   assert.match(settings, /t\('st\.title'\)/, 'page title must come from i18n');
   assert.match(settings, /t\('st\.exportBackup'\)/, 'export button must come from i18n');
   assert.match(settings, /t\('st\.resetConfirm'\)/, 'reset confirm must come from i18n');
@@ -456,24 +542,22 @@ test('the signal drill screen is localized: no hardcoded UI copy (Q4.2)', () => 
   assert.match(views, /Report a problem with this question/);
 });
 
-test('settings offers an install path on phones', () => {
-  const views = readViewsSource();
-  assert.match(views, /renderInstallPanel/);
+test('settings offers an install path on phones', async () => {
+  const settings = readSettingsSource();
+  assert.match(settings, /installMode\(\)/);
+  assert.match(settings, /st\.installIos/);
   const install = fs.readFileSync(path.join(ROOT, 'public', 'js', 'install.js'), 'utf8');
   // The real install mechanism on Android is beforeinstallprompt.
   assert.match(install, /beforeinstallprompt/);
   // iOS has no prompt API: written instructions are the only path.
-  assert.match(install, /ADD TO HOME SCREEN/i);
+  const { MESSAGES } = await import('../public/js/i18n.js');
+  for (const lang of ['en', 'ru', 'zh']) assert.ok(MESSAGES[lang]['st.installIos'], lang);
+  assert.match(MESSAGES.en['st.installIos'], /Add to Home Screen/);
 });
 
 test('settings explains where progress lives and how to back it up (S2.8a)', () => {
-  const settings = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'settings.js'), 'utf8');
-  // The "Your progress" block comes right after the profile panel.
-  // S2.8a copy is now localized (Q4.2): the panel exists via the i18n key.
+  const settings = readSettingsSource();
   assert.ok(settings.indexOf("st.yourProgress") > -1, 'progress panel missing');
-  const clearCall = settings.slice(settings.indexOf("clear(root,"));
-  assert.ok(clearCall.indexOf("profilePanel") < clearCall.indexOf("progressPanel"),
-    'progress panel must come after the profile panel');
   // The four erasing cases, and the last-backup date in localStorage.
   assert.match(settings, /st\.erasesTitle/);
   // The backup storage moved to the shared module (S2.8a3); settings reads it.
@@ -486,6 +570,35 @@ test('settings explains where progress lives and how to back it up (S2.8a)', () 
   // The privacy strip links to the block.
   const index = fs.readFileSync(path.join(ROOT, 'public', 'index.html'), 'utf8');
   assert.match(index, /href="#\/settings"[^>]*>How it's kept/);
+});
+
+test('settings: six panels in order, autosave, no Backup panel, small modules (ST2)', async () => {
+  const dir = path.join(ROOT, 'public', 'js', 'views', 'settings');
+  for (const name of ['index.js', 'learning.js', 'progress.js', 'offline.js', 'about.js']) {
+    const lines = fs.readFileSync(path.join(dir, name), 'utf8').split('\n').length;
+    assert.ok(lines <= 200, `${name} has ${lines} lines (max 200)`);
+  }
+  const index = fs.readFileSync(path.join(dir, 'index.js'), 'utf8');
+  const order = ['learningPanel(', 'progressPanel(', 'offlinePanel(', 'helpPanel(', 'aboutPanel(', 'dangerPanel('];
+  const call = index.slice(index.indexOf('clear(root,'));
+  const positions = order.map((name) => call.indexOf(name));
+  assert.ok(positions.every((p) => p > 0), `every panel is rendered: ${positions}`);
+  assert.deepEqual([...positions].sort((a, b) => a - b), positions, 'panels in the agreed order');
+  const settings = readSettingsSource();
+  assert.ok(!/st\.save'|st\.backup'|st\.backupLede/.test(settings), 'no SAVE button and no Backup panel');
+  assert.match(settings, /role: 'status'/, 'autosave reports "Saved" in a status region');
+  const { MESSAGES } = await import('../public/js/i18n.js');
+  for (const lang of ['en', 'ru', 'zh']) {
+    for (const gone of ['st.save', 'st.backup', 'st.backupLede', 'st.profile']) {
+      assert.ok(!(gone in MESSAGES[lang]), `${lang}: ${gone} should be removed`);
+    }
+    for (const key of ['st.learning', 'st.saved', 'st.offlineInstall', 'st.helpFeedback', 'st.version']) {
+      assert.ok(MESSAGES[lang][key], `${lang}: ${key}`);
+    }
+  }
+  // The About panel's version comes from the service worker, not the network.
+  const sw = fs.readFileSync(path.join(ROOT, 'public', 'sw.js'), 'utf8');
+  assert.match(sw, /addEventListener\('message'/);
 });
 
 test('shouldSuggestBackup decides on answers, backup age and dismissal (S2.8a3)', async () => {
@@ -891,5 +1004,102 @@ test('S3.1 new-version strings exist in every language', async () => {
     assert.ok(MESSAGES[lang]['nv.title'].trim().length > 0);
     assert.equal(typeof MESSAGES[lang]['nv.reload'], 'string');
     assert.ok(MESSAGES[lang]['nv.reload'].trim().length > 0);
+  }
+});
+
+/* ---------------- SEC1: cross-site requests to the local server ---------------- */
+
+import { spawn } from 'node:child_process';
+import http from 'node:http';
+import { allowedHosts, checkRequest } from '../server/request-guard.js';
+
+test('request guard: loopback hosts pass, foreign hosts get 421 (V2)', () => {
+  const hosts = allowedHosts('127.0.0.1', 3000);
+  for (const host of ['127.0.0.1:3000', 'localhost:3000', '[::1]:3000', 'LOCALHOST:3000']) {
+    assert.equal(checkRequest({ method: 'GET', headers: { host } }, hosts), null, host);
+  }
+  for (const host of ['evil.example', 'evil.example:3000', '127.0.0.1:3001', undefined]) {
+    assert.equal(checkRequest({ method: 'GET', headers: { host } }, hosts)?.status, 421, String(host));
+  }
+  assert.ok(allowedHosts('192.168.1.5', 3000).has('192.168.1.5:3000'));
+  assert.ok(!allowedHosts('0.0.0.0', 3000).has('0.0.0.0:3000'));
+});
+
+test('request guard: mutations need a matching Origin and a JSON body (V1)', () => {
+  const hosts = allowedHosts('127.0.0.1', 3000);
+  const req = (method, extra = {}) => ({ method, headers: { host: '127.0.0.1:3000', ...extra } });
+  const json = { 'content-type': 'application/json' };
+  assert.equal(checkRequest(req('POST', json), hosts), null);
+  assert.equal(checkRequest(req('POST', { 'content-type': 'application/json; charset=utf-8' }), hosts), null);
+  assert.equal(checkRequest(req('POST', { ...json, origin: 'http://127.0.0.1:3000' }), hosts), null);
+  assert.equal(checkRequest(req('POST', { ...json, origin: 'https://evil.example' }), hosts)?.status, 403);
+  assert.equal(checkRequest(req('POST', { ...json, origin: 'null' }), hosts)?.status, 403);
+  for (const type of ['text/plain', 'application/x-www-form-urlencoded', 'multipart/form-data', undefined]) {
+    assert.equal(checkRequest(req('POST', { 'content-type': type }), hosts)?.status, 415, String(type));
+  }
+  assert.equal(checkRequest(req('PUT', { 'content-type': 'text/plain' }), hosts)?.status, 415);
+  assert.equal(checkRequest(req('DELETE'), hosts), null);
+  assert.equal(checkRequest(req('DELETE', { origin: 'https://evil.example' }), hosts)?.status, 403);
+});
+
+function startServer() {
+  const storage = fs.mkdtempSync(path.join(os.tmpdir(), 'patente-sec1-'));
+  const child = spawn(process.execPath, [path.join(ROOT, 'server', 'index.js')], {
+    env: { ...process.env, PORT: '0', HOST: '127.0.0.1', STORAGE_DIR: storage },
+    stdio: ['ignore', 'pipe', 'pipe'],
+  });
+  return new Promise((resolve, reject) => {
+    let out = '';
+    child.stdout.on('data', (d) => {
+      out += d;
+      const m = out.match(/running at http:\/\/127\.0\.0\.1:(\d+)/);
+      if (m) resolve({ child, port: Number(m[1]) });
+    });
+    child.on('exit', (code) => reject(new Error(`server exited ${code}`)));
+  });
+}
+
+function rawRequest(port, { method = 'GET', path: p = '/api/health', headers = {}, body } = {}) {
+  return new Promise((resolve, reject) => {
+    const req = http.request({ host: '127.0.0.1', port, method, path: p, headers }, (res) => {
+      res.resume();
+      res.on('end', () => resolve(res.statusCode));
+    });
+    req.on('error', reject);
+    if (body) req.write(body);
+    req.end();
+  });
+}
+
+test('local server refuses the cross-site attacks from the audit (SEC1)', async () => {
+  const { child, port } = await startServer();
+  try {
+    const host = `127.0.0.1:${port}`;
+    const backup = JSON.stringify({ answers: {}, profile: { name: 'pwned' } });
+    // V1: a foreign page posting text/plain (a "simple" request, no preflight).
+    assert.equal(await rawRequest(port, {
+      method: 'POST', path: '/api/progress/import', body: backup,
+      headers: { host, 'content-type': 'text/plain', origin: 'https://evil.example' },
+    }), 403);
+    assert.equal(await rawRequest(port, {
+      method: 'POST', path: '/api/progress/import', body: backup,
+      headers: { host, 'content-type': 'text/plain' },
+    }), 415);
+    // V2: DNS rebinding keeps the attacker's name in Host.
+    assert.equal(await rawRequest(port, { headers: { host: 'evil.example' } }), 421);
+    assert.equal(await rawRequest(port, {
+      method: 'POST', path: '/api/progress/import', body: backup,
+      headers: { host: `evil.example:${port}`, 'content-type': 'application/json' },
+    }), 421);
+    // The app itself still works.
+    assert.equal(await rawRequest(port, { headers: { host } }), 200);
+    assert.equal(await rawRequest(port, { headers: { host: `localhost:${port}` } }), 200);
+    assert.equal(await rawRequest(port, {
+      method: 'PUT', path: '/api/progress/profile', body: JSON.stringify({ name: 'ok' }),
+      headers: { host, 'content-type': 'application/json', origin: `http://${host}` },
+    }), 200);
+    assert.equal(await rawRequest(port, { method: 'DELETE', path: '/api/progress', headers: { host } }), 200);
+  } finally {
+    child.kill();
   }
 });

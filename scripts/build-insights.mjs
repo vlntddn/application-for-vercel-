@@ -6,8 +6,9 @@
 // Запуск: node scripts/build-insights.mjs  (идемпотентно: перезаписывает файл).
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const root = path.join(import.meta.dirname, '..');
+const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(root, 'data', 'insights', 'signal-words.json');
 
 // Слова/фразы-сигналы (в исходном виде, как в роадмапе).

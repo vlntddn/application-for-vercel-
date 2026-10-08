@@ -1,3 +1,42 @@
+## 2026-10-08 — Спринт SEC/ST закрыт: безопасность локального сервера и новая страница настроек
+
+- **ST1** — `public/sw.js`: навигация на `STANDALONE_PAGES` (`/credits.html`, `/privacy.html`)
+  отдаёт сам файл (network-first, офлайн — из кэша), остальное — по-прежнему `/`. Тест в
+  `node:vm`: `tests/sw-navigation.test.js` (до фикса 2 из 3 красные). Попутно
+  `public/favicon.ico` (из icon-256): отдельные страницы давали 404 на `/favicon.ico`.
+- **SEC1 (V1, V2)** — `server/request-guard.js`: `Host` только loopback (или явный `HOST`)
+  → иначе 421; мутация с чужим `Origin` → 403; тело не `application/json` → 415; CORS не
+  отправляется. Тесты: чистая функция + живой сервер на порту 0 (text/plain-импорт,
+  `Host: evil.example`, чужой Origin, штатные запросы 200).
+- **SEC2 (V3)** — `isSafeId`: `/^[A-Za-z0-9_-]{1,120}$/` и не имя из `Object.prototype`;
+  поиск записей через `Object.hasOwn`; `migrateProgress` отбрасывает такие ключи. Все 7139
+  id банка проходят (тест). Пометка XSS-тест: разметка в id теперь отвергается (строже).
+- **SEC3** — пределы: 8000 ответов, 400 экзаменов, 400 дней `dailyAnswers`, 500 глав. Импорт
+  сверх — 422. Живой экзамен №401 НЕ отвергается, а вытесняет самый старый (иначе экран
+  экзамена падал бы у активного ученика) — осознанное отклонение от текста задачи.
+- **SEC4** — `scripts/scan-secrets.mjs` в `verify.sh`: токены GitHub/sk-/AWS/приватные ключи
+  в изменённых файлах и сообщениях невыпущенных коммитов, логин в `origin`. Печатает только
+  файл и тип. `sk-` с отрицательным lookbehind: в legacy-бандле был ложный `mask-image-…`.
+- **SEC5** — `docs/proposed-workflows/ci.yml` + README: `permissions: contents: read`,
+  `persist-credentials: false`, secret scan, таймаут e2e. SHA действий НЕ подставлены
+  (агенту нельзя читать чужие репозитории) — у каждой строки пометка `# PIN`, в README команда.
+- **ST2** — `views/settings/{index,learning,progress,offline,about}.js` (все < 110 строк),
+  `views/settings.js` — реэкспорт. Панели: Learning (автосохранение по `change`, «Saved ✓»
+  в `role=status`, смена языка перерисовывает экран) → Your progress → Offline & install
+  (статус установки + кнопка/инструкция + загрузка) → Help & feedback → About (версия из SW
+  по `postMessage`, без сети) → Danger zone. Панель Backup и ключи `st.backup*`, `st.save`,
+  `st.profile` удалены; заголовки обычным регистром; install.js без хардкода английского.
+- **ST3** — `qa-new-user.mjs`, раздел 10: порядок панелей, автосохранение (цель, язык),
+  Export скачивает файл, Import принимает его же, mailto с адресом, Reset спрашивает и при
+  отказе не стирает, Credits/Privacy открывают свои страницы. 404-лог теперь пишет URL.
+- **SEC6** — `scripts/make-checksums.js` пишет `SHA256SUMS` для релизного тега;
+  `install.sh`/`install.ps1` сверяют загрузку и отказываются при несовпадении; на ветках
+  файла нет — проверка пропускается с пометкой. Защищает от битой/неполной загрузки, но не
+  от того, кто может переписать сам репозиторий (суммы из того же тега).
+
+Проверка: `npm test` 259/259; `verify.sh` OK; `qa-new-user` 88 PASS / 0 FAIL и `qa-ux`
+224 PASS / 0 FAIL (Chromium, `CHROME_PATH` + `--no-sandbox`-обёртка, в облаке нет Chrome).
+
 ## 2026-10-04 — #/numbers на языке ученика; пустой путь больше не «пройден»
 
 Скриншоты владельца (Safari, десктоп): (1) на главной новичка «All steps done — You

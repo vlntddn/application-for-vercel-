@@ -67,6 +67,11 @@ cd application-for-vercel-; .\install.ps1
 > irm https://raw.githubusercontent.com/vlntddn/application-for-vercel-/main/install.ps1 | iex
 > ```
 
+Installing a release tag (`--ref v2.1.0` / `-Ref v2.1.0`) also checks every
+downloaded file against the tag's `SHA256SUMS` and refuses to install on any
+mismatch; branches have no `SHA256SUMS`, so the check is skipped there. To cut
+a release: `node scripts/make-checksums.js`, commit `SHA256SUMS`, tag.
+
 Then launch it from your applications menu, or:
 
 ```bash

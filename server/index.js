@@ -7,6 +7,7 @@ import { JsonStore } from './store.js';
 import { ProgressService, ValidationError, EMPTY_PROGRESS } from './progress.js';
 import { sendJson, sendError, readJsonBody } from './http-helpers.js';
 import { serveFile } from './static.js';
+import { allowedHosts, checkRequest } from './request-guard.js';
 import { regenerateIndexes } from '../scripts/gen-data-index.mjs';
 
 const store = new JsonStore(path.join(config.storageDir, 'progress.json'), EMPTY_PROGRESS).load();
@@ -111,9 +112,17 @@ const SECURITY_HEADERS = {
     'browsing-topics=(), interest-cohort=()',
 };
 
+// Filled in once the server is listening (the real port may be ephemeral).
+let hosts = new Set();
+
 const server = http.createServer(async (req, res) => {
   for (const [name, value] of Object.entries(SECURITY_HEADERS)) {
     res.setHeader(name, value);
+  }
+  const refused = checkRequest(req, hosts);
+  if (refused) {
+    req.resume();
+    return sendError(res, refused.status, refused.message);
   }
   let pathname;
   try {
@@ -158,6 +167,7 @@ regenerateIndexes();
 
 server.listen(config.port, config.host, () => {
   const { address, port } = server.address();
+  hosts = allowedHosts(config.host, port);
   console.log(`PASSO running at http://${address}:${port}`);
   console.log(`Progress file: ${path.join(config.storageDir, 'progress.json')}`);
 });

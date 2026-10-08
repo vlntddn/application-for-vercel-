@@ -12,10 +12,17 @@ export const DAILY_GOAL_DEFAULT = 20;
 
 const NAME_MAX = 40;
 const ID_MAX = 120;
-// Import caps: generous enough for a full bank, small enough to bound work.
-const MAX_IMPORT_ANSWERS = 20000;
+// Every id in the bank (questions, chapters) fits this; anything else is
+// refused, so no stored key can reach Object.prototype (SEC2, audit V3).
+const ID_RE = new RegExp(`^[A-Za-z0-9_-]{1,${ID_MAX}}$`);
+const RESERVED_IDS = new Set([...Object.getOwnPropertyNames(Object.prototype), 'prototype']);
+// Growth caps (SEC3): the bank has 7139 questions, so these bound the data
+// file without ever getting in a real learner's way.
+export const MAX_ANSWERS = 8000;
+export const MAX_EXAMS = 400;
+export const MAX_DAILY_DAYS = 400;
+export const MAX_CHAPTERS = 500;
 const ACTIVE_DAYS_KEPT = 90;
-const MAX_IMPORT_EXAMS = 2000;
 
 /**
  * Bumped only when the stored shape changes in a way that needs code to
@@ -78,9 +85,14 @@ function assertObject(body) {
   return body;
 }
 
+/** Safe question/chapter id: letters, digits, "_" and "-", never a built-in name. */
+export function isSafeId(value) {
+  return typeof value === 'string' && ID_RE.test(value) && !RESERVED_IDS.has(value);
+}
+
 function assertId(value, field) {
-  if (typeof value !== 'string' || !value || value.length > ID_MAX) {
-    throw new ValidationError(`"${field}" must be a non-empty string`);
+  if (!isSafeId(value)) {
+    throw new ValidationError(`"${field}" must be an id of at most ${ID_MAX} letters, digits, "_" or "-"`);
   }
   return value;
 }
@@ -288,7 +300,7 @@ export function migrateProgress(raw) {
 
   if (isPlainObject(raw.answers)) {
     for (const [id, rec] of Object.entries(raw.answers)) {
-      if (id === '__proto__' || !id || !isPlainObject(rec)) continue;
+      if (!isSafeId(id) || !isPlainObject(rec)) continue;
       const correct = Math.trunc(Number(rec.correct));
       const wrong = Math.trunc(Number(rec.wrong));
       if (!Number.isFinite(correct) || !Number.isFinite(wrong)) continue;
@@ -306,14 +318,14 @@ export function migrateProgress(raw) {
 
   for (const field of ['mistakes', 'theoryRead']) {
     if (!Array.isArray(raw[field])) continue;
-    out[field] = raw[field].filter((id) => typeof id === 'string' && id && id.length <= ID_MAX);
+    out[field] = raw[field].filter(isSafeId);
   }
   // A mistake only means something if the answer behind it is still wrong.
   out.mistakes = out.mistakes.filter((id) => out.answers[id] && !out.answers[id].lastCorrect);
 
   if (isPlainObject(raw.chapters)) {
     for (const [id, rec] of Object.entries(raw.chapters)) {
-      if (id === '__proto__' || !id || id.length > ID_MAX || !isPlainObject(rec)) continue;
+      if (!isSafeId(id) || !isPlainObject(rec)) continue;
       const check = Math.trunc(Number(rec.check));
       if (Number.isFinite(check) && check >= 0 && check <= PATH_CHECK_QUESTIONS) {
         out.chapters[id] = { check };
@@ -337,6 +349,8 @@ export function migrateProgress(raw) {
     }
   }
 
+  out.exams = out.exams.slice(-MAX_EXAMS);
+
   if (isPlainObject(raw.streak)) {
     const current = Math.trunc(Number(raw.streak.current));
     const best = Math.trunc(Number(raw.streak.best));
@@ -354,7 +368,7 @@ export function migrateProgress(raw) {
 
   if (isPlainObject(raw.dailyAnswers)) {
     for (const [day, count] of Object.entries(raw.dailyAnswers)) {
-      if (day === '__proto__' || !/^\d{4}-\d{2}-\d{2}$/.test(day)) continue;
+      if (!isDay(day)) continue;
       const n = Math.trunc(Number(count));
       if (Number.isFinite(n) && n > 0) out.dailyAnswers[day] = n;
     }
@@ -505,7 +519,11 @@ export class ProgressService {
       if (typeof entry.correct !== 'boolean') {
         throw new ValidationError('"answers[].correct" must be a boolean');
       }
-      const rec = d.answers[id] ?? { correct: 0, wrong: 0, lastCorrect: false, last: '', streak: 0, due: '' };
+      const known = Object.hasOwn(d.answers, id);
+      if (!known && Object.keys(d.answers).length >= MAX_ANSWERS) {
+        throw new ValidationError(`progress already holds ${MAX_ANSWERS} answered questions`);
+      }
+      const rec = known ? d.answers[id] : { correct: 0, wrong: 0, lastCorrect: false, last: '', streak: 0, due: '' };
       if (entry.correct) {
         rec.correct += 1;
         rec.streak = (Number.isInteger(rec.streak) ? rec.streak : 0) + 1;
@@ -544,7 +562,10 @@ export class ProgressService {
       errors,
       passed: typeof body.passed === 'boolean' ? body.passed : errors <= 3,
     };
-    this.store.data.exams.push(exam);
+    const exams = this.store.data.exams;
+    exams.push(exam);
+    // A learner's 401st exam must not fail: the oldest result drops out.
+    if (exams.length > MAX_EXAMS) exams.splice(0, exams.length - MAX_EXAMS);
     this.bumpStreak();
     await this.store.persist();
     return exam;
@@ -554,7 +575,10 @@ export class ProgressService {
     assertObject(body);
     const id = assertId(body.chapterId, 'chapterId');
     const list = this.store.data.theoryRead;
-    if (!list.includes(id)) list.push(id);
+    if (!list.includes(id)) {
+      if (list.length >= MAX_CHAPTERS) throw new ValidationError(`at most ${MAX_CHAPTERS} chapters can be marked read`);
+      list.push(id);
+    }
     await this.store.persist();
     return { theoryRead: list };
   }
@@ -570,7 +594,11 @@ export class ProgressService {
     }
     const data = this.store.data;
     if (!isPlainObject(data.chapters)) data.chapters = {};
-    const rec = isPlainObject(data.chapters[id]) ? data.chapters[id] : { check: 0 };
+    const known = Object.hasOwn(data.chapters, id) && isPlainObject(data.chapters[id]);
+    if (!known && Object.keys(data.chapters).length >= MAX_CHAPTERS) {
+      throw new ValidationError(`at most ${MAX_CHAPTERS} chapter scores can be stored`);
+    }
+    const rec = known ? data.chapters[id] : { check: 0 };
     rec.check = Math.max(rec.check, correct);
     data.chapters[id] = rec;
     await this.store.persist();
@@ -638,8 +666,8 @@ export class ProgressService {
     if (body.answers !== undefined) {
       assertObject(body.answers);
       const entries = Object.entries(body.answers);
-      if (entries.length > MAX_IMPORT_ANSWERS) {
-        throw new ValidationError(`"answers" holds more than ${MAX_IMPORT_ANSWERS} entries`);
+      if (entries.length > MAX_ANSWERS) {
+        throw new ValidationError(`"answers" holds more than ${MAX_ANSWERS} entries`);
       }
       for (const [id, rec] of entries) {
         assertId(id, 'answers key');
@@ -671,8 +699,8 @@ export class ProgressService {
 
     if (body.exams !== undefined) {
       if (!Array.isArray(body.exams)) throw new ValidationError('"exams" must be an array');
-      if (body.exams.length > MAX_IMPORT_EXAMS) {
-        throw new ValidationError(`"exams" holds more than ${MAX_IMPORT_EXAMS} entries`);
+      if (body.exams.length > MAX_EXAMS) {
+        throw new ValidationError(`"exams" holds more than ${MAX_EXAMS} entries`);
       }
       for (const exam of body.exams) {
         assertObject(exam);
@@ -700,8 +728,12 @@ export class ProgressService {
 
     if (body.dailyAnswers !== undefined) {
       assertObject(body.dailyAnswers);
-      for (const [day, count] of Object.entries(body.dailyAnswers)) {
-        if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) continue;
+      const days = Object.entries(body.dailyAnswers);
+      if (days.length > MAX_DAILY_DAYS) {
+        throw new ValidationError(`"dailyAnswers" holds more than ${MAX_DAILY_DAYS} days`);
+      }
+      for (const [day, count] of days) {
+        if (!isDay(day)) continue;
         const n = Number(count);
         if (!Number.isInteger(n) || n < 0) {
           throw new ValidationError(`"dailyAnswers.${day}" must be a non-negative integer`);
@@ -713,7 +745,7 @@ export class ProgressService {
     for (const field of ['mistakes', 'theoryRead']) {
       if (body[field] === undefined) continue;
       if (!Array.isArray(body[field])) throw new ValidationError(`"${field}" must be an array`);
-      if (body[field].length > MAX_IMPORT_ANSWERS) {
+      if (body[field].length > (field === 'mistakes' ? MAX_ANSWERS : MAX_CHAPTERS)) {
         throw new ValidationError(`"${field}" is too long`);
       }
       clean[field] = body[field].map((id) => assertId(id, `${field}[]`));
@@ -722,7 +754,7 @@ export class ProgressService {
     if (body.chapters !== undefined) {
       assertObject(body.chapters);
       const entries = Object.entries(body.chapters);
-      if (entries.length > MAX_IMPORT_ANSWERS) {
+      if (entries.length > MAX_CHAPTERS) {
         throw new ValidationError('"chapters" is too long');
       }
       for (const [id, rec] of entries) {

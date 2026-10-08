@@ -7,14 +7,15 @@
  * "Add to Home Screen" flow, so we show written instructions instead.
  * Already installed (display-mode: standalone): we say so and stop.
  */
-import { el } from './ui.js';
 
 let deferredPrompt = null;
+let onChange = null;
 window.addEventListener('beforeinstallprompt', (event) => {
   // preventDefault stops Chrome's own mini-infobar; we offer the install
   // deliberately from Settings.
   event.preventDefault();
   deferredPrompt = event;
+  onChange?.();
 });
 
 export function isInstalled() {
@@ -28,55 +29,34 @@ export function isIOSSafari() {
   return /iphone|ipad|ipod/i.test(navigator.userAgent);
 }
 
-async function offerInstall(panel) {
+/**
+ * Which install path this browser offers (ST2, Settings → Offline & install):
+ * 'installed' | 'ios' (Share → Add to Home Screen) | 'prompt' (a real
+ * install button) | 'manual' (browser menu instructions).
+ */
+export function installMode() {
+  if (isInstalled()) return 'installed';
+  if (isIOSSafari()) return 'ios';
+  if (deferredPrompt) return 'prompt';
+  return 'manual';
+}
+
+/** Settings registers one callback to redraw when the install state changes. */
+export function onInstallChange(callback) {
+  onChange = callback;
+}
+
+/** Shows the browser's install dialog (only in 'prompt' mode). */
+export async function promptInstall() {
   const prompt = deferredPrompt;
-  if (!prompt) {
-    renderInstallPanel(panel);
-    return;
+  if (prompt) {
+    prompt.prompt();
+    await prompt.userChoice;
+    // A declined offer cannot be re-offered in this session.
+    deferredPrompt = null;
   }
-  prompt.prompt();
-  const choice = await prompt.userChoice;
-  // A declined offer cannot be re-offered in this session.
-  deferredPrompt = null;
-  renderInstallPanel(panel);
+  onChange?.();
 }
 
-/** Fills the Settings "INSTALL AS APP" panel body with the right offer. */
-export function renderInstallPanel(panel) {
-  panel.replaceChildren(el('h2', {}, 'INSTALL AS APP'));
-  const box = el('div.panel-body', {});
-  panel.append(box);
-  const target = box;
-
-  if (isInstalled()) {
-    target.append(
-      el('p.lede', {}, 'Installed. It opens as a full app, works offline, and your progress lives only on this device.'),
-    );
-    return;
-  }
-  if (isIOSSafari()) {
-    target.append(
-      el('p.lede', {}, 'In Safari: tap the Share button, then Add to Home Screen. The app opens without the browser bar, and installing it keeps your progress safe from browser cleanup.'),
-    );
-    return;
-  }
-  if (deferredPrompt) {
-    target.append(
-      el('div.actions', {},
-        el('button.btn.btn-primary', {
-          onclick: () => offerInstall(panel),
-        }, 'INSTALL APP'),
-      ),
-    );
-    return;
-  }
-  target.append(
-    el('p.lede', {}, 'In Chrome or Android: menu (three dots) then Install App, or Add to Home Screen.'),
-  );
-}
-
-// If the install finishes while Settings is open, refresh the panel.
-window.addEventListener('appinstalled', () => {
-  const panel = document.getElementById('install-panel');
-  if (panel) renderInstallPanel(panel);
-});
+// If the install finishes while Settings is open, redraw its status.
+window.addEventListener('appinstalled', () => onChange?.());

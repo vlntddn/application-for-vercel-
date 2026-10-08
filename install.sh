@@ -82,6 +82,22 @@ elif command -v curl >/dev/null 2>&1 && command -v tar >/dev/null 2>&1; then
 else
   die "Need either git, or curl and tar, to download the app."
 fi
+# Integrity (SEC6): a release tag carries SHA256SUMS; any mismatch aborts.
+if [ -f "$SRC/SHA256SUMS" ]; then
+  step "Verifying checksums"
+  if command -v sha256sum >/dev/null 2>&1; then
+    SUMCHECK=(sha256sum -c SHA256SUMS)
+  elif command -v shasum >/dev/null 2>&1; then
+    SUMCHECK=(shasum -a 256 -c SHA256SUMS)
+  else
+    die "Need sha256sum or shasum to verify the download."
+  fi
+  ( cd "$SRC" && "${SUMCHECK[@]}" ) >/dev/null 2>&1 \
+    || die "Checksum mismatch: the download is damaged or was altered. Nothing was installed."
+  say "    all files match SHA256SUMS"
+else
+  say "    ${DIM}No SHA256SUMS in '$REF' (only release tags have one): integrity check skipped.${RESET}"
+fi
 if [ ! -f "$SRC/server/index.js" ] || [ ! -f "$SRC/bin/patente-pro.js" ]; then
   warn "Ref '$REF' does not contain the current application."
   say  "  Pick a ref that does, for example:"

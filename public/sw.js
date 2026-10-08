@@ -13,9 +13,13 @@
  *   replayed when the server responds again; other mutations error.
  */
 
-const VERSION = 'v120';
+const VERSION = 'v123';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
+
+// Real pages next to the hash-routed app: a navigation to one of these must
+// get that file, not the app shell (ST1: Credits/Privacy opened the app).
+const STANDALONE_PAGES = ['/credits.html', '/privacy.html'];
 
 const SHELL = [
   '/',
@@ -28,6 +32,11 @@ const SHELL = [
   '/js/views/search.js',
   '/js/views/dictionary.js',
   '/js/views/settings.js',
+  '/js/views/settings/index.js',
+  '/js/views/settings/learning.js',
+  '/js/views/settings/progress.js',
+  '/js/views/settings/offline.js',
+  '/js/views/settings/about.js',
   '/js/views/stats.js',
   '/js/views/records.js',
   '/js/views/widgets.js',
@@ -56,8 +65,7 @@ const SHELL = [
   '/fonts/onest-cyrillic-wght-normal.woff2',
   '/fonts/ibm-plex-mono-latin-500-normal.woff2',
   '/fonts/ibm-plex-mono-latin-600-normal.woff2',
-  '/credits.html',
-  '/privacy.html',
+  ...STANDALONE_PAGES,
   '/icons/icon-192.png',
   '/icons/icon-512.png',
   '/icons/icon-maskable-512.png',
@@ -116,14 +124,25 @@ async function staleWhileRevalidate(request) {
   });
 }
 
+// Settings → About asks for the app version; answering needs no network.
+self.addEventListener('message', (event) => {
+  if (event.data === 'version') event.source?.postMessage({ type: 'version', version: VERSION });
+});
+
 self.addEventListener('fetch', (event) => {
   const request = event.request;
   if (request.method !== 'GET') return; // mutations go straight to the network
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
+  if (request.mode === 'navigate' && STANDALONE_PAGES.includes(url.pathname)) {
+    event.respondWith(
+      networkFirst(new Request(url.pathname), SHELL_CACHE).catch(() => caches.match(url.pathname)),
+    );
+    return;
+  }
   if (request.mode === 'navigate') {
-    // Any route (hash routing → always "/") falls back to the cached shell.
+    // Any other route (hash routing → always "/") falls back to the cached shell.
     event.respondWith(
       networkFirst(new Request('/'), SHELL_CACHE).catch(() => caches.match('/')),
     );
