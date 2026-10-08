@@ -120,7 +120,7 @@ async function connectTab() {
       jsErrors.push(d.exception?.description?.split('\n')[0] || d.text);
     } else if (m.method === 'Network.responseReceived') {
       const s = m.params.response?.status;
-      if (s === 404) http404s.push(m.params.request?.url || '?');
+      if (s === 404) http404s.push(m.params.response?.url || '?');
     }
   };
   await send('Page.enable');
@@ -518,6 +518,83 @@ async function main() {
   check(recordsCards === 4, `(9b) Рекорды: 4 карточки (по факту ${recordsCards})`);
   check(/RECORDS|РЕКОРДЫ|最佳记录/.test(recordsText), '(9b) Рекорды: заголовок экрана виден');
   await shot('14-records.png');
+
+  /* ---- 10. Настройки (ST2/ST3): панели, автосохранение, каждая кнопка и ссылка ---- */
+  const progressNow = async () => (await fetch(`${APP}/api/progress`)).json();
+  await evaluate(`location.hash = '#/settings'`);
+  await waitFor(`!!document.getElementById('st-learning')`, 'settings screen');
+  const panelIds = await evaluate(`Array.from(document.querySelectorAll('#view .panel')).map((p) => p.id).join(',')`);
+  check(panelIds === 'st-learning,st-progress,st-offline,st-help,st-about,st-danger',
+    `(10) настройки: 6 панелей в нужном порядке (${panelIds})`);
+  const headings = await evaluate(`Array.from(document.querySelectorAll('#view h2')).map((h) => h.textContent.trim()).join('|')`);
+  check(!/^backup$/im.test(headings.split('|').join('\n')), `(10) настройки: нет панели «Backup» (${headings})`);
+  check(!(await evaluate(`Array.from(document.querySelectorAll('#view button')).some((b) => /^(SAVE|СОХРАНИТЬ)$/i.test(b.textContent.trim()))`)),
+    '(10) настройки: нет общей кнопки SAVE');
+
+  // Автосохранение: смена поля сразу пишет в прогресс, без кнопки.
+  await evaluate(`(() => { const s = document.getElementById('s-goal'); s.value = '30'; s.dispatchEvent(new Event('change', { bubbles: true })); return true; })()`);
+  const goalSaved = await tryWait(`(document.getElementById('st-saved')?.textContent || '').includes('Saved')`, 8000);
+  check(goalSaved && (await progressNow()).profile.dailyGoal === 30, '(10) автосохранение: дневная цель 30 записана без SAVE, видно «Saved ✓»');
+  await evaluate(`(() => { const s = document.getElementById('s-lang'); s.value = 'ru'; s.dispatchEvent(new Event('change', { bubbles: true })); return true; })()`);
+  const ruShown = await tryWait(`(document.querySelector('#view h1')?.textContent || '').includes('НАСТРОЙКИ')`, 8000);
+  check(ruShown && (await progressNow()).profile.language === 'ru', '(10) автосохранение: язык ru записан, экран перерисован по-русски');
+  await evaluate(`(() => { const s = document.getElementById('s-lang'); s.value = 'en'; s.dispatchEvent(new Event('change', { bubbles: true })); return true; })()`);
+  await waitFor(`(document.querySelector('#view h1')?.textContent || '').includes('SETTINGS')`, 'settings back in English', 8000);
+  await evaluate(`(() => { const s = document.getElementById('s-goal'); s.value = '20'; s.dispatchEvent(new Event('change', { bubbles: true })); return true; })()`);
+  await tryWait(`(document.getElementById('st-saved')?.textContent || '').includes('Saved')`, 8000);
+
+  // Export создаёт файл.
+  const dlDir = path.join(TEMP, 'downloads');
+  fs.mkdirSync(dlDir, { recursive: true });
+  await send('Browser.setDownloadBehavior', { behavior: 'allow', downloadPath: dlDir })
+    .catch(() => send('Page.setDownloadBehavior', { behavior: 'allow', downloadPath: dlDir }));
+  await evaluate(`document.getElementById('s-export').click() || true`);
+  let backupFile = null;
+  for (let i = 0; i < 40 && !backupFile; i++) {
+    await sleep(250);
+    backupFile = fs.readdirSync(dlDir).find((f) => /^patente-pro-backup-.*\.json$/.test(f)) || null;
+  }
+  let backupJson = null;
+  try { backupJson = backupFile && JSON.parse(fs.readFileSync(path.join(dlDir, backupFile), 'utf8')); } catch { /* битый файл */ }
+  check(!!backupJson && Object.keys(backupJson.answers || {}).length >= 5, `(10) Export: скачан файл бэкапа (${backupFile})`);
+
+  // Import принимает этот же файл (подтверждение — да).
+  if (backupFile) {
+    await evaluate(`window.confirm = () => true; true`);
+    const input = await send('Runtime.evaluate', { expression: `document.getElementById('s-import-file')` });
+    await send('DOM.enable');
+    await send('DOM.setFileInputFiles', { objectId: input.result.objectId, files: [path.join(dlDir, backupFile)] });
+    const imported = await tryWait(`/IMPORTED/.test(document.getElementById('backup-actions')?.textContent || '')`, 8000);
+    check(imported, '(10) Import: файл бэкапа принят, прогресс восстановлен');
+    await sleep(1800); // экран перерисовывается после импорта
+  } else {
+    check(false, '(10) Import: нечего импортировать — Export не создал файл');
+  }
+
+  // mailto содержит адрес.
+  const mailto = await evaluate(`document.getElementById('s-mailto')?.getAttribute('href') || ''`);
+  check(/^mailto:[^?]*@/.test(mailto), `(10) «Write to us» — mailto с адресом (${mailto.split('?')[0]})`);
+
+  // Reset просит подтверждения и при отказе ничего не стирает.
+  const answersBefore = Object.keys((await progressNow()).answers).length;
+  await evaluate(`window.__asked = false; window.confirm = () => { window.__asked = true; return false; }; document.getElementById('s-reset').click(); true`);
+  await sleep(500);
+  const asked = await evaluate(`window.__asked === true`);
+  const answersAfter = Object.keys((await progressNow()).answers).length;
+  check(asked && answersAfter === answersBefore && answersBefore > 0,
+    `(10) Reset: спросил подтверждение, при отказе прогресс цел (${answersBefore} → ${answersAfter})`);
+
+  // Credits и Privacy открывают свои страницы, а не приложение (ST1).
+  for (const [id, title] of [['s-credits', 'Credits'], ['s-privacy', 'Privacy']]) {
+    await evaluate(`location.hash = '#/settings'`);
+    await waitFor(`!!document.getElementById(${JSON.stringify(id)})`, `settings link ${id}`);
+    await evaluate(`document.getElementById(${JSON.stringify(id)}).click() || true`);
+    const opened = await tryWait(`document.title.includes(${JSON.stringify(title)})`, 10000);
+    check(opened, `(10) ссылка ${title} в настройках открывает свою страницу (title: ${await evaluate('document.title')})`);
+    await evaluate(`location.href = ${JSON.stringify(`${APP}/#/settings`)}; true`);
+    await waitFor(`!!document.getElementById('st-learning')`, 'back to settings', 15000);
+  }
+  await shot('15-settings.png');
   // Q2: 404-шторм. Раньше при каждой загрузке клиент просил 25
   // /data/translations/<slug>.json (и аналогично explanations), хотя файлов
   // всего 3 → ~22 404 на старте. Теперь index.json фильтрует запросы, и 404

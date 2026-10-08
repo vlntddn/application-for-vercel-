@@ -35,6 +35,13 @@ function readViewsSource() {
   return parts.join('\n');
 }
 
+// ST2: the settings screen is split into views/settings/*.js modules.
+function readSettingsSource() {
+  const dir = path.join(ROOT, 'public', 'js', 'views', 'settings');
+  return fs.readdirSync(dir).sort().filter((n) => n.endsWith('.js'))
+    .map((n) => fs.readFileSync(path.join(dir, n), 'utf8')).join('\n');
+}
+
 /* ---------------- no data can leave the device ---------------- */
 
 test('the frontend never references an external origin', () => {
@@ -471,7 +478,7 @@ test('the settings screen is localized: no hardcoded UI copy (Q4.2)', () => {
   // Q4.2 slice 6: settings copy lives in i18n.js under st.* keys; the view
   // only references keys, so ru/zh switch in without touching settings.js.
   const views = readViewsSource();
-  const settings = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'settings.js'), 'utf8');
+  const settings = readSettingsSource();
   assert.match(settings, /t\('st\.title'\)/, 'page title must come from i18n');
   assert.match(settings, /t\('st\.exportBackup'\)/, 'export button must come from i18n');
   assert.match(settings, /t\('st\.resetConfirm'\)/, 'reset confirm must come from i18n');
@@ -535,24 +542,22 @@ test('the signal drill screen is localized: no hardcoded UI copy (Q4.2)', () => 
   assert.match(views, /Report a problem with this question/);
 });
 
-test('settings offers an install path on phones', () => {
-  const views = readViewsSource();
-  assert.match(views, /renderInstallPanel/);
+test('settings offers an install path on phones', async () => {
+  const settings = readSettingsSource();
+  assert.match(settings, /installMode\(\)/);
+  assert.match(settings, /st\.installIos/);
   const install = fs.readFileSync(path.join(ROOT, 'public', 'js', 'install.js'), 'utf8');
   // The real install mechanism on Android is beforeinstallprompt.
   assert.match(install, /beforeinstallprompt/);
   // iOS has no prompt API: written instructions are the only path.
-  assert.match(install, /ADD TO HOME SCREEN/i);
+  const { MESSAGES } = await import('../public/js/i18n.js');
+  for (const lang of ['en', 'ru', 'zh']) assert.ok(MESSAGES[lang]['st.installIos'], lang);
+  assert.match(MESSAGES.en['st.installIos'], /Add to Home Screen/);
 });
 
 test('settings explains where progress lives and how to back it up (S2.8a)', () => {
-  const settings = fs.readFileSync(path.join(ROOT, 'public', 'js', 'views', 'settings.js'), 'utf8');
-  // The "Your progress" block comes right after the profile panel.
-  // S2.8a copy is now localized (Q4.2): the panel exists via the i18n key.
+  const settings = readSettingsSource();
   assert.ok(settings.indexOf("st.yourProgress") > -1, 'progress panel missing');
-  const clearCall = settings.slice(settings.indexOf("clear(root,"));
-  assert.ok(clearCall.indexOf("profilePanel") < clearCall.indexOf("progressPanel"),
-    'progress panel must come after the profile panel');
   // The four erasing cases, and the last-backup date in localStorage.
   assert.match(settings, /st\.erasesTitle/);
   // The backup storage moved to the shared module (S2.8a3); settings reads it.
@@ -565,6 +570,35 @@ test('settings explains where progress lives and how to back it up (S2.8a)', () 
   // The privacy strip links to the block.
   const index = fs.readFileSync(path.join(ROOT, 'public', 'index.html'), 'utf8');
   assert.match(index, /href="#\/settings"[^>]*>How it's kept/);
+});
+
+test('settings: six panels in order, autosave, no Backup panel, small modules (ST2)', async () => {
+  const dir = path.join(ROOT, 'public', 'js', 'views', 'settings');
+  for (const name of ['index.js', 'learning.js', 'progress.js', 'offline.js', 'about.js']) {
+    const lines = fs.readFileSync(path.join(dir, name), 'utf8').split('\n').length;
+    assert.ok(lines <= 200, `${name} has ${lines} lines (max 200)`);
+  }
+  const index = fs.readFileSync(path.join(dir, 'index.js'), 'utf8');
+  const order = ['learningPanel(', 'progressPanel(', 'offlinePanel(', 'helpPanel(', 'aboutPanel(', 'dangerPanel('];
+  const call = index.slice(index.indexOf('clear(root,'));
+  const positions = order.map((name) => call.indexOf(name));
+  assert.ok(positions.every((p) => p > 0), `every panel is rendered: ${positions}`);
+  assert.deepEqual([...positions].sort((a, b) => a - b), positions, 'panels in the agreed order');
+  const settings = readSettingsSource();
+  assert.ok(!/st\.save'|st\.backup'|st\.backupLede/.test(settings), 'no SAVE button and no Backup panel');
+  assert.match(settings, /role: 'status'/, 'autosave reports "Saved" in a status region');
+  const { MESSAGES } = await import('../public/js/i18n.js');
+  for (const lang of ['en', 'ru', 'zh']) {
+    for (const gone of ['st.save', 'st.backup', 'st.backupLede', 'st.profile']) {
+      assert.ok(!(gone in MESSAGES[lang]), `${lang}: ${gone} should be removed`);
+    }
+    for (const key of ['st.learning', 'st.saved', 'st.offlineInstall', 'st.helpFeedback', 'st.version']) {
+      assert.ok(MESSAGES[lang][key], `${lang}: ${key}`);
+    }
+  }
+  // The About panel's version comes from the service worker, not the network.
+  const sw = fs.readFileSync(path.join(ROOT, 'public', 'sw.js'), 'utf8');
+  assert.match(sw, /addEventListener\('message'/);
 });
 
 test('shouldSuggestBackup decides on answers, backup age and dismissal (S2.8a3)', async () => {

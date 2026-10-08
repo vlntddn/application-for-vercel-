@@ -13,7 +13,7 @@
  *   replayed when the server responds again; other mutations error.
  */
 
-const VERSION = 'v122';
+const VERSION = 'v123';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 
@@ -32,6 +32,11 @@ const SHELL = [
   '/js/views/search.js',
   '/js/views/dictionary.js',
   '/js/views/settings.js',
+  '/js/views/settings/index.js',
+  '/js/views/settings/learning.js',
+  '/js/views/settings/progress.js',
+  '/js/views/settings/offline.js',
+  '/js/views/settings/about.js',
   '/js/views/stats.js',
   '/js/views/records.js',
   '/js/views/widgets.js',
@@ -118,6 +123,11 @@ async function staleWhileRevalidate(request) {
     return fresh;
   });
 }
+
+// Settings → About asks for the app version; answering needs no network.
+self.addEventListener('message', (event) => {
+  if (event.data === 'version') event.source?.postMessage({ type: 'version', version: VERSION });
+});
 
 self.addEventListener('fetch', (event) => {
   const request = event.request;
