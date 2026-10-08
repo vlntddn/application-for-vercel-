@@ -18,6 +18,13 @@ else
   fail "package.json has dependencies — forbidden until Phase 3"
 fi
 
+# 1b. No secrets in changed files, unpushed commit messages or the origin URL (SEC4).
+if node scripts/scan-secrets.mjs $CHANGED; then
+  pass "secret scan: changed files, commit messages, origin URL"
+else
+  fail "secret scan found something above — remove it (and revoke the secret if it was real)"
+fi
+
 # 2. Protected paths must stay untouched.
 PROTECTED="$(echo "$CHANGED" | grep -E '^(data/questions/|legacy/|THIRD-PARTY-NOTICES\.md$|public/credits\.html$)' || true)"
 if [ -z "$PROTECTED" ]; then
