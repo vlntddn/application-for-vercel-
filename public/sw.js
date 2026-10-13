@@ -14,7 +14,7 @@
  */
 
 // v126 — UI1: panel rhythm + qa-ux p9 + 1280 screenshots
-const VERSION = 'v126';
+const VERSION = 'v127';
 const SHELL_CACHE = `shell-${VERSION}`;
 const DATA_CACHE = `data-${VERSION}`;
 

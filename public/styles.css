@@ -231,8 +231,8 @@ body {
   align-self: flex-start;
   color: var(--ink);
   border: var(--border);
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -636,11 +636,11 @@ kbd {
 
 /* ---------- Exam navigator ---------- */
 
-.exam-nav { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 20px; }
+.exam-nav { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
 
 .exam-nav button {
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   border: var(--border-thin);
   background: var(--surface);
   color: var(--ink);
@@ -830,8 +830,8 @@ kbd {
 .ds-callout__close {
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   padding: 0;
   background: var(--surface);
   color: var(--ink);
@@ -1331,8 +1331,8 @@ mark.ds-signal {
 /* ---------- Search ---------- */
 
 .search-sign {
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
   border: var(--border-thin);
   background: #fff;

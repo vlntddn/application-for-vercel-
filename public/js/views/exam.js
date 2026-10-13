@@ -197,6 +197,15 @@ function runExam(root, questions) {
         timerEl,
         el('span.tag', {}, t('ex.answeredN', { n: answeredCount })),
       ),
+      el('div.exam-nav', {},
+        ...questions.map((_, i) =>
+          el('button', {
+            textContent: String(i + 1),
+            className: `${chosen[i] !== null ? 'answered' : ''} ${i === index ? 'current' : ''}`,
+            onclick: () => goTo(i),
+          }),
+        ),
+      ),
       el('div.panel.question-card', {},
         q.image_url ? el('img.question-img', { src: q.image_url, alt: t('ex.imgAlt'), onerror: (e) => e.target.remove() }) : null,
         el('p.question-text', { translate: 'no', lang: 'it' }, q.text_it),
@@ -231,15 +240,6 @@ function runExam(root, questions) {
         el('p.kbd-hint', {},
           el('kbd', {}, 'V'), ' ' + t('ex.kbdTrue') + ' · ', el('kbd', {}, 'F'), ' ' + t('ex.kbdFalse') + ' · ',
           el('kbd', {}, '←'), el('kbd', {}, '→'), ' ' + t('ex.kbdNavigate') + ' · ', el('kbd', {}, 'T'), ' ' + t('ex.kbdTranslate')),
-        el('div.exam-nav', {},
-          ...questions.map((_, i) =>
-            el('button', {
-              textContent: String(i + 1),
-              className: `${chosen[i] !== null ? 'answered' : ''} ${i === index ? 'current' : ''}`,
-              onclick: () => goTo(i),
-            }),
-          ),
-        ),
         el('div.actions', {},
           el('button.btn.btn-primary.btn-big', {
             onclick: () => {
